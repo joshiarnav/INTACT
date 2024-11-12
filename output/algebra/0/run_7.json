@@ -1,0 +1,44 @@
+{
+    "problem": "Let \\[f(x) = \\left\\{\n\\begin{array}{cl} ax+3, &\\text{ if }x>2, \\\\\nx-5 &\\text{ if } -2 \\le x \\le 2, \\\\\n2x-b &\\text{ if } x <-2.\n\\end{array}\n\\right.\\]Find $a+b$ if the piecewise function is continuous (which means that its graph can be drawn without lifting your pencil from the paper).",
+    "level": "Level 5",
+    "type": "Algebra",
+    "solution": "For the piecewise function to be continuous, the cases must \"meet\" at $2$ and $-2$. For example, $ax+3$ and $x-5$ must be equal when $x=2$. This implies $a(2)+3=2-5$, which we solve to get $2a=-6 \\Rightarrow a=-3$. Similarly, $x-5$ and $2x-b$ must be equal when $x=-2$. Substituting, we get $-2-5=2(-2)-b$, which implies $b=3$. So $a+b=-3+3=\\boxed{0}$.",
+    "steps": [
+        "To ensure continuity, we must find $a$ and $b$ such that the function is continuous at $x=2$ and $x=-2$. \n\n1. For continuity at $x=2$, we have $\\lim_{x\\to 2^-}f(x) = \\lim_{x\\to 2^+}f(x)$:\n\\[\\lim_{x\\to 2^-}f(x) = \\lim_{x\\to 2^-}(x-5) = 2-5 = -3\\]\n\\[\\lim_{x\\to 2^+}f(x) = \\lim_{x\\to 2^+}(ax+3) = 2a+3\\]\nWe set these two limits equal to each other to find $a$: $2a+3 = -3 \\Rightarrow a = -3$.",
+        "For continuity at $x=-2$, we have $\\lim_{x\\to -2^+}f(x) = \\lim_{x\\to -2^-}f(x)$:\n\\[\\lim_{x\\to -2^+}f(x) = \\lim_{x\\to -2^+}(x-5) = -2-5 = -7\\]\n\\[\\lim_{x\\to -2^-}f(x) = \\lim_{x\\to -2^-}(2x-b) = -4-b\\]\nWe set these two limits equal to each other to find $b$: $-4-b = -7 \\Rightarrow b = 3$.",
+        "The next step is to check if the function is continuous at $x=2$ by substituting $x=2$ into the three different pieces of the function to ensure they give the same value, and do the same at $x=-2$ for the second part of the function.",
+        "To check for continuity at $x=2$, evaluate $f(2)$ for each piece of the function:\nFor $x>2$: $f(2) = a(2) + 3 = -3(2) + 3 = -6 + 3 = -3$\nFor $x \\le 2$: $f(2) = 2 - 5 = -3$\nFor $x < 2$: $f(2)$ is not applicable.\nSince the values for $x>2$ and $x \\le 2$ are equal, the function is continuous at $x=2$.\n\nTo check for continuity at $x=-2$, evaluate $f(-2)$ for the piece of the function where $-2 < x$:\nFor $x < -2$: $f(-2) = 2(-2) - b = -4 - b$\n\nSince we found in the previous step that $b = 3$, substitute $b = 3$ into the expression: $f(-2) = -4 - 3 = -7$\n\nSince $\\lim_{x\\to -2^-}f(x) = -7$ and $f(-2",
+        "Since $\\lim_{x\\to -2^-}f(x) = -7$ and $f(-2) = -7$, the function is continuous at $x=-2$. \n\nFinal Answer",
+        "Now that it has been shown that $f(x)$ is continuous at $x=2$ and $x=-2$, we can now add the values of $a$ and $b$: $a+b = -3+3 = 0$."
+    ],
+    "full_steps": [
+        [
+            "To ensure continuity, we must find $a$ and $b$ such that the function is continuous at $x=2$ and $x=-2$. \n\n1. For continuity at $x=2$, we have $\\lim_{x\\to 2^-}f(x) = \\lim_{x\\to 2^+}f(x)$:\n\\[\\lim_{x\\to 2^-}f(x) = \\lim_{x\\to 2^-}(x-5) = 2-5 = -3\\]\n\\[\\lim_{x\\to 2^+}f(x) = \\lim_{x\\to 2^+}(ax+3) = 2a+3\\]\nWe set these two limits equal to each other to find $a$: $2a+3 = -3 \\Rightarrow a = -3$.",
+            1
+        ],
+        [
+            "For continuity at $x=-2$, we have $\\lim_{x\\to -2^+}f(x) = \\lim_{x\\to -2^-}f(x)$:\n\\[\\lim_{x\\to -2^+}f(x) = \\lim_{x\\to -2^+}(x-5) = -2-5 = -7\\]\n\\[\\lim_{x\\to -2^-}f(x) = \\lim_{x\\to -2^-}(2x-b) = -4-b\\]\nWe set these two limits equal to each other to find $b$: $-4-b = -7 \\Rightarrow b = 3$.",
+            1
+        ],
+        [
+            "The next step is to check if the function is continuous at $x=2$ by substituting $x=2$ into the three different pieces of the function to ensure they give the same value, and do the same at $x=-2$ for the second part of the function.",
+            1
+        ],
+        [
+            "To check for continuity at $x=2$, evaluate $f(2)$ for each piece of the function:\nFor $x>2$: $f(2) = a(2) + 3 = -3(2) + 3 = -6 + 3 = -3$\nFor $x \\le 2$: $f(2) = 2 - 5 = -3$\nFor $x < 2$: $f(2)$ is not applicable.\nSince the values for $x>2$ and $x \\le 2$ are equal, the function is continuous at $x=2$.\n\nTo check for continuity at $x=-2$, evaluate $f(-2)$ for the piece of the function where $-2 < x$:\nFor $x < -2$: $f(-2) = 2(-2) - b = -4 - b$\n\nSince we found in the previous step that $b = 3$, substitute $b = 3$ into the expression: $f(-2) = -4 - 3 = -7$\n\nSince $\\lim_{x\\to -2^-}f(x) = -7$ and $f(-2",
+            1
+        ],
+        [
+            "Since $\\lim_{x\\to -2^-}f(x) = -7$ and $f(-2) = -7$, the function is continuous at $x=-2$. \n\nFinal Answer",
+            1
+        ],
+        [
+            "Now that it has been shown that $f(x)$ is continuous at $x=2$ and $x=-2$, we can now add the values of $a$ and $b$: $a+b = -3+3 = 0$.",
+            1
+        ]
+    ],
+    "model_solution": "To ensure continuity, we must find $a$ and $b$ such that the function is continuous at $x=2$ and $x=-2$. \n\n1. For continuity at $x=2$, we have $\\lim_{x\\to 2^-}f(x) = \\lim_{x\\to 2^+}f(x)$:\n\\[\\lim_{x\\to 2^-}f(x) = \\lim_{x\\to 2^-}(x-5) = 2-5 = -3\\]\n\\[\\lim_{x\\to 2^+}f(x) = \\lim_{x\\to 2^+}(ax+3) = 2a+3\\]\nWe set these two limits equal to each other to find $a$: $2a+3 = -3 \\Rightarrow a = -3$.\nFor continuity at $x=-2$, we have $\\lim_{x\\to -2^+}f(x) = \\lim_{x\\to -2^-}f(x)$:\n\\[\\lim_{x\\to -2^+}f(x) = \\lim_{x\\to -2^+}(x-5) = -2-5 = -7\\]\n\\[\\lim_{x\\to -2^-}f(x) = \\lim_{x\\to -2^-}(2x-b) = -4-b\\]\nWe set these two limits equal to each other to find $b$: $-4-b = -7 \\Rightarrow b = 3$.\nThe next step is to check if the function is continuous at $x=2$ by substituting $x=2$ into the three different pieces of the function to ensure they give the same value, and do the same at $x=-2$ for the second part of the function.\nTo check for continuity at $x=2$, evaluate $f(2)$ for each piece of the function:\nFor $x>2$: $f(2) = a(2) + 3 = -3(2) + 3 = -6 + 3 = -3$\nFor $x \\le 2$: $f(2) = 2 - 5 = -3$\nFor $x < 2$: $f(2)$ is not applicable.\nSince the values for $x>2$ and $x \\le 2$ are equal, the function is continuous at $x=2$.\n\nTo check for continuity at $x=-2$, evaluate $f(-2)$ for the piece of the function where $-2 < x$:\nFor $x < -2$: $f(-2) = 2(-2) - b = -4 - b$\n\nSince we found in the previous step that $b = 3$, substitute $b = 3$ into the expression: $f(-2) = -4 - 3 = -7$\n\nSince $\\lim_{x\\to -2^-}f(x) = -7$ and $f(-2\nSince $\\lim_{x\\to -2^-}f(x) = -7$ and $f(-2) = -7$, the function is continuous at $x=-2$. \n\nFinal Answer\nNow that it has been shown that $f(x)$ is continuous at $x=2$ and $x=-2$, we can now add the values of $a$ and $b$: $a+b = -3+3 = 0$.",
+    "is_solved": true,
+    "time": 16.947679042816162,
+    "total_tokens": 8160
+}
