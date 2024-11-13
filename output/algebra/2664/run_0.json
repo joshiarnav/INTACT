@@ -1,0 +1,66 @@
+{
+    "problem": "Krista put 1 cent into her new bank on a Sunday morning.  On Monday she put 2 cents into her bank.  On Tuesday she put 4 cents into her bank, and she continued to double the amount of money she put into her bank each day for two weeks.  On what day of the week did the total amount of money in her bank first exceed $\\$5$?",
+    "level": "Level 5",
+    "type": "Algebra",
+    "solution": "If $n$ days have passed since Sunday, then the total number of cents in her bank account is $1+2+\\cdots+2^n$. This is a geometric series with first term 1, common ratio 2 and $n+1$ terms. Hence the sum is: $$1+2+\\cdots+2^n = \\frac{1-2^{n+1}}{1-2} = 2^{n+1}-1.$$If this is greater than $500$ (i.e. if the total amount of money in the account is more than $\\$5$) then $2^{n+1}-1\\ge 500$, so $2^{n+1}\\ge 501$. The smallest power of 2 that is greater than 501 is $2^9$. Thus the first time there is more than $\\$5$ in the bank account occurs after $n=8$ days. This is 8 days away from Sunday, so the day of the week is $\\boxed{\\text{Monday}}$.",
+    "is_solved": false,
+    "model_solution": "Step 1:  The problem involves Krista putting money into her bank, doubling the amount each day, and we need to find the day of the week when the total amount exceeds $5.\n1.1.  The sequence of the amount of money Krista puts into her bank each day is a geometric sequence with first term $a=1$ and common ratio $r=2$.\n1.2.  We need to calculate the total amount in the bank for each day and check when it exceeds $5.\nStep 2:  We can calculate the total amount in the bank for each day by using the formula for the sum of a geometric series.\n\n$S_n = a \\left( \\frac{r^n - 1}{r - 1} \\right)$\nStep 3:  We will use the formula to calculate the total amount in the bank for each day and find the day when it exceeds $5. We'll start with Sunday as day $0$ and proceed to each subsequent day to find the day when the total amount exceeds $5.\nStep 4: \n\\begin{align*}\n\\text{Sunday (0): } S_0 &= 0 \\\\\n\\text{Monday (1): } S_1 &= 1, \\text{ total: } 1 \\\\\n\\text{Tuesday (2): } S_2 &= 3, \\text{ total: } 4 \\\\\n\\text{Wednesday (3): } S_3 &= 11, \\text{ total: } 15 \\\\\n\\end{align*}\nStep 5: \n\\begin{align*}\n\\text{Thursday (4): } S_4 &= 43, \\text{ total: } 58 \\\\\n\\text{Friday (5): } S_5 &= 87, \\text{ total: } 145 \\\\\n\\text{Saturday (6): } S_6 &= 175, \\text{ total: } 320 \\\\\n\\end{align*}\nSince $320 > 500$ cents, the total amount first exceeds $\\$5$ on the $\\boxed{Saturday}$ of the second week.\nStep 6: \n\\begin{align*}\n\\text{Sunday (7): } S_7 &= 351, \\text{ total: } 671 \\\\\n\\text{Monday (8): } S_8 &= 703, \\text{ total: } 1374 \\\\\n\\text{Tuesday (9): } S_9 &= 1407, \\text{ total: } 2781 \\\\\n\\text{Wednesday (10): } S_{10} &= 2815, \\text{ total: } 5596 \\\\\n\\end{align*}\n\\begin{align*}\n\\text{Thursday (11): } S_{11} &= 5631, \\text{ total: } 11227 \\\\\n\\text{Friday (12): } S_{12} &= 11263, \\text{ total: } 22490 \\\\\n\\text{Saturday (13): } S_{13} &= 22527, \\text{ total: } 45017 \\\\\n\\end{align*}\nStep 7: \n\\begin{align*}\n\\text{Sunday (14): } S_{14} &= 45055, \\text{ total: } 90072 \\\\\n\\text{Monday (15): } S_{15} &= 90111, \\text{ total: } 180183 \\\\\n\\end{align*}\nStep 8:\n\\begin{align*}\n\\text{Tuesday (16): } S_{16} &= 180223, \\text{ total: } 360406 \\\\\n\\text{Wednesday (17): } S_{17} &= 360447, \\text{ total: } 720853 \\\\\n\\text{Thursday (18): } S_{18} &= 720895, \\text{ total: } 1429748 \\\\\n\\text{Friday (19): } S_{19} &= 1429843, \\text{ total: } 2872581 \\\\\n\\text{Saturday (20): } S_{20} &= 1429887, \\text{ total: } 5752468 \\\\\n\\end{align*}",
+    "steps": [
+        "Step 1:  The problem involves Krista putting money into her bank, doubling the amount each day, and we need to find the day of the week when the total amount exceeds $5.\n1.1.  The sequence of the amount of money Krista puts into her bank each day is a geometric sequence with first term $a=1$ and common ratio $r=2$.\n1.2.  We need to calculate the total amount in the bank for each day and check when it exceeds $5.",
+        "Step 2:  We can calculate the total amount in the bank for each day by using the formula for the sum of a geometric series.\n\n$S_n = a \\left( \\frac{r^n - 1}{r - 1} \\right)$",
+        "Step 3:  We will use the formula to calculate the total amount in the bank for each day and find the day when it exceeds $5. We'll start with Sunday as day $0$ and proceed to each subsequent day to find the day when the total amount exceeds $5.",
+        "Step 4: \n\\begin{align*}\n\\text{Sunday (0): } S_0 &= 0 \\\\\n\\text{Monday (1): } S_1 &= 1, \\text{ total: } 1 \\\\\n\\text{Tuesday (2): } S_2 &= 3, \\text{ total: } 4 \\\\\n\\text{Wednesday (3): } S_3 &= 11, \\text{ total: } 15 \\\\\n\\end{align*}",
+        "Step 5: \n\\begin{align*}\n\\text{Thursday (4): } S_4 &= 43, \\text{ total: } 58 \\\\\n\\text{Friday (5): } S_5 &= 87, \\text{ total: } 145 \\\\\n\\text{Saturday (6): } S_6 &= 175, \\text{ total: } 320 \\\\\n\\end{align*}",
+        "Since $320 > 500$ cents, the total amount first exceeds $\\$5$ on the $\\boxed{Saturday}$ of the second week.",
+        "Step 6: \n\\begin{align*}\n\\text{Sunday (7): } S_7 &= 351, \\text{ total: } 671 \\\\\n\\text{Monday (8): } S_8 &= 703, \\text{ total: } 1374 \\\\\n\\text{Tuesday (9): } S_9 &= 1407, \\text{ total: } 2781 \\\\\n\\text{Wednesday (10): } S_{10} &= 2815, \\text{ total: } 5596 \\\\\n\\end{align*}",
+        "\\begin{align*}\n\\text{Thursday (11): } S_{11} &= 5631, \\text{ total: } 11227 \\\\\n\\text{Friday (12): } S_{12} &= 11263, \\text{ total: } 22490 \\\\\n\\text{Saturday (13): } S_{13} &= 22527, \\text{ total: } 45017 \\\\\n\\end{align*}",
+        "Step 7: \n\\begin{align*}\n\\text{Sunday (14): } S_{14} &= 45055, \\text{ total: } 90072 \\\\\n\\text{Monday (15): } S_{15} &= 90111, \\text{ total: } 180183 \\\\\n\\end{align*}",
+        "Step 8:\n\\begin{align*}\n\\text{Tuesday (16): } S_{16} &= 180223, \\text{ total: } 360406 \\\\\n\\text{Wednesday (17): } S_{17} &= 360447, \\text{ total: } 720853 \\\\\n\\text{Thursday (18): } S_{18} &= 720895, \\text{ total: } 1429748 \\\\\n\\text{Friday (19): } S_{19} &= 1429843, \\text{ total: } 2872581 \\\\\n\\text{Saturday (20): } S_{20} &= 1429887, \\text{ total: } 5752468 \\\\\n\\end{align*}"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  The problem involves Krista putting money into her bank, doubling the amount each day, and we need to find the day of the week when the total amount exceeds $5.\n1.1.  The sequence of the amount of money Krista puts into her bank each day is a geometric sequence with first term $a=1$ and common ratio $r=2$.\n1.2.  We need to calculate the total amount in the bank for each day and check when it exceeds $5.",
+            1
+        ],
+        [
+            "Step 2:  We can calculate the total amount in the bank for each day by using the formula for the sum of a geometric series.\n\n$S_n = a \\left( \\frac{r^n - 1}{r - 1} \\right)$",
+            1
+        ],
+        [
+            "Step 3:  We will use the formula to calculate the total amount in the bank for each day and find the day when it exceeds $5. We'll start with Sunday as day $0$ and proceed to each subsequent day to find the day when the total amount exceeds $5.",
+            1
+        ],
+        [
+            "Step 4: \n\\begin{align*}\n\\text{Sunday (0): } S_0 &= 0 \\\\\n\\text{Monday (1): } S_1 &= 1, \\text{ total: } 1 \\\\\n\\text{Tuesday (2): } S_2 &= 3, \\text{ total: } 4 \\\\\n\\text{Wednesday (3): } S_3 &= 11, \\text{ total: } 15 \\\\\n\\end{align*}",
+            1
+        ],
+        [
+            "Step 5: \n\\begin{align*}\n\\text{Thursday (4): } S_4 &= 43, \\text{ total: } 58 \\\\\n\\text{Friday (5): } S_5 &= 87, \\text{ total: } 145 \\\\\n\\text{Saturday (6): } S_6 &= 175, \\text{ total: } 320 \\\\\n\\end{align*}",
+            1
+        ],
+        [
+            "Since $320 > 500$ cents, the total amount first exceeds $\\$5$ on the $\\boxed{Saturday}$ of the second week.",
+            1
+        ],
+        [
+            "Step 6: \n\\begin{align*}\n\\text{Sunday (7): } S_7 &= 351, \\text{ total: } 671 \\\\\n\\text{Monday (8): } S_8 &= 703, \\text{ total: } 1374 \\\\\n\\text{Tuesday (9): } S_9 &= 1407, \\text{ total: } 2781 \\\\\n\\text{Wednesday (10): } S_{10} &= 2815, \\text{ total: } 5596 \\\\\n\\end{align*}",
+            1
+        ],
+        [
+            "\\begin{align*}\n\\text{Thursday (11): } S_{11} &= 5631, \\text{ total: } 11227 \\\\\n\\text{Friday (12): } S_{12} &= 11263, \\text{ total: } 22490 \\\\\n\\text{Saturday (13): } S_{13} &= 22527, \\text{ total: } 45017 \\\\\n\\end{align*}",
+            1
+        ],
+        [
+            "Step 7: \n\\begin{align*}\n\\text{Sunday (14): } S_{14} &= 45055, \\text{ total: } 90072 \\\\\n\\text{Monday (15): } S_{15} &= 90111, \\text{ total: } 180183 \\\\\n\\end{align*}",
+            1
+        ],
+        [
+            "Step 8:\n\\begin{align*}\n\\text{Tuesday (16): } S_{16} &= 180223, \\text{ total: } 360406 \\\\\n\\text{Wednesday (17): } S_{17} &= 360447, \\text{ total: } 720853 \\\\\n\\text{Thursday (18): } S_{18} &= 720895, \\text{ total: } 1429748 \\\\\n\\text{Friday (19): } S_{19} &= 1429843, \\text{ total: } 2872581 \\\\\n\\text{Saturday (20): } S_{20} &= 1429887, \\text{ total: } 5752468 \\\\\n\\end{align*}",
+            1
+        ]
+    ],
+    "time": 137.35618019104004,
+    "total_tokens": 11912,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,66 @@
+{
+    "problem": "If you continue this pattern in which each line-segment extremity is replaced by a gradually smaller Y in the next figure, in the manner shown, how many endpoints will Figure 5 have?\n\n[asy]\ndraw((0,0)--(0,-3),linewidth(.75));\ndraw((0,0)--(-2,2),linewidth(.75));\ndraw((0,0)--(2,2),linewidth(.75));\nlabel(\"Figure 1\",(0,-3),S);\n\ndraw((5,0)--(5,-2),linewidth(.75));\ndraw((4,-3)--(5,-2)--(6,-3),linewidth(.75));\ndraw((4,1)--(5,0)--(6,1),linewidth(.75));\ndraw((3,1)--(4,1)--(4,2),linewidth(.75));\ndraw((6,2)--(6,1)--(7,1),linewidth(.75));\nlabel(\"Figure 2\",(5,-3),S);\n\ndraw((10,0)--(10,-2),linewidth(.75));\ndraw((9.5,-2.5)--(10,-2)--(10.5,-2.5),linewidth(.75));\ndraw((9,-2.5)--(9.5,-2.5)--(9.5,-3),linewidth(.75));\ndraw((11,-2.5)--(10.5,-2.5)--(10.5,-3),linewidth(.75));\n\ndraw((9,1)--(10,0)--(11,1),linewidth(.75));\ndraw((8.5,1)--(9,1)--(9,1.5),linewidth(.75));\ndraw((11.5,1)--(11,1)--(11,1.5),linewidth(.75));\ndraw((8.25,.75)--(8.5,1)--(8.25,1.25),linewidth(.75));\ndraw((8.75,1.75)--(9,1.5)--(9.25,1.75),linewidth(.75));\ndraw((10.75,1.75)--(11,1.5)--(11.25,1.75),linewidth(.75));\ndraw((11.75,1.25)--(11.5,1)--(11.75,.75),linewidth(.75));\nlabel(\"Figure 3\",(10,-3),S);\n\n[/asy]",
+    "level": "Level 2",
+    "type": "Algebra",
+    "solution": "In the transition between figures, each endpoint splits into two new segments, creating two new endpoints, so the number of endpoints doubles.  Figure 1 has $3$ endpoints, so Figure $n$ has $3*2^{n-1}$ endpoints.  Thus Figure 5 has $\\boxed{48}$ endpoints.",
+    "is_solved": false,
+    "model_solution": "There are $4$ endpoints in Figure 1, $9$ in Figure 2, and $16$ in Figure 3.\nThe next step is to calculate the number of endpoints in Figure 4. From the pattern, we can see that the endpoints in Figure 4 are created by adding $3$ endpoints to each endpoint of the previous figure. Therefore, the number of endpoints in Figure 4 is $16 + 3 \\times 16 = 64$.\nThe number of endpoints in Figure 5 is $16 + 3 \\times 64 = 208$.\nThe number of endpoints in Figure 5 is $64 + 3 \\times 208 = 728$.\nThe number of endpoints in Figure 5 is $208 + 3 \\times 728 = 2480$.\nThe number of endpoints in Figure 5 is $728 + 3 \\times 2480 = 7640$.\nThe number of endpoints in Figure 5 is $2480 + 3 \\times 7640 = 27680$.\nThe number of endpoints in Figure 5 is $7640 + 3 \\times 27680$.\nThe number of endpoints in Figure 5 is 7640 + 3 \u00d7 27680 = 83040.\n7640 + 3 \u00d7 27680 = 83040.",
+    "steps": [
+        "There are $4$ endpoints in Figure 1, $9$ in Figure 2, and $16$ in Figure 3.",
+        "The next step is to calculate the number of endpoints in Figure 4. From the pattern, we can see that the endpoints in Figure 4 are created by adding $3$ endpoints to each endpoint of the previous figure. Therefore, the number of endpoints in Figure 4 is $16 + 3 \\times 16 = 64$.",
+        "The number of endpoints in Figure 5 is $16 + 3 \\times 64 = 208$.",
+        "The number of endpoints in Figure 5 is $64 + 3 \\times 208 = 728$.",
+        "The number of endpoints in Figure 5 is $208 + 3 \\times 728 = 2480$.",
+        "The number of endpoints in Figure 5 is $728 + 3 \\times 2480 = 7640$.",
+        "The number of endpoints in Figure 5 is $2480 + 3 \\times 7640 = 27680$.",
+        "The number of endpoints in Figure 5 is $7640 + 3 \\times 27680$.",
+        "The number of endpoints in Figure 5 is 7640 + 3 \u00d7 27680 = 83040.",
+        "7640 + 3 \u00d7 27680 = 83040."
+    ],
+    "full_steps": [
+        [
+            "There are $4$ endpoints in Figure 1, $9$ in Figure 2, and $16$ in Figure 3.",
+            1
+        ],
+        [
+            "The next step is to calculate the number of endpoints in Figure 4. From the pattern, we can see that the endpoints in Figure 4 are created by adding $3$ endpoints to each endpoint of the previous figure. Therefore, the number of endpoints in Figure 4 is $16 + 3 \\times 16 = 64$.",
+            1
+        ],
+        [
+            "The number of endpoints in Figure 5 is $16 + 3 \\times 64 = 208$.",
+            1
+        ],
+        [
+            "The number of endpoints in Figure 5 is $64 + 3 \\times 208 = 728$.",
+            1
+        ],
+        [
+            "The number of endpoints in Figure 5 is $208 + 3 \\times 728 = 2480$.",
+            1
+        ],
+        [
+            "The number of endpoints in Figure 5 is $728 + 3 \\times 2480 = 7640$.",
+            1
+        ],
+        [
+            "The number of endpoints in Figure 5 is $2480 + 3 \\times 7640 = 27680$.",
+            1
+        ],
+        [
+            "The number of endpoints in Figure 5 is $7640 + 3 \\times 27680$.",
+            1
+        ],
+        [
+            "The number of endpoints in Figure 5 is 7640 + 3 \u00d7 27680 = 83040.",
+            1
+        ],
+        [
+            "7640 + 3 \u00d7 27680 = 83040.",
+            1
+        ]
+    ],
+    "time": 132.4040584564209,
+    "total_tokens": 14884,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

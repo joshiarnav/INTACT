@@ -1,0 +1,61 @@
+{
+    "problem": "Two circles of radius 1 are centered at $(4,0)$ and $(-4,0).$ How many circles are tangent to both of the given circles and also pass through the point $(0,5)$?",
+    "level": "Level 5",
+    "type": "Algebra",
+    "solution": "Let the center of the circle be $(a,b),$ and let its radius be $r.$  Either the two circles are externally or internally tangent to the two original circles.\n\nIf the circle is externally tangent to both circles, then the distance between the centers is equal to the sum of the radii, giving us\n\\begin{align*}\n(a - 4)^2 + b^2 &= (r + 1)^2, \\\\\n(a + 4)^2 + b^2 &= (r + 1)^2.\n\\end{align*}Subtracting, we get $16a = 0,$ so $a = 0.$  Hence,\n\\[16 + b^2 = (r + 1)^2.\\]Since the circle passes through $(0,5),$\n\\[(b - 5)^2 = r^2.\\]Subtracting the equations $16 + b^2 = (r + 1)^2$ and $(b - 5)^2 = r^2,$ we get\n\\[10b - 9 = 2r + 1.\\]Then $r = 5b - 5.$  Substituting into $(b - 5)^2 = r^2,$ we get\n\\[(b - 5)^2 = (5b - 5)^2.\\]This simplifies to $24b^2 - 40b = 0,$ so $b = 0$ or $b = \\frac{40}{24} = \\frac{5}{3}.$  If $b = 0,$ then $r = -5,$ which is not possible.  If $b = \\frac{5}{3},$ then $r = \\frac{10}{3},$ giving us one externally tangent circle.\n\n[asy]\nunitsize(0.5 cm);\n\ndraw(Circle((4,0),1));\ndraw(Circle((-4,0),1));\ndraw(Circle((0,5/3),10/3),red);\ndraw((-6,0)--(6,0));\ndraw((0,-3)--(0,6));\n\ndot(\"$(0,5)$\", (0,5), NE);\ndot((4,0));\ndot((-4,0));\n[/asy]\n\nIf the circle is internally tangent to both circles, then the distance between the centers is equal to the difference of the radii, giving us\n\\begin{align*}\n(a - 4)^2 + b^2 &= (r - 1)^2, \\\\\n(a + 4)^2 + b^2 &= (r - 1)^2.\n\\end{align*}Subtracting, we get $16a = 0,$ so $a = 0.$  Hence,\n\\[16 + b^2 = (r - 1)^2.\\]Since the circle passes through $(0,5),$\n\\[(b - 5)^2 = r^2.\\]Subtracting the equations $16 + b^2 = (r - 1)^2$ and $(b - 5)^2 = r^2,$ we get\n\\[10b - 9 = -2r + 1.\\]Then $r = 5 - 5b.$  Substituting into $(b - 5)^2 = r^2,$ we get\n\\[(b - 5)^2 = (5 - 5b)^2.\\]This simplifies to $24b^2 - 40b = 0,$ so $b = 0$ or $b = \\frac{5}{3}.$  If $b = 0,$ then $r = 5,$ giving us one internally tangent circle.  If $b = \\frac{5}{3},$ then $r = -\\frac{10}{3},$ which is not possible.\n\n[asy]\nunitsize(0.5 cm);\n\ndraw(Circle((4,0),1));\ndraw(Circle((-4,0),1));\ndraw(Circle((0,0),5),red);\ndraw((-6,0)--(6,0));\ndraw((0,-6)--(0,6));\n\ndot(\"$(0,5)$\", (0,5), NE);\ndot((4,0));\ndot((-4,0));\n[/asy]\n\nSuppose the circle is externally tangent to the circle centered at $(-4,0),$ and internally tangent to the circle centered at $(4,0).$  Then\n\\begin{align*}\n(a + 4)^2 + b^2 &= (r + 1)^2, \\\\\n(a - 4)^2 + b^2 &= (r - 1)^2.\n\\end{align*}Subtracting these equations, we get $16a = 4r,$ so $r = 4a.$  Hence,\n\\[(a + 4)^2 + b^2 = (4a + 1)^2.\\]Then $b^2 = (4a + 1)^2 - (a + 4)^2 = 15a^2 - 15,$ so $a^2 = \\frac{b^2 + 15}{15}.$\n\nSince the circle passes through $(0,5),$\n\\[a^2 + (b - 5)^2 = r^2 = 16a^2.\\]Then $(b - 5)^2 = 15a^2 = b^2 + 15.$  This gives us $b = 1.$  Then $a^2 = \\frac{16}{15}.$  Since $r = 4a,$ $a$ must be positive, so $a = \\frac{4}{\\sqrt{15}}$ and $r = \\frac{16}{\\sqrt{15}}.$\n\n[asy]\nunitsize(0.5 cm);\n\ndraw(Circle((4,0),1));\ndraw(Circle((-4,0),1));\ndraw(Circle((4/sqrt(15),1),16/sqrt(15)),red);\ndraw((-6,0)--(6,0));\ndraw((0,-6)--(0,6));\n\ndot(\"$(0,5)$\", (0,5), NW);\ndot((4,0));\ndot((-4,0));\n[/asy]\n\nBy symmetry, there is only one circle that is internally tangent to the circle centered at $(-4,0)$ and externally tangent to the circle centered at $(4,0),$ giving us a total of $\\boxed{4}$ circles.",
+    "is_solved": true,
+    "model_solution": "Step 1:  We are given two circles, each with a radius of 1 and centered at $(4,0)$ and $(-4,0)$.\nStep 2:  Our goal is to determine the number of circles that are tangent to both of the given circles and also pass through the point $(0,5)$.\nStep 3:  To start, let's analyze the geometric relationships between the given circles and the circles that satisfy the given conditions.\nStep 4:  The point $(0,5)$ lies above the line segment connecting the centers of the given circles.\nStep 5:  We can visualize the scenario by drawing a diagram, which helps us understand the spatial relationships and constraints involved.\nLet's consider the centers of the circles that are tangent to both of the given circles and also pass through the point $(0,5)$. Let's denote these centers as $(x,y)$. Then, these circles must satisfy the following conditions:\n- The distance between $(x,y)$ and $(4,0)$ is the sum of the radii of the two circles.\n- The distance between $(x,y)$ and $(-4,0)$ is the sum of the radii of the two circles.\n- The point $(0,5)$ lies on each of these circles.\nWe can use the distance formula to express these conditions mathematically.\nStep 2:  We can use the distance formula to express the conditions that the circles must satisfy. The distance formula is $\\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$.\nThe conditions can be expressed as:\n$\\sqrt{(x-4)^2 + y^2} = 2$\n$\\sqrt{(x+4)^2 + y^2} = 2$\n$y = 5$\nStep 3:  From the conditions above, we can rewrite them as:\n$(x-4)^2 + y^2 = 4$\n$(x+4)^2 + y^2 = 4$\n$y = 5$\n\nNote: This step is incomplete as it does not provide any solution or further steps.\nStep 4: Solve the system of equations to find the value of x.\nStep 5:\n$(x-4)^2 + 25 = (x-4)^2 + y^2 = 4$\n$(x+4)^2 + 25 = (x+4)^2 + y^2 = 4$\nStep 4:\n$(x-4)^2 = 21$\n$(x+4)^2 = 21$\nStep 5:\n$(x-4)^2 = 21$\n$(x+4)^2 = 21$\nSince $(x-4)^2 = (x+4)^2$ has no real solution, the system of equations is inconsistent. \n\nFinal Answer: The final answer is 0.",
+    "steps": [
+        "Step 1:  We are given two circles, each with a radius of 1 and centered at $(4,0)$ and $(-4,0)$.\nStep 2:  Our goal is to determine the number of circles that are tangent to both of the given circles and also pass through the point $(0,5)$.\nStep 3:  To start, let's analyze the geometric relationships between the given circles and the circles that satisfy the given conditions.\nStep 4:  The point $(0,5)$ lies above the line segment connecting the centers of the given circles.\nStep 5:  We can visualize the scenario by drawing a diagram, which helps us understand the spatial relationships and constraints involved.",
+        "Let's consider the centers of the circles that are tangent to both of the given circles and also pass through the point $(0,5)$. Let's denote these centers as $(x,y)$. Then, these circles must satisfy the following conditions:\n- The distance between $(x,y)$ and $(4,0)$ is the sum of the radii of the two circles.\n- The distance between $(x,y)$ and $(-4,0)$ is the sum of the radii of the two circles.\n- The point $(0,5)$ lies on each of these circles.\nWe can use the distance formula to express these conditions mathematically.",
+        "Step 2:  We can use the distance formula to express the conditions that the circles must satisfy. The distance formula is $\\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$.\nThe conditions can be expressed as:\n$\\sqrt{(x-4)^2 + y^2} = 2$\n$\\sqrt{(x+4)^2 + y^2} = 2$\n$y = 5$",
+        "Step 3:  From the conditions above, we can rewrite them as:\n$(x-4)^2 + y^2 = 4$\n$(x+4)^2 + y^2 = 4$\n$y = 5$\n\nNote: This step is incomplete as it does not provide any solution or further steps.",
+        "Step 4: Solve the system of equations to find the value of x.",
+        "Step 5:\n$(x-4)^2 + 25 = (x-4)^2 + y^2 = 4$\n$(x+4)^2 + 25 = (x+4)^2 + y^2 = 4$",
+        "Step 4:\n$(x-4)^2 = 21$\n$(x+4)^2 = 21$",
+        "Step 5:\n$(x-4)^2 = 21$\n$(x+4)^2 = 21$",
+        "Since $(x-4)^2 = (x+4)^2$ has no real solution, the system of equations is inconsistent. \n\nFinal Answer: The final answer is 0."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We are given two circles, each with a radius of 1 and centered at $(4,0)$ and $(-4,0)$.\nStep 2:  Our goal is to determine the number of circles that are tangent to both of the given circles and also pass through the point $(0,5)$.\nStep 3:  To start, let's analyze the geometric relationships between the given circles and the circles that satisfy the given conditions.\nStep 4:  The point $(0,5)$ lies above the line segment connecting the centers of the given circles.\nStep 5:  We can visualize the scenario by drawing a diagram, which helps us understand the spatial relationships and constraints involved.",
+            1
+        ],
+        [
+            "Let's consider the centers of the circles that are tangent to both of the given circles and also pass through the point $(0,5)$. Let's denote these centers as $(x,y)$. Then, these circles must satisfy the following conditions:\n- The distance between $(x,y)$ and $(4,0)$ is the sum of the radii of the two circles.\n- The distance between $(x,y)$ and $(-4,0)$ is the sum of the radii of the two circles.\n- The point $(0,5)$ lies on each of these circles.\nWe can use the distance formula to express these conditions mathematically.",
+            1
+        ],
+        [
+            "Step 2:  We can use the distance formula to express the conditions that the circles must satisfy. The distance formula is $\\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$.\nThe conditions can be expressed as:\n$\\sqrt{(x-4)^2 + y^2} = 2$\n$\\sqrt{(x+4)^2 + y^2} = 2$\n$y = 5$",
+            1
+        ],
+        [
+            "Step 3:  From the conditions above, we can rewrite them as:\n$(x-4)^2 + y^2 = 4$\n$(x+4)^2 + y^2 = 4$\n$y = 5$\n\nNote: This step is incomplete as it does not provide any solution or further steps.",
+            1
+        ],
+        [
+            "Step 4: Solve the system of equations to find the value of x.",
+            1
+        ],
+        [
+            "Step 5:\n$(x-4)^2 + 25 = (x-4)^2 + y^2 = 4$\n$(x+4)^2 + 25 = (x+4)^2 + y^2 = 4$",
+            1
+        ],
+        [
+            "Step 4:\n$(x-4)^2 = 21$\n$(x+4)^2 = 21$",
+            1
+        ],
+        [
+            "Step 5:\n$(x-4)^2 = 21$\n$(x+4)^2 = 21$",
+            1
+        ],
+        [
+            "Since $(x-4)^2 = (x+4)^2$ has no real solution, the system of equations is inconsistent. \n\nFinal Answer: The final answer is 0.",
+            1
+        ]
+    ],
+    "time": 123.106684923172,
+    "total_tokens": 9749,
+    "final_answer_tokens": 698,
+    "model": "meta-llama/Llama-Vision-Free"
+}

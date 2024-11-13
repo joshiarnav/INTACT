@@ -1,0 +1,66 @@
+{
+    "problem": "The parabola with equation $y=ax^2+bx+c$ is graphed below:\n\n[asy]\nunitsize(0.2 cm);\nxaxis(-5,9);\n\nyaxis(-7,2);\n\nreal g(real x)\n\n{\n\nreturn -1/9*(x-2)^2+1;\n}\n\ndraw(graph(g,-5,9));\ndot((2,1));\nlabel(\"Vertex: $(2,1)$\", (2,1), NE);\ndot((-4,-3));\nlabel(\"$(-4,-3)$\", (-4,-3), W);\n[/asy]\n\nThe zeros of the quadratic $ax^2 + bx + c$ are at $x=m$ and $x=n$, where $m>n$. What is $m-n$?",
+    "level": "Level 5",
+    "type": "Algebra",
+    "solution": "The vertex form of a parabolic equation is $y=a(x-h)^2+k$. Since we are given that the vertex is at $(2,1)$, we know that $h=2$ and $k=1$. Plugging that into our equation gives $y=a(x-2)^2+1$. Now, substituting the other given point $(-4,-3)$ into the equation to solve for $a$, we have  \\begin{align*}\n-3&=a(-4-2)^2+1\\\\\n-4&=a(-6)^2\\\\\n-4&=36a\\\\\n-\\frac{1}{9}&=a\n\\end{align*} So the equation for the graphed parabola is $y=-\\frac{1}{9}(x-2)^2+1$. The zeros of the quadratic occur when $y=0$, so plugging that value into the equation to solve for $x$, we have $0=-\\frac{1}{9}(x-2)^2+1 \\Rightarrow (x-2)^2=9$. Taking the square root of both sides yields $x-2=\\pm 3$, so $x=5$ or $x=-1$. Thus, $m=5$ and $n=-1$, so $m-n=5-(-1)=\\boxed{6}$.",
+    "is_solved": false,
+    "model_solution": "Step 1: The equation of the parabola is given as $y=ax^2+bx+c$. We need to find the zeros of the quadratic, which occur when $y=0$.\nStep 2: The vertex of the parabola is at the point $(2,1)$, and we are given another point on the parabola, $(-4,-3)$, so we can use these points to create two equations based on the equation of the parabola.\nStep 3: Substitute the point $(2,1)$ into the equation $y=ax^2+bx+c$ and substitute the point $(-4,-3)$ into the equation $y=ax^2+bx+c$, giving us the equations $1 = 4a + 2b + c$ and $-3 = 16a - 4b + c$.\nStep 4: Subtract the first equation from the second to eliminate $c$, resulting in $-4 = 12a - 6b$\nStep 5: Rearrange the equation $-4 = 12a - 6b$ to isolate $a$ in terms of $b$, giving $\\frac{1}{3} = a - \\frac{1}{2} b$.\nStep 6: \n$\\frac{1}{3} = a - \\frac{1}{2} b$\n$-\\frac{1}{2}b = a - \\frac{1}{3}$\n$a = \\frac{1}{3} + \\frac{1}{2} b$\nSubstitute the expression for $a$ into the equation $1 = 4a + 2b + c$ to get $1 = 4(\\frac{1}{3} + \\frac{1}{2}b) + 2b + c$\nSimplify the equation to get $1 = \\frac{4}{3} + \\frac{8}{3}b + 2b + c$\nCombine like terms to get $1 - \\frac{4}{3} = \\frac{8}{3}b + 2b + c$\nSimplify the equation to get $\\frac{1}{3} = \\frac{14}{3}b + c$\nSubstitute $x = 2$ and $y = 1$ into the equation $y = ax^2 + bx + c$ to get $1 = a(2)^2 + b(2)\nSimplify $1 = a(2)^2 + b(2) + c$  to get $1 = 4a+2b+c$.\nSubstitute $x = 2$ and $y = 1$ into the equation $y = ax^2 + bx + c$ to get $1 = a(2)^2 + b(2) + c$, which is the second equation given in Step 3.\nSubstitute $x = -4$ and $y = -3$ into the equation $y = ax^2 + bx + c$ to get $-3 = a(-4)^2 + b(-4) + c$.\nSubtract the equation $1 = 4a+2b+c$ from the equation $-3 = 16a - 4b + c$ to get $-4 = 12a - 6b$.",
+    "steps": [
+        "Step 1: The equation of the parabola is given as $y=ax^2+bx+c$. We need to find the zeros of the quadratic, which occur when $y=0$.",
+        "Step 2: The vertex of the parabola is at the point $(2,1)$, and we are given another point on the parabola, $(-4,-3)$, so we can use these points to create two equations based on the equation of the parabola.",
+        "Step 3: Substitute the point $(2,1)$ into the equation $y=ax^2+bx+c$ and substitute the point $(-4,-3)$ into the equation $y=ax^2+bx+c$, giving us the equations $1 = 4a + 2b + c$ and $-3 = 16a - 4b + c$.",
+        "Step 4: Subtract the first equation from the second to eliminate $c$, resulting in $-4 = 12a - 6b$",
+        "Step 5: Rearrange the equation $-4 = 12a - 6b$ to isolate $a$ in terms of $b$, giving $\\frac{1}{3} = a - \\frac{1}{2} b$.",
+        "Step 6: \n$\\frac{1}{3} = a - \\frac{1}{2} b$\n$-\\frac{1}{2}b = a - \\frac{1}{3}$\n$a = \\frac{1}{3} + \\frac{1}{2} b$\nSubstitute the expression for $a$ into the equation $1 = 4a + 2b + c$ to get $1 = 4(\\frac{1}{3} + \\frac{1}{2}b) + 2b + c$\nSimplify the equation to get $1 = \\frac{4}{3} + \\frac{8}{3}b + 2b + c$\nCombine like terms to get $1 - \\frac{4}{3} = \\frac{8}{3}b + 2b + c$\nSimplify the equation to get $\\frac{1}{3} = \\frac{14}{3}b + c$\nSubstitute $x = 2$ and $y = 1$ into the equation $y = ax^2 + bx + c$ to get $1 = a(2)^2 + b(2)",
+        "Simplify $1 = a(2)^2 + b(2) + c$  to get $1 = 4a+2b+c$.",
+        "Substitute $x = 2$ and $y = 1$ into the equation $y = ax^2 + bx + c$ to get $1 = a(2)^2 + b(2) + c$, which is the second equation given in Step 3.",
+        "Substitute $x = -4$ and $y = -3$ into the equation $y = ax^2 + bx + c$ to get $-3 = a(-4)^2 + b(-4) + c$.",
+        "Subtract the equation $1 = 4a+2b+c$ from the equation $-3 = 16a - 4b + c$ to get $-4 = 12a - 6b$."
+    ],
+    "full_steps": [
+        [
+            "Step 1: The equation of the parabola is given as $y=ax^2+bx+c$. We need to find the zeros of the quadratic, which occur when $y=0$.",
+            1
+        ],
+        [
+            "Step 2: The vertex of the parabola is at the point $(2,1)$, and we are given another point on the parabola, $(-4,-3)$, so we can use these points to create two equations based on the equation of the parabola.",
+            1
+        ],
+        [
+            "Step 3: Substitute the point $(2,1)$ into the equation $y=ax^2+bx+c$ and substitute the point $(-4,-3)$ into the equation $y=ax^2+bx+c$, giving us the equations $1 = 4a + 2b + c$ and $-3 = 16a - 4b + c$.",
+            1
+        ],
+        [
+            "Step 4: Subtract the first equation from the second to eliminate $c$, resulting in $-4 = 12a - 6b$",
+            1
+        ],
+        [
+            "Step 5: Rearrange the equation $-4 = 12a - 6b$ to isolate $a$ in terms of $b$, giving $\\frac{1}{3} = a - \\frac{1}{2} b$.",
+            1
+        ],
+        [
+            "Step 6: \n$\\frac{1}{3} = a - \\frac{1}{2} b$\n$-\\frac{1}{2}b = a - \\frac{1}{3}$\n$a = \\frac{1}{3} + \\frac{1}{2} b$\nSubstitute the expression for $a$ into the equation $1 = 4a + 2b + c$ to get $1 = 4(\\frac{1}{3} + \\frac{1}{2}b) + 2b + c$\nSimplify the equation to get $1 = \\frac{4}{3} + \\frac{8}{3}b + 2b + c$\nCombine like terms to get $1 - \\frac{4}{3} = \\frac{8}{3}b + 2b + c$\nSimplify the equation to get $\\frac{1}{3} = \\frac{14}{3}b + c$\nSubstitute $x = 2$ and $y = 1$ into the equation $y = ax^2 + bx + c$ to get $1 = a(2)^2 + b(2)",
+            1
+        ],
+        [
+            "Simplify $1 = a(2)^2 + b(2) + c$  to get $1 = 4a+2b+c$.",
+            1
+        ],
+        [
+            "Substitute $x = 2$ and $y = 1$ into the equation $y = ax^2 + bx + c$ to get $1 = a(2)^2 + b(2) + c$, which is the second equation given in Step 3.",
+            1
+        ],
+        [
+            "Substitute $x = -4$ and $y = -3$ into the equation $y = ax^2 + bx + c$ to get $-3 = a(-4)^2 + b(-4) + c$.",
+            1
+        ],
+        [
+            "Subtract the equation $1 = 4a+2b+c$ from the equation $-3 = 16a - 4b + c$ to get $-4 = 12a - 6b$.",
+            1
+        ]
+    ],
+    "time": 137.12087678909302,
+    "total_tokens": 12059,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

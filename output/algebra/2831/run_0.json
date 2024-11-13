@@ -1,0 +1,66 @@
+{
+    "problem": "Let $0 \\le a, b, c \\le 5$ be integers. For how many ordered triples $(a,b,c)$ is $a^2b+b^2c+c^2a-ab^2-bc^2-ca^2 = 0$?",
+    "level": "Level 5",
+    "type": "Algebra",
+    "solution": "Let $P(a,b,c) = a^2b+b^2c+c^2a-ab^2-bc^2-ca^2$. Notice that if $a=b$, $P(a,b,c) = a^3+a^2c+ac^2-a^3-ac^2-a^2c = 0$. By symmetry, $P(a,b,c)=0$ when $b=c, c=a$ as well. Since $P(a,b,c)$ has degree 3 and is divisible by three linear terms, $P(a,b,c)$ must factor as $k(a-b)(b-c)(c-a)$ where $k$ is a constant. Hence, $P(a,b,c) = 0$ if and only if at least two of $a,b,c$ are equal.\n\nTo count how many triples $(a,b,c)$ satisfy this, we count the complement. There are $6\\cdot5\\cdot4 = 120$ triples where $a,b,c$ are all distinct, and $6\\cdot6\\cdot6=216$ triples total, so there are $216-120 = \\boxed{96}$ triples such that $P(a,b,c) = 0$.",
+    "is_solved": false,
+    "model_solution": "Step 1: Rearrange the equation to $a^2b + b^2c + c^2a - ab^2 - bc^2 - ca^2 = 0$\nStep 2: \nGroup the terms as follows: $(a^2b - ab^2) + (b^2c - bc^2) + (c^2a - ca^2) = 0\n$(ab(a-b)) + (bc(b-c)) + (ca(c-a)) = 0\nStep 3:\n$(ab(a-b)) + (bc(b-c)) + (ca(c-a)) = 0 \\Rightarrow ab(a-b) + bc(b-c) + ca(c-a) = 0$\n\n$ab(a-b) + bc(b-c) + ca(c-a) = 0 \\Rightarrow (a-b)(b-c)(c-a) = 0$\nStep 4:\n$(a-b)(b-c)(c-a) = 0 \\Rightarrow a = b \\text{ or } b = c \\text{ or } c = a$\nStep 5:\nThere are 6 possible cases: $a = b = c$, $a = b, c \\neq a = b$, $a = c, b \\neq a = c$, $b = c, a \\neq b = c$, $a = c$, $a = b$, $b = c$ are all the same case, and $c = a$ are all the same case.\nStep 6:\nIf $a=b=c$, then we have $3a^2-3a^2=0$, which is true for all $a$. So there are 6 possibilities for $a$.\nStep 7:\nThere are 6 possible values of $a$ and for each value of $a$, the values of $b$ and $c$ are determined, so there are $6$ possible ordered triples in this case.\n\nThere are 5 remaining cases, namely $a = b \\neq c$, $a = c \\neq b$, $b = c \\neq a$, $a > b$ and $a > c$, $b > a$ and $b > c$, $c > a$ and $c > b$.\nStep 8:\nIf $a = b \\neq c$, then $2a^2 - 2a^2 = 0$, which is true for all $a$. So there are 6 possibilities for $a$.\nStep 9:\nThere are 5 possibilities for $c$, and for each value of $c$, there are 5 possible values of $a$, so there are $5 \\times 5 = 25$ ordered triples in this case.\nStep 10:\nIf $a = c \\neq b$, then $2a^2 - 2a^2 = 0$, which is true for all $a$. So there are 6 possibilities for $a$.\nThere are 5 possibilities for $b$, and for each value of $b$, there are 5 possible values of $a$, so there are $5 \\times 5 = 25$ ordered triples in this case.",
+    "steps": [
+        "Step 1: Rearrange the equation to $a^2b + b^2c + c^2a - ab^2 - bc^2 - ca^2 = 0$",
+        "Step 2: \nGroup the terms as follows: $(a^2b - ab^2) + (b^2c - bc^2) + (c^2a - ca^2) = 0\n$(ab(a-b)) + (bc(b-c)) + (ca(c-a)) = 0",
+        "Step 3:\n$(ab(a-b)) + (bc(b-c)) + (ca(c-a)) = 0 \\Rightarrow ab(a-b) + bc(b-c) + ca(c-a) = 0$\n\n$ab(a-b) + bc(b-c) + ca(c-a) = 0 \\Rightarrow (a-b)(b-c)(c-a) = 0$",
+        "Step 4:\n$(a-b)(b-c)(c-a) = 0 \\Rightarrow a = b \\text{ or } b = c \\text{ or } c = a$",
+        "Step 5:\nThere are 6 possible cases: $a = b = c$, $a = b, c \\neq a = b$, $a = c, b \\neq a = c$, $b = c, a \\neq b = c$, $a = c$, $a = b$, $b = c$ are all the same case, and $c = a$ are all the same case.",
+        "Step 6:\nIf $a=b=c$, then we have $3a^2-3a^2=0$, which is true for all $a$. So there are 6 possibilities for $a$.",
+        "Step 7:\nThere are 6 possible values of $a$ and for each value of $a$, the values of $b$ and $c$ are determined, so there are $6$ possible ordered triples in this case.\n\nThere are 5 remaining cases, namely $a = b \\neq c$, $a = c \\neq b$, $b = c \\neq a$, $a > b$ and $a > c$, $b > a$ and $b > c$, $c > a$ and $c > b$.",
+        "Step 8:\nIf $a = b \\neq c$, then $2a^2 - 2a^2 = 0$, which is true for all $a$. So there are 6 possibilities for $a$.",
+        "Step 9:\nThere are 5 possibilities for $c$, and for each value of $c$, there are 5 possible values of $a$, so there are $5 \\times 5 = 25$ ordered triples in this case.",
+        "Step 10:\nIf $a = c \\neq b$, then $2a^2 - 2a^2 = 0$, which is true for all $a$. So there are 6 possibilities for $a$.\nThere are 5 possibilities for $b$, and for each value of $b$, there are 5 possible values of $a$, so there are $5 \\times 5 = 25$ ordered triples in this case."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Rearrange the equation to $a^2b + b^2c + c^2a - ab^2 - bc^2 - ca^2 = 0$",
+            1
+        ],
+        [
+            "Step 2: \nGroup the terms as follows: $(a^2b - ab^2) + (b^2c - bc^2) + (c^2a - ca^2) = 0\n$(ab(a-b)) + (bc(b-c)) + (ca(c-a)) = 0",
+            1
+        ],
+        [
+            "Step 3:\n$(ab(a-b)) + (bc(b-c)) + (ca(c-a)) = 0 \\Rightarrow ab(a-b) + bc(b-c) + ca(c-a) = 0$\n\n$ab(a-b) + bc(b-c) + ca(c-a) = 0 \\Rightarrow (a-b)(b-c)(c-a) = 0$",
+            1
+        ],
+        [
+            "Step 4:\n$(a-b)(b-c)(c-a) = 0 \\Rightarrow a = b \\text{ or } b = c \\text{ or } c = a$",
+            1
+        ],
+        [
+            "Step 5:\nThere are 6 possible cases: $a = b = c$, $a = b, c \\neq a = b$, $a = c, b \\neq a = c$, $b = c, a \\neq b = c$, $a = c$, $a = b$, $b = c$ are all the same case, and $c = a$ are all the same case.",
+            1
+        ],
+        [
+            "Step 6:\nIf $a=b=c$, then we have $3a^2-3a^2=0$, which is true for all $a$. So there are 6 possibilities for $a$.",
+            1
+        ],
+        [
+            "Step 7:\nThere are 6 possible values of $a$ and for each value of $a$, the values of $b$ and $c$ are determined, so there are $6$ possible ordered triples in this case.\n\nThere are 5 remaining cases, namely $a = b \\neq c$, $a = c \\neq b$, $b = c \\neq a$, $a > b$ and $a > c$, $b > a$ and $b > c$, $c > a$ and $c > b$.",
+            1
+        ],
+        [
+            "Step 8:\nIf $a = b \\neq c$, then $2a^2 - 2a^2 = 0$, which is true for all $a$. So there are 6 possibilities for $a$.",
+            1
+        ],
+        [
+            "Step 9:\nThere are 5 possibilities for $c$, and for each value of $c$, there are 5 possible values of $a$, so there are $5 \\times 5 = 25$ ordered triples in this case.",
+            1
+        ],
+        [
+            "Step 10:\nIf $a = c \\neq b$, then $2a^2 - 2a^2 = 0$, which is true for all $a$. So there are 6 possibilities for $a$.\nThere are 5 possibilities for $b$, and for each value of $b$, there are 5 possible values of $a$, so there are $5 \\times 5 = 25$ ordered triples in this case.",
+            1
+        ]
+    ],
+    "time": 131.5161910057068,
+    "total_tokens": 9388,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}
