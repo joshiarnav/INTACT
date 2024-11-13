@@ -1,0 +1,51 @@
+{
+    "problem": "The height (in meters) of a shot cannonball follows a trajectory given by $h(t) = -4.9t^2 + 14t - 0.4$ at time $t$ (in seconds). As an improper fraction, for how long is the cannonball above a height of $6$ meters?",
+    "level": "Level 5",
+    "type": "Algebra",
+    "solution": "The cannonball is above $6$ meters in height when $-4.9t^2 + 14t - 0.4 \\ge 6.$ Rearranging and multiplying through by $-10$, it follows that $$49t^2 - 140t + 64 \\le 0.$$The quadratic expression factors as $$(7t - 4)(7t - 16) \\le 0;$$then $7t-4, 7t-16$ have opposite signs, so it follows that $\\frac 47 \\le t \\le \\frac {16}7$. The cannonball then spends $\\frac {16}7 - \\frac 47 = \\boxed{\\frac{12}{7}}$ seconds above the height of $6$ meters.\n\n[asy]\nimport graph; size(8.945cm); real lsf=0.5; pen dps=linewidth(0.7)+fontsize(10); defaultpen(dps); pen ds=black; real xmin=-2.935,xmax=7.01,ymin=-3.295,ymax=11.24;\n\nreal f1(real x){return -4.9*x^2+14*x-0.4;}\nfilldraw(graph(f1,-2.925,7)--cycle,rgb(0.95,0.6,0.55),linewidth(1.6));\n\nLabel laxis; laxis.p=fontsize(10);\n\nxaxis(xmin,xmax,defaultpen+black,Ticks(laxis,Step=2.0,Size=2,NoZero),Arrows(6),above=true);\nyaxis(ymin,ymax,defaultpen+black,Ticks(laxis,Step=2.0,Size=2,NoZero),Arrows(6),above=true); draw((xmin,0*xmin+6)--(xmax,0*xmax+6),linewidth(1.2)+linetype(\"4 4\"));\n\ndot((0.5714,6),ds); label(\"$A$\",(0.755,6.29),NE*lsf); dot((2.2857,6),ds); label(\"$B$\",(2.465,6.29),NE*lsf);\n\nclip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle);\n\n[/asy]",
+    "is_solved": true,
+    "model_solution": "Step 1: Set up the inequality $-4.9t^2 + 14t - 0.4 > 6$ to find the values of $t$ for which the cannonball is above a height of $6$ meters.\nStep 2: Subtract 6 from both sides of the inequality to obtain $-4.9t^2 + 14t - 6.4 > 0$.\nStep 3: \n\\[\\begin{split} -4.9t^2+14t-6.4&amp;=0 \\\\ 4.9t^2-14t+6.4&amp;=0 \\\\ t&amp;=\\frac{-(-14)\\pm\\sqrt{(-14)^2-4(4.9)(6.4)}}{2(4.9)} \\end{split}\\]\nStep 4: \n\\[\\begin{split} t&amp;=\\frac{14\\pm\\sqrt{196-100.16}}{9.8} \\\\ t&amp;=\\frac{14\\pm\\sqrt{95.84}}{9.8} \\\\ t&amp;=\\frac{14\\pm 9.768}{9.8} \\\\ t&amp;=\\frac{14+9.768}{9.8} \\text{ or } t=\\frac{14-9.768}{9.8} \\\\ t&amp;=\\frac{23.768}{9.8} \\text{ or } t=\\frac{4.232}{9.8} \\\\ t&amp;\\approx 2.42 \\text{ or } t\\approx0.43 \\end{split}\\]\nSince the inequality $-4.9t^2 + 14t - 6.4 > 0$ is true for $t \\approx 0.43$ and $t \\approx 2.42$, the cannonball is above a height of $6$ meters for the interval between these two times.\n\n$\\frac{4.232}{9.8}<t<\\frac{23.768}{9.8}$\n$\\frac{4.232}{9.8}<t<\\frac{23.768}{9.8}$\n$\\frac{4.232}{9.8}<t<\\frac{23.768}{9.8}$",
+    "steps": [
+        "Step 1: Set up the inequality $-4.9t^2 + 14t - 0.4 > 6$ to find the values of $t$ for which the cannonball is above a height of $6$ meters.",
+        "Step 2: Subtract 6 from both sides of the inequality to obtain $-4.9t^2 + 14t - 6.4 > 0$.",
+        "Step 3: \n\\[\\begin{split} -4.9t^2+14t-6.4&amp;=0 \\\\ 4.9t^2-14t+6.4&amp;=0 \\\\ t&amp;=\\frac{-(-14)\\pm\\sqrt{(-14)^2-4(4.9)(6.4)}}{2(4.9)} \\end{split}\\]",
+        "Step 4: \n\\[\\begin{split} t&amp;=\\frac{14\\pm\\sqrt{196-100.16}}{9.8} \\\\ t&amp;=\\frac{14\\pm\\sqrt{95.84}}{9.8} \\\\ t&amp;=\\frac{14\\pm 9.768}{9.8} \\\\ t&amp;=\\frac{14+9.768}{9.8} \\text{ or } t=\\frac{14-9.768}{9.8} \\\\ t&amp;=\\frac{23.768}{9.8} \\text{ or } t=\\frac{4.232}{9.8} \\\\ t&amp;\\approx 2.42 \\text{ or } t\\approx0.43 \\end{split}\\]",
+        "Since the inequality $-4.9t^2 + 14t - 6.4 > 0$ is true for $t \\approx 0.43$ and $t \\approx 2.42$, the cannonball is above a height of $6$ meters for the interval between these two times.\n\n$\\frac{4.232}{9.8}<t<\\frac{23.768}{9.8}$",
+        "$\\frac{4.232}{9.8}<t<\\frac{23.768}{9.8}$",
+        "$\\frac{4.232}{9.8}<t<\\frac{23.768}{9.8}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Set up the inequality $-4.9t^2 + 14t - 0.4 > 6$ to find the values of $t$ for which the cannonball is above a height of $6$ meters.",
+            1
+        ],
+        [
+            "Step 2: Subtract 6 from both sides of the inequality to obtain $-4.9t^2 + 14t - 6.4 > 0$.",
+            1
+        ],
+        [
+            "Step 3: \n\\[\\begin{split} -4.9t^2+14t-6.4&amp;=0 \\\\ 4.9t^2-14t+6.4&amp;=0 \\\\ t&amp;=\\frac{-(-14)\\pm\\sqrt{(-14)^2-4(4.9)(6.4)}}{2(4.9)} \\end{split}\\]",
+            1
+        ],
+        [
+            "Step 4: \n\\[\\begin{split} t&amp;=\\frac{14\\pm\\sqrt{196-100.16}}{9.8} \\\\ t&amp;=\\frac{14\\pm\\sqrt{95.84}}{9.8} \\\\ t&amp;=\\frac{14\\pm 9.768}{9.8} \\\\ t&amp;=\\frac{14+9.768}{9.8} \\text{ or } t=\\frac{14-9.768}{9.8} \\\\ t&amp;=\\frac{23.768}{9.8} \\text{ or } t=\\frac{4.232}{9.8} \\\\ t&amp;\\approx 2.42 \\text{ or } t\\approx0.43 \\end{split}\\]",
+            1
+        ],
+        [
+            "Since the inequality $-4.9t^2 + 14t - 6.4 > 0$ is true for $t \\approx 0.43$ and $t \\approx 2.42$, the cannonball is above a height of $6$ meters for the interval between these two times.\n\n$\\frac{4.232}{9.8}<t<\\frac{23.768}{9.8}$",
+            1
+        ],
+        [
+            "$\\frac{4.232}{9.8}<t<\\frac{23.768}{9.8}$",
+            1
+        ],
+        [
+            "$\\frac{4.232}{9.8}<t<\\frac{23.768}{9.8}$",
+            1
+        ]
+    ],
+    "time": 93.57698130607605,
+    "total_tokens": 5959,
+    "final_answer_tokens": 614,
+    "model": "meta-llama/Llama-Vision-Free"
+}

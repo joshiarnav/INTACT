@@ -1,0 +1,56 @@
+{
+    "problem": "In the graph below, each grid line counts as one unit. The line shown below passes through the point $(1001,n)$ (not shown on graph).  Find $n$.\n[asy]size(250,0);\nadd(shift(-10,-10)*grid(20,20));\ndraw((-10,0)--(10,0),linewidth(2));\ndraw((0,-10)--(0,10),linewidth(2));\nlabel(\"x\",(10,0),E);\nlabel(\"y\",(0,10),N);\ndraw((-10,-2.71) -- (10,8.71),blue,Arrows);[/asy]",
+    "level": "Level 5",
+    "type": "Algebra",
+    "solution": "Looking at the graph, the line has a $y$-intercept of 3.  Also, counting carefully, we can see that when the line travels exactly 7 units horizontally, it travels 4 units vertically.  Therefore, the slope of the line is $4/7$.  So, the equation of the line in slope-intercept form is $y=\\frac{4}{7}x+3$.  Substituting 1001 for $x$ and $n$ for $y$, we can find $n$: \\begin{align*}\nn&=\\frac{4}{7}\\cdot 1001 +3\\\\\n\\Rightarrow\\qquad n&=4\\cdot 143 +3\\\\\n\\Rightarrow\\qquad n&=572+3=\\boxed{575}.\n\\end{align*}",
+    "is_solved": false,
+    "model_solution": "The line shown in the graph is not a straight line but rather a diagonal line with a slope of $\\frac{13}{10}$\nUsing the point-slope formula, we find that $n$ is equal to $8.71-\\frac{13}{10}\\cdot 1001.$\n$\\frac{-13}{10}\\cdot 1001 = -\\frac{13}{10}\\cdot 1000 - \\frac{13}{10}\\cdot1 = -130 - \\frac{13}{10}.$\n$8.71 - \\left(-130 - \\frac{13}{10}\\right) = 8.71 + 130 + \\frac{13}{10}$\n$8.71 + 130 + \\frac{13}{10} = 8.71 + 130 + 1.3 = 8.71 + 131.3$\n$8.71+131.3=140.01$\nSince $8.71$ is $0.01$ less than $8.71+0.01=8.72$, then $0.01$ less than $140.01$ is $140.00$.\n$140.00 = 140$\n$140 = n$",
+    "steps": [
+        "The line shown in the graph is not a straight line but rather a diagonal line with a slope of $\\frac{13}{10}$",
+        "Using the point-slope formula, we find that $n$ is equal to $8.71-\\frac{13}{10}\\cdot 1001.$",
+        "$\\frac{-13}{10}\\cdot 1001 = -\\frac{13}{10}\\cdot 1000 - \\frac{13}{10}\\cdot1 = -130 - \\frac{13}{10}.$",
+        "$8.71 - \\left(-130 - \\frac{13}{10}\\right) = 8.71 + 130 + \\frac{13}{10}$",
+        "$8.71 + 130 + \\frac{13}{10} = 8.71 + 130 + 1.3 = 8.71 + 131.3$",
+        "$8.71+131.3=140.01$",
+        "Since $8.71$ is $0.01$ less than $8.71+0.01=8.72$, then $0.01$ less than $140.01$ is $140.00$.\n$140.00 = 140$",
+        "$140 = n$"
+    ],
+    "full_steps": [
+        [
+            "The line shown in the graph is not a straight line but rather a diagonal line with a slope of $\\frac{13}{10}$",
+            1
+        ],
+        [
+            "Using the point-slope formula, we find that $n$ is equal to $8.71-\\frac{13}{10}\\cdot 1001.$",
+            1
+        ],
+        [
+            "$\\frac{-13}{10}\\cdot 1001 = -\\frac{13}{10}\\cdot 1000 - \\frac{13}{10}\\cdot1 = -130 - \\frac{13}{10}.$",
+            1
+        ],
+        [
+            "$8.71 - \\left(-130 - \\frac{13}{10}\\right) = 8.71 + 130 + \\frac{13}{10}$",
+            1
+        ],
+        [
+            "$8.71 + 130 + \\frac{13}{10} = 8.71 + 130 + 1.3 = 8.71 + 131.3$",
+            1
+        ],
+        [
+            "$8.71+131.3=140.01$",
+            1
+        ],
+        [
+            "Since $8.71$ is $0.01$ less than $8.71+0.01=8.72$, then $0.01$ less than $140.01$ is $140.00$.\n$140.00 = 140$",
+            1
+        ],
+        [
+            "$140 = n$",
+            1
+        ]
+    ],
+    "time": 107.67129898071289,
+    "total_tokens": 5622,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

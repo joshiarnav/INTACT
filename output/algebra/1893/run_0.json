@@ -1,0 +1,66 @@
+{
+    "problem": "Richard is building a rectangular playground from 200 feet of fencing. The fencing must entirely enclose the playground. What is the maximum area of this playground?",
+    "level": "Level 3",
+    "type": "Algebra",
+    "solution": "Let the length of the playground be $l$ and the width be $w$. We have the equation $2l+2w=200 \\Rightarrow l + w = 100$. We want to maximize the area of this rectangular playground, which is given by $lw$. From our equation, we know that $l=100-w$. Substituting this in to our expression for area, we have \\[(100-w)(w)=100w-w^2\\]We will now complete the square to find the maximum value of this expression. Factoring a $-1$ out, we have \\[-(w^2-100w)\\]In order for the expression inside the parenthesis to be a perfect square, we need to add and subtract $(100/2)^2=2500$ inside the parenthesis. Doing this, we get \\[-(w^2-100w+2500-2500) \\Rightarrow -(w-50)^2+2500\\]Since the maximum value of $-(w-50)^2$ is 0 (perfect squares are always nonnegative), the maximum value of the entire expression is 2500, which is achieved when $w=50$ and $l=100-w=50$ (the playground is a square). Thus, the maximum area of the playground is $\\boxed{2500}$ square feet.",
+    "is_solved": false,
+    "model_solution": "Let x = the length of the playground, in feet\nLet y = the width of the playground, in feet\nThe perimeter of the playground is the total length of fencing used, so 2x + 2y = 200.\n2x + 2y = 200 \u2192 x + y = 100.\nx = 100 - y\nSubstitute 100 - y for x in the equation for the area of the rectangle: A = xy \u2192 A = (100 - y)y.\nExpand the equation for A: A = (100 - y)y = 100y - y^2.\nTake the derivative of A with respect to y: dA/dy = 100 - 2y.\nSet dA/dy equal to 0 and solve for y: 100 - 2y = 0 \u2192 2y = 100 \u2192 y = 50.\nFind the value of x by substituting y = 50 into the equation x = 100 - y: x = 100 - 50 = 50.\nSubstitute 50 for y in the equation for the area, A = 100y - y^2: A = 100(50) - 50^2.",
+    "steps": [
+        "Let x = the length of the playground, in feet\nLet y = the width of the playground, in feet",
+        "The perimeter of the playground is the total length of fencing used, so 2x + 2y = 200.",
+        "2x + 2y = 200 \u2192 x + y = 100.",
+        "x = 100 - y",
+        "Substitute 100 - y for x in the equation for the area of the rectangle: A = xy \u2192 A = (100 - y)y.",
+        "Expand the equation for A: A = (100 - y)y = 100y - y^2.",
+        "Take the derivative of A with respect to y: dA/dy = 100 - 2y.",
+        "Set dA/dy equal to 0 and solve for y: 100 - 2y = 0 \u2192 2y = 100 \u2192 y = 50.",
+        "Find the value of x by substituting y = 50 into the equation x = 100 - y: x = 100 - 50 = 50.",
+        "Substitute 50 for y in the equation for the area, A = 100y - y^2: A = 100(50) - 50^2."
+    ],
+    "full_steps": [
+        [
+            "Let x = the length of the playground, in feet\nLet y = the width of the playground, in feet",
+            1
+        ],
+        [
+            "The perimeter of the playground is the total length of fencing used, so 2x + 2y = 200.",
+            1
+        ],
+        [
+            "2x + 2y = 200 \u2192 x + y = 100.",
+            1
+        ],
+        [
+            "x = 100 - y",
+            1
+        ],
+        [
+            "Substitute 100 - y for x in the equation for the area of the rectangle: A = xy \u2192 A = (100 - y)y.",
+            1
+        ],
+        [
+            "Expand the equation for A: A = (100 - y)y = 100y - y^2.",
+            1
+        ],
+        [
+            "Take the derivative of A with respect to y: dA/dy = 100 - 2y.",
+            1
+        ],
+        [
+            "Set dA/dy equal to 0 and solve for y: 100 - 2y = 0 \u2192 2y = 100 \u2192 y = 50.",
+            1
+        ],
+        [
+            "Find the value of x by substituting y = 50 into the equation x = 100 - y: x = 100 - 50 = 50.",
+            1
+        ],
+        [
+            "Substitute 50 for y in the equation for the area, A = 100y - y^2: A = 100(50) - 50^2.",
+            1
+        ]
+    ],
+    "time": 133.2267062664032,
+    "total_tokens": 4381,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

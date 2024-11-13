@@ -171,5 +171,6 @@ def all_problem_files(data_dir):
     return problem_files
 
 all_files = all_problem_files("./MATH")
-problem_files = ["./MATH/train/algebra/0.json", "./MATH/train/algebra/3.json"]
+# problem_files = ["./MATH/train/algebra/0.json", "./MATH/train/algebra/3.json"]
+problem_files = all_files
 solve_problems(problem_files, output_path="./output", verbosity=True, model=MODEL)

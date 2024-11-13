@@ -1,0 +1,36 @@
+{
+    "problem": "You have linear functions $p(x)$ and $q(x)$. You know $p(2)=3$, and $p(q(x))=4x+7$ for all $x$. Find $q(-1)$.",
+    "level": "Level 5",
+    "type": "Algebra",
+    "solution": "We have $p(2)=3$, but we have no information about how $p(x)$ acts when we put numbers like $2$ into it. We can only put outputs of $q(x)$ into $p(x)$. So, let's force $2$ to be an output of $q(x)$: Let $q(a)=2$ for some $a$.  Then we know $p(q(a))=4a+7$. But since $q(a)=2$, we really have $p(2)=4a+7$. But we're given that $p(2)=3$, so $3=4a+7$. Solving this gives $a=-1$ (so as it turns out, there was a value of $a$ for which $q(a)=2$.) By the definition of $a$, $q(a)=2$, so since $a=-1$, $q(-1)=2$. But that's exactly what we wanted to find! So $q(-1)=\\boxed{2}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: Substitute $x=-1$ into $p(q(x))=4x+7$ to find $p(q(-1))$.\n$p(q(-1))=4(-1)+7$\n$p(q(-1))=-4+7$\n$p(q(-1))=3$\nStep 2: Since $p(x)=3$, $q(-1)$ must be the input that results in $p(x)$ being equal to $3$.\n$q(-1)=2$\nStep 3: Since $p(x)=3$ when $x=q(-1)$, and we know $p(2)=3$, we can conclude $q(-1)=2$ because $q(-1)$ is the input that gives $p(x)=3$, and we already know $p(2)=3$.\nStep 4: Since $p(x)$ is a linear function, we can write it as $p(x)=mx+b$. We know $p(2)=3$, so $2m+b=3$. We also know $p(q(-1))=3$, so $m(q(-1))+b=3$. Now we have two equations and two unknowns: $2m+b=3$ and $mq(-1)+b=3$.\n \nFinal Answer: The final answer is 2.",
+    "steps": [
+        "Step 1: Substitute $x=-1$ into $p(q(x))=4x+7$ to find $p(q(-1))$.\n$p(q(-1))=4(-1)+7$\n$p(q(-1))=-4+7$\n$p(q(-1))=3$",
+        "Step 2: Since $p(x)=3$, $q(-1)$ must be the input that results in $p(x)$ being equal to $3$.\n$q(-1)=2$",
+        "Step 3: Since $p(x)=3$ when $x=q(-1)$, and we know $p(2)=3$, we can conclude $q(-1)=2$ because $q(-1)$ is the input that gives $p(x)=3$, and we already know $p(2)=3$.",
+        "Step 4: Since $p(x)$ is a linear function, we can write it as $p(x)=mx+b$. We know $p(2)=3$, so $2m+b=3$. We also know $p(q(-1))=3$, so $m(q(-1))+b=3$. Now we have two equations and two unknowns: $2m+b=3$ and $mq(-1)+b=3$.\n \nFinal Answer: The final answer is 2."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Substitute $x=-1$ into $p(q(x))=4x+7$ to find $p(q(-1))$.\n$p(q(-1))=4(-1)+7$\n$p(q(-1))=-4+7$\n$p(q(-1))=3$",
+            1
+        ],
+        [
+            "Step 2: Since $p(x)=3$, $q(-1)$ must be the input that results in $p(x)$ being equal to $3$.\n$q(-1)=2$",
+            1
+        ],
+        [
+            "Step 3: Since $p(x)=3$ when $x=q(-1)$, and we know $p(2)=3$, we can conclude $q(-1)=2$ because $q(-1)$ is the input that gives $p(x)=3$, and we already know $p(2)=3$.",
+            1
+        ],
+        [
+            "Step 4: Since $p(x)$ is a linear function, we can write it as $p(x)=mx+b$. We know $p(2)=3$, so $2m+b=3$. We also know $p(q(-1))=3$, so $m(q(-1))+b=3$. Now we have two equations and two unknowns: $2m+b=3$ and $mq(-1)+b=3$.\n \nFinal Answer: The final answer is 2.",
+            1
+        ]
+    ],
+    "time": 55.38719844818115,
+    "total_tokens": 2100,
+    "final_answer_tokens": 380,
+    "model": "meta-llama/Llama-Vision-Free"
+}

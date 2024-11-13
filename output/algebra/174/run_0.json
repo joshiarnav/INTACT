@@ -1,0 +1,66 @@
+{
+    "problem": "If $f(c)=\\frac{3}{2c-3}$, find $\\frac{kn^2}{lm}$ when $f^{-1}(c)\\times c \\times f(c)$ equals the simplified fraction$\\frac{kc+l}{mc+n}$, where $k,l,m,\\text{ and }n$ are integers.",
+    "level": "Level 5",
+    "type": "Algebra",
+    "solution": "Apply the definition of $f$ to the identity $f(f^{-1}(c))=c$ to find \\begin{align*}\nc&=\\frac{3}{2f^{-1}(c)-3}\\quad\\Rightarrow\\\\\nc(2f^{-1}(c)-3)&=3\\quad\\Rightarrow\\\\\n2f^{-1}(c)-3&=\\frac{3}{c}\\quad\\Rightarrow\\\\\n2f^{-1}(c)&=\\frac{3}{c}+3\\quad\\Rightarrow\\\\\nf^{-1}(c)&=\\frac{3}{2c}+\\frac{3}{2}\\quad\\Rightarrow\\\\\n&=\\frac{3}{2}\\left(\\frac{1}{c}+1\\right).\n\\end{align*}Therefore, $f^{-1}(c)\\times c \\times f(c)$ can be found: \\begin{align*}\nf^{-1}(c)\\times c \\times f(c)&=\\left(\\frac{3}{2}\\left(\\frac{1}{c}+1\\right)\\right)\\times c \\times \\frac{3}{2c-3}\\quad\\Rightarrow\\\\\n&=\\frac{3}{2}\\times\\frac{1+c}{c}\\times c \\times\\frac{3}{2c-3}\\quad\\Rightarrow\\\\\n&=\\frac{3\\times (1+c)\\times 3}{2 \\times (2c-3)}\\quad\\Rightarrow\\\\\n&=\\frac{9+9c}{4c-6}\\quad\\Rightarrow\\\\\n&=\\frac{9c+9}{4c-6}.\n\\end{align*}Thus, $k=9$, $l=9$, $m=4$, and $n=-6$. So, $\\frac{kn^2}{lm}=\\frac{9\\times(-6)^2}{9\\times 4}=\\boxed{9}$.",
+    "is_solved": false,
+    "model_solution": "Step 1: Find the inverse function $f^{-1}(c)$.\n$f^{-1}(c)=\\frac{3}{2c-3}$\nStep 2:\n\\begin{align*}\nf^{-1}(c)&=\\frac{3}{2c-3}\\\\\nf^{-1}(f(x))&=\\frac{3}{2\\left(\\frac{3}{2x-3}\\right)-3}\\\\\nf^{-1}(f(x))&=\\frac{3}{\\frac{6}{2x-3}-3}\\\\\nf^{-1}(f(x))&=\\frac{3}{\\frac{6-9x+9}{2x-3}}\\\\\nf^{-1}(f(x))&=\\frac{3}{\\frac{-9x+15}{2x-3}}\\\\\nf^{-1}(f(x))&=\\frac{6x-9}{-9x+15}\\\\\nf^{-1}(f(x))&=-\\frac{6x-9}{9x-15}\\\\\n\\end{align*}\nStep 3:\n\\begin{align*}\nf^{-1}(c) \\times c \\times f(c) &= \\left(-\\frac{6x-9}{9x-15}\\right)x\\left(\\frac{3}{2x-3}\\right)\\\\\nf^{-1}(c) \\times c \\times f(c) &= -\\frac{3x(6x-9)}{9x(2x-3)}\\\\\nf^{-1}(c) \\times c \\times f(c) &= -\\frac{18x^2-27x}{18x^2-27x}\n\\end{align*}\nSince the fractions are equal, we can cancel out the common factor $18x^2-27x$ from the numerator and denominator, which is not equal to zero, giving us: \n\\begin{align*}\nf^{-1}(c) \\times c \\times f(c)&=-1\\\\\n\\end{align*}\nStep 4:\n\\begin{align*}\n-1&=\\frac{kc+l}{mc+n}\\\\\n\\Rightarrow\\qquad\\frac{kc+l}{mc+n}&=-1\\\\\n\\Rightarrow\\qquad kc+l&=-mc-n\\\\\n\\Rightarrow\\qquad kc+mc&=-l-n\\\\\n\\Rightarrow\\qquad (k+m)c&=-(l+n)\\\\\n\\end{align*}\nSince the fractions are equal, we can equate the coefficients of c on both sides:\nk+m=0\nand\n-(l+n)=0\nStep 5:\n\\begin{align*}\nk+m&=0\\\\\n\\Rightarrow\\qquad m&=-k\\\\\n\\text{and}\\qquad -(l+n)&=0\\\\\n\\Rightarrow\\qquad l+n&=0\\\\\n\\Rightarrow\\qquad n&=-l\\\\\n\\end{align*}\n\\begin{align*}\nkc+m(-c)&=-(l+c)n\\\\\n\\Rightarrow\\qquad kc-mc&=-ln-cn\\\\\n\\Rightarrow\\qquad c(k-m)&=-n(l+c)\\\\\n\\end{align*}\n\\begin{align*}\nc(k-m)&=-n(l+c)\\\\\n\\Rightarrow\\qquad c(k-m)&=-nl-n(c)\\\\\n\\Rightarrow\\qquad c(k-m)&=-nl-n(c)\\\\\n\\Rightarrow\\qquad c(k-m+n)&=-nl\\\\\n\\Rightarrow\\qquad \\frac{c(k-m+n)}{-nl}&=1\\\\\n\\Rightarrow\\qquad \\frac{ck-cm+cn}{-nl}&=1\\\\\n\\Rightarrow\\qquad \\frac{ck+cn-cm}{-nl}&=1\\\\\n\\Rightarrow\\qquad \\frac{cn+ck-cm}{-nl}&=1\\\\\n\\end{align*}\n\\begin{align*}\n\\frac{cn+ck-cm}{-nl}&=1\\\\\n\\Rightarrow\\qquad cn+ck-cm&=-nl\\\\\n\\Rightarrow\\qquad cn+ck&=-nl+cm\\\\\n\\Rightarrow\\qquad \\frac{cn+ck}{-nl+cm}&=1\\\\\n\\end{align*}",
+    "steps": [
+        "Step 1: Find the inverse function $f^{-1}(c)$.\n$f^{-1}(c)=\\frac{3}{2c-3}$",
+        "Step 2:\n\\begin{align*}\nf^{-1}(c)&=\\frac{3}{2c-3}\\\\\nf^{-1}(f(x))&=\\frac{3}{2\\left(\\frac{3}{2x-3}\\right)-3}\\\\\nf^{-1}(f(x))&=\\frac{3}{\\frac{6}{2x-3}-3}\\\\\nf^{-1}(f(x))&=\\frac{3}{\\frac{6-9x+9}{2x-3}}\\\\\nf^{-1}(f(x))&=\\frac{3}{\\frac{-9x+15}{2x-3}}\\\\\nf^{-1}(f(x))&=\\frac{6x-9}{-9x+15}\\\\\nf^{-1}(f(x))&=-\\frac{6x-9}{9x-15}\\\\\n\\end{align*}",
+        "Step 3:\n\\begin{align*}\nf^{-1}(c) \\times c \\times f(c) &= \\left(-\\frac{6x-9}{9x-15}\\right)x\\left(\\frac{3}{2x-3}\\right)\\\\\nf^{-1}(c) \\times c \\times f(c) &= -\\frac{3x(6x-9)}{9x(2x-3)}\\\\\nf^{-1}(c) \\times c \\times f(c) &= -\\frac{18x^2-27x}{18x^2-27x}\n\\end{align*}",
+        "Since the fractions are equal, we can cancel out the common factor $18x^2-27x$ from the numerator and denominator, which is not equal to zero, giving us: \n\\begin{align*}\nf^{-1}(c) \\times c \\times f(c)&=-1\\\\\n\\end{align*}",
+        "Step 4:\n\\begin{align*}\n-1&=\\frac{kc+l}{mc+n}\\\\\n\\Rightarrow\\qquad\\frac{kc+l}{mc+n}&=-1\\\\\n\\Rightarrow\\qquad kc+l&=-mc-n\\\\\n\\Rightarrow\\qquad kc+mc&=-l-n\\\\\n\\Rightarrow\\qquad (k+m)c&=-(l+n)\\\\\n\\end{align*}",
+        "Since the fractions are equal, we can equate the coefficients of c on both sides:\nk+m=0\nand\n-(l+n)=0",
+        "Step 5:\n\\begin{align*}\nk+m&=0\\\\\n\\Rightarrow\\qquad m&=-k\\\\\n\\text{and}\\qquad -(l+n)&=0\\\\\n\\Rightarrow\\qquad l+n&=0\\\\\n\\Rightarrow\\qquad n&=-l\\\\\n\\end{align*}",
+        "\\begin{align*}\nkc+m(-c)&=-(l+c)n\\\\\n\\Rightarrow\\qquad kc-mc&=-ln-cn\\\\\n\\Rightarrow\\qquad c(k-m)&=-n(l+c)\\\\\n\\end{align*}",
+        "\\begin{align*}\nc(k-m)&=-n(l+c)\\\\\n\\Rightarrow\\qquad c(k-m)&=-nl-n(c)\\\\\n\\Rightarrow\\qquad c(k-m)&=-nl-n(c)\\\\\n\\Rightarrow\\qquad c(k-m+n)&=-nl\\\\\n\\Rightarrow\\qquad \\frac{c(k-m+n)}{-nl}&=1\\\\\n\\Rightarrow\\qquad \\frac{ck-cm+cn}{-nl}&=1\\\\\n\\Rightarrow\\qquad \\frac{ck+cn-cm}{-nl}&=1\\\\\n\\Rightarrow\\qquad \\frac{cn+ck-cm}{-nl}&=1\\\\\n\\end{align*}",
+        "\\begin{align*}\n\\frac{cn+ck-cm}{-nl}&=1\\\\\n\\Rightarrow\\qquad cn+ck-cm&=-nl\\\\\n\\Rightarrow\\qquad cn+ck&=-nl+cm\\\\\n\\Rightarrow\\qquad \\frac{cn+ck}{-nl+cm}&=1\\\\\n\\end{align*}"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Find the inverse function $f^{-1}(c)$.\n$f^{-1}(c)=\\frac{3}{2c-3}$",
+            1
+        ],
+        [
+            "Step 2:\n\\begin{align*}\nf^{-1}(c)&=\\frac{3}{2c-3}\\\\\nf^{-1}(f(x))&=\\frac{3}{2\\left(\\frac{3}{2x-3}\\right)-3}\\\\\nf^{-1}(f(x))&=\\frac{3}{\\frac{6}{2x-3}-3}\\\\\nf^{-1}(f(x))&=\\frac{3}{\\frac{6-9x+9}{2x-3}}\\\\\nf^{-1}(f(x))&=\\frac{3}{\\frac{-9x+15}{2x-3}}\\\\\nf^{-1}(f(x))&=\\frac{6x-9}{-9x+15}\\\\\nf^{-1}(f(x))&=-\\frac{6x-9}{9x-15}\\\\\n\\end{align*}",
+            1
+        ],
+        [
+            "Step 3:\n\\begin{align*}\nf^{-1}(c) \\times c \\times f(c) &= \\left(-\\frac{6x-9}{9x-15}\\right)x\\left(\\frac{3}{2x-3}\\right)\\\\\nf^{-1}(c) \\times c \\times f(c) &= -\\frac{3x(6x-9)}{9x(2x-3)}\\\\\nf^{-1}(c) \\times c \\times f(c) &= -\\frac{18x^2-27x}{18x^2-27x}\n\\end{align*}",
+            1
+        ],
+        [
+            "Since the fractions are equal, we can cancel out the common factor $18x^2-27x$ from the numerator and denominator, which is not equal to zero, giving us: \n\\begin{align*}\nf^{-1}(c) \\times c \\times f(c)&=-1\\\\\n\\end{align*}",
+            1
+        ],
+        [
+            "Step 4:\n\\begin{align*}\n-1&=\\frac{kc+l}{mc+n}\\\\\n\\Rightarrow\\qquad\\frac{kc+l}{mc+n}&=-1\\\\\n\\Rightarrow\\qquad kc+l&=-mc-n\\\\\n\\Rightarrow\\qquad kc+mc&=-l-n\\\\\n\\Rightarrow\\qquad (k+m)c&=-(l+n)\\\\\n\\end{align*}",
+            1
+        ],
+        [
+            "Since the fractions are equal, we can equate the coefficients of c on both sides:\nk+m=0\nand\n-(l+n)=0",
+            1
+        ],
+        [
+            "Step 5:\n\\begin{align*}\nk+m&=0\\\\\n\\Rightarrow\\qquad m&=-k\\\\\n\\text{and}\\qquad -(l+n)&=0\\\\\n\\Rightarrow\\qquad l+n&=0\\\\\n\\Rightarrow\\qquad n&=-l\\\\\n\\end{align*}",
+            1
+        ],
+        [
+            "\\begin{align*}\nkc+m(-c)&=-(l+c)n\\\\\n\\Rightarrow\\qquad kc-mc&=-ln-cn\\\\\n\\Rightarrow\\qquad c(k-m)&=-n(l+c)\\\\\n\\end{align*}",
+            1
+        ],
+        [
+            "\\begin{align*}\nc(k-m)&=-n(l+c)\\\\\n\\Rightarrow\\qquad c(k-m)&=-nl-n(c)\\\\\n\\Rightarrow\\qquad c(k-m)&=-nl-n(c)\\\\\n\\Rightarrow\\qquad c(k-m+n)&=-nl\\\\\n\\Rightarrow\\qquad \\frac{c(k-m+n)}{-nl}&=1\\\\\n\\Rightarrow\\qquad \\frac{ck-cm+cn}{-nl}&=1\\\\\n\\Rightarrow\\qquad \\frac{ck+cn-cm}{-nl}&=1\\\\\n\\Rightarrow\\qquad \\frac{cn+ck-cm}{-nl}&=1\\\\\n\\end{align*}",
+            1
+        ],
+        [
+            "\\begin{align*}\n\\frac{cn+ck-cm}{-nl}&=1\\\\\n\\Rightarrow\\qquad cn+ck-cm&=-nl\\\\\n\\Rightarrow\\qquad cn+ck&=-nl+cm\\\\\n\\Rightarrow\\qquad \\frac{cn+ck}{-nl+cm}&=1\\\\\n\\end{align*}",
+            1
+        ]
+    ],
+    "time": 132.21847701072693,
+    "total_tokens": 13078,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

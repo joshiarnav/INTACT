@@ -1,0 +1,46 @@
+{
+    "problem": "Evaluate $$\\lfloor\\sqrt{1}\\rfloor + \\lfloor\\sqrt{2}\\rfloor + \\lfloor\\sqrt{3}\\rfloor + .... + \\lfloor\\sqrt{19}\\rfloor$$",
+    "level": "Level 4",
+    "type": "Algebra",
+    "solution": "We note that if $a^2 \\leq n < (a+1)^2$ for some integer $a$, then $a \\leq \\sqrt{x} < a+1$, so $a$ is the greatest integer less than or equal to $x$. Consequently, we break up our sum into the blocks of integers between consecutive perfect squares:\n\nFor $1\\leq n \\leq 3$, $\\lfloor\\sqrt{n}\\rfloor=1$. There are $3$ values of $n$ in this range.\nFor $4\\leq n\\leq 8$, $\\lfloor\\sqrt{n}\\rfloor=2$. There are $5$ values of $n$ in this range.\nFor $9\\leq n \\leq 15$, $\\lfloor\\sqrt{n}\\rfloor=3$. There are $7$ values of $n$ in this range.\nFor $16\\leq n \\leq 19$, $\\lfloor\\sqrt{n}\\rfloor=4$. There are $4$ values of $n$ in this range.\n\nConsequently, our total sum is $3\\cdot1+5\\cdot2+7\\cdot3+4\\cdot 4= \\boxed{50}$.",
+    "is_solved": true,
+    "model_solution": "$\\lfloor\\sqrt{1}\\rfloor = 1, \\lfloor\\sqrt{2}\\rfloor = 1, \\lfloor\\sqrt{3}\\rfloor = 1, \\lfloor\\sqrt{4}\\rfloor = 2, \\lfloor\\sqrt{5}\\rfloor = 2, \\lfloor\\sqrt{6}\\rfloor = 2, \\lfloor\\sqrt{7}\\rfloor = 2, \\lfloor\\sqrt{8}\\rfloor = 2, \\lfloor\\sqrt{9}\\rfloor = 3, \\lfloor\\sqrt{10}\\rfloor = 3, \\lfloor\\sqrt{11}\\rfloor = 3, \\lfloor\\sqrt{12}\\rfloor = 3, \\lfloor\\sqrt{13}\\rfloor = 3, \\lfloor\\sqrt{14}\\rfloor = 3, \\lfloor\\sqrt{15}\\rfloor = 3, \\lfloor\\sqrt{16}\\rfloor = 4, \\lfloor\\sqrt{17}\\rfloor = 4, \\lfloor\\sqrt{18}\\rfloor =\n$\\lfloor\\sqrt{19}\\rfloor = 4$\n$$\\lfloor\\sqrt{18}\\rfloor = 4$$\nThe next step is:\nCount the number of times each value occurs and multiply the value by the count: \n1 \u00d7 3 = 3, \n2 \u00d7 7 = 14, \n3 \u00d7 13 = 39, \n4 \u00d7 4 = 16.\n3 + 14 + 39 + 16 = 72\n3 \u00d7 3 = 9, \n2 \u00d7 7 = 14, \n3 \u00d7 13 = 39, \n4 \u00d7 4 = 16.\n3 + 14 + 39 + 16 = Final Answer: 72",
+    "steps": [
+        "$\\lfloor\\sqrt{1}\\rfloor = 1, \\lfloor\\sqrt{2}\\rfloor = 1, \\lfloor\\sqrt{3}\\rfloor = 1, \\lfloor\\sqrt{4}\\rfloor = 2, \\lfloor\\sqrt{5}\\rfloor = 2, \\lfloor\\sqrt{6}\\rfloor = 2, \\lfloor\\sqrt{7}\\rfloor = 2, \\lfloor\\sqrt{8}\\rfloor = 2, \\lfloor\\sqrt{9}\\rfloor = 3, \\lfloor\\sqrt{10}\\rfloor = 3, \\lfloor\\sqrt{11}\\rfloor = 3, \\lfloor\\sqrt{12}\\rfloor = 3, \\lfloor\\sqrt{13}\\rfloor = 3, \\lfloor\\sqrt{14}\\rfloor = 3, \\lfloor\\sqrt{15}\\rfloor = 3, \\lfloor\\sqrt{16}\\rfloor = 4, \\lfloor\\sqrt{17}\\rfloor = 4, \\lfloor\\sqrt{18}\\rfloor =",
+        "$\\lfloor\\sqrt{19}\\rfloor = 4$",
+        "$$\\lfloor\\sqrt{18}\\rfloor = 4$$",
+        "The next step is:\nCount the number of times each value occurs and multiply the value by the count: \n1 \u00d7 3 = 3, \n2 \u00d7 7 = 14, \n3 \u00d7 13 = 39, \n4 \u00d7 4 = 16.",
+        "3 + 14 + 39 + 16 = 72",
+        "3 \u00d7 3 = 9, \n2 \u00d7 7 = 14, \n3 \u00d7 13 = 39, \n4 \u00d7 4 = 16.\n3 + 14 + 39 + 16 = Final Answer: 72"
+    ],
+    "full_steps": [
+        [
+            "$\\lfloor\\sqrt{1}\\rfloor = 1, \\lfloor\\sqrt{2}\\rfloor = 1, \\lfloor\\sqrt{3}\\rfloor = 1, \\lfloor\\sqrt{4}\\rfloor = 2, \\lfloor\\sqrt{5}\\rfloor = 2, \\lfloor\\sqrt{6}\\rfloor = 2, \\lfloor\\sqrt{7}\\rfloor = 2, \\lfloor\\sqrt{8}\\rfloor = 2, \\lfloor\\sqrt{9}\\rfloor = 3, \\lfloor\\sqrt{10}\\rfloor = 3, \\lfloor\\sqrt{11}\\rfloor = 3, \\lfloor\\sqrt{12}\\rfloor = 3, \\lfloor\\sqrt{13}\\rfloor = 3, \\lfloor\\sqrt{14}\\rfloor = 3, \\lfloor\\sqrt{15}\\rfloor = 3, \\lfloor\\sqrt{16}\\rfloor = 4, \\lfloor\\sqrt{17}\\rfloor = 4, \\lfloor\\sqrt{18}\\rfloor =",
+            1
+        ],
+        [
+            "$\\lfloor\\sqrt{19}\\rfloor = 4$",
+            1
+        ],
+        [
+            "$$\\lfloor\\sqrt{18}\\rfloor = 4$$",
+            1
+        ],
+        [
+            "The next step is:\nCount the number of times each value occurs and multiply the value by the count: \n1 \u00d7 3 = 3, \n2 \u00d7 7 = 14, \n3 \u00d7 13 = 39, \n4 \u00d7 4 = 16.",
+            1
+        ],
+        [
+            "3 + 14 + 39 + 16 = 72",
+            1
+        ],
+        [
+            "3 \u00d7 3 = 9, \n2 \u00d7 7 = 14, \n3 \u00d7 13 = 39, \n4 \u00d7 4 = 16.\n3 + 14 + 39 + 16 = Final Answer: 72",
+            1
+        ]
+    ],
+    "time": 80.3300929069519,
+    "total_tokens": 5099,
+    "final_answer_tokens": 508,
+    "model": "meta-llama/Llama-Vision-Free"
+}

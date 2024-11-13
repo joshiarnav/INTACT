@@ -1,0 +1,66 @@
+{
+    "problem": "A parabola with equation $y=ax^2+bx+c$ has a vertical line of symmetry at $x=1$ and goes through the two points $(-1,3)$ and $(2,-2)$. The quadratic $ax^2 + bx +c$  has two real roots. The greater root is $\\sqrt{n}+1$. What is $n$?",
+    "level": "Level 5",
+    "type": "Algebra",
+    "solution": "Rewrite the equation of the parabola as $y=a(x-h)^2+k$, where $a$, $h$, and $k$ are constants and $(h,k)$ are the coordinates of the vertex. If the parabola has a vertical line of symmetry at $x=1$, then the $x$-coordinate of the vertex is $x=1$, so $h=1$. The equation of the parabola becomes $y=a(x-1)^2+k$. Plugging in the two given points into this equation, we have the two equations \\begin{align*}\n3&=a(-1-1)^2+k \\Rightarrow 3=4a+k\\\\\n-2&=a(2-1)^2+k \\Rightarrow -2=a+k\n\\end{align*} Subtracting the second equation from the first yields $5=3a$, so $a=5/3$. Plugging this value into the second equation to solve for $k$, we find that $k=-11/3$. So the equation of the parabola is $y=\\frac{5}{3}(x-1)^2-\\frac{11}{3}$. To find the zeros of the parabola, we set $y=0$ and solve for $x$: \\begin{align*}\n0&=\\frac{5}{3}(x-1)^2-\\frac{11}{3}\\\\\n\\frac{11}{3}&=\\frac{5}{3}(x-1)^2 &\\\\\n\\frac{11}{5}&=(x-1)^2\\\\\nx &= \\pm\\sqrt{\\frac{11}{5}}+1\n\\end{align*}\n\nThe greater zero is at $x=\\sqrt{\\frac{11}{5}}+1$, so $n=\\boxed{2.2}$. The graph of the parabola is below:\n\n[asy]\nLabel f;\n\nf.p=fontsize(4);\n\nxaxis(-1,3,Ticks(f, 1.0));\n\nyaxis(-4,3,Ticks(f, 1.0));\n\nreal f(real x)\n\n{\n\nreturn 5/3*(x-1)^2-11/3;\n\n}\n\ndraw(graph(f,-1,3));\n[/asy]",
+    "is_solved": false,
+    "model_solution": "Step 1: Since the parabola has a vertical line of symmetry at $x=1$, we know the axis of symmetry is $x=1$, which means the roots of the quadratic equation are symmetric around x = 1.\n\nThe equation of a quadratic with roots $r_1$ and $r_2$ is given by\n$$y=a(x-r_1)(x-r_2).$$ We know that the roots are $r_1$ and $r_2$ such that $r_1 + r_2 = 2$ and $r_1 \\cdot r_2 = n$.\nStep 2: We know the parabola passes through the points $(-1,3)$ and $(2,-2)$, so we can plug these values into the equation to solve for a.\nStep 3: Since $r_1+r_2=2$, we have $r_1=2-r_2$. We can plug this into the equation and use the point $(-1,3)$ to solve for $a$.\nPlug in $x=-1$ and $y=3$ into the equation\n$$y=a(x-r_1)(x-r_2)$$ and substitute $r_1=2-r_2$ to obtain\n$$3=a(-1-(2-r_2))(-1-r_2).$$\nExpand the equation.\n$$3=a(-1-(2-r_2))(-1-r_2)$$\n$$3=a(-3+r_2)(-1-r_2)$$\n$$3=a(3-r_2)(-1-r_2)$$\n$$3=-a(3-r_2)(1+r_2)$$\n$$3=a(3-r_2)(-1-r_2)$$\n$$(3-r_2)(-1-r_2)=-\\frac{3}{a}$$\n$$(3-r_2)(-1-r_2)=-3a^{-1}$$\nExpand the equation\n$$(3-r_2)(-1-r_2)=-3a^{-1}$$\n$$-3+r_2-3r_2+r_2^2=-3a^{-1}$$\n$$-3r_2+r_2^2-3+r_2=-3a^{-1}$$\n$$r_2^2-4r_2+4=-3a^{-1}$$\nStep 4: \nPlug in $x=2$ and $y=-2$ into the equation\n$$y=a(x-r_1)(x-r_2)$$\nand substitute $r_1=2-r_2$ to obtain\n$$-2=a(2-(2-r_2))(2-(2-r_2))$$\nSimplify the equation.\n$$-2=a(2-(2-r_2))(2-(2-r_2))$$\n$$-2=a(2-2+r_2)(2-2+r_2)$$\n$$-2=a(r_2)(r_2)$$\n$$-2=ar_2^2$$\n$$a=-\\frac{2}{r_2^2}$$\nSubstitute $-\\frac{2}{r_2^2}$ for $a$ in the equation $r_2^2-4r_2+4=-3a^{-1}$ to get $r_2^2-4r_2+4=6r_2^2$ and combine like terms to get $5r_2^2+4r_2-4=0$.\nStep 5: Apply the quadratic formula to solve for $r_2$ in the equation $5r_2^2+4r_2-4=0$",
+    "steps": [
+        "Step 1: Since the parabola has a vertical line of symmetry at $x=1$, we know the axis of symmetry is $x=1$, which means the roots of the quadratic equation are symmetric around x = 1.\n\nThe equation of a quadratic with roots $r_1$ and $r_2$ is given by\n$$y=a(x-r_1)(x-r_2).$$ We know that the roots are $r_1$ and $r_2$ such that $r_1 + r_2 = 2$ and $r_1 \\cdot r_2 = n$.",
+        "Step 2: We know the parabola passes through the points $(-1,3)$ and $(2,-2)$, so we can plug these values into the equation to solve for a.",
+        "Step 3: Since $r_1+r_2=2$, we have $r_1=2-r_2$. We can plug this into the equation and use the point $(-1,3)$ to solve for $a$.",
+        "Plug in $x=-1$ and $y=3$ into the equation\n$$y=a(x-r_1)(x-r_2)$$ and substitute $r_1=2-r_2$ to obtain\n$$3=a(-1-(2-r_2))(-1-r_2).$$",
+        "Expand the equation.\n$$3=a(-1-(2-r_2))(-1-r_2)$$\n$$3=a(-3+r_2)(-1-r_2)$$\n$$3=a(3-r_2)(-1-r_2)$$\n$$3=-a(3-r_2)(1+r_2)$$",
+        "$$3=a(3-r_2)(-1-r_2)$$\n$$(3-r_2)(-1-r_2)=-\\frac{3}{a}$$\n$$(3-r_2)(-1-r_2)=-3a^{-1}$$",
+        "Expand the equation\n$$(3-r_2)(-1-r_2)=-3a^{-1}$$\n$$-3+r_2-3r_2+r_2^2=-3a^{-1}$$\n$$-3r_2+r_2^2-3+r_2=-3a^{-1}$$\n$$r_2^2-4r_2+4=-3a^{-1}$$",
+        "Step 4: \nPlug in $x=2$ and $y=-2$ into the equation\n$$y=a(x-r_1)(x-r_2)$$\nand substitute $r_1=2-r_2$ to obtain\n$$-2=a(2-(2-r_2))(2-(2-r_2))$$\nSimplify the equation.\n$$-2=a(2-(2-r_2))(2-(2-r_2))$$\n$$-2=a(2-2+r_2)(2-2+r_2)$$\n$$-2=a(r_2)(r_2)$$\n$$-2=ar_2^2$$\n$$a=-\\frac{2}{r_2^2}$$",
+        "Substitute $-\\frac{2}{r_2^2}$ for $a$ in the equation $r_2^2-4r_2+4=-3a^{-1}$ to get $r_2^2-4r_2+4=6r_2^2$ and combine like terms to get $5r_2^2+4r_2-4=0$.",
+        "Step 5: Apply the quadratic formula to solve for $r_2$ in the equation $5r_2^2+4r_2-4=0$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Since the parabola has a vertical line of symmetry at $x=1$, we know the axis of symmetry is $x=1$, which means the roots of the quadratic equation are symmetric around x = 1.\n\nThe equation of a quadratic with roots $r_1$ and $r_2$ is given by\n$$y=a(x-r_1)(x-r_2).$$ We know that the roots are $r_1$ and $r_2$ such that $r_1 + r_2 = 2$ and $r_1 \\cdot r_2 = n$.",
+            1
+        ],
+        [
+            "Step 2: We know the parabola passes through the points $(-1,3)$ and $(2,-2)$, so we can plug these values into the equation to solve for a.",
+            1
+        ],
+        [
+            "Step 3: Since $r_1+r_2=2$, we have $r_1=2-r_2$. We can plug this into the equation and use the point $(-1,3)$ to solve for $a$.",
+            1
+        ],
+        [
+            "Plug in $x=-1$ and $y=3$ into the equation\n$$y=a(x-r_1)(x-r_2)$$ and substitute $r_1=2-r_2$ to obtain\n$$3=a(-1-(2-r_2))(-1-r_2).$$",
+            1
+        ],
+        [
+            "Expand the equation.\n$$3=a(-1-(2-r_2))(-1-r_2)$$\n$$3=a(-3+r_2)(-1-r_2)$$\n$$3=a(3-r_2)(-1-r_2)$$\n$$3=-a(3-r_2)(1+r_2)$$",
+            1
+        ],
+        [
+            "$$3=a(3-r_2)(-1-r_2)$$\n$$(3-r_2)(-1-r_2)=-\\frac{3}{a}$$\n$$(3-r_2)(-1-r_2)=-3a^{-1}$$",
+            1
+        ],
+        [
+            "Expand the equation\n$$(3-r_2)(-1-r_2)=-3a^{-1}$$\n$$-3+r_2-3r_2+r_2^2=-3a^{-1}$$\n$$-3r_2+r_2^2-3+r_2=-3a^{-1}$$\n$$r_2^2-4r_2+4=-3a^{-1}$$",
+            1
+        ],
+        [
+            "Step 4: \nPlug in $x=2$ and $y=-2$ into the equation\n$$y=a(x-r_1)(x-r_2)$$\nand substitute $r_1=2-r_2$ to obtain\n$$-2=a(2-(2-r_2))(2-(2-r_2))$$\nSimplify the equation.\n$$-2=a(2-(2-r_2))(2-(2-r_2))$$\n$$-2=a(2-2+r_2)(2-2+r_2)$$\n$$-2=a(r_2)(r_2)$$\n$$-2=ar_2^2$$\n$$a=-\\frac{2}{r_2^2}$$",
+            1
+        ],
+        [
+            "Substitute $-\\frac{2}{r_2^2}$ for $a$ in the equation $r_2^2-4r_2+4=-3a^{-1}$ to get $r_2^2-4r_2+4=6r_2^2$ and combine like terms to get $5r_2^2+4r_2-4=0$.",
+            1
+        ],
+        [
+            "Step 5: Apply the quadratic formula to solve for $r_2$ in the equation $5r_2^2+4r_2-4=0$",
+            1
+        ]
+    ],
+    "time": 136.40966033935547,
+    "total_tokens": 11564,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}
