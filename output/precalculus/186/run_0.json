@@ -1,0 +1,46 @@
+{
+    "problem": "A cube has a side length of $s,$ and its vertices are $A = (0,0,0),$ $B = (s,0,0),$ $C = (s,s,0),$ $D = (0,s,0),$ $E = (0,0,s),$ $F = (s,0,s),$ $G = (s,s,s),$ and $H = (0,s,s).$  A point $P$ inside the cube satisfies $PA = \\sqrt{70},$ $PB = \\sqrt{97},$ $PC = \\sqrt{88},$ and $PE = \\sqrt{43}.$  Find the side length $s.$",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "Let $P = (x,y,z).$  Then from the given information,\n\\begin{align*}\nx^2 + y^2 + z^2 &= 70, \\quad (1) \\\\\n(x - s)^2 + y^2 + z^2 &= 97, \\quad (2) \\\\\n(x - s)^2 + (y - s)^2 + z^2 &= 88, \\quad (3) \\\\\nx^2 + y^2 + (z - s)^2 &= 43. \\quad (4)\n\\end{align*}Subtracting equations (1) and (2) gives us\n\\[-2sx + s^2 = 27,\\]so $x = \\frac{s^2 - 27}{2s}.$\n\nSubtracting equations (2) and (3) gives us\n\\[-2sy + s^2 = -9,\\]so $y = \\frac{s^2 + 9}{2s}.$\n\nSubtracting equations (1) and (4) gives us\n\\[-2sz + s^2 = -27,\\]so $z = \\frac{s^2 + 27}{2s}.$\n\nSubstituting into equation (1), we get\n\\[\\left( \\frac{s^2 - 27}{2s} \\right)^2 + \\left( \\frac{s^2 + 9}{2s} \\right)^2 + \\left( \\frac{s^2 + 27}{2s} \\right)^2 = 70.\\]This simplifies to $3s^4 - 262s^2 + 1539 = 0,$ which factors as $(s^2 - 81)(3s^2 - 19) = 0.$  Since $x = \\frac{s^2 - 27}{2s}$ must be positive, $s^2 = 81.$  Hence, $s = \\boxed{9}.$",
+    "is_solved": true,
+    "model_solution": "Step 1:  To solve this problem, we can use the concept of distance between points in three-dimensional space. We can use the distance formula to find the distance between each point and then use these distances to form equations based on the given information.\nStep 2:  The points $A,$ $B,$ $C,$ $D,$ $E,$ $F,$ $G,$ and $H$ form the vertices of the cube, and we are given the coordinates of these points.\nStep 3:  The point $P$ inside the cube satisfies the given distances $PA = \\sqrt{70},$ $PB = \\sqrt{97},$ $PC = \\sqrt{88},$ and $PE = \\sqrt{43}.$\nStep 4:  We can use these distances to form equations based on the Pythagorean theorem, as the distances between $P$ and the vertices of the cube are the hypotenuses of right-angled triangles formed within the cube.\nStep 5:  Specifically, we can use the distances to form the equations $a^2 + b^2 = 70,$ $b^2 + c^2 = 97,$ $c^2 + a\nLet $x = a^2,$ $y = b^2,$ and $z = c^2.$  Then we have $x + y = 70,$ $y + z = 97,$ and $z + x = 88.$  Adding these equations gives $2x + 2y + 2z = 155,$ or $x + y + z = 77.5$ which is a contradiction.  However, we can subtract the first equation from the second to obtain $y - x = 27,$ then subtract the second equation from the third to obtain $z - y = 9.$  Solving these equations yields $x = 19,$ $y = 46,$ and $z = 55.$  Therefore, $a^2 = 19,$ $b^2 = 46,$ and $c^2 = 55.$\nSince $P$ is inside the cube, we know that $P$ is the same distance from the three faces of the cube that share a vertex. Therefore, we know that the distance between $P$ and each of the three faces is $s$. By the Pythagorean theorem, we have that $a^2 + s^2 = (\\sqrt{70})^2$, $b^2 + s^2 = (\\sqrt{97})^2$, and $s^2 + c^2 = (\\sqrt{88})^2$.\nSolve the system of equations $a^2 + s^2 = 70$, $b^2 + s^2 = 97$, and $c^2 + s^2 = 88$ for $s.$\nSubstitute $a^2 = 19,$ $b^2 = 46,$ and $c^2 = 55$ into the equations $a^2 + s^2 = 70,$ $b^2 + s^2 = 97,$ and $c^2 + s^2 = 88.$\nSubstitute $a^2 = 19,$ $b^2 = 46,$ and $c^2 = 55$ into the equations $a^2 + s^2 = 70,$ $b^2 + s^2 = 97,$ and $c^2 + s^2 = 88.$",
+    "steps": [
+        "Step 1:  To solve this problem, we can use the concept of distance between points in three-dimensional space. We can use the distance formula to find the distance between each point and then use these distances to form equations based on the given information.\nStep 2:  The points $A,$ $B,$ $C,$ $D,$ $E,$ $F,$ $G,$ and $H$ form the vertices of the cube, and we are given the coordinates of these points.\nStep 3:  The point $P$ inside the cube satisfies the given distances $PA = \\sqrt{70},$ $PB = \\sqrt{97},$ $PC = \\sqrt{88},$ and $PE = \\sqrt{43}.$\nStep 4:  We can use these distances to form equations based on the Pythagorean theorem, as the distances between $P$ and the vertices of the cube are the hypotenuses of right-angled triangles formed within the cube.\nStep 5:  Specifically, we can use the distances to form the equations $a^2 + b^2 = 70,$ $b^2 + c^2 = 97,$ $c^2 + a",
+        "Let $x = a^2,$ $y = b^2,$ and $z = c^2.$  Then we have $x + y = 70,$ $y + z = 97,$ and $z + x = 88.$  Adding these equations gives $2x + 2y + 2z = 155,$ or $x + y + z = 77.5$ which is a contradiction.  However, we can subtract the first equation from the second to obtain $y - x = 27,$ then subtract the second equation from the third to obtain $z - y = 9.$  Solving these equations yields $x = 19,$ $y = 46,$ and $z = 55.$  Therefore, $a^2 = 19,$ $b^2 = 46,$ and $c^2 = 55.$",
+        "Since $P$ is inside the cube, we know that $P$ is the same distance from the three faces of the cube that share a vertex. Therefore, we know that the distance between $P$ and each of the three faces is $s$. By the Pythagorean theorem, we have that $a^2 + s^2 = (\\sqrt{70})^2$, $b^2 + s^2 = (\\sqrt{97})^2$, and $s^2 + c^2 = (\\sqrt{88})^2$.",
+        "Solve the system of equations $a^2 + s^2 = 70$, $b^2 + s^2 = 97$, and $c^2 + s^2 = 88$ for $s.$",
+        "Substitute $a^2 = 19,$ $b^2 = 46,$ and $c^2 = 55$ into the equations $a^2 + s^2 = 70,$ $b^2 + s^2 = 97,$ and $c^2 + s^2 = 88.$",
+        "Substitute $a^2 = 19,$ $b^2 = 46,$ and $c^2 = 55$ into the equations $a^2 + s^2 = 70,$ $b^2 + s^2 = 97,$ and $c^2 + s^2 = 88.$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  To solve this problem, we can use the concept of distance between points in three-dimensional space. We can use the distance formula to find the distance between each point and then use these distances to form equations based on the given information.\nStep 2:  The points $A,$ $B,$ $C,$ $D,$ $E,$ $F,$ $G,$ and $H$ form the vertices of the cube, and we are given the coordinates of these points.\nStep 3:  The point $P$ inside the cube satisfies the given distances $PA = \\sqrt{70},$ $PB = \\sqrt{97},$ $PC = \\sqrt{88},$ and $PE = \\sqrt{43}.$\nStep 4:  We can use these distances to form equations based on the Pythagorean theorem, as the distances between $P$ and the vertices of the cube are the hypotenuses of right-angled triangles formed within the cube.\nStep 5:  Specifically, we can use the distances to form the equations $a^2 + b^2 = 70,$ $b^2 + c^2 = 97,$ $c^2 + a",
+            1
+        ],
+        [
+            "Let $x = a^2,$ $y = b^2,$ and $z = c^2.$  Then we have $x + y = 70,$ $y + z = 97,$ and $z + x = 88.$  Adding these equations gives $2x + 2y + 2z = 155,$ or $x + y + z = 77.5$ which is a contradiction.  However, we can subtract the first equation from the second to obtain $y - x = 27,$ then subtract the second equation from the third to obtain $z - y = 9.$  Solving these equations yields $x = 19,$ $y = 46,$ and $z = 55.$  Therefore, $a^2 = 19,$ $b^2 = 46,$ and $c^2 = 55.$",
+            1
+        ],
+        [
+            "Since $P$ is inside the cube, we know that $P$ is the same distance from the three faces of the cube that share a vertex. Therefore, we know that the distance between $P$ and each of the three faces is $s$. By the Pythagorean theorem, we have that $a^2 + s^2 = (\\sqrt{70})^2$, $b^2 + s^2 = (\\sqrt{97})^2$, and $s^2 + c^2 = (\\sqrt{88})^2$.",
+            1
+        ],
+        [
+            "Solve the system of equations $a^2 + s^2 = 70$, $b^2 + s^2 = 97$, and $c^2 + s^2 = 88$ for $s.$",
+            1
+        ],
+        [
+            "Substitute $a^2 = 19,$ $b^2 = 46,$ and $c^2 = 55$ into the equations $a^2 + s^2 = 70,$ $b^2 + s^2 = 97,$ and $c^2 + s^2 = 88.$",
+            1
+        ],
+        [
+            "Substitute $a^2 = 19,$ $b^2 = 46,$ and $c^2 = 55$ into the equations $a^2 + s^2 = 70,$ $b^2 + s^2 = 97,$ and $c^2 + s^2 = 88.$",
+            1
+        ]
+    ],
+    "time": 77.17329692840576,
+    "total_tokens": 8945,
+    "final_answer_tokens": 935,
+    "model": "meta-llama/Llama-Vision-Free"
+}

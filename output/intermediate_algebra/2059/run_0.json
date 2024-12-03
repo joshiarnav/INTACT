@@ -1,0 +1,46 @@
+{
+    "problem": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{1}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+    "level": "Level 4",
+    "type": "Intermediate Algebra",
+    "solution": "We can get the sum to telescope by writing\n\\[\\frac{1}{F_n F_{n + 2}} = \\frac{F_{n + 1}}{F_n F_{n + 1} F_{n + 2}}.\\]Since $F_{n + 1} = F_{n + 2} - F_n,$\n\\[\\frac{F_{n + 1}}{F_n F_{n + 1} F_{n + 2}} = \\frac{F_{n + 2} - F_n}{F_n F_{n + 1} F_{n + 2}} = \\frac{1}{F_n F_{n + 1}} - \\frac{1}{F_{n + 1} F_{n + 2}}.\\]Then\n\\begin{align*}\n\\sum_{n = 1}^\\infty \\frac{1}{F_n F_{n + 2}} &= \\left( \\frac{1}{F_1 F_2} - \\frac{1}{F_2 F_3} \\right) + \\left( \\frac{1}{F_2 F_3} - \\frac{1}{F_3 F_4} \\right) + \\left( \\frac{1}{F_3 F_4} - \\frac{1}{F_4 F_5} \\right) + \\dotsb \\\\\n&= \\frac{1}{F_1 F_2} \\\\\n&= \\boxed{1}.\n\\end{align*}",
+    "is_solved": true,
+    "model_solution": "## Step 1: Use the definition of the Fibonacci sequence to find expressions for $F_n F_{n + 2}$\nWe have that $F_n F_{n + 2} = (F_n F_{n + 1} + F_n F_{n + 2}) - F_n F_{n + 1} = F_{n + 3} F_{n + 1} - F_{n + 1}^2.$\n\n## Step 2: Factor the expression $F_{n + 3} F_{n + 1} - F_{n + 1}^2$\nWe can rewrite this as $F_{n + 1} (F_{n + 3} - F_{n + 1}) = F_{n + 1} F_{n + 4}.$\n\n## Step 3: Use the result from step 2 to rewrite the summation\nWe have\n\\begin{align*}\n\\sum_{n = 1}^\\infty \\frac{1}{F_n F_{n + 2}} &= \\sum_{n = 1}^\\infty \\frac{F_{n +\n## Step 4: Use the result from step 3 to rewrite the summation\nWe have\n\\begin{align*}\n\\sum_{n = 1}^\\infty \\frac{1}{F_n F_{n + 2}} &= \\sum_{n = 1}^\\infty \\frac{F_{n + 1} F_{n + 4} - F_{n + 1} F_{n + 3}}{F_{n + 1} F_{n + 2} F_{n + 3} F_{n + 4}} \\\\\n&= \\sum_{n = 1}^\\infty \\left( \\frac{1}{F_n F_{n + 2} F_{n + 3} F_{n + 4}} - \\frac{1}{F_{n + 1} F_{n + 2} F_{n + 3} F_{n + 4}} \\right) \\\\\n&= \\lim_{N \\to \\infty} \\sum_{n = 1}^N \\left( \\frac{1}{F_n F_{n + 2} F_{n\n## Step 5: Simplify the expression inside the summation\n\\[\\frac{1}{F_n F_{n + 2} F_{n + 3} F_{n + 4}} - \\frac{1}{F_{n + 1} F_{n + 2} F_{n + 3} F_{n + 4}} = \\frac{F_{n + 4}}{F_n F_{n + 2} F_{n + 3} F_{n + 4}} - \\frac{F_{n + 3}}{F_{n + 1} F_{n + 2} F_{n + 3} F_{n + 4}} = \\frac{1}{F_n F_{n + 2}} - \\frac{1}{F_{n + 1} F_{n + 3}}\\]\n## Step 6: $\\sum_{n = 1}^\\infty \\left( \\frac{1}{F_n F_{n + 2}} - \\frac{1}{F_{n + 1} F_{n + 3}} \\right) = \\lim_{N \\to \\infty} \\sum_{n = 1}^N \\left( \\frac{1}{F_n F_{n + 2}} - \\frac{1}{F_{n + 1} F_{n + 3}} \\right)$\n## Step 7: $\\lim_{N \\to \\infty} \\left( \\frac{1}{F_1 F_3} - \\frac{1}{F_2 F_4} + \\frac{1}{F_2 F_4} - \\frac{1}{F_3 F_5} + \\frac{1}{F_3 F_5} - \\frac{1}{F_4 F_6} + \\cdots \\right)$\n## Step 8: $\\frac{1}{F_1 F_3} = \\frac{1}{F_1 F_{F_1 + 2}} = \\frac{1}{F_1 F_{1 + 2}}$\n\nThe final answer is: $\\boxed{\\frac{5}{24}}$",
+    "steps": [
+        "## Step 1: Use the definition of the Fibonacci sequence to find expressions for $F_n F_{n + 2}$\nWe have that $F_n F_{n + 2} = (F_n F_{n + 1} + F_n F_{n + 2}) - F_n F_{n + 1} = F_{n + 3} F_{n + 1} - F_{n + 1}^2.$\n\n## Step 2: Factor the expression $F_{n + 3} F_{n + 1} - F_{n + 1}^2$\nWe can rewrite this as $F_{n + 1} (F_{n + 3} - F_{n + 1}) = F_{n + 1} F_{n + 4}.$\n\n## Step 3: Use the result from step 2 to rewrite the summation\nWe have\n\\begin{align*}\n\\sum_{n = 1}^\\infty \\frac{1}{F_n F_{n + 2}} &= \\sum_{n = 1}^\\infty \\frac{F_{n +",
+        "## Step 4: Use the result from step 3 to rewrite the summation\nWe have\n\\begin{align*}\n\\sum_{n = 1}^\\infty \\frac{1}{F_n F_{n + 2}} &= \\sum_{n = 1}^\\infty \\frac{F_{n + 1} F_{n + 4} - F_{n + 1} F_{n + 3}}{F_{n + 1} F_{n + 2} F_{n + 3} F_{n + 4}} \\\\\n&= \\sum_{n = 1}^\\infty \\left( \\frac{1}{F_n F_{n + 2} F_{n + 3} F_{n + 4}} - \\frac{1}{F_{n + 1} F_{n + 2} F_{n + 3} F_{n + 4}} \\right) \\\\\n&= \\lim_{N \\to \\infty} \\sum_{n = 1}^N \\left( \\frac{1}{F_n F_{n + 2} F_{n",
+        "## Step 5: Simplify the expression inside the summation\n\\[\\frac{1}{F_n F_{n + 2} F_{n + 3} F_{n + 4}} - \\frac{1}{F_{n + 1} F_{n + 2} F_{n + 3} F_{n + 4}} = \\frac{F_{n + 4}}{F_n F_{n + 2} F_{n + 3} F_{n + 4}} - \\frac{F_{n + 3}}{F_{n + 1} F_{n + 2} F_{n + 3} F_{n + 4}} = \\frac{1}{F_n F_{n + 2}} - \\frac{1}{F_{n + 1} F_{n + 3}}\\]",
+        "## Step 6: $\\sum_{n = 1}^\\infty \\left( \\frac{1}{F_n F_{n + 2}} - \\frac{1}{F_{n + 1} F_{n + 3}} \\right) = \\lim_{N \\to \\infty} \\sum_{n = 1}^N \\left( \\frac{1}{F_n F_{n + 2}} - \\frac{1}{F_{n + 1} F_{n + 3}} \\right)$",
+        "## Step 7: $\\lim_{N \\to \\infty} \\left( \\frac{1}{F_1 F_3} - \\frac{1}{F_2 F_4} + \\frac{1}{F_2 F_4} - \\frac{1}{F_3 F_5} + \\frac{1}{F_3 F_5} - \\frac{1}{F_4 F_6} + \\cdots \\right)$",
+        "## Step 8: $\\frac{1}{F_1 F_3} = \\frac{1}{F_1 F_{F_1 + 2}} = \\frac{1}{F_1 F_{1 + 2}}$\n\nThe final answer is: $\\boxed{\\frac{5}{24}}$"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Use the definition of the Fibonacci sequence to find expressions for $F_n F_{n + 2}$\nWe have that $F_n F_{n + 2} = (F_n F_{n + 1} + F_n F_{n + 2}) - F_n F_{n + 1} = F_{n + 3} F_{n + 1} - F_{n + 1}^2.$\n\n## Step 2: Factor the expression $F_{n + 3} F_{n + 1} - F_{n + 1}^2$\nWe can rewrite this as $F_{n + 1} (F_{n + 3} - F_{n + 1}) = F_{n + 1} F_{n + 4}.$\n\n## Step 3: Use the result from step 2 to rewrite the summation\nWe have\n\\begin{align*}\n\\sum_{n = 1}^\\infty \\frac{1}{F_n F_{n + 2}} &= \\sum_{n = 1}^\\infty \\frac{F_{n +",
+            1
+        ],
+        [
+            "## Step 4: Use the result from step 3 to rewrite the summation\nWe have\n\\begin{align*}\n\\sum_{n = 1}^\\infty \\frac{1}{F_n F_{n + 2}} &= \\sum_{n = 1}^\\infty \\frac{F_{n + 1} F_{n + 4} - F_{n + 1} F_{n + 3}}{F_{n + 1} F_{n + 2} F_{n + 3} F_{n + 4}} \\\\\n&= \\sum_{n = 1}^\\infty \\left( \\frac{1}{F_n F_{n + 2} F_{n + 3} F_{n + 4}} - \\frac{1}{F_{n + 1} F_{n + 2} F_{n + 3} F_{n + 4}} \\right) \\\\\n&= \\lim_{N \\to \\infty} \\sum_{n = 1}^N \\left( \\frac{1}{F_n F_{n + 2} F_{n",
+            1
+        ],
+        [
+            "## Step 5: Simplify the expression inside the summation\n\\[\\frac{1}{F_n F_{n + 2} F_{n + 3} F_{n + 4}} - \\frac{1}{F_{n + 1} F_{n + 2} F_{n + 3} F_{n + 4}} = \\frac{F_{n + 4}}{F_n F_{n + 2} F_{n + 3} F_{n + 4}} - \\frac{F_{n + 3}}{F_{n + 1} F_{n + 2} F_{n + 3} F_{n + 4}} = \\frac{1}{F_n F_{n + 2}} - \\frac{1}{F_{n + 1} F_{n + 3}}\\]",
+            1
+        ],
+        [
+            "## Step 6: $\\sum_{n = 1}^\\infty \\left( \\frac{1}{F_n F_{n + 2}} - \\frac{1}{F_{n + 1} F_{n + 3}} \\right) = \\lim_{N \\to \\infty} \\sum_{n = 1}^N \\left( \\frac{1}{F_n F_{n + 2}} - \\frac{1}{F_{n + 1} F_{n + 3}} \\right)$",
+            1
+        ],
+        [
+            "## Step 7: $\\lim_{N \\to \\infty} \\left( \\frac{1}{F_1 F_3} - \\frac{1}{F_2 F_4} + \\frac{1}{F_2 F_4} - \\frac{1}{F_3 F_5} + \\frac{1}{F_3 F_5} - \\frac{1}{F_4 F_6} + \\cdots \\right)$",
+            1
+        ],
+        [
+            "## Step 8: $\\frac{1}{F_1 F_3} = \\frac{1}{F_1 F_{F_1 + 2}} = \\frac{1}{F_1 F_{1 + 2}}$\n\nThe final answer is: $\\boxed{\\frac{5}{24}}$",
+            1
+        ]
+    ],
+    "time": 79.27125096321106,
+    "total_tokens": 9769,
+    "final_answer_tokens": 1098,
+    "model": "meta-llama/Llama-Vision-Free"
+}

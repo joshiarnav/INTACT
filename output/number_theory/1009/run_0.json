@@ -1,0 +1,66 @@
+{
+    "problem": "The greatest common divisor of two positive integers less than $100$ is equal to $3$. Their least common multiple is twelve times one of the integers. What is the largest possible sum of the two integers?",
+    "level": "Level 5",
+    "type": "Number Theory",
+    "solution": "Let the two integers be $a$ and $b$. Then, $\\gcd(a,b) = 3$ and, without loss of generality, let $\\mathop{\\text{lcm}}[a,b] = 12a$. Multiplying the two equations yields that $\\mathop{\\text{lcm}}[a,b] \\cdot \\gcd(a,b) = 36a$. Using the identity that $ab = \\mathop{\\text{lcm}}[a,b] \\cdot \\gcd(a,b)$, it follows that $ab = 36a$, and so $b = 36$.\n\nSince $\\gcd(a,b) = 3$, we know $a$ is divisible by 3.  However, $a$ cannot be divisible by $3^2 = 9$, because if $a$ was divisible by 9, then $\\gcd(a,b)$ would be divisible by 9 as well, since 36 is divisible by 9.  This cannot occur since $\\gcd(a,b) = 3$.  Similarly, $a$ cannot be divisible by 2, because if $a$ were divisible by 2, then $\\gcd(a,b)$ would be divisible by 2 as well, since 36 is divisible by 2.\n\nIn summary, $a$ is a multiple of 3, but not 9, and $a$ is not divisible by 2.  The largest such number less than 100 is 93.  We can verify that $\\mathop{\\text{lcm}}[93,36] = 1116 = 12 \\cdot 93$, so the largest possible sum of $a + b$ is $36 + 93 = \\boxed{129}$.",
+    "is_solved": false,
+    "model_solution": "Step 1:  Let's denote the two positive integers as a and b.\nStep 2:  The greatest common divisor (GCD) of a and b is 3, which implies that both a and b are multiples of 3.\nStep 3:  The least common multiple (LCM) of a and b is twelve times one of the integers, so we have LCM(a, b) = 12a or LCM(a, b) = 12b.\nStep 4:  We can list the multiples of 3 less than 100 to find the possible values for a and b. The multiples of 3 less than 100 are 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 54, 57, 60, 63, 66, 69, 72, 75, 78, 81, 84, 87, 90, 93, 96, 99.\nStep 5:\nFor LCM(a, b) = 12a, we can find possible values for a and b by testing the multiples of 3 less than 100. We need to check if there are any pairs of multiples of 3 less than 100 such that their LCM is 12 times one of the multiples.\nStep 6:\nWe will now check the possible values for a and b from the list of multiples of 3 less than 100 to see if there are any pairs whose LCM is 12 times one of the multiples. We will start by checking the first few multiples of 3: 3, 6, 9, 12.\nStep 7:\nWe can calculate the LCM of each pair of multiples of 3 less than 100 and check if it is equal to 12 times one of the multiples. We will start by checking the pair (3, 6) - LCM(3, 6) = 6, which is not equal to 12 times one of the multiples. Then, we check the pair (3, 9) - LCM(3, 9) = 9, which is also not equal to 12 times one of the multiples. Next, we check the pair (3, 12) - LCM(3, 12) = 12, which is not equal to 12 times one of the multiples. We continue this process until we find a pair whose LCM is 12 times one of the multiples.\nStep 8:\nWe will now check the remaining pairs from the list of multiples of 3 less than 100 to find a pair whose LCM is 12 times one of the multiples.\nStep 9:\nWe can continue checking the remaining pairs from the list of multiples of 3 less than 100. Checking the pair (3, 15) - LCM(3, 15) = 15, which is 5 times 3. Next, we check the pair (3, 18) - LCM(3, 18) = 18, which is 6 times 3. Checking the pair (3, 21) - LCM(3, 21) = 21, which is 7 times 3. Checking the pair (3, 24) - LCM(3, 24) = 24, which is 8 times 3. Checking the pair (3, 27) - LCM(3, 27) = 27, which is 9 times 3. Then, we check the pair (3, 30) - LCM(3, 30) = 30, which is 10 times 3. Next, we check the pair (3, 33) - LCM(3, 33) = 33, which is 11 times 3. Checking the pair (3,\nStep 10: \nWe will continue checking the remaining pairs from the list of multiples of 3 less than 100 to find a pair whose LCM is 12 times one of the multiples. Checking the pair (3, 36) - LCM(3, 36) = 36, which is 12 times 3.\nStep 11:  Since we found a pair (3, 36) such that their LCM is 12 times one of the multiples, we will check if there are other pairs with LCM being 12 times one of the multiples.\nStep 12: \nFor LCM(a, b) = 12b, we can find possible values for a and b by testing the multiples of 3 less than 100. We need to check if there are any pairs of multiples of 3 less than 100 such that their LCM is 12 times one of the multiples.",
+    "steps": [
+        "Step 1:  Let's denote the two positive integers as a and b.\nStep 2:  The greatest common divisor (GCD) of a and b is 3, which implies that both a and b are multiples of 3.\nStep 3:  The least common multiple (LCM) of a and b is twelve times one of the integers, so we have LCM(a, b) = 12a or LCM(a, b) = 12b.",
+        "Step 4:  We can list the multiples of 3 less than 100 to find the possible values for a and b. The multiples of 3 less than 100 are 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 54, 57, 60, 63, 66, 69, 72, 75, 78, 81, 84, 87, 90, 93, 96, 99.",
+        "Step 5:\nFor LCM(a, b) = 12a, we can find possible values for a and b by testing the multiples of 3 less than 100. We need to check if there are any pairs of multiples of 3 less than 100 such that their LCM is 12 times one of the multiples.",
+        "Step 6:\nWe will now check the possible values for a and b from the list of multiples of 3 less than 100 to see if there are any pairs whose LCM is 12 times one of the multiples. We will start by checking the first few multiples of 3: 3, 6, 9, 12.",
+        "Step 7:\nWe can calculate the LCM of each pair of multiples of 3 less than 100 and check if it is equal to 12 times one of the multiples. We will start by checking the pair (3, 6) - LCM(3, 6) = 6, which is not equal to 12 times one of the multiples. Then, we check the pair (3, 9) - LCM(3, 9) = 9, which is also not equal to 12 times one of the multiples. Next, we check the pair (3, 12) - LCM(3, 12) = 12, which is not equal to 12 times one of the multiples. We continue this process until we find a pair whose LCM is 12 times one of the multiples.",
+        "Step 8:\nWe will now check the remaining pairs from the list of multiples of 3 less than 100 to find a pair whose LCM is 12 times one of the multiples.",
+        "Step 9:\nWe can continue checking the remaining pairs from the list of multiples of 3 less than 100. Checking the pair (3, 15) - LCM(3, 15) = 15, which is 5 times 3. Next, we check the pair (3, 18) - LCM(3, 18) = 18, which is 6 times 3. Checking the pair (3, 21) - LCM(3, 21) = 21, which is 7 times 3. Checking the pair (3, 24) - LCM(3, 24) = 24, which is 8 times 3. Checking the pair (3, 27) - LCM(3, 27) = 27, which is 9 times 3. Then, we check the pair (3, 30) - LCM(3, 30) = 30, which is 10 times 3. Next, we check the pair (3, 33) - LCM(3, 33) = 33, which is 11 times 3. Checking the pair (3,",
+        "Step 10: \nWe will continue checking the remaining pairs from the list of multiples of 3 less than 100 to find a pair whose LCM is 12 times one of the multiples. Checking the pair (3, 36) - LCM(3, 36) = 36, which is 12 times 3.",
+        "Step 11:  Since we found a pair (3, 36) such that their LCM is 12 times one of the multiples, we will check if there are other pairs with LCM being 12 times one of the multiples.",
+        "Step 12: \nFor LCM(a, b) = 12b, we can find possible values for a and b by testing the multiples of 3 less than 100. We need to check if there are any pairs of multiples of 3 less than 100 such that their LCM is 12 times one of the multiples."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Let's denote the two positive integers as a and b.\nStep 2:  The greatest common divisor (GCD) of a and b is 3, which implies that both a and b are multiples of 3.\nStep 3:  The least common multiple (LCM) of a and b is twelve times one of the integers, so we have LCM(a, b) = 12a or LCM(a, b) = 12b.",
+            1
+        ],
+        [
+            "Step 4:  We can list the multiples of 3 less than 100 to find the possible values for a and b. The multiples of 3 less than 100 are 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 54, 57, 60, 63, 66, 69, 72, 75, 78, 81, 84, 87, 90, 93, 96, 99.",
+            1
+        ],
+        [
+            "Step 5:\nFor LCM(a, b) = 12a, we can find possible values for a and b by testing the multiples of 3 less than 100. We need to check if there are any pairs of multiples of 3 less than 100 such that their LCM is 12 times one of the multiples.",
+            1
+        ],
+        [
+            "Step 6:\nWe will now check the possible values for a and b from the list of multiples of 3 less than 100 to see if there are any pairs whose LCM is 12 times one of the multiples. We will start by checking the first few multiples of 3: 3, 6, 9, 12.",
+            1
+        ],
+        [
+            "Step 7:\nWe can calculate the LCM of each pair of multiples of 3 less than 100 and check if it is equal to 12 times one of the multiples. We will start by checking the pair (3, 6) - LCM(3, 6) = 6, which is not equal to 12 times one of the multiples. Then, we check the pair (3, 9) - LCM(3, 9) = 9, which is also not equal to 12 times one of the multiples. Next, we check the pair (3, 12) - LCM(3, 12) = 12, which is not equal to 12 times one of the multiples. We continue this process until we find a pair whose LCM is 12 times one of the multiples.",
+            1
+        ],
+        [
+            "Step 8:\nWe will now check the remaining pairs from the list of multiples of 3 less than 100 to find a pair whose LCM is 12 times one of the multiples.",
+            1
+        ],
+        [
+            "Step 9:\nWe can continue checking the remaining pairs from the list of multiples of 3 less than 100. Checking the pair (3, 15) - LCM(3, 15) = 15, which is 5 times 3. Next, we check the pair (3, 18) - LCM(3, 18) = 18, which is 6 times 3. Checking the pair (3, 21) - LCM(3, 21) = 21, which is 7 times 3. Checking the pair (3, 24) - LCM(3, 24) = 24, which is 8 times 3. Checking the pair (3, 27) - LCM(3, 27) = 27, which is 9 times 3. Then, we check the pair (3, 30) - LCM(3, 30) = 30, which is 10 times 3. Next, we check the pair (3, 33) - LCM(3, 33) = 33, which is 11 times 3. Checking the pair (3,",
+            1
+        ],
+        [
+            "Step 10: \nWe will continue checking the remaining pairs from the list of multiples of 3 less than 100 to find a pair whose LCM is 12 times one of the multiples. Checking the pair (3, 36) - LCM(3, 36) = 36, which is 12 times 3.",
+            1
+        ],
+        [
+            "Step 11:  Since we found a pair (3, 36) such that their LCM is 12 times one of the multiples, we will check if there are other pairs with LCM being 12 times one of the multiples.",
+            1
+        ],
+        [
+            "Step 12: \nFor LCM(a, b) = 12b, we can find possible values for a and b by testing the multiples of 3 less than 100. We need to check if there are any pairs of multiples of 3 less than 100 such that their LCM is 12 times one of the multiples.",
+            1
+        ]
+    ],
+    "time": 132.66268754005432,
+    "total_tokens": 13905,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

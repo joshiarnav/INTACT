@@ -1,0 +1,66 @@
+{
+    "problem": "After a gymnastics meet, each gymnast shook hands once with every gymnast on every team (except herself). Afterwards, a coach came down and only shook hands with each gymnast from her own team. There were a total of 281 handshakes. What is the fewest number of handshakes the coach could have participated in?",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "The number of gymnasts is some integer $n$, so that the number of gymnast-gymnast handshakes is ${n \\choose 2}$ for some $n$. Also, the coach must participate in an integer $k<n$ number of handshakes. So, ${n \\choose 2} + k = 281$. If we want to minimize $k$, we need the maximal $n$ such that ${n \\choose 2} \\le 281$, which implies $\\frac{n(n-1)}{2} \\le 281$ or $n^2 - n - 562 \\le 0 $. So, the maximal $n$ is 24. So, $k = 281 - {24 \\choose 2} = 281 - 12 \\cdot 23 = 281 - 276 = \\boxed{5}$.",
+    "is_solved": false,
+    "model_solution": "Let x be the number of gymnasts on the team with the coach and y be the total number of gymnasts.\nThe number of handshakes between gymnasts is $\\frac{y(y-1)}{2}$, and the number of handshakes between the coach and her team is x. The total number of handshakes is then \n$$\\frac{y(y-1)}{2}+x=281$$\nSince we want the fewest number of handshakes the coach could have participated in, we have x as small as possible. \n\n$$\\frac{y(y-1)}{2}+x=281 \\Rightarrow \\frac{y(y-1)}{2} \\ge 281-x$$\nSince we want to minimize x, we want to maximize $\\frac{y(y-1)}{2}$, so we solve for y when $\\frac{y(y-1)}{2}=281-x$.\nSolve the equation $$\\frac{y(y-1)}{2}=281-x$$ for $y$.\n$y^2-y-562+2x=0$\nThe quadratic formula is $y = \\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}$\n$y = \\frac{-(-1)\\pm\\sqrt{(-1)^2-4(1)(-562+2x)}}{2(1)}$\n$y = \\frac{1\\pm\\sqrt{1+4(562-2x)}}{2}$\n$y = \\frac{1\\pm\\sqrt{2248-8x}}{2}$\nBegin testing values of x to find the smallest value of x that produces a real value of y that is a positive integer.\nTest x = 10: $y = \\frac{1\\pm\\sqrt{2248-8(10)}}{2}$\n$y = \\frac{1\\pm\\sqrt{2248-80}}{2}$\n$y = \\frac{1\\pm\\sqrt{2168}}{2}$\n$y = \\frac{1\\pm 46.65}{2}$\n$y = \\frac{1+46.65}{2}$ or $y = \\frac{1-46.65}{2}$\n$y = 23.83$ or $y = -22.825$\nTest x = 11: $y = \\frac{1\\pm\\sqrt{2248-8(11)}}{2}$\n$y = \\frac{1\\pm\\sqrt{2248-88}}{2}$\n$y = \\frac{1\\pm\\sqrt{2160}}{2}$\n$y = \\frac{1\\pm 46.42}{2}$\n$y = \\frac{1+46.42}{2}$ or $y = \\frac{1-46.42}{2}$\n$",
+    "steps": [
+        "Let x be the number of gymnasts on the team with the coach and y be the total number of gymnasts.",
+        "The number of handshakes between gymnasts is $\\frac{y(y-1)}{2}$, and the number of handshakes between the coach and her team is x. The total number of handshakes is then \n$$\\frac{y(y-1)}{2}+x=281$$",
+        "Since we want the fewest number of handshakes the coach could have participated in, we have x as small as possible. \n\n$$\\frac{y(y-1)}{2}+x=281 \\Rightarrow \\frac{y(y-1)}{2} \\ge 281-x$$",
+        "Since we want to minimize x, we want to maximize $\\frac{y(y-1)}{2}$, so we solve for y when $\\frac{y(y-1)}{2}=281-x$.",
+        "Solve the equation $$\\frac{y(y-1)}{2}=281-x$$ for $y$.",
+        "$y^2-y-562+2x=0$",
+        "The quadratic formula is $y = \\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}$",
+        "$y = \\frac{-(-1)\\pm\\sqrt{(-1)^2-4(1)(-562+2x)}}{2(1)}$\n$y = \\frac{1\\pm\\sqrt{1+4(562-2x)}}{2}$\n$y = \\frac{1\\pm\\sqrt{2248-8x}}{2}$",
+        "Begin testing values of x to find the smallest value of x that produces a real value of y that is a positive integer.",
+        "Test x = 10: $y = \\frac{1\\pm\\sqrt{2248-8(10)}}{2}$\n$y = \\frac{1\\pm\\sqrt{2248-80}}{2}$\n$y = \\frac{1\\pm\\sqrt{2168}}{2}$\n$y = \\frac{1\\pm 46.65}{2}$\n$y = \\frac{1+46.65}{2}$ or $y = \\frac{1-46.65}{2}$\n$y = 23.83$ or $y = -22.825$\nTest x = 11: $y = \\frac{1\\pm\\sqrt{2248-8(11)}}{2}$\n$y = \\frac{1\\pm\\sqrt{2248-88}}{2}$\n$y = \\frac{1\\pm\\sqrt{2160}}{2}$\n$y = \\frac{1\\pm 46.42}{2}$\n$y = \\frac{1+46.42}{2}$ or $y = \\frac{1-46.42}{2}$\n$"
+    ],
+    "full_steps": [
+        [
+            "Let x be the number of gymnasts on the team with the coach and y be the total number of gymnasts.",
+            1
+        ],
+        [
+            "The number of handshakes between gymnasts is $\\frac{y(y-1)}{2}$, and the number of handshakes between the coach and her team is x. The total number of handshakes is then \n$$\\frac{y(y-1)}{2}+x=281$$",
+            1
+        ],
+        [
+            "Since we want the fewest number of handshakes the coach could have participated in, we have x as small as possible. \n\n$$\\frac{y(y-1)}{2}+x=281 \\Rightarrow \\frac{y(y-1)}{2} \\ge 281-x$$",
+            1
+        ],
+        [
+            "Since we want to minimize x, we want to maximize $\\frac{y(y-1)}{2}$, so we solve for y when $\\frac{y(y-1)}{2}=281-x$.",
+            1
+        ],
+        [
+            "Solve the equation $$\\frac{y(y-1)}{2}=281-x$$ for $y$.",
+            1
+        ],
+        [
+            "$y^2-y-562+2x=0$",
+            1
+        ],
+        [
+            "The quadratic formula is $y = \\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}$",
+            1
+        ],
+        [
+            "$y = \\frac{-(-1)\\pm\\sqrt{(-1)^2-4(1)(-562+2x)}}{2(1)}$\n$y = \\frac{1\\pm\\sqrt{1+4(562-2x)}}{2}$\n$y = \\frac{1\\pm\\sqrt{2248-8x}}{2}$",
+            1
+        ],
+        [
+            "Begin testing values of x to find the smallest value of x that produces a real value of y that is a positive integer.",
+            1
+        ],
+        [
+            "Test x = 10: $y = \\frac{1\\pm\\sqrt{2248-8(10)}}{2}$\n$y = \\frac{1\\pm\\sqrt{2248-80}}{2}$\n$y = \\frac{1\\pm\\sqrt{2168}}{2}$\n$y = \\frac{1\\pm 46.65}{2}$\n$y = \\frac{1+46.65}{2}$ or $y = \\frac{1-46.65}{2}$\n$y = 23.83$ or $y = -22.825$\nTest x = 11: $y = \\frac{1\\pm\\sqrt{2248-8(11)}}{2}$\n$y = \\frac{1\\pm\\sqrt{2248-88}}{2}$\n$y = \\frac{1\\pm\\sqrt{2160}}{2}$\n$y = \\frac{1\\pm 46.42}{2}$\n$y = \\frac{1+46.42}{2}$ or $y = \\frac{1-46.42}{2}$\n$",
+            1
+        ]
+    ],
+    "time": 132.86688685417175,
+    "total_tokens": 7685,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

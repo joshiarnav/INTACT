@@ -1,0 +1,36 @@
+{
+    "problem": "In any isosceles triangle $ABC$ with $AB=AC$, the altitude $AD$ bisects the base $BC$ so that $BD=DC$.\n\nAs shown in $\\triangle ABC$, $AB=AC=25$ and $BC=14$.  Determine the length of the altitude $AD$.\n\n[asy]\ndraw((0,0)--(14,0)--(7,24)--cycle,black+linewidth(1));\ndraw((7,24)--(7,0),black+linewidth(1)+dashed);\ndraw((7,0)--(7,1)--(6,1)--(6,0)--cycle,black+linewidth(1));\ndraw((5.5,-4)--(0,-4),black+linewidth(1));\ndraw((5.5,-4)--(0,-4),EndArrow);\ndraw((8.5,-4)--(14,-4),black+linewidth(1));\ndraw((8.5,-4)--(14,-4),EndArrow);\nlabel(\"$A$\",(7,24),N);\nlabel(\"$B$\",(0,0),SW);\nlabel(\"$C$\",(14,0),SE);\nlabel(\"$D$\",(7,0),S);\nlabel(\"25\",(0,0)--(7,24),NW);\nlabel(\"25\",(7,24)--(14,0),NE);\nlabel(\"14\",(7,-4));\n[/asy]",
+    "level": "Level 3",
+    "type": "Prealgebra",
+    "solution": "Since $AB=AC$, then $\\triangle ABC$ is isosceles.  Therefore, altitude $AD$ bisects the base $BC$ so that $BD=DC=\\frac{14}{2}=7$.  Since $\\angle ADB=90^{\\circ}$, $\\triangle ADB$ is right angled.  By the Pythagorean Theorem, $25^2=AD^2+7^2$ or $AD^2=25^2-7^2$ or  $AD^2=625-49=576$, and so $AD=\\sqrt{576}=\\boxed{24}$, since $AD>0$.",
+    "is_solved": false,
+    "model_solution": "Apply the Pythagorean Theorem to the right triangle $ADB$ to obtain $AD^2+BD^2=AB^2$, so $AD^2+BD^2=25^2$\nUse $BD=\\frac{BC}{2}$ to substitute $BD=\\frac{14}{2}=7$ into the previous equation to get $AD^2+7^2=25^2$.\n$AD^2 = 25^2 - 7^2 = 625-49 = 576$.\n$\\sqrt{576}=24$",
+    "steps": [
+        "Apply the Pythagorean Theorem to the right triangle $ADB$ to obtain $AD^2+BD^2=AB^2$, so $AD^2+BD^2=25^2$",
+        "Use $BD=\\frac{BC}{2}$ to substitute $BD=\\frac{14}{2}=7$ into the previous equation to get $AD^2+7^2=25^2$.",
+        "$AD^2 = 25^2 - 7^2 = 625-49 = 576$.",
+        "$\\sqrt{576}=24$"
+    ],
+    "full_steps": [
+        [
+            "Apply the Pythagorean Theorem to the right triangle $ADB$ to obtain $AD^2+BD^2=AB^2$, so $AD^2+BD^2=25^2$",
+            1
+        ],
+        [
+            "Use $BD=\\frac{BC}{2}$ to substitute $BD=\\frac{14}{2}=7$ into the previous equation to get $AD^2+7^2=25^2$.",
+            1
+        ],
+        [
+            "$AD^2 = 25^2 - 7^2 = 625-49 = 576$.",
+            1
+        ],
+        [
+            "$\\sqrt{576}=24$",
+            1
+        ]
+    ],
+    "time": 53.92035484313965,
+    "total_tokens": 3595,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,56 @@
+{
+    "problem": "Corner $A$ of a rectangular piece of paper of width 8 inches is folded over so that it coincides with point $C$ on the opposite side. If $BC = 5$ inches, find the length in inches of fold $l$.\n\n[asy]\nsize(100);\n\ndraw( (0,0) -- (8,0) -- (8, 10) -- (0, 10) -- cycle);\ndot((8,10)); dot((0,6)); dot((3,10));\nlabel(\"$A$\", (8,10) , NE); label(\"$C$\", (0,6), W); label(\"$B$\", (3,10), N);\nlabel(\" $8''$ \", (0,0)--(8,0), S);\n\ndraw((0,0)--(8,0)); draw((0,0)--(0,6)); draw((0,10)--(3,10));\ndraw((8,0)--(3,10), 1pt+dashed);\ndraw((0,6)--(3,10)); draw((0,6)--(8,0));\nlabel (\"$l$\", (6,6), SE);\n[/asy]",
+    "level": "Level 4",
+    "type": "Geometry",
+    "solution": "Label points $O, N, M$ as follows. [asy]\nsize(100);\n\ndraw( (0,0) -- (8,0) -- (8, 10) -- (0, 10) -- cycle);\ndot((8,10)); dot((0,6)); dot((3,10)); dot((8,0));\nlabel(\"$A$\", (8,10) , NE); label(\"$C$\", (0,6), W); label(\"$B$\", (3,10), N); label(\"$N$\", (8,0), SE); label(\"$O$\", (0,0), SW); label(\"$M$\", (0,10), NW); label(\"5\", (1.5, 8), SE);\nlabel(\" $8$ \", (0,0)--(8,0), S);\n\ndraw((0,0)--(8,0)); draw((0,0)--(0,6)); draw((0,10)--(3,10));\ndraw((8,0)--(3,10), 1pt+dashed);\ndraw((0,6)--(3,10)); draw((0,6)--(8,0));\nlabel (\"$l$\", (6,6), SE);\n[/asy] Because folding preserves the corner $A$ (which is now $C$), we have two congruent triangles $\\triangle BAN \\cong \\triangle BCN$.  This means that $AB=BC=5$.  Knowing this, we can compute $MB=8-5=3$ and $MC=\\sqrt{5^2-3^2}=4$.\n\nNotice also that we have similar triangles $\\triangle BMC \\sim \\triangle CON$.  (This can be determined by angle chasing.)  Thus, we have $\\frac{MB}{CO}=\\frac{BC}{CN}=\\frac{MC}{ON}=\\frac{4}{8}$.  Knowing $MB=3$ and $CB=5$, we can compute $CO=6$ and $CN=10$.\n\n[asy]\nsize(100);\n\ndraw( (0,0) -- (8,0) -- (8, 10) -- (0, 10) -- cycle);\ndot((8,10)); dot((0,6)); dot((3,10)); dot((8,0));\nlabel(\"$A$\", (8,10) , NE); label(\"$C$\", (0,6), W); label(\"$B$\", (3,10), N); label(\"$N$\", (8,0), SE); label(\"$O$\", (0,0), SW); label(\"$M$\", (0,10), NW); label(\"5\", (1.5, 8), SE);\nlabel(\" $8$ \", (0,0)--(8,0), S);\n\ndraw((0,0)--(8,0)); draw((0,0)--(0,6)); draw((0,10)--(3,10));\ndraw((8,0)--(3,10), 1pt+dashed);\ndraw((0,6)--(3,10)); draw((0,6)--(8,0));\nlabel (\"$l$\", (6,6), SE); label(\"6\", (0,3), W); label(\"10\",(4,3),SW); label(\"4\",(0,9), W); label(\"3\",(1.5,10),N); label(\"5\",(5.5,10),N);\n[/asy]Now, we see that $AN=6+4=10$.  By Pythagoras on $\\triangle BAN$, we have $BN=\\sqrt{5^2+10^2}=5\\sqrt{5}$.  Hence, $l=\\boxed{5\\sqrt{5}}$.",
+    "is_solved": true,
+    "model_solution": "Step 1:  We are given a rectangular piece of paper with a width of 8 inches, and we need to find the length of the fold $l$ when the corner $A$ is folded over to coincide with point $C$ on the opposite side.\nStep 2:  When the paper is folded, point $B$ will coincide with point $A$, and the segment $BC$ will become the segment $AB$.\nStep 3:  We are also given that $BC = 5$ inches.\nStep 4:  To start solving this problem, we can draw a perpendicular from $B$ to the segment $\\overline{CA}$, which intersects $\\overline{CA}$ at point $D$.\nStep 5:  Given that $BC = 5$ inches, and the width of the paper is 8 inches, the length $AB$ can be extended to create a rectangle $ABCD$ with the length of $8$ inches.\nStep 6:  Since $BC=5$ inches, the length of $CD$ will also be $5$ inches, as we have a rectangle.\nStep 2: The length $AD$ can be calculated using the Pythagorean Theorem, as we have a right-angled triangle $ABD$.\nStep 3:  $\\triangle ABD$ is a right triangle with legs of length $AD=8$ and $BD=5$, so we can apply the Pythagorean Theorem to find the length of the hypotenuse $AB$.\n$\\begin{aligned}\nAB^2&=AD^2+BD^2\\\\\n&=8^2+5^2\\\\\n&=64+25\\\\\n&=89\n\\end{aligned}$\n$\\begin{aligned}\nAB&=\\sqrt{89}\n\\end{aligned}$\nThe length $BC$ is equal to the length $l-AD$, as $BC$ is formed when the fold is made, and $AD$ is the length of the fold. Therefore:\n$l-AD=BC=5$\n$l-AD=5$\n$l=AD+5$\n$l=\\sqrt{89}+5$\n$l = \\sqrt{89} + 5$\nStep 4:\n$l=\\sqrt{89}+5$\n$l = \\sqrt{89} + 5$",
+    "steps": [
+        "Step 1:  We are given a rectangular piece of paper with a width of 8 inches, and we need to find the length of the fold $l$ when the corner $A$ is folded over to coincide with point $C$ on the opposite side.\nStep 2:  When the paper is folded, point $B$ will coincide with point $A$, and the segment $BC$ will become the segment $AB$.\nStep 3:  We are also given that $BC = 5$ inches.\nStep 4:  To start solving this problem, we can draw a perpendicular from $B$ to the segment $\\overline{CA}$, which intersects $\\overline{CA}$ at point $D$.\nStep 5:  Given that $BC = 5$ inches, and the width of the paper is 8 inches, the length $AB$ can be extended to create a rectangle $ABCD$ with the length of $8$ inches.\nStep 6:  Since $BC=5$ inches, the length of $CD$ will also be $5$ inches, as we have a rectangle.",
+        "Step 2: The length $AD$ can be calculated using the Pythagorean Theorem, as we have a right-angled triangle $ABD$.",
+        "Step 3:  $\\triangle ABD$ is a right triangle with legs of length $AD=8$ and $BD=5$, so we can apply the Pythagorean Theorem to find the length of the hypotenuse $AB$.\n$\\begin{aligned}\nAB^2&=AD^2+BD^2\\\\\n&=8^2+5^2\\\\\n&=64+25\\\\\n&=89\n\\end{aligned}$\n$\\begin{aligned}\nAB&=\\sqrt{89}\n\\end{aligned}$",
+        "The length $BC$ is equal to the length $l-AD$, as $BC$ is formed when the fold is made, and $AD$ is the length of the fold. Therefore:\n$l-AD=BC=5$\n$l-AD=5$\n$l=AD+5$",
+        "$l=\\sqrt{89}+5$",
+        "$l = \\sqrt{89} + 5$",
+        "Step 4:\n$l=\\sqrt{89}+5$",
+        "$l = \\sqrt{89} + 5$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We are given a rectangular piece of paper with a width of 8 inches, and we need to find the length of the fold $l$ when the corner $A$ is folded over to coincide with point $C$ on the opposite side.\nStep 2:  When the paper is folded, point $B$ will coincide with point $A$, and the segment $BC$ will become the segment $AB$.\nStep 3:  We are also given that $BC = 5$ inches.\nStep 4:  To start solving this problem, we can draw a perpendicular from $B$ to the segment $\\overline{CA}$, which intersects $\\overline{CA}$ at point $D$.\nStep 5:  Given that $BC = 5$ inches, and the width of the paper is 8 inches, the length $AB$ can be extended to create a rectangle $ABCD$ with the length of $8$ inches.\nStep 6:  Since $BC=5$ inches, the length of $CD$ will also be $5$ inches, as we have a rectangle.",
+            1
+        ],
+        [
+            "Step 2: The length $AD$ can be calculated using the Pythagorean Theorem, as we have a right-angled triangle $ABD$.",
+            1
+        ],
+        [
+            "Step 3:  $\\triangle ABD$ is a right triangle with legs of length $AD=8$ and $BD=5$, so we can apply the Pythagorean Theorem to find the length of the hypotenuse $AB$.\n$\\begin{aligned}\nAB^2&=AD^2+BD^2\\\\\n&=8^2+5^2\\\\\n&=64+25\\\\\n&=89\n\\end{aligned}$\n$\\begin{aligned}\nAB&=\\sqrt{89}\n\\end{aligned}$",
+            1
+        ],
+        [
+            "The length $BC$ is equal to the length $l-AD$, as $BC$ is formed when the fold is made, and $AD$ is the length of the fold. Therefore:\n$l-AD=BC=5$\n$l-AD=5$\n$l=AD+5$",
+            1
+        ],
+        [
+            "$l=\\sqrt{89}+5$",
+            1
+        ],
+        [
+            "$l = \\sqrt{89} + 5$",
+            1
+        ],
+        [
+            "Step 4:\n$l=\\sqrt{89}+5$",
+            1
+        ],
+        [
+            "$l = \\sqrt{89} + 5$",
+            1
+        ]
+    ],
+    "time": 105.99160480499268,
+    "total_tokens": 11438,
+    "final_answer_tokens": 796,
+    "model": "meta-llama/Llama-Vision-Free"
+}

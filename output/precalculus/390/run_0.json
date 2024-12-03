@@ -1,0 +1,21 @@
+{
+    "problem": "Compute \\[ \\frac {\\sum_{n = 1}^{44} \\cos n^\\circ}{\\sum_{n = 1}^{44} \\sin n^\\circ} .\\]",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "Let $A = \\sum_{n = 1}^{44} \\cos n^\\circ$ and $B = \\sum_{n = 1}^{44} \\sin n^\\circ.$\n\nFrom the angle subtraction formula,\n\\[\\cos (45^\\circ - n^\\circ) = \\cos 45^\\circ \\cos n^\\circ + \\sin 45^\\circ \\sin n^\\circ = \\frac{1}{\\sqrt{2}} \\cos n^\\circ + \\frac{1}{\\sqrt{2}} \\sin n^\\circ,\\]so $\\cos n^\\circ + \\sin n^\\circ = \\sqrt{2} \\cos (45^\\circ - n^\\circ).$  Summing over $1 \\le n \\le 44,$ we get\n\\[A + B = \\sqrt{2} \\sum_{n = 1}^{44} \\cos (45^\\circ - n^\\circ) = A \\sqrt{2}.\\]Then $B = A \\sqrt{2} - A = A (\\sqrt{2} - 1),$ so\n\\[\\frac{A}{B} = \\frac{A}{A (\\sqrt{2} - 1)} = \\boxed{1 + \\sqrt{2}}.\\]",
+    "is_solved": true,
+    "model_solution": "## Step 1: We begin by expressing the given summations in terms of complex numbers using the formula for the sum of a geometric series.\n\\[\n\\sum_{n = 1}^{44} \\cos n^\\circ = \\text{Re}\\left( \\frac {z^{45} - z}{z - 1} \\right)\n\\]\n\\[\n\\sum_{n = 1}^{44} \\sin n^\\circ = \\text{Im}\\left( \\frac {z^{45} - z}{z - 1} \\right)\n\\]\nwhere\n\\[\nz = \\cos 1^\\circ + i \\sin 1^\\circ\n\\]\n\nThe final answer is: $\\boxed{0}$",
+    "steps": [
+        "## Step 1: We begin by expressing the given summations in terms of complex numbers using the formula for the sum of a geometric series.\n\\[\n\\sum_{n = 1}^{44} \\cos n^\\circ = \\text{Re}\\left( \\frac {z^{45} - z}{z - 1} \\right)\n\\]\n\\[\n\\sum_{n = 1}^{44} \\sin n^\\circ = \\text{Im}\\left( \\frac {z^{45} - z}{z - 1} \\right)\n\\]\nwhere\n\\[\nz = \\cos 1^\\circ + i \\sin 1^\\circ\n\\]\n\nThe final answer is: $\\boxed{0}$"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: We begin by expressing the given summations in terms of complex numbers using the formula for the sum of a geometric series.\n\\[\n\\sum_{n = 1}^{44} \\cos n^\\circ = \\text{Re}\\left( \\frac {z^{45} - z}{z - 1} \\right)\n\\]\n\\[\n\\sum_{n = 1}^{44} \\sin n^\\circ = \\text{Im}\\left( \\frac {z^{45} - z}{z - 1} \\right)\n\\]\nwhere\n\\[\nz = \\cos 1^\\circ + i \\sin 1^\\circ\n\\]\n\nThe final answer is: $\\boxed{0}$",
+            1
+        ]
+    ],
+    "time": 13.946797132492065,
+    "total_tokens": 501,
+    "final_answer_tokens": 233,
+    "model": "meta-llama/Llama-Vision-Free"
+}

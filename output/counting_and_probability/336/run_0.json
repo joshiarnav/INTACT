@@ -1,0 +1,46 @@
+{
+    "problem": "How many positive multiples of $7$ that are less than $1000$ end with the digit $3$?",
+    "level": "Level 3",
+    "type": "Counting & Probability",
+    "solution": "Listing the first 10 multiples of 7, which are 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, we see that the only positive multiples of 7 that end in 3 are those that are the product of 7 and a number that ends in 9.  Therefore, the positive multiples of 7 that are less than 1000 and end with the digit 3 are $7\\cdot 9 = 63$, $7\\cdot 19= 133$, $7\\cdot 29 = 203$, . . .  Notice that we can get from each to the next by adding $7\\cdot 10 = 70$, so our multiples of 7 less than 1000 that end with the digit 3 are 63, 133, 203, . . ., 903, 973.  The last one is 910 more than the first. Since $910/70=13$, we see that we have taken 13 steps of 70 to get from the first number in the list to the last. Therefore, there are $\\boxed{14}$ numbers in the list.",
+    "is_solved": true,
+    "model_solution": "Step 1: We need to find numbers that are multiples of $7$ and end in $3$, so we can look for numbers in the form $10n+3$, where $n$ is an integer.\n\nThis form can be rewritten as $7(10n+4)-1$\nStep 2: Since we're looking for multiples of $7$, the expression $7(10n+4)-1$ must be a multiple of $7$. This means that $7(10n+4)$ must be one more than a multiple of $7$.\nStep 3: We know that $10n+4$ must be one less than a multiple of $7$, so we can express it as $10n+4=7k-1$, where $k$ is an integer, and solve for $n$.\n\nWe get: \n\\begin{align*}\n10n+4&=7k-1\\\\\n10n&=7k-5\\\\\nn&=\\frac{7k-5}{10}\n\\end{align*}\n\nWe need to find the number of positive integers $k$ that make $\\frac{7k-5}{10}$ an integer.\nSince $k$ must be an integer, we can see that $\\frac{7k-5}{10}$ is an integer when $7k-5$ is a multiple of $10$.\nStep 4:\n\\begin{align*}\n7k-5 &\\equiv 0 \\pmod{10} \\\\\n7k &\\equiv 5 \\pmod{10} \\\\\n7k &\\equiv 15 \\pmod{10} \\\\\nk &\\equiv 5 \\pmod{10}\n\\end{align*}\nTherefore, $k$ can be written as $10m+5$, where $m$ is a nonnegative integer.\n\n\\begin{align*}\nn &= \\frac{7k-5}{10} \\\\\n&= \\frac{7(10m+5)-5}{10} \\\\\n&= 7m+4\n\\end{align*}\nSince $n$ must be a positive integer, $7m+4$ must be a positive integer.\nStep 5:\n\\begin{align*}\nn &= 7m+4 \\\\\n&< 1000\\\\\n7m+4&<1000\\\\\n7m&<996\\\\\nm&<142\\frac{4}{7}\n\\end{align*}\nTherefore, $m$ can be any integer from $0$ to $142$, inclusive.\n\nThe final answer is: $\\boxed{143}$",
+    "steps": [
+        "Step 1: We need to find numbers that are multiples of $7$ and end in $3$, so we can look for numbers in the form $10n+3$, where $n$ is an integer.\n\nThis form can be rewritten as $7(10n+4)-1$",
+        "Step 2: Since we're looking for multiples of $7$, the expression $7(10n+4)-1$ must be a multiple of $7$. This means that $7(10n+4)$ must be one more than a multiple of $7$.",
+        "Step 3: We know that $10n+4$ must be one less than a multiple of $7$, so we can express it as $10n+4=7k-1$, where $k$ is an integer, and solve for $n$.\n\nWe get: \n\\begin{align*}\n10n+4&=7k-1\\\\\n10n&=7k-5\\\\\nn&=\\frac{7k-5}{10}\n\\end{align*}\n\nWe need to find the number of positive integers $k$ that make $\\frac{7k-5}{10}$ an integer.",
+        "Since $k$ must be an integer, we can see that $\\frac{7k-5}{10}$ is an integer when $7k-5$ is a multiple of $10$.",
+        "Step 4:\n\\begin{align*}\n7k-5 &\\equiv 0 \\pmod{10} \\\\\n7k &\\equiv 5 \\pmod{10} \\\\\n7k &\\equiv 15 \\pmod{10} \\\\\nk &\\equiv 5 \\pmod{10}\n\\end{align*}\nTherefore, $k$ can be written as $10m+5$, where $m$ is a nonnegative integer.\n\n\\begin{align*}\nn &= \\frac{7k-5}{10} \\\\\n&= \\frac{7(10m+5)-5}{10} \\\\\n&= 7m+4\n\\end{align*}\nSince $n$ must be a positive integer, $7m+4$ must be a positive integer.",
+        "Step 5:\n\\begin{align*}\nn &= 7m+4 \\\\\n&< 1000\\\\\n7m+4&<1000\\\\\n7m&<996\\\\\nm&<142\\frac{4}{7}\n\\end{align*}\nTherefore, $m$ can be any integer from $0$ to $142$, inclusive.\n\nThe final answer is: $\\boxed{143}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: We need to find numbers that are multiples of $7$ and end in $3$, so we can look for numbers in the form $10n+3$, where $n$ is an integer.\n\nThis form can be rewritten as $7(10n+4)-1$",
+            1
+        ],
+        [
+            "Step 2: Since we're looking for multiples of $7$, the expression $7(10n+4)-1$ must be a multiple of $7$. This means that $7(10n+4)$ must be one more than a multiple of $7$.",
+            1
+        ],
+        [
+            "Step 3: We know that $10n+4$ must be one less than a multiple of $7$, so we can express it as $10n+4=7k-1$, where $k$ is an integer, and solve for $n$.\n\nWe get: \n\\begin{align*}\n10n+4&=7k-1\\\\\n10n&=7k-5\\\\\nn&=\\frac{7k-5}{10}\n\\end{align*}\n\nWe need to find the number of positive integers $k$ that make $\\frac{7k-5}{10}$ an integer.",
+            1
+        ],
+        [
+            "Since $k$ must be an integer, we can see that $\\frac{7k-5}{10}$ is an integer when $7k-5$ is a multiple of $10$.",
+            1
+        ],
+        [
+            "Step 4:\n\\begin{align*}\n7k-5 &\\equiv 0 \\pmod{10} \\\\\n7k &\\equiv 5 \\pmod{10} \\\\\n7k &\\equiv 15 \\pmod{10} \\\\\nk &\\equiv 5 \\pmod{10}\n\\end{align*}\nTherefore, $k$ can be written as $10m+5$, where $m$ is a nonnegative integer.\n\n\\begin{align*}\nn &= \\frac{7k-5}{10} \\\\\n&= \\frac{7(10m+5)-5}{10} \\\\\n&= 7m+4\n\\end{align*}\nSince $n$ must be a positive integer, $7m+4$ must be a positive integer.",
+            1
+        ],
+        [
+            "Step 5:\n\\begin{align*}\nn &= 7m+4 \\\\\n&< 1000\\\\\n7m+4&<1000\\\\\n7m&<996\\\\\nm&<142\\frac{4}{7}\n\\end{align*}\nTherefore, $m$ can be any integer from $0$ to $142$, inclusive.\n\nThe final answer is: $\\boxed{143}$",
+            1
+        ]
+    ],
+    "time": 82.04458022117615,
+    "total_tokens": 4516,
+    "final_answer_tokens": 631,
+    "model": "meta-llama/Llama-Vision-Free"
+}

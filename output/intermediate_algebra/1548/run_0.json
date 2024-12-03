@@ -1,0 +1,31 @@
+{
+    "problem": "A tangent from the point $(2 \\cdot 1994, 2 \\cdot 1994)$ to the circle $x^2 + y^2 = 1994^2$ touches circle at the point $(a,b).$  Compute $a + b.$",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "Let $r = 1994.$  The line joining the center $(0,0)$ to $(a,b)$ is perpendicular to the line joining $(2r,2r)$ to $(a,b).$  Hence, the product of their slopes is $-1.$\n\n[asy]\nunitsize(1.5 cm);\n\npair O, P, T;\n\nO = (0,0);\nP = (2,2);\nT = ((1 + sqrt(7))/4,(1 - sqrt(7))/4);\n\ndraw(Circle((0,0),1));\ndraw(O--P--T--cycle);\ndraw(rightanglemark(O,T,P,5));\n\ndot(\"$(0,0)$\", O, W);\ndot(\"$(2r,2r)$\", P, NE);\ndot(\"$(a,b)$\", T, E);\n[/asy]\n\nThis gives us the equation\n\\[\\frac{2r - b}{2r - a} \\cdot \\frac{b}{a} = -1.\\]Then $b(2r - b) = -a(2r - a),$ which expands as $2br - b^2 = -2ar + a^2.$  Then $2ar + 2br = a^2 + b^2 = r^2,$ so\n\\[a + b = \\frac{r^2}{2r} = \\frac{r}{2} = \\boxed{997}.\\]",
+    "is_solved": false,
+    "model_solution": "Step 1: Let $P = (2 \\cdot 1994, 2 \\cdot 1994).$\nStep 2: Let $r$ and $R$ be the radii of the circle $x^2 + y^2 = 1994^2$ and the point $P,$ respectively. Let $Q = (a,b).$\nThe line connecting P to Q has equation of the form $2 \\cdot 1994x - 2 \\cdot 1994y + k = 0.$",
+    "steps": [
+        "Step 1: Let $P = (2 \\cdot 1994, 2 \\cdot 1994).$",
+        "Step 2: Let $r$ and $R$ be the radii of the circle $x^2 + y^2 = 1994^2$ and the point $P,$ respectively. Let $Q = (a,b).$",
+        "The line connecting P to Q has equation of the form $2 \\cdot 1994x - 2 \\cdot 1994y + k = 0.$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Let $P = (2 \\cdot 1994, 2 \\cdot 1994).$",
+            1
+        ],
+        [
+            "Step 2: Let $r$ and $R$ be the radii of the circle $x^2 + y^2 = 1994^2$ and the point $P,$ respectively. Let $Q = (a,b).$",
+            1
+        ],
+        [
+            "The line connecting P to Q has equation of the form $2 \\cdot 1994x - 2 \\cdot 1994y + k = 0.$",
+            1
+        ]
+    ],
+    "time": 38.976715087890625,
+    "total_tokens": 1134,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,41 @@
+{
+    "problem": "How many different positive, six-digit integers can be formed using the digits 2, 2, 5, 5, 9 and 9?",
+    "level": "Level 3",
+    "type": "Counting & Probability",
+    "solution": "We could go ahead and count these directly, but instead we could count in general and then correct for overcounting. That is, if we had 6 distinct digits, there would be $6! = 720$ orderings. However, we must divide by 2! once for the repetition of the digit 2, 2! for the repetition of the digit 5, and again 2! for the repetition of the digit 9 (this should make sense because if the repeated digits were different then we could rearrange them in 2! ways).  So, our answer is $\\frac{6!}{2!\\cdot 2!\\cdot 2!} = \\boxed{90}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: Determine the total number of digits and the number of repetitions for each digit.\nTotal digits: 6\nRepetitions: 2 for 2, 2 for 5, and 2 for 9.\nStep 2: Apply the permutation with repetition formula, where n is the total number of digits and r is the number of digits to be arranged, but since there are repetitions, we will use the formula for permutations with repetition: n! / (r1! * r2! * r3!), where r1, r2, and r3 are the number of repetitions for each digit. In this case, n = 6 and r1 = 2, r2 = 2, and r3 = 2.\nStep 3: Calculate the value of the expression n! / (r1! * r2! * r3!), where n = 6, r1 = 2, r2 = 2, and r3 = 2.\nStep 4: n! = 6! = 720, r1! = 2! = 2, r2! = 2! = 2, and r3! = 2! = 2.\n720 / (2 * 2 * 2) = 720 / 8 = 90\nFinal Answer: The final answer is 90.",
+    "steps": [
+        "Step 1: Determine the total number of digits and the number of repetitions for each digit.\nTotal digits: 6\nRepetitions: 2 for 2, 2 for 5, and 2 for 9.",
+        "Step 2: Apply the permutation with repetition formula, where n is the total number of digits and r is the number of digits to be arranged, but since there are repetitions, we will use the formula for permutations with repetition: n! / (r1! * r2! * r3!), where r1, r2, and r3 are the number of repetitions for each digit. In this case, n = 6 and r1 = 2, r2 = 2, and r3 = 2.",
+        "Step 3: Calculate the value of the expression n! / (r1! * r2! * r3!), where n = 6, r1 = 2, r2 = 2, and r3 = 2.",
+        "Step 4: n! = 6! = 720, r1! = 2! = 2, r2! = 2! = 2, and r3! = 2! = 2.\n720 / (2 * 2 * 2) = 720 / 8 = 90",
+        "Final Answer: The final answer is 90."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Determine the total number of digits and the number of repetitions for each digit.\nTotal digits: 6\nRepetitions: 2 for 2, 2 for 5, and 2 for 9.",
+            1
+        ],
+        [
+            "Step 2: Apply the permutation with repetition formula, where n is the total number of digits and r is the number of digits to be arranged, but since there are repetitions, we will use the formula for permutations with repetition: n! / (r1! * r2! * r3!), where r1, r2, and r3 are the number of repetitions for each digit. In this case, n = 6 and r1 = 2, r2 = 2, and r3 = 2.",
+            1
+        ],
+        [
+            "Step 3: Calculate the value of the expression n! / (r1! * r2! * r3!), where n = 6, r1 = 2, r2 = 2, and r3 = 2.",
+            1
+        ],
+        [
+            "Step 4: n! = 6! = 720, r1! = 2! = 2, r2! = 2! = 2, and r3! = 2! = 2.\n720 / (2 * 2 * 2) = 720 / 8 = 90",
+            1
+        ],
+        [
+            "Final Answer: The final answer is 90.",
+            1
+        ]
+    ],
+    "time": 64.51808166503906,
+    "total_tokens": 2889,
+    "final_answer_tokens": 375,
+    "model": "meta-llama/Llama-Vision-Free"
+}

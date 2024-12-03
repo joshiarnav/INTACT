@@ -1,0 +1,51 @@
+{
+    "problem": "I have five apples and ten oranges. If a fruit basket must contain at least one piece of fruit, how many kinds of fruit baskets can I make?  (The apples are identical and the oranges are identical.  A fruit basket consists of some number of pieces of fruit, and it doesn't matter how the fruit are arranged in the basket.)",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "For a moment, consider empty fruit baskets. Now there are $6$ choices total for the apples: no apples, one apple, two apples, three, four, or all five apples. Similarly, there are $11$ choices total for the oranges. Thus, there are $6\\cdot 11 = 66$ potential fruit baskets. But we must subtract one off of that because we counted empty fruit baskets, which aren't actually allowed. So there are $\\boxed{65}$ possible fruit baskets.",
+    "is_solved": true,
+    "model_solution": "Let F be the number of kinds of fruit baskets. We can make 0 apples, 1, 2, 3, 4, or 5 apples. For each of these options, we have 11 possibilities for the number of oranges (0, 1, 2, 3, ..., 10).\nSince we can choose either apples or oranges to be zero, there are 6 choices for the number of apples and 11 choices for the number of oranges, so F = 6(11).\nWe need to subtract 1 from the total because the basket cannot contain zero apples and zero oranges.\nF = 6(11) - 1\nF = 66 - 1\nF = 65\nF = 65",
+    "steps": [
+        "Let F be the number of kinds of fruit baskets. We can make 0 apples, 1, 2, 3, 4, or 5 apples. For each of these options, we have 11 possibilities for the number of oranges (0, 1, 2, 3, ..., 10).",
+        "Since we can choose either apples or oranges to be zero, there are 6 choices for the number of apples and 11 choices for the number of oranges, so F = 6(11).",
+        "We need to subtract 1 from the total because the basket cannot contain zero apples and zero oranges.",
+        "F = 6(11) - 1",
+        "F = 66 - 1",
+        "F = 65",
+        "F = 65"
+    ],
+    "full_steps": [
+        [
+            "Let F be the number of kinds of fruit baskets. We can make 0 apples, 1, 2, 3, 4, or 5 apples. For each of these options, we have 11 possibilities for the number of oranges (0, 1, 2, 3, ..., 10).",
+            1
+        ],
+        [
+            "Since we can choose either apples or oranges to be zero, there are 6 choices for the number of apples and 11 choices for the number of oranges, so F = 6(11).",
+            1
+        ],
+        [
+            "We need to subtract 1 from the total because the basket cannot contain zero apples and zero oranges.",
+            1
+        ],
+        [
+            "F = 6(11) - 1",
+            1
+        ],
+        [
+            "F = 66 - 1",
+            1
+        ],
+        [
+            "F = 65",
+            1
+        ],
+        [
+            "F = 65",
+            1
+        ]
+    ],
+    "time": 89.00884294509888,
+    "total_tokens": 3660,
+    "final_answer_tokens": 283,
+    "model": "meta-llama/Llama-Vision-Free"
+}

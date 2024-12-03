@@ -1,0 +1,66 @@
+{
+    "problem": "During the weekends, Eli delivers milk in the complex plane. On Saturday, he begins at $z$ and delivers milk to houses located at $z^3,z^5,z^7,\\ldots,z^{2013}$ in that order; on Sunday, he begins at $1$ and delivers milk to houses located at $z^2,z^4,z^6,\\ldots,z^{2012}$ in that order.  Eli always walks directly (in a straight line) between two houses. If the distance he must travel from his starting point to the last house is $\\sqrt{2012}$ on both days, find the real part of $z^2$.",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "The sum of the Saturday distances is\n\\[|z^3 - z| + |z^5 - z^3| + \\dots + |z^{2013} - z^{2011}| = \\sqrt{2012}.\\]The sum of the Sunday distances is\n\\[|z^2 - 1| + |z^4 - z^2| + \\dots + |z^{2012} - z^{2010}| = \\sqrt{2012}.\\]Note that\n\\[|z^3 - z| + |z^5 - z^3| + \\dots + |z^{2013} - z^{2011}| = |z| (|z^2 - 1| + |z^4 - z^2| + \\dots + |z^{2012} - z^{2010}|),\\]so $|z| = 1.$\n\nThen\n\\begin{align*}\n|z^2 - 1| + |z^4 - z^2| + \\dots + |z^{2012} - z^{2010}| &= |z^2 - 1| + |z^2| |z^2 - 1| + \\dots + |z^{2010}| |z^2 - 1| \\\\\n&= |z^2 - 1| + |z|^2 |z^2 - 1| + \\dots + |z|^{2010} |z^2 - 1| \\\\\n&= 1006 |z^2 - 1|,\n\\end{align*}so\n\\[|z^2 - 1| = \\frac{\\sqrt{2012}}{1006}.\\]We have that $|z^2| = |z|^2 = 1.$  Let $z^2 = a + bi,$ where $a$ and $b$ are real numbers, so $a^2 + b^2 = 1.$  From the equation $|z^2 - 1| = \\frac{\\sqrt{2012}}{1006},$\n\\[(a - 1)^2 + b^2 = \\frac{2012}{1006^2} = \\frac{1}{503}.\\]Subtracting these equations, we get\n\\[2a - 1 = 1 - \\frac{1}{503} = \\frac{502}{503},\\]so $a = \\boxed{\\frac{1005}{1006}}.$",
+    "is_solved": false,
+    "model_solution": "Step 1:  Let $z = a + bi$ where $a$ and $b$ are real numbers, so that $z^2 = (a^2 - b^2) + 2abi$ and $z^{2013} = (a^{2013} - b^{2013}) + (3a^2b - b^3)a^{2011}i$.\nStep 2:  The distance traveled on Saturday is $\\sqrt{2}$ times the distance from $z$ to $z^{2013}$, which is given by $|z - z^{2013}|$.\nStep 3:  This can be expressed as $\\sqrt{(1 - a^{2013} + 3a^2b - b^3)^2 + (3a^{2012}b - b^4)^2}$.\nStep 4:  This distance is equal to $\\sqrt{2012}$, so we can equate the two and solve for the values of $a$ and $b$.\nStep 5:  The same process can be repeated for the distance traveled on Sunday, where the distance from $1$ to $z^2$\n$|z^2 - z^{2012}| = \\sqrt{(a^2 - a^{2012} - b^2)^2 + (2ab - 2ab^{2011})^2}$\n$|z^2 - z^{2012}| = \\sqrt{(a^2 - a^{2012} - b^2)^2 + (2ab - 2ab^{2011})^2}=\\sqrt{2012}.$\nSince $\\sqrt{(1 - a^{2013} + 3a^2b - b^3)^2 + (3a^{2012}b - b^4)^2}=\\sqrt{2012}$, we have $(1 - a^{2013} + 3a^2b - b^3)^2 + (3a^{2012}b - b^4)^2=2012$.  If we assume that $2012=2^2\\cdot 503$, then we can try setting $b=0$, which gives us $(1 - a^{2013})^2=2012$, which is not true.\nThe equation $(1 - a^{2013} + 3a^2b - b^3)^2 + (3a^{2012}b - b^4)^2=2012$ must be satisfied, and we can try setting $a=1$, which results in $(3a^2b - b^3)^2+(3a^{2012}b-b^4)^2=2012$.\nSince $(3a^2b - b^3)^2+(3a^{2012}b-b^4)^2=2012$ and $2012=2^2\\cdot 503$, we have that \\[(3a^2b-b^3)(3a^{2012}b-b^4)=0.\\]\nSince \\[(3a^2b-b^3)(3a^{2012}b-b^4)=0,\\] we have either $3a^2b-b^3 = 0$ or $3a^{2012}b-b^4=0.$  Since we are given that $b \\neq 0$, we have that $3a^2b-b^3 = 0.$\n$3a^2b-b^3 = 0 \\implies 3a^2 = b^2 \\implies a^2 = \\frac{b^2}{3}.$\n$|z^2 - z^{2012}| = \\sqrt{(a^2 - a^{2012} - b^2)^2 + (2ab - 2ab^{2011})^2} = \\sqrt{2012}.$\nSince $|z^2 - z^{2012}| = \\sqrt{(a^2 - a^{2012} - b^2)^2 + (2ab - 2ab^{2011})^2} = \\sqrt{2012}$ and $a^2 = \\frac{b^2}{3}$, we have\n$(a^2 - a^{2012} - b^2)^2 + (2ab - 2ab^{2011})^2 = 2012$.\nSubstituting $a^2 = \\frac{b^2}{3}$, we get\n$\\left(\\frac{b^2}{3} - a^{2012} - b^2\\right)^2 + (2ab - 2ab^{2011})^2 = 2012$.\nSince $\\left(\\frac{b^2}{3} - a^{2012} - b^2\\right)^2 + (2ab - 2ab^{2011})^2 = 2012$, we have $\\left(\\frac{b^2}{3} - a^{2012} - b^2\\right)^2 = 2012",
+    "steps": [
+        "Step 1:  Let $z = a + bi$ where $a$ and $b$ are real numbers, so that $z^2 = (a^2 - b^2) + 2abi$ and $z^{2013} = (a^{2013} - b^{2013}) + (3a^2b - b^3)a^{2011}i$.\nStep 2:  The distance traveled on Saturday is $\\sqrt{2}$ times the distance from $z$ to $z^{2013}$, which is given by $|z - z^{2013}|$.\nStep 3:  This can be expressed as $\\sqrt{(1 - a^{2013} + 3a^2b - b^3)^2 + (3a^{2012}b - b^4)^2}$.\nStep 4:  This distance is equal to $\\sqrt{2012}$, so we can equate the two and solve for the values of $a$ and $b$.\nStep 5:  The same process can be repeated for the distance traveled on Sunday, where the distance from $1$ to $z^2$",
+        "$|z^2 - z^{2012}| = \\sqrt{(a^2 - a^{2012} - b^2)^2 + (2ab - 2ab^{2011})^2}$",
+        "$|z^2 - z^{2012}| = \\sqrt{(a^2 - a^{2012} - b^2)^2 + (2ab - 2ab^{2011})^2}=\\sqrt{2012}.$",
+        "Since $\\sqrt{(1 - a^{2013} + 3a^2b - b^3)^2 + (3a^{2012}b - b^4)^2}=\\sqrt{2012}$, we have $(1 - a^{2013} + 3a^2b - b^3)^2 + (3a^{2012}b - b^4)^2=2012$.  If we assume that $2012=2^2\\cdot 503$, then we can try setting $b=0$, which gives us $(1 - a^{2013})^2=2012$, which is not true.",
+        "The equation $(1 - a^{2013} + 3a^2b - b^3)^2 + (3a^{2012}b - b^4)^2=2012$ must be satisfied, and we can try setting $a=1$, which results in $(3a^2b - b^3)^2+(3a^{2012}b-b^4)^2=2012$.",
+        "Since $(3a^2b - b^3)^2+(3a^{2012}b-b^4)^2=2012$ and $2012=2^2\\cdot 503$, we have that \\[(3a^2b-b^3)(3a^{2012}b-b^4)=0.\\]",
+        "Since \\[(3a^2b-b^3)(3a^{2012}b-b^4)=0,\\] we have either $3a^2b-b^3 = 0$ or $3a^{2012}b-b^4=0.$  Since we are given that $b \\neq 0$, we have that $3a^2b-b^3 = 0.$",
+        "$3a^2b-b^3 = 0 \\implies 3a^2 = b^2 \\implies a^2 = \\frac{b^2}{3}.$",
+        "$|z^2 - z^{2012}| = \\sqrt{(a^2 - a^{2012} - b^2)^2 + (2ab - 2ab^{2011})^2} = \\sqrt{2012}.$",
+        "Since $|z^2 - z^{2012}| = \\sqrt{(a^2 - a^{2012} - b^2)^2 + (2ab - 2ab^{2011})^2} = \\sqrt{2012}$ and $a^2 = \\frac{b^2}{3}$, we have\n$(a^2 - a^{2012} - b^2)^2 + (2ab - 2ab^{2011})^2 = 2012$.\nSubstituting $a^2 = \\frac{b^2}{3}$, we get\n$\\left(\\frac{b^2}{3} - a^{2012} - b^2\\right)^2 + (2ab - 2ab^{2011})^2 = 2012$.\nSince $\\left(\\frac{b^2}{3} - a^{2012} - b^2\\right)^2 + (2ab - 2ab^{2011})^2 = 2012$, we have $\\left(\\frac{b^2}{3} - a^{2012} - b^2\\right)^2 = 2012"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Let $z = a + bi$ where $a$ and $b$ are real numbers, so that $z^2 = (a^2 - b^2) + 2abi$ and $z^{2013} = (a^{2013} - b^{2013}) + (3a^2b - b^3)a^{2011}i$.\nStep 2:  The distance traveled on Saturday is $\\sqrt{2}$ times the distance from $z$ to $z^{2013}$, which is given by $|z - z^{2013}|$.\nStep 3:  This can be expressed as $\\sqrt{(1 - a^{2013} + 3a^2b - b^3)^2 + (3a^{2012}b - b^4)^2}$.\nStep 4:  This distance is equal to $\\sqrt{2012}$, so we can equate the two and solve for the values of $a$ and $b$.\nStep 5:  The same process can be repeated for the distance traveled on Sunday, where the distance from $1$ to $z^2$",
+            1
+        ],
+        [
+            "$|z^2 - z^{2012}| = \\sqrt{(a^2 - a^{2012} - b^2)^2 + (2ab - 2ab^{2011})^2}$",
+            1
+        ],
+        [
+            "$|z^2 - z^{2012}| = \\sqrt{(a^2 - a^{2012} - b^2)^2 + (2ab - 2ab^{2011})^2}=\\sqrt{2012}.$",
+            1
+        ],
+        [
+            "Since $\\sqrt{(1 - a^{2013} + 3a^2b - b^3)^2 + (3a^{2012}b - b^4)^2}=\\sqrt{2012}$, we have $(1 - a^{2013} + 3a^2b - b^3)^2 + (3a^{2012}b - b^4)^2=2012$.  If we assume that $2012=2^2\\cdot 503$, then we can try setting $b=0$, which gives us $(1 - a^{2013})^2=2012$, which is not true.",
+            1
+        ],
+        [
+            "The equation $(1 - a^{2013} + 3a^2b - b^3)^2 + (3a^{2012}b - b^4)^2=2012$ must be satisfied, and we can try setting $a=1$, which results in $(3a^2b - b^3)^2+(3a^{2012}b-b^4)^2=2012$.",
+            1
+        ],
+        [
+            "Since $(3a^2b - b^3)^2+(3a^{2012}b-b^4)^2=2012$ and $2012=2^2\\cdot 503$, we have that \\[(3a^2b-b^3)(3a^{2012}b-b^4)=0.\\]",
+            1
+        ],
+        [
+            "Since \\[(3a^2b-b^3)(3a^{2012}b-b^4)=0,\\] we have either $3a^2b-b^3 = 0$ or $3a^{2012}b-b^4=0.$  Since we are given that $b \\neq 0$, we have that $3a^2b-b^3 = 0.$",
+            1
+        ],
+        [
+            "$3a^2b-b^3 = 0 \\implies 3a^2 = b^2 \\implies a^2 = \\frac{b^2}{3}.$",
+            1
+        ],
+        [
+            "$|z^2 - z^{2012}| = \\sqrt{(a^2 - a^{2012} - b^2)^2 + (2ab - 2ab^{2011})^2} = \\sqrt{2012}.$",
+            1
+        ],
+        [
+            "Since $|z^2 - z^{2012}| = \\sqrt{(a^2 - a^{2012} - b^2)^2 + (2ab - 2ab^{2011})^2} = \\sqrt{2012}$ and $a^2 = \\frac{b^2}{3}$, we have\n$(a^2 - a^{2012} - b^2)^2 + (2ab - 2ab^{2011})^2 = 2012$.\nSubstituting $a^2 = \\frac{b^2}{3}$, we get\n$\\left(\\frac{b^2}{3} - a^{2012} - b^2\\right)^2 + (2ab - 2ab^{2011})^2 = 2012$.\nSince $\\left(\\frac{b^2}{3} - a^{2012} - b^2\\right)^2 + (2ab - 2ab^{2011})^2 = 2012$, we have $\\left(\\frac{b^2}{3} - a^{2012} - b^2\\right)^2 = 2012",
+            1
+        ]
+    ],
+    "time": 135.03093147277832,
+    "total_tokens": 16103,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

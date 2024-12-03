@@ -1,0 +1,36 @@
+{
+    "problem": "Consider the rectangular region with the following points as vertices: $$(5,4), (-5,4), (-5,-4), (5,-4).$$ How many points with integer coordinates will be strictly in the interior of this rectangular region?",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "The rectangular region is 10 units by 8 units, resulting in an 8 by 6 rectangular region in the interior, which forms a 9-by-7 array of lattice points. That's $\\boxed{63}$ points with integer coordinates, as shown in the figure. [asy]\nimport olympiad; size(150); defaultpen(linewidth(0.8));\nadd(grid(10,8));\ndraw((1,1)--(9,1)--(9,7)--(1,7)--cycle,linewidth(1.2));\n[/asy] Note: We are counting points, not squares. It is a common mistake to count the interior squares, for 48, instead of interior lattice points, which gives the correct answer of 63.",
+    "is_solved": true,
+    "model_solution": "Step 1: Determine the length and width of the rectangular region by calculating the differences in x and y coordinates between the points.\n\nLength = 10, Width = 8\nStep 2: Calculate the number of integer points strictly in the interior of the rectangle by finding the product of the number of points in each dimension, and then subtracting the points on the edges and corners.\n\n(Length - 2) * (Width - 2) = (8) * (6) = 48\nStep 3:\nSubtract the points on the edges and corners of the rectangle from the total number of interior points.\n\n48 - 4 (corners) - 8 * 4 (edges) = 48 - 4 - 32 = 12\nStep 4:\nFinal Answer: \nThe final answer is: $\\boxed{12}$",
+    "steps": [
+        "Step 1: Determine the length and width of the rectangular region by calculating the differences in x and y coordinates between the points.\n\nLength = 10, Width = 8",
+        "Step 2: Calculate the number of integer points strictly in the interior of the rectangle by finding the product of the number of points in each dimension, and then subtracting the points on the edges and corners.\n\n(Length - 2) * (Width - 2) = (8) * (6) = 48",
+        "Step 3:\nSubtract the points on the edges and corners of the rectangle from the total number of interior points.\n\n48 - 4 (corners) - 8 * 4 (edges) = 48 - 4 - 32 = 12",
+        "Step 4:\nFinal Answer: \nThe final answer is: $\\boxed{12}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Determine the length and width of the rectangular region by calculating the differences in x and y coordinates between the points.\n\nLength = 10, Width = 8",
+            1
+        ],
+        [
+            "Step 2: Calculate the number of integer points strictly in the interior of the rectangle by finding the product of the number of points in each dimension, and then subtracting the points on the edges and corners.\n\n(Length - 2) * (Width - 2) = (8) * (6) = 48",
+            1
+        ],
+        [
+            "Step 3:\nSubtract the points on the edges and corners of the rectangle from the total number of interior points.\n\n48 - 4 (corners) - 8 * 4 (edges) = 48 - 4 - 32 = 12",
+            1
+        ],
+        [
+            "Step 4:\nFinal Answer: \nThe final answer is: $\\boxed{12}$",
+            1
+        ]
+    ],
+    "time": 54.73832702636719,
+    "total_tokens": 1847,
+    "final_answer_tokens": 283,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,41 @@
+{
+    "problem": "Determine the modulo 4 remainder of the following sum: $$ 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 + 11 + 12. $$",
+    "level": "Level 1",
+    "type": "Number Theory",
+    "solution": "Grouping residues helps make some series computations easier:  \\begin{align*}\n1 + 2 + 3 + 0 + 1 + 2& + 3 + 0 + 1 + 2 + 3 + 0\\\\&\\equiv 3(1 + 2 + 3 + 0) \\\\\n&\\equiv 18\\\\\n& \\equiv \\boxed{2} \\pmod{4}.\n\\end{align*}",
+    "is_solved": true,
+    "model_solution": "First Step: Rewrite the sum by grouping the terms that have the same remainder when divided by 4: $$ 1 + 3 + 5 + 7 + 9 + 11 + 2 + 6 + 10 + 4 + 8 + 12 $$\nSecond Step: Calculate the modulo 4 remainder of the terms grouped in each pair of equal terms. We have  $$ 1 + 3 + 5 + 7 + 9 + 11 + 2 + 6 + 10 + 4 + 8 + 12 $$ \n$$ \\equiv 1+3+5+7+3+3+2+2+2+0+0+0\\pmod{4}. $$\nNext Step: \n$$ \\equiv 1+3+5+7+3+3+2+2+2+0+0+0\\pmod{4} $$ \n$$ \\equiv 28\\pmod{4} $$\n$$ \\equiv 0\\pmod{4} $$\n$$ \\equiv 0\\pmod{4} $$",
+    "steps": [
+        "First Step: Rewrite the sum by grouping the terms that have the same remainder when divided by 4: $$ 1 + 3 + 5 + 7 + 9 + 11 + 2 + 6 + 10 + 4 + 8 + 12 $$",
+        "Second Step: Calculate the modulo 4 remainder of the terms grouped in each pair of equal terms. We have  $$ 1 + 3 + 5 + 7 + 9 + 11 + 2 + 6 + 10 + 4 + 8 + 12 $$ \n$$ \\equiv 1+3+5+7+3+3+2+2+2+0+0+0\\pmod{4}. $$",
+        "Next Step: \n$$ \\equiv 1+3+5+7+3+3+2+2+2+0+0+0\\pmod{4} $$ \n$$ \\equiv 28\\pmod{4} $$",
+        "$$ \\equiv 0\\pmod{4} $$",
+        "$$ \\equiv 0\\pmod{4} $$"
+    ],
+    "full_steps": [
+        [
+            "First Step: Rewrite the sum by grouping the terms that have the same remainder when divided by 4: $$ 1 + 3 + 5 + 7 + 9 + 11 + 2 + 6 + 10 + 4 + 8 + 12 $$",
+            1
+        ],
+        [
+            "Second Step: Calculate the modulo 4 remainder of the terms grouped in each pair of equal terms. We have  $$ 1 + 3 + 5 + 7 + 9 + 11 + 2 + 6 + 10 + 4 + 8 + 12 $$ \n$$ \\equiv 1+3+5+7+3+3+2+2+2+0+0+0\\pmod{4}. $$",
+            1
+        ],
+        [
+            "Next Step: \n$$ \\equiv 1+3+5+7+3+3+2+2+2+0+0+0\\pmod{4} $$ \n$$ \\equiv 28\\pmod{4} $$",
+            1
+        ],
+        [
+            "$$ \\equiv 0\\pmod{4} $$",
+            1
+        ],
+        [
+            "$$ \\equiv 0\\pmod{4} $$",
+            1
+        ]
+    ],
+    "time": 68.14230370521545,
+    "total_tokens": 2879,
+    "final_answer_tokens": 340,
+    "model": "meta-llama/Llama-Vision-Free"
+}

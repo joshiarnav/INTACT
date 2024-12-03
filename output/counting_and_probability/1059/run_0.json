@@ -1,0 +1,46 @@
+{
+    "problem": "Sets $A$ and $B$, shown in the Venn diagram, are such that the total number of elements in set $A$ is twice the total number of elements in set $B$. Altogether, there are 3011 elements in the union of $A$ and $B$, and their intersection has 1000 elements. What is the total number of elements in set $A$?\n\n[asy]\nlabel(\"$A$\", (2,67));\nlabel(\"$B$\", (80,67));\ndraw(Circle((30,45), 22));\ndraw(Circle((58, 45), 22));\nlabel(\"1000\", (44, 45));\n[/asy]",
+    "level": "Level 2",
+    "type": "Counting & Probability",
+    "solution": "Let $a$ be the number of elements in set $A$ and $b$ be the total number of elements in set $B$. We are told that the total number of elements in set $A$ is twice the total number of elements in set $B$ so we can write  $$a=2b.$$ Since there are 1000 elements in the intersection of set $A$ and set $B$, there are $a-1000$ elements that are only in set $A$ and $b-1000$ elements only in set $B$. The total number of elements in the union of set $A$ and set $B$ is equal to $$\\mbox{elements in only }A+\\mbox{elements in only }B+\\mbox{elements in both}$$ which we can also write as  $$(a-1000)+(b-1000)+1000.$$ Because we know that there is a total of 3011 elements in the union of $A$ and $B$, we can write  $$(a-1000)+(b-1000)+1000=3011$$ which simplifies to $$a+b=4011.$$  Because $a=2b$ or $b=\\frac{1}{2}a$, we can write the equation in terms of $a$ and then solve for $a$. We get  \\begin{align*}\na+b&=4011\\qquad\\implies\\\\\na+\\frac{1}{2}a&=4011\\qquad\\implies\\\\\n\\frac{3}{2}a&=4011\\qquad\\implies\\\\\na&=2674\\\\\n\\end{align*} Therefore, the total number of elements in set $A$ is $\\boxed{2674}.$",
+    "is_solved": false,
+    "model_solution": "Let $a$ be the number of elements in set $A$ but not in set $B$, let $b$ be the number of elements in set $B$ but not in set $A$, and let $n$ be the number of elements in both $A$ and $B$.\nWe have that $A=n+a$ and $B=n+b$.\n$n+a+n+b=3011$\n$n+(a+b)+n=3011$\n$2n+a+b=3011$\n$2n+3011-2n=3011$\n$3011-2n=3011$\n$-2n=0$\n$0=0$\n$2n=3011-(a+b)$\n$n+(a+b)+n=3011$\n$2n+a+b=3011$\n$2n+a+b+1000=3011+1000$\n$2n+a+b+1000=4011$\nThe total number of elements in A is 2(a+b+n).\nThe total number of elements in A but not in B is a.\nThe total number of elements in B but not in A is b.\nThe total number of elements in the intersection of A and B is n.\n$2(a+b+n)=2(3011-1000)$\n$2(a+b+n)=2(2011)$\n$2(a+b+n)=4022$\n$2a+2b+2n=4022$\n$a+b+n=2011$\n$a+b=2011-n$",
+    "steps": [
+        "Let $a$ be the number of elements in set $A$ but not in set $B$, let $b$ be the number of elements in set $B$ but not in set $A$, and let $n$ be the number of elements in both $A$ and $B$.\nWe have that $A=n+a$ and $B=n+b$.",
+        "$n+a+n+b=3011$\n$n+(a+b)+n=3011$\n$2n+a+b=3011$\n$2n+3011-2n=3011$\n$3011-2n=3011$\n$-2n=0$\n$0=0$\n$2n=3011-(a+b)$",
+        "$n+(a+b)+n=3011$\n$2n+a+b=3011$\n$2n+a+b+1000=3011+1000$\n$2n+a+b+1000=4011$",
+        "The total number of elements in A is 2(a+b+n).\nThe total number of elements in A but not in B is a.\nThe total number of elements in B but not in A is b.\nThe total number of elements in the intersection of A and B is n.\n$2(a+b+n)=2(3011-1000)$\n$2(a+b+n)=2(2011)$",
+        "$2(a+b+n)=4022$\n$2a+2b+2n=4022$\n$a+b+n=2011$",
+        "$a+b=2011-n$"
+    ],
+    "full_steps": [
+        [
+            "Let $a$ be the number of elements in set $A$ but not in set $B$, let $b$ be the number of elements in set $B$ but not in set $A$, and let $n$ be the number of elements in both $A$ and $B$.\nWe have that $A=n+a$ and $B=n+b$.",
+            1
+        ],
+        [
+            "$n+a+n+b=3011$\n$n+(a+b)+n=3011$\n$2n+a+b=3011$\n$2n+3011-2n=3011$\n$3011-2n=3011$\n$-2n=0$\n$0=0$\n$2n=3011-(a+b)$",
+            1
+        ],
+        [
+            "$n+(a+b)+n=3011$\n$2n+a+b=3011$\n$2n+a+b+1000=3011+1000$\n$2n+a+b+1000=4011$",
+            1
+        ],
+        [
+            "The total number of elements in A is 2(a+b+n).\nThe total number of elements in A but not in B is a.\nThe total number of elements in B but not in A is b.\nThe total number of elements in the intersection of A and B is n.\n$2(a+b+n)=2(3011-1000)$\n$2(a+b+n)=2(2011)$",
+            1
+        ],
+        [
+            "$2(a+b+n)=4022$\n$2a+2b+2n=4022$\n$a+b+n=2011$",
+            1
+        ],
+        [
+            "$a+b=2011-n$",
+            1
+        ]
+    ],
+    "time": 80.43781185150146,
+    "total_tokens": 5095,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

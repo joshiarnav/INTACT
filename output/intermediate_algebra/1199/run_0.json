@@ -1,0 +1,66 @@
+{
+    "problem": "The members of a distinguished committee were choosing a president, and each member gave one vote to one of the 27 candidates.  For each candidate, the exact percentage of votes the candidate got was smaller by at least 1 than the number of votes for that candidate. What is the smallest possible number of members of the committee?",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "Let $t$ be the number of members of the committee, $n_k$ be the number of votes for candidate $k$, and let $p_k$ be the percentage of votes for candidate $k$ for $k= 1,2, \\dots, 27$. We have $$n_k \\ge p_k+1 = {{100n_k}\\over t} +1.$$Adding these 27 inequalities yields $t \\ge 127$.\n\nSolving for $n_k$ gives $n_k \\ge \\displaystyle{t \\over{t-100}}$, and, since $n_k$ is an integer, we obtain $$n_k \\ge \\biggl\\lceil{t \\over{t-100}}\\biggr\\rceil,$$where the notation $\\lceil x\\rceil$ denotes the least integer that is greater than or equal to $x$. The last inequality is satisfied for all $k= 1,2, \\dots, 27$ if and only if it is satisfied by the smallest $n_k$, say $n_1$. Since $t \\ge 27n_1$, we obtain $$t \\ge 27 \\biggl\\lceil{t \\over {t-100}} \\bigg\\rceil \\quad (1)$$and our problem reduces to finding the smallest possible integer $t\\ge127$ that satisfies the inequality (1).\n\nIf ${t \\over {t-100}} > 4$, that is, $t \\le 133$, then $27\\left\\lceil{t\\over {t-100}}\\right\\rceil \\ge27 \\cdot5=135$ so that the inequality (1) is not satisfied. Thus $\\boxed{134}$ is the least possible number of members in the committee.  Note that when $t=134$, an election in which 1 candidate receives 30 votes and the remaining 26 candidates receive 4 votes each satisfies the conditions of the problem.\n\n$\\centerline{{\\bf OR}}$\n\nLet $t$ be the number of members of the committee, and let $m$ be the least number of votes that any candidate received.  It is clear that $m \\ne 0$ and $m \\ne 1$.  If $m=2$, then $2 \\ge 1+100 \\cdot \\frac{2}{t}$, so $t \\ge 200$.  Similarly, if $m=3$, then $3 \\ge 1+100 \\cdot \\frac{3}{t}$, and $t \\ge 150$; and if $m=4$, then $4 \\ge 1+100 \\cdot \\frac{4}{t}$, so $t \\ge 134$. When $m \\ge 5$, $t \\ge 27 \\cdot\n5=135$.  Thus $t \\ge 134$. Verify that $t$ can be $\\boxed{134}$ by noting that the votes may be distributed so that 1 candidate receives 30 votes and the remaining 26 candidates receive 4 votes each.",
+    "is_solved": false,
+    "model_solution": "Let $n$ be the number of committee members. Let $a_{i}$ be the number of votes for the $i^{th}$ candidate. \n1. Note that $0 < a_1 < 12$, $0 < a_2 < 11$, $0 < a_3 < 10$, $0 < a_4 < 9$, $0 < a_5 < 8$, $0 < a_6 < 7$, $0 < a_7 < 6$, $0 < a_8 < 5$, $0 < a_9 < 4$, $0 < a_{10} < 3$, $0 < a_{11} < 2$, $0 < a_{12} < 1$, $0 < a_{13} < 0$ is impossible, $a_{14} = 0$.\nNotice that $a_{13} = 0$, so $\\sum a_{i} \\geq 14$, while we have $\\sum a_{i} \\leq n$.\nWe set $n \\geq 14$ and derive a lower bound for $n$.\nSince $a_{1} + a_{2} + \\cdots + a_{12} < 56$, we can conclude that $a_{13} = 0$ and $a_{14} = 0$ as well, so we have $\\sum a_{i} \\geq 14$. Also, we have $\\sum a_{i} \\leq n$ so we can write $n \\geq 14$.\nSince $a_{1} + a_{2} + \\cdots + a_{12} < 56$, we can conclude that $a_{13} = 0$ and $a_{14} = 0$ as well, so we can write $a_{1} + a_{2} + \\cdots + a_{12} < a_{1} + a_{2} + \\cdots + a_{14}$, which simplifies to $a_{1} + a_{2} + \\cdots + a_{12} < \\sum a_{i}$.\nGiven that $a_{1} < 12$, $a_{2} < 11$, $a_{3} < 10$, $a_{4} < 9$, $a_{5} < 8$, $a_{6} < 7$, $a_{7} < 6$, $a_{8} < 5$, $a_{9} < 4$, $a_{10} < 3$, $a_{11} < 2$, and $a_{12} < 1$, we can write $\\sum_{i=1}^{12} a_{i} < 12 + 11 + 10 + 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 = 77$.\nSince $\\sum_{i=1}^{12} a_{i} < 77$, we can write $\\sum a_{i} < 77 + 14$ which simplifies to $\\sum a_{i} < 91$. From the previous steps, we have $\\sum a_{i} \\leq n$ so we can write $91 > n$.\n$n \\geq 14$ and $n < 91.$ Since $n$ is an integer, we have $n \\geq 15.$\nSince $\\sum_{i=13}^{14} a_{i} \\geq 2$, we can write $a_{13} \\geq 1$ or $a_{14} \\geq 1$, but this is impossible, so $\\sum_{i=13}^{14} a_{i} = 0$, so we have $\\sum a_{i} = \\sum_{i=1}^{12} a_{i}$, which simplifies to $14 \\leq \\sum_{i=1}^{12} a_{i}$.\nSince $a_{1} < 12$, $a_{2} < 11$, $a_{3} < 10$, $a_{4} < 9$, $a_{5} < 8$, $a_{6} < 7$, $a_{7} < 6$, $a_{8} < 5$, $a_{9} < 4$, $a_{10} < 3$, $a_{11} < 2$, and $a_{12} < 1$, we can write $\\sum_{i=1}^{12} a_{i} \\geq\nSince $a_{1} < 12$, $a_{2} < 11$, $a_{3} < 10$, $a_{4} < 9$, $a_{5} < 8$, $a_{6} < 7$, $a_{7} < 6$, $a_{8} < 5$, $a_{9} < 4$, $a_{10} < 3$, $a_{11} < 2$, and $a_{12} < 1$, we can write $\\sum_{i=1}^{12} a_{i} \\geq 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 + 11 + 12 = 78$.",
+    "steps": [
+        "Let $n$ be the number of committee members. Let $a_{i}$ be the number of votes for the $i^{th}$ candidate. \n1. Note that $0 < a_1 < 12$, $0 < a_2 < 11$, $0 < a_3 < 10$, $0 < a_4 < 9$, $0 < a_5 < 8$, $0 < a_6 < 7$, $0 < a_7 < 6$, $0 < a_8 < 5$, $0 < a_9 < 4$, $0 < a_{10} < 3$, $0 < a_{11} < 2$, $0 < a_{12} < 1$, $0 < a_{13} < 0$ is impossible, $a_{14} = 0$.",
+        "Notice that $a_{13} = 0$, so $\\sum a_{i} \\geq 14$, while we have $\\sum a_{i} \\leq n$.",
+        "We set $n \\geq 14$ and derive a lower bound for $n$.",
+        "Since $a_{1} + a_{2} + \\cdots + a_{12} < 56$, we can conclude that $a_{13} = 0$ and $a_{14} = 0$ as well, so we have $\\sum a_{i} \\geq 14$. Also, we have $\\sum a_{i} \\leq n$ so we can write $n \\geq 14$.",
+        "Since $a_{1} + a_{2} + \\cdots + a_{12} < 56$, we can conclude that $a_{13} = 0$ and $a_{14} = 0$ as well, so we can write $a_{1} + a_{2} + \\cdots + a_{12} < a_{1} + a_{2} + \\cdots + a_{14}$, which simplifies to $a_{1} + a_{2} + \\cdots + a_{12} < \\sum a_{i}$.",
+        "Given that $a_{1} < 12$, $a_{2} < 11$, $a_{3} < 10$, $a_{4} < 9$, $a_{5} < 8$, $a_{6} < 7$, $a_{7} < 6$, $a_{8} < 5$, $a_{9} < 4$, $a_{10} < 3$, $a_{11} < 2$, and $a_{12} < 1$, we can write $\\sum_{i=1}^{12} a_{i} < 12 + 11 + 10 + 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 = 77$.",
+        "Since $\\sum_{i=1}^{12} a_{i} < 77$, we can write $\\sum a_{i} < 77 + 14$ which simplifies to $\\sum a_{i} < 91$. From the previous steps, we have $\\sum a_{i} \\leq n$ so we can write $91 > n$.",
+        "$n \\geq 14$ and $n < 91.$ Since $n$ is an integer, we have $n \\geq 15.$",
+        "Since $\\sum_{i=13}^{14} a_{i} \\geq 2$, we can write $a_{13} \\geq 1$ or $a_{14} \\geq 1$, but this is impossible, so $\\sum_{i=13}^{14} a_{i} = 0$, so we have $\\sum a_{i} = \\sum_{i=1}^{12} a_{i}$, which simplifies to $14 \\leq \\sum_{i=1}^{12} a_{i}$.\nSince $a_{1} < 12$, $a_{2} < 11$, $a_{3} < 10$, $a_{4} < 9$, $a_{5} < 8$, $a_{6} < 7$, $a_{7} < 6$, $a_{8} < 5$, $a_{9} < 4$, $a_{10} < 3$, $a_{11} < 2$, and $a_{12} < 1$, we can write $\\sum_{i=1}^{12} a_{i} \\geq",
+        "Since $a_{1} < 12$, $a_{2} < 11$, $a_{3} < 10$, $a_{4} < 9$, $a_{5} < 8$, $a_{6} < 7$, $a_{7} < 6$, $a_{8} < 5$, $a_{9} < 4$, $a_{10} < 3$, $a_{11} < 2$, and $a_{12} < 1$, we can write $\\sum_{i=1}^{12} a_{i} \\geq 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 + 11 + 12 = 78$."
+    ],
+    "full_steps": [
+        [
+            "Let $n$ be the number of committee members. Let $a_{i}$ be the number of votes for the $i^{th}$ candidate. \n1. Note that $0 < a_1 < 12$, $0 < a_2 < 11$, $0 < a_3 < 10$, $0 < a_4 < 9$, $0 < a_5 < 8$, $0 < a_6 < 7$, $0 < a_7 < 6$, $0 < a_8 < 5$, $0 < a_9 < 4$, $0 < a_{10} < 3$, $0 < a_{11} < 2$, $0 < a_{12} < 1$, $0 < a_{13} < 0$ is impossible, $a_{14} = 0$.",
+            1
+        ],
+        [
+            "Notice that $a_{13} = 0$, so $\\sum a_{i} \\geq 14$, while we have $\\sum a_{i} \\leq n$.",
+            1
+        ],
+        [
+            "We set $n \\geq 14$ and derive a lower bound for $n$.",
+            1
+        ],
+        [
+            "Since $a_{1} + a_{2} + \\cdots + a_{12} < 56$, we can conclude that $a_{13} = 0$ and $a_{14} = 0$ as well, so we have $\\sum a_{i} \\geq 14$. Also, we have $\\sum a_{i} \\leq n$ so we can write $n \\geq 14$.",
+            1
+        ],
+        [
+            "Since $a_{1} + a_{2} + \\cdots + a_{12} < 56$, we can conclude that $a_{13} = 0$ and $a_{14} = 0$ as well, so we can write $a_{1} + a_{2} + \\cdots + a_{12} < a_{1} + a_{2} + \\cdots + a_{14}$, which simplifies to $a_{1} + a_{2} + \\cdots + a_{12} < \\sum a_{i}$.",
+            1
+        ],
+        [
+            "Given that $a_{1} < 12$, $a_{2} < 11$, $a_{3} < 10$, $a_{4} < 9$, $a_{5} < 8$, $a_{6} < 7$, $a_{7} < 6$, $a_{8} < 5$, $a_{9} < 4$, $a_{10} < 3$, $a_{11} < 2$, and $a_{12} < 1$, we can write $\\sum_{i=1}^{12} a_{i} < 12 + 11 + 10 + 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 = 77$.",
+            1
+        ],
+        [
+            "Since $\\sum_{i=1}^{12} a_{i} < 77$, we can write $\\sum a_{i} < 77 + 14$ which simplifies to $\\sum a_{i} < 91$. From the previous steps, we have $\\sum a_{i} \\leq n$ so we can write $91 > n$.",
+            1
+        ],
+        [
+            "$n \\geq 14$ and $n < 91.$ Since $n$ is an integer, we have $n \\geq 15.$",
+            1
+        ],
+        [
+            "Since $\\sum_{i=13}^{14} a_{i} \\geq 2$, we can write $a_{13} \\geq 1$ or $a_{14} \\geq 1$, but this is impossible, so $\\sum_{i=13}^{14} a_{i} = 0$, so we have $\\sum a_{i} = \\sum_{i=1}^{12} a_{i}$, which simplifies to $14 \\leq \\sum_{i=1}^{12} a_{i}$.\nSince $a_{1} < 12$, $a_{2} < 11$, $a_{3} < 10$, $a_{4} < 9$, $a_{5} < 8$, $a_{6} < 7$, $a_{7} < 6$, $a_{8} < 5$, $a_{9} < 4$, $a_{10} < 3$, $a_{11} < 2$, and $a_{12} < 1$, we can write $\\sum_{i=1}^{12} a_{i} \\geq",
+            1
+        ],
+        [
+            "Since $a_{1} < 12$, $a_{2} < 11$, $a_{3} < 10$, $a_{4} < 9$, $a_{5} < 8$, $a_{6} < 7$, $a_{7} < 6$, $a_{8} < 5$, $a_{9} < 4$, $a_{10} < 3$, $a_{11} < 2$, and $a_{12} < 1$, we can write $\\sum_{i=1}^{12} a_{i} \\geq 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 + 11 + 12 = 78$.",
+            1
+        ]
+    ],
+    "time": 133.9157567024231,
+    "total_tokens": 13914,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

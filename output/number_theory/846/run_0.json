@@ -1,0 +1,51 @@
+{
+    "problem": "Your friend has an egg collection comprising at least $200$ eggs. He wants to store them in dozen-egg containers. After filling as many containers as possible, the last container had $1$ egg left over. He then decided to store his eggs in customized baker-dozen-egg containers, where each container can hold $13$ eggs. It turns out that, after filling as many of these containers as possible, he still has $1$ egg left over. What is the minimum number of eggs that your friend could have?",
+    "level": "Level 3",
+    "type": "Number Theory",
+    "solution": "We want the smallest integer $x$ such that $x \\ge 200$ and $x$ gives a remainder of $1$ when divided by both $12$ and $13$. We can write $x = 12 \\cdot 13n + 1 = 156n+1$, so now we need to find a sufficiently large value of $n$ such that $x \\ge 200$. If $n = 1$, $x = 157$, but when $n = 2$, $x = 313$. Therefore, your friend has $\\boxed{313}$ eggs.",
+    "is_solved": true,
+    "model_solution": "Let $n$ be the minimum number of eggs that your friend has.\nStep 1: $n\\equiv 1\\pmod{12}$ and $n\\equiv 1\\pmod{13}$.\nStep 2: By the Chinese Remainder Theorem, the solution is unique modulo $12\\cdot 13=156.$\nStep 3:\n$n=12m+1$ and $n=13k+1$ for integers $m$ and $k.$ Therefore, $12m+1=13k+1$ so $12m=13k$, and $m=\\frac{13k}{12}$ for some integer $k.$\nStep 4:\nSince $\\frac{13k}{12}=m$ for some integer $m$, the number $k$ is a multiple of $3$ and $4$, and thus a multiple of $12$. Therefore, we can write $k=12t$ for some integer $t$, so $m=13t$. Thus, $n=12(13t)+1=156t+1.$\nSince the number of eggs is at least $200$, the minimum possible value of $t$ is $\\left\\lceil \\frac{199}{156} \\right\\rceil =2.$ Therefore, the minimum possible value of $n$ is $156t+1=156(2)+1=313.$\nSince the number of eggs is at least $200$, the minimum possible value of $t$ is $\\left\\lceil \\frac{199}{156} \\right\\rceil =2.$\nSince the number of eggs is at least $200$, the minimum possible value of $t$ is $\\left\\lceil \\frac{199}{156} \\right\\rceil =2.$",
+    "steps": [
+        "Let $n$ be the minimum number of eggs that your friend has.\nStep 1: $n\\equiv 1\\pmod{12}$ and $n\\equiv 1\\pmod{13}$.",
+        "Step 2: By the Chinese Remainder Theorem, the solution is unique modulo $12\\cdot 13=156.$",
+        "Step 3:\n$n=12m+1$ and $n=13k+1$ for integers $m$ and $k.$ Therefore, $12m+1=13k+1$ so $12m=13k$, and $m=\\frac{13k}{12}$ for some integer $k.$",
+        "Step 4:\nSince $\\frac{13k}{12}=m$ for some integer $m$, the number $k$ is a multiple of $3$ and $4$, and thus a multiple of $12$. Therefore, we can write $k=12t$ for some integer $t$, so $m=13t$. Thus, $n=12(13t)+1=156t+1.$",
+        "Since the number of eggs is at least $200$, the minimum possible value of $t$ is $\\left\\lceil \\frac{199}{156} \\right\\rceil =2.$ Therefore, the minimum possible value of $n$ is $156t+1=156(2)+1=313.$",
+        "Since the number of eggs is at least $200$, the minimum possible value of $t$ is $\\left\\lceil \\frac{199}{156} \\right\\rceil =2.$",
+        "Since the number of eggs is at least $200$, the minimum possible value of $t$ is $\\left\\lceil \\frac{199}{156} \\right\\rceil =2.$"
+    ],
+    "full_steps": [
+        [
+            "Let $n$ be the minimum number of eggs that your friend has.\nStep 1: $n\\equiv 1\\pmod{12}$ and $n\\equiv 1\\pmod{13}$.",
+            1
+        ],
+        [
+            "Step 2: By the Chinese Remainder Theorem, the solution is unique modulo $12\\cdot 13=156.$",
+            1
+        ],
+        [
+            "Step 3:\n$n=12m+1$ and $n=13k+1$ for integers $m$ and $k.$ Therefore, $12m+1=13k+1$ so $12m=13k$, and $m=\\frac{13k}{12}$ for some integer $k.$",
+            1
+        ],
+        [
+            "Step 4:\nSince $\\frac{13k}{12}=m$ for some integer $m$, the number $k$ is a multiple of $3$ and $4$, and thus a multiple of $12$. Therefore, we can write $k=12t$ for some integer $t$, so $m=13t$. Thus, $n=12(13t)+1=156t+1.$",
+            1
+        ],
+        [
+            "Since the number of eggs is at least $200$, the minimum possible value of $t$ is $\\left\\lceil \\frac{199}{156} \\right\\rceil =2.$ Therefore, the minimum possible value of $n$ is $156t+1=156(2)+1=313.$",
+            1
+        ],
+        [
+            "Since the number of eggs is at least $200$, the minimum possible value of $t$ is $\\left\\lceil \\frac{199}{156} \\right\\rceil =2.$",
+            1
+        ],
+        [
+            "Since the number of eggs is at least $200$, the minimum possible value of $t$ is $\\left\\lceil \\frac{199}{156} \\right\\rceil =2.$",
+            1
+        ]
+    ],
+    "time": 93.36464405059814,
+    "total_tokens": 5355,
+    "final_answer_tokens": 537,
+    "model": "meta-llama/Llama-Vision-Free"
+}

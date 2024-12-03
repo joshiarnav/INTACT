@@ -1,0 +1,46 @@
+{
+    "problem": "Each day, two out of the three teams in a class are randomly selected to participate in a MATHCOUNTS trial competition. What is the probability that Team A is selected on at least two of the next three days? Express your answer as a common fraction.",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "We can compute this a few ways, but the numbers seem small enough that we can go ahead and just compute the probability of A being selected all three days, and the probability of A being selected exactly 2 of the three days. Team A is selected on any given day with probability $\\frac{2}{3}$, because there are ${3 \\choose 2} = 3$ possible pairs of teams, and 2 of them contain A. So, there is a $\\left(\\frac{2}{3}\\right)^3 = \\frac{8}{27}$ chance of being selected all three days. Of being selected exactly twice, there is a $\\frac{2}{3} \\cdot \\frac{2}{3} \\cdot \\frac{1}{3} \\cdot {3 \\choose 2} = \\frac{4}{9}$ chance. Adding these two yields $\\frac{8}{27} + \\frac{4}{9} = \\frac{8+12}{27} = \\boxed{\\frac{20}{27}}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: The total number of ways to choose two teams from three teams in a class is calculated as $\\binom{3}{2}=3$.\nStep 2: \nThe probability of Team A being chosen on a given day is $\\frac{1}{3}$ because there are 3 possible combinations of teams and only one of them includes Team A.\nThe probability of Team A being chosen on at least two of the next three days is equal to 1 minus the probability of Team A being chosen on zero or one of the next three days.\nStep 3:\nThe probability that Team A is chosen on zero of the next three days is $\\left(\\frac{2}{3}\\right)^{3}=\\frac{8}{27}$, and the probability that Team A is chosen on exactly one of the next three days is $3\\left(\\frac{2}{3}\\right)\\left(\\frac{1}{3}\\right)^{2}=\\frac{4}{9}$.\nStep 4: $\\frac{8}{27}+\\frac{4}{9}=\\frac{8}{27}+\\frac{12}{27}=\\frac{20}{27}$\n$1-\\frac{20}{27}=\\frac{7}{27}$\n$1-\\frac{20}{27}=\\frac{7}{27}$",
+    "steps": [
+        "Step 1: The total number of ways to choose two teams from three teams in a class is calculated as $\\binom{3}{2}=3$.",
+        "Step 2: \nThe probability of Team A being chosen on a given day is $\\frac{1}{3}$ because there are 3 possible combinations of teams and only one of them includes Team A.\nThe probability of Team A being chosen on at least two of the next three days is equal to 1 minus the probability of Team A being chosen on zero or one of the next three days.",
+        "Step 3:\nThe probability that Team A is chosen on zero of the next three days is $\\left(\\frac{2}{3}\\right)^{3}=\\frac{8}{27}$, and the probability that Team A is chosen on exactly one of the next three days is $3\\left(\\frac{2}{3}\\right)\\left(\\frac{1}{3}\\right)^{2}=\\frac{4}{9}$.",
+        "Step 4: $\\frac{8}{27}+\\frac{4}{9}=\\frac{8}{27}+\\frac{12}{27}=\\frac{20}{27}$",
+        "$1-\\frac{20}{27}=\\frac{7}{27}$",
+        "$1-\\frac{20}{27}=\\frac{7}{27}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: The total number of ways to choose two teams from three teams in a class is calculated as $\\binom{3}{2}=3$.",
+            1
+        ],
+        [
+            "Step 2: \nThe probability of Team A being chosen on a given day is $\\frac{1}{3}$ because there are 3 possible combinations of teams and only one of them includes Team A.\nThe probability of Team A being chosen on at least two of the next three days is equal to 1 minus the probability of Team A being chosen on zero or one of the next three days.",
+            1
+        ],
+        [
+            "Step 3:\nThe probability that Team A is chosen on zero of the next three days is $\\left(\\frac{2}{3}\\right)^{3}=\\frac{8}{27}$, and the probability that Team A is chosen on exactly one of the next three days is $3\\left(\\frac{2}{3}\\right)\\left(\\frac{1}{3}\\right)^{2}=\\frac{4}{9}$.",
+            1
+        ],
+        [
+            "Step 4: $\\frac{8}{27}+\\frac{4}{9}=\\frac{8}{27}+\\frac{12}{27}=\\frac{20}{27}$",
+            1
+        ],
+        [
+            "$1-\\frac{20}{27}=\\frac{7}{27}$",
+            1
+        ],
+        [
+            "$1-\\frac{20}{27}=\\frac{7}{27}$",
+            1
+        ]
+    ],
+    "time": 81.31541967391968,
+    "total_tokens": 3675,
+    "final_answer_tokens": 390,
+    "model": "meta-llama/Llama-Vision-Free"
+}

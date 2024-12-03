@@ -1,0 +1,26 @@
+{
+    "problem": "In triangle $ABC,$ $\\angle C = 90^\\circ$ and $D$ is the midpoint of $\\overline{AC}.$  If $\\sin \\angle DBC = \\frac{3}{5},$ then find $\\tan \\angle ABC.$",
+    "level": "Level 2",
+    "type": "Precalculus",
+    "solution": "Since $\\sin \\angle DBC = \\frac{3}{5},$ we can assume that $CD = 3$ and $BD = 5.$  Then by Pythagoras, $BC = 4.$\n\n[asy]\nunitsize(0.5 cm);\n\npair A, B, C, D;\n\nB = (0,0);\nC = (4,0);\nD = (4,3);\nA = (4,6);\n\ndraw(A--B--C--cycle);\ndraw(B--D);\n\nlabel(\"$A$\", A, NE);\nlabel(\"$B$\", B, SW);\nlabel(\"$C$\", C, SE);\nlabel(\"$D$\", D, E);\n\nlabel(\"$3$\", (C + D)/2, E);\nlabel(\"$3$\", (A + D)/2, E);\nlabel(\"$4$\", (B + C)/2, S);\nlabel(\"$5$\", interp(B,D,0.75), NW);\n[/asy]\n\nSince $D$ is the mid-point of $\\overline{AC},$ $AD = 3.$  Hence,\n\\[\\tan \\angle ABC = \\frac{6}{4} = \\boxed{\\frac{3}{2}}.\\]",
+    "is_solved": false,
+    "model_solution": "Step 1:  Draw and label the diagram of triangle $ABC$ with right angle at $C.$\nLet $M$ be the midpoint of $\\overline{BC}.$\nStep 2:  Since $M$ is the midpoint of $\\overline{BC},$ $\\overline{BM} \\cong \\overline{MC}.$  Therefore, triangles $BMD$ and $CMD$ are congruent.",
+    "steps": [
+        "Step 1:  Draw and label the diagram of triangle $ABC$ with right angle at $C.$\nLet $M$ be the midpoint of $\\overline{BC}.$",
+        "Step 2:  Since $M$ is the midpoint of $\\overline{BC},$ $\\overline{BM} \\cong \\overline{MC}.$  Therefore, triangles $BMD$ and $CMD$ are congruent."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Draw and label the diagram of triangle $ABC$ with right angle at $C.$\nLet $M$ be the midpoint of $\\overline{BC}.$",
+            1
+        ],
+        [
+            "Step 2:  Since $M$ is the midpoint of $\\overline{BC},$ $\\overline{BM} \\cong \\overline{MC}.$  Therefore, triangles $BMD$ and $CMD$ are congruent.",
+            1
+        ]
+    ],
+    "time": 28.080766201019287,
+    "total_tokens": 719,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

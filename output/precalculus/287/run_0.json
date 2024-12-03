@@ -1,0 +1,66 @@
+{
+    "problem": "In triangle $ABC,$ $\\angle C = 90^\\circ$ and $M$ is the midpoint of $\\overline{BC}.$  If $\\sin \\angle BAM = \\frac{1}{3},$ then what is $\\sin \\angle BAC$?",
+    "level": "Level 5",
+    "type": "Precalculus",
+    "solution": "By constructing a right triangle with legs 1 and $2 \\sqrt{2}$ and hypotenuse 3, we see that $\\sin \\angle BAM$ implies $\\tan \\angle BAM = \\frac{1}{2 \\sqrt{2}}.$\n\nWe can draw right triangle $ABC$ so that $AB = 2,$ $AC = 2 \\cos A,$ and $BC = 2 \\sin A.$  Then $BM = CM = \\sin A.$\n\n[asy]\nunitsize(1 cm);\n\npair A, B, C, M;\n\nA = (0,0);\nB = (2*sqrt(3),2*sqrt(6));\nC = (2*sqrt(3),0);\nM = (B + C)/2;\n\ndraw(A--B--C--cycle);\ndraw(A--M);\n\nlabel(\"$A$\", A, SW);\nlabel(\"$B$\", B, NE);\nlabel(\"$C$\", C, SE);\nlabel(\"$M$\", M, E);\nlabel(\"$2$\", (A + B)/2, NW, red);\nlabel(\"$2 \\cos A$\", (A + C)/2, S, red);\nlabel(\"$\\sin A$\", (B + M)/2, E, red);\nlabel(\"$\\sin A$\", (C + M)/2, E, red);\n[/asy]\n\nThen\n\\begin{align*}\n\\tan \\angle BAM &= \\tan (\\angle BAC - \\angle CAM) \\\\\n&= \\frac{\\tan \\angle BAC - \\tan \\angle CAM}{1 + \\tan \\angle BAC \\tan \\angle CAM} \\\\\n&= \\frac{\\tan A - \\frac{\\tan A}{2}}{1 + \\tan A \\cdot \\frac{\\tan A}{2}} \\\\\n&= \\frac{\\tan A}{\\tan^2 A + 2}.\n\\end{align*}Thus,\n\\[\\frac{\\tan A}{\\tan^2 A + 2} = \\frac{1}{2 \\sqrt{2}}.\\]Then $2 \\sqrt{2} \\tan A = \\tan^2 A + 2,$ or\n\\[\\tan^2 A - 2 \\sqrt{2} \\tan A + 2 = 0.\\]This factors as $(\\tan A - \\sqrt{2})^2 = 0,$ so $\\tan A = \\sqrt{2}.$\n\nNow, constructing a right triangle where the legs are 1 and $\\sqrt{2}$ and the hypotenuse is $\\sqrt{3},$ we see that\n\\[\\sin A = \\frac{\\sqrt{2}}{\\sqrt{3}} = \\boxed{\\frac{\\sqrt{6}}{3}}.\\]",
+    "is_solved": false,
+    "model_solution": "Step 1:  Let $D$ be the midpoint of $\\overline{AC}.$\nLet $AM = x.$\nStep 2:  Since $\\triangle ADB$ is a right triangle, by the Pythagorean Theorem, $AD^2 + BD^2 = AB^2.$\nStep 3:  Since $D$ is the midpoint of $\\overline{AC}$ and $M$ is the midpoint of $\\overline{BC},$ we have $AD = CD = x$ and $BD = BM = \\frac{2}{3}x.$\nStep 4:  We can plug in the values to obtain $x^2 + \\left(\\frac{2}{3}x\\right)^2 = AB^2.$\nStep 5:\n$\\frac{5}{9}x^2 = AB^2$\nStep 6:  Using the Law of Sines on $\\triangle ABM,$ we obtain $\\frac{AB}{\\sin \\angle BAM} = \\frac{AM}{\\sin \\angle MBM}.$\n$\\frac{\\sqrt{\\frac{5}{9}x^2}}{\\frac{1}{3}} = \\frac{x}{\\sin \\angle MBM}$\n$\\sin \\angle MBM = \\frac{1}{2}$\n$\\sin \\angle BAC = \\sin 2 \\angle BAM = 2 \\sin \\angle BAM \\cos \\angle BAM$\n$=2 \\cdot \\frac{1}{3} \\cdot \\frac{2}{3} = \\frac{4}{9}$\nStep 7: $\\sin \\angle BAC = 2 \\sin \\angle BAM \\cos \\angle BAM$\n$=2 \\cdot \\frac{1}{3} \\cdot \\frac{2}{3} = \\frac{4}{9}$",
+    "steps": [
+        "Step 1:  Let $D$ be the midpoint of $\\overline{AC}.$\nLet $AM = x.$",
+        "Step 2:  Since $\\triangle ADB$ is a right triangle, by the Pythagorean Theorem, $AD^2 + BD^2 = AB^2.$",
+        "Step 3:  Since $D$ is the midpoint of $\\overline{AC}$ and $M$ is the midpoint of $\\overline{BC},$ we have $AD = CD = x$ and $BD = BM = \\frac{2}{3}x.$",
+        "Step 4:  We can plug in the values to obtain $x^2 + \\left(\\frac{2}{3}x\\right)^2 = AB^2.$",
+        "Step 5:\n$\\frac{5}{9}x^2 = AB^2$",
+        "Step 6:  Using the Law of Sines on $\\triangle ABM,$ we obtain $\\frac{AB}{\\sin \\angle BAM} = \\frac{AM}{\\sin \\angle MBM}.$",
+        "$\\frac{\\sqrt{\\frac{5}{9}x^2}}{\\frac{1}{3}} = \\frac{x}{\\sin \\angle MBM}$",
+        "$\\sin \\angle MBM = \\frac{1}{2}$",
+        "$\\sin \\angle BAC = \\sin 2 \\angle BAM = 2 \\sin \\angle BAM \\cos \\angle BAM$\n$=2 \\cdot \\frac{1}{3} \\cdot \\frac{2}{3} = \\frac{4}{9}$",
+        "Step 7: $\\sin \\angle BAC = 2 \\sin \\angle BAM \\cos \\angle BAM$\n$=2 \\cdot \\frac{1}{3} \\cdot \\frac{2}{3} = \\frac{4}{9}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Let $D$ be the midpoint of $\\overline{AC}.$\nLet $AM = x.$",
+            1
+        ],
+        [
+            "Step 2:  Since $\\triangle ADB$ is a right triangle, by the Pythagorean Theorem, $AD^2 + BD^2 = AB^2.$",
+            1
+        ],
+        [
+            "Step 3:  Since $D$ is the midpoint of $\\overline{AC}$ and $M$ is the midpoint of $\\overline{BC},$ we have $AD = CD = x$ and $BD = BM = \\frac{2}{3}x.$",
+            1
+        ],
+        [
+            "Step 4:  We can plug in the values to obtain $x^2 + \\left(\\frac{2}{3}x\\right)^2 = AB^2.$",
+            1
+        ],
+        [
+            "Step 5:\n$\\frac{5}{9}x^2 = AB^2$",
+            1
+        ],
+        [
+            "Step 6:  Using the Law of Sines on $\\triangle ABM,$ we obtain $\\frac{AB}{\\sin \\angle BAM} = \\frac{AM}{\\sin \\angle MBM}.$",
+            1
+        ],
+        [
+            "$\\frac{\\sqrt{\\frac{5}{9}x^2}}{\\frac{1}{3}} = \\frac{x}{\\sin \\angle MBM}$",
+            1
+        ],
+        [
+            "$\\sin \\angle MBM = \\frac{1}{2}$",
+            1
+        ],
+        [
+            "$\\sin \\angle BAC = \\sin 2 \\angle BAM = 2 \\sin \\angle BAM \\cos \\angle BAM$\n$=2 \\cdot \\frac{1}{3} \\cdot \\frac{2}{3} = \\frac{4}{9}$",
+            1
+        ],
+        [
+            "Step 7: $\\sin \\angle BAC = 2 \\sin \\angle BAM \\cos \\angle BAM$\n$=2 \\cdot \\frac{1}{3} \\cdot \\frac{2}{3} = \\frac{4}{9}$",
+            1
+        ]
+    ],
+    "time": 138.10503005981445,
+    "total_tokens": 6501,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,66 @@
+{
+    "problem": "In right triangle $ABC$, we have $AB = 10$, $BC = 24$, and $\\angle ABC = 90^\\circ$. If $M$ is on $\\overline{AC}$ such that $\\overline{BM}$ is an angle bisector of $\\triangle ABC$, then what is $\\cos \\angle ABM$?",
+    "level": "Level 2",
+    "type": "Precalculus",
+    "solution": "Since $\\angle ABC = 90^\\circ$ and $\\overline{BM}$ bisects $\\angle ABC$, we have $\\angle ABM = 45^\\circ$, so $\\cos \\angle ABM = \\cos 45^\\circ = \\boxed{\\frac{\\sqrt{2}}{2}}$.\n\n[asy]\nunitsize(0.25 cm);\n\npair A, B, C, M;\n\nA = (0,10);\nB = (0,0);\nC = (24,0);\nM = extension(B, B + dir(45), A, C);\n\ndraw(A--B--C--cycle);\ndraw(B--M);\n\nlabel(\"$A$\", A, NW);\nlabel(\"$B$\", B, SW);\nlabel(\"$C$\", C, SE);\nlabel(\"$M$\", M, NE);\n[/asy]",
+    "is_solved": false,
+    "model_solution": "Step 1:  Let $AM=x$ and $MC=y$.\n$A\\,B\\,M\\,C$\nNote that $AC=x+y$, and we can use the Pythagorean Theorem to find $AC$ since $\\triangle ABC$ is a right triangle.\nStep 2:  We can then use the Angle Bisector Theorem to find the relationship between $x$ and $y$ and solve for $x$.\n\nNote: There are 2 more steps.\n$\\frac{x}{10}=\\frac{y}{24}$\nStep 3:  From the equation in Step 2, we can solve for $x$ in terms of $y$, which gives $x=\\frac{10}{24}y$.\n\\[\\left(\\frac{10}{24}\\right)y+\\left(\\frac{24}{24}\\right)y=10\\]\n\\[\\left(\\frac{34}{24}\\right)y=10\\]\n\\[y=\\frac{240}{34}\\]\n\\[\\frac{x}{y}=\\frac{10}{24}\\]\n\\[\\frac{x}{y}=\\frac{5}{12}\\]\n\\[x=10\\cdot\\frac{5}{12}\\]\n\\[x=\\frac{50}{12}\\]\n\\[x=\\frac{25}{6}\\]\n\\[\\cos\\angle ABM = \\frac{AB^2+BM^2-AM^2}{2\\cdot AB\\cdot BM}\\]\nSubstituting the known values of $AB=10$, $AM=\\frac{25}{6}$, and $BM=\\frac{30}{6}$ into the equation gives us:\n\\[\\cos\\angle ABM=\\frac{\\left(\\frac{25}{6}\\right)^2+\\left(\\frac{30}{6}\\right)^2-\\left(\\frac{10}{6}\\right)^2}{2\\cdot 10\\cdot \\frac{30}{6}}\\]\n\\[\\cos\\angle ABM=\\frac{625/36+900/36-100/36}{600/6}\\]\n\\[\\cos\\angle ABM=\\frac{1425/36}{100}\\]\n\\[\\cos\\angle ABM=\\frac{1425}{3600}\\]\n\\[\\cos\\angle ABM=\\frac{47}{120}\\]\nUsing the Angle Bisector Theorem, we get $\\frac{x}{10}=\\frac{y}{24}$.\n$\\frac{x}{10}=\\frac{y}{24}$\n$y=\\frac{240}{34}$\n$\\frac{x}{y}=\\frac{5}{12}$\n$x=10\\cdot\\frac{5}{12}$\n$x=\\frac{50}{12}$\n$x=\\frac{25}{6}$\n$\\cos\\angle ABM = \\frac{AB^2+BM^2-AM^2}{2\\cdot AB\\cdot BM}$\n$\\cos\\angle ABM = \\frac{\\left(\\frac{25}{6}\\right)^2+\\left(\\frac{30}{6}\\right)^2-\\left(\\frac{10}{6}\\right)^2}{2\\cdot 10\\cdot \\frac{30}{6}}$\n$\\cos\\angle ABM=\\frac{\\left(\\frac{25}{6}\\right)^2+\\left(\\frac{30}{6}\\right)^2-\\left(\\frac{10}{6}\\right)^2}{2\\cdot 10\\cdot \\frac{30}{6}}$",
+    "steps": [
+        "Step 1:  Let $AM=x$ and $MC=y$.\n$A\\,B\\,M\\,C$\nNote that $AC=x+y$, and we can use the Pythagorean Theorem to find $AC$ since $\\triangle ABC$ is a right triangle.",
+        "Step 2:  We can then use the Angle Bisector Theorem to find the relationship between $x$ and $y$ and solve for $x$.\n\nNote: There are 2 more steps.",
+        "$\\frac{x}{10}=\\frac{y}{24}$",
+        "Step 3:  From the equation in Step 2, we can solve for $x$ in terms of $y$, which gives $x=\\frac{10}{24}y$.\n\\[\\left(\\frac{10}{24}\\right)y+\\left(\\frac{24}{24}\\right)y=10\\]\n\\[\\left(\\frac{34}{24}\\right)y=10\\]\n\\[y=\\frac{240}{34}\\]\n\\[\\frac{x}{y}=\\frac{10}{24}\\]\n\\[\\frac{x}{y}=\\frac{5}{12}\\]\n\\[x=10\\cdot\\frac{5}{12}\\]\n\\[x=\\frac{50}{12}\\]\n\\[x=\\frac{25}{6}\\]",
+        "\\[\\cos\\angle ABM = \\frac{AB^2+BM^2-AM^2}{2\\cdot AB\\cdot BM}\\]\nSubstituting the known values of $AB=10$, $AM=\\frac{25}{6}$, and $BM=\\frac{30}{6}$ into the equation gives us:\n\\[\\cos\\angle ABM=\\frac{\\left(\\frac{25}{6}\\right)^2+\\left(\\frac{30}{6}\\right)^2-\\left(\\frac{10}{6}\\right)^2}{2\\cdot 10\\cdot \\frac{30}{6}}\\]\n\\[\\cos\\angle ABM=\\frac{625/36+900/36-100/36}{600/6}\\]\n\\[\\cos\\angle ABM=\\frac{1425/36}{100}\\]\n\\[\\cos\\angle ABM=\\frac{1425}{3600}\\]\n\\[\\cos\\angle ABM=\\frac{47}{120}\\]",
+        "Using the Angle Bisector Theorem, we get $\\frac{x}{10}=\\frac{y}{24}$.\n$\\frac{x}{10}=\\frac{y}{24}$",
+        "$y=\\frac{240}{34}$\n$\\frac{x}{y}=\\frac{5}{12}$\n$x=10\\cdot\\frac{5}{12}$\n$x=\\frac{50}{12}$\n$x=\\frac{25}{6}$",
+        "$\\cos\\angle ABM = \\frac{AB^2+BM^2-AM^2}{2\\cdot AB\\cdot BM}$",
+        "$\\cos\\angle ABM = \\frac{\\left(\\frac{25}{6}\\right)^2+\\left(\\frac{30}{6}\\right)^2-\\left(\\frac{10}{6}\\right)^2}{2\\cdot 10\\cdot \\frac{30}{6}}$",
+        "$\\cos\\angle ABM=\\frac{\\left(\\frac{25}{6}\\right)^2+\\left(\\frac{30}{6}\\right)^2-\\left(\\frac{10}{6}\\right)^2}{2\\cdot 10\\cdot \\frac{30}{6}}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Let $AM=x$ and $MC=y$.\n$A\\,B\\,M\\,C$\nNote that $AC=x+y$, and we can use the Pythagorean Theorem to find $AC$ since $\\triangle ABC$ is a right triangle.",
+            1
+        ],
+        [
+            "Step 2:  We can then use the Angle Bisector Theorem to find the relationship between $x$ and $y$ and solve for $x$.\n\nNote: There are 2 more steps.",
+            1
+        ],
+        [
+            "$\\frac{x}{10}=\\frac{y}{24}$",
+            1
+        ],
+        [
+            "Step 3:  From the equation in Step 2, we can solve for $x$ in terms of $y$, which gives $x=\\frac{10}{24}y$.\n\\[\\left(\\frac{10}{24}\\right)y+\\left(\\frac{24}{24}\\right)y=10\\]\n\\[\\left(\\frac{34}{24}\\right)y=10\\]\n\\[y=\\frac{240}{34}\\]\n\\[\\frac{x}{y}=\\frac{10}{24}\\]\n\\[\\frac{x}{y}=\\frac{5}{12}\\]\n\\[x=10\\cdot\\frac{5}{12}\\]\n\\[x=\\frac{50}{12}\\]\n\\[x=\\frac{25}{6}\\]",
+            1
+        ],
+        [
+            "\\[\\cos\\angle ABM = \\frac{AB^2+BM^2-AM^2}{2\\cdot AB\\cdot BM}\\]\nSubstituting the known values of $AB=10$, $AM=\\frac{25}{6}$, and $BM=\\frac{30}{6}$ into the equation gives us:\n\\[\\cos\\angle ABM=\\frac{\\left(\\frac{25}{6}\\right)^2+\\left(\\frac{30}{6}\\right)^2-\\left(\\frac{10}{6}\\right)^2}{2\\cdot 10\\cdot \\frac{30}{6}}\\]\n\\[\\cos\\angle ABM=\\frac{625/36+900/36-100/36}{600/6}\\]\n\\[\\cos\\angle ABM=\\frac{1425/36}{100}\\]\n\\[\\cos\\angle ABM=\\frac{1425}{3600}\\]\n\\[\\cos\\angle ABM=\\frac{47}{120}\\]",
+            1
+        ],
+        [
+            "Using the Angle Bisector Theorem, we get $\\frac{x}{10}=\\frac{y}{24}$.\n$\\frac{x}{10}=\\frac{y}{24}$",
+            1
+        ],
+        [
+            "$y=\\frac{240}{34}$\n$\\frac{x}{y}=\\frac{5}{12}$\n$x=10\\cdot\\frac{5}{12}$\n$x=\\frac{50}{12}$\n$x=\\frac{25}{6}$",
+            1
+        ],
+        [
+            "$\\cos\\angle ABM = \\frac{AB^2+BM^2-AM^2}{2\\cdot AB\\cdot BM}$",
+            1
+        ],
+        [
+            "$\\cos\\angle ABM = \\frac{\\left(\\frac{25}{6}\\right)^2+\\left(\\frac{30}{6}\\right)^2-\\left(\\frac{10}{6}\\right)^2}{2\\cdot 10\\cdot \\frac{30}{6}}$",
+            1
+        ],
+        [
+            "$\\cos\\angle ABM=\\frac{\\left(\\frac{25}{6}\\right)^2+\\left(\\frac{30}{6}\\right)^2-\\left(\\frac{10}{6}\\right)^2}{2\\cdot 10\\cdot \\frac{30}{6}}$",
+            1
+        ]
+    ],
+    "time": 139.6677598953247,
+    "total_tokens": 10959,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

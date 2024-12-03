@@ -1,0 +1,66 @@
+{
+    "problem": "A palindrome is a number that reads the same forwards and backwards, such as 3003. How many positive four-digit integers are palindromes?",
+    "level": "Level 2",
+    "type": "Counting & Probability",
+    "solution": "Constructing palindromes requires that we choose the thousands digit (which defines the units digit) and the hundreds digit (which defines the tens digit). Since there are 9 choices for the thousands digit, and 10 choices for the hundreds digit, creating $9 \\cdot 10 = \\boxed{90}$ palindromes.",
+    "is_solved": false,
+    "model_solution": "There are 9 choices for the first digit (1 through 9).\nThere are 10 choices for the second digit (0 through 9).\nThere are 10 choices for the third digit (0 through 9).\nThere are 10 choices for the fourth digit (0 through 9).\nThe fourth digit is the same as the second digit, so there are 10 choices for the fourth digit, but this choice is already counted in the second digit.\nThere are 10 choices for the first digit (1 through 9) and 10 choices for the second digit (0 through 9).\nThere are 10 choices for the first digit (1 through 9).\nThere are 10 choices for the second digit (0 through 9), but this choice is already counted in the second digit, so there are 9 choices for the second digit.\nThere are 9 choices for the first digit (1 through 9) and 10 choices for the second digit (0 through 9), and the fourth digit is the same as the second digit.\nThere are 9 choices for the first digit and 10 choices for the second digit, and the fourth digit is the same as the second digit.",
+    "steps": [
+        "There are 9 choices for the first digit (1 through 9).",
+        "There are 10 choices for the second digit (0 through 9).",
+        "There are 10 choices for the third digit (0 through 9).",
+        "There are 10 choices for the fourth digit (0 through 9).",
+        "The fourth digit is the same as the second digit, so there are 10 choices for the fourth digit, but this choice is already counted in the second digit.",
+        "There are 10 choices for the first digit (1 through 9) and 10 choices for the second digit (0 through 9).",
+        "There are 10 choices for the first digit (1 through 9).",
+        "There are 10 choices for the second digit (0 through 9), but this choice is already counted in the second digit, so there are 9 choices for the second digit.",
+        "There are 9 choices for the first digit (1 through 9) and 10 choices for the second digit (0 through 9), and the fourth digit is the same as the second digit.",
+        "There are 9 choices for the first digit and 10 choices for the second digit, and the fourth digit is the same as the second digit."
+    ],
+    "full_steps": [
+        [
+            "There are 9 choices for the first digit (1 through 9).",
+            1
+        ],
+        [
+            "There are 10 choices for the second digit (0 through 9).",
+            1
+        ],
+        [
+            "There are 10 choices for the third digit (0 through 9).",
+            1
+        ],
+        [
+            "There are 10 choices for the fourth digit (0 through 9).",
+            1
+        ],
+        [
+            "The fourth digit is the same as the second digit, so there are 10 choices for the fourth digit, but this choice is already counted in the second digit.",
+            1
+        ],
+        [
+            "There are 10 choices for the first digit (1 through 9) and 10 choices for the second digit (0 through 9).",
+            1
+        ],
+        [
+            "There are 10 choices for the first digit (1 through 9).",
+            1
+        ],
+        [
+            "There are 10 choices for the second digit (0 through 9), but this choice is already counted in the second digit, so there are 9 choices for the second digit.",
+            1
+        ],
+        [
+            "There are 9 choices for the first digit (1 through 9) and 10 choices for the second digit (0 through 9), and the fourth digit is the same as the second digit.",
+            1
+        ],
+        [
+            "There are 9 choices for the first digit and 10 choices for the second digit, and the fourth digit is the same as the second digit.",
+            1
+        ]
+    ],
+    "time": 136.68407487869263,
+    "total_tokens": 4185,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

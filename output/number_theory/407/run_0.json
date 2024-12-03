@@ -1,0 +1,66 @@
+{
+    "problem": "Six-digit integers will be written using each of the digits $1$ through $6$ exactly once per six-digit integer. How many different positive integers can be written such that all pairs of consecutive digits of each integer are relatively prime? (Note: $1$ is relatively prime to all integers.)",
+    "level": "Level 5",
+    "type": "Number Theory",
+    "solution": "First, we observe that the only pairs of integers from 1 to 6 that fail to be relatively prime are any pair of even integers as well as the pair (3, 6). If we temporarily ignore the pair (3, 6), we can focus only on parity. We must arrange the six digits in such a way that no two even digits are consecutive. Using $\\color{blue}e$ to denote even and $o$ to denote odd, this gives us four different possible arrangements:\n\n\\begin{align}\n{\\color{blue}e} o {\\color{blue}e} o {\\color{blue}e} o \\\\\no {\\color{blue}e} o {\\color{blue}e} o {\\color{blue}e} \\\\\n{\\color{blue}e} o {\\color{blue}e} o o {\\color{blue}e} \\\\\n{\\color{blue}e} o o {\\color{blue}e} o {\\color{blue}e\n}\\end{align}For any of these four arrangements, there are $3!$ ways to select the three even numbers and $3!$ ways to select the three odd numbers, for a total of $3! \\cdot 3! = 36$ total arrangements. Hence, ignoring the issue of (3, 6) adjacencies, we have $36 \\cdot 4 = 144$ such numbers.\n\nNow, we must count the number of the above arrangements that include any (3, 6) adjacencies and subtract them off. Let's consider the number of (3, 6) adjacencies in arrangement $(1)$. Suppose that the first digit is 6. Then if the second digit is 3, there are $2! \\cdot 2! = 4$ arrangements of the remaining digits. So there are 4 arrangements that go 6 3 \\_ \\_ \\_ \\_. If instead the third digit is 6, then by similar reasoning, there are 4 arrangements that go \\_ 3 6 \\_ \\_ \\_, and 4 arrangements that go \\_ \\_ 6 3 \\_ \\_, for a total of 8 arrangements. By symmetry, there are also 8 arrangements that include a (3, 6) adjacency when the fifth digit is 6. So, there are a total of $4 + 8 + 8 = 20$ arrangements of $(1)$ that have 3 and 6 adjacent. By symmetry, there are also $20$ arrangements of $(2)$ that have 3 and 6 adjacent.\n\nFinally, we must count the number of arrangements of $(3)$ that have 3 and 6 adjacent. From previous reasoning, we see that if the 6 is on an endpoint, there are 4 arrangements with an adjacent 3, and if 6 is in the interior, there are 8 such arrangements. Hence, in this case, there are $4 + 8 + 4 = 16$ arrangements that have 3 and 6 adjacent. Again, by symmetry, there are also $16$ arrangements of $(4)$ with 3 and 6 adjacent.\n\nOverall, there are $20 + 20 + 16 + 16 = 72$ arrangements that have 3 and 6 adjacent. So, our final answer is $144 - 72 = \\boxed{72}$ numbers.",
+    "is_solved": false,
+    "model_solution": "Step 1:  To tackle this problem, we'll start by considering the possible choices for the first digit of the six-digit integer.\nStep 2:  The first digit can be any of the 6 digits from 1 to 6. We have 6 choices for the first digit.\nStep 3:  Next, we need to consider the choices for the second digit. Since all pairs of consecutive digits must be relatively prime, the second digit cannot be 1 or any other digit that shares a common factor with the first digit.\nStep 4:  For the second digit, we can have 5 choices. If the first digit is 1, we have all 6 digits as options for the second digit. However, if the first digit is any other number, we can choose from the remaining 5 digits that do not share a common factor with the first digit.\nStep 2:  The second digit can be any of the 5 digits that do not share a common factor with the first digit.\nStep 3:  Moving on to the third digit, there are 4 choices available. Since all pairs of consecutive digits must be relatively prime, the third digit cannot be 1 or any other digit that shares a common factor with the second digit.\nStep 3: \nThe third digit can be any of the 4 digits that do not share a common factor with the second digit.\nStep 4:\nThe fourth digit can be any of the 4 digits that do not share a common factor with the third digit.\nThe fifth digit can be any of the 4 digits that do not share a common factor with the fourth digit.\nThe sixth digit can be any of the 4 digits that do not share a common factor with the fifth digit.\nStep 3:\nThe total number of six-digit integers that can be formed is the product of the choices for each digit:\n$6 \\times 5 \\times 4 \\times 4 \\times 3 \\times 2 = 6 \\times 5!$\nStep 4:\n$6 \\times 5! = 720$\nStep 5: \n$= 6 \\times 5!$\n$= 6 \\times (5 \\times 4 \\times 3 \\times 2 \\times 1)$\n$= 6 \\times (3 \\times 2 \\times 2 \\times 2 \\times 2 \\times 3)$\n$= 6 \\times (2^4 \\times 3^2)$\n$= 6 \\times (2^4 \\times 3^2)$",
+    "steps": [
+        "Step 1:  To tackle this problem, we'll start by considering the possible choices for the first digit of the six-digit integer.\nStep 2:  The first digit can be any of the 6 digits from 1 to 6. We have 6 choices for the first digit.\nStep 3:  Next, we need to consider the choices for the second digit. Since all pairs of consecutive digits must be relatively prime, the second digit cannot be 1 or any other digit that shares a common factor with the first digit.\nStep 4:  For the second digit, we can have 5 choices. If the first digit is 1, we have all 6 digits as options for the second digit. However, if the first digit is any other number, we can choose from the remaining 5 digits that do not share a common factor with the first digit.",
+        "Step 2:  The second digit can be any of the 5 digits that do not share a common factor with the first digit.",
+        "Step 3:  Moving on to the third digit, there are 4 choices available. Since all pairs of consecutive digits must be relatively prime, the third digit cannot be 1 or any other digit that shares a common factor with the second digit.",
+        "Step 3: \nThe third digit can be any of the 4 digits that do not share a common factor with the second digit.",
+        "Step 4:\nThe fourth digit can be any of the 4 digits that do not share a common factor with the third digit.\nThe fifth digit can be any of the 4 digits that do not share a common factor with the fourth digit.\nThe sixth digit can be any of the 4 digits that do not share a common factor with the fifth digit.",
+        "Step 3:\nThe total number of six-digit integers that can be formed is the product of the choices for each digit:\n$6 \\times 5 \\times 4 \\times 4 \\times 3 \\times 2 = 6 \\times 5!$",
+        "Step 4:\n$6 \\times 5! = 720$",
+        "Step 5: \n$= 6 \\times 5!$\n$= 6 \\times (5 \\times 4 \\times 3 \\times 2 \\times 1)$\n$= 6 \\times (3 \\times 2 \\times 2 \\times 2 \\times 2 \\times 3)$",
+        "$= 6 \\times (2^4 \\times 3^2)$",
+        "$= 6 \\times (2^4 \\times 3^2)$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  To tackle this problem, we'll start by considering the possible choices for the first digit of the six-digit integer.\nStep 2:  The first digit can be any of the 6 digits from 1 to 6. We have 6 choices for the first digit.\nStep 3:  Next, we need to consider the choices for the second digit. Since all pairs of consecutive digits must be relatively prime, the second digit cannot be 1 or any other digit that shares a common factor with the first digit.\nStep 4:  For the second digit, we can have 5 choices. If the first digit is 1, we have all 6 digits as options for the second digit. However, if the first digit is any other number, we can choose from the remaining 5 digits that do not share a common factor with the first digit.",
+            1
+        ],
+        [
+            "Step 2:  The second digit can be any of the 5 digits that do not share a common factor with the first digit.",
+            1
+        ],
+        [
+            "Step 3:  Moving on to the third digit, there are 4 choices available. Since all pairs of consecutive digits must be relatively prime, the third digit cannot be 1 or any other digit that shares a common factor with the second digit.",
+            1
+        ],
+        [
+            "Step 3: \nThe third digit can be any of the 4 digits that do not share a common factor with the second digit.",
+            1
+        ],
+        [
+            "Step 4:\nThe fourth digit can be any of the 4 digits that do not share a common factor with the third digit.\nThe fifth digit can be any of the 4 digits that do not share a common factor with the fourth digit.\nThe sixth digit can be any of the 4 digits that do not share a common factor with the fifth digit.",
+            1
+        ],
+        [
+            "Step 3:\nThe total number of six-digit integers that can be formed is the product of the choices for each digit:\n$6 \\times 5 \\times 4 \\times 4 \\times 3 \\times 2 = 6 \\times 5!$",
+            1
+        ],
+        [
+            "Step 4:\n$6 \\times 5! = 720$",
+            1
+        ],
+        [
+            "Step 5: \n$= 6 \\times 5!$\n$= 6 \\times (5 \\times 4 \\times 3 \\times 2 \\times 1)$\n$= 6 \\times (3 \\times 2 \\times 2 \\times 2 \\times 2 \\times 3)$",
+            1
+        ],
+        [
+            "$= 6 \\times (2^4 \\times 3^2)$",
+            1
+        ],
+        [
+            "$= 6 \\times (2^4 \\times 3^2)$",
+            1
+        ]
+    ],
+    "time": 134.13119387626648,
+    "total_tokens": 9906,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

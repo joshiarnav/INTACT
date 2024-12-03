@@ -1,0 +1,66 @@
+{
+    "problem": "Assume that the Earth is a perfect sphere.  A plane flies between $30^\\circ$ N $45^\\circ$ W and $30^\\circ$ N $45^\\circ$ E along the shortest possible route along the surface of the Earth.  Let $\\theta$ be the northernmost latitude that the plane flies over.  Compute $\\sin \\theta.$",
+    "level": "Level 5",
+    "type": "Precalculus",
+    "solution": "Let the radius of the Earth be 1.  By spherical coordinates, we can place the initial point at\n\\[A = (\\sin 60^\\circ \\cos (-45^\\circ), \\sin 60^\\circ \\sin (-45^\\circ), \\cos 60^\\circ) = \\left( \\frac{\\sqrt{6}}{4}, -\\frac{\\sqrt{6}}{4}, \\frac{1}{2} \\right),\\]and the final point at\n\\[B = (\\sin 60^\\circ \\cos 45^\\circ, \\sin 60^\\circ \\sin 45^\\circ, \\cos 60^\\circ) = \\left( \\frac{\\sqrt{6}}{4}, \\frac{\\sqrt{6}}{4}, \\frac{1}{2} \\right).\\]Then the shortest path from $A$ to $B$ along the surface of the Earth is arc $AB,$ where the center of the arc is the center of the Earth $O.$  By symmetry, the northernmost point on this arc is the midpoint of the arc.  Let this midpoint be $C,$ so $C$ lies in the $xz$-plane.\n\n[asy]\nimport three;\nimport solids;\n\nsize(200);\ncurrentprojection = perspective(6,3,2);\n\ntriple A, B, C, M, O;\n\nA = (sqrt(6)/4,-sqrt(6)/4,1/2);\nB = (sqrt(6)/4,sqrt(6)/4,1/2);\nC = (sqrt(15)/5,0,sqrt(10)/5);\nO = (0,0,0);\nM = (A + B)/2;\n\ndraw(surface(sphere(1)),gray(0.9),nolight);\ndraw((-1.2,0,0)--(1.2,0,0),Arrow3(6));\ndraw((0,-1.2,0)--(0,1.2,0),Arrow3(6));\ndraw((0,0,-1.2)--(0,0,1.2),Arrow3(6));\ndraw(O--A);\ndraw(O--B);\ndraw((1,0,0)..(1/sqrt(2),0,1/sqrt(2))..(0,0,1));\ndraw((1/sqrt(2),1/sqrt(2),0)..(1,0,0)..(1/sqrt(2),-1/sqrt(2),0),red);\ndraw((1/sqrt(2),1/sqrt(2),0)..(Sin(75)*Cos(45),Sin(75)*Sin(45),Cos(75))..B,red);\ndraw((1/sqrt(2),-1/sqrt(2),0)..(Sin(75)*Cos(45),-Sin(75)*Sin(45),Cos(75))..A,red);\ndraw(O--(1/sqrt(2),1/sqrt(2),0));\ndraw(O--(1/sqrt(2),-1/sqrt(2),0));\ndraw(A..(sqrt(15)/5,0,sqrt(10)/5)..B,red);\ndraw(A--B);\ndraw(O--C);\n\nlabel(\"$x$\", (1.2,0,0), SW);\nlabel(\"$y$\", (0,1.2,0), E);\nlabel(\"$z$\", (0,0,1.2), N);\nlabel(\"$30^\\circ$\", 0.2*(Sin(75)*Cos(45),Sin(75)*Sin(45),Cos(75)) + (0,0.1,0), red);\nlabel(\"$30^\\circ$\", 0.2*(Sin(75)*Cos(45),-Sin(75)*Sin(45),Cos(75)) + (0,-0.15,0), red);\nlabel(\"$45^\\circ$\", (0.4,0.15,0), red);\nlabel(\"$45^\\circ$\", (0.5,-0.2,0), red);\n\ndot(\"$A$\", A, NW);\ndot(\"$B$\", B, NE);\ndot(\"$C$\", C, NW);\ndot(\"$M$\", M, SW);\n[/asy]\n\nLet $M$ be the midpoint of $\\overline{AB},$ so\n\\[M = \\left( \\frac{\\sqrt{6}}{4}, 0, \\frac{1}{2} \\right).\\]Then the distance from $O$ to $M$ is $\\sqrt{\\frac{6}{16} + \\frac{1}{4}} = \\frac{\\sqrt{10}}{4}.$\n\nSince $O,$ $M,$ and $C$ are collinear, we can find $C$ by dividing the coordinates of $M$ by $\\frac{\\sqrt{10}}{4}.$  This gives us\n\\[C = \\left( \\frac{\\frac{\\sqrt{6}}{4}}{\\frac{\\sqrt{10}}{4}}, 0, \\frac{\\frac{1}{2}}{\\frac{\\sqrt{10}}{4}} \\right) = \\left( \\frac{\\sqrt{15}}{5}, 0, \\frac{\\sqrt{10}}{5} \\right).\\]Then $\\sin \\theta$ is equal to the $z$-coordinate, which is $\\boxed{\\frac{\\sqrt{10}}{5}}.$",
+    "is_solved": false,
+    "model_solution": "Step 1:  We need to find the northernmost latitude that the plane flies over, denoted as $\\theta$.\nWe are given that the plane flies between $30^\\circ$ N $45^\\circ$ W and $30^\\circ$ N $45^\\circ$ E along the shortest possible route along the surface of the Earth.\nTo proceed, we should visualize the problem and examine the geometry involved.\nStep 2: Draw a diagram to visualize the problem and label the given points: $A,$ $B,$ and $C$ where $A$ is the starting point, $B$ is the endpoint, and $C$ is the point on the surface of the Earth that directly below the plane.\nDraw in the lines $AC,$ $AB,$ and $BC$ to better understand the geometric configuration.\nStep 3:  Since we are looking for the northernmost latitude that the plane flies over, we need to find the latitude where the plane directly above it. This point lies on the intersection of the planes $AOC$ and $BOC.$ Therefore, $\\angle BOC = \\angle AOC.$ Since $\\angle AOB = 90^\\circ,$ we have $\\angle BOC = 90^\\circ - \\angle OBC.$\nStep 4:  Since $\\angle AOB = 90^\\circ,$ we have $\\angle BOC = 90^\\circ - \\angle OBC.$ We can find $\\angle OBC$ by computing $\\angle AOB$ in two ways: $\\angle AOB = 90^\\circ - \\angle OAB$ and $\\angle AOB = 90^\\circ - \\angle OBC.$ We get $\\angle OAB = \\angle OBC = 30^\\circ + 45^\\circ = 75^\\circ.$ Then we can compute $\\angle BOC = 90^\\circ - \\angle OBC = 90^\\circ - 75^\\circ = 15^\\circ.$\nStep 5:\nWe have $\\triangle BOC$ is an isosceles right triangle because $\\angle BOC = 90^\\circ$ and $BC=BO=OB$, so $BC=\\frac{OB}{\\cos15^\\circ}=\\frac{OB}{\\frac{\\sqrt{6}+1}{4}\\cdot OB}.$\nStep 6:\n$\\cos\\theta = \\frac{\\sin 15^\\circ}{\\sin 75^\\circ} = \\frac{\\frac{\\sqrt{6}-\\sqrt{2}}{4}}{\\frac{\\sqrt{6}+\\sqrt{2}}{4}} = \\frac{\\sqrt{6}-\\sqrt{2}}{\\sqrt{6}+\\sqrt{2}} = \\frac{(\\sqrt{6}-\\sqrt{2})(\\sqrt{6}-\\sqrt{2})}{(\\sqrt{6}+\\sqrt{2})(\\sqrt{6}-\\sqrt{2})} = \\frac{34-2\\sqrt{12}}{24} = \\frac{17-\\sqrt{3}}{12},$\n$\\sin\\theta = \\sqrt{1 - \\cos^2\\theta} = \\sqrt{1 - \\left(\\frac{17-\\sqrt{3}}{12}\\right)^2} = \\sqrt{\\frac{147-34\\sqrt{3}}{144}} = \\frac{\\sqrt{147-34\\sqrt{3}}}{12}.$\nStep 7:\n$\\sin\\theta = \\sqrt{\\frac{147-34\\sqrt{3}}{144}} = \\frac{\\sqrt{147-34\\sqrt{3}}}{12}.$\nSince $\\triangle BOC$ is an isosceles right triangle because $\\angle BOC = 90^\\circ$ and $BC=BO=OB$, so $BC=\\frac{OB}{\\cos15^\\circ}=\\frac{OB}{\\frac{\\sqrt{6}+1}{4}\\cdot OB}.$\nStep 8:\n$\\cos\\theta = \\frac{\\sin 15^\\circ}{\\sin 75^\\circ} = \\frac{\\frac{\\sqrt{6}-\\sqrt{2}}{4}}{\\frac{\\sqrt{6}+\\sqrt{2}}{4}} = \\frac{\\sqrt{6}-\\sqrt{2}}{\\sqrt{6}+\\sqrt{2}} = \\frac{(\\sqrt{6}-\\sqrt{2})(\\sqrt{6}-\\sqrt{2})}{(\\sqrt{6}+\\sqrt{2})(\\sqrt{6}-\\sqrt{2})} = \\frac{34-2\\sqrt{12}}{24} = \\frac{17-\\sqrt{3}}{12}.$\nStep 9:\n$\\sin\\theta = \\sqrt{1 - \\cos^2\\theta} = \\sqrt{1 - \\left(\\frac{17-\\sqrt{3}}{12}\\right)^2} = \\sqrt{\\frac{147-34\\sqrt{3}}{144}}.$",
+    "steps": [
+        "Step 1:  We need to find the northernmost latitude that the plane flies over, denoted as $\\theta$.\nWe are given that the plane flies between $30^\\circ$ N $45^\\circ$ W and $30^\\circ$ N $45^\\circ$ E along the shortest possible route along the surface of the Earth.\nTo proceed, we should visualize the problem and examine the geometry involved.",
+        "Step 2: Draw a diagram to visualize the problem and label the given points: $A,$ $B,$ and $C$ where $A$ is the starting point, $B$ is the endpoint, and $C$ is the point on the surface of the Earth that directly below the plane.\nDraw in the lines $AC,$ $AB,$ and $BC$ to better understand the geometric configuration.",
+        "Step 3:  Since we are looking for the northernmost latitude that the plane flies over, we need to find the latitude where the plane directly above it. This point lies on the intersection of the planes $AOC$ and $BOC.$ Therefore, $\\angle BOC = \\angle AOC.$ Since $\\angle AOB = 90^\\circ,$ we have $\\angle BOC = 90^\\circ - \\angle OBC.$",
+        "Step 4:  Since $\\angle AOB = 90^\\circ,$ we have $\\angle BOC = 90^\\circ - \\angle OBC.$ We can find $\\angle OBC$ by computing $\\angle AOB$ in two ways: $\\angle AOB = 90^\\circ - \\angle OAB$ and $\\angle AOB = 90^\\circ - \\angle OBC.$ We get $\\angle OAB = \\angle OBC = 30^\\circ + 45^\\circ = 75^\\circ.$ Then we can compute $\\angle BOC = 90^\\circ - \\angle OBC = 90^\\circ - 75^\\circ = 15^\\circ.$",
+        "Step 5:\nWe have $\\triangle BOC$ is an isosceles right triangle because $\\angle BOC = 90^\\circ$ and $BC=BO=OB$, so $BC=\\frac{OB}{\\cos15^\\circ}=\\frac{OB}{\\frac{\\sqrt{6}+1}{4}\\cdot OB}.$",
+        "Step 6:\n$\\cos\\theta = \\frac{\\sin 15^\\circ}{\\sin 75^\\circ} = \\frac{\\frac{\\sqrt{6}-\\sqrt{2}}{4}}{\\frac{\\sqrt{6}+\\sqrt{2}}{4}} = \\frac{\\sqrt{6}-\\sqrt{2}}{\\sqrt{6}+\\sqrt{2}} = \\frac{(\\sqrt{6}-\\sqrt{2})(\\sqrt{6}-\\sqrt{2})}{(\\sqrt{6}+\\sqrt{2})(\\sqrt{6}-\\sqrt{2})} = \\frac{34-2\\sqrt{12}}{24} = \\frac{17-\\sqrt{3}}{12},$\n$\\sin\\theta = \\sqrt{1 - \\cos^2\\theta} = \\sqrt{1 - \\left(\\frac{17-\\sqrt{3}}{12}\\right)^2} = \\sqrt{\\frac{147-34\\sqrt{3}}{144}} = \\frac{\\sqrt{147-34\\sqrt{3}}}{12}.$",
+        "Step 7:\n$\\sin\\theta = \\sqrt{\\frac{147-34\\sqrt{3}}{144}} = \\frac{\\sqrt{147-34\\sqrt{3}}}{12}.$",
+        "Since $\\triangle BOC$ is an isosceles right triangle because $\\angle BOC = 90^\\circ$ and $BC=BO=OB$, so $BC=\\frac{OB}{\\cos15^\\circ}=\\frac{OB}{\\frac{\\sqrt{6}+1}{4}\\cdot OB}.$",
+        "Step 8:\n$\\cos\\theta = \\frac{\\sin 15^\\circ}{\\sin 75^\\circ} = \\frac{\\frac{\\sqrt{6}-\\sqrt{2}}{4}}{\\frac{\\sqrt{6}+\\sqrt{2}}{4}} = \\frac{\\sqrt{6}-\\sqrt{2}}{\\sqrt{6}+\\sqrt{2}} = \\frac{(\\sqrt{6}-\\sqrt{2})(\\sqrt{6}-\\sqrt{2})}{(\\sqrt{6}+\\sqrt{2})(\\sqrt{6}-\\sqrt{2})} = \\frac{34-2\\sqrt{12}}{24} = \\frac{17-\\sqrt{3}}{12}.$",
+        "Step 9:\n$\\sin\\theta = \\sqrt{1 - \\cos^2\\theta} = \\sqrt{1 - \\left(\\frac{17-\\sqrt{3}}{12}\\right)^2} = \\sqrt{\\frac{147-34\\sqrt{3}}{144}}.$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We need to find the northernmost latitude that the plane flies over, denoted as $\\theta$.\nWe are given that the plane flies between $30^\\circ$ N $45^\\circ$ W and $30^\\circ$ N $45^\\circ$ E along the shortest possible route along the surface of the Earth.\nTo proceed, we should visualize the problem and examine the geometry involved.",
+            1
+        ],
+        [
+            "Step 2: Draw a diagram to visualize the problem and label the given points: $A,$ $B,$ and $C$ where $A$ is the starting point, $B$ is the endpoint, and $C$ is the point on the surface of the Earth that directly below the plane.\nDraw in the lines $AC,$ $AB,$ and $BC$ to better understand the geometric configuration.",
+            1
+        ],
+        [
+            "Step 3:  Since we are looking for the northernmost latitude that the plane flies over, we need to find the latitude where the plane directly above it. This point lies on the intersection of the planes $AOC$ and $BOC.$ Therefore, $\\angle BOC = \\angle AOC.$ Since $\\angle AOB = 90^\\circ,$ we have $\\angle BOC = 90^\\circ - \\angle OBC.$",
+            1
+        ],
+        [
+            "Step 4:  Since $\\angle AOB = 90^\\circ,$ we have $\\angle BOC = 90^\\circ - \\angle OBC.$ We can find $\\angle OBC$ by computing $\\angle AOB$ in two ways: $\\angle AOB = 90^\\circ - \\angle OAB$ and $\\angle AOB = 90^\\circ - \\angle OBC.$ We get $\\angle OAB = \\angle OBC = 30^\\circ + 45^\\circ = 75^\\circ.$ Then we can compute $\\angle BOC = 90^\\circ - \\angle OBC = 90^\\circ - 75^\\circ = 15^\\circ.$",
+            1
+        ],
+        [
+            "Step 5:\nWe have $\\triangle BOC$ is an isosceles right triangle because $\\angle BOC = 90^\\circ$ and $BC=BO=OB$, so $BC=\\frac{OB}{\\cos15^\\circ}=\\frac{OB}{\\frac{\\sqrt{6}+1}{4}\\cdot OB}.$",
+            1
+        ],
+        [
+            "Step 6:\n$\\cos\\theta = \\frac{\\sin 15^\\circ}{\\sin 75^\\circ} = \\frac{\\frac{\\sqrt{6}-\\sqrt{2}}{4}}{\\frac{\\sqrt{6}+\\sqrt{2}}{4}} = \\frac{\\sqrt{6}-\\sqrt{2}}{\\sqrt{6}+\\sqrt{2}} = \\frac{(\\sqrt{6}-\\sqrt{2})(\\sqrt{6}-\\sqrt{2})}{(\\sqrt{6}+\\sqrt{2})(\\sqrt{6}-\\sqrt{2})} = \\frac{34-2\\sqrt{12}}{24} = \\frac{17-\\sqrt{3}}{12},$\n$\\sin\\theta = \\sqrt{1 - \\cos^2\\theta} = \\sqrt{1 - \\left(\\frac{17-\\sqrt{3}}{12}\\right)^2} = \\sqrt{\\frac{147-34\\sqrt{3}}{144}} = \\frac{\\sqrt{147-34\\sqrt{3}}}{12}.$",
+            1
+        ],
+        [
+            "Step 7:\n$\\sin\\theta = \\sqrt{\\frac{147-34\\sqrt{3}}{144}} = \\frac{\\sqrt{147-34\\sqrt{3}}}{12}.$",
+            1
+        ],
+        [
+            "Since $\\triangle BOC$ is an isosceles right triangle because $\\angle BOC = 90^\\circ$ and $BC=BO=OB$, so $BC=\\frac{OB}{\\cos15^\\circ}=\\frac{OB}{\\frac{\\sqrt{6}+1}{4}\\cdot OB}.$",
+            1
+        ],
+        [
+            "Step 8:\n$\\cos\\theta = \\frac{\\sin 15^\\circ}{\\sin 75^\\circ} = \\frac{\\frac{\\sqrt{6}-\\sqrt{2}}{4}}{\\frac{\\sqrt{6}+\\sqrt{2}}{4}} = \\frac{\\sqrt{6}-\\sqrt{2}}{\\sqrt{6}+\\sqrt{2}} = \\frac{(\\sqrt{6}-\\sqrt{2})(\\sqrt{6}-\\sqrt{2})}{(\\sqrt{6}+\\sqrt{2})(\\sqrt{6}-\\sqrt{2})} = \\frac{34-2\\sqrt{12}}{24} = \\frac{17-\\sqrt{3}}{12}.$",
+            1
+        ],
+        [
+            "Step 9:\n$\\sin\\theta = \\sqrt{1 - \\cos^2\\theta} = \\sqrt{1 - \\left(\\frac{17-\\sqrt{3}}{12}\\right)^2} = \\sqrt{\\frac{147-34\\sqrt{3}}{144}}.$",
+            1
+        ]
+    ],
+    "time": 130.71275091171265,
+    "total_tokens": 14204,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

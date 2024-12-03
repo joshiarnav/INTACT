@@ -1,0 +1,31 @@
+{
+    "problem": "What is the least positive integer $n$ such that $80325$ divides $n!$?",
+    "level": "Level 4",
+    "type": "Number Theory",
+    "solution": "We find the prime factorization of $80325$, which is $3^3 \\cdot 5^2 \\cdot 7 \\cdot 17$. The largest prime in the factorization is $17$, so $n$ is at least 17. Since there are three factors of $3$, two factors of $5$, and one factor of $7$ in the prime factorization of $17!$, the minimum value of $n$ is $\\boxed{17}$.",
+    "is_solved": true,
+    "model_solution": "Step 1:  First, we need to determine the prime factorization of 80325.\n  80325 = 3 \u00d7 5^3 \u00d7 107\nStep 2:  The least positive integer n such that 80325 divides n! is the maximum of the numbers needed for 3, 5^3, and 107 to divide n!.\n  We know that for a prime p, the highest power of p dividing n! is given by the formula e_p(n!) = \u2211[n/p^i], where the sum runs over all i for which p^i \u2264 n.\n  Applying this to our prime factors, we have:\n  e_3(n!) = \u2211[n/3^i] = [n/3] + [n/9] + [n/27] + ...\n  e_5(n!) = \u2211[n/5^i] = [n/5] + [n/25] + [n/125] + ...\n  e_107(n!) = \u2211[n/107^i] = [n/107]\nStep 2:  We need to find the smallest n for which the sum of the fractional parts of [n/3], [n/9], [n/27], ... , [n/5], [n/25], [n/125], ... , and [n/107] is an integer.\n\n Final Answer: The final answer is: $\\boxed{540}$",
+    "steps": [
+        "Step 1:  First, we need to determine the prime factorization of 80325.\n  80325 = 3 \u00d7 5^3 \u00d7 107",
+        "Step 2:  The least positive integer n such that 80325 divides n! is the maximum of the numbers needed for 3, 5^3, and 107 to divide n!.\n  We know that for a prime p, the highest power of p dividing n! is given by the formula e_p(n!) = \u2211[n/p^i], where the sum runs over all i for which p^i \u2264 n.\n  Applying this to our prime factors, we have:\n  e_3(n!) = \u2211[n/3^i] = [n/3] + [n/9] + [n/27] + ...\n  e_5(n!) = \u2211[n/5^i] = [n/5] + [n/25] + [n/125] + ...\n  e_107(n!) = \u2211[n/107^i] = [n/107]",
+        "Step 2:  We need to find the smallest n for which the sum of the fractional parts of [n/3], [n/9], [n/27], ... , [n/5], [n/25], [n/125], ... , and [n/107] is an integer.\n\n Final Answer: The final answer is: $\\boxed{540}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  First, we need to determine the prime factorization of 80325.\n  80325 = 3 \u00d7 5^3 \u00d7 107",
+            1
+        ],
+        [
+            "Step 2:  The least positive integer n such that 80325 divides n! is the maximum of the numbers needed for 3, 5^3, and 107 to divide n!.\n  We know that for a prime p, the highest power of p dividing n! is given by the formula e_p(n!) = \u2211[n/p^i], where the sum runs over all i for which p^i \u2264 n.\n  Applying this to our prime factors, we have:\n  e_3(n!) = \u2211[n/3^i] = [n/3] + [n/9] + [n/27] + ...\n  e_5(n!) = \u2211[n/5^i] = [n/5] + [n/25] + [n/125] + ...\n  e_107(n!) = \u2211[n/107^i] = [n/107]",
+            1
+        ],
+        [
+            "Step 2:  We need to find the smallest n for which the sum of the fractional parts of [n/3], [n/9], [n/27], ... , [n/5], [n/25], [n/125], ... , and [n/107] is an integer.\n\n Final Answer: The final answer is: $\\boxed{540}$",
+            1
+        ]
+    ],
+    "time": 39.77210259437561,
+    "total_tokens": 1652,
+    "final_answer_tokens": 390,
+    "model": "meta-llama/Llama-Vision-Free"
+}

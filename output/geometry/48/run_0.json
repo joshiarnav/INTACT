@@ -1,0 +1,66 @@
+{
+    "problem": "Six points are equally spaced around a circle of radius 1.  Three of these points are the vertices of a triangle that is neither equilateral nor isosceles.  What is the area of this triangle?",
+    "level": "Level 4",
+    "type": "Geometry",
+    "solution": "The only possible scalene (not equilateral or isosceles) triangle, up to congruence, that can be made from the given points is shown below: [asy] markscalefactor /= 2;size(4cm); draw(unitcircle); for(int i=0; i<6; ++i) dot(dir(60*i)); draw(dir(120)--dir(60)--dir(-60)--cycle); dot((0,0)); draw((0,0)--dir(60),dotted); draw(rightanglemark(dir(-60),dir(60),dir(120)));[/asy] (To see that this is the only triangle, note that if no two of the three points are adjacent, then the resulting triangle is equilateral. Therefore, two of the points must be adjacent. But then the third point cannot be adjacent to either of those two points, since that would create an isosceles triangle.) Because the longest side of this triangle is a diameter of the circle, the triangle is right. The other two sides of the triangle have lengths $1$ and $\\sqrt{3},$ respectively, since they subtend $60^\\circ$ and $120^\\circ$ arcs of the circle. Therefore, the area of the triangle is \\[\\frac{1}{2} \\cdot 1 \\cdot \\sqrt{3} = \\boxed{\\frac{\\sqrt3}{2}}.\\]",
+    "is_solved": false,
+    "model_solution": "Draw the six points and label them A, B, C, D, E, and F, with A and B at the top and C directly below them.\nDrop perpendiculars from points C and F to the chord AB to create two congruent right triangles.\nFind the length of CD and FD, which are the bases of the two right triangles.\nFind the length of the hypotenuse of each of the two right triangles.\nFind the length of the height of the triangle ABC.\nFind the length of the base of triangle ABC, which is the length of chord AB.\nFind the length of CD and FD, which are the bases of the two right triangles, with CD = 1/2 and FD = 1/3, since the six points are equally spaced around the circle.\nThe length of the hypotenuse of each of the two right triangles is $\\sqrt{1^2 + (\\frac{1}{2})^2} = \\frac{\\sqrt{5}}{2}$ and $\\sqrt{1^2 + (\\frac{1}{3})^2} = \\frac{\\sqrt{10}}{3}$.\nThe length of the height of the triangle ABC is $\\frac{\\sqrt{5}}{2} + \\frac{\\sqrt{10}}{3}$.\nThe length of the base of triangle ABC, which is the length of chord AB, is $\\sqrt{(\\frac{\\sqrt{5}}{2})^2+(\\frac{\\sqrt{10}}{3})^2} = \\frac{2\\sqrt{41}}{13}.$",
+    "steps": [
+        "Draw the six points and label them A, B, C, D, E, and F, with A and B at the top and C directly below them.",
+        "Drop perpendiculars from points C and F to the chord AB to create two congruent right triangles.",
+        "Find the length of CD and FD, which are the bases of the two right triangles.",
+        "Find the length of the hypotenuse of each of the two right triangles.",
+        "Find the length of the height of the triangle ABC.",
+        "Find the length of the base of triangle ABC, which is the length of chord AB.",
+        "Find the length of CD and FD, which are the bases of the two right triangles, with CD = 1/2 and FD = 1/3, since the six points are equally spaced around the circle.",
+        "The length of the hypotenuse of each of the two right triangles is $\\sqrt{1^2 + (\\frac{1}{2})^2} = \\frac{\\sqrt{5}}{2}$ and $\\sqrt{1^2 + (\\frac{1}{3})^2} = \\frac{\\sqrt{10}}{3}$.",
+        "The length of the height of the triangle ABC is $\\frac{\\sqrt{5}}{2} + \\frac{\\sqrt{10}}{3}$.",
+        "The length of the base of triangle ABC, which is the length of chord AB, is $\\sqrt{(\\frac{\\sqrt{5}}{2})^2+(\\frac{\\sqrt{10}}{3})^2} = \\frac{2\\sqrt{41}}{13}.$"
+    ],
+    "full_steps": [
+        [
+            "Draw the six points and label them A, B, C, D, E, and F, with A and B at the top and C directly below them.",
+            1
+        ],
+        [
+            "Drop perpendiculars from points C and F to the chord AB to create two congruent right triangles.",
+            1
+        ],
+        [
+            "Find the length of CD and FD, which are the bases of the two right triangles.",
+            1
+        ],
+        [
+            "Find the length of the hypotenuse of each of the two right triangles.",
+            1
+        ],
+        [
+            "Find the length of the height of the triangle ABC.",
+            1
+        ],
+        [
+            "Find the length of the base of triangle ABC, which is the length of chord AB.",
+            1
+        ],
+        [
+            "Find the length of CD and FD, which are the bases of the two right triangles, with CD = 1/2 and FD = 1/3, since the six points are equally spaced around the circle.",
+            1
+        ],
+        [
+            "The length of the hypotenuse of each of the two right triangles is $\\sqrt{1^2 + (\\frac{1}{2})^2} = \\frac{\\sqrt{5}}{2}$ and $\\sqrt{1^2 + (\\frac{1}{3})^2} = \\frac{\\sqrt{10}}{3}$.",
+            1
+        ],
+        [
+            "The length of the height of the triangle ABC is $\\frac{\\sqrt{5}}{2} + \\frac{\\sqrt{10}}{3}$.",
+            1
+        ],
+        [
+            "The length of the base of triangle ABC, which is the length of chord AB, is $\\sqrt{(\\frac{\\sqrt{5}}{2})^2+(\\frac{\\sqrt{10}}{3})^2} = \\frac{2\\sqrt{41}}{13}.$",
+            1
+        ]
+    ],
+    "time": 134.01598620414734,
+    "total_tokens": 5050,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

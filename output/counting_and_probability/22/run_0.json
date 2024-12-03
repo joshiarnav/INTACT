@@ -1,0 +1,46 @@
+{
+    "problem": "The Smith family has 4 sons and 3 daughters. In how many ways can they be seated in a row of 7 chairs such that at least 2 boys are next to each other?",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "This problem is a perfect candidate for complementary counting.  It will be fairly difficult to try to count this directly, since there are lots of possible cases (just two are BBBBGGG and BGGBBGB, where B is a boy and G is a girl).  But there is only one way to assign genders to the seating so that no two boys are next to each other, and that is BGBGBGB. If we seat the children as BGBGBGB, then there are $4!$ orderings for the 4 boys, and $3!$ orderings for the 3 girls, giving a total of $4! \\times 3! = 144$ seatings for the 7 children. These are the seatings that we don't want, so to count the seatings that we do want, we need to subtract these seatings from the total number of seatings without any restrictions.  Since there are 7 kids, there are $7!$ ways to seat them. So the answer is $7! - (4! \\times 3!) = 5040-144 = \\boxed{4896}$.",
+    "is_solved": true,
+    "model_solution": "## Step 1: Calculate the total number of seating arrangements for 7 children without any restrictions.\nThe total number of ways to arrange 7 children in a row of 7 chairs is 7! = 5040.\n## Step 2: Calculate the total number of seating arrangements in which no two boys are next to each other.\nFirst, arrange the 3 daughters in 3! = 6 ways. The 4 boys can then be arranged in the 4 spaces created by the daughters (at the ends and between them) in 4! = 24 ways. So, the total number of arrangements with no two boys next to each other is 6 * 24 = 144.\n## Step 3: Subtract the number of arrangements with no boys next to each other from the total number of arrangements to find the number of arrangements with at least 2 boys next to each other.\n5040 - 144 = 4896\n## Step 4: \n4896\n## Step 5: \n4896\n## Step 6: Final Answer\n4896",
+    "steps": [
+        "## Step 1: Calculate the total number of seating arrangements for 7 children without any restrictions.\nThe total number of ways to arrange 7 children in a row of 7 chairs is 7! = 5040.",
+        "## Step 2: Calculate the total number of seating arrangements in which no two boys are next to each other.\nFirst, arrange the 3 daughters in 3! = 6 ways. The 4 boys can then be arranged in the 4 spaces created by the daughters (at the ends and between them) in 4! = 24 ways. So, the total number of arrangements with no two boys next to each other is 6 * 24 = 144.",
+        "## Step 3: Subtract the number of arrangements with no boys next to each other from the total number of arrangements to find the number of arrangements with at least 2 boys next to each other.\n5040 - 144 = 4896",
+        "## Step 4: \n4896",
+        "## Step 5: \n4896",
+        "## Step 6: Final Answer\n4896"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Calculate the total number of seating arrangements for 7 children without any restrictions.\nThe total number of ways to arrange 7 children in a row of 7 chairs is 7! = 5040.",
+            1
+        ],
+        [
+            "## Step 2: Calculate the total number of seating arrangements in which no two boys are next to each other.\nFirst, arrange the 3 daughters in 3! = 6 ways. The 4 boys can then be arranged in the 4 spaces created by the daughters (at the ends and between them) in 4! = 24 ways. So, the total number of arrangements with no two boys next to each other is 6 * 24 = 144.",
+            1
+        ],
+        [
+            "## Step 3: Subtract the number of arrangements with no boys next to each other from the total number of arrangements to find the number of arrangements with at least 2 boys next to each other.\n5040 - 144 = 4896",
+            1
+        ],
+        [
+            "## Step 4: \n4896",
+            1
+        ],
+        [
+            "## Step 5: \n4896",
+            1
+        ],
+        [
+            "## Step 6: Final Answer\n4896",
+            1
+        ]
+    ],
+    "time": 79.37930703163147,
+    "total_tokens": 3279,
+    "final_answer_tokens": 320,
+    "model": "meta-llama/Llama-Vision-Free"
+}

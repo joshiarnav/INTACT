@@ -1,0 +1,26 @@
+{
+    "problem": "Suppose that I have $6$ different books, $2$ of which are math books. In how many ways can I stack my $6$ books on a shelf if I do not want the math books to be next to each other?",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "We first place the non-math books. There are $4$ choices for the first book, $3$ choices for the second book, $2$ choices for the third book, and $1$ choice for the last book. Then we have to put the two math books between the four non-math books such that there is at least one non-math book between the two math books. We see there is a total of $5$ openings created by the four non-math books. So the first math book has $5$ choices, and the second math book has $4$ choices.\n\nSo the total number of ways the books can be placed is $4\\times3\\times2\\times1\\times5\\times 4 =\\boxed{480}.$",
+    "is_solved": true,
+    "model_solution": "## Step 1: Count the total number of ways to stack all 6 books without restrictions.\nThere are 6! = 720 ways to stack all 6 books without any restrictions.\n## Step 2: Count the number of ways to stack all 6 books with the two math books together.\nTo do this, we can think of the two math books as one unit. Therefore, we have 5 units (the two math books as one, and the other 4 books) that we can arrange in 5! = 120 ways. However, the two math books can be arranged between themselves in 2! = 2 ways. Thus, there are 120 * 2 = 240 ways to stack all 6 books with the two math books together.\n\nNote: This step was not explicitly requested to be combined with the final answer, so it is presented as is.",
+    "steps": [
+        "## Step 1: Count the total number of ways to stack all 6 books without restrictions.\nThere are 6! = 720 ways to stack all 6 books without any restrictions.",
+        "## Step 2: Count the number of ways to stack all 6 books with the two math books together.\nTo do this, we can think of the two math books as one unit. Therefore, we have 5 units (the two math books as one, and the other 4 books) that we can arrange in 5! = 120 ways. However, the two math books can be arranged between themselves in 2! = 2 ways. Thus, there are 120 * 2 = 240 ways to stack all 6 books with the two math books together.\n\nNote: This step was not explicitly requested to be combined with the final answer, so it is presented as is."
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Count the total number of ways to stack all 6 books without restrictions.\nThere are 6! = 720 ways to stack all 6 books without any restrictions.",
+            1
+        ],
+        [
+            "## Step 2: Count the number of ways to stack all 6 books with the two math books together.\nTo do this, we can think of the two math books as one unit. Therefore, we have 5 units (the two math books as one, and the other 4 books) that we can arrange in 5! = 120 ways. However, the two math books can be arranged between themselves in 2! = 2 ways. Thus, there are 120 * 2 = 240 ways to stack all 6 books with the two math books together.\n\nNote: This step was not explicitly requested to be combined with the final answer, so it is presented as is.",
+            1
+        ]
+    ],
+    "time": 27.038816690444946,
+    "total_tokens": 875,
+    "final_answer_tokens": 289,
+    "model": "meta-llama/Llama-Vision-Free"
+}

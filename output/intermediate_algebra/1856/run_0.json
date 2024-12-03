@@ -1,0 +1,51 @@
+{
+    "problem": "Three distinct integers $a,$ $b,$ and $c$ have the following properties:\n\n$\\bullet$ $abc = 17955$\n\n$\\bullet$ $a,$ $b,$ $c$ are three consecutive terms of an arithmetic sequence, in that order\n\n$\\bullet$ $3a + b,$ $3b + c,$ $3c + a$ are three consecutive terms of a geometric sequence, in that order\n\nFind $a + b + c.$",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "In the arithmetic sequence $a,$ $b,$ $c,$ let $d$ be the common difference, so $a = b - d$ and $c = b + d.$  Then\n\\begin{align*}\n3a + b &= 3(b - d) + b = 4b - 3d, \\\\\n3b + c &= 3b + b + d = 4b + d, \\\\\n3c + a &= 3(b + d) + (b - d) = 4b + 2d,\n\\end{align*}so\n\\[(4b + d)^2 = (4b - 3d)(4b + 2d).\\]This simplifies to $12bd + 7d^2 = d(12b + 7d) = 0.$  If $d = 0,$ then $a = b = c,$ so $a^3 = 17955.$  Since 17955 is not a perfect cube, $12b + 7d = 0,$ so $d = -\\frac{12}{7} b.$\n\nThen $a = b - d = \\frac{19}{7} b$ and $c = b + d = -\\frac{5}{7} b.$  Substituting into $abc = 17955,$ we get\n\\[\\frac{19}{7} b \\cdot b \\cdot \\left( -\\frac{5}{7} b \\right) = 17955.\\]Then $b^3 = -9261,$ so $b = -21.$  Hence, $a = -57$ and $c = 15,$ so $a + b + c = \\boxed{-63}.$",
+    "is_solved": true,
+    "model_solution": "Step 1:  Since $a,$ $b,$ and $c$ are three consecutive terms of an arithmetic sequence, let $d$ be the common difference. Then, we can express $b$ and $c$ in terms of $a$ as $b = a + d$ and $c = a + 2d.$\n The product $abc$ can be factored as $a(a+d)(a+2d) = 17955.$\nSince $3a + b,$ $3b + c,$ $3c + a$ are consecutive terms of a geometric sequence, we have \n$\\frac{3b + c}{3a + b} = \\frac{3c + a}{3b + c}.$\nStep 2:\n$\\frac{(3a+3d+a+2d)}{(3a+a+d)} = \\frac{(3a+6d+a+2d)}{(3a+2d+a+d)}$\n$\\frac{4a+5d}{4a+d} = \\frac{4a+8d}{4a+3d}$\n$\\frac{4a+5d}{4a+d} = \\frac{4a+8d}{4a+3d}$\n$\\Rightarrow (4a+5d)(4a+3d) = (4a+d)(4a+8d)$\n$\\Rightarrow 16a^2 + 52ad + 15d^2 = 16a^2 + 32ad + 8d^2$\n$\\Rightarrow 20ad = -7d^2$\n$\\Rightarrow 20a = -7d$\n$\\Rightarrow d = -\\frac{20}{7}a$\n$\\Rightarrow a - \\frac{20}{7}a = b = a + d$\n$\\Rightarrow \\frac{-13}{7}a = b$\n$\\Rightarrow a + \\frac{-26}{7}a = c = a + 2d$\n$\\Rightarrow \\frac{-39}{7}a = c$\n$\\frac{a}{b} = \\frac{b}{c} = \\frac{c}{a}$\n$\\frac{a}{\\frac{-13}{7}a} = \\frac{\\frac{-13}{7}a}{\\frac{-39}{7}a} = \\frac{\\frac{-39}{7}a}{a}$\n$\\frac{7}{-13} = \\frac{-13}{-39} = \\frac{-39}{7}$\n$-7 = -39$\n$13 = -39$\n$\\frac{7}{-13} = -\\frac{7}{13}$\n$\\frac{-13}{-39} = \\frac{13}{39}$\n$\\frac{-39}{7} = \\frac{-39}{7}$\n$\\Rightarrow a^2 = 7a$\n$\\Rightarrow 7a - a^2 = 0$\n$\\Rightarrow a(7 - a) = 0$\n$\\Rightarrow a = 0 \\text{ or } a = 7$\nSince $a$ cannot equal $0,$ we have $a = 7$\n$\\text{If } a = 7, \\text{ then } b = a + d = \\frac{-13}{7}a = \\frac{-13}{7}(7) = \\frac{-91}{7} = -13 \\text{ and } c = a + 2d = \\frac{-39}{7}a = \\frac{-39}{7}(7) = \\frac{-273}{7} = -39$\nSince $a = 7,$ we have $b = -13$ and $c = -39.$ Then, $a + b + c = 7 - 13 - 39 = -45.$\nFinal Answer: The final answer is $\\boxed{-45}$.",
+    "steps": [
+        "Step 1:  Since $a,$ $b,$ and $c$ are three consecutive terms of an arithmetic sequence, let $d$ be the common difference. Then, we can express $b$ and $c$ in terms of $a$ as $b = a + d$ and $c = a + 2d.$\n The product $abc$ can be factored as $a(a+d)(a+2d) = 17955.$",
+        "Since $3a + b,$ $3b + c,$ $3c + a$ are consecutive terms of a geometric sequence, we have \n$\\frac{3b + c}{3a + b} = \\frac{3c + a}{3b + c}.$",
+        "Step 2:\n$\\frac{(3a+3d+a+2d)}{(3a+a+d)} = \\frac{(3a+6d+a+2d)}{(3a+2d+a+d)}$\n$\\frac{4a+5d}{4a+d} = \\frac{4a+8d}{4a+3d}$",
+        "$\\frac{4a+5d}{4a+d} = \\frac{4a+8d}{4a+3d}$\n$\\Rightarrow (4a+5d)(4a+3d) = (4a+d)(4a+8d)$\n$\\Rightarrow 16a^2 + 52ad + 15d^2 = 16a^2 + 32ad + 8d^2$\n$\\Rightarrow 20ad = -7d^2$\n$\\Rightarrow 20a = -7d$\n$\\Rightarrow d = -\\frac{20}{7}a$\n$\\Rightarrow a - \\frac{20}{7}a = b = a + d$\n$\\Rightarrow \\frac{-13}{7}a = b$\n$\\Rightarrow a + \\frac{-26}{7}a = c = a + 2d$\n$\\Rightarrow \\frac{-39}{7}a = c$",
+        "$\\frac{a}{b} = \\frac{b}{c} = \\frac{c}{a}$\n$\\frac{a}{\\frac{-13}{7}a} = \\frac{\\frac{-13}{7}a}{\\frac{-39}{7}a} = \\frac{\\frac{-39}{7}a}{a}$\n$\\frac{7}{-13} = \\frac{-13}{-39} = \\frac{-39}{7}$\n$-7 = -39$\n$13 = -39$\n$\\frac{7}{-13} = -\\frac{7}{13}$\n$\\frac{-13}{-39} = \\frac{13}{39}$\n$\\frac{-39}{7} = \\frac{-39}{7}$\n$\\Rightarrow a^2 = 7a$\n$\\Rightarrow 7a - a^2 = 0$\n$\\Rightarrow a(7 - a) = 0$\n$\\Rightarrow a = 0 \\text{ or } a = 7$\nSince $a$ cannot equal $0,$ we have $a = 7$",
+        "$\\text{If } a = 7, \\text{ then } b = a + d = \\frac{-13}{7}a = \\frac{-13}{7}(7) = \\frac{-91}{7} = -13 \\text{ and } c = a + 2d = \\frac{-39}{7}a = \\frac{-39}{7}(7) = \\frac{-273}{7} = -39$",
+        "Since $a = 7,$ we have $b = -13$ and $c = -39.$ Then, $a + b + c = 7 - 13 - 39 = -45.$\nFinal Answer: The final answer is $\\boxed{-45}$."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Since $a,$ $b,$ and $c$ are three consecutive terms of an arithmetic sequence, let $d$ be the common difference. Then, we can express $b$ and $c$ in terms of $a$ as $b = a + d$ and $c = a + 2d.$\n The product $abc$ can be factored as $a(a+d)(a+2d) = 17955.$",
+            1
+        ],
+        [
+            "Since $3a + b,$ $3b + c,$ $3c + a$ are consecutive terms of a geometric sequence, we have \n$\\frac{3b + c}{3a + b} = \\frac{3c + a}{3b + c}.$",
+            1
+        ],
+        [
+            "Step 2:\n$\\frac{(3a+3d+a+2d)}{(3a+a+d)} = \\frac{(3a+6d+a+2d)}{(3a+2d+a+d)}$\n$\\frac{4a+5d}{4a+d} = \\frac{4a+8d}{4a+3d}$",
+            1
+        ],
+        [
+            "$\\frac{4a+5d}{4a+d} = \\frac{4a+8d}{4a+3d}$\n$\\Rightarrow (4a+5d)(4a+3d) = (4a+d)(4a+8d)$\n$\\Rightarrow 16a^2 + 52ad + 15d^2 = 16a^2 + 32ad + 8d^2$\n$\\Rightarrow 20ad = -7d^2$\n$\\Rightarrow 20a = -7d$\n$\\Rightarrow d = -\\frac{20}{7}a$\n$\\Rightarrow a - \\frac{20}{7}a = b = a + d$\n$\\Rightarrow \\frac{-13}{7}a = b$\n$\\Rightarrow a + \\frac{-26}{7}a = c = a + 2d$\n$\\Rightarrow \\frac{-39}{7}a = c$",
+            1
+        ],
+        [
+            "$\\frac{a}{b} = \\frac{b}{c} = \\frac{c}{a}$\n$\\frac{a}{\\frac{-13}{7}a} = \\frac{\\frac{-13}{7}a}{\\frac{-39}{7}a} = \\frac{\\frac{-39}{7}a}{a}$\n$\\frac{7}{-13} = \\frac{-13}{-39} = \\frac{-39}{7}$\n$-7 = -39$\n$13 = -39$\n$\\frac{7}{-13} = -\\frac{7}{13}$\n$\\frac{-13}{-39} = \\frac{13}{39}$\n$\\frac{-39}{7} = \\frac{-39}{7}$\n$\\Rightarrow a^2 = 7a$\n$\\Rightarrow 7a - a^2 = 0$\n$\\Rightarrow a(7 - a) = 0$\n$\\Rightarrow a = 0 \\text{ or } a = 7$\nSince $a$ cannot equal $0,$ we have $a = 7$",
+            1
+        ],
+        [
+            "$\\text{If } a = 7, \\text{ then } b = a + d = \\frac{-13}{7}a = \\frac{-13}{7}(7) = \\frac{-91}{7} = -13 \\text{ and } c = a + 2d = \\frac{-39}{7}a = \\frac{-39}{7}(7) = \\frac{-273}{7} = -39$",
+            1
+        ],
+        [
+            "Since $a = 7,$ we have $b = -13$ and $c = -39.$ Then, $a + b + c = 7 - 13 - 39 = -45.$\nFinal Answer: The final answer is $\\boxed{-45}$.",
+            1
+        ]
+    ],
+    "time": 95.56676197052002,
+    "total_tokens": 8489,
+    "final_answer_tokens": 963,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,56 @@
+{
+    "problem": "In triangle $ABC,$ $\\angle A,$ $\\angle B,$ and $\\angle C$ form an arithmetic sequence.  The length of the altitude from $B$ to $\\overline{AC}$ is equal to $AB - BC.$  Find all possible values of\n\\[\\sin \\frac{C - A}{2}.\\]Enter all possible values, separated by commas.",
+    "level": "Level 5",
+    "type": "Precalculus",
+    "solution": "Since $\\angle A,$ $\\angle B,$ $\\angle C$ form an arithmetic sequence, $2 \\angle B = \\angle A + \\angle C.$  Then\n\\[3 \\angle B = \\angle A + \\angle B + \\angle C = 180^\\circ,\\]which means $\\angle B = 60^\\circ,$ and $\\angle A + \\angle C = 120^\\circ.$\n\nLet $h$ be the altitude from $B.$\n\n[asy]\nunitsize (1 cm);\n\npair A, B, C, D;\n\nA = (0,0);\nB = 5*dir(40);\nC = (5,0);\nD = (B.x,0);\n\ndraw(A--B--C--cycle);\ndraw(B--D);\n\nlabel(\"$A$\", A, SW);\nlabel(\"$B$\", B, N);\nlabel(\"$C$\", C, SE);\nlabel(\"$h$\", (B + D)/2, E);\n[/asy]\n\nThen\n\\[h = AB - BC = \\frac{h}{\\sin A} - \\frac{h}{\\sin C},\\]so $1 = \\frac{1}{\\sin A} - \\frac{1}{\\sin C}.$  Hence,\n\\[\\sin C - \\sin A = \\sin A \\sin C.\\]We can write this as\n\\[2 \\sin \\frac{C - A}{2} \\cos \\frac{A + C}{2} = \\frac{\\cos (A - C) - \\cos (A + C)}{2}.\\]Since $A + C = 120^\\circ,$\n\\[\\sin \\frac{C - A}{2} = \\frac{\\cos (A - C) + \\frac{1}{2}}{2} = \\frac{\\cos (C - A) + \\frac{1}{2}}{2}.\\]Then\n\\begin{align*}\n4 \\sin \\frac{C - A}{2} &= 2 \\cos (C - A) + 1 \\\\\n&= 2 \\left( 1 - 2 \\sin^2 \\frac{C - A}{2} \\right) + 1 \\\\\n&= 3 - 4 \\sin^2 \\frac{C - A}{2},\n\\end{align*}so\n\\[4 \\sin^2 \\frac{C - A}{2} + 4 \\sin \\frac{C - A}{2} - 3 = 0.\\]This factors as\n\\[\\left( 2 \\sin \\frac{C - A}{2} - 1 \\right) \\left( 2 \\sin \\frac{C - A}{2} + 3 \\right) = 0.\\]Thus, the only possible value of $\\sin \\frac{C - A}{2}$ is $\\boxed{\\frac{1}{2}}.$",
+    "is_solved": true,
+    "model_solution": "Step 1:  We are given that in triangle $ABC,$ $\\angle A,$ $\\angle B,$ and $\\angle C$ form an arithmetic sequence.\nStep 2:  Let's denote the common difference between the angles as $d.$ Therefore, we have $A = 180^\\circ - 3d,$ $B = 180^\\circ - d,$ and $C = 180^\\circ + d.$\nStep 3:  The problem further states that the length of the altitude from $B$ to $\\overline{AC}$ is equal to $AB - BC.$ Let's denote this length as $h.$\nStep 4:  Using the definition of $h,$ we get $h = AB - BC = \\frac{2}{AC} \\cdot \\sin \\frac{A + C}{2} \\cdot BC.$\nStep 5:  Simplifying the expression, we get $2h = \\frac{2}{AC} \\cdot BC \\cdot \\sin \\frac{C - A}{2}.$\nStep 6:  We can then rearrange this expression to solve for $\\sin \\frac{C - A}{2},$ giving us $\\sin\nStep 7:  Since $\\sin \\frac{C - A}{2} = \\frac{AC \\cdot h}{BC},$ we can use the Law of Sines, which states that $\\frac{AC}{\\sin C} = \\frac{BC}{\\sin B} = \\frac{AB}{\\sin A}.$\nUsing this, we can express $\\frac{AC}{BC}$ and $\\frac{AC}{AB}$ in terms of the sines of the angles.\nStep 8:\n$$\\frac{AC}{BC} = \\frac{\\sin A}{\\sin B}, \\quad \\frac{AC}{AB} = \\frac{\\sin B}{\\sin C}.$$\n\nGiven the above expressions, we can proceed to solve for $\\sin \\frac{C - A}{2}.$\nStep 9: \n\\[\\sin \\frac{C - A}{2} = \\frac{AC \\cdot h}{BC} = \\frac{h}{BC} \\cdot \\frac{AC}{2} = \\frac{AB - BC}{BC} \\cdot \\frac{\\sin B}{2 \\cos \\frac{A + C}{2}} = \\frac{\\sin B - 1}{-2 \\cos \\frac{A + C}{2}}.\\]\nStep 10:\n$$\\frac{\\sin B - 1}{-2 \\cos \\frac{A + C}{2}} = \\frac{-1 + \\sin \\left( 180 - 3d \\right)}{-2 \\cos \\left( 90 - d \\right)} = \\frac{1 - \\sin 3d}{\\sin d}.$$\nStep 11: $$\\frac{1 - \\sin 3d}{\\sin d} = \\frac{1 - (3 \\sin d - 4 \\sin^3 d)}{\\sin d} = \\frac{4 \\sin^3 d - 3 \\sin d}{\\sin d} = 4 \\sin^2 d - 3.$$\nStep 12: $$4 \\sin^2 d - 3 = \\frac{-1}{2} \\left( 8 \\sin^2 d - 12 \\right) = - \\frac{1}{2} \\left( 4 - 4 \\cos 2d \\right) = -2 + 2 \\cos 2d.$$\nStep 13:\n$$-2 + 2 \\cos 2d = -2 + 2 \\left( 2 \\cos^2 d - 1 \\right) = 2 \\left( 2 \\cos^2 d - 2 \\right) = 4 \\cos^2 d - 4.$$\n\nNote: The final answer is not yet generated.",
+    "steps": [
+        "Step 1:  We are given that in triangle $ABC,$ $\\angle A,$ $\\angle B,$ and $\\angle C$ form an arithmetic sequence.\nStep 2:  Let's denote the common difference between the angles as $d.$ Therefore, we have $A = 180^\\circ - 3d,$ $B = 180^\\circ - d,$ and $C = 180^\\circ + d.$\nStep 3:  The problem further states that the length of the altitude from $B$ to $\\overline{AC}$ is equal to $AB - BC.$ Let's denote this length as $h.$\nStep 4:  Using the definition of $h,$ we get $h = AB - BC = \\frac{2}{AC} \\cdot \\sin \\frac{A + C}{2} \\cdot BC.$\nStep 5:  Simplifying the expression, we get $2h = \\frac{2}{AC} \\cdot BC \\cdot \\sin \\frac{C - A}{2}.$\nStep 6:  We can then rearrange this expression to solve for $\\sin \\frac{C - A}{2},$ giving us $\\sin",
+        "Step 7:  Since $\\sin \\frac{C - A}{2} = \\frac{AC \\cdot h}{BC},$ we can use the Law of Sines, which states that $\\frac{AC}{\\sin C} = \\frac{BC}{\\sin B} = \\frac{AB}{\\sin A}.$\nUsing this, we can express $\\frac{AC}{BC}$ and $\\frac{AC}{AB}$ in terms of the sines of the angles.",
+        "Step 8:\n$$\\frac{AC}{BC} = \\frac{\\sin A}{\\sin B}, \\quad \\frac{AC}{AB} = \\frac{\\sin B}{\\sin C}.$$\n\nGiven the above expressions, we can proceed to solve for $\\sin \\frac{C - A}{2}.$",
+        "Step 9: \n\\[\\sin \\frac{C - A}{2} = \\frac{AC \\cdot h}{BC} = \\frac{h}{BC} \\cdot \\frac{AC}{2} = \\frac{AB - BC}{BC} \\cdot \\frac{\\sin B}{2 \\cos \\frac{A + C}{2}} = \\frac{\\sin B - 1}{-2 \\cos \\frac{A + C}{2}}.\\]",
+        "Step 10:\n$$\\frac{\\sin B - 1}{-2 \\cos \\frac{A + C}{2}} = \\frac{-1 + \\sin \\left( 180 - 3d \\right)}{-2 \\cos \\left( 90 - d \\right)} = \\frac{1 - \\sin 3d}{\\sin d}.$$",
+        "Step 11: $$\\frac{1 - \\sin 3d}{\\sin d} = \\frac{1 - (3 \\sin d - 4 \\sin^3 d)}{\\sin d} = \\frac{4 \\sin^3 d - 3 \\sin d}{\\sin d} = 4 \\sin^2 d - 3.$$",
+        "Step 12: $$4 \\sin^2 d - 3 = \\frac{-1}{2} \\left( 8 \\sin^2 d - 12 \\right) = - \\frac{1}{2} \\left( 4 - 4 \\cos 2d \\right) = -2 + 2 \\cos 2d.$$",
+        "Step 13:\n$$-2 + 2 \\cos 2d = -2 + 2 \\left( 2 \\cos^2 d - 1 \\right) = 2 \\left( 2 \\cos^2 d - 2 \\right) = 4 \\cos^2 d - 4.$$\n\nNote: The final answer is not yet generated."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We are given that in triangle $ABC,$ $\\angle A,$ $\\angle B,$ and $\\angle C$ form an arithmetic sequence.\nStep 2:  Let's denote the common difference between the angles as $d.$ Therefore, we have $A = 180^\\circ - 3d,$ $B = 180^\\circ - d,$ and $C = 180^\\circ + d.$\nStep 3:  The problem further states that the length of the altitude from $B$ to $\\overline{AC}$ is equal to $AB - BC.$ Let's denote this length as $h.$\nStep 4:  Using the definition of $h,$ we get $h = AB - BC = \\frac{2}{AC} \\cdot \\sin \\frac{A + C}{2} \\cdot BC.$\nStep 5:  Simplifying the expression, we get $2h = \\frac{2}{AC} \\cdot BC \\cdot \\sin \\frac{C - A}{2}.$\nStep 6:  We can then rearrange this expression to solve for $\\sin \\frac{C - A}{2},$ giving us $\\sin",
+            1
+        ],
+        [
+            "Step 7:  Since $\\sin \\frac{C - A}{2} = \\frac{AC \\cdot h}{BC},$ we can use the Law of Sines, which states that $\\frac{AC}{\\sin C} = \\frac{BC}{\\sin B} = \\frac{AB}{\\sin A}.$\nUsing this, we can express $\\frac{AC}{BC}$ and $\\frac{AC}{AB}$ in terms of the sines of the angles.",
+            1
+        ],
+        [
+            "Step 8:\n$$\\frac{AC}{BC} = \\frac{\\sin A}{\\sin B}, \\quad \\frac{AC}{AB} = \\frac{\\sin B}{\\sin C}.$$\n\nGiven the above expressions, we can proceed to solve for $\\sin \\frac{C - A}{2}.$",
+            1
+        ],
+        [
+            "Step 9: \n\\[\\sin \\frac{C - A}{2} = \\frac{AC \\cdot h}{BC} = \\frac{h}{BC} \\cdot \\frac{AC}{2} = \\frac{AB - BC}{BC} \\cdot \\frac{\\sin B}{2 \\cos \\frac{A + C}{2}} = \\frac{\\sin B - 1}{-2 \\cos \\frac{A + C}{2}}.\\]",
+            1
+        ],
+        [
+            "Step 10:\n$$\\frac{\\sin B - 1}{-2 \\cos \\frac{A + C}{2}} = \\frac{-1 + \\sin \\left( 180 - 3d \\right)}{-2 \\cos \\left( 90 - d \\right)} = \\frac{1 - \\sin 3d}{\\sin d}.$$",
+            1
+        ],
+        [
+            "Step 11: $$\\frac{1 - \\sin 3d}{\\sin d} = \\frac{1 - (3 \\sin d - 4 \\sin^3 d)}{\\sin d} = \\frac{4 \\sin^3 d - 3 \\sin d}{\\sin d} = 4 \\sin^2 d - 3.$$",
+            1
+        ],
+        [
+            "Step 12: $$4 \\sin^2 d - 3 = \\frac{-1}{2} \\left( 8 \\sin^2 d - 12 \\right) = - \\frac{1}{2} \\left( 4 - 4 \\cos 2d \\right) = -2 + 2 \\cos 2d.$$",
+            1
+        ],
+        [
+            "Step 13:\n$$-2 + 2 \\cos 2d = -2 + 2 \\left( 2 \\cos^2 d - 1 \\right) = 2 \\left( 2 \\cos^2 d - 2 \\right) = 4 \\cos^2 d - 4.$$\n\nNote: The final answer is not yet generated.",
+            1
+        ]
+    ],
+    "time": 103.05359935760498,
+    "total_tokens": 11102,
+    "final_answer_tokens": 971,
+    "model": "meta-llama/Llama-Vision-Free"
+}

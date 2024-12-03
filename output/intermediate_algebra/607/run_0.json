@@ -1,0 +1,26 @@
+{
+    "problem": "Find the greatest integer less than $(\\sqrt{7} + \\sqrt{5})^6.$  (Do not use a calculator!)",
+    "level": "Level 3",
+    "type": "Intermediate Algebra",
+    "solution": "Let $x = \\sqrt{7} + \\sqrt{5}$ and $y = \\sqrt{7} - \\sqrt{5}.$\n\nFirst, we can square $x = \\sqrt{7} + \\sqrt{5}$ and $y = \\sqrt{7} - \\sqrt{5},$ to get\n\\begin{align*}\nx^2 &= (\\sqrt{7} + \\sqrt{5})^2 = 7 + 2 \\sqrt{35} + 5 = 12 + 2 \\sqrt{35}, \\\\\ny^2 &= (\\sqrt{7} - \\sqrt{5})^2 = 7 - 2 \\sqrt{35} + 5 = 12 - 2 \\sqrt{35}.\n\\end{align*}Note that $x^2$ and $y^2$ are radical conjugates.  Also, $x^2 y^2 = (12 + 2 \\sqrt{35})(12 - 2 \\sqrt{35}) = 12^2 - 2^2 \\cdot 35 = 4,$ so\n\\[y^2 = \\frac{4}{x^2} = \\frac{4}{12 + 2 \\sqrt{35}} < 1.\\]Then\n\\[x^4 = (12 + 2 \\sqrt{35})^2 = 12^2 + 2 \\cdot 12 \\cdot 2 \\sqrt{35} + 2^2 \\cdot 35 = 284 + 48 \\sqrt{35},\\]and\n\\begin{align*}\nx^6 &= x^2 \\cdot x^4 \\\\\n&= (12 + 2 \\sqrt{35})(284 + 48 \\sqrt{35}) \\\\\n&= 12 \\cdot 284 + 12 \\cdot 48 \\sqrt{35} + 2 \\sqrt{35} \\cdot 284 + 2 \\cdot \\sqrt{35} \\cdot 48 \\cdot \\sqrt{35} \\\\\n&= 6768 + 1144 \\sqrt{35}.\n\\end{align*}Then $y^6$ is the radical conjugate of $x^6,$ so $y^6 = 6768 - 1144 \\sqrt{35}.$  Hence,\n\\[x^6 + y^6 = (6768 + 1144 \\sqrt{35}) + (6768 - 1144 \\sqrt{35}) = 13536.\\]Since $0 < y^6 < 1,$ the greatest integer less than $x^6$ is $\\boxed{13535}.$",
+    "is_solved": false,
+    "model_solution": "## Step 1: Consider expanding $(\\sqrt{7} + \\sqrt{5})^6$ using the binomial theorem.\n$(\\sqrt{7} + \\sqrt{5})^6 = (\\sqrt{7})^6 + 6(\\sqrt{7})^5(\\sqrt{5}) + \\frac{6!}{2!4!}(\\sqrt{7})^4(\\sqrt{5})^2 + \\frac{6!}{3!3!}(\\sqrt{7})^3(\\sqrt{5})^3 + 6(\\sqrt{7})^2(\\sqrt{5})^4 + (\\sqrt{5})^6.$\n## Step 2: Simplify each term in the expansion.\n$=(7)^3 + 6 \\cdot 7^2 \\sqrt{35} + 15 \\cdot 7 \\cdot 5 + 20 \\cdot 35 + 6 \\cdot 5^2 + 5^3.$",
+    "steps": [
+        "## Step 1: Consider expanding $(\\sqrt{7} + \\sqrt{5})^6$ using the binomial theorem.\n$(\\sqrt{7} + \\sqrt{5})^6 = (\\sqrt{7})^6 + 6(\\sqrt{7})^5(\\sqrt{5}) + \\frac{6!}{2!4!}(\\sqrt{7})^4(\\sqrt{5})^2 + \\frac{6!}{3!3!}(\\sqrt{7})^3(\\sqrt{5})^3 + 6(\\sqrt{7})^2(\\sqrt{5})^4 + (\\sqrt{5})^6.$",
+        "## Step 2: Simplify each term in the expansion.\n$=(7)^3 + 6 \\cdot 7^2 \\sqrt{35} + 15 \\cdot 7 \\cdot 5 + 20 \\cdot 35 + 6 \\cdot 5^2 + 5^3.$"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Consider expanding $(\\sqrt{7} + \\sqrt{5})^6$ using the binomial theorem.\n$(\\sqrt{7} + \\sqrt{5})^6 = (\\sqrt{7})^6 + 6(\\sqrt{7})^5(\\sqrt{5}) + \\frac{6!}{2!4!}(\\sqrt{7})^4(\\sqrt{5})^2 + \\frac{6!}{3!3!}(\\sqrt{7})^3(\\sqrt{5})^3 + 6(\\sqrt{7})^2(\\sqrt{5})^4 + (\\sqrt{5})^6.$",
+            1
+        ],
+        [
+            "## Step 2: Simplify each term in the expansion.\n$=(7)^3 + 6 \\cdot 7^2 \\sqrt{35} + 15 \\cdot 7 \\cdot 5 + 20 \\cdot 35 + 6 \\cdot 5^2 + 5^3.$",
+            1
+        ]
+    ],
+    "time": 27.23324704170227,
+    "total_tokens": 1062,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

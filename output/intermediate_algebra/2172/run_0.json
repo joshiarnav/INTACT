@@ -1,0 +1,36 @@
+{
+    "problem": "Let $x,$ $y,$ and $z$ be nonnegative real numbers such that $x^2 + 2y^2 + 5z^2 = 22.$  Find the maximum value of\n\\[xy + xz + yz.\\]",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "Suppose equality occurs when $(x,y,z) = (x_0,y_0,z_0).$  To find and prove the minimum value, it looks like we're going to have to put together some inequalities like\n\\[x^2 + y^2 \\ge 2xy.\\]Remembering that equality occurs when $x = x_0$ and $y = y_0,$ or $\\frac{x}{x_0} = \\frac{y}{y_0} = 1,$ we form the inequality\n\\[\\frac{x^2}{x_0^2} + \\frac{y^2}{y_0^2} \\ge \\frac{2xy}{x_0 y_0}.\\]Then\n\\[\\frac{y_0}{2x_0} \\cdot x^2 + \\frac{x_0}{2y_0} \\cdot y^2 \\ge xy.\\]Similarly,\n\\begin{align*}\n\\frac{z_0}{2x_0} \\cdot x^2 + \\frac{x_0}{2z_0} \\cdot z^2 \\ge xz, \\\\\n\\frac{z_0}{2y_0} \\cdot y^2 + \\frac{y_0}{2z_0} \\cdot z^2 \\ge xz.\n\\end{align*}Adding these, we get\n\\[\\frac{y_0 + z_0}{2x_0} \\cdot x^2 + \\frac{x_0 + z_0}{2y_0} \\cdot y^2 + \\frac{x_0 + y_0}{2z_0} \\cdot z^2 \\ge xy + xz + yz.\\]Since we are given that $x^2 + 2y^2 + 5z^2 = 22,$ we want $x_0,$ $y_0,$ and $z_0$ to satisfy\n\\[\\frac{y_0 + z_0}{x_0} : \\frac{x_0 + z_0}{y_0} : \\frac{x_0 + y_0}{z_0} = 1:2:5.\\]Let\n\\begin{align*}\ny_0 + z_0 &= kx_0, \\\\\nx_0 + z_0 &= 2ky_0, \\\\\nx_0 + y_0 &= 5kz_0.\n\\end{align*}Then\n\\begin{align*}\nx_0 + y_0 + z_0 &= (k + 1) x_0, \\\\\nx_0 + y_0 + z_0 &= (2k + 1) y_0, \\\\\nx_0 + y_0 + z_0 &= (5k + 1) z_0.\n\\end{align*}Let $t = x_0 + y_0 + z_0.$  Then $x_0 = \\frac{t}{k + 1},$ $y_0 = \\frac{t}{2k + 1},$ and $z_0 = \\frac{t}{5k + 1},$ so\n\\[\\frac{t}{k + 1} + \\frac{t}{2k + 1} + \\frac{t}{5k + 1} = t.\\]Hence,\n\\[\\frac{1}{k + 1} + \\frac{1}{2k + 1} + \\frac{1}{5k + 1} = 1.\\]This simplifies to $10k^3 - 8k - 2 = 0,$ which factors as $2(k - 1)(5k^2 + 5k + 1) = 0.$  Since $k$ must be positive, $k = 1.$\n\nThen $x_0 = \\frac{t}{2},$ $y_0 = \\frac{t}{3},$ and $z_0 = \\frac{t}{6}.$  Substituting into $x^2 + 2y^2 + 5z^2 = 22,$ we get\n\\[\\frac{t^2}{4} + \\frac{2t^2}{9} + \\frac{5t^2}{36} = 22.\\]Solving, we find $t = 6,$ and the maximum value of $xy + xz + yz$ is\n\\[\\frac{t}{2} \\cdot \\frac{t}{3} + \\frac{t}{2} \\cdot \\frac{t}{6} + \\frac{t}{3} \\cdot \\frac{t}{6} = \\frac{11}{36} t^2 = \\boxed{11}.\\]",
+    "is_solved": true,
+    "model_solution": "## Step 1: Apply the AM-GM inequality to the expression $x^2 + 2y^2 + 5z^2 = 22$\nWe have that \\[x^2 + 2y^2 + 5z^2 \\ge 3 \\sqrt[3]{(x^2)(2y^2)(5z^2)}\\]\n\n## Step 2: Simplify the expression\nThe inequality becomes $22 \\ge 3 \\sqrt[3]{20x^2y^2z^2}$.\n\n## Step 3: Simplify further\nThis gives us \\[22/3 \\ge \\sqrt[3]{20x^2y^2z^2}.\\]\n\n## Step 4: Cube both sides of the inequality\nThis leads to $\\left( \\frac{22}{3} \\right)^3 \\ge 20x^2y^2z^2$\n\n## Step 5: Simplify the left-hand side of the inequality\n$\\frac{10648}{27} \\ge 20x^2y^2z^2$\n\n## Step 6: Divide both sides of the inequality by 20\n$\\frac\n## Step 7: Simplify the right-hand side of the inequality\n$\\frac{532}{135} \\ge x^2y^2z^2$\n\n## Step 8: Take the square root of both sides of the inequality\n$\\sqrt{\\frac{532}{135}} \\ge xyz$\n\n## Step 9: Divide both sides of the inequality by $xyz$ to isolate the expression $xy + xz + yz$\n$\\frac{\\sqrt{532}}{\\sqrt{135}xyz} \\ge \\frac{xy + xz + yz}{xyz}$\n\n## Step 10: Simplify the right-hand side of the inequality\n$\\frac{\\sqrt{532}}{\\sqrt{135}xyz} \\ge \\frac{1}{xyz}(xy + xz + yz)$\n## Step 11: Use the AM-GM inequality on the expression $(x^2)(2y^2)(5z^2)$\n\\[\\frac{x^2 + 2y^2 + 5z^2}{3} \\ge \\sqrt[3]{(x^2)(2y^2)(5z^2)}\\]\n## Step 12: $\\frac{22}{3} \\ge \\sqrt[3]{20x^2y^2z^2}$\n\n\nThe final answer is: $\\boxed{11/3}$",
+    "steps": [
+        "## Step 1: Apply the AM-GM inequality to the expression $x^2 + 2y^2 + 5z^2 = 22$\nWe have that \\[x^2 + 2y^2 + 5z^2 \\ge 3 \\sqrt[3]{(x^2)(2y^2)(5z^2)}\\]\n\n## Step 2: Simplify the expression\nThe inequality becomes $22 \\ge 3 \\sqrt[3]{20x^2y^2z^2}$.\n\n## Step 3: Simplify further\nThis gives us \\[22/3 \\ge \\sqrt[3]{20x^2y^2z^2}.\\]\n\n## Step 4: Cube both sides of the inequality\nThis leads to $\\left( \\frac{22}{3} \\right)^3 \\ge 20x^2y^2z^2$\n\n## Step 5: Simplify the left-hand side of the inequality\n$\\frac{10648}{27} \\ge 20x^2y^2z^2$\n\n## Step 6: Divide both sides of the inequality by 20\n$\\frac",
+        "## Step 7: Simplify the right-hand side of the inequality\n$\\frac{532}{135} \\ge x^2y^2z^2$\n\n## Step 8: Take the square root of both sides of the inequality\n$\\sqrt{\\frac{532}{135}} \\ge xyz$\n\n## Step 9: Divide both sides of the inequality by $xyz$ to isolate the expression $xy + xz + yz$\n$\\frac{\\sqrt{532}}{\\sqrt{135}xyz} \\ge \\frac{xy + xz + yz}{xyz}$\n\n## Step 10: Simplify the right-hand side of the inequality\n$\\frac{\\sqrt{532}}{\\sqrt{135}xyz} \\ge \\frac{1}{xyz}(xy + xz + yz)$",
+        "## Step 11: Use the AM-GM inequality on the expression $(x^2)(2y^2)(5z^2)$\n\\[\\frac{x^2 + 2y^2 + 5z^2}{3} \\ge \\sqrt[3]{(x^2)(2y^2)(5z^2)}\\]",
+        "## Step 12: $\\frac{22}{3} \\ge \\sqrt[3]{20x^2y^2z^2}$\n\n\nThe final answer is: $\\boxed{11/3}$"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Apply the AM-GM inequality to the expression $x^2 + 2y^2 + 5z^2 = 22$\nWe have that \\[x^2 + 2y^2 + 5z^2 \\ge 3 \\sqrt[3]{(x^2)(2y^2)(5z^2)}\\]\n\n## Step 2: Simplify the expression\nThe inequality becomes $22 \\ge 3 \\sqrt[3]{20x^2y^2z^2}$.\n\n## Step 3: Simplify further\nThis gives us \\[22/3 \\ge \\sqrt[3]{20x^2y^2z^2}.\\]\n\n## Step 4: Cube both sides of the inequality\nThis leads to $\\left( \\frac{22}{3} \\right)^3 \\ge 20x^2y^2z^2$\n\n## Step 5: Simplify the left-hand side of the inequality\n$\\frac{10648}{27} \\ge 20x^2y^2z^2$\n\n## Step 6: Divide both sides of the inequality by 20\n$\\frac",
+            1
+        ],
+        [
+            "## Step 7: Simplify the right-hand side of the inequality\n$\\frac{532}{135} \\ge x^2y^2z^2$\n\n## Step 8: Take the square root of both sides of the inequality\n$\\sqrt{\\frac{532}{135}} \\ge xyz$\n\n## Step 9: Divide both sides of the inequality by $xyz$ to isolate the expression $xy + xz + yz$\n$\\frac{\\sqrt{532}}{\\sqrt{135}xyz} \\ge \\frac{xy + xz + yz}{xyz}$\n\n## Step 10: Simplify the right-hand side of the inequality\n$\\frac{\\sqrt{532}}{\\sqrt{135}xyz} \\ge \\frac{1}{xyz}(xy + xz + yz)$",
+            1
+        ],
+        [
+            "## Step 11: Use the AM-GM inequality on the expression $(x^2)(2y^2)(5z^2)$\n\\[\\frac{x^2 + 2y^2 + 5z^2}{3} \\ge \\sqrt[3]{(x^2)(2y^2)(5z^2)}\\]",
+            1
+        ],
+        [
+            "## Step 12: $\\frac{22}{3} \\ge \\sqrt[3]{20x^2y^2z^2}$\n\n\nThe final answer is: $\\boxed{11/3}$",
+            1
+        ]
+    ],
+    "time": 53.471961975097656,
+    "total_tokens": 4339,
+    "final_answer_tokens": 650,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,66 @@
+{
+    "problem": "Let $A(2,2)$ and $B(7,7)$ be points in the plane. Define $R$ as the region in the first quadrant consisting of those points $C$ such that $\\triangle ABC$ is an acute triangle. What is the area of the region $R$?",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "For $\\triangle ABC$ to be acute, all angles must be acute.\n\nFor $\\angle A$ to be acute, point $C$ must lie above the line passing through $A$ and perpendicular to $\\overline{AB}$. The segment of that line in the first quadrant lies between $P(4,0)$ and $Q(0, 4)$.\n\nFor $\\angle B$ to be acute, point $C$ must lie below the line through $B$ and perpendicular to $\\overline{AB}$. The segment of that line in the first quadrant lies between $S(14,0)$ and $T(0, 14)$.\n\nFor $\\angle C$ to be acute, point $C$ must lie outside the circle $U$ that has $\\overline{AB}$ as a diameter.\n\nLet $O$ denote the origin. Region $R$, shaded below, has area equal to \\begin{align*}\n\\text{Area}(\\triangle OST) - \\text{Area}(\\triangle OPQ) - \\text{Area(Circle }U) &= \\frac{1}{2}\\cdot 14^2 - \\frac{1}{2}\\cdot 4^2 -\n\\pi\\left(\\frac{\\sqrt{50}}{2}\\right)^{\\hspace{-3pt}2}\\\\\n&= \\boxed{90 - \\frac{25}{2}\\pi}.\n\\end{align*}[asy]\npair T,Q,O,P,J,A,B;\nP=(3,0);\nJ=(11.4,0);\nT=(0,11.4);\nQ=(0,3);\nO=(0,0);\nA=(1.5,1.5);\nB=(5.7,5.7);\nfill(T--J--P--Q--cycle,gray(0.7));\nfill(Circle((3.6,3.6),3),white);\ndraw((-3,0)--(15,0),Arrow);\ndraw((0,-3)--(0,15),Arrow);\nlabel(\"$O$\",O,SW);\nlabel(\"$P$\",P,S);\nlabel(\"$S$\",J,S);\nlabel(\"$B$\",B,NE);\nlabel(\"$T$\",T,W);\nlabel(\"$Q$\",Q,W);\nlabel(\"$A$\",A,SW);\ndraw(Circle((3.6,3.6),3),linewidth(0.7));\ndraw(P--J--T--Q--cycle,linewidth(0.7));\n[/asy]",
+    "is_solved": false,
+    "model_solution": "Step 1:  To solve this problem, we need to understand what an acute triangle is and how it relates to the given points $A(2,2)$ and $B(7,7)$.\nThe acute triangle $\\triangle ABC$ is one where all three angles are less than $90^{\\circ}$.\nThe region $R$ in the first quadrant consists of points $C$ such that $\\triangle ABC$ is an acute triangle.\nStep 2:\nThe locus of points $C$ such that $\\triangle ABC$ is acute is the region inside the semicircle with endpoints $A$ and $B$ and lying below the line $AB$ and above the angle bisector of $\\angle A$ and the angle bisector of $\\angle B$.\nStep 2:  The angle bisector of $\\angle A$ is $y = x,$ and the angle bisector of $\\angle B$ is $y = 2x.$\nStep 3:  Let's find the points of intersection of the semicircles with equations $x+y=9$ and $y=x$ and $y=2x$.\n\nThe equation of the semicircle is $x^2+(x-9)^2=4$, and solving this we get $x=2$, we plug this value in to get $y=2$, we then plug this into the other two equations and we get the intersection points.\n\nThe intersection points are $\\left(\\frac{9}{3},\\frac{9}{3}\\right)$ and $\\left(\\frac{9}{5},\\frac{18}{5}\\right)$.\n\nLet's find the area of the region $R$.\n\nThe area is equal to the area of the sector $OAB$ minus the area of the sector $OCD$.\n\nThe area of the sector $OAB$ is $\\frac{1}{4}\\pi\\cdot 9^2$, and the area of the sector $OCD$ is $\\frac{1}{4}\\pi\\cdot 9^2\\cdot\\frac{4}{9}$.\n\nThe area of the region $R$ is $\\frac{1}{\nSubtract the area of the triangle $OCD$ from the area of the sector $OAB$, which is $\\frac{1}{4}\\pi\\cdot 9^2 - \\frac{1}{2}\\cdot \\frac{9}{5}\\cdot \\frac{18}{5} = \\frac{81\\pi}{4} - \\frac{81}{5}$\nStep 4:  The area of the region $R$ is $\\frac{81\\pi}{4} - \\frac{81}{5}$\nStep 5: $\\frac{81\\pi}{4} - \\frac{81}{5}$\n$\\frac{81\\pi}{4} - \\frac{81}{5}$\n$\\frac{405\\pi-324}{20}$\n$\\frac{405\\pi-324}{20}$",
+    "steps": [
+        "Step 1:  To solve this problem, we need to understand what an acute triangle is and how it relates to the given points $A(2,2)$ and $B(7,7)$.\nThe acute triangle $\\triangle ABC$ is one where all three angles are less than $90^{\\circ}$.\nThe region $R$ in the first quadrant consists of points $C$ such that $\\triangle ABC$ is an acute triangle.",
+        "Step 2:\nThe locus of points $C$ such that $\\triangle ABC$ is acute is the region inside the semicircle with endpoints $A$ and $B$ and lying below the line $AB$ and above the angle bisector of $\\angle A$ and the angle bisector of $\\angle B$.",
+        "Step 2:  The angle bisector of $\\angle A$ is $y = x,$ and the angle bisector of $\\angle B$ is $y = 2x.$",
+        "Step 3:  Let's find the points of intersection of the semicircles with equations $x+y=9$ and $y=x$ and $y=2x$.\n\nThe equation of the semicircle is $x^2+(x-9)^2=4$, and solving this we get $x=2$, we plug this value in to get $y=2$, we then plug this into the other two equations and we get the intersection points.\n\nThe intersection points are $\\left(\\frac{9}{3},\\frac{9}{3}\\right)$ and $\\left(\\frac{9}{5},\\frac{18}{5}\\right)$.\n\nLet's find the area of the region $R$.\n\nThe area is equal to the area of the sector $OAB$ minus the area of the sector $OCD$.\n\nThe area of the sector $OAB$ is $\\frac{1}{4}\\pi\\cdot 9^2$, and the area of the sector $OCD$ is $\\frac{1}{4}\\pi\\cdot 9^2\\cdot\\frac{4}{9}$.\n\nThe area of the region $R$ is $\\frac{1}{",
+        "Subtract the area of the triangle $OCD$ from the area of the sector $OAB$, which is $\\frac{1}{4}\\pi\\cdot 9^2 - \\frac{1}{2}\\cdot \\frac{9}{5}\\cdot \\frac{18}{5} = \\frac{81\\pi}{4} - \\frac{81}{5}$",
+        "Step 4:  The area of the region $R$ is $\\frac{81\\pi}{4} - \\frac{81}{5}$",
+        "Step 5: $\\frac{81\\pi}{4} - \\frac{81}{5}$",
+        "$\\frac{81\\pi}{4} - \\frac{81}{5}$",
+        "$\\frac{405\\pi-324}{20}$",
+        "$\\frac{405\\pi-324}{20}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  To solve this problem, we need to understand what an acute triangle is and how it relates to the given points $A(2,2)$ and $B(7,7)$.\nThe acute triangle $\\triangle ABC$ is one where all three angles are less than $90^{\\circ}$.\nThe region $R$ in the first quadrant consists of points $C$ such that $\\triangle ABC$ is an acute triangle.",
+            1
+        ],
+        [
+            "Step 2:\nThe locus of points $C$ such that $\\triangle ABC$ is acute is the region inside the semicircle with endpoints $A$ and $B$ and lying below the line $AB$ and above the angle bisector of $\\angle A$ and the angle bisector of $\\angle B$.",
+            1
+        ],
+        [
+            "Step 2:  The angle bisector of $\\angle A$ is $y = x,$ and the angle bisector of $\\angle B$ is $y = 2x.$",
+            1
+        ],
+        [
+            "Step 3:  Let's find the points of intersection of the semicircles with equations $x+y=9$ and $y=x$ and $y=2x$.\n\nThe equation of the semicircle is $x^2+(x-9)^2=4$, and solving this we get $x=2$, we plug this value in to get $y=2$, we then plug this into the other two equations and we get the intersection points.\n\nThe intersection points are $\\left(\\frac{9}{3},\\frac{9}{3}\\right)$ and $\\left(\\frac{9}{5},\\frac{18}{5}\\right)$.\n\nLet's find the area of the region $R$.\n\nThe area is equal to the area of the sector $OAB$ minus the area of the sector $OCD$.\n\nThe area of the sector $OAB$ is $\\frac{1}{4}\\pi\\cdot 9^2$, and the area of the sector $OCD$ is $\\frac{1}{4}\\pi\\cdot 9^2\\cdot\\frac{4}{9}$.\n\nThe area of the region $R$ is $\\frac{1}{",
+            1
+        ],
+        [
+            "Subtract the area of the triangle $OCD$ from the area of the sector $OAB$, which is $\\frac{1}{4}\\pi\\cdot 9^2 - \\frac{1}{2}\\cdot \\frac{9}{5}\\cdot \\frac{18}{5} = \\frac{81\\pi}{4} - \\frac{81}{5}$",
+            1
+        ],
+        [
+            "Step 4:  The area of the region $R$ is $\\frac{81\\pi}{4} - \\frac{81}{5}$",
+            1
+        ],
+        [
+            "Step 5: $\\frac{81\\pi}{4} - \\frac{81}{5}$",
+            1
+        ],
+        [
+            "$\\frac{81\\pi}{4} - \\frac{81}{5}$",
+            1
+        ],
+        [
+            "$\\frac{405\\pi-324}{20}$",
+            1
+        ],
+        [
+            "$\\frac{405\\pi-324}{20}$",
+            1
+        ]
+    ],
+    "time": 132.12967562675476,
+    "total_tokens": 11301,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

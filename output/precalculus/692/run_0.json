@@ -1,0 +1,61 @@
+{
+    "problem": "Find the curve defined by the equation\n\\[r = \\cos \\theta + \\sin \\theta.\\](A) Line\n(B) Circle\n(C) Parabola\n(D) Ellipse\n(E) Hyperbola\n\nEnter the letter of the correct option.",
+    "level": "Level 1",
+    "type": "Precalculus",
+    "solution": "We are given that $r = \\cos \\theta + \\sin \\theta.$  Then\n\\[r^2 = r \\cos \\theta + r \\sin \\theta,\\]so $x^2 + y^2 = x + y.$  We can write this equation as\n\\[\\left( x - \\frac{1}{2} \\right)^2 + \\left( y - \\frac{1}{2} \\right)^2 = \\frac{1}{2}.\\]Thus, the graph is a circle.  The answer is $\\boxed{\\text{(B)}}.$\n\n[asy]\nunitsize(2 cm);\n\npair moo (real t) {\n  real r = cos(t) + sin(t);\n  return (r*cos(t), r*sin(t));\n}\n\npath foo = moo(0);\nreal t;\n\nfor (t = 0; t <= pi + 0.1; t = t + 0.1) {\n  foo = foo--moo(t);\n}\n\ndraw(foo,red);\n\ndraw((-0.5,0)--(1.5,0));\ndraw((0,-0.5)--(0,1.5));\nlabel(\"$r = \\cos \\theta + \\sin \\theta$\", (2,1), red);\n[/asy]",
+    "is_solved": true,
+    "model_solution": "Step 1: Recognize that the equation is in polar coordinates, where $r$ represents the distance from the origin and $\\theta$ represents the angle in standard position.\nStep 2: Rewrite the equation in terms of $x$ and $y$, noting that $x=r\\cos\\theta$ and $y=r\\sin\\theta$.\nStep 3: Apply the substitution $x=r\\cos\\theta$ and $y=r\\sin\\theta$ to the equation $r=\\cos \\theta + \\sin \\theta$ to get $r=\\frac{x}{r}+\\frac{y}{r}$, which simplifies to $r^2=x+y$.\nStep 4: Recognize that $r^2=x^2+y^2$ is the equation of a circle, and note that the given equation is not in this form because of the $x+y$ term.\nStep 5: Manipulate the equation $r^2=x+y$ to better understand its form by multiplying through by $r$ to get $r^3=xr+yr$ and then rearrange using $r=r\\cos\\theta + r\\sin\\theta$ to get $r^3=r(x+y)$\nStep 6: Note that $r^3=r(x+y)$ can be further manipulated to separate $r$ from $(x+y)$ by factoring $r$ out of the equation to get $r(r^2-x-y)=0$.\nStep 7: \n\\[r(r^2-x-y)=0\\]\nimplies\n\\[r=0\\]\nor\n\\[r^2=x+ y.\\]\nr^2 = x + y is the equation of a parabola.\nStep 8:\nThe equation $r^2 = x + y$ can be rewritten in the standard form of a parabola, which is $\\frac{x^2}{4} = \\frac{y^2}{4}$.\n\nFinal Answer: The final answer is (C).",
+    "steps": [
+        "Step 1: Recognize that the equation is in polar coordinates, where $r$ represents the distance from the origin and $\\theta$ represents the angle in standard position.",
+        "Step 2: Rewrite the equation in terms of $x$ and $y$, noting that $x=r\\cos\\theta$ and $y=r\\sin\\theta$.",
+        "Step 3: Apply the substitution $x=r\\cos\\theta$ and $y=r\\sin\\theta$ to the equation $r=\\cos \\theta + \\sin \\theta$ to get $r=\\frac{x}{r}+\\frac{y}{r}$, which simplifies to $r^2=x+y$.",
+        "Step 4: Recognize that $r^2=x^2+y^2$ is the equation of a circle, and note that the given equation is not in this form because of the $x+y$ term.",
+        "Step 5: Manipulate the equation $r^2=x+y$ to better understand its form by multiplying through by $r$ to get $r^3=xr+yr$ and then rearrange using $r=r\\cos\\theta + r\\sin\\theta$ to get $r^3=r(x+y)$",
+        "Step 6: Note that $r^3=r(x+y)$ can be further manipulated to separate $r$ from $(x+y)$ by factoring $r$ out of the equation to get $r(r^2-x-y)=0$.",
+        "Step 7: \n\\[r(r^2-x-y)=0\\]\nimplies\n\\[r=0\\]\nor\n\\[r^2=x+ y.\\]",
+        "r^2 = x + y is the equation of a parabola.",
+        "Step 8:\nThe equation $r^2 = x + y$ can be rewritten in the standard form of a parabola, which is $\\frac{x^2}{4} = \\frac{y^2}{4}$.\n\nFinal Answer: The final answer is (C)."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Recognize that the equation is in polar coordinates, where $r$ represents the distance from the origin and $\\theta$ represents the angle in standard position.",
+            1
+        ],
+        [
+            "Step 2: Rewrite the equation in terms of $x$ and $y$, noting that $x=r\\cos\\theta$ and $y=r\\sin\\theta$.",
+            1
+        ],
+        [
+            "Step 3: Apply the substitution $x=r\\cos\\theta$ and $y=r\\sin\\theta$ to the equation $r=\\cos \\theta + \\sin \\theta$ to get $r=\\frac{x}{r}+\\frac{y}{r}$, which simplifies to $r^2=x+y$.",
+            1
+        ],
+        [
+            "Step 4: Recognize that $r^2=x^2+y^2$ is the equation of a circle, and note that the given equation is not in this form because of the $x+y$ term.",
+            1
+        ],
+        [
+            "Step 5: Manipulate the equation $r^2=x+y$ to better understand its form by multiplying through by $r$ to get $r^3=xr+yr$ and then rearrange using $r=r\\cos\\theta + r\\sin\\theta$ to get $r^3=r(x+y)$",
+            1
+        ],
+        [
+            "Step 6: Note that $r^3=r(x+y)$ can be further manipulated to separate $r$ from $(x+y)$ by factoring $r$ out of the equation to get $r(r^2-x-y)=0$.",
+            1
+        ],
+        [
+            "Step 7: \n\\[r(r^2-x-y)=0\\]\nimplies\n\\[r=0\\]\nor\n\\[r^2=x+ y.\\]",
+            1
+        ],
+        [
+            "r^2 = x + y is the equation of a parabola.",
+            1
+        ],
+        [
+            "Step 8:\nThe equation $r^2 = x + y$ can be rewritten in the standard form of a parabola, which is $\\frac{x^2}{4} = \\frac{y^2}{4}$.\n\nFinal Answer: The final answer is (C).",
+            1
+        ]
+    ],
+    "time": 127.0757703781128,
+    "total_tokens": 6361,
+    "final_answer_tokens": 529,
+    "model": "meta-llama/Llama-Vision-Free"
+}

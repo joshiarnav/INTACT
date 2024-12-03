@@ -1,0 +1,51 @@
+{
+    "problem": "Let $m$ and $n$ be positive integers such that $m = 24n + 51$. What is the largest possible value of the greatest common divisor of $2m$ and $3n$?",
+    "level": "Level 5",
+    "type": "Number Theory",
+    "solution": "Using the Euclidean Algorithm, we obtain \\begin{align*}\n\\text{gcd}(2m, 3n) &= \\text{gcd}(2m-3n\\cdot16, 3n) \\\\\n&= \\text{gcd}(2\\cdot(24n+51)-48n, 3n) \\\\\n&= \\text{gcd}(102, 3n) \\\\\n&\\leq 102.\n\\end{align*}Therefore, the largest possible value of $\\text{gcd}(2m, 3n)$ is $\\boxed{102}$. For example, this is possible when $n=34 \\Rightarrow m=867$, as $3n=102$ and $2m=1734=102\\cdot17$.",
+    "is_solved": true,
+    "model_solution": "Step 1: We are given that $m = 24n + 51$. The first step is to express $2m$ in terms of $n$.\nStep 2: $2m = 2(24n + 51) = 48n + 102$\nStep 3: Use the Euclidean Algorithm to find $\\gcd(48n + 102, 3n)$, starting with $\\gcd(48n + 102, 3n) = \\gcd(48n + 102 - 16(3n), 3n) = \\gcd(6, 3n)$.\nStep 4: $\\gcd(6, 3n) = \\gcd(6, 3n - 2 \\times 2) = \\gcd(6, n)$\nStep 5: $\\gcd(6, n) = 6$\nStep 6: Since $6$ is a divisor of both $6$ and $n$, and $6$ is the largest number that divides both of them, the greatest common divisor of $2m$ and $3n$ is $\\boxed{6}$.\nStep 7: Since $\\gcd(6, n) = 6$, we can find $n$ such that the greatest common divisor is indeed $6$. Setting $n = 6$, we get $m = 24 \\times 6 + 51 = 159$. Therefore, the pair $(m, n) = (159, 6)$ is a valid solution.\n\nFinal Answer: The final answer is $\\boxed{6}$.",
+    "steps": [
+        "Step 1: We are given that $m = 24n + 51$. The first step is to express $2m$ in terms of $n$.",
+        "Step 2: $2m = 2(24n + 51) = 48n + 102$",
+        "Step 3: Use the Euclidean Algorithm to find $\\gcd(48n + 102, 3n)$, starting with $\\gcd(48n + 102, 3n) = \\gcd(48n + 102 - 16(3n), 3n) = \\gcd(6, 3n)$.",
+        "Step 4: $\\gcd(6, 3n) = \\gcd(6, 3n - 2 \\times 2) = \\gcd(6, n)$",
+        "Step 5: $\\gcd(6, n) = 6$",
+        "Step 6: Since $6$ is a divisor of both $6$ and $n$, and $6$ is the largest number that divides both of them, the greatest common divisor of $2m$ and $3n$ is $\\boxed{6}$.",
+        "Step 7: Since $\\gcd(6, n) = 6$, we can find $n$ such that the greatest common divisor is indeed $6$. Setting $n = 6$, we get $m = 24 \\times 6 + 51 = 159$. Therefore, the pair $(m, n) = (159, 6)$ is a valid solution.\n\nFinal Answer: The final answer is $\\boxed{6}$."
+    ],
+    "full_steps": [
+        [
+            "Step 1: We are given that $m = 24n + 51$. The first step is to express $2m$ in terms of $n$.",
+            1
+        ],
+        [
+            "Step 2: $2m = 2(24n + 51) = 48n + 102$",
+            1
+        ],
+        [
+            "Step 3: Use the Euclidean Algorithm to find $\\gcd(48n + 102, 3n)$, starting with $\\gcd(48n + 102, 3n) = \\gcd(48n + 102 - 16(3n), 3n) = \\gcd(6, 3n)$.",
+            1
+        ],
+        [
+            "Step 4: $\\gcd(6, 3n) = \\gcd(6, 3n - 2 \\times 2) = \\gcd(6, n)$",
+            1
+        ],
+        [
+            "Step 5: $\\gcd(6, n) = 6$",
+            1
+        ],
+        [
+            "Step 6: Since $6$ is a divisor of both $6$ and $n$, and $6$ is the largest number that divides both of them, the greatest common divisor of $2m$ and $3n$ is $\\boxed{6}$.",
+            1
+        ],
+        [
+            "Step 7: Since $\\gcd(6, n) = 6$, we can find $n$ such that the greatest common divisor is indeed $6$. Setting $n = 6$, we get $m = 24 \\times 6 + 51 = 159$. Therefore, the pair $(m, n) = (159, 6)$ is a valid solution.\n\nFinal Answer: The final answer is $\\boxed{6}$.",
+            1
+        ]
+    ],
+    "time": 93.05089211463928,
+    "total_tokens": 3825,
+    "final_answer_tokens": 435,
+    "model": "meta-llama/Llama-Vision-Free"
+}

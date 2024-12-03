@@ -1,0 +1,46 @@
+{
+    "problem": "If $a,b,c$ are positive integers less than $13$ such that \\begin{align*}\n2ab+bc+ca&\\equiv 0\\pmod{13}\\\\\nab+2bc+ca&\\equiv 6abc\\pmod{13}\\\\\nab+bc+2ca&\\equiv 8abc\\pmod {13}\n\\end{align*}then determine the remainder when $a+b+c$ is divided by $13$.",
+    "level": "Level 5",
+    "type": "Number Theory",
+    "solution": "Since $13$ is a prime, each of $a,b,c$ is invertible modulo $13$. Let $a^{-1}=x, b^{-1}=y, c^{-1}=z$ in modulo $13$. Multiplying both sides of each congruence by $(abc)^{-1}$ yields \\begin{align*}\n2z+x+y&\\equiv 0 \\pmod{13},\\\\\nz+2x+y&\\equiv 6 \\pmod{13},\\\\\nz+x+2y&\\equiv 8 \\pmod {13}.\n\\end{align*}Adding all three together gives $4(x+y+z)\\equiv 14\\pmod {13}\\implies x+y+z\\equiv 10\\pmod {13}$. Subtracting this from each results in \\begin{align*}\nz\\equiv -10\\equiv 3&\\pmod{13},\\\\\nx\\equiv -4\\equiv 9&\\pmod{13},\\\\\ny\\equiv -2\\equiv 11&\\pmod {13}.\n\\end{align*}Thus, $a+b+c\\equiv x^{-1}+y^{-1}+z^{-1}\\equiv 9+3+6\\equiv 18\\equiv \\boxed{5}\\pmod{13}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: Add the three given congruences together to obtain $(a + b + c)(ab + bc + ca) \\equiv 0 + 6abc + 8abc \\pmod{13}$.\nSince $(ab+bc+ca)\\equiv 0\\pmod{13}$, we know $ab+bc+ca=13k$ for some integer $k$. Thus $(a+b+c)(ab+bc+ca)=13k(a+b+c)$. Substituting into the equation from step 1, we get $13ka + 13kb+ 13kc \\equiv 14abc \\pmod{13}$.\n$13ka + 13kb+ 13kc \\equiv 14abc \\pmod{13} \\Rightarrow ka + kb+ kc \\equiv abc \\pmod{13}$\nFrom step 2, we can substitute $a=1$ and $b=c=2$ to obtain $k + 2k \\equiv 4 \\pmod{13}$, which implies $k \\equiv 4 \\pmod{13}$. Then we have $a+b+c=1+2+2=5$.\nSince $k\\equiv 4\\pmod{13}$, we have $a+b+c\\equiv 1+2(4)\\equiv 9\\pmod{13}$.\nSince $k\\equiv 4\\pmod{13}$, we have $a+b+c\\equiv 1+2(4)\\equiv 9\\pmod{13}$.",
+    "steps": [
+        "Step 1: Add the three given congruences together to obtain $(a + b + c)(ab + bc + ca) \\equiv 0 + 6abc + 8abc \\pmod{13}$.",
+        "Since $(ab+bc+ca)\\equiv 0\\pmod{13}$, we know $ab+bc+ca=13k$ for some integer $k$. Thus $(a+b+c)(ab+bc+ca)=13k(a+b+c)$. Substituting into the equation from step 1, we get $13ka + 13kb+ 13kc \\equiv 14abc \\pmod{13}$.",
+        "$13ka + 13kb+ 13kc \\equiv 14abc \\pmod{13} \\Rightarrow ka + kb+ kc \\equiv abc \\pmod{13}$",
+        "From step 2, we can substitute $a=1$ and $b=c=2$ to obtain $k + 2k \\equiv 4 \\pmod{13}$, which implies $k \\equiv 4 \\pmod{13}$. Then we have $a+b+c=1+2+2=5$.",
+        "Since $k\\equiv 4\\pmod{13}$, we have $a+b+c\\equiv 1+2(4)\\equiv 9\\pmod{13}$.",
+        "Since $k\\equiv 4\\pmod{13}$, we have $a+b+c\\equiv 1+2(4)\\equiv 9\\pmod{13}$."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Add the three given congruences together to obtain $(a + b + c)(ab + bc + ca) \\equiv 0 + 6abc + 8abc \\pmod{13}$.",
+            1
+        ],
+        [
+            "Since $(ab+bc+ca)\\equiv 0\\pmod{13}$, we know $ab+bc+ca=13k$ for some integer $k$. Thus $(a+b+c)(ab+bc+ca)=13k(a+b+c)$. Substituting into the equation from step 1, we get $13ka + 13kb+ 13kc \\equiv 14abc \\pmod{13}$.",
+            1
+        ],
+        [
+            "$13ka + 13kb+ 13kc \\equiv 14abc \\pmod{13} \\Rightarrow ka + kb+ kc \\equiv abc \\pmod{13}$",
+            1
+        ],
+        [
+            "From step 2, we can substitute $a=1$ and $b=c=2$ to obtain $k + 2k \\equiv 4 \\pmod{13}$, which implies $k \\equiv 4 \\pmod{13}$. Then we have $a+b+c=1+2+2=5$.",
+            1
+        ],
+        [
+            "Since $k\\equiv 4\\pmod{13}$, we have $a+b+c\\equiv 1+2(4)\\equiv 9\\pmod{13}$.",
+            1
+        ],
+        [
+            "Since $k\\equiv 4\\pmod{13}$, we have $a+b+c\\equiv 1+2(4)\\equiv 9\\pmod{13}$.",
+            1
+        ]
+    ],
+    "time": 81.45113897323608,
+    "total_tokens": 4394,
+    "final_answer_tokens": 483,
+    "model": "meta-llama/Llama-Vision-Free"
+}

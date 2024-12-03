@@ -1,0 +1,61 @@
+{
+    "problem": "On the $xy$-plane, the origin is labeled with an $M$. The points $(1,0)$, $(-1,0)$, $(0,1)$, and $(0,-1)$ are labeled with $A$'s. The points $(2,0)$, $(1,1)$, $(0,2)$, $(-1, 1)$, $(-2, 0)$, $(-1, -1)$, $(0, -2)$, and $(1, -1)$ are labeled with $T$'s. The points $(3,0)$, $(2,1)$, $(1,2)$, $(0, 3)$, $(-1, 2)$, $(-2, 1)$, $(-3, 0)$, $(-2,-1)$, $(-1,-2)$, $(0, -3)$, $(1, -2)$, and $(2, -1)$ are labeled with $H$'s. If you are only allowed to move up, down, left, and right, starting from the origin, how many distinct paths can be followed to spell the word MATH?",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "From the M, we can proceed to four different As. Note that the letters are all symmetric, so we can simply count one case (say, that of moving from M to the bottom A) and then multiply by four.\n\nFrom the bottom A, we can proceed to any one of three Ts. From the two Ts to the sides of the A, we can proceed to one of two Hs. From the T that is below the A, we can proceed to one of three Hs. Thus, this case yields $2 \\cdot 2 + 3 = 7$ paths.\n\nThus, there are $4 \\cdot 7 = \\boxed{28}$ distinct paths.",
+    "is_solved": true,
+    "model_solution": "Step 1: The problem asks for the number of distinct paths that can be followed to spell the word MATH on the xy-plane, starting from the origin, while only moving up, down, left, and right.\nStep 2: \nLet's analyze the movement required to spell the word MATH: We need to move 1 step to the right for each \"M\", 1 step to the right, 1 step up, and then 1 step to the left for each \"A\", 2 steps to the right, 1 step up, and then 2 steps to the left for each \"T\", and 3 steps to the right, 1 step up, and then 3 steps to the left for each \"H\".\nStep 2: There are 1 \"M\", 2 \"A\"s, 2 \"T\"s, and 1 \"H\". So the number of distinct paths can be computed by choosing the position of the \"M\" from the 1st position, then choosing the positions of the \"A\"s from the remaining 2 positions, then choosing the positions of the \"T\"s from the remaining 2 positions, and finally choosing the position of the \"H\" from the last position.\nStep 3: The total number of ways to spell \"MATH\" can be calculated using the formula for the multinomial coefficient, which is:\n\\[\\frac{n!}{n_1! n_2! n_3! ... n_k!}\\]\nwhere $n$ is the total number of objects and $n_1, n_2, n_3, ..., n_k$ are the counting numbers of each type of object. In this case, $n = 6$, $n_1 = 1$, $n_2 = 2$, $n_3 = 2$, and $n_4 = 1$.\nThe number of distinct paths is $\\frac{6!}{1! 2! 2! 1!} = \\frac{720}{4} = 180$\nThe number of distinct paths is $\\frac{6!}{1! 2! 2! 1!}=360$.\nStep 4: The number of distinct paths is $\\frac{6!}{1! 2! 2! 1!}=360$.\n$\\frac{6!}{1! 2! 2! 1!}=360$\n$\\frac{6!}{1! 2! 2! 1!}=360$",
+    "steps": [
+        "Step 1: The problem asks for the number of distinct paths that can be followed to spell the word MATH on the xy-plane, starting from the origin, while only moving up, down, left, and right.",
+        "Step 2: \nLet's analyze the movement required to spell the word MATH: We need to move 1 step to the right for each \"M\", 1 step to the right, 1 step up, and then 1 step to the left for each \"A\", 2 steps to the right, 1 step up, and then 2 steps to the left for each \"T\", and 3 steps to the right, 1 step up, and then 3 steps to the left for each \"H\".",
+        "Step 2: There are 1 \"M\", 2 \"A\"s, 2 \"T\"s, and 1 \"H\". So the number of distinct paths can be computed by choosing the position of the \"M\" from the 1st position, then choosing the positions of the \"A\"s from the remaining 2 positions, then choosing the positions of the \"T\"s from the remaining 2 positions, and finally choosing the position of the \"H\" from the last position.",
+        "Step 3: The total number of ways to spell \"MATH\" can be calculated using the formula for the multinomial coefficient, which is:\n\\[\\frac{n!}{n_1! n_2! n_3! ... n_k!}\\]\nwhere $n$ is the total number of objects and $n_1, n_2, n_3, ..., n_k$ are the counting numbers of each type of object. In this case, $n = 6$, $n_1 = 1$, $n_2 = 2$, $n_3 = 2$, and $n_4 = 1$.",
+        "The number of distinct paths is $\\frac{6!}{1! 2! 2! 1!} = \\frac{720}{4} = 180$",
+        "The number of distinct paths is $\\frac{6!}{1! 2! 2! 1!}=360$.",
+        "Step 4: The number of distinct paths is $\\frac{6!}{1! 2! 2! 1!}=360$.",
+        "$\\frac{6!}{1! 2! 2! 1!}=360$",
+        "$\\frac{6!}{1! 2! 2! 1!}=360$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: The problem asks for the number of distinct paths that can be followed to spell the word MATH on the xy-plane, starting from the origin, while only moving up, down, left, and right.",
+            1
+        ],
+        [
+            "Step 2: \nLet's analyze the movement required to spell the word MATH: We need to move 1 step to the right for each \"M\", 1 step to the right, 1 step up, and then 1 step to the left for each \"A\", 2 steps to the right, 1 step up, and then 2 steps to the left for each \"T\", and 3 steps to the right, 1 step up, and then 3 steps to the left for each \"H\".",
+            1
+        ],
+        [
+            "Step 2: There are 1 \"M\", 2 \"A\"s, 2 \"T\"s, and 1 \"H\". So the number of distinct paths can be computed by choosing the position of the \"M\" from the 1st position, then choosing the positions of the \"A\"s from the remaining 2 positions, then choosing the positions of the \"T\"s from the remaining 2 positions, and finally choosing the position of the \"H\" from the last position.",
+            1
+        ],
+        [
+            "Step 3: The total number of ways to spell \"MATH\" can be calculated using the formula for the multinomial coefficient, which is:\n\\[\\frac{n!}{n_1! n_2! n_3! ... n_k!}\\]\nwhere $n$ is the total number of objects and $n_1, n_2, n_3, ..., n_k$ are the counting numbers of each type of object. In this case, $n = 6$, $n_1 = 1$, $n_2 = 2$, $n_3 = 2$, and $n_4 = 1$.",
+            1
+        ],
+        [
+            "The number of distinct paths is $\\frac{6!}{1! 2! 2! 1!} = \\frac{720}{4} = 180$",
+            1
+        ],
+        [
+            "The number of distinct paths is $\\frac{6!}{1! 2! 2! 1!}=360$.",
+            1
+        ],
+        [
+            "Step 4: The number of distinct paths is $\\frac{6!}{1! 2! 2! 1!}=360$.",
+            1
+        ],
+        [
+            "$\\frac{6!}{1! 2! 2! 1!}=360$",
+            1
+        ],
+        [
+            "$\\frac{6!}{1! 2! 2! 1!}=360$",
+            1
+        ]
+    ],
+    "time": 122.62438225746155,
+    "total_tokens": 12140,
+    "final_answer_tokens": 833,
+    "model": "meta-llama/Llama-Vision-Free"
+}

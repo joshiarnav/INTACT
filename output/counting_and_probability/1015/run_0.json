@@ -1,0 +1,36 @@
+{
+    "problem": "What is the minimum number of times you must throw three fair six-sided dice to ensure that the same sum is rolled twice?",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "In the worst-case scenario, every possible sum is rolled before the same sum is rolled again. The minimum possible sum rolled is $3 \\cdot 1 = 3$, and the maximum is $3 \\cdot 6 = 18$. Every sum in between those two extremes can be created, since the sums are created through adding three of the digits between one and six. Thus, there are $18 - 2 = 16$ possible sums, so the dice must be rolled $\\boxed{17}$ times to ensure that the same sum is rolled twice.",
+    "is_solved": true,
+    "model_solution": "Pigeonhole Principle: Let P be the number of possible sums when rolling three six-sided dice. Let T be the number of throws.\n\nFormulate a claim: T \u2265 P + 1\nList the possible sums: 3, 4, 5, 6, 7, 8, 9, 10, 11, 12\nCount the number of possible sums: P = 10\nIf the same sum is rolled twice, then there are two outcomes with the same sum. According to the Pigeonhole Principle, T \u2265 P + 1. \n\nNote: The final answer is not yet obtained.",
+    "steps": [
+        "Pigeonhole Principle: Let P be the number of possible sums when rolling three six-sided dice. Let T be the number of throws.\n\nFormulate a claim: T \u2265 P + 1",
+        "List the possible sums: 3, 4, 5, 6, 7, 8, 9, 10, 11, 12",
+        "Count the number of possible sums: P = 10",
+        "If the same sum is rolled twice, then there are two outcomes with the same sum. According to the Pigeonhole Principle, T \u2265 P + 1. \n\nNote: The final answer is not yet obtained."
+    ],
+    "full_steps": [
+        [
+            "Pigeonhole Principle: Let P be the number of possible sums when rolling three six-sided dice. Let T be the number of throws.\n\nFormulate a claim: T \u2265 P + 1",
+            1
+        ],
+        [
+            "List the possible sums: 3, 4, 5, 6, 7, 8, 9, 10, 11, 12",
+            1
+        ],
+        [
+            "Count the number of possible sums: P = 10",
+            1
+        ],
+        [
+            "If the same sum is rolled twice, then there are two outcomes with the same sum. According to the Pigeonhole Principle, T \u2265 P + 1. \n\nNote: The final answer is not yet obtained.",
+            1
+        ]
+    ],
+    "time": 54.88779139518738,
+    "total_tokens": 1371,
+    "final_answer_tokens": 216,
+    "model": "meta-llama/Llama-Vision-Free"
+}

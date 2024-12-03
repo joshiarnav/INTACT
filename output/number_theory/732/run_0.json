@@ -1,0 +1,36 @@
+{
+    "problem": "$T$ is the smallest positive multiple of 14 whose digits are all 1s and 0s.  What is the quotient when $T$ is divided by 14?",
+    "level": "Level 5",
+    "type": "Number Theory",
+    "solution": "Since $T$ must be divisible by $14$, it must be divisible by $2$ and $7$. Since it's divisible by $2$, the last digit must be even, so the units digit must be $0$. $T$ must also be divisible by $7$. Let $R$ be the number obtained by taking $T$ and chopping off the last digit, $0$. In order for $T$ to be divisible by $7$, $R$ must be divisible by $7$, and $R$ must also be made up of $1$'s and $0$'s. If $R$ has one digit, it must be $1$ (since $T\\neq 0$), which isn't divisible by $7$. If $R$ has $2$ digits, it must be $10$ or $11$, neither of which are divisible by $7$. If $R$ has $3$ digits, it must be $100$, $101$, $110$, or $111$. Here we can use the divisibility rule for $7$, by chopping off the last digit, multiplying it by two, and subtracting it from the rest, to see that none of these values are divisible by $7$ either. If $R$ has $4$ digits, we can check as we go along: if $R=1000$, then the divisibility rule reduces our checking to whether $100$ is divisible by $7$, and we already know it's not. If $R=1001$, then the divisibility rule asks if $98$ is divisible by $7$--and it is! So $R=1001$ works. This means $T=10010$. We want the quotient $\\frac{10010}{14}=\\boxed{715}$.",
+    "is_solved": true,
+    "model_solution": "Step 1:  The problem asks us to find the smallest positive multiple of 14, denoted as $T$, whose digits are all 1s and 0s.\nStep 2:  First, we need to find the smallest number with only 1s and 0s that is a multiple of 14. To do this, we can start by listing the multiples of 14 and checking if they contain only 1s and 0s.\nStep 3:  The multiples of 14 are 14, 28, 42, 56, 70, 84, 98, 112, 126, 140, 154, 168, 182, 196, 210, 224, 238, 252, 266, 280, ...\nStep 4:  We continue listing the multiples of 14 until we find the smallest one with only 1s and 0s.\nStep 5:  After listing the multiples, we find that the smallest number with only 1s and 0s that is a multiple of 14 is 1400.\n\nNow, we proceed to the next step.\nStep 2:  The next step is to find the quotient when $T$ is divided by 14. To do this, we divide 1400 by 14.\nStep 3:  $T = 1400$ $\\frac{1400}{14} = 100$\nFinal Answer: The final answer is 100.",
+    "steps": [
+        "Step 1:  The problem asks us to find the smallest positive multiple of 14, denoted as $T$, whose digits are all 1s and 0s.\nStep 2:  First, we need to find the smallest number with only 1s and 0s that is a multiple of 14. To do this, we can start by listing the multiples of 14 and checking if they contain only 1s and 0s.\nStep 3:  The multiples of 14 are 14, 28, 42, 56, 70, 84, 98, 112, 126, 140, 154, 168, 182, 196, 210, 224, 238, 252, 266, 280, ...\nStep 4:  We continue listing the multiples of 14 until we find the smallest one with only 1s and 0s.\nStep 5:  After listing the multiples, we find that the smallest number with only 1s and 0s that is a multiple of 14 is 1400.\n\nNow, we proceed to the next step.",
+        "Step 2:  The next step is to find the quotient when $T$ is divided by 14. To do this, we divide 1400 by 14.",
+        "Step 3:  $T = 1400$ $\\frac{1400}{14} = 100$",
+        "Final Answer: The final answer is 100."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  The problem asks us to find the smallest positive multiple of 14, denoted as $T$, whose digits are all 1s and 0s.\nStep 2:  First, we need to find the smallest number with only 1s and 0s that is a multiple of 14. To do this, we can start by listing the multiples of 14 and checking if they contain only 1s and 0s.\nStep 3:  The multiples of 14 are 14, 28, 42, 56, 70, 84, 98, 112, 126, 140, 154, 168, 182, 196, 210, 224, 238, 252, 266, 280, ...\nStep 4:  We continue listing the multiples of 14 until we find the smallest one with only 1s and 0s.\nStep 5:  After listing the multiples, we find that the smallest number with only 1s and 0s that is a multiple of 14 is 1400.\n\nNow, we proceed to the next step.",
+            1
+        ],
+        [
+            "Step 2:  The next step is to find the quotient when $T$ is divided by 14. To do this, we divide 1400 by 14.",
+            1
+        ],
+        [
+            "Step 3:  $T = 1400$ $\\frac{1400}{14} = 100$",
+            1
+        ],
+        [
+            "Final Answer: The final answer is 100.",
+            1
+        ]
+    ],
+    "time": 52.89837026596069,
+    "total_tokens": 3075,
+    "final_answer_tokens": 409,
+    "model": "meta-llama/Llama-Vision-Free"
+}

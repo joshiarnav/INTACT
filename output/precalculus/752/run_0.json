@@ -1,0 +1,61 @@
+{
+    "problem": "There exist vectors $\\mathbf{a}$ and $\\mathbf{b}$ such that\n\\[\\mathbf{a} + \\mathbf{b} = \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix},\\]where $\\mathbf{a}$ is parallel to $\\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix},$ and $\\mathbf{b}$ is orthogonal to $\\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix}.$  Find $\\mathbf{b}.$",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "Since $\\mathbf{a}$ is parallel to $\\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix},$\n\\[\\mathbf{a} = t \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} = \\begin{pmatrix} t \\\\ 2t \\\\ -t \\end{pmatrix}\\]for some scalar $t.$  Then\n\\[\\mathbf{b} = \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix} - \\begin{pmatrix} t \\\\ 2t \\\\ -t \\end{pmatrix} = \\begin{pmatrix} 2 - t \\\\ -1 - 2t \\\\ 3 + t \\end{pmatrix}.\\]We want this to be orthogonal to $\\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix},$ so\n\\[\\begin{pmatrix} 2 - t \\\\ -1 - 2t \\\\ 3 + t \\end{pmatrix} \\cdot \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} = 0.\\]Then $(2 - t)(1) + (-1 - 2t)(2) + (3 + t)(-1) = 0.$  Solving, we find $t = -\\frac{1}{2}.$  Then $\\mathbf{b} = \\boxed{\\begin{pmatrix} 5/2 \\\\ 0 \\\\ 5/2 \\end{pmatrix}}.$",
+    "is_solved": true,
+    "model_solution": "Step 1: Since $\\mathbf{a}$ is parallel to $\\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix},$ we can write $\\mathbf{a} = k \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix}$ for some scalar $k.$\nStep 2: Since $\\mathbf{b}$ is orthogonal to $\\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix},$ we have that\n\\[\\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} \\cdot \\mathbf{b} = 0.\\]\nUsing the fact that $\\mathbf{a} + \\mathbf{b} = \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix},$ we have\n\\begin{align*}\n\\mathbf{a} + \\mathbf{b} &= \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix}\\\\\nk \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} + \\mathbf{b} &= \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix}.\n\\end{align*}\nNext, take the dot product of both sides with $\\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix}$ to obtain\n\\begin{align*}\n\\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} \\cdot \\left(k \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} + \\mathbf{b}\\right)&=\\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix}\\cdot \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix}\\\\\nk \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} \\cdot \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} + \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} \\cdot \\mathbf{b} &= \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix}\\cdot \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix}\\\\\nk(1\\cdot1+2\\cdot2+(-1)\\cdot(-1))+\\begin{pmatrix} 1 \\\\ 2 \\\\ -1\nNext, we have\n\\[k(6) + 0 = 7,\\]\nso $k = \\frac{7}{6}.$  Therefore,\n\\begin{align*}\n\\mathbf{a} + \\mathbf{b} &= \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix}\\\\\n\\frac{7}{6} \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} + \\mathbf{b} &= \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix}.\n\\end{align*}\nNext Step:\nSubtract $\\frac{7}{6} \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix}$ from both sides to obtain\n\\[\\mathbf{b} = \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix} - \\frac{7}{6} \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix}.\\]\n\\[\\mathbf{b} = \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix} - \\frac{7}{6} \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} = \\boxed{\\begin{pmatrix} \\frac{7}{6} \\\\ -\\frac{13}{6} \\\\ \\frac{17}{6} \\end{pmatrix}}.\\]\n\\[\\mathbf{b} = \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix} - \\frac{7}{6} \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix}.\\]\n\\[\\mathbf{b} = \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix} - \\frac{7}{6} \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} = \\begin{pmatrix} 2-\\frac{7}{6} \\\\ -1-2\\left(\\frac{7}{6}\\right) \\\\ 3+\\frac{7}{6} \\end{pmatrix} = \\boxed{\\begin{pmatrix} \\frac{7}{6} \\\\ -\\frac{13}{6} \\\\ \\frac{17}{6} \\end{pmatrix}}.\\]\n\\[\\mathbf{b} = \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix} - \\frac{7}{6} \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} = \\begin{pmatrix} 2-\\frac{7}{6} \\\\ -1-2\\left(\\frac{7}{6}\\right) \\\\ 3+\\frac{7}{6} \\end{pmatrix} = \\boxed{\\begin{pmatrix} \\frac{7}{6} \\\\ -\\frac{13}{6} \\\\ \\frac{17}{6} \\end{pmatrix}}.\\]",
+    "steps": [
+        "Step 1: Since $\\mathbf{a}$ is parallel to $\\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix},$ we can write $\\mathbf{a} = k \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix}$ for some scalar $k.$",
+        "Step 2: Since $\\mathbf{b}$ is orthogonal to $\\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix},$ we have that\n\\[\\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} \\cdot \\mathbf{b} = 0.\\]\nUsing the fact that $\\mathbf{a} + \\mathbf{b} = \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix},$ we have\n\\begin{align*}\n\\mathbf{a} + \\mathbf{b} &= \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix}\\\\\nk \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} + \\mathbf{b} &= \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix}.\n\\end{align*}\nNext, take the dot product of both sides with $\\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix}$ to obtain",
+        "\\begin{align*}\n\\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} \\cdot \\left(k \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} + \\mathbf{b}\\right)&=\\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix}\\cdot \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix}\\\\\nk \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} \\cdot \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} + \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} \\cdot \\mathbf{b} &= \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix}\\cdot \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix}\\\\\nk(1\\cdot1+2\\cdot2+(-1)\\cdot(-1))+\\begin{pmatrix} 1 \\\\ 2 \\\\ -1",
+        "Next, we have\n\\[k(6) + 0 = 7,\\]\nso $k = \\frac{7}{6}.$  Therefore,\n\\begin{align*}\n\\mathbf{a} + \\mathbf{b} &= \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix}\\\\\n\\frac{7}{6} \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} + \\mathbf{b} &= \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix}.\n\\end{align*}",
+        "Next Step:\nSubtract $\\frac{7}{6} \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix}$ from both sides to obtain\n\\[\\mathbf{b} = \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix} - \\frac{7}{6} \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix}.\\]",
+        "\\[\\mathbf{b} = \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix} - \\frac{7}{6} \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} = \\boxed{\\begin{pmatrix} \\frac{7}{6} \\\\ -\\frac{13}{6} \\\\ \\frac{17}{6} \\end{pmatrix}}.\\]",
+        "\\[\\mathbf{b} = \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix} - \\frac{7}{6} \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix}.\\]",
+        "\\[\\mathbf{b} = \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix} - \\frac{7}{6} \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} = \\begin{pmatrix} 2-\\frac{7}{6} \\\\ -1-2\\left(\\frac{7}{6}\\right) \\\\ 3+\\frac{7}{6} \\end{pmatrix} = \\boxed{\\begin{pmatrix} \\frac{7}{6} \\\\ -\\frac{13}{6} \\\\ \\frac{17}{6} \\end{pmatrix}}.\\]",
+        "\\[\\mathbf{b} = \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix} - \\frac{7}{6} \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} = \\begin{pmatrix} 2-\\frac{7}{6} \\\\ -1-2\\left(\\frac{7}{6}\\right) \\\\ 3+\\frac{7}{6} \\end{pmatrix} = \\boxed{\\begin{pmatrix} \\frac{7}{6} \\\\ -\\frac{13}{6} \\\\ \\frac{17}{6} \\end{pmatrix}}.\\]"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Since $\\mathbf{a}$ is parallel to $\\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix},$ we can write $\\mathbf{a} = k \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix}$ for some scalar $k.$",
+            1
+        ],
+        [
+            "Step 2: Since $\\mathbf{b}$ is orthogonal to $\\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix},$ we have that\n\\[\\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} \\cdot \\mathbf{b} = 0.\\]\nUsing the fact that $\\mathbf{a} + \\mathbf{b} = \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix},$ we have\n\\begin{align*}\n\\mathbf{a} + \\mathbf{b} &= \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix}\\\\\nk \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} + \\mathbf{b} &= \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix}.\n\\end{align*}\nNext, take the dot product of both sides with $\\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix}$ to obtain",
+            1
+        ],
+        [
+            "\\begin{align*}\n\\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} \\cdot \\left(k \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} + \\mathbf{b}\\right)&=\\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix}\\cdot \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix}\\\\\nk \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} \\cdot \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} + \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} \\cdot \\mathbf{b} &= \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix}\\cdot \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix}\\\\\nk(1\\cdot1+2\\cdot2+(-1)\\cdot(-1))+\\begin{pmatrix} 1 \\\\ 2 \\\\ -1",
+            1
+        ],
+        [
+            "Next, we have\n\\[k(6) + 0 = 7,\\]\nso $k = \\frac{7}{6}.$  Therefore,\n\\begin{align*}\n\\mathbf{a} + \\mathbf{b} &= \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix}\\\\\n\\frac{7}{6} \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} + \\mathbf{b} &= \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix}.\n\\end{align*}",
+            1
+        ],
+        [
+            "Next Step:\nSubtract $\\frac{7}{6} \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix}$ from both sides to obtain\n\\[\\mathbf{b} = \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix} - \\frac{7}{6} \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix}.\\]",
+            1
+        ],
+        [
+            "\\[\\mathbf{b} = \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix} - \\frac{7}{6} \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} = \\boxed{\\begin{pmatrix} \\frac{7}{6} \\\\ -\\frac{13}{6} \\\\ \\frac{17}{6} \\end{pmatrix}}.\\]",
+            1
+        ],
+        [
+            "\\[\\mathbf{b} = \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix} - \\frac{7}{6} \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix}.\\]",
+            1
+        ],
+        [
+            "\\[\\mathbf{b} = \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix} - \\frac{7}{6} \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} = \\begin{pmatrix} 2-\\frac{7}{6} \\\\ -1-2\\left(\\frac{7}{6}\\right) \\\\ 3+\\frac{7}{6} \\end{pmatrix} = \\boxed{\\begin{pmatrix} \\frac{7}{6} \\\\ -\\frac{13}{6} \\\\ \\frac{17}{6} \\end{pmatrix}}.\\]",
+            1
+        ],
+        [
+            "\\[\\mathbf{b} = \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix} - \\frac{7}{6} \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} = \\begin{pmatrix} 2-\\frac{7}{6} \\\\ -1-2\\left(\\frac{7}{6}\\right) \\\\ 3+\\frac{7}{6} \\end{pmatrix} = \\boxed{\\begin{pmatrix} \\frac{7}{6} \\\\ -\\frac{13}{6} \\\\ \\frac{17}{6} \\end{pmatrix}}.\\]",
+            1
+        ]
+    ],
+    "time": 122.12443256378174,
+    "total_tokens": 16749,
+    "final_answer_tokens": 1430,
+    "model": "meta-llama/Llama-Vision-Free"
+}

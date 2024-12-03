@@ -1,0 +1,56 @@
+{
+    "problem": "Evaluate\n\\[\\begin{vmatrix} 0 & b - a & c - a \\\\ a - b & 0 & c - b \\\\ a - c & b - c & 0 \\end{vmatrix}.\\]",
+    "level": "Level 1",
+    "type": "Precalculus",
+    "solution": "We can expand the determinant as follows:\n\\begin{align*}\n\\begin{vmatrix} 0 & b - a & c - a \\\\ a - b & 0 & c - b \\\\ a - c & b - c & 0 \\end{vmatrix} &= -(b - a) \\begin{vmatrix} a - b & c - b \\\\ a - c & 0 \\end{vmatrix} + (c - a) \\begin{vmatrix} a - b & 0 \\\\ a - c & b - c \\end{vmatrix} \\\\\n&= -(b - a)(-(c - b)(a - c)) + (c - a)(a - b)(b - c) \\\\\n&= \\boxed{0}.\n\\end{align*}",
+    "is_solved": true,
+    "model_solution": "Step 1: Expand the determinant using the first row, so that the expression becomes\n\\[\\begin{vmatrix} 0 & b - a & c - a \\\\ a - b & 0 & c - b \\\\ a - c & b - c & 0 \\end{vmatrix} = 0 \\begin{vmatrix} 0 & c - b \\\\ b - c & 0 \\end{vmatrix} - (b - a) \\begin{vmatrix} a - b & c - b \\\\ a - c & 0 \\end{vmatrix} + (c - a) \\begin{vmatrix} a - b & 0 \\\\ a - c & b - c \\end{vmatrix}.\\]\nStep 2: \n\\[\\begin{vmatrix} 0 & b - a & c - a \\\\ a - b & 0 & c - b \\\\ a - c & b - c & 0 \\end{vmatrix} = 0 - (b - a) \\left[ (a - b)(0) - (c - b)(a - c) \\right] + (c - a) \\left[ (a - b)(b - c) - (0)(a - c) \\right].\\]\n\\[\\begin{vmatrix} 0 & b - a & c - a \\\\ a - b & 0 & c - b \\\\ a - c & b - c & 0 \\end{vmatrix} = 0 - (b - a) \\left[ 0 - (c - b)(a - c) \\right] + (c - a) \\left[ (a - b)(b - c) \\right].\\]\n\\[\\begin{vmatrix} 0 & b - a & c - a \\\\ a - b & 0 & c - b \\\\ a - c & b - c & 0 \\end{vmatrix} = 0 - (b - a) \\left[ -(c - b)(a - c) \\right] + (c - a) \\left[ (a - b)(b - c) \\right]\\]\n\\[= 0 + (b - a) (c - b)(a - c) + (c - a) (a - b)(b - c).\\]\n\\[\\begin{vmatrix} 0 & b - a & c - a \\\\ a - b & 0 & c - b \\\\ a - c & b - c & 0 \\end{vmatrix} = (b - a)(c - b)(a - c) + (c - a)(a - b)(b - c)\\]\nGrouping the first two terms together, the expression becomes\n\\[(b - a)(c - b)(a - c) + (c - a)(a - b)(b - c) = (c - a)(c - b)(a - b) + (c - a)(a - b)(b - c)\\]\n\\[\\begin{vmatrix} 0 & b - a & c - a \\\\ a - b & 0 & c - b \\\\ a - c & b - c & 0 \\end{vmatrix} = (c - a)(c - b)(a - b) + (c - a)(a - b)(b - c)\\\\ = (c - a)(c - b)(a - b) + (c - a)(a - b)(b - c)\\\\ = (c - a)(a - b)\\left[(c - b)+(b - c)\\right]\\]\n\\[\\begin{vmatrix} 0 & b - a & c - a \\\\ a - b & 0 & c - b \\\\ a - c & b - c & 0 \\end{vmatrix} = (c - a)(a - b)\\left[(c - b)+(b - c)\\right]\\\\ = (c - a)(a - b)[c - b + b - c]\\\\ = (c - a)(a - b)(0)\\]\nFinal Answer.",
+    "steps": [
+        "Step 1: Expand the determinant using the first row, so that the expression becomes\n\\[\\begin{vmatrix} 0 & b - a & c - a \\\\ a - b & 0 & c - b \\\\ a - c & b - c & 0 \\end{vmatrix} = 0 \\begin{vmatrix} 0 & c - b \\\\ b - c & 0 \\end{vmatrix} - (b - a) \\begin{vmatrix} a - b & c - b \\\\ a - c & 0 \\end{vmatrix} + (c - a) \\begin{vmatrix} a - b & 0 \\\\ a - c & b - c \\end{vmatrix}.\\]",
+        "Step 2: \n\\[\\begin{vmatrix} 0 & b - a & c - a \\\\ a - b & 0 & c - b \\\\ a - c & b - c & 0 \\end{vmatrix} = 0 - (b - a) \\left[ (a - b)(0) - (c - b)(a - c) \\right] + (c - a) \\left[ (a - b)(b - c) - (0)(a - c) \\right].\\]",
+        "\\[\\begin{vmatrix} 0 & b - a & c - a \\\\ a - b & 0 & c - b \\\\ a - c & b - c & 0 \\end{vmatrix} = 0 - (b - a) \\left[ 0 - (c - b)(a - c) \\right] + (c - a) \\left[ (a - b)(b - c) \\right].\\]",
+        "\\[\\begin{vmatrix} 0 & b - a & c - a \\\\ a - b & 0 & c - b \\\\ a - c & b - c & 0 \\end{vmatrix} = 0 - (b - a) \\left[ -(c - b)(a - c) \\right] + (c - a) \\left[ (a - b)(b - c) \\right]\\]\n\\[= 0 + (b - a) (c - b)(a - c) + (c - a) (a - b)(b - c).\\]",
+        "\\[\\begin{vmatrix} 0 & b - a & c - a \\\\ a - b & 0 & c - b \\\\ a - c & b - c & 0 \\end{vmatrix} = (b - a)(c - b)(a - c) + (c - a)(a - b)(b - c)\\]",
+        "Grouping the first two terms together, the expression becomes\n\\[(b - a)(c - b)(a - c) + (c - a)(a - b)(b - c) = (c - a)(c - b)(a - b) + (c - a)(a - b)(b - c)\\]",
+        "\\[\\begin{vmatrix} 0 & b - a & c - a \\\\ a - b & 0 & c - b \\\\ a - c & b - c & 0 \\end{vmatrix} = (c - a)(c - b)(a - b) + (c - a)(a - b)(b - c)\\\\ = (c - a)(c - b)(a - b) + (c - a)(a - b)(b - c)\\\\ = (c - a)(a - b)\\left[(c - b)+(b - c)\\right]\\]",
+        "\\[\\begin{vmatrix} 0 & b - a & c - a \\\\ a - b & 0 & c - b \\\\ a - c & b - c & 0 \\end{vmatrix} = (c - a)(a - b)\\left[(c - b)+(b - c)\\right]\\\\ = (c - a)(a - b)[c - b + b - c]\\\\ = (c - a)(a - b)(0)\\]\nFinal Answer."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Expand the determinant using the first row, so that the expression becomes\n\\[\\begin{vmatrix} 0 & b - a & c - a \\\\ a - b & 0 & c - b \\\\ a - c & b - c & 0 \\end{vmatrix} = 0 \\begin{vmatrix} 0 & c - b \\\\ b - c & 0 \\end{vmatrix} - (b - a) \\begin{vmatrix} a - b & c - b \\\\ a - c & 0 \\end{vmatrix} + (c - a) \\begin{vmatrix} a - b & 0 \\\\ a - c & b - c \\end{vmatrix}.\\]",
+            1
+        ],
+        [
+            "Step 2: \n\\[\\begin{vmatrix} 0 & b - a & c - a \\\\ a - b & 0 & c - b \\\\ a - c & b - c & 0 \\end{vmatrix} = 0 - (b - a) \\left[ (a - b)(0) - (c - b)(a - c) \\right] + (c - a) \\left[ (a - b)(b - c) - (0)(a - c) \\right].\\]",
+            1
+        ],
+        [
+            "\\[\\begin{vmatrix} 0 & b - a & c - a \\\\ a - b & 0 & c - b \\\\ a - c & b - c & 0 \\end{vmatrix} = 0 - (b - a) \\left[ 0 - (c - b)(a - c) \\right] + (c - a) \\left[ (a - b)(b - c) \\right].\\]",
+            1
+        ],
+        [
+            "\\[\\begin{vmatrix} 0 & b - a & c - a \\\\ a - b & 0 & c - b \\\\ a - c & b - c & 0 \\end{vmatrix} = 0 - (b - a) \\left[ -(c - b)(a - c) \\right] + (c - a) \\left[ (a - b)(b - c) \\right]\\]\n\\[= 0 + (b - a) (c - b)(a - c) + (c - a) (a - b)(b - c).\\]",
+            1
+        ],
+        [
+            "\\[\\begin{vmatrix} 0 & b - a & c - a \\\\ a - b & 0 & c - b \\\\ a - c & b - c & 0 \\end{vmatrix} = (b - a)(c - b)(a - c) + (c - a)(a - b)(b - c)\\]",
+            1
+        ],
+        [
+            "Grouping the first two terms together, the expression becomes\n\\[(b - a)(c - b)(a - c) + (c - a)(a - b)(b - c) = (c - a)(c - b)(a - b) + (c - a)(a - b)(b - c)\\]",
+            1
+        ],
+        [
+            "\\[\\begin{vmatrix} 0 & b - a & c - a \\\\ a - b & 0 & c - b \\\\ a - c & b - c & 0 \\end{vmatrix} = (c - a)(c - b)(a - b) + (c - a)(a - b)(b - c)\\\\ = (c - a)(c - b)(a - b) + (c - a)(a - b)(b - c)\\\\ = (c - a)(a - b)\\left[(c - b)+(b - c)\\right]\\]",
+            1
+        ],
+        [
+            "\\[\\begin{vmatrix} 0 & b - a & c - a \\\\ a - b & 0 & c - b \\\\ a - c & b - c & 0 \\end{vmatrix} = (c - a)(a - b)\\left[(c - b)+(b - c)\\right]\\\\ = (c - a)(a - b)[c - b + b - c]\\\\ = (c - a)(a - b)(0)\\]\nFinal Answer.",
+            1
+        ]
+    ],
+    "time": 103.94279885292053,
+    "total_tokens": 10007,
+    "final_answer_tokens": 968,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,46 @@
+{
+    "problem": "Find the constant $k$ so that the graphs of the parabolas $y = x^2 + k$ and $x = y^2 + k$ are tangent to each other.",
+    "level": "Level 4",
+    "type": "Intermediate Algebra",
+    "solution": "Note that the graphs of $y = x^2 + k$ and $x = y^2 + k$ are reflections of each other in the line $y = x,$ so if they are tangent to each other, then the point of tangency must lie on the line $y = x.$  Furthermore, both graphs will be tangent to the line $y = x.$\n\n[asy]\nunitsize(1 cm);\n\nreal func (real x) {\n  return(x^2 + 1/4);\n}\n\ndraw(graph(func,-2,2));\ndraw(reflect((0,0),(1,1))*graph(func,-2,2));\ndraw((-2,-2)--(4,4),dashed);\n\nlabel(\"$y = x$\", (4,4), NE);\nlabel(\"$y = x^2 + k$\", (2,4 + 1/4), N);\nlabel(\"$x = y^2 + k$\", (4 + 1/4,2), E);\n[/asy]\n\nThis means that the quadratic $x^2 + k = x$ will have a double root.  We can arrange the equation to get\n\\[x^2 - x + k = 0.\\]We want the discriminant of this quadratic to be 0, giving us $1 - 4k = 0,$ or $k = \\boxed{\\frac{1}{4}}.$",
+    "is_solved": true,
+    "model_solution": "Step 1: Substitute $y = x^2 + k$ into the second equation to get $x = (x^2 + k)^2 + k.$\nStep 2: Expand the equation to get $x = x^4 + 2x^2k + k^2 + k.$\nStep 3: Rearrange the equation to get $x^4 + 2x^2k + k^2 + k - x = 0.$\nStep 4: Since the curves are tangent to each other, there is exactly one solution for x, so the discriminant of the quartic equation must be 0.\nStep 5: Apply the discriminant condition $0 = (2k)^2 - 4(1)(k^2 + k)$ to the equation in Step 4.\nStep 6: Simplify the equation to get $0 = 4k^2 - 4(k^2 + k)$.\n Final Answer",
+    "steps": [
+        "Step 1: Substitute $y = x^2 + k$ into the second equation to get $x = (x^2 + k)^2 + k.$",
+        "Step 2: Expand the equation to get $x = x^4 + 2x^2k + k^2 + k.$",
+        "Step 3: Rearrange the equation to get $x^4 + 2x^2k + k^2 + k - x = 0.$",
+        "Step 4: Since the curves are tangent to each other, there is exactly one solution for x, so the discriminant of the quartic equation must be 0.",
+        "Step 5: Apply the discriminant condition $0 = (2k)^2 - 4(1)(k^2 + k)$ to the equation in Step 4.",
+        "Step 6: Simplify the equation to get $0 = 4k^2 - 4(k^2 + k)$.\n Final Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Substitute $y = x^2 + k$ into the second equation to get $x = (x^2 + k)^2 + k.$",
+            1
+        ],
+        [
+            "Step 2: Expand the equation to get $x = x^4 + 2x^2k + k^2 + k.$",
+            1
+        ],
+        [
+            "Step 3: Rearrange the equation to get $x^4 + 2x^2k + k^2 + k - x = 0.$",
+            1
+        ],
+        [
+            "Step 4: Since the curves are tangent to each other, there is exactly one solution for x, so the discriminant of the quartic equation must be 0.",
+            1
+        ],
+        [
+            "Step 5: Apply the discriminant condition $0 = (2k)^2 - 4(1)(k^2 + k)$ to the equation in Step 4.",
+            1
+        ],
+        [
+            "Step 6: Simplify the equation to get $0 = 4k^2 - 4(k^2 + k)$.\n Final Answer",
+            1
+        ]
+    ],
+    "time": 83.49005103111267,
+    "total_tokens": 2644,
+    "final_answer_tokens": 299,
+    "model": "meta-llama/Llama-Vision-Free"
+}

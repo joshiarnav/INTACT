@@ -1,0 +1,66 @@
+{
+    "problem": "Given that\n\\[\\begin{vmatrix} a & b & c \\\\ d & e & f \\\\ g & h & i \\end{vmatrix} = -7,\\]find\n\\[\\begin{vmatrix} a & b & c \\\\ 2d + 5g & 2e + 5h & 2f + 5i \\\\ -g & -h & -i \\end{vmatrix}.\\]",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "We are told that\n\\[\\begin{vmatrix} a & b & c \\\\ d & e & f \\\\ g & h & i \\end{vmatrix} = -7.\\]If we multiply the second row by 2, then we get\n\\[\\begin{vmatrix} a & b & c \\\\ 2d & 2e & 2f \\\\ g & h & i \\end{vmatrix} = -14.\\]Adding five times the third row to the second row does not change the value of the determinant:\n\\[\\begin{vmatrix} a & b & c \\\\ 2d + 5g & 2e + 5h & 2f + 5i \\\\ g & h & i \\end{vmatrix} = -14.\\]Then multiplying the third row by $-1$ gives us\n\\[\\begin{vmatrix} a & b & c \\\\ 2d + 5g & 2e + 5h & 2f + 5i \\\\ -g & -h & -i \\end{vmatrix} = \\boxed{14}.\\]",
+    "is_solved": false,
+    "model_solution": "Step 1:  We need to find the determinant of the given 3x3 matrix.\n\\[\\begin{vmatrix} a & b & c \\\\ 2d + 5g & 2e + 5h & 2f + 5i \\\\ -g & -h & -i \\end{vmatrix}\\]\n\nTo find the determinant, we will expand along the first row.\nStep 2: \n\\[\\begin{vmatrix} a & b & c \\\\ 2d + 5g & 2e + 5h & 2f + 5i \\\\ -g & -h & -i \\end{vmatrix} = a \\begin{vmatrix} 2e + 5h & 2f + 5i \\\\ -h & -i \\end{vmatrix} - b \\begin{vmatrix} 2d + 5g & 2f + 5i \\\\ -g & -i \\end{vmatrix} + c \\begin{vmatrix} 2d + 5g & 2e + 5h \\\\ -g & -h \\end{vmatrix}\\]\nStep 3:\n\\[\\begin{vmatrix} 2e + 5h & 2f + 5i \\\\ -h & -i \\end{vmatrix} = -i(2e + 5h) - (-h)(2f + 5i) = -2ei - 5hi + 2fh + 5hi = -2ei + 2fh,\\]\n\\[\\begin{vmatrix} 2d + 5g & 2f + 5i \\\\ -g & -i \\end{vmatrix} = -i(2d + 5g) - (-g)(2f + 5i) = -2di - 5gi + 2fg + 5gi = -2di + 2fg,\\]\n\\[\\begin{vmatrix} 2d + 5g & 2e + 5h \\\\ -g & -h \\end{vmatrix} = -h(2d + 5g) - (-g)(2e + 5h) = -2hd - 5hg + 2eg + 5hg = -2hd + 2eg\\]\nStep 4: \n\\[\\begin{vmatrix} a & b & c \\\\ 2d + 5g & 2e + 5h & 2f + 5i \\\\ -g & -h & -i \\end{vmatrix} = a(-2ei + 2fh) - b(-2di + 2fg) + c(-2hd + 2eg)\\]\nStep 5:\n\\[= a(-2ei + 2fh) + b(2di - 2fg) + c(2hd - 2eg)\\]\nStep 6: \n\\[\\begin{vmatrix} a & b & c \\\\ 2d + 5g & 2e + 5h & 2f + 5i \\\\ -g & -h & -i \\end{vmatrix} = -2aei + 2afh + 2bdi - 2bfg + 2chd - 2ceg\\]\nStep 7: \n\\[\\begin{vmatrix} a & b & c \\\\ 2d + 5g & 2e + 5h & 2f + 5i \\\\ -g & -h & -i \\end{vmatrix} = -2aei + 2afh + 2bdi - 2bfg + 2chd - 2ceg = -2(ai + bh + cg)\\]\nStep 8: \n\\[\\begin{vmatrix} a & b & c \\\\ 2d + 5g & 2e + 5h & 2f + 5i \\\\ -g & -h & -i \\end{vmatrix} = -2(ai + bh + cg)\\]\nStep 9: \n\\[\\begin{vmatrix} a & b & c \\\\ 2d + 5g & 2e + 5h & 2f + 5i \\\\ -g & -h & -i \\end{vmatrix} = -2\\begin{vmatrix} a & b & c \\\\ d & e & f \\\\ g & h & i \\end{vmatrix}\\]\nStep 10:\n\\[= -2(-7)\\]",
+    "steps": [
+        "Step 1:  We need to find the determinant of the given 3x3 matrix.\n\\[\\begin{vmatrix} a & b & c \\\\ 2d + 5g & 2e + 5h & 2f + 5i \\\\ -g & -h & -i \\end{vmatrix}\\]\n\nTo find the determinant, we will expand along the first row.",
+        "Step 2: \n\\[\\begin{vmatrix} a & b & c \\\\ 2d + 5g & 2e + 5h & 2f + 5i \\\\ -g & -h & -i \\end{vmatrix} = a \\begin{vmatrix} 2e + 5h & 2f + 5i \\\\ -h & -i \\end{vmatrix} - b \\begin{vmatrix} 2d + 5g & 2f + 5i \\\\ -g & -i \\end{vmatrix} + c \\begin{vmatrix} 2d + 5g & 2e + 5h \\\\ -g & -h \\end{vmatrix}\\]",
+        "Step 3:\n\\[\\begin{vmatrix} 2e + 5h & 2f + 5i \\\\ -h & -i \\end{vmatrix} = -i(2e + 5h) - (-h)(2f + 5i) = -2ei - 5hi + 2fh + 5hi = -2ei + 2fh,\\]\n\\[\\begin{vmatrix} 2d + 5g & 2f + 5i \\\\ -g & -i \\end{vmatrix} = -i(2d + 5g) - (-g)(2f + 5i) = -2di - 5gi + 2fg + 5gi = -2di + 2fg,\\]\n\\[\\begin{vmatrix} 2d + 5g & 2e + 5h \\\\ -g & -h \\end{vmatrix} = -h(2d + 5g) - (-g)(2e + 5h) = -2hd - 5hg + 2eg + 5hg = -2hd + 2eg\\]",
+        "Step 4: \n\\[\\begin{vmatrix} a & b & c \\\\ 2d + 5g & 2e + 5h & 2f + 5i \\\\ -g & -h & -i \\end{vmatrix} = a(-2ei + 2fh) - b(-2di + 2fg) + c(-2hd + 2eg)\\]",
+        "Step 5:\n\\[= a(-2ei + 2fh) + b(2di - 2fg) + c(2hd - 2eg)\\]",
+        "Step 6: \n\\[\\begin{vmatrix} a & b & c \\\\ 2d + 5g & 2e + 5h & 2f + 5i \\\\ -g & -h & -i \\end{vmatrix} = -2aei + 2afh + 2bdi - 2bfg + 2chd - 2ceg\\]",
+        "Step 7: \n\\[\\begin{vmatrix} a & b & c \\\\ 2d + 5g & 2e + 5h & 2f + 5i \\\\ -g & -h & -i \\end{vmatrix} = -2aei + 2afh + 2bdi - 2bfg + 2chd - 2ceg = -2(ai + bh + cg)\\]",
+        "Step 8: \n\\[\\begin{vmatrix} a & b & c \\\\ 2d + 5g & 2e + 5h & 2f + 5i \\\\ -g & -h & -i \\end{vmatrix} = -2(ai + bh + cg)\\]",
+        "Step 9: \n\\[\\begin{vmatrix} a & b & c \\\\ 2d + 5g & 2e + 5h & 2f + 5i \\\\ -g & -h & -i \\end{vmatrix} = -2\\begin{vmatrix} a & b & c \\\\ d & e & f \\\\ g & h & i \\end{vmatrix}\\]",
+        "Step 10:\n\\[= -2(-7)\\]"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We need to find the determinant of the given 3x3 matrix.\n\\[\\begin{vmatrix} a & b & c \\\\ 2d + 5g & 2e + 5h & 2f + 5i \\\\ -g & -h & -i \\end{vmatrix}\\]\n\nTo find the determinant, we will expand along the first row.",
+            1
+        ],
+        [
+            "Step 2: \n\\[\\begin{vmatrix} a & b & c \\\\ 2d + 5g & 2e + 5h & 2f + 5i \\\\ -g & -h & -i \\end{vmatrix} = a \\begin{vmatrix} 2e + 5h & 2f + 5i \\\\ -h & -i \\end{vmatrix} - b \\begin{vmatrix} 2d + 5g & 2f + 5i \\\\ -g & -i \\end{vmatrix} + c \\begin{vmatrix} 2d + 5g & 2e + 5h \\\\ -g & -h \\end{vmatrix}\\]",
+            1
+        ],
+        [
+            "Step 3:\n\\[\\begin{vmatrix} 2e + 5h & 2f + 5i \\\\ -h & -i \\end{vmatrix} = -i(2e + 5h) - (-h)(2f + 5i) = -2ei - 5hi + 2fh + 5hi = -2ei + 2fh,\\]\n\\[\\begin{vmatrix} 2d + 5g & 2f + 5i \\\\ -g & -i \\end{vmatrix} = -i(2d + 5g) - (-g)(2f + 5i) = -2di - 5gi + 2fg + 5gi = -2di + 2fg,\\]\n\\[\\begin{vmatrix} 2d + 5g & 2e + 5h \\\\ -g & -h \\end{vmatrix} = -h(2d + 5g) - (-g)(2e + 5h) = -2hd - 5hg + 2eg + 5hg = -2hd + 2eg\\]",
+            1
+        ],
+        [
+            "Step 4: \n\\[\\begin{vmatrix} a & b & c \\\\ 2d + 5g & 2e + 5h & 2f + 5i \\\\ -g & -h & -i \\end{vmatrix} = a(-2ei + 2fh) - b(-2di + 2fg) + c(-2hd + 2eg)\\]",
+            1
+        ],
+        [
+            "Step 5:\n\\[= a(-2ei + 2fh) + b(2di - 2fg) + c(2hd - 2eg)\\]",
+            1
+        ],
+        [
+            "Step 6: \n\\[\\begin{vmatrix} a & b & c \\\\ 2d + 5g & 2e + 5h & 2f + 5i \\\\ -g & -h & -i \\end{vmatrix} = -2aei + 2afh + 2bdi - 2bfg + 2chd - 2ceg\\]",
+            1
+        ],
+        [
+            "Step 7: \n\\[\\begin{vmatrix} a & b & c \\\\ 2d + 5g & 2e + 5h & 2f + 5i \\\\ -g & -h & -i \\end{vmatrix} = -2aei + 2afh + 2bdi - 2bfg + 2chd - 2ceg = -2(ai + bh + cg)\\]",
+            1
+        ],
+        [
+            "Step 8: \n\\[\\begin{vmatrix} a & b & c \\\\ 2d + 5g & 2e + 5h & 2f + 5i \\\\ -g & -h & -i \\end{vmatrix} = -2(ai + bh + cg)\\]",
+            1
+        ],
+        [
+            "Step 9: \n\\[\\begin{vmatrix} a & b & c \\\\ 2d + 5g & 2e + 5h & 2f + 5i \\\\ -g & -h & -i \\end{vmatrix} = -2\\begin{vmatrix} a & b & c \\\\ d & e & f \\\\ g & h & i \\end{vmatrix}\\]",
+            1
+        ],
+        [
+            "Step 10:\n\\[= -2(-7)\\]",
+            1
+        ]
+    ],
+    "time": 136.07823967933655,
+    "total_tokens": 15828,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

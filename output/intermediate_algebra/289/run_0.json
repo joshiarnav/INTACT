@@ -1,0 +1,36 @@
+{
+    "problem": "In a certain polynomial, all the coefficients are integers, and the constant coefficient is 42.  All the roots are integers, and distinct.  Find the largest possible number of integer roots.",
+    "level": "Level 4",
+    "type": "Intermediate Algebra",
+    "solution": "By the Integer Root Theorem, any integer root must be a factor of 42.  The prime factorization of 42 is $2 \\cdot 3 \\cdot 7.$  Furthermore, the product of the roots is $(-1)^n \\cdot \\frac{42}{a_0},$ where $n$ is the degree of the polynomial, and $a_0$ is the leading coefficient.\n\nTo maximize the number of integer roots, which must be distinct, we can take the integer roots to be 2, 3, 7, 1, and $-1.$  This gives us a maximum of $\\boxed{5}$ integer roots.",
+    "is_solved": true,
+    "model_solution": "Let $P(x)$ be the polynomial.\n\nStep 1: By the Factor Theorem, if $P(x)$ has an integer root $r$, then $(x-r)$ is a factor of $P(x)$, so $P(r)=0$.\nStep 2: Since the constant coefficient of $P(x)$ is $42$, we know that $P(0) = 42$ and, by Step 1, $0$ must be a root of $P(x)$ if it is to be an integer root.\nStep 3:  Let $P(x) = (x - r_1)(x - r_2) \\cdots (x - r_n)$.  Then $42 = P(0) = (r_1)(r_2) \\cdots (r_n)$.  Since $42 = 2 \\cdot 3 \\cdot 7$, $n \\leq 3$.\nStep 4:  If $n = 2$, then $42$ must be the product of the two integer roots.  Checking the possible pairs, we see that $42 = 2 \\cdot 21 = 6 \\cdot 7$, so the number of roots in this case is $2$.\n\nThere is no final answer yet.",
+    "steps": [
+        "Let $P(x)$ be the polynomial.\n\nStep 1: By the Factor Theorem, if $P(x)$ has an integer root $r$, then $(x-r)$ is a factor of $P(x)$, so $P(r)=0$.",
+        "Step 2: Since the constant coefficient of $P(x)$ is $42$, we know that $P(0) = 42$ and, by Step 1, $0$ must be a root of $P(x)$ if it is to be an integer root.",
+        "Step 3:  Let $P(x) = (x - r_1)(x - r_2) \\cdots (x - r_n)$.  Then $42 = P(0) = (r_1)(r_2) \\cdots (r_n)$.  Since $42 = 2 \\cdot 3 \\cdot 7$, $n \\leq 3$.",
+        "Step 4:  If $n = 2$, then $42$ must be the product of the two integer roots.  Checking the possible pairs, we see that $42 = 2 \\cdot 21 = 6 \\cdot 7$, so the number of roots in this case is $2$.\n\nThere is no final answer yet."
+    ],
+    "full_steps": [
+        [
+            "Let $P(x)$ be the polynomial.\n\nStep 1: By the Factor Theorem, if $P(x)$ has an integer root $r$, then $(x-r)$ is a factor of $P(x)$, so $P(r)=0$.",
+            1
+        ],
+        [
+            "Step 2: Since the constant coefficient of $P(x)$ is $42$, we know that $P(0) = 42$ and, by Step 1, $0$ must be a root of $P(x)$ if it is to be an integer root.",
+            1
+        ],
+        [
+            "Step 3:  Let $P(x) = (x - r_1)(x - r_2) \\cdots (x - r_n)$.  Then $42 = P(0) = (r_1)(r_2) \\cdots (r_n)$.  Since $42 = 2 \\cdot 3 \\cdot 7$, $n \\leq 3$.",
+            1
+        ],
+        [
+            "Step 4:  If $n = 2$, then $42$ must be the product of the two integer roots.  Checking the possible pairs, we see that $42 = 2 \\cdot 21 = 6 \\cdot 7$, so the number of roots in this case is $2$.\n\nThere is no final answer yet.",
+            1
+        ]
+    ],
+    "time": 53.769476652145386,
+    "total_tokens": 2059,
+    "final_answer_tokens": 365,
+    "model": "meta-llama/Llama-Vision-Free"
+}

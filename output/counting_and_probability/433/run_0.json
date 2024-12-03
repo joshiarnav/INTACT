@@ -1,0 +1,66 @@
+{
+    "problem": "Point $(x,y)$ is randomly picked from the rectangular region with vertices at $(0,0),(2009,0),(2009,2010),$ and $(0,2010)$. What is the probability that $x > 7y$? Express your answer as a common fraction.",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "To see which points in the rectangle satisfy $x>7y$, we rewrite the inequality as $y<\\frac{1}{7}x$.  This inequality is satisfied by the points below the line $y=\\frac{1}{7}x$.  Drawing a line with slope $\\frac{1}{7}$ and $y$-intercept 0, we obtain the figure below.  We are asked to find the ratio of the area of the shaded triangle to the area of the rectangle.  The vertices of the triangle are $(0,0), (2009,0)$, and $(2009,2009/7)$, so the ratio of areas is  \\[\n\\frac{\\frac{1}{2}(2009)\\left(\\frac{2009}{7}\\right)}{2009(2010)}=\\frac{2009/14}{2010}=\\boxed{\\frac{287}{4020}}.\n\\]\n\n[asy]\nunitsize(7mm);\ndefaultpen(linewidth(.7pt)+fontsize(8pt));\ndotfactor=4;\n\nfill((0,0)--(4,0)--(4,.5714)--cycle,gray);\n\ndraw((-2,0)--(5,0),Arrows(4));\ndraw((0,-2)--(0,5),Arrows(4));\n\ndraw((0,0)--(4,0)--(4,4.2)--(0,4.2)--cycle);\n\ndot((4,4.2));\nlabel(\"$(2009,2010)$\",(4,4.2),NE);\n\ndraw((0,0)--(4.8,.686),linetype(\"4 4\"),Arrows(4));\nlabel(\"$y=x/7$\",(4.8,.686),NE); [/asy]",
+    "is_solved": false,
+    "model_solution": "Step 1: The inequality that needs to be satisfied is x > 7y. The line that represents this inequality has a slope of 1/7 and y-intercept of 0.\nStep 2: The line x = 7y divides the rectangle into two parts, one of which satisfies the given inequality. The area of the shaded region that lies in the rectangle and satisfies the inequality is a triangle with vertices at (0, 0), (2009, 0), and the point of intersection of the line and the rectangle, which can be found by solving the equation x = 7y for y when x = 2009, yielding y = 287.\nStep 3: The area of the triangle can be calculated as (1/2)(2009)(287).\nStep 4: Calculate the probability as the ratio of the area of the shaded triangle to the area of the rectangular region, which is $\\frac{(1/2)(2009)(287)}{(2009)(2010)}$.\nStep 5: $\\frac{\\frac{1}{2}(2009)(287)}{(2009)(2010)}=\\frac{287}{2\\cdot 2010}=\\frac{287}{4020}=\\frac{287}{2\\cdot 2010}=\\frac{287}{4020}=\\frac{287}{2\\cdot 2010}=\\frac{287}{4020}=\\frac{11\\cdot 7\\cdot 29}{2\\cdot 2\\cdot 3\\cdot 5\\cdot 67}=\\frac{11\\cdot 7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}$\n$\\frac{11\\cdot 7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{11\\cdot 7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{11\\cdot 7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{11\\cdot 7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{11\\cdot 7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{11\\cdot 7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{11\\cdot 7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{11\\cdot 7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}$\nStep 6: Cancel common factors of 2 and 11 in the numerator and denominator, then factor the remaining denominator.\n\n$\\frac{11\\cdot 7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{\\cancel{11}\\cdot 7\\cdot 29}{2^{2}\\cdot \\cancel{11}\\cdot 3\\cdot 5\\cdot 67}=\\frac{7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}$\n$\\frac{7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{7\\cdot 29}{(2\\cdot 2)\\cdot 3\\cdot 5\\cdot 67}$\nCancel common factors of 2 in the denominator.\n\n$\\frac{7\\cdot 29}{(2\\cdot 2)\\cdot 3\\cdot 5\\cdot 67}=\\frac{7\\cdot 29}{\\cancel{2}\\cdot \\cancel{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{7\\cdot 29}{\\cancel{2}\\cdot \\cancel{2}\\cdot 3\\cdot 5\\cdot 67}$\nCancel common factor of 2 in the denominator.\n\n$\\frac{7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{7\\cdot 29}{2\\cdot 2\\cdot 3\\cdot 5\\cdot 67}=\\frac{7\\cdot 29}{\\cancel{2}\\cdot \\cancel{2}\\cdot 3\\cdot 5\\cdot 67}$",
+    "steps": [
+        "Step 1: The inequality that needs to be satisfied is x > 7y. The line that represents this inequality has a slope of 1/7 and y-intercept of 0.",
+        "Step 2: The line x = 7y divides the rectangle into two parts, one of which satisfies the given inequality. The area of the shaded region that lies in the rectangle and satisfies the inequality is a triangle with vertices at (0, 0), (2009, 0), and the point of intersection of the line and the rectangle, which can be found by solving the equation x = 7y for y when x = 2009, yielding y = 287.",
+        "Step 3: The area of the triangle can be calculated as (1/2)(2009)(287).",
+        "Step 4: Calculate the probability as the ratio of the area of the shaded triangle to the area of the rectangular region, which is $\\frac{(1/2)(2009)(287)}{(2009)(2010)}$.",
+        "Step 5: $\\frac{\\frac{1}{2}(2009)(287)}{(2009)(2010)}=\\frac{287}{2\\cdot 2010}=\\frac{287}{4020}=\\frac{287}{2\\cdot 2010}=\\frac{287}{4020}=\\frac{287}{2\\cdot 2010}=\\frac{287}{4020}=\\frac{11\\cdot 7\\cdot 29}{2\\cdot 2\\cdot 3\\cdot 5\\cdot 67}=\\frac{11\\cdot 7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}$",
+        "$\\frac{11\\cdot 7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{11\\cdot 7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{11\\cdot 7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{11\\cdot 7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{11\\cdot 7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{11\\cdot 7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{11\\cdot 7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{11\\cdot 7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}$",
+        "Step 6: Cancel common factors of 2 and 11 in the numerator and denominator, then factor the remaining denominator.\n\n$\\frac{11\\cdot 7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{\\cancel{11}\\cdot 7\\cdot 29}{2^{2}\\cdot \\cancel{11}\\cdot 3\\cdot 5\\cdot 67}=\\frac{7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}$",
+        "$\\frac{7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{7\\cdot 29}{(2\\cdot 2)\\cdot 3\\cdot 5\\cdot 67}$",
+        "Cancel common factors of 2 in the denominator.\n\n$\\frac{7\\cdot 29}{(2\\cdot 2)\\cdot 3\\cdot 5\\cdot 67}=\\frac{7\\cdot 29}{\\cancel{2}\\cdot \\cancel{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{7\\cdot 29}{\\cancel{2}\\cdot \\cancel{2}\\cdot 3\\cdot 5\\cdot 67}$",
+        "Cancel common factor of 2 in the denominator.\n\n$\\frac{7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{7\\cdot 29}{2\\cdot 2\\cdot 3\\cdot 5\\cdot 67}=\\frac{7\\cdot 29}{\\cancel{2}\\cdot \\cancel{2}\\cdot 3\\cdot 5\\cdot 67}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: The inequality that needs to be satisfied is x > 7y. The line that represents this inequality has a slope of 1/7 and y-intercept of 0.",
+            1
+        ],
+        [
+            "Step 2: The line x = 7y divides the rectangle into two parts, one of which satisfies the given inequality. The area of the shaded region that lies in the rectangle and satisfies the inequality is a triangle with vertices at (0, 0), (2009, 0), and the point of intersection of the line and the rectangle, which can be found by solving the equation x = 7y for y when x = 2009, yielding y = 287.",
+            1
+        ],
+        [
+            "Step 3: The area of the triangle can be calculated as (1/2)(2009)(287).",
+            1
+        ],
+        [
+            "Step 4: Calculate the probability as the ratio of the area of the shaded triangle to the area of the rectangular region, which is $\\frac{(1/2)(2009)(287)}{(2009)(2010)}$.",
+            1
+        ],
+        [
+            "Step 5: $\\frac{\\frac{1}{2}(2009)(287)}{(2009)(2010)}=\\frac{287}{2\\cdot 2010}=\\frac{287}{4020}=\\frac{287}{2\\cdot 2010}=\\frac{287}{4020}=\\frac{287}{2\\cdot 2010}=\\frac{287}{4020}=\\frac{11\\cdot 7\\cdot 29}{2\\cdot 2\\cdot 3\\cdot 5\\cdot 67}=\\frac{11\\cdot 7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}$",
+            1
+        ],
+        [
+            "$\\frac{11\\cdot 7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{11\\cdot 7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{11\\cdot 7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{11\\cdot 7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{11\\cdot 7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{11\\cdot 7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{11\\cdot 7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{11\\cdot 7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}$",
+            1
+        ],
+        [
+            "Step 6: Cancel common factors of 2 and 11 in the numerator and denominator, then factor the remaining denominator.\n\n$\\frac{11\\cdot 7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{\\cancel{11}\\cdot 7\\cdot 29}{2^{2}\\cdot \\cancel{11}\\cdot 3\\cdot 5\\cdot 67}=\\frac{7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}$",
+            1
+        ],
+        [
+            "$\\frac{7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{7\\cdot 29}{(2\\cdot 2)\\cdot 3\\cdot 5\\cdot 67}$",
+            1
+        ],
+        [
+            "Cancel common factors of 2 in the denominator.\n\n$\\frac{7\\cdot 29}{(2\\cdot 2)\\cdot 3\\cdot 5\\cdot 67}=\\frac{7\\cdot 29}{\\cancel{2}\\cdot \\cancel{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{7\\cdot 29}{\\cancel{2}\\cdot \\cancel{2}\\cdot 3\\cdot 5\\cdot 67}$",
+            1
+        ],
+        [
+            "Cancel common factor of 2 in the denominator.\n\n$\\frac{7\\cdot 29}{2^{2}\\cdot 3\\cdot 5\\cdot 67}=\\frac{7\\cdot 29}{2\\cdot 2\\cdot 3\\cdot 5\\cdot 67}=\\frac{7\\cdot 29}{\\cancel{2}\\cdot \\cancel{2}\\cdot 3\\cdot 5\\cdot 67}$",
+            1
+        ]
+    ],
+    "time": 132.64084005355835,
+    "total_tokens": 12048,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

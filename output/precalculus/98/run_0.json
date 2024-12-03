@@ -1,0 +1,66 @@
+{
+    "problem": "Given $\\|\\mathbf{v}\\| = 5$ and $\\|\\mathbf{w}\\| = 8,$ find the largest possible value of\n\\[\\|\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v}\\|.\\]",
+    "level": "Level 3",
+    "type": "Precalculus",
+    "solution": "Note that\n\\begin{align*}\n\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v} &= \\left\\| \\frac{\\mathbf{v} \\cdot \\mathbf{w}}{\\|\\mathbf{w}\\|^2} \\mathbf{w} \\right\\| \\\\\n&= \\frac{|\\mathbf{v} \\cdot \\mathbf{w}|}{\\|\\mathbf{w}\\|^2} \\cdot \\|\\mathbf{w}\\| \\\\\n&= \\frac{|\\mathbf{v} \\cdot \\mathbf{w}|}{\\|\\mathbf{w}\\|}.\n\\end{align*}Let $\\theta$ be the angle between $\\mathbf{v}$ and $\\mathbf{w}.$  Then $\\mathbf{v} \\cdot \\mathbf{w} = \\|\\mathbf{v}\\| \\|\\mathbf{w}\\| \\cos \\theta,$ so\n\\[\\frac{|\\mathbf{v} \\cdot \\mathbf{w}|}{\\|\\mathbf{w}\\|} = \\frac{|\\|\\mathbf{v}\\| \\|\\mathbf{w}\\| \\cos \\theta|}{\\|\\mathbf{w}\\|} = \\|\\mathbf{v}\\| |\\cos \\theta| = 5 |\\cos \\theta| \\le 5.\\]Equality occurs when $\\theta = 0,$ or when $\\mathbf{v}$ and $\\mathbf{w}$ point in the same direction, so the largest possible value is $\\boxed{5}.$\n\nIf $\\mathbf{p}$ is the projection of $\\mathbf{v}$ onto $\\mathbf{w},$ then the length of $\\mathbf{p}$ is the leg of a right triangle that has the length of $\\mathbf{v}$ as the hypotenuse.  Thus, geometrically, $\\|\\mathbf{p}\\| \\le \\|\\mathbf{v}\\| = 5.$\n\n[asy]\nunitsize(1 cm);\n\npair O, P, V, W;\n\nO = (0,0);\nV = (10/7,sqrt(3^2 - (10/7)^2));\nP = (10/7,0);\nW = (7,0);\n\ndraw(O--V,Arrow(6));\ndraw(O--W,Arrow(6));\ndraw(O--P,red,Arrow(6));\ndraw(P--V,dashed);\n\nlabel(\"$\\mathbf{v}$\", V, N);\nlabel(\"$\\mathbf{w}$\", W, E);\nlabel(\"$\\mathbf{p}$\", P, S);\n[/asy]",
+    "is_solved": false,
+    "model_solution": "Step 1: The formula for the projection of \\(\\mathbf{v}\\) onto \\(\\mathbf{w}\\) is given by\n\\[\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v} = \\frac{\\mathbf{v} \\cdot \\mathbf{w}}{\\|\\mathbf{w}\\|^2} \\mathbf{w}.\\]\nTherefore, the magnitude of the projection of \\(\\mathbf{v}\\) onto \\(\\mathbf{w}\\) is\n\\[\\|\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v}\\| = \\left| \\frac{\\mathbf{v} \\cdot \\mathbf{w}}{\\|\\mathbf{w}\\|^2} \\right| \\|\\mathbf{w}\\|.\\]\nStep 2: \n\\[\\|\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v}\\| = \\left| \\frac{\\mathbf{v} \\cdot \\mathbf{w}}{\\|\\mathbf{w}\\|^2} \\right| \\|\\mathbf{w}\\| = \\frac{|\\mathbf{v} \\cdot \\mathbf{w}|}{\\|\\mathbf{w}\\|}.\\]\nStep 3:\n\\[\\|\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v}\\| = \\frac{|\\mathbf{v} \\cdot \\mathbf{w}|}{\\|\\mathbf{w}\\|} \\le \\frac{\\|\\mathbf{v}\\| \\|\\mathbf{w}\\|}{\\|\\mathbf{w}\\|} = \\|\\mathbf{v}\\|.\\]\nStep 4:\n\\[\\|\\mathbf{v}\\| \\|\\mathbf{w}\\| \\cos \\theta = \\|\\mathbf{v}\\| \\|\\mathbf{w}\\| \\cos 0^{\\circ} = \\|\\mathbf{v}\\| \\|\\mathbf{w}\\|,\\]\nso that equality is achieved when $\\theta = 0^{\\circ}$ and $\\mathbf{v}$ and $\\mathbf{w}$ are parallel.\nStep 5:\n\\[\\|\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v}\\| = \\frac{\\|\\mathbf{v}\\| \\|\\mathbf{w}\\|}{\\|\\mathbf{w}\\|} = \\|\\mathbf{v}\\| = 5.\\]\nStep 6:\n\\[\\|\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v}\\| \\le \\|\\mathbf{v}\\|.\\]\nStep 7:\n\\[\\|\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v}\\| \\le 5.\\]\nStep 8:\n\\[\\|\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v}\\| = \\frac{|\\mathbf{v} \\cdot \\mathbf{w}|}{\\|\\mathbf{w}\\|} \\le \\frac{8 \\cdot 5}{8} = 5.\\]\nStep 9:\n\\[\\|\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v}\\| \\le 5\\]\nStep 10:\n\\[\\|\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v}\\| = \\frac{|\\mathbf{v} \\cdot \\mathbf{w}|}{\\|\\mathbf{w}\\|} \\le \\frac{8 \\cdot 5}{8} = 5.\\]",
+    "steps": [
+        "Step 1: The formula for the projection of \\(\\mathbf{v}\\) onto \\(\\mathbf{w}\\) is given by\n\\[\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v} = \\frac{\\mathbf{v} \\cdot \\mathbf{w}}{\\|\\mathbf{w}\\|^2} \\mathbf{w}.\\]\nTherefore, the magnitude of the projection of \\(\\mathbf{v}\\) onto \\(\\mathbf{w}\\) is\n\\[\\|\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v}\\| = \\left| \\frac{\\mathbf{v} \\cdot \\mathbf{w}}{\\|\\mathbf{w}\\|^2} \\right| \\|\\mathbf{w}\\|.\\]",
+        "Step 2: \n\\[\\|\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v}\\| = \\left| \\frac{\\mathbf{v} \\cdot \\mathbf{w}}{\\|\\mathbf{w}\\|^2} \\right| \\|\\mathbf{w}\\| = \\frac{|\\mathbf{v} \\cdot \\mathbf{w}|}{\\|\\mathbf{w}\\|}.\\]",
+        "Step 3:\n\\[\\|\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v}\\| = \\frac{|\\mathbf{v} \\cdot \\mathbf{w}|}{\\|\\mathbf{w}\\|} \\le \\frac{\\|\\mathbf{v}\\| \\|\\mathbf{w}\\|}{\\|\\mathbf{w}\\|} = \\|\\mathbf{v}\\|.\\]",
+        "Step 4:\n\\[\\|\\mathbf{v}\\| \\|\\mathbf{w}\\| \\cos \\theta = \\|\\mathbf{v}\\| \\|\\mathbf{w}\\| \\cos 0^{\\circ} = \\|\\mathbf{v}\\| \\|\\mathbf{w}\\|,\\]\nso that equality is achieved when $\\theta = 0^{\\circ}$ and $\\mathbf{v}$ and $\\mathbf{w}$ are parallel.",
+        "Step 5:\n\\[\\|\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v}\\| = \\frac{\\|\\mathbf{v}\\| \\|\\mathbf{w}\\|}{\\|\\mathbf{w}\\|} = \\|\\mathbf{v}\\| = 5.\\]",
+        "Step 6:\n\\[\\|\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v}\\| \\le \\|\\mathbf{v}\\|.\\]",
+        "Step 7:\n\\[\\|\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v}\\| \\le 5.\\]",
+        "Step 8:\n\\[\\|\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v}\\| = \\frac{|\\mathbf{v} \\cdot \\mathbf{w}|}{\\|\\mathbf{w}\\|} \\le \\frac{8 \\cdot 5}{8} = 5.\\]",
+        "Step 9:\n\\[\\|\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v}\\| \\le 5\\]",
+        "Step 10:\n\\[\\|\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v}\\| = \\frac{|\\mathbf{v} \\cdot \\mathbf{w}|}{\\|\\mathbf{w}\\|} \\le \\frac{8 \\cdot 5}{8} = 5.\\]"
+    ],
+    "full_steps": [
+        [
+            "Step 1: The formula for the projection of \\(\\mathbf{v}\\) onto \\(\\mathbf{w}\\) is given by\n\\[\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v} = \\frac{\\mathbf{v} \\cdot \\mathbf{w}}{\\|\\mathbf{w}\\|^2} \\mathbf{w}.\\]\nTherefore, the magnitude of the projection of \\(\\mathbf{v}\\) onto \\(\\mathbf{w}\\) is\n\\[\\|\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v}\\| = \\left| \\frac{\\mathbf{v} \\cdot \\mathbf{w}}{\\|\\mathbf{w}\\|^2} \\right| \\|\\mathbf{w}\\|.\\]",
+            1
+        ],
+        [
+            "Step 2: \n\\[\\|\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v}\\| = \\left| \\frac{\\mathbf{v} \\cdot \\mathbf{w}}{\\|\\mathbf{w}\\|^2} \\right| \\|\\mathbf{w}\\| = \\frac{|\\mathbf{v} \\cdot \\mathbf{w}|}{\\|\\mathbf{w}\\|}.\\]",
+            1
+        ],
+        [
+            "Step 3:\n\\[\\|\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v}\\| = \\frac{|\\mathbf{v} \\cdot \\mathbf{w}|}{\\|\\mathbf{w}\\|} \\le \\frac{\\|\\mathbf{v}\\| \\|\\mathbf{w}\\|}{\\|\\mathbf{w}\\|} = \\|\\mathbf{v}\\|.\\]",
+            1
+        ],
+        [
+            "Step 4:\n\\[\\|\\mathbf{v}\\| \\|\\mathbf{w}\\| \\cos \\theta = \\|\\mathbf{v}\\| \\|\\mathbf{w}\\| \\cos 0^{\\circ} = \\|\\mathbf{v}\\| \\|\\mathbf{w}\\|,\\]\nso that equality is achieved when $\\theta = 0^{\\circ}$ and $\\mathbf{v}$ and $\\mathbf{w}$ are parallel.",
+            1
+        ],
+        [
+            "Step 5:\n\\[\\|\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v}\\| = \\frac{\\|\\mathbf{v}\\| \\|\\mathbf{w}\\|}{\\|\\mathbf{w}\\|} = \\|\\mathbf{v}\\| = 5.\\]",
+            1
+        ],
+        [
+            "Step 6:\n\\[\\|\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v}\\| \\le \\|\\mathbf{v}\\|.\\]",
+            1
+        ],
+        [
+            "Step 7:\n\\[\\|\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v}\\| \\le 5.\\]",
+            1
+        ],
+        [
+            "Step 8:\n\\[\\|\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v}\\| = \\frac{|\\mathbf{v} \\cdot \\mathbf{w}|}{\\|\\mathbf{w}\\|} \\le \\frac{8 \\cdot 5}{8} = 5.\\]",
+            1
+        ],
+        [
+            "Step 9:\n\\[\\|\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v}\\| \\le 5\\]",
+            1
+        ],
+        [
+            "Step 10:\n\\[\\|\\operatorname{proj}_{\\mathbf{w}} \\mathbf{v}\\| = \\frac{|\\mathbf{v} \\cdot \\mathbf{w}|}{\\|\\mathbf{w}\\|} \\le \\frac{8 \\cdot 5}{8} = 5.\\]",
+            1
+        ]
+    ],
+    "time": 136.16046786308289,
+    "total_tokens": 12723,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

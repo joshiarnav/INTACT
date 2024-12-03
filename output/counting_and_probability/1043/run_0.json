@@ -1,0 +1,36 @@
+{
+    "problem": "For how many three-element sets (order doesn't matter) of positive integers $\\{a,b,c\\}$ is it true that $a\\times b\\times c=2310$?  (The positive integers $a,$ $b,$ and $c$ are distinct.)",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "The prime factorization of $2310$ is $2310 = 2 \\cdot 3 \\cdot 5 \\cdot 7 \\cdot 11.$ Therefore, we have the equation \\[ abc = 2310 = 2 \\cdot 3 \\cdot 5 \\cdot 7 \\cdot 11,\\]where $a, b, c$ must be distinct positive integers and order does not matter. There are $3$ ways to assign each prime number on the right-hand side to one of the variables $a, b, c,$ which gives $3^5 = 243$ solutions for $(a, b, c).$ However, three of these solutions have two $1$s and one $2310,$ which contradicts the fact that $a, b, c$ must be distinct. Because each prime factor appears only once, all other solutions have $a, b, c$ distinct. Correcting for this, we get $243 - 3 = 240$ ordered triples $(a, b, c)$ where $a, b, c$ are all distinct.\n\nFinally, since order does not matter, we must divide by $3!,$ the number of ways to order $a, b, c.$ This gives the final answer, \\[\\frac{240}{3!} = \\frac{240}{6} = \\boxed{40}.\\]",
+    "is_solved": true,
+    "model_solution": "Step 1:  To solve this problem, we first need to factorize 2310 to determine its prime factors.\n  - Factorization: $2310 = 2  \\cdot 3  \\cdot 5  \\cdot 7  \\cdot 11$\n  - Prime factorization of 2310: $2  \\cdot 3  \\cdot 5  \\cdot 7  \\cdot 11$\nStep 2:\nThe prime factorization of 2310 is $2 \\cdot 3 \\cdot 5 \\cdot 7 \\cdot 11$, and we have five prime factors. To find the number of three-element sets of positive integers, we can use the stars and bars method.\nStep 2: \nWe need to distribute 3 identical items (the 3-element set) into 5 distinct bins (the prime factors), where each bin gets at least 1 item. This is a classic stars and bars problem.\n\n$$\\binom{3+5-1}{3} = \\binom{7}{3}$$\nStep 3:\nNow we can calculate $\\binom{7}{3} = \\frac{7!}{3!(7-3)!} = \\frac{7!}{3!4!} = \\frac{7\\cdot6\\cdot5\\cdot4!}{3\\cdot2\\cdot1\\cdot4!} = \\frac{7\\cdot6\\cdot5}{3\\cdot2\\cdot1} = 35$\n\nFinal Answer: The final answer is 35.",
+    "steps": [
+        "Step 1:  To solve this problem, we first need to factorize 2310 to determine its prime factors.\n  - Factorization: $2310 = 2  \\cdot 3  \\cdot 5  \\cdot 7  \\cdot 11$\n  - Prime factorization of 2310: $2  \\cdot 3  \\cdot 5  \\cdot 7  \\cdot 11$",
+        "Step 2:\nThe prime factorization of 2310 is $2 \\cdot 3 \\cdot 5 \\cdot 7 \\cdot 11$, and we have five prime factors. To find the number of three-element sets of positive integers, we can use the stars and bars method.",
+        "Step 2: \nWe need to distribute 3 identical items (the 3-element set) into 5 distinct bins (the prime factors), where each bin gets at least 1 item. This is a classic stars and bars problem.\n\n$$\\binom{3+5-1}{3} = \\binom{7}{3}$$",
+        "Step 3:\nNow we can calculate $\\binom{7}{3} = \\frac{7!}{3!(7-3)!} = \\frac{7!}{3!4!} = \\frac{7\\cdot6\\cdot5\\cdot4!}{3\\cdot2\\cdot1\\cdot4!} = \\frac{7\\cdot6\\cdot5}{3\\cdot2\\cdot1} = 35$\n\nFinal Answer: The final answer is 35."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  To solve this problem, we first need to factorize 2310 to determine its prime factors.\n  - Factorization: $2310 = 2  \\cdot 3  \\cdot 5  \\cdot 7  \\cdot 11$\n  - Prime factorization of 2310: $2  \\cdot 3  \\cdot 5  \\cdot 7  \\cdot 11$",
+            1
+        ],
+        [
+            "Step 2:\nThe prime factorization of 2310 is $2 \\cdot 3 \\cdot 5 \\cdot 7 \\cdot 11$, and we have five prime factors. To find the number of three-element sets of positive integers, we can use the stars and bars method.",
+            1
+        ],
+        [
+            "Step 2: \nWe need to distribute 3 identical items (the 3-element set) into 5 distinct bins (the prime factors), where each bin gets at least 1 item. This is a classic stars and bars problem.\n\n$$\\binom{3+5-1}{3} = \\binom{7}{3}$$",
+            1
+        ],
+        [
+            "Step 3:\nNow we can calculate $\\binom{7}{3} = \\frac{7!}{3!(7-3)!} = \\frac{7!}{3!4!} = \\frac{7\\cdot6\\cdot5\\cdot4!}{3\\cdot2\\cdot1\\cdot4!} = \\frac{7\\cdot6\\cdot5}{3\\cdot2\\cdot1} = 35$\n\nFinal Answer: The final answer is 35.",
+            1
+        ]
+    ],
+    "time": 54.02968382835388,
+    "total_tokens": 2536,
+    "final_answer_tokens": 442,
+    "model": "meta-llama/Llama-Vision-Free"
+}

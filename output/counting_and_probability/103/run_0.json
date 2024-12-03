@@ -1,0 +1,66 @@
+{
+    "problem": "A Senate committee has 5 Democrats and 5 Republicans.  In how many distinguishable ways can they sit around a circular table if all the members of each party all sit next to each other?  (If the table is rotated, it should be counted as the same seating.)",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "Choose any 5 consecutive seats in which to place the Democrats -- it doesn't matter which 5 consecutive seats that we choose, since we can rotate the table.  Then there are $5!$ ways to place the Democrats in their seats, and $5!$ ways to place the Republicans in their seats, for a total of $5! \\times 5! = \\boxed{14,\\!400}$ arrangements.",
+    "is_solved": false,
+    "model_solution": "There are 10! ways to seat the Senators in a linear arrangement, and since the table is circular, we divide by 10 to account for rotations.\nThere are 2! ways to arrange the two groups of Senators (Democrats and Republicans) in a linear arrangement.\nThe number of ways to arrange each group around the table is 5! for each group, and since there are 2! ways to select which group sits next to the rotation point, we divide by 2! to account for overcounting.\nMultiply the number of ways to arrange the groups and the members in each group, accounting for overcounting.\n$\\frac{10!}{10} \\cdot \\frac{2!}{2!} \\cdot \\frac{5!}{2!} \\cdot 5!$\n$\\frac{10!}{10} \\cdot \\frac{2!}{2!} \\cdot \\frac{5!}{2!} \\cdot \\frac{5!}{2!} = \\frac{10!}{10} \\cdot \\frac{1}{2} \\cdot \\frac{5!}{2} \\cdot \\frac{5!}{2}$\n$\\frac{10!}{10} \\cdot \\frac{1}{2} \\cdot \\frac{5!}{2} \\cdot \\frac{5!}{2} = \\frac{10!}{10 \\cdot 4 \\cdot 2 \\cdot 2} \\cdot \\frac{5!}{5!}$\n$\\frac{10!}{10 \\cdot 4 \\cdot 2 \\cdot 2} \\cdot \\frac{5!}{5!} = \\frac{3628800}{320} \\cdot 1 = 11340$\n$\\frac{3628800}{320} \\cdot 1 = 11340$\n$\\frac{3628800}{320} \\cdot 1$",
+    "steps": [
+        "There are 10! ways to seat the Senators in a linear arrangement, and since the table is circular, we divide by 10 to account for rotations.",
+        "There are 2! ways to arrange the two groups of Senators (Democrats and Republicans) in a linear arrangement.",
+        "The number of ways to arrange each group around the table is 5! for each group, and since there are 2! ways to select which group sits next to the rotation point, we divide by 2! to account for overcounting.",
+        "Multiply the number of ways to arrange the groups and the members in each group, accounting for overcounting.",
+        "$\\frac{10!}{10} \\cdot \\frac{2!}{2!} \\cdot \\frac{5!}{2!} \\cdot 5!$",
+        "$\\frac{10!}{10} \\cdot \\frac{2!}{2!} \\cdot \\frac{5!}{2!} \\cdot \\frac{5!}{2!} = \\frac{10!}{10} \\cdot \\frac{1}{2} \\cdot \\frac{5!}{2} \\cdot \\frac{5!}{2}$",
+        "$\\frac{10!}{10} \\cdot \\frac{1}{2} \\cdot \\frac{5!}{2} \\cdot \\frac{5!}{2} = \\frac{10!}{10 \\cdot 4 \\cdot 2 \\cdot 2} \\cdot \\frac{5!}{5!}$",
+        "$\\frac{10!}{10 \\cdot 4 \\cdot 2 \\cdot 2} \\cdot \\frac{5!}{5!} = \\frac{3628800}{320} \\cdot 1 = 11340$",
+        "$\\frac{3628800}{320} \\cdot 1 = 11340$",
+        "$\\frac{3628800}{320} \\cdot 1$"
+    ],
+    "full_steps": [
+        [
+            "There are 10! ways to seat the Senators in a linear arrangement, and since the table is circular, we divide by 10 to account for rotations.",
+            1
+        ],
+        [
+            "There are 2! ways to arrange the two groups of Senators (Democrats and Republicans) in a linear arrangement.",
+            1
+        ],
+        [
+            "The number of ways to arrange each group around the table is 5! for each group, and since there are 2! ways to select which group sits next to the rotation point, we divide by 2! to account for overcounting.",
+            1
+        ],
+        [
+            "Multiply the number of ways to arrange the groups and the members in each group, accounting for overcounting.",
+            1
+        ],
+        [
+            "$\\frac{10!}{10} \\cdot \\frac{2!}{2!} \\cdot \\frac{5!}{2!} \\cdot 5!$",
+            1
+        ],
+        [
+            "$\\frac{10!}{10} \\cdot \\frac{2!}{2!} \\cdot \\frac{5!}{2!} \\cdot \\frac{5!}{2!} = \\frac{10!}{10} \\cdot \\frac{1}{2} \\cdot \\frac{5!}{2} \\cdot \\frac{5!}{2}$",
+            1
+        ],
+        [
+            "$\\frac{10!}{10} \\cdot \\frac{1}{2} \\cdot \\frac{5!}{2} \\cdot \\frac{5!}{2} = \\frac{10!}{10 \\cdot 4 \\cdot 2 \\cdot 2} \\cdot \\frac{5!}{5!}$",
+            1
+        ],
+        [
+            "$\\frac{10!}{10 \\cdot 4 \\cdot 2 \\cdot 2} \\cdot \\frac{5!}{5!} = \\frac{3628800}{320} \\cdot 1 = 11340$",
+            1
+        ],
+        [
+            "$\\frac{3628800}{320} \\cdot 1 = 11340$",
+            1
+        ],
+        [
+            "$\\frac{3628800}{320} \\cdot 1$",
+            1
+        ]
+    ],
+    "time": 132.3435845375061,
+    "total_tokens": 6792,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

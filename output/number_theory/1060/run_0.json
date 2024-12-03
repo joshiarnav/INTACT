@@ -1,0 +1,31 @@
+{
+    "problem": "A Chinese emperor orders a regiment of soldiers in his palace to divide into groups of $4$. They do so successfully. He then orders them to divide into groups of $3$, upon which $2$ of them are left without a group. He then orders them to divide into groups of $11$, upon which $5$ are left without a group. If the emperor estimates there are about two hundred soldiers in the regiment, what is the most likely number of soldiers in the regiment?",
+    "level": "Level 4",
+    "type": "Number Theory",
+    "solution": "Let $n$ be the number of soldiers. According to the problem statement, it follows that \\begin{align*}\nn &\\equiv 0 \\pmod{4} \\\\\nn &\\equiv 2 \\pmod{3} \\\\\nn &\\equiv 5 \\pmod{11}\n\\end{align*}By the Chinese Remainder Theorem, there is an unique residue that $n$ can leave, modulo $33$; since $5 \\equiv 2 \\pmod{3}$, it follows that $n \\equiv 5 \\pmod{33}$. Also, we know that $n$ is divisible by $4$, so by the Chinese Remainder Theorem again, it follows that $n \\equiv 104 \\pmod{132}$. Writing out the first few positive values of $n$, we obtain that $n = 104, 236, 368$, and so forth. The closest value of $n$ is $\\boxed{236}$.",
+    "is_solved": true,
+    "model_solution": "Let $n$ be the number of soldiers. \nThe number of soldiers must be of the form $4 k$ for some $k$ and $3 k-2$ for some $k,$ and $11 m+5$ for some $m.$\nStep 4: List the first few numbers of the form $4 k$ and $3 k-2$: $4,8,12,16,20,24,28,32,36,40,44,48,52,56,60,64,68,72,76,80,84,88,92,96,100,\\ldots$ and $2,5,8,11,14,17,20,23,26,29,32,35,38,41,44,47,50,53,56,59,62,65,68,71,74,\\ldots$\nThen, list the first few numbers of the form $11 m+5$: $5,16,27,38,49,60,71,82,93,104,115,126,137,148,159,170,181,192,\\ldots$\nStep 5:  The only common value among the lists of numbers of the form $4 k$, $3 k-2$, and $11 m+5$ is 68. \n Final Answer.",
+    "steps": [
+        "Let $n$ be the number of soldiers. \nThe number of soldiers must be of the form $4 k$ for some $k$ and $3 k-2$ for some $k,$ and $11 m+5$ for some $m.$",
+        "Step 4: List the first few numbers of the form $4 k$ and $3 k-2$: $4,8,12,16,20,24,28,32,36,40,44,48,52,56,60,64,68,72,76,80,84,88,92,96,100,\\ldots$ and $2,5,8,11,14,17,20,23,26,29,32,35,38,41,44,47,50,53,56,59,62,65,68,71,74,\\ldots$\nThen, list the first few numbers of the form $11 m+5$: $5,16,27,38,49,60,71,82,93,104,115,126,137,148,159,170,181,192,\\ldots$",
+        "Step 5:  The only common value among the lists of numbers of the form $4 k$, $3 k-2$, and $11 m+5$ is 68. \n Final Answer."
+    ],
+    "full_steps": [
+        [
+            "Let $n$ be the number of soldiers. \nThe number of soldiers must be of the form $4 k$ for some $k$ and $3 k-2$ for some $k,$ and $11 m+5$ for some $m.$",
+            1
+        ],
+        [
+            "Step 4: List the first few numbers of the form $4 k$ and $3 k-2$: $4,8,12,16,20,24,28,32,36,40,44,48,52,56,60,64,68,72,76,80,84,88,92,96,100,\\ldots$ and $2,5,8,11,14,17,20,23,26,29,32,35,38,41,44,47,50,53,56,59,62,65,68,71,74,\\ldots$\nThen, list the first few numbers of the form $11 m+5$: $5,16,27,38,49,60,71,82,93,104,115,126,137,148,159,170,181,192,\\ldots$",
+            1
+        ],
+        [
+            "Step 5:  The only common value among the lists of numbers of the form $4 k$, $3 k-2$, and $11 m+5$ is 68. \n Final Answer.",
+            1
+        ]
+    ],
+    "time": 40.89989495277405,
+    "total_tokens": 2117,
+    "final_answer_tokens": 440,
+    "model": "meta-llama/Llama-Vision-Free"
+}

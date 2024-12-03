@@ -1,0 +1,66 @@
+{
+    "problem": "Let $\\lfloor x \\rfloor$ denote the greatest integer less than or equal to $x$. How many real numbers $x$ satisfy the equation $x^2 + 10000\\lfloor x \\rfloor = 10000x$?",
+    "level": "Level 4",
+    "type": "Intermediate Algebra",
+    "solution": "Subtracting $10000 \\lfloor x\\rfloor$ from both sides, we get the equation \\[x^2 = 10000(x - \\lfloor x\\rfloor) = 10000 \\{x\\}.\\]To understand the solutions to this equation, we consider the graphs of $y=x^2$ and $y = 10000\\{x\\}.$ The graph of $y=x^2$ is the usual parabola; the graph of $y=10000\\{x\\}$ consists of line segments between the points $(n, 0)$ and $(n+1, 10000)$ for each integer $n,$ including the left endpoint but not the right endpoint:\n[asy]\nsize(18cm);\ndraw((0,-.5)--(0,5.5),EndArrow);\ndraw((-4.5,0)--(4.4,0));\nlabel(\"$\\ldots$\",(-6.5,2));label(\"$\\ldots$\",(6.5,2));\ndraw((-8.5,0)--(-12.5,0)); draw( (8.5,0)--(12.5,0),EndArrow);\nfor (int n=-12; n<=-10; ++n) { draw((n,0)--(n+1,4)); filldraw(Circle((n,0),0.08),black); filldraw(Circle((n+1,4),0.08),white);}\nfor (int n=9; n<=11; ++n) { draw((n,0)--(n+1,4)); filldraw(Circle((n,0),0.08),black); filldraw(Circle((n+1,4),0.08),white);}\n//draw((-9,0)--(-8.75,1)); filldraw(Circle((-9,0),0.08),black);\nfor (int n=-4; n<=3; ++n) { draw((n,0)--(n+1,4)); filldraw(Circle((n,0),0.08),black); filldraw(Circle((n+1,4),0.08),white);}\nreal f(real x) { return 0.03 * x^2; }\ndraw(graph(f, -4.5, 4.2) );\nreal g (real x) { return 4/100 * x^2; }\ndraw(reverse(graph(g, -10.8,-8.6)),EndArrow);\nreal h (real x) { return 4/121 * x^2; }\ndraw(graph(h, 9.3,11.8),EndArrow);\nlabel(\"$P$\",(-10,4),2*NNE, fontsize(10));\nlabel(\"$Q$\",(11,4),2*NNW, fontsize(10));\nlabel(\"$x$\",(12.5,0),E); \nlabel(\"$y$\",(0,5.5),N);\n[/asy] Note that the graph of $y = x^2$ passes through both the points $P = (-100, 10000)$ and $Q = (100, 10000),$ as shown above, so all of the points $(-99, 10000),$ $(-98, 10000),$ $\\dots,$ $(99, 10000)$ lie above the parabola. It follows that the parabola intersects only the segments corresponding to those points. There are $99 - (-99) + 1 = 199$ of these segments, so the number of solutions to the equation is $\\boxed{199}.$",
+    "is_solved": false,
+    "model_solution": "Step 1:  We start by rewriting the equation $x^2+10000 \\lfloor x \\rfloor=10000x$ as $x^2-10000x+10000 \\lfloor x \\rfloor=0$.\n$x^2+10000 \\lfloor x \\rfloor=10000x$\n$x^2-10000x+10000 \\lfloor x \\rfloor=0$\n$-10000x+10000 \\lfloor x \\rfloor=-x^2$\n$10000 \\lfloor x \\rfloor=-x^2+10000x$\n$\\frac{10000 \\lfloor x \\rfloor}{10000}=\\frac{-x^2+10000x}{10000}$\n$10 \\lfloor x \\rfloor=\\frac{-x^2+10000x}{1000}$\nStep 2: $10 \\lfloor x \\rfloor = 10x - x^2/1000$\nStep 3: $10 \\lfloor x \\rfloor = 10x - x^2/1000 \\Rightarrow 10000 \\lfloor x \\rfloor = 10000x - x^2$\nStep 4: $n \\le x < n+1 \\Rightarrow n^2 \\le x^2 < (n+1)^2 \\Rightarrow 10000n \\le 10000x - x^2 < 10000(n+1) - (n+1)^2$\nStep 5: $10000n \\le 10000x - x^2 < 10000(n+1) - (n+1)^2 \\Rightarrow n \\le \\lfloor x \\rfloor < n+1$\nSince $n \\le \\lfloor x \\rfloor < n+1$, we have $10000n \\le 10000 \\lfloor x \\rfloor < 10000(n+1)$, so \n$10000n \\le 10000x - x^2 < 10000(n+1)$.\nFor $n \\le x < n+1$, we have \n$\\frac{10000x - x^2}{10000} = 10x - \\frac{x^2}{1000} = 10 \\lfloor x \\rfloor$\nFor $n \\le x < n+1$, we have $\\frac{10000x - x^2}{10000} = 10x - \\frac{x^2}{1000} = 10 \\lfloor x \\rfloor = n$\nLet $n = \\lfloor x \\rfloor$. For $n \\le x < n+1$, we have $\\frac{10000x - x^2}{10000} = 10x - \\frac{x^2}{1000} = 10 \\lfloor x \\rfloor = 10n$.\nFor $n \\le x < n+1$, we have $0 \\le 10x - \\frac{x^2}{1000} - 10n \\le 10(n+1) - 10n = 10$\nFor $n \\le x < n+1$, we have $0 \\le \\frac{10000x - x^2}{10000} - 10n \\le 1$",
+    "steps": [
+        "Step 1:  We start by rewriting the equation $x^2+10000 \\lfloor x \\rfloor=10000x$ as $x^2-10000x+10000 \\lfloor x \\rfloor=0$.\n$x^2+10000 \\lfloor x \\rfloor=10000x$\n$x^2-10000x+10000 \\lfloor x \\rfloor=0$\n$-10000x+10000 \\lfloor x \\rfloor=-x^2$\n$10000 \\lfloor x \\rfloor=-x^2+10000x$\n$\\frac{10000 \\lfloor x \\rfloor}{10000}=\\frac{-x^2+10000x}{10000}$\n$10 \\lfloor x \\rfloor=\\frac{-x^2+10000x}{1000}$",
+        "Step 2: $10 \\lfloor x \\rfloor = 10x - x^2/1000$",
+        "Step 3: $10 \\lfloor x \\rfloor = 10x - x^2/1000 \\Rightarrow 10000 \\lfloor x \\rfloor = 10000x - x^2$",
+        "Step 4: $n \\le x < n+1 \\Rightarrow n^2 \\le x^2 < (n+1)^2 \\Rightarrow 10000n \\le 10000x - x^2 < 10000(n+1) - (n+1)^2$",
+        "Step 5: $10000n \\le 10000x - x^2 < 10000(n+1) - (n+1)^2 \\Rightarrow n \\le \\lfloor x \\rfloor < n+1$",
+        "Since $n \\le \\lfloor x \\rfloor < n+1$, we have $10000n \\le 10000 \\lfloor x \\rfloor < 10000(n+1)$, so \n$10000n \\le 10000x - x^2 < 10000(n+1)$.\nFor $n \\le x < n+1$, we have \n$\\frac{10000x - x^2}{10000} = 10x - \\frac{x^2}{1000} = 10 \\lfloor x \\rfloor$",
+        "For $n \\le x < n+1$, we have $\\frac{10000x - x^2}{10000} = 10x - \\frac{x^2}{1000} = 10 \\lfloor x \\rfloor = n$",
+        "Let $n = \\lfloor x \\rfloor$. For $n \\le x < n+1$, we have $\\frac{10000x - x^2}{10000} = 10x - \\frac{x^2}{1000} = 10 \\lfloor x \\rfloor = 10n$.",
+        "For $n \\le x < n+1$, we have $0 \\le 10x - \\frac{x^2}{1000} - 10n \\le 10(n+1) - 10n = 10$",
+        "For $n \\le x < n+1$, we have $0 \\le \\frac{10000x - x^2}{10000} - 10n \\le 1$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We start by rewriting the equation $x^2+10000 \\lfloor x \\rfloor=10000x$ as $x^2-10000x+10000 \\lfloor x \\rfloor=0$.\n$x^2+10000 \\lfloor x \\rfloor=10000x$\n$x^2-10000x+10000 \\lfloor x \\rfloor=0$\n$-10000x+10000 \\lfloor x \\rfloor=-x^2$\n$10000 \\lfloor x \\rfloor=-x^2+10000x$\n$\\frac{10000 \\lfloor x \\rfloor}{10000}=\\frac{-x^2+10000x}{10000}$\n$10 \\lfloor x \\rfloor=\\frac{-x^2+10000x}{1000}$",
+            1
+        ],
+        [
+            "Step 2: $10 \\lfloor x \\rfloor = 10x - x^2/1000$",
+            1
+        ],
+        [
+            "Step 3: $10 \\lfloor x \\rfloor = 10x - x^2/1000 \\Rightarrow 10000 \\lfloor x \\rfloor = 10000x - x^2$",
+            1
+        ],
+        [
+            "Step 4: $n \\le x < n+1 \\Rightarrow n^2 \\le x^2 < (n+1)^2 \\Rightarrow 10000n \\le 10000x - x^2 < 10000(n+1) - (n+1)^2$",
+            1
+        ],
+        [
+            "Step 5: $10000n \\le 10000x - x^2 < 10000(n+1) - (n+1)^2 \\Rightarrow n \\le \\lfloor x \\rfloor < n+1$",
+            1
+        ],
+        [
+            "Since $n \\le \\lfloor x \\rfloor < n+1$, we have $10000n \\le 10000 \\lfloor x \\rfloor < 10000(n+1)$, so \n$10000n \\le 10000x - x^2 < 10000(n+1)$.\nFor $n \\le x < n+1$, we have \n$\\frac{10000x - x^2}{10000} = 10x - \\frac{x^2}{1000} = 10 \\lfloor x \\rfloor$",
+            1
+        ],
+        [
+            "For $n \\le x < n+1$, we have $\\frac{10000x - x^2}{10000} = 10x - \\frac{x^2}{1000} = 10 \\lfloor x \\rfloor = n$",
+            1
+        ],
+        [
+            "Let $n = \\lfloor x \\rfloor$. For $n \\le x < n+1$, we have $\\frac{10000x - x^2}{10000} = 10x - \\frac{x^2}{1000} = 10 \\lfloor x \\rfloor = 10n$.",
+            1
+        ],
+        [
+            "For $n \\le x < n+1$, we have $0 \\le 10x - \\frac{x^2}{1000} - 10n \\le 10(n+1) - 10n = 10$",
+            1
+        ],
+        [
+            "For $n \\le x < n+1$, we have $0 \\le \\frac{10000x - x^2}{10000} - 10n \\le 1$",
+            1
+        ]
+    ],
+    "time": 137.11717438697815,
+    "total_tokens": 11042,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

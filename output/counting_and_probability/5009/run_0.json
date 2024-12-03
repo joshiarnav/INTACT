@@ -1,0 +1,66 @@
+{
+    "problem": "Let $A$, $B$, $C$ and $D$ be the vertices of a regular tetrahedron each of whose edges measures 1 meter. A bug, starting from vertex $A$, observes the following rule: at each vertex it chooses one of the three edges meeting at that vertex, each edge being equally likely to be chosen, and crawls along that edge to the vertex at its opposite end. Let $p = \\frac n{729}$ be the probability that the bug is at vertex $A$ when it has crawled exactly 7 meters. Find the value of $n$.\n",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "Let $P(n)$ denote the probability that the bug is at $A$ after it has crawled $n$ meters. Since the bug can only be at vertex $A$ if it just left a vertex which is not $A$, we have $P(n + 1) = \\frac13 (1 - P(n))$. We also know $P(0) = 1$, so we can quickly compute $P(1)=0$, $P(2) = \\frac 13$, $P(3) = \\frac29$, $P(4) = \\frac7{27}$, $P(5) = \\frac{20}{81}$, $P(6) = \\frac{61}{243}$ and $P(7) = \\frac{182}{729}$, so the answer is $\\boxed{182}$. One can solve this recursion fairly easily to determine a closed-form expression for $P(n)$.",
+    "is_solved": false,
+    "model_solution": "Let $P_n$ denote the probability that the bug is at $A$ after it has crawled $n$ meters.\n$P_{0}=1, \\; P_{1}=0, \\; P_{2}=\\frac13, \\; P_{3}=\\frac13, \\; P_{4}=\\frac19, \\; P_{5}=\\frac29, \\; P_{6}=\\frac29.$\n$P_7 = \\frac13 P_6$\n$P_7=\\frac13P_6=\\frac13\\left(\\frac29\\right)=\\frac{1}{9}$\nWe have that\n$P_7 = \\frac{1}{9}$\n$P_6 = \\frac{2}{9}$\n$P_5 = \\frac{2}{9}$\n$P_4 = \\frac{1}{9}$\n$P_3 = \\frac{1}{9}$\n$P_6 = \\frac29$, $P_5 = \\frac29$, $P_4 = \\frac19$, $P_3 = \\frac13$.\n$P_0 = 1, \\; P_1 = 0, \\; P_2 = \\frac13, \\; P_3 = \\frac13, \\; P_4 = \\frac19, \\; P_5 = \\frac29, \\; P_6 = \\frac29, \\; P_7 = \\frac13 P_6 = \\frac{1}{9}.$\nNow we can see that the sequence $\\{P_n\\}$ is periodic with period $3$, and since $P_7 = \\frac{1}{9}$, the solution to the problem is $P_7 = \\frac{n}{729} = \\frac{1}{9} \\implies \\boxed{n = 81}$.\nNow we can see that the sequence $\\{P_n\\}$ is periodic with period $3$.\n$P_7 = \\frac13 P_6 = \\frac13\\left(\\frac{2}{9}\\right) = \\frac29$\n$P_7 = \\frac13 P_6 = \\frac13\\left(\\frac{2}{9}\\right) = \\frac29$",
+    "steps": [
+        "Let $P_n$ denote the probability that the bug is at $A$ after it has crawled $n$ meters.\n$P_{0}=1, \\; P_{1}=0, \\; P_{2}=\\frac13, \\; P_{3}=\\frac13, \\; P_{4}=\\frac19, \\; P_{5}=\\frac29, \\; P_{6}=\\frac29.$",
+        "$P_7 = \\frac13 P_6$",
+        "$P_7=\\frac13P_6=\\frac13\\left(\\frac29\\right)=\\frac{1}{9}$",
+        "We have that\n$P_7 = \\frac{1}{9}$\n$P_6 = \\frac{2}{9}$\n$P_5 = \\frac{2}{9}$\n$P_4 = \\frac{1}{9}$\n$P_3 = \\frac{1}{9}$",
+        "$P_6 = \\frac29$, $P_5 = \\frac29$, $P_4 = \\frac19$, $P_3 = \\frac13$.",
+        "$P_0 = 1, \\; P_1 = 0, \\; P_2 = \\frac13, \\; P_3 = \\frac13, \\; P_4 = \\frac19, \\; P_5 = \\frac29, \\; P_6 = \\frac29, \\; P_7 = \\frac13 P_6 = \\frac{1}{9}.$",
+        "Now we can see that the sequence $\\{P_n\\}$ is periodic with period $3$, and since $P_7 = \\frac{1}{9}$, the solution to the problem is $P_7 = \\frac{n}{729} = \\frac{1}{9} \\implies \\boxed{n = 81}$.",
+        "Now we can see that the sequence $\\{P_n\\}$ is periodic with period $3$.",
+        "$P_7 = \\frac13 P_6 = \\frac13\\left(\\frac{2}{9}\\right) = \\frac29$",
+        "$P_7 = \\frac13 P_6 = \\frac13\\left(\\frac{2}{9}\\right) = \\frac29$"
+    ],
+    "full_steps": [
+        [
+            "Let $P_n$ denote the probability that the bug is at $A$ after it has crawled $n$ meters.\n$P_{0}=1, \\; P_{1}=0, \\; P_{2}=\\frac13, \\; P_{3}=\\frac13, \\; P_{4}=\\frac19, \\; P_{5}=\\frac29, \\; P_{6}=\\frac29.$",
+            1
+        ],
+        [
+            "$P_7 = \\frac13 P_6$",
+            1
+        ],
+        [
+            "$P_7=\\frac13P_6=\\frac13\\left(\\frac29\\right)=\\frac{1}{9}$",
+            1
+        ],
+        [
+            "We have that\n$P_7 = \\frac{1}{9}$\n$P_6 = \\frac{2}{9}$\n$P_5 = \\frac{2}{9}$\n$P_4 = \\frac{1}{9}$\n$P_3 = \\frac{1}{9}$",
+            1
+        ],
+        [
+            "$P_6 = \\frac29$, $P_5 = \\frac29$, $P_4 = \\frac19$, $P_3 = \\frac13$.",
+            1
+        ],
+        [
+            "$P_0 = 1, \\; P_1 = 0, \\; P_2 = \\frac13, \\; P_3 = \\frac13, \\; P_4 = \\frac19, \\; P_5 = \\frac29, \\; P_6 = \\frac29, \\; P_7 = \\frac13 P_6 = \\frac{1}{9}.$",
+            1
+        ],
+        [
+            "Now we can see that the sequence $\\{P_n\\}$ is periodic with period $3$, and since $P_7 = \\frac{1}{9}$, the solution to the problem is $P_7 = \\frac{n}{729} = \\frac{1}{9} \\implies \\boxed{n = 81}$.",
+            1
+        ],
+        [
+            "Now we can see that the sequence $\\{P_n\\}$ is periodic with period $3$.",
+            1
+        ],
+        [
+            "$P_7 = \\frac13 P_6 = \\frac13\\left(\\frac{2}{9}\\right) = \\frac29$",
+            1
+        ],
+        [
+            "$P_7 = \\frac13 P_6 = \\frac13\\left(\\frac{2}{9}\\right) = \\frac29$",
+            1
+        ]
+    ],
+    "time": 133.17428350448608,
+    "total_tokens": 9433,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,41 @@
+{
+    "problem": "The planning committee at school has 10 members. Exactly four of these members are teachers. A four-person subcommittee with at least one member who is a teacher must be formed from the members of the planning committee. How many distinct subcommittees are possible?",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "Because there are 4 teachers on the committee, there are 6 non-teachers. Now, in total, we can form ${10 \\choose 4} = 210$ subcomittees. The number of subcomittees with 0 teachers is the number of subcommittees formed by the 6 nonteachers, totaling ${6 \\choose 4} = 15$. So, the number of subcomittees with at least 1 teacher is $210 - 15 = \\boxed{195}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: Calculate the total number of subcommittees that can be formed from the 10 members, regardless of their position as teachers or non-teachers.\nn = 10\nr = 4\nTotal number of subcommittees = C(n, r)\n= C(10, 4)\n= 10! / (4!(10-4)!)\n= 210\nStep 2: Calculate the total number of subcommittees that can be formed with none of the members being teachers.\nn = 6 (number of non-teachers)\nr = 4\nTotal number of subcommittees with no teachers = C(n, r)\n= C(6, 4)\n= 6! / (4!(6-4)!)\n= 15\nStep 3: Subtract the total number of subcommittees with no teachers from the total number of subcommittees.\n= 210 - 15\n= 195\nStep 4: The number of subcommittees with at least 1 teacher = Total number of subcommittees - Total number of subcommittees with no teachers\n= 195 - 0\n= 195\nStep 5: The solution is complete, and the final answer is 195.",
+    "steps": [
+        "Step 1: Calculate the total number of subcommittees that can be formed from the 10 members, regardless of their position as teachers or non-teachers.\nn = 10\nr = 4\nTotal number of subcommittees = C(n, r)\n= C(10, 4)\n= 10! / (4!(10-4)!)\n= 210",
+        "Step 2: Calculate the total number of subcommittees that can be formed with none of the members being teachers.\nn = 6 (number of non-teachers)\nr = 4\nTotal number of subcommittees with no teachers = C(n, r)\n= C(6, 4)\n= 6! / (4!(6-4)!)\n= 15",
+        "Step 3: Subtract the total number of subcommittees with no teachers from the total number of subcommittees.\n= 210 - 15\n= 195",
+        "Step 4: The number of subcommittees with at least 1 teacher = Total number of subcommittees - Total number of subcommittees with no teachers\n= 195 - 0\n= 195",
+        "Step 5: The solution is complete, and the final answer is 195."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Calculate the total number of subcommittees that can be formed from the 10 members, regardless of their position as teachers or non-teachers.\nn = 10\nr = 4\nTotal number of subcommittees = C(n, r)\n= C(10, 4)\n= 10! / (4!(10-4)!)\n= 210",
+            1
+        ],
+        [
+            "Step 2: Calculate the total number of subcommittees that can be formed with none of the members being teachers.\nn = 6 (number of non-teachers)\nr = 4\nTotal number of subcommittees with no teachers = C(n, r)\n= C(6, 4)\n= 6! / (4!(6-4)!)\n= 15",
+            1
+        ],
+        [
+            "Step 3: Subtract the total number of subcommittees with no teachers from the total number of subcommittees.\n= 210 - 15\n= 195",
+            1
+        ],
+        [
+            "Step 4: The number of subcommittees with at least 1 teacher = Total number of subcommittees - Total number of subcommittees with no teachers\n= 195 - 0\n= 195",
+            1
+        ],
+        [
+            "Step 5: The solution is complete, and the final answer is 195.",
+            1
+        ]
+    ],
+    "time": 66.98001790046692,
+    "total_tokens": 3013,
+    "final_answer_tokens": 367,
+    "model": "meta-llama/Llama-Vision-Free"
+}

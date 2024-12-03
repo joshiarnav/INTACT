@@ -1,0 +1,51 @@
+{
+    "problem": "How many positive integers $n$ less than 100 have a corresponding integer $m$ divisible by 3 such that the roots of $x^2-nx+m=0$ are consecutive positive integers?",
+    "level": "Level 5",
+    "type": "Algebra",
+    "solution": "In the quadratic $ax^2+bx+c$, the roots sum to $\\frac{-b}{a}$ and multiply to $\\frac{c}{a}$. Therefore, for $x^2-nx+m$, we know that the sum of the roots is $n$ and the product of the roots is $m$. The requirement that $n$ be an integer with $0<n<100$ along with the requirement that the roots are consecutive positive integers leaves us with 49 possible values of $n$: $(1+2), (2+3), (3+4),...,(48+49),(49+50)$. Of these values of $n$, the corresponding value of $m$ would be $(1\\ast2), (2\\ast3), (3\\ast4),...,(48\\ast49), (49\\ast50)$. In order for $m$ to be divisible by 3, thus, one of the roots has to be divisible by three. The values of $n$ in $(2+3), (3+4), (5+6), ... ,(48+49)$ satisfy that requirement, but in $(1+2), (4+5), ... ,(49+50)$ they do not. This eliminates one third of the possibilities for $n$. Since $n=(49+50)$ is disqualified, we are left with $48-(48\\div 3) = 48-16=\\boxed{32}$ possible values of $n$.",
+    "is_solved": true,
+    "model_solution": "Step 1: Let $r$ and $r + 1$ be the consecutive positive roots of the quadratic equation $x^2 - nx + m = 0.$\nStep 2: According to Vieta's Formulas, the sum of the roots is $n,$ and the product of the roots is $m.$ Therefore, $n = 2r + 1,$ $m = r(r+1).$\nStep 3: Since $m$ is divisible by 3, either $r$ or $r + 1$ must be divisible by 3, so $r$ and $r + 1$ satisfy the condition that either $r$ or $r + 1$ is a multiple of 3.\nStep 4: Given that $0 < r-1 < r,$ and $2r + 1 < 100$, we can solve for the possible values of $r.$\nStep 5: The possible values of $r$ are $3, 4, 5, 6, 7, 8, 9, 10, 11, 12.$\nStep 6:\nSince $m = r(r + 1)$ is divisible by 3, the possible values of $r$ that satisfy this condition are 3, 6, 9, and 12.\nSince $m=r(r+1)$ is divisible by 3, the possible values of $r$ that satisfy this condition are 3, 6, 9, and 12.\n\nFinal Answer: The final answer is 4.",
+    "steps": [
+        "Step 1: Let $r$ and $r + 1$ be the consecutive positive roots of the quadratic equation $x^2 - nx + m = 0.$",
+        "Step 2: According to Vieta's Formulas, the sum of the roots is $n,$ and the product of the roots is $m.$ Therefore, $n = 2r + 1,$ $m = r(r+1).$",
+        "Step 3: Since $m$ is divisible by 3, either $r$ or $r + 1$ must be divisible by 3, so $r$ and $r + 1$ satisfy the condition that either $r$ or $r + 1$ is a multiple of 3.",
+        "Step 4: Given that $0 < r-1 < r,$ and $2r + 1 < 100$, we can solve for the possible values of $r.$",
+        "Step 5: The possible values of $r$ are $3, 4, 5, 6, 7, 8, 9, 10, 11, 12.$",
+        "Step 6:\nSince $m = r(r + 1)$ is divisible by 3, the possible values of $r$ that satisfy this condition are 3, 6, 9, and 12.",
+        "Since $m=r(r+1)$ is divisible by 3, the possible values of $r$ that satisfy this condition are 3, 6, 9, and 12.\n\nFinal Answer: The final answer is 4."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Let $r$ and $r + 1$ be the consecutive positive roots of the quadratic equation $x^2 - nx + m = 0.$",
+            1
+        ],
+        [
+            "Step 2: According to Vieta's Formulas, the sum of the roots is $n,$ and the product of the roots is $m.$ Therefore, $n = 2r + 1,$ $m = r(r+1).$",
+            1
+        ],
+        [
+            "Step 3: Since $m$ is divisible by 3, either $r$ or $r + 1$ must be divisible by 3, so $r$ and $r + 1$ satisfy the condition that either $r$ or $r + 1$ is a multiple of 3.",
+            1
+        ],
+        [
+            "Step 4: Given that $0 < r-1 < r,$ and $2r + 1 < 100$, we can solve for the possible values of $r.$",
+            1
+        ],
+        [
+            "Step 5: The possible values of $r$ are $3, 4, 5, 6, 7, 8, 9, 10, 11, 12.$",
+            1
+        ],
+        [
+            "Step 6:\nSince $m = r(r + 1)$ is divisible by 3, the possible values of $r$ that satisfy this condition are 3, 6, 9, and 12.",
+            1
+        ],
+        [
+            "Since $m=r(r+1)$ is divisible by 3, the possible values of $r$ that satisfy this condition are 3, 6, 9, and 12.\n\nFinal Answer: The final answer is 4.",
+            1
+        ]
+    ],
+    "time": 99.72513747215271,
+    "total_tokens": 4114,
+    "final_answer_tokens": 429,
+    "model": "meta-llama/Llama-Vision-Free"
+}

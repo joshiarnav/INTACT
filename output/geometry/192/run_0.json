@@ -1,0 +1,56 @@
+{
+    "problem": "$ABCD$ is a square 4 inches on a side, and each of the inside squares is formed by joining the midpoints of the outer square's sides. What is the area of the shaded region in square inches?\n\n[asy]\ndraw( (-1,-1)--(1,-1) -- (1,1) -- (-1,1)--cycle); draw( (-2,-2)--(2,-2) -- (2,2) -- (-2,2)--cycle);\ndraw( (-2, -2) -- (2, -2) -- (2,2) -- (-2 ,2)-- cycle); draw( (0, 2) -- (2,0) -- (0, -2) -- (-2, 0)-- cycle);\ndraw( (0, 2) -- (2, 0) -- (0 , -2) -- (-2 ,0)-- cycle);\n\nfilldraw( (-1, -1) -- (1, -1) -- (0, -2)--cycle, gray);\nfilldraw( (1, -1) -- (1, 1) -- (2, 0)--cycle, gray);\nfilldraw( (1, 1) -- (-1, 1) -- (0, 2)--cycle, gray);\nfilldraw( (-1, 1) -- (-1, -1) -- (-2, 0)--cycle, gray);\n\nlabel(\"$A$\", (-2,2), NW);\nlabel( \"$B$\", (2,2), NE);\nlabel( \"$C$\", (2,-2), SE);\nlabel( \"$D$\", (-2,-2), SW);\n\n[/asy]",
+    "level": "Level 2",
+    "type": "Geometry",
+    "solution": "Connecting the midpoints of the sides of a square in order forms a square that has half the area of the original square.  So, the square formed by connecting the midpoints of $ABCD$ has area $\\frac12\\cdot 4^2 = 8$ square inches.  The smallest square in the diagram is formed by connecting the midpoints of this square with area 8, so the smallest square has area $\\frac12 \\cdot 8 =4$ square inches, leaving $8-4=\\boxed{4}$ square inches of shaded area.",
+    "is_solved": true,
+    "model_solution": "To find the area of the shaded region, find the area of one of the smaller shaded squares and then multiply it by 4 since there are 4 identical squares.\n\nThe area of one of the smaller shaded squares can be found by subtracting the area of a right triangle from the area of a square.\n\nLet's find the area of the square first. Each side of the smaller square is half the length of the side of the larger square.\nThe side length of the square is $\\frac{4}{2} = 2$ inches.\nFind the area of the square: $2^2 = 4$ square inches.\nFind the area of the right triangle: $\\frac{1}{2}(2)(2) = 2$ square inches.\nSubtract the area of the triangle from the area of the square to find the area of the smaller shaded square: $4 - 2 = 2$ square inches.\nMultiply the area of the smaller shaded square by 4: $2 \\times 4 = 8$ square inches.\nThe area of one of the smaller shaded squares is 2 square inches.\nMultiply the area of the smaller shaded square by 4: $2 \\times 4 = 8$ square inches.",
+    "steps": [
+        "To find the area of the shaded region, find the area of one of the smaller shaded squares and then multiply it by 4 since there are 4 identical squares.\n\nThe area of one of the smaller shaded squares can be found by subtracting the area of a right triangle from the area of a square.\n\nLet's find the area of the square first. Each side of the smaller square is half the length of the side of the larger square.",
+        "The side length of the square is $\\frac{4}{2} = 2$ inches.",
+        "Find the area of the square: $2^2 = 4$ square inches.",
+        "Find the area of the right triangle: $\\frac{1}{2}(2)(2) = 2$ square inches.",
+        "Subtract the area of the triangle from the area of the square to find the area of the smaller shaded square: $4 - 2 = 2$ square inches.",
+        "Multiply the area of the smaller shaded square by 4: $2 \\times 4 = 8$ square inches.",
+        "The area of one of the smaller shaded squares is 2 square inches.",
+        "Multiply the area of the smaller shaded square by 4: $2 \\times 4 = 8$ square inches."
+    ],
+    "full_steps": [
+        [
+            "To find the area of the shaded region, find the area of one of the smaller shaded squares and then multiply it by 4 since there are 4 identical squares.\n\nThe area of one of the smaller shaded squares can be found by subtracting the area of a right triangle from the area of a square.\n\nLet's find the area of the square first. Each side of the smaller square is half the length of the side of the larger square.",
+            1
+        ],
+        [
+            "The side length of the square is $\\frac{4}{2} = 2$ inches.",
+            1
+        ],
+        [
+            "Find the area of the square: $2^2 = 4$ square inches.",
+            1
+        ],
+        [
+            "Find the area of the right triangle: $\\frac{1}{2}(2)(2) = 2$ square inches.",
+            1
+        ],
+        [
+            "Subtract the area of the triangle from the area of the square to find the area of the smaller shaded square: $4 - 2 = 2$ square inches.",
+            1
+        ],
+        [
+            "Multiply the area of the smaller shaded square by 4: $2 \\times 4 = 8$ square inches.",
+            1
+        ],
+        [
+            "The area of one of the smaller shaded squares is 2 square inches.",
+            1
+        ],
+        [
+            "Multiply the area of the smaller shaded square by 4: $2 \\times 4 = 8$ square inches.",
+            1
+        ]
+    ],
+    "time": 106.89427495002747,
+    "total_tokens": 9324,
+    "final_answer_tokens": 660,
+    "model": "meta-llama/Llama-Vision-Free"
+}

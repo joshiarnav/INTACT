@@ -1,0 +1,41 @@
+{
+    "problem": "Let $r$, $s$, and $t$ be the roots of the equation $x^3 - 20x^2 + 18x - 7 = 0$. Find the value of $r^2s^2 + s^2t^2 + t^2r^2$.",
+    "level": "Level 4",
+    "type": "Intermediate Algebra",
+    "solution": "By Vieta's formulas, $rs + st + tr = 18.$ Squaring this equation gives us the terms we want: \\[(rs+st+tr)^2 = (rs)^2 + (st)^2 + (tr)^2 + (2r^2st + 2rs^2t + 2rst^2) = 324.\\]To deal with the extra terms, we note that \\[r^2st + rs^2t + rst^2 = rst(r+s+t) = 7 \\cdot 20 = 140,\\]again by Vieta. Therefore, \\[(rs)^2 + (st)^2 + (tr)^2 = 324 - 2\\cdot 140 = \\boxed{44}.\\]",
+    "is_solved": true,
+    "model_solution": "Step 1: Use Vieta's formulas to find the relationships between the roots $r$, $s$, and $t$ and the coefficients of the polynomial equation.\n\nVieta's formulas:\n$r+s+t = 20$\n$rs+st+tr = 18$\n$rst = 7$\nStep 2: Express the desired value $r^2s^2 + s^2t^2 + t^2r^2$ in terms of $r$, $s$, $t$, and the elementary symmetric polynomials $r+s+t$, $rs+st+tr$, and $rst$.\nStep 3: Square the equation $r+s+t=20$ to obtain $(r+s+t)^2 = r^2+s^2+t^2+2(rs+st+tr)$.\n\n$20^2 = r^2+s^2+t^2+2(18)$\n$400 = r^2+s^2+t^2+36$\n$364 = r^2+s^2+t^2$\n\n$(rs+st+tr)^2=r^2s^2+s^2t^2+t^2r^2+2rst(r+s+t)$\n\n$18^2 = r^2s^2+s^2t^2+t^2r^2+2(7)(20)$ \n$324 = r^2s^2+s^2t^2+t^2r^2+140$\n$184 = r^2s^2+s^2t^2+t^2r^2$\n$r^2s^2 + s^2t^2 + t^2r^2 = (rs + st + tr)^2 - 2rst(r + s + t)$\n$(rs+st+tr)^2 - 2rst(r+s+t)$\n$= 18^2 - 2(7)(20)$\n$= 324 - 140$\n$= 184$\nFinal Answer.",
+    "steps": [
+        "Step 1: Use Vieta's formulas to find the relationships between the roots $r$, $s$, and $t$ and the coefficients of the polynomial equation.\n\nVieta's formulas:\n$r+s+t = 20$\n$rs+st+tr = 18$\n$rst = 7$",
+        "Step 2: Express the desired value $r^2s^2 + s^2t^2 + t^2r^2$ in terms of $r$, $s$, $t$, and the elementary symmetric polynomials $r+s+t$, $rs+st+tr$, and $rst$.",
+        "Step 3: Square the equation $r+s+t=20$ to obtain $(r+s+t)^2 = r^2+s^2+t^2+2(rs+st+tr)$.\n\n$20^2 = r^2+s^2+t^2+2(18)$\n$400 = r^2+s^2+t^2+36$\n$364 = r^2+s^2+t^2$\n\n$(rs+st+tr)^2=r^2s^2+s^2t^2+t^2r^2+2rst(r+s+t)$\n\n$18^2 = r^2s^2+s^2t^2+t^2r^2+2(7)(20)$ \n$324 = r^2s^2+s^2t^2+t^2r^2+140$\n$184 = r^2s^2+s^2t^2+t^2r^2$",
+        "$r^2s^2 + s^2t^2 + t^2r^2 = (rs + st + tr)^2 - 2rst(r + s + t)$",
+        "$(rs+st+tr)^2 - 2rst(r+s+t)$\n$= 18^2 - 2(7)(20)$\n$= 324 - 140$\n$= 184$\nFinal Answer."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Use Vieta's formulas to find the relationships between the roots $r$, $s$, and $t$ and the coefficients of the polynomial equation.\n\nVieta's formulas:\n$r+s+t = 20$\n$rs+st+tr = 18$\n$rst = 7$",
+            1
+        ],
+        [
+            "Step 2: Express the desired value $r^2s^2 + s^2t^2 + t^2r^2$ in terms of $r$, $s$, $t$, and the elementary symmetric polynomials $r+s+t$, $rs+st+tr$, and $rst$.",
+            1
+        ],
+        [
+            "Step 3: Square the equation $r+s+t=20$ to obtain $(r+s+t)^2 = r^2+s^2+t^2+2(rs+st+tr)$.\n\n$20^2 = r^2+s^2+t^2+2(18)$\n$400 = r^2+s^2+t^2+36$\n$364 = r^2+s^2+t^2$\n\n$(rs+st+tr)^2=r^2s^2+s^2t^2+t^2r^2+2rst(r+s+t)$\n\n$18^2 = r^2s^2+s^2t^2+t^2r^2+2(7)(20)$ \n$324 = r^2s^2+s^2t^2+t^2r^2+140$\n$184 = r^2s^2+s^2t^2+t^2r^2$",
+            1
+        ],
+        [
+            "$r^2s^2 + s^2t^2 + t^2r^2 = (rs + st + tr)^2 - 2rst(r + s + t)$",
+            1
+        ],
+        [
+            "$(rs+st+tr)^2 - 2rst(r+s+t)$\n$= 18^2 - 2(7)(20)$\n$= 324 - 140$\n$= 184$\nFinal Answer.",
+            1
+        ]
+    ],
+    "time": 68.45372772216797,
+    "total_tokens": 3864,
+    "final_answer_tokens": 537,
+    "model": "meta-llama/Llama-Vision-Free"
+}

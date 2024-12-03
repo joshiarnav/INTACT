@@ -1,0 +1,46 @@
+{
+    "problem": "Compute $\\sin 1755^\\circ$.",
+    "level": "Level 4",
+    "type": "Geometry",
+    "solution": "Rotating $360^\\circ$ is the same as doing nothing, so rotating $1755^\\circ$ is the same as rotating $1755^\\circ - 4\\cdot 360^\\circ = 315^\\circ$.  Therefore, we have $\\sin 1755^\\circ = \\sin (1755^\\circ - 4\\cdot 360^\\circ) = \\sin 315^\\circ$.\n\nLet $P$ be the point on the unit circle that is $315^\\circ$ counterclockwise from $(1,0)$, and let $D$ be the foot of the altitude from $P$ to the $x$-axis, as shown below.\n\n[asy]\n\npair A,C,P,O,D;\n\ndraw((0,-1.2)--(0,1.2),p=black+1.2bp,Arrows(0.15cm));\n\ndraw((-1.2,0)--(1.2,0),p=black+1.2bp,Arrows(0.15cm));\n\nA = (1,0);\n\nO= (0,0);\n\nlabel(\"$x$\",(1.2,0),SE);\n\nlabel(\"$y$\",(0,1.2),NE);\n\nP = rotate(315)*A;\n\nD = foot(P,A,-A);\n\ndraw(O--P--D);\n\ndraw(rightanglemark(O,D,P,2));\n\ndraw(Circle(O,1));\n\nlabel(\"$O$\",O,NW);\n\nlabel(\"$P$\",P,SE);\n\n//label(\"$A$\",A,SE);\n\nlabel(\"$D$\",D,N);\n\n[/asy]\n\nTriangle $POD$ is a 45-45-90 triangle, so $DO = DP = \\frac{\\sqrt{2}}{2}$.  Therefore, the coordinates of $P$ are $\\left(\\frac{\\sqrt{2}}{2}, -\\frac{\\sqrt{2}}{2}\\right)$, so $\\sin 1755^\\circ = \\sin 315^\\circ = \\boxed{-\\frac{\\sqrt{2}}{2}}$.",
+    "is_solved": true,
+    "model_solution": "Step 1:  Since the angle is measured in degrees, the first step is to rewrite the angle in terms of a corresponding angle in the standard unit circle.\n\\(\\sin 1755^\\circ\\)\nStep 2:  The angle of $1755^\\circ$ can be rewritten in terms of a corresponding angle in the standard unit circle by subtracting multiples of $360^\\circ$ from it.\n\\(\\sin 1755^\\circ = \\sin (1755^\\circ - 360^\\circ \\times 4) = \\sin 255^\\circ\\)\nStep 3:  To find the sine of $255^\\circ$, we can use the fact that the unit circle is symmetric about the $y$-axis. We can rewrite $255^\\circ$ as $360^\\circ - 105^\\circ$, where the positive angle is the reference angle. Thus, we can use the sine function's relationship to the angle's reference angle to solve for $\\sin 255^\\circ$.\n\n\n $\\sin 255^\\circ = -\\sin 105^\\circ$\nStep 4:  We know that $\\sin 105^\\circ = \\sin (90^\\circ + 15^\\circ)$, and from the angle addition formula for sine, we have $\\sin (90^\\circ + 15^\\circ) = \\cos 15^\\circ$. We can use the half-angle formula for cosine to find the value of $\\cos 15^\\circ$.\nStep 5:  We use the half-angle formula for cosine: $\\cos \\frac{\\theta}{2} = \\pm \\sqrt{\\frac{1 + \\cos \\theta}{2}}$. Since $\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}$, we can find that $\\cos 15^\\circ = \\sqrt{\\frac{1 + \\cos 30^\\circ}{2}} = \\sqrt{\\frac{1 + \\frac{\\sqrt{3}}{2}}{2}} = \\frac{\\sqrt{6} + \\sqrt{2}}{4}$\nStep 6:  $\\sin 105^\\circ = \\cos 15^\\circ = \\frac{\\sqrt{6} + \\sqrt{2}}{4}$\n\n\nFinal Answer: The final answer is $\\boxed{\\frac{-\\sqrt{6} - \\sqrt{2}}{4}}$.",
+    "steps": [
+        "Step 1:  Since the angle is measured in degrees, the first step is to rewrite the angle in terms of a corresponding angle in the standard unit circle.\n\\(\\sin 1755^\\circ\\)",
+        "Step 2:  The angle of $1755^\\circ$ can be rewritten in terms of a corresponding angle in the standard unit circle by subtracting multiples of $360^\\circ$ from it.\n\\(\\sin 1755^\\circ = \\sin (1755^\\circ - 360^\\circ \\times 4) = \\sin 255^\\circ\\)",
+        "Step 3:  To find the sine of $255^\\circ$, we can use the fact that the unit circle is symmetric about the $y$-axis. We can rewrite $255^\\circ$ as $360^\\circ - 105^\\circ$, where the positive angle is the reference angle. Thus, we can use the sine function's relationship to the angle's reference angle to solve for $\\sin 255^\\circ$.\n\n\n $\\sin 255^\\circ = -\\sin 105^\\circ$",
+        "Step 4:  We know that $\\sin 105^\\circ = \\sin (90^\\circ + 15^\\circ)$, and from the angle addition formula for sine, we have $\\sin (90^\\circ + 15^\\circ) = \\cos 15^\\circ$. We can use the half-angle formula for cosine to find the value of $\\cos 15^\\circ$.",
+        "Step 5:  We use the half-angle formula for cosine: $\\cos \\frac{\\theta}{2} = \\pm \\sqrt{\\frac{1 + \\cos \\theta}{2}}$. Since $\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}$, we can find that $\\cos 15^\\circ = \\sqrt{\\frac{1 + \\cos 30^\\circ}{2}} = \\sqrt{\\frac{1 + \\frac{\\sqrt{3}}{2}}{2}} = \\frac{\\sqrt{6} + \\sqrt{2}}{4}$",
+        "Step 6:  $\\sin 105^\\circ = \\cos 15^\\circ = \\frac{\\sqrt{6} + \\sqrt{2}}{4}$\n\n\nFinal Answer: The final answer is $\\boxed{\\frac{-\\sqrt{6} - \\sqrt{2}}{4}}$."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Since the angle is measured in degrees, the first step is to rewrite the angle in terms of a corresponding angle in the standard unit circle.\n\\(\\sin 1755^\\circ\\)",
+            1
+        ],
+        [
+            "Step 2:  The angle of $1755^\\circ$ can be rewritten in terms of a corresponding angle in the standard unit circle by subtracting multiples of $360^\\circ$ from it.\n\\(\\sin 1755^\\circ = \\sin (1755^\\circ - 360^\\circ \\times 4) = \\sin 255^\\circ\\)",
+            1
+        ],
+        [
+            "Step 3:  To find the sine of $255^\\circ$, we can use the fact that the unit circle is symmetric about the $y$-axis. We can rewrite $255^\\circ$ as $360^\\circ - 105^\\circ$, where the positive angle is the reference angle. Thus, we can use the sine function's relationship to the angle's reference angle to solve for $\\sin 255^\\circ$.\n\n\n $\\sin 255^\\circ = -\\sin 105^\\circ$",
+            1
+        ],
+        [
+            "Step 4:  We know that $\\sin 105^\\circ = \\sin (90^\\circ + 15^\\circ)$, and from the angle addition formula for sine, we have $\\sin (90^\\circ + 15^\\circ) = \\cos 15^\\circ$. We can use the half-angle formula for cosine to find the value of $\\cos 15^\\circ$.",
+            1
+        ],
+        [
+            "Step 5:  We use the half-angle formula for cosine: $\\cos \\frac{\\theta}{2} = \\pm \\sqrt{\\frac{1 + \\cos \\theta}{2}}$. Since $\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}$, we can find that $\\cos 15^\\circ = \\sqrt{\\frac{1 + \\cos 30^\\circ}{2}} = \\sqrt{\\frac{1 + \\frac{\\sqrt{3}}{2}}{2}} = \\frac{\\sqrt{6} + \\sqrt{2}}{4}$",
+            1
+        ],
+        [
+            "Step 6:  $\\sin 105^\\circ = \\cos 15^\\circ = \\frac{\\sqrt{6} + \\sqrt{2}}{4}$\n\n\nFinal Answer: The final answer is $\\boxed{\\frac{-\\sqrt{6} - \\sqrt{2}}{4}}$.",
+            1
+        ]
+    ],
+    "time": 78.06792163848877,
+    "total_tokens": 4097,
+    "final_answer_tokens": 561,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,56 @@
+{
+    "problem": "A Senate committee has 5 Democrats, 5 Republicans, and 1 Independent.  In how many ways can they sit around a circular table if all the members of each party all sit next to each other?  (Two seatings are considered equivalent if one is a rotation of the other.)",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "Choose any seat in which to place the Independent -- it doesn't matter which seat that we choose, since we can rotate the table. Once the Independent's seat has been chosen, either all the Democrats sit to their left and all the Republicans sit to their right, or the other way around. Either way, there are $5!$ ways to put the Democrats in their seats, and $5!$ ways to put the Republicans in their seats. So, the total number of ways to seat the people around the table is $2\\cdot5!\\cdot5!=2\\cdot120\\cdot120=\\boxed{28800}$.",
+    "is_solved": true,
+    "model_solution": "There are 11! ways to arrange the members in a line.\nSince there are 5! ways to arrange the Democrats, 5! ways to arrange the Republicans, and 1! way to arrange the Independent, and there are 3! ways to arrange the groups around the table, there are 5! * 5! * 1! * 3! ways to arrange the members in a circle.\nDivide by 11 to account for rotational symmetry.\n(5! * 5! * 1! * 3!) / 11\n(5! * 5! * 1! * 3!) / 11 = 20,160 / 11\n20,160 / 11 = 1,832\n(5! * 5! * 1! * 3!) / 11 = 20,160 / 11 = 1,832\n20,160 / 11 = 1,832",
+    "steps": [
+        "There are 11! ways to arrange the members in a line.",
+        "Since there are 5! ways to arrange the Democrats, 5! ways to arrange the Republicans, and 1! way to arrange the Independent, and there are 3! ways to arrange the groups around the table, there are 5! * 5! * 1! * 3! ways to arrange the members in a circle.",
+        "Divide by 11 to account for rotational symmetry.",
+        "(5! * 5! * 1! * 3!) / 11",
+        "(5! * 5! * 1! * 3!) / 11 = 20,160 / 11",
+        "20,160 / 11 = 1,832",
+        "(5! * 5! * 1! * 3!) / 11 = 20,160 / 11 = 1,832",
+        "20,160 / 11 = 1,832"
+    ],
+    "full_steps": [
+        [
+            "There are 11! ways to arrange the members in a line.",
+            1
+        ],
+        [
+            "Since there are 5! ways to arrange the Democrats, 5! ways to arrange the Republicans, and 1! way to arrange the Independent, and there are 3! ways to arrange the groups around the table, there are 5! * 5! * 1! * 3! ways to arrange the members in a circle.",
+            1
+        ],
+        [
+            "Divide by 11 to account for rotational symmetry.",
+            1
+        ],
+        [
+            "(5! * 5! * 1! * 3!) / 11",
+            1
+        ],
+        [
+            "(5! * 5! * 1! * 3!) / 11 = 20,160 / 11",
+            1
+        ],
+        [
+            "20,160 / 11 = 1,832",
+            1
+        ],
+        [
+            "(5! * 5! * 1! * 3!) / 11 = 20,160 / 11 = 1,832",
+            1
+        ],
+        [
+            "20,160 / 11 = 1,832",
+            1
+        ]
+    ],
+    "time": 106.29096055030823,
+    "total_tokens": 3981,
+    "final_answer_tokens": 316,
+    "model": "meta-llama/Llama-Vision-Free"
+}

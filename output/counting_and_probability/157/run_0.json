@@ -1,0 +1,51 @@
+{
+    "problem": "Four standard, six-sided dice are to be rolled. If the product of their values turns out to be an even number, what is the probability their sum is odd? Express your answer as a common fraction.",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "If the product of their values is even, then at least one of the dice rolls must yield an even number. To find how many ways this is possible, we consider the complementary possibility: suppose that all of the dice rolls yield odd numbers. There are $3^4$ ways of this occurring, out of a total of $6^4$ possibilities. It follows that there are $6^4 - 3^4$ ways of obtaining at least one even value.\n\nNow, we need to count how many ways we can obtain an odd sum. There must then be an odd number of odd numbers rolled, so there must be either one or three odd numbers rolled. If one odd number is rolled, then there are $4$ ways to pick which die yielded the odd number, and $3$ possibilities for each dice, yielding a total of $4 \\cdot 3^4$ possibilities. If three odd numbers are rolled, then there are again $4$ ways to pick which die yielded the even number and $3$ possibilities for each dice, yielding $4 \\cdot 3^4$. Thus, the desired probability is given by $\\frac{4 \\cdot 3^4 + 4\\cdot 3^4}{6^4 - 3^4} = \\frac{8}{2^4 - 1} = \\boxed{\\frac{8}{15}}$.",
+    "is_solved": true,
+    "model_solution": "Since the product of the four values turns out to be even, we must have at least one even value. The total number of outcomes in which the product is even is the total number of outcomes with at least one even value. \n\\[\\text{Outcome with at least one even value}=\\left[4^{4}-3^{4}\\right]=77\\]\nThere are three cases:\nThe number of ways to choose three of the four dice to be odd is \\(\\binom{4}{3}=4\\).\nThe number of ways to choose one die to be even is 3.\nThere are \\(3^{1}\\cdot 3^{3}=27\\) ways to assign values to the odd dice (two odd numbers can be assigned to each die in 3 ways).\nThere are \\(2^{1}\\cdot 6^{3}=144\\) ways to assign values to the even dice (one even number can be assigned to the even die in 2 ways).\nThe number of ways that the first two conditions are satisfied is \\(4\\cdot 27\\cdot 144=17,664\\).\nThe number of ways that the first two conditions are satisfied is \\(\\frac{17,664}{77}=229\\).\nLet the sum of the four dice be \\(S\\). The number of ways to choose three of the four dice to be odd is \\(\\binom{4}{3}=4\\).\nThe number of ways to choose one die to be even is 3.\nThere are \\(3^{1}\\cdot 3^{3}=27\\) ways to assign values to the odd dice (two odd numbers can be assigned to each die in 3 ways).\nThere are \\(2^{1}\\cdot 6^{3}=144\\) ways to assign values to the even dice (one even number can be assigned to the even die in 2 ways).\nThe number of ways that the first two conditions are satisfied is \\(4\\cdot 27\\cdot 144=17,664\\).\nThe number of ways to assign values to the four dice such that the sum is odd is \\(4\\cdot 27\\cdot 144\\cdot 1=17,664\\)\nThe probability that the sum is odd given that the product is even is $\\frac{17,664}{77\\cdot17,664}=\\frac{1}{77}$.\nThe number of ways to assign values to the four dice such that the sum is odd is $4\\cdot 27\\cdot 144\\cdot 1=17,664$\nThe number of ways to assign values to the four dice such that the sum is odd is \\(4\\cdot 27\\cdot 144\\cdot 1=17,664\\)",
+    "steps": [
+        "Since the product of the four values turns out to be even, we must have at least one even value. The total number of outcomes in which the product is even is the total number of outcomes with at least one even value. \n\\[\\text{Outcome with at least one even value}=\\left[4^{4}-3^{4}\\right]=77\\]",
+        "There are three cases:\nThe number of ways to choose three of the four dice to be odd is \\(\\binom{4}{3}=4\\).\nThe number of ways to choose one die to be even is 3.\nThere are \\(3^{1}\\cdot 3^{3}=27\\) ways to assign values to the odd dice (two odd numbers can be assigned to each die in 3 ways).\nThere are \\(2^{1}\\cdot 6^{3}=144\\) ways to assign values to the even dice (one even number can be assigned to the even die in 2 ways).\nThe number of ways that the first two conditions are satisfied is \\(4\\cdot 27\\cdot 144=17,664\\).\nThe number of ways that the first two conditions are satisfied is \\(\\frac{17,664}{77}=229\\).",
+        "Let the sum of the four dice be \\(S\\). The number of ways to choose three of the four dice to be odd is \\(\\binom{4}{3}=4\\).\nThe number of ways to choose one die to be even is 3.\nThere are \\(3^{1}\\cdot 3^{3}=27\\) ways to assign values to the odd dice (two odd numbers can be assigned to each die in 3 ways).\nThere are \\(2^{1}\\cdot 6^{3}=144\\) ways to assign values to the even dice (one even number can be assigned to the even die in 2 ways).\nThe number of ways that the first two conditions are satisfied is \\(4\\cdot 27\\cdot 144=17,664\\).",
+        "The number of ways to assign values to the four dice such that the sum is odd is \\(4\\cdot 27\\cdot 144\\cdot 1=17,664\\)",
+        "The probability that the sum is odd given that the product is even is $\\frac{17,664}{77\\cdot17,664}=\\frac{1}{77}$.",
+        "The number of ways to assign values to the four dice such that the sum is odd is $4\\cdot 27\\cdot 144\\cdot 1=17,664$",
+        "The number of ways to assign values to the four dice such that the sum is odd is \\(4\\cdot 27\\cdot 144\\cdot 1=17,664\\)"
+    ],
+    "full_steps": [
+        [
+            "Since the product of the four values turns out to be even, we must have at least one even value. The total number of outcomes in which the product is even is the total number of outcomes with at least one even value. \n\\[\\text{Outcome with at least one even value}=\\left[4^{4}-3^{4}\\right]=77\\]",
+            1
+        ],
+        [
+            "There are three cases:\nThe number of ways to choose three of the four dice to be odd is \\(\\binom{4}{3}=4\\).\nThe number of ways to choose one die to be even is 3.\nThere are \\(3^{1}\\cdot 3^{3}=27\\) ways to assign values to the odd dice (two odd numbers can be assigned to each die in 3 ways).\nThere are \\(2^{1}\\cdot 6^{3}=144\\) ways to assign values to the even dice (one even number can be assigned to the even die in 2 ways).\nThe number of ways that the first two conditions are satisfied is \\(4\\cdot 27\\cdot 144=17,664\\).\nThe number of ways that the first two conditions are satisfied is \\(\\frac{17,664}{77}=229\\).",
+            1
+        ],
+        [
+            "Let the sum of the four dice be \\(S\\). The number of ways to choose three of the four dice to be odd is \\(\\binom{4}{3}=4\\).\nThe number of ways to choose one die to be even is 3.\nThere are \\(3^{1}\\cdot 3^{3}=27\\) ways to assign values to the odd dice (two odd numbers can be assigned to each die in 3 ways).\nThere are \\(2^{1}\\cdot 6^{3}=144\\) ways to assign values to the even dice (one even number can be assigned to the even die in 2 ways).\nThe number of ways that the first two conditions are satisfied is \\(4\\cdot 27\\cdot 144=17,664\\).",
+            1
+        ],
+        [
+            "The number of ways to assign values to the four dice such that the sum is odd is \\(4\\cdot 27\\cdot 144\\cdot 1=17,664\\)",
+            1
+        ],
+        [
+            "The probability that the sum is odd given that the product is even is $\\frac{17,664}{77\\cdot17,664}=\\frac{1}{77}$.",
+            1
+        ],
+        [
+            "The number of ways to assign values to the four dice such that the sum is odd is $4\\cdot 27\\cdot 144\\cdot 1=17,664$",
+            1
+        ],
+        [
+            "The number of ways to assign values to the four dice such that the sum is odd is \\(4\\cdot 27\\cdot 144\\cdot 1=17,664\\)",
+            1
+        ]
+    ],
+    "time": 97.62526512145996,
+    "total_tokens": 6994,
+    "final_answer_tokens": 659,
+    "model": "meta-llama/Llama-Vision-Free"
+}

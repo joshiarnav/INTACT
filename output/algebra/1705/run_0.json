@@ -1,0 +1,46 @@
+{
+    "problem": "Find the sum of the $x$-coordinates of the solutions to the system of equations $y=|x^2-6x+5|$ and $y=\\frac{29}{4}-x$.",
+    "level": "Level 5",
+    "type": "Algebra",
+    "solution": "The quadratic $x^2-6x+5$ factors as $(x-5)(x-1)$, so it crosses the $x$-axis at $1$ and $5$. Since the leading coefficient is positive, it opens upwards, and thus the value of the quadratic is negative for $x$ between $1$ and $5$. Thus if $x\\le 1$ or $x\\ge 5$, we have $|x^2-6x+5|=x^2-6x+5$. We can solve the system in this range by setting the $y$-values equal, so\n\n\\begin{align*}\nx^2-6x+5&=\\frac{29}{4}-x\\\\\nx^2-5x+\\frac{20}{4}-\\frac{29}{4}&=0\\\\\nx^2-5x-\\frac{9}{4}&=0.\n\\end{align*}Thus by the quadratic formula, $$x=\\frac{-(-5)\\pm\\sqrt{(-5)^2-4(\\frac{-9}{4})(1)}}{2(1)}=\\frac{5\\pm\\sqrt{25+9}}{2}=\\frac{5\\pm\\sqrt{34}}{2}.$$A quick check shows that both solutions have either $x<1$ or $x>5$, so they are both valid in this system. We do not need to find the corresponding $y$-values since the problem asks only for the sum of the $x$-coordinates.\n\nIf $1\\le x\\le 5$, we know $|x^2-6x+5|=-x^2+6x-5$. Solving the system as before, we have\n\n\\begin{align*}\n\\frac{29}{4}-x&=-x^2+6x-5\\\\\nx^2-7x+\\frac{29}{4}+\\frac{20}{4}&=0\\\\\nx^2-7x+\\frac{49}{4}&=0\\\\\n(x-\\frac{7}{2})^2&=0\\\\\nx&=\\frac{7}{2}.\n\\end{align*}Checking, this value is indeed between $1$ and $5$, so it is allowable. Thus the possible $x$-values are $\\frac{5+\\sqrt{34}}{2}$, $\\frac{5-\\sqrt{34}}{2}$, and $\\frac{7}{2}$. Their sum is $$\\frac{5+\\sqrt{34}}{2}+\\frac{5-\\sqrt{34}}{2}+\\frac{7}{2}=\\frac{5+5+7}{2}=\\boxed{\\frac{17}{2}}.$$",
+    "is_solved": true,
+    "model_solution": "Step 1: We need to rewrite the absolute value equation as two separate equations: $y=x^2-6x+5$ and $y=-(x^2-6x+5)$.\nStep 2: Subtract the two equations to eliminate y: $0=2x^2-8x+10$.\nStep 3: Divide the entire equation by 2: $0=x^2-4x+5$.\nStep 4: \n$0=x^2-4x+5$\nStep 5: Apply the quadratic formula: $x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}=\\frac{4\\pm\\sqrt{(-4)^2-4(1)(5)}}{2(1)}=\\frac{4\\pm\\sqrt{16-20}}{2}=\\frac{4\\pm\\sqrt{-4}}{2}$.\nStep 6: \n$0=x^2-4x+5$\nThese solutions are nonreal, so there are no real solutions to the quadratic equation $0=x^2-4x+5$.\nSince the quadratic equation $0=x^2-4x+5$ has no real solutions, it follows that the system of equations $y=|x^2-6x+5|$ and $y=\\frac{29}{4}-x$ has no real solutions.\nFinal Answer",
+    "steps": [
+        "Step 1: We need to rewrite the absolute value equation as two separate equations: $y=x^2-6x+5$ and $y=-(x^2-6x+5)$.",
+        "Step 2: Subtract the two equations to eliminate y: $0=2x^2-8x+10$.",
+        "Step 3: Divide the entire equation by 2: $0=x^2-4x+5$.",
+        "Step 4: \n$0=x^2-4x+5$",
+        "Step 5: Apply the quadratic formula: $x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}=\\frac{4\\pm\\sqrt{(-4)^2-4(1)(5)}}{2(1)}=\\frac{4\\pm\\sqrt{16-20}}{2}=\\frac{4\\pm\\sqrt{-4}}{2}$.",
+        "Step 6: \n$0=x^2-4x+5$\nThese solutions are nonreal, so there are no real solutions to the quadratic equation $0=x^2-4x+5$.\nSince the quadratic equation $0=x^2-4x+5$ has no real solutions, it follows that the system of equations $y=|x^2-6x+5|$ and $y=\\frac{29}{4}-x$ has no real solutions.\nFinal Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1: We need to rewrite the absolute value equation as two separate equations: $y=x^2-6x+5$ and $y=-(x^2-6x+5)$.",
+            1
+        ],
+        [
+            "Step 2: Subtract the two equations to eliminate y: $0=2x^2-8x+10$.",
+            1
+        ],
+        [
+            "Step 3: Divide the entire equation by 2: $0=x^2-4x+5$.",
+            1
+        ],
+        [
+            "Step 4: \n$0=x^2-4x+5$",
+            1
+        ],
+        [
+            "Step 5: Apply the quadratic formula: $x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}=\\frac{4\\pm\\sqrt{(-4)^2-4(1)(5)}}{2(1)}=\\frac{4\\pm\\sqrt{16-20}}{2}=\\frac{4\\pm\\sqrt{-4}}{2}$.",
+            1
+        ],
+        [
+            "Step 6: \n$0=x^2-4x+5$\nThese solutions are nonreal, so there are no real solutions to the quadratic equation $0=x^2-4x+5$.\nSince the quadratic equation $0=x^2-4x+5$ has no real solutions, it follows that the system of equations $y=|x^2-6x+5|$ and $y=\\frac{29}{4}-x$ has no real solutions.\nFinal Answer",
+            1
+        ]
+    ],
+    "time": 78.53779697418213,
+    "total_tokens": 2913,
+    "final_answer_tokens": 401,
+    "model": "meta-llama/Llama-Vision-Free"
+}

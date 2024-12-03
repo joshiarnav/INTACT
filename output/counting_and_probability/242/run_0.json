@@ -1,0 +1,41 @@
+{
+    "problem": "Two fair, six-sided dice are rolled.  What is the probability that the sum of the two numbers showing is between 3 and 11, inclusive?",
+    "level": "Level 3",
+    "type": "Counting & Probability",
+    "solution": "We instead find the probability that the sum of the numbers showing is not between 3 and 11.  Since each die's face contains the numbers 1-6, we see that this can only be the case if we roll two 1s or two 6s.  Thus the chance that the sum is not between 3 and 11 is $\\frac{1}{6} \\cdot \\frac{1}{6} + \\frac{1}{6} \\cdot \\frac{1}{6}$, or $\\frac{1}{18}$.  So our desired probability is $1-\\frac{1}{18} = \\boxed{\\frac{17}{18}}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: Count the total number of pairs of digits on two dice.\nThere are 6 x 6 = 36 pairs of digits.\nStep 2: Calculate the number of pairs of digits that result in a sum of 3 or 11.\nFor a sum of 3: (1, 2), (2, 1)\nFor a sum of 11: (5, 6), (6, 5)\nThere are 4 pairs of digits with a sum of 3 or 11.\nStep 3: Calculate the number of pairs of digits that result in a sum between 3 and 11, inclusive.\nTotal pairs with sum 3 or 11: 4\nTotal pairs: 36\nTotal pairs with sum between 3 and 11: 36 - 4 = 32\nStep 4: Calculate the probability of the sum of the two numbers showing between 3 and 11, inclusive.\nProbability = (Number of pairs with sum between 3 and 11) / (Total number of pairs)\n= 32 / 36\n= 8/9\nFinal Answer: The final answer is 8/9.",
+    "steps": [
+        "Step 1: Count the total number of pairs of digits on two dice.\nThere are 6 x 6 = 36 pairs of digits.",
+        "Step 2: Calculate the number of pairs of digits that result in a sum of 3 or 11.\nFor a sum of 3: (1, 2), (2, 1)\nFor a sum of 11: (5, 6), (6, 5)\nThere are 4 pairs of digits with a sum of 3 or 11.",
+        "Step 3: Calculate the number of pairs of digits that result in a sum between 3 and 11, inclusive.\nTotal pairs with sum 3 or 11: 4\nTotal pairs: 36\nTotal pairs with sum between 3 and 11: 36 - 4 = 32",
+        "Step 4: Calculate the probability of the sum of the two numbers showing between 3 and 11, inclusive.\nProbability = (Number of pairs with sum between 3 and 11) / (Total number of pairs)\n= 32 / 36\n= 8/9",
+        "Final Answer: The final answer is 8/9."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Count the total number of pairs of digits on two dice.\nThere are 6 x 6 = 36 pairs of digits.",
+            1
+        ],
+        [
+            "Step 2: Calculate the number of pairs of digits that result in a sum of 3 or 11.\nFor a sum of 3: (1, 2), (2, 1)\nFor a sum of 11: (5, 6), (6, 5)\nThere are 4 pairs of digits with a sum of 3 or 11.",
+            1
+        ],
+        [
+            "Step 3: Calculate the number of pairs of digits that result in a sum between 3 and 11, inclusive.\nTotal pairs with sum 3 or 11: 4\nTotal pairs: 36\nTotal pairs with sum between 3 and 11: 36 - 4 = 32",
+            1
+        ],
+        [
+            "Step 4: Calculate the probability of the sum of the two numbers showing between 3 and 11, inclusive.\nProbability = (Number of pairs with sum between 3 and 11) / (Total number of pairs)\n= 32 / 36\n= 8/9",
+            1
+        ],
+        [
+            "Final Answer: The final answer is 8/9.",
+            1
+        ]
+    ],
+    "time": 69.73997116088867,
+    "total_tokens": 2519,
+    "final_answer_tokens": 333,
+    "model": "meta-llama/Llama-Vision-Free"
+}

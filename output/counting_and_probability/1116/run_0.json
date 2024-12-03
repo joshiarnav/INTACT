@@ -1,0 +1,26 @@
+{
+    "problem": "What is the probability that Fatima gets fewer heads than tails if she flips 10 coins?",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "We could solve this problem using casework, but using a little bit of symmetry and complementary probability gives us a more elegant solution. Since each coin flips heads or tails with equal probability, by the principle of symmetry the probability of getting fewer heads than tails is the equal to the probability of getting fewer tails than heads. Additionally, there are only three possible outcomes: getting fewer heads than tails, getting fewer tails than heads, or getting the same number of both. If we let $x$ represent the probability of the first outcome (which is the same as the probability of the second outcome) and $y$ represent the probability of the third outcome, we get the equation $2x + y = 1 \\Rightarrow x=\\dfrac{1-y}{2}$. So all we need to do is calculate the probability of getting the same number of heads and tails and we can then easily solve for what we want using the principle of complementary probability. Since there are two equally likely outcomes for each flip, there are a total of $2^{10}$ equally likely possible outcomes for flipping the 10 coins. We will have the same number of both heads and tails if we have exactly 5 of each, which we can count by selecting 5 out of the 10 flips to be heads which can occur in $\\binom{10}{5}=252$ ways. So $y=\\dfrac{252}{1024}=\\dfrac{63}{256}$, and substituting that back into our first equation gives us the probability that we want: $x=\\boxed{\\dfrac{193}{512}}$.",
+    "is_solved": true,
+    "model_solution": "## Step 1: Determine the possible number of heads Fatima can get in 10 flips.\nFatima can get 0, 1, 2, 3, 4, 5, 6, 7, 8, or 9 heads in 10 flips.\n## Step 2: Identify the number of ways Fatima can get fewer heads than tails.\nFatima can get fewer heads than tails if she gets 0, 1, 2, 3, or 4 heads.\n\nGenerate only the next step in solving the problem. Be succinct and do not explain. If this or the previous step is the final step, you must indicate it with \"Final Answer\" in your response.",
+    "steps": [
+        "## Step 1: Determine the possible number of heads Fatima can get in 10 flips.\nFatima can get 0, 1, 2, 3, 4, 5, 6, 7, 8, or 9 heads in 10 flips.",
+        "## Step 2: Identify the number of ways Fatima can get fewer heads than tails.\nFatima can get fewer heads than tails if she gets 0, 1, 2, 3, or 4 heads.\n\nGenerate only the next step in solving the problem. Be succinct and do not explain. If this or the previous step is the final step, you must indicate it with \"Final Answer\" in your response."
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Determine the possible number of heads Fatima can get in 10 flips.\nFatima can get 0, 1, 2, 3, 4, 5, 6, 7, 8, or 9 heads in 10 flips.",
+            1
+        ],
+        [
+            "## Step 2: Identify the number of ways Fatima can get fewer heads than tails.\nFatima can get fewer heads than tails if she gets 0, 1, 2, 3, or 4 heads.\n\nGenerate only the next step in solving the problem. Be succinct and do not explain. If this or the previous step is the final step, you must indicate it with \"Final Answer\" in your response.",
+            1
+        ]
+    ],
+    "time": 27.026150226593018,
+    "total_tokens": 729,
+    "final_answer_tokens": 225,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,66 @@
+{
+    "problem": "The sum of 18 consecutive positive integers is a perfect square.  What is the smallest possible value of this sum?",
+    "level": "Level 4",
+    "type": "Algebra",
+    "solution": "Let $n, n+1, \\dots , n+17$ be the 18 consecutive integers.  The sum of an arithmetic series is equal to the average of the first and last term, multiplied by the number of terms, so the sum is \\[\\frac{n + (n + 17)}{2} \\cdot 18 = 9(2n + 17).\\]Since 9 is a perfect square, $2n+17$ must also be a perfect square. The smallest value of $n$ for which this occurs is  $n = 4$, so  $9(2n+17) = 9\\cdot 25 = \\boxed{225}$.",
+    "is_solved": false,
+    "model_solution": "Let the first number in the sum be n.  Then the sum of 18 consecutive positive integers is n + (n + 1) + ... + (n + 17).\nThe sum can be expressed as 18n + (1 + 2 + ... + 17), which simplifies to 18n + 153.\nLet k = 18n + 153. Since k is a perfect square, k = x^2 for some positive integer x, so x^2 - 153 = 18n, which can be rewritten as (x + 3)(x - 51) = 18n.\nSince (x + 3)(x - 51) = 18n, and 18n is divisible by 18, either x + 3 or x - 51 must be divisible by 18.\nWe must have x - 51 divisible by 18, so x - 51 = 18m for some positive integer m.\nx = 18m + 51. Since x - 51 = 18m, it follows that x + 3 = 18m + 54, which is even, so (x + 3) must be divisible by 18.\nWe must have x - 51 = 18m for some positive integer m, so x - 51 = 18.\nx - 51 = 18 \nx = 69\n18n + 153 = 18(4) + 153\n18n + 153 = 225\nn = 4\nn = 4 gives the smallest possible value of the sum, so the sum is 18(4) + 153 = 225, which is indeed a perfect square.",
+    "steps": [
+        "Let the first number in the sum be n.  Then the sum of 18 consecutive positive integers is n + (n + 1) + ... + (n + 17).",
+        "The sum can be expressed as 18n + (1 + 2 + ... + 17), which simplifies to 18n + 153.",
+        "Let k = 18n + 153. Since k is a perfect square, k = x^2 for some positive integer x, so x^2 - 153 = 18n, which can be rewritten as (x + 3)(x - 51) = 18n.",
+        "Since (x + 3)(x - 51) = 18n, and 18n is divisible by 18, either x + 3 or x - 51 must be divisible by 18.",
+        "We must have x - 51 divisible by 18, so x - 51 = 18m for some positive integer m.",
+        "x = 18m + 51. Since x - 51 = 18m, it follows that x + 3 = 18m + 54, which is even, so (x + 3) must be divisible by 18.",
+        "We must have x - 51 = 18m for some positive integer m, so x - 51 = 18.",
+        "x - 51 = 18 \nx = 69\n18n + 153 = 18(4) + 153\n18n + 153 = 225",
+        "n = 4",
+        "n = 4 gives the smallest possible value of the sum, so the sum is 18(4) + 153 = 225, which is indeed a perfect square."
+    ],
+    "full_steps": [
+        [
+            "Let the first number in the sum be n.  Then the sum of 18 consecutive positive integers is n + (n + 1) + ... + (n + 17).",
+            1
+        ],
+        [
+            "The sum can be expressed as 18n + (1 + 2 + ... + 17), which simplifies to 18n + 153.",
+            1
+        ],
+        [
+            "Let k = 18n + 153. Since k is a perfect square, k = x^2 for some positive integer x, so x^2 - 153 = 18n, which can be rewritten as (x + 3)(x - 51) = 18n.",
+            1
+        ],
+        [
+            "Since (x + 3)(x - 51) = 18n, and 18n is divisible by 18, either x + 3 or x - 51 must be divisible by 18.",
+            1
+        ],
+        [
+            "We must have x - 51 divisible by 18, so x - 51 = 18m for some positive integer m.",
+            1
+        ],
+        [
+            "x = 18m + 51. Since x - 51 = 18m, it follows that x + 3 = 18m + 54, which is even, so (x + 3) must be divisible by 18.",
+            1
+        ],
+        [
+            "We must have x - 51 = 18m for some positive integer m, so x - 51 = 18.",
+            1
+        ],
+        [
+            "x - 51 = 18 \nx = 69\n18n + 153 = 18(4) + 153\n18n + 153 = 225",
+            1
+        ],
+        [
+            "n = 4",
+            1
+        ],
+        [
+            "n = 4 gives the smallest possible value of the sum, so the sum is 18(4) + 153 = 225, which is indeed a perfect square.",
+            1
+        ]
+    ],
+    "time": 137.50747203826904,
+    "total_tokens": 6059,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

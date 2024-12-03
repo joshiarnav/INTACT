@@ -1,0 +1,31 @@
+{
+    "problem": "What is the smallest positive integer $n$ such that, out of the $n$ unit fractions $\\frac{1}{k}$ where $1 \\le k \\le n$, exactly half of the fractions give a terminating decimal?",
+    "level": "Level 5",
+    "type": "Number Theory",
+    "solution": "If $\\frac{1}{k}$ has a terminating decimal representation, then $k$ can be written in the form $2^a5^b$ for nonnegative integers $a$ and $b$. To see this, note that by multiplying and dividing by a sufficiently large power of 10, we can write a terminating decimal as $r/10^s$ for some integers $r$ and $s$. Since the denominator's prime factorization contains only twos and fives, it may contain only twos and fives after simplification as well. Therefore, we start by listing the first several integers which are divisible by no primes other than 2 and 5. The first seven such values of $k$ are 1, 2, 4, 5, 8, 10, and 16.  Seeing that the list contains six elements preceding the large gap between 10 and 16, we guess that $2\\times 6=12$ is the least positive integer up to which half of the positive integers give terminating decimals. Checking that the proportion is above 1/2 for $n=10, 8, 6, 4,$ and $2$, we find that $\\boxed{12}$ is indeed the least integer satisfying the given condition.",
+    "is_solved": true,
+    "model_solution": "Step 1: For a fraction of the form $\\frac{1}{k}$ to yield a terminating decimal, $k$ must be a power of $2$ or $5$ or a product of powers of $2$ and $5$.\nStep 2: List the powers of 2 and 5 that are less than or equal to n and check that their total number is half of n. Let the list be $2^i$, $5^j$, $2^i5^j$.\nStep 3:\nLet $n=2^a5^b$, where $a$ and $b$ are nonnegative integers. We see that the terminating fractions will have denominators $2^i$, $5^j$, or $2^i5^j$ where $0 \\le i \\le a$ and $0 \\le j \\le b$. There are $a+1$ fractions of the first type, $b+1$ fractions of the second type, and $(a+1)(b+1)$ fractions of the third type. Therefore, the total number of terminating fractions is $(a+1)+(b+1)+(a+1)(b+1) = (a+1)(b+2)$. This number must be equal to $\\frac{n}{2}$.\nFinal Answer",
+    "steps": [
+        "Step 1: For a fraction of the form $\\frac{1}{k}$ to yield a terminating decimal, $k$ must be a power of $2$ or $5$ or a product of powers of $2$ and $5$.",
+        "Step 2: List the powers of 2 and 5 that are less than or equal to n and check that their total number is half of n. Let the list be $2^i$, $5^j$, $2^i5^j$.",
+        "Step 3:\nLet $n=2^a5^b$, where $a$ and $b$ are nonnegative integers. We see that the terminating fractions will have denominators $2^i$, $5^j$, or $2^i5^j$ where $0 \\le i \\le a$ and $0 \\le j \\le b$. There are $a+1$ fractions of the first type, $b+1$ fractions of the second type, and $(a+1)(b+1)$ fractions of the third type. Therefore, the total number of terminating fractions is $(a+1)+(b+1)+(a+1)(b+1) = (a+1)(b+2)$. This number must be equal to $\\frac{n}{2}$.\nFinal Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1: For a fraction of the form $\\frac{1}{k}$ to yield a terminating decimal, $k$ must be a power of $2$ or $5$ or a product of powers of $2$ and $5$.",
+            1
+        ],
+        [
+            "Step 2: List the powers of 2 and 5 that are less than or equal to n and check that their total number is half of n. Let the list be $2^i$, $5^j$, $2^i5^j$.",
+            1
+        ],
+        [
+            "Step 3:\nLet $n=2^a5^b$, where $a$ and $b$ are nonnegative integers. We see that the terminating fractions will have denominators $2^i$, $5^j$, or $2^i5^j$ where $0 \\le i \\le a$ and $0 \\le j \\le b$. There are $a+1$ fractions of the first type, $b+1$ fractions of the second type, and $(a+1)(b+1)$ fractions of the third type. Therefore, the total number of terminating fractions is $(a+1)+(b+1)+(a+1)(b+1) = (a+1)(b+2)$. This number must be equal to $\\frac{n}{2}$.\nFinal Answer",
+            1
+        ]
+    ],
+    "time": 45.02135229110718,
+    "total_tokens": 1523,
+    "final_answer_tokens": 381,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,21 @@
+{
+    "problem": "What is the largest $n$ such that $a = 2^{306} \\cdot 3^{340}$ is a perfect $n$th power?",
+    "level": "Level 5",
+    "type": "Number Theory",
+    "solution": "We claim that $a$ is a perfect $n$th power if and only if $n$ divides both $306$ and $340$. To see this, suppose that $n \\mid 306$ and $n \\mid 340$. Then $2^{\\frac{306}{n}} 3^{\\frac{340}{n}}$ is an integer whose $n$th power is $a$. Conversely, suppose $b^n = a$. Then the only primes which divide $b$ are $2$ and $3$. Choose $c$ and $d$ so that $b=2^{c} 3^{d}$. Then $b^n = 2^{cn} 3^{dn} = 2^{306} 3^{340}$, which implies $n \\mid 306$ and $n \\mid 340$. This concludes our proof of the claim that $a$ is an $n$th power if and only if $n$ divides both $306$ and $340$.\n\nThe largest number which simultaneously divides two numbers is their GCD. Using the Euclidean algorithm, the GCD of $306$ and $340$ is the same as the GCD of $340$ and $340-306 = 34$. Since $34$ divides $340$, the GCD of these two is $34$, so the largest possible $n$ is $\\boxed{34}$.",
+    "is_solved": true,
+    "model_solution": "Step 1:  To begin solving this problem, we need to find the prime factorization of the given number $a = 2^{306} \\cdot 3^{340}.$\nStep 2:  The prime factorization of $a$ is already given, which is $2^{306} \\cdot 3^{340}.$\nStep 3:  We are looking for the largest $n$ such that $a$ is a perfect $n$th power.\nStep 4:  To find this, we can consider the powers of the prime factors $2$ and $3.$\nStep 5:  Let's start by finding the least common multiple (LCM) of the exponents of $2$ and $3$, which is $\\text{lcm}\\,(306,340).$\n\nThe final answer is: $\\boxed{2}$",
+    "steps": [
+        "Step 1:  To begin solving this problem, we need to find the prime factorization of the given number $a = 2^{306} \\cdot 3^{340}.$\nStep 2:  The prime factorization of $a$ is already given, which is $2^{306} \\cdot 3^{340}.$\nStep 3:  We are looking for the largest $n$ such that $a$ is a perfect $n$th power.\nStep 4:  To find this, we can consider the powers of the prime factors $2$ and $3.$\nStep 5:  Let's start by finding the least common multiple (LCM) of the exponents of $2$ and $3$, which is $\\text{lcm}\\,(306,340).$\n\nThe final answer is: $\\boxed{2}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  To begin solving this problem, we need to find the prime factorization of the given number $a = 2^{306} \\cdot 3^{340}.$\nStep 2:  The prime factorization of $a$ is already given, which is $2^{306} \\cdot 3^{340}.$\nStep 3:  We are looking for the largest $n$ such that $a$ is a perfect $n$th power.\nStep 4:  To find this, we can consider the powers of the prime factors $2$ and $3.$\nStep 5:  Let's start by finding the least common multiple (LCM) of the exponents of $2$ and $3$, which is $\\text{lcm}\\,(306,340).$\n\nThe final answer is: $\\boxed{2}$",
+            1
+        ]
+    ],
+    "time": 14.323437929153442,
+    "total_tokens": 538,
+    "final_answer_tokens": 250,
+    "model": "meta-llama/Llama-Vision-Free"
+}

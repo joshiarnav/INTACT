@@ -1,0 +1,61 @@
+{
+    "problem": "Point $D$ is on side $\\overline{BC}$ of triangle $ABC.$  If $\\angle CAD = \\angle BAD = 60^\\circ,$ $AC = 3,$ and $AB = 6,$ then find $AD.$",
+    "level": "Level 3",
+    "type": "Precalculus",
+    "solution": "By the Angle Bisector Theorem,\n\\[\\frac{BD}{AB} = \\frac{CD}{AC},\\]or $\\frac{BD}{6} = \\frac{AC}{3},$ so $BD = 2CD.$  Let $x = CD$; then $BD = 2x.$\n\n[asy]\nunitsize (0.8 cm);\n\npair A, B, C, D;\n\nB = (0,0);\nC = (3*sqrt(7),0);\nA = intersectionpoint(arc(B,6,0,180),arc(C,3,0,180));\nD = interp(B,C,2/3);\n\ndraw(A--B--C--cycle);\ndraw(A--D);\n\nlabel(\"$A$\", A, N);\nlabel(\"$B$\", B, SW);\nlabel(\"$C$\", C, SE);\nlabel(\"$D$\", D, S);\nlabel(\"$3$\", (A + C)/2, NE);\nlabel(\"$6$\", (A + B)/2, NW);\nlabel(\"$x$\", (C + D)/2, S);\nlabel(\"$2x$\", (B + D)/2, S);\nlabel(\"$d$\", (A + D)/2, W);\n[/asy]\n\nLet $d = AD.$  Then by the Law of Cosines on triangle $ABD,$\n\\[4x^2 = d^2 + 36 - 2 \\cdot d \\cdot 6 \\cos 60^\\circ = d^2 - 6d + 36.\\]By the Law of Cosines on triangle $ACD,$\n\\[x^2 = d^2 + 9 - 2 \\cdot d \\cdot 3 \\cos 60^\\circ = d^2 - 3d + 9.\\]Hence, $4(d^2 - 3d + 9) = d^2 - 6d + 36.$  This simplifies to $3d^2 - 6d = 3d(d - 2) = 0.$  Therefore, $d = \\boxed{2}.$",
+    "is_solved": true,
+    "model_solution": "Step 1:  To find the length of $AD,$ we can use properties of triangles and trigonometric ratios to relate the known side lengths $AC$ and $AB$ to the unknown length $AD.$\nStep 2:  First, we use the fact that $\\triangle ACD$ is isosceles, as $\\angle CAD = \\angle CDA = 60^\\circ.$ This implies that $AC = CD = 3.$\nStep 3:  Next, we introduce point $E$ as the foot of the perpendicular from $A$ to side $\\overline{BC},$ denoting $BE = x$ and $EC = 6 - x.$\nStep 4:  We then calculate the area of triangle $ABC$ in two ways. First, using the formula for the area of a triangle as $\\frac{1}{2} \\times \\text{base} \\times \\text{height},$ we find that $[ABC] = \\frac{1}{2} \\cdot 6 \\cdot 3 \\sqrt{3} = 9 \\sqrt{3}.$\nStep 5:  We also express the area of triangle $ABC$\nStep 6:  We set the two area expressions equal to each other: $\\frac{1}{2} \\cdot 6 \\cdot 3 \\sqrt{3} = \\frac{1}{2} \\cdot AD \\cdot 3,$ from which we can solve for $AD.$\nSolve for $AD$: $\\frac{1}{2} \\cdot 6 \\cdot 3 \\sqrt{3} = \\frac{1}{2} \\cdot AD \\cdot 3.$\n$\\frac{18\\sqrt{3}}{3} = AD$\n$\\frac{18\\sqrt{3}}{3} = AD$\n$6 \\sqrt{3} = AD$\n$\\frac{18\\sqrt{3}}{3} = AD$\n$\\frac{18\\sqrt{3}}{3} = AD$\n$6 \\sqrt{3} = AD$\n$6 \\sqrt{3} = AD$\n$6\\sqrt{3} = AD$\n$\\frac{18\\sqrt{3}}{3} = AD$",
+    "steps": [
+        "Step 1:  To find the length of $AD,$ we can use properties of triangles and trigonometric ratios to relate the known side lengths $AC$ and $AB$ to the unknown length $AD.$\nStep 2:  First, we use the fact that $\\triangle ACD$ is isosceles, as $\\angle CAD = \\angle CDA = 60^\\circ.$ This implies that $AC = CD = 3.$\nStep 3:  Next, we introduce point $E$ as the foot of the perpendicular from $A$ to side $\\overline{BC},$ denoting $BE = x$ and $EC = 6 - x.$\nStep 4:  We then calculate the area of triangle $ABC$ in two ways. First, using the formula for the area of a triangle as $\\frac{1}{2} \\times \\text{base} \\times \\text{height},$ we find that $[ABC] = \\frac{1}{2} \\cdot 6 \\cdot 3 \\sqrt{3} = 9 \\sqrt{3}.$\nStep 5:  We also express the area of triangle $ABC$",
+        "Step 6:  We set the two area expressions equal to each other: $\\frac{1}{2} \\cdot 6 \\cdot 3 \\sqrt{3} = \\frac{1}{2} \\cdot AD \\cdot 3,$ from which we can solve for $AD.$",
+        "Solve for $AD$: $\\frac{1}{2} \\cdot 6 \\cdot 3 \\sqrt{3} = \\frac{1}{2} \\cdot AD \\cdot 3.$",
+        "$\\frac{18\\sqrt{3}}{3} = AD$",
+        "$\\frac{18\\sqrt{3}}{3} = AD$\n$6 \\sqrt{3} = AD$",
+        "$\\frac{18\\sqrt{3}}{3} = AD$\n$\\frac{18\\sqrt{3}}{3} = AD$\n$6 \\sqrt{3} = AD$",
+        "$6 \\sqrt{3} = AD$",
+        "$6\\sqrt{3} = AD$",
+        "$\\frac{18\\sqrt{3}}{3} = AD$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  To find the length of $AD,$ we can use properties of triangles and trigonometric ratios to relate the known side lengths $AC$ and $AB$ to the unknown length $AD.$\nStep 2:  First, we use the fact that $\\triangle ACD$ is isosceles, as $\\angle CAD = \\angle CDA = 60^\\circ.$ This implies that $AC = CD = 3.$\nStep 3:  Next, we introduce point $E$ as the foot of the perpendicular from $A$ to side $\\overline{BC},$ denoting $BE = x$ and $EC = 6 - x.$\nStep 4:  We then calculate the area of triangle $ABC$ in two ways. First, using the formula for the area of a triangle as $\\frac{1}{2} \\times \\text{base} \\times \\text{height},$ we find that $[ABC] = \\frac{1}{2} \\cdot 6 \\cdot 3 \\sqrt{3} = 9 \\sqrt{3}.$\nStep 5:  We also express the area of triangle $ABC$",
+            1
+        ],
+        [
+            "Step 6:  We set the two area expressions equal to each other: $\\frac{1}{2} \\cdot 6 \\cdot 3 \\sqrt{3} = \\frac{1}{2} \\cdot AD \\cdot 3,$ from which we can solve for $AD.$",
+            1
+        ],
+        [
+            "Solve for $AD$: $\\frac{1}{2} \\cdot 6 \\cdot 3 \\sqrt{3} = \\frac{1}{2} \\cdot AD \\cdot 3.$",
+            1
+        ],
+        [
+            "$\\frac{18\\sqrt{3}}{3} = AD$",
+            1
+        ],
+        [
+            "$\\frac{18\\sqrt{3}}{3} = AD$\n$6 \\sqrt{3} = AD$",
+            1
+        ],
+        [
+            "$\\frac{18\\sqrt{3}}{3} = AD$\n$\\frac{18\\sqrt{3}}{3} = AD$\n$6 \\sqrt{3} = AD$",
+            1
+        ],
+        [
+            "$6 \\sqrt{3} = AD$",
+            1
+        ],
+        [
+            "$6\\sqrt{3} = AD$",
+            1
+        ],
+        [
+            "$\\frac{18\\sqrt{3}}{3} = AD$",
+            1
+        ]
+    ],
+    "time": 122.85016441345215,
+    "total_tokens": 9047,
+    "final_answer_tokens": 580,
+    "model": "meta-llama/Llama-Vision-Free"
+}

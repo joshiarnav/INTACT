@@ -1,0 +1,36 @@
+{
+    "problem": "We call a number a descending number if each digit is strictly smaller than the digit that comes before it.  For example, 863 is a descending number.  How many 3-digit descending numbers are there?",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "For every 3 different digits, there is one corresponding descending number, which is just the digits in descending order.  So the answer is the number of combinations of three different digits, which is  $\\binom{10}{3} = \\boxed{120}$.",
+    "is_solved": true,
+    "model_solution": "Let a = first digit, b = second digit, and c = third digit of the 3-digit number.\nSince $a < b < c$, $a$ can be any of 9, 8, 7, 6, or 5, and for each of these, $b$ can be any of the digits smaller than $a$, and for each pair $(a, b)$, $c$ can be any of the digits smaller than $b$.  Therefore, the number of 3-digit descending numbers is $5 \\cdot 4 \\cdot 3$.\n5 \\cdot 4 \\cdot 3 = 60\n5 \\cdot 4 \\cdot 3 = 60",
+    "steps": [
+        "Let a = first digit, b = second digit, and c = third digit of the 3-digit number.",
+        "Since $a < b < c$, $a$ can be any of 9, 8, 7, 6, or 5, and for each of these, $b$ can be any of the digits smaller than $a$, and for each pair $(a, b)$, $c$ can be any of the digits smaller than $b$.  Therefore, the number of 3-digit descending numbers is $5 \\cdot 4 \\cdot 3$.",
+        "5 \\cdot 4 \\cdot 3 = 60",
+        "5 \\cdot 4 \\cdot 3 = 60"
+    ],
+    "full_steps": [
+        [
+            "Let a = first digit, b = second digit, and c = third digit of the 3-digit number.",
+            1
+        ],
+        [
+            "Since $a < b < c$, $a$ can be any of 9, 8, 7, 6, or 5, and for each of these, $b$ can be any of the digits smaller than $a$, and for each pair $(a, b)$, $c$ can be any of the digits smaller than $b$.  Therefore, the number of 3-digit descending numbers is $5 \\cdot 4 \\cdot 3$.",
+            1
+        ],
+        [
+            "5 \\cdot 4 \\cdot 3 = 60",
+            1
+        ],
+        [
+            "5 \\cdot 4 \\cdot 3 = 60",
+            1
+        ]
+    ],
+    "time": 51.48409461975098,
+    "total_tokens": 1698,
+    "final_answer_tokens": 248,
+    "model": "meta-llama/Llama-Vision-Free"
+}

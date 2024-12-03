@@ -1,0 +1,36 @@
+{
+    "problem": "The sum of two positive integers $a$ and $b$ is 80.  What is the largest possible value of $\\gcd(a,b)$?",
+    "level": "Level 3",
+    "type": "Number Theory",
+    "solution": "If $a = b = 40$, then $a + b = 80$, and $\\gcd(a,b) = \\gcd(40,40) = 40$.  If one of $a$ and $b$ is greater than 40, then the other is less than 40, in which case $\\gcd(a,b)$ must also be less than 40.  Therefore, the largest possible value of $\\gcd(a,b)$ is $\\boxed{40}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: Let $d=\\gcd(a,b)$.\nWe can write $a = d \\cdot x$ and $b = d \\cdot y$, where $x$ and $y$ are relatively prime.\nStep 2: Since $x$ and $y$ are relatively prime, they have no common factor, and so the only factors that $a$ and $b$ share are the factors of $d.$  Furthermore, since $d$ is a factor of $a$ and $b,$ we have that $d$ is less than or equal to the smaller of $a$ and $b.$  Therefore, the largest possible value of $d$ is the largest factor of the smaller of $a$ and $b.$\nStep 3: From Step 2, we know that the largest possible value of $d$ is the largest factor of the smaller of $a$ and $b.$  We can write $a+b=80$ as $a+d=b+d=80-d,$ where $a$ and $b$ are positive integers.\nSince $a+d=b+d=80-d,$ we have $a=b+d-d=80-2d.$  Since $a$ and $b$ are both positive integers, $80-2d > 0,$ and therefore, $d < 40.$\n\nFinal Answer.",
+    "steps": [
+        "Step 1: Let $d=\\gcd(a,b)$.\nWe can write $a = d \\cdot x$ and $b = d \\cdot y$, where $x$ and $y$ are relatively prime.",
+        "Step 2: Since $x$ and $y$ are relatively prime, they have no common factor, and so the only factors that $a$ and $b$ share are the factors of $d.$  Furthermore, since $d$ is a factor of $a$ and $b,$ we have that $d$ is less than or equal to the smaller of $a$ and $b.$  Therefore, the largest possible value of $d$ is the largest factor of the smaller of $a$ and $b.$",
+        "Step 3: From Step 2, we know that the largest possible value of $d$ is the largest factor of the smaller of $a$ and $b.$  We can write $a+b=80$ as $a+d=b+d=80-d,$ where $a$ and $b$ are positive integers.",
+        "Since $a+d=b+d=80-d,$ we have $a=b+d-d=80-2d.$  Since $a$ and $b$ are both positive integers, $80-2d > 0,$ and therefore, $d < 40.$\n\nFinal Answer."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Let $d=\\gcd(a,b)$.\nWe can write $a = d \\cdot x$ and $b = d \\cdot y$, where $x$ and $y$ are relatively prime.",
+            1
+        ],
+        [
+            "Step 2: Since $x$ and $y$ are relatively prime, they have no common factor, and so the only factors that $a$ and $b$ share are the factors of $d.$  Furthermore, since $d$ is a factor of $a$ and $b,$ we have that $d$ is less than or equal to the smaller of $a$ and $b.$  Therefore, the largest possible value of $d$ is the largest factor of the smaller of $a$ and $b.$",
+            1
+        ],
+        [
+            "Step 3: From Step 2, we know that the largest possible value of $d$ is the largest factor of the smaller of $a$ and $b.$  We can write $a+b=80$ as $a+d=b+d=80-d,$ where $a$ and $b$ are positive integers.",
+            1
+        ],
+        [
+            "Since $a+d=b+d=80-d,$ we have $a=b+d-d=80-2d.$  Since $a$ and $b$ are both positive integers, $80-2d > 0,$ and therefore, $d < 40.$\n\nFinal Answer.",
+            1
+        ]
+    ],
+    "time": 51.517383337020874,
+    "total_tokens": 2151,
+    "final_answer_tokens": 370,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,46 @@
+{
+    "problem": "In how many ways can 4 distinct beads be placed on a bracelet that has a knot in it?  (Beads cannot slide past the knot.  Two ways are considered the same if one is a reflection of the other, since we can flip the bracelet over.)",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "We can just treat the knot as another bead. There are $5!$ ways to place the beads and the knot on the bracelet, but we must divide by 5 for rotational symmetry (5 rotations for each arrangement), and by 2 for reflectional symmetry (we can flip the bracelet to get the same arrangement).  The answer is $\\dfrac{5!}{5 \\times 2} = \\boxed{12}$.",
+    "is_solved": true,
+    "model_solution": "Step 1:  The problem asks for the number of ways 4 distinct beads can be placed on a bracelet with a knot, considering reflections as equivalent arrangements.\nStep 2:  Since the knot restricts the beads from sliding past it, we can think of the arrangement as a linear sequence of beads.\nStep 3:  Starting by considering the linear arrangement, we have 4 distinct beads, so there are 4! ways to arrange them in a line.\nStep 4:  Since the bracelet can be flipped over, each arrangement has a reflection, so we need to divide the total number of linear arrangements by 2 to account for the reflections.\nStep 5:  4! / 2 = 12\nStep 6: 12\nThe arrangements in the linear sequence have the form abcD or abDc, where D is the starting bead.\nStep 7:  Since the bracelet has a knot, the first bead does not have two distinct positions like the other beads do. Therefore, we have 2 possible positions for the first bead, and the remaining 3 beads have 3! ways to be arranged.\n\nFinal Answer",
+    "steps": [
+        "Step 1:  The problem asks for the number of ways 4 distinct beads can be placed on a bracelet with a knot, considering reflections as equivalent arrangements.\nStep 2:  Since the knot restricts the beads from sliding past it, we can think of the arrangement as a linear sequence of beads.\nStep 3:  Starting by considering the linear arrangement, we have 4 distinct beads, so there are 4! ways to arrange them in a line.",
+        "Step 4:  Since the bracelet can be flipped over, each arrangement has a reflection, so we need to divide the total number of linear arrangements by 2 to account for the reflections.",
+        "Step 5:  4! / 2 = 12",
+        "Step 6: 12",
+        "The arrangements in the linear sequence have the form abcD or abDc, where D is the starting bead.",
+        "Step 7:  Since the bracelet has a knot, the first bead does not have two distinct positions like the other beads do. Therefore, we have 2 possible positions for the first bead, and the remaining 3 beads have 3! ways to be arranged.\n\nFinal Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  The problem asks for the number of ways 4 distinct beads can be placed on a bracelet with a knot, considering reflections as equivalent arrangements.\nStep 2:  Since the knot restricts the beads from sliding past it, we can think of the arrangement as a linear sequence of beads.\nStep 3:  Starting by considering the linear arrangement, we have 4 distinct beads, so there are 4! ways to arrange them in a line.",
+            1
+        ],
+        [
+            "Step 4:  Since the bracelet can be flipped over, each arrangement has a reflection, so we need to divide the total number of linear arrangements by 2 to account for the reflections.",
+            1
+        ],
+        [
+            "Step 5:  4! / 2 = 12",
+            1
+        ],
+        [
+            "Step 6: 12",
+            1
+        ],
+        [
+            "The arrangements in the linear sequence have the form abcD or abDc, where D is the starting bead.",
+            1
+        ],
+        [
+            "Step 7:  Since the bracelet has a knot, the first bead does not have two distinct positions like the other beads do. Therefore, we have 2 possible positions for the first bead, and the remaining 3 beads have 3! ways to be arranged.\n\nFinal Answer",
+            1
+        ]
+    ],
+    "time": 79.53612470626831,
+    "total_tokens": 3349,
+    "final_answer_tokens": 351,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,51 @@
+{
+    "problem": "Let $A = (0, 0),$ $B = (1, 2),$ $C=(3, 3),$ and $D = (4, 0).$ Quadrilateral $ABCD$ is cut into two pieces with the same area by a line passing through $A.$ What are the coordinates of the point where this line intersects $\\overline{CD}$?",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "We first compute the area of $ABCD.$ A quick way to do so (besides the shoelace formula) is to draw the rectangle with vertices $A=(0,0),$ $(0,3),$ $(4,3),$ and $(4,0),$ and divide the part of the rectangle outside $ABCD$ into squares and right triangles, as shown:[asy]\nsize(5cm);\ndraw((-1,0)--(5,0),EndArrow);\ndraw((0,-1)--(0,4),EndArrow);\nlabel(\"$x$\",(5,0),E);\nlabel(\"$y$\",(0,4),N);\nfor (int i=1; i<=4; ++i)\n{\n\tdraw((i,-.15)--(i,.15));\n    if (i < 4)\n    \tdraw((-.15,i)--(.15,i));\n}\npair A=(0,0), B=(1,2), C=(3,3), D=(4,0);\ndraw(A--B--C--D--A);\ndraw((0,0)--(0,3)--(4,3)--(4,0)--cycle,dashed);\ndraw((0,2)--(1,2)--(1,3),dashed);\ndot(\"$A$\",A,SW);\ndot(\"$B$\",B,NW);\ndot(\"$C$\",C,N);\ndot(\"$D$\",D,S);\n[/asy]Then \\[[ABCD] = 12 - 2 \\cdot 1 - 1 - \\tfrac32 = \\tfrac{15}2.\\]Therefore, the two pieces of $ABCD$ must each have area $\\tfrac12 \\cdot \\tfrac{15}2 = \\tfrac{15}4.$\n\nLet $E$ be the point where the line through $A$ intersects $\\overline{CD},$ as shown:\n[asy]\nsize(5cm);\ndraw((-1,0)--(5,0),EndArrow);\ndraw((0,-1)--(0,4),EndArrow);\nlabel(\"$x$\",(5,0),E);\nlabel(\"$y$\",(0,4),N);\nfor (int i=1; i<=4; ++i)\n{\n\tdraw((i,-.15)--(i,.15));\n    if (i < 4)\n    \tdraw((-.15,i)--(.15,i));\n}\npair A=(0,0), B=(1,2), C=(3,3), D=(4,0);\ndraw(A--B--C--D--A);\ndot(\"$A$\",A,SW);\ndot(\"$B$\",B,NW);\ndot(\"$C$\",C,N);\ndot(\"$D$\",D,S);\npair E=(27/8,15/8);\ndraw(A--E,dotted);\ndot(\"$E$\",E,NNE);\n[/asy]\nTriangle $\\triangle AED$ must have area $\\tfrac{15}{4}.$ We have $AD = 4,$ so letting $h$ denote the length of the altitude from $E$ to $\\overline{AD},$ we must have \\[\\tfrac12 \\cdot 4 \\cdot h = [\\triangle AED] = \\tfrac{15}{4}.\\]Thus, $h = \\tfrac{15}{8}.$ Therefore, $E = (t, \\tfrac{15}{8})$ for some value of $t.$\n\nSince $C=(3,3)$ and $D=(4,0),$ the slope of $\\overline{CD}$ is $\\tfrac{0-3}{4-3} = -3,$ so the point-slope form of the equation of line $CD$ is $y - 0 = -3(x-4),$ or simply $y = -3x + 12.$ When $y = \\tfrac{15}{8},$ we get $\\tfrac{15}{8} = -3x + 12,$ and so $x = \\tfrac{27}{8}.$ Therefore, $E = \\boxed{(\\tfrac{27}{8}, \\tfrac{15}{8})}.$",
+    "is_solved": true,
+    "model_solution": "Step 1: Find the midpoint $M$ of $\\overline{BD}$, which is given by $M=\\left(\\frac{1+4}{2}, \\frac{2+0}{2}\\right)=\\left(\\frac{5}{2}, 1\\right)$\nStep 2: Since the line passing through $A$ cuts $\\overline{BC}$ into two pieces of equal area, it must pass through the midpoint $M$ of $\\overline{BD}$.\nStep 3: Because the line passing through $A$ cuts quadrilateral $ABCD$ into two pieces of equal area and we know that the line passes through $A$ and the midpoint $M$ of $\\overline{BD},$ the line also passes through the midpoint of $\\overline{AD},$ which is $\\left(\\frac{0+4}{2},\\frac{0+0}{2}\\right)=(2,0).$ Therefore, the line passing through $A$ is the line passing through $A$ and $(2,0),$\nStep 4: Find the equation of the line passing through $A = (0, 0)$ and $(2, 0)$, which is $y = 0$\nStep 5: Find the intersection point of the line $y=0$ and $\\overline{CD},$ which is the point where the line intersects $\\overline{CD}.$\nSince the line $y = 0$ intersects $\\overline{CD}$ at a point on the x-axis, we have $y = 0$ for the point $E$ on $\\overline{CD} = (3, 3)$, and $y = 0$ for point $D = (4, 0)$\nThe x-coordinate of point $E$ lies between the x-coordinates of points $C$ and $D$. We find the x-coordinate of point $E$ by solving $\\frac{3}{y_{C}} + \\frac{3}{y_{D}} = \\frac{y_{C} + y_{D}}{y_{C}y_{D}}$,\nStep 6: $\\frac{3}{3} + \\frac{3}{0} = \\frac{3 + 0}{3(0)} \\Rightarrow 3 + \\infty = \\frac{3}{0} \\Rightarrow 3 + \\infty$ is undefined, so the equation $\\frac{3}{y_{C}} + \\frac{3}{y_{D}} = \\frac{y_{C} + y_{D}}{y_{C}y_{D}}$ does not apply for this problem.\n Instead, we will use the equation of the line through $A$ and the midpoint $(2, 0)$ of $\\overline{AD}$, which is $y = 0$. Since $y = 0$ for the point $E$ on $\\overline{CD} = (3, 3)$ and $y = 0$ for point $D = (4, 0)$, we see that the $y = 0$ line intersects $\\overline{CD}$ at $(3, 0)$.\n Final Answer",
+    "steps": [
+        "Step 1: Find the midpoint $M$ of $\\overline{BD}$, which is given by $M=\\left(\\frac{1+4}{2}, \\frac{2+0}{2}\\right)=\\left(\\frac{5}{2}, 1\\right)$",
+        "Step 2: Since the line passing through $A$ cuts $\\overline{BC}$ into two pieces of equal area, it must pass through the midpoint $M$ of $\\overline{BD}$.",
+        "Step 3: Because the line passing through $A$ cuts quadrilateral $ABCD$ into two pieces of equal area and we know that the line passes through $A$ and the midpoint $M$ of $\\overline{BD},$ the line also passes through the midpoint of $\\overline{AD},$ which is $\\left(\\frac{0+4}{2},\\frac{0+0}{2}\\right)=(2,0).$ Therefore, the line passing through $A$ is the line passing through $A$ and $(2,0),$",
+        "Step 4: Find the equation of the line passing through $A = (0, 0)$ and $(2, 0)$, which is $y = 0$",
+        "Step 5: Find the intersection point of the line $y=0$ and $\\overline{CD},$ which is the point where the line intersects $\\overline{CD}.$",
+        "Since the line $y = 0$ intersects $\\overline{CD}$ at a point on the x-axis, we have $y = 0$ for the point $E$ on $\\overline{CD} = (3, 3)$, and $y = 0$ for point $D = (4, 0)$\nThe x-coordinate of point $E$ lies between the x-coordinates of points $C$ and $D$. We find the x-coordinate of point $E$ by solving $\\frac{3}{y_{C}} + \\frac{3}{y_{D}} = \\frac{y_{C} + y_{D}}{y_{C}y_{D}}$,",
+        "Step 6: $\\frac{3}{3} + \\frac{3}{0} = \\frac{3 + 0}{3(0)} \\Rightarrow 3 + \\infty = \\frac{3}{0} \\Rightarrow 3 + \\infty$ is undefined, so the equation $\\frac{3}{y_{C}} + \\frac{3}{y_{D}} = \\frac{y_{C} + y_{D}}{y_{C}y_{D}}$ does not apply for this problem.\n Instead, we will use the equation of the line through $A$ and the midpoint $(2, 0)$ of $\\overline{AD}$, which is $y = 0$. Since $y = 0$ for the point $E$ on $\\overline{CD} = (3, 3)$ and $y = 0$ for point $D = (4, 0)$, we see that the $y = 0$ line intersects $\\overline{CD}$ at $(3, 0)$.\n Final Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Find the midpoint $M$ of $\\overline{BD}$, which is given by $M=\\left(\\frac{1+4}{2}, \\frac{2+0}{2}\\right)=\\left(\\frac{5}{2}, 1\\right)$",
+            1
+        ],
+        [
+            "Step 2: Since the line passing through $A$ cuts $\\overline{BC}$ into two pieces of equal area, it must pass through the midpoint $M$ of $\\overline{BD}$.",
+            1
+        ],
+        [
+            "Step 3: Because the line passing through $A$ cuts quadrilateral $ABCD$ into two pieces of equal area and we know that the line passes through $A$ and the midpoint $M$ of $\\overline{BD},$ the line also passes through the midpoint of $\\overline{AD},$ which is $\\left(\\frac{0+4}{2},\\frac{0+0}{2}\\right)=(2,0).$ Therefore, the line passing through $A$ is the line passing through $A$ and $(2,0),$",
+            1
+        ],
+        [
+            "Step 4: Find the equation of the line passing through $A = (0, 0)$ and $(2, 0)$, which is $y = 0$",
+            1
+        ],
+        [
+            "Step 5: Find the intersection point of the line $y=0$ and $\\overline{CD},$ which is the point where the line intersects $\\overline{CD}.$",
+            1
+        ],
+        [
+            "Since the line $y = 0$ intersects $\\overline{CD}$ at a point on the x-axis, we have $y = 0$ for the point $E$ on $\\overline{CD} = (3, 3)$, and $y = 0$ for point $D = (4, 0)$\nThe x-coordinate of point $E$ lies between the x-coordinates of points $C$ and $D$. We find the x-coordinate of point $E$ by solving $\\frac{3}{y_{C}} + \\frac{3}{y_{D}} = \\frac{y_{C} + y_{D}}{y_{C}y_{D}}$,",
+            1
+        ],
+        [
+            "Step 6: $\\frac{3}{3} + \\frac{3}{0} = \\frac{3 + 0}{3(0)} \\Rightarrow 3 + \\infty = \\frac{3}{0} \\Rightarrow 3 + \\infty$ is undefined, so the equation $\\frac{3}{y_{C}} + \\frac{3}{y_{D}} = \\frac{y_{C} + y_{D}}{y_{C}y_{D}}$ does not apply for this problem.\n Instead, we will use the equation of the line through $A$ and the midpoint $(2, 0)$ of $\\overline{AD}$, which is $y = 0$. Since $y = 0$ for the point $E$ on $\\overline{CD} = (3, 3)$ and $y = 0$ for point $D = (4, 0)$, we see that the $y = 0$ line intersects $\\overline{CD}$ at $(3, 0)$.\n Final Answer",
+            1
+        ]
+    ],
+    "time": 95.33997845649719,
+    "total_tokens": 6139,
+    "final_answer_tokens": 811,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,66 @@
+{
+    "problem": "The roots of $x^3 + Px^2 + Qx - 19 = 0$ are each one more than the roots of $x^3 - Ax^2 + Bx - C = 0.$  If $A,$ $B,$ $C,$ $P,$ and $Q$ are constants, compute $A + B + C.$",
+    "level": "Level 4",
+    "type": "Intermediate Algebra",
+    "solution": "Let $r,$ $s,$ $t$ be the roots of $x^3 + Px^2 + Qx - 19 = 0.$  Let $u = r - 1,$ $v = s - 1,$ and $w = t - 1,$ so $u,$ $v,$ $w$ are the roots of $x^3 - Ax^2 + Bx - C = 0.$  Thus,\n\\[x^3 - Ax^2 + Bx - C = (x - u)(x - v)(x - w).\\]Settting $x = -1,$ we get\n\\[-1 - A - B - C = (-1 - u)(-1 - v)(-1 - w) = -(u + 1)(v + 1)(w + 1) = -rst.\\]By Vieta's formulas, $rst = 19,$ so $-rst = -19.$  Hence,\n\\[-1 - A - B - C = -19.\\]Then $A + B + C = 19 - 1 = \\boxed{18}.$",
+    "is_solved": false,
+    "model_solution": "Step 1: Let the roots of the second equation be $r,$ $s,$ and $t$ so that by Vieta's formulas $r+s+t=A,$ $rs+st+tr=B,$ and $rst=C.$\nStep 2:\nIf $r+1,$ $s+1,$ and $t+1$ are roots of the first equation, then by Vieta's formulas $$(r+1)+(s+1)+(t+1)=P$$ and $$Q=(r+1)(s+1)(t+1).$$\nStep 3:\nWe are given that $(r + 1) + (s + 1) + (t + 1) = P$ and $(r + 1)(s + 1)(t + 1) = Q.$\nStep 4: From the equation $(r + 1) + (s + 1) + (t + 1) = P,$ we get $r + s + t + 3 = P.$ But we are given that $r + s + t = A,$ so $r + s + t + 3 = A + 3 = P.$ Thus, $A = P - 3.$\nSubstitute $A = P - 3$ into $rs + st + tr = B.$\n$B = rst + r+s+t + rs+st+tr = C + A + B,$ so $B - B = C + A,$ or $0 = C + A.$\nStep 5: \nSince $0 = C + A,$ we have $C = -A.$  Furthermore, we have $rst = C,$ so $rst = -A.$  Substituting into the equation $(r+1)(s+1)(t+1) = Q$ gives $rst + rs + st + tr + r + s + t + 1 = Q.$  Using our expressions for $rst,$ $r+s+t,$ $rs+st+tr,$ and $r+s+t+3 = P,$ this becomes $-A + B + A + 3 + 1 = Q,$ or $B + 4 = Q.$  Since we also have $Q = rst + r+s+t + rs+st+tr + r+s+t+1,$ we have $-A + B + A + 3 + 1 = -A + B + A + 4 = Q,$ so $4 = Q.$  Since $rst = C = -A,$ we have $C = -A.$\nSince $rst=C$ and $rst=-A$, we have $C=-A$.  Substituting into the equation $(r+1)(s+1)(t+1)=Q$ gives $rst + rs + st + tr + r + s + t + 1 = Q.$  Using our expressions for $rst,$ $r+s+t,$ $rs+st+tr,$ and $r+s+t+3=P,$ this becomes $-A + B + A + 3 + 1 = Q,$ or $B + 4 = Q.$\nWe have $C = -A$ and $B + 4 = Q.$  We also know that $Q = rst + r + s + t + rs + st + tr + 1 = C + A + B + 1.$  Therefore, we have $B + 4 = C + A + B + 1.$\n$C + A + B + 1 - B = 4$\n$C + A = 3$\n$A + B + C = ?$",
+    "steps": [
+        "Step 1: Let the roots of the second equation be $r,$ $s,$ and $t$ so that by Vieta's formulas $r+s+t=A,$ $rs+st+tr=B,$ and $rst=C.$",
+        "Step 2:\nIf $r+1,$ $s+1,$ and $t+1$ are roots of the first equation, then by Vieta's formulas $$(r+1)+(s+1)+(t+1)=P$$ and $$Q=(r+1)(s+1)(t+1).$$",
+        "Step 3:\nWe are given that $(r + 1) + (s + 1) + (t + 1) = P$ and $(r + 1)(s + 1)(t + 1) = Q.$",
+        "Step 4: From the equation $(r + 1) + (s + 1) + (t + 1) = P,$ we get $r + s + t + 3 = P.$ But we are given that $r + s + t = A,$ so $r + s + t + 3 = A + 3 = P.$ Thus, $A = P - 3.$",
+        "Substitute $A = P - 3$ into $rs + st + tr = B.$",
+        "$B = rst + r+s+t + rs+st+tr = C + A + B,$ so $B - B = C + A,$ or $0 = C + A.$",
+        "Step 5: \nSince $0 = C + A,$ we have $C = -A.$  Furthermore, we have $rst = C,$ so $rst = -A.$  Substituting into the equation $(r+1)(s+1)(t+1) = Q$ gives $rst + rs + st + tr + r + s + t + 1 = Q.$  Using our expressions for $rst,$ $r+s+t,$ $rs+st+tr,$ and $r+s+t+3 = P,$ this becomes $-A + B + A + 3 + 1 = Q,$ or $B + 4 = Q.$  Since we also have $Q = rst + r+s+t + rs+st+tr + r+s+t+1,$ we have $-A + B + A + 3 + 1 = -A + B + A + 4 = Q,$ so $4 = Q.$  Since $rst = C = -A,$ we have $C = -A.$",
+        "Since $rst=C$ and $rst=-A$, we have $C=-A$.  Substituting into the equation $(r+1)(s+1)(t+1)=Q$ gives $rst + rs + st + tr + r + s + t + 1 = Q.$  Using our expressions for $rst,$ $r+s+t,$ $rs+st+tr,$ and $r+s+t+3=P,$ this becomes $-A + B + A + 3 + 1 = Q,$ or $B + 4 = Q.$",
+        "We have $C = -A$ and $B + 4 = Q.$  We also know that $Q = rst + r + s + t + rs + st + tr + 1 = C + A + B + 1.$  Therefore, we have $B + 4 = C + A + B + 1.$",
+        "$C + A + B + 1 - B = 4$\n$C + A = 3$\n$A + B + C = ?$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Let the roots of the second equation be $r,$ $s,$ and $t$ so that by Vieta's formulas $r+s+t=A,$ $rs+st+tr=B,$ and $rst=C.$",
+            1
+        ],
+        [
+            "Step 2:\nIf $r+1,$ $s+1,$ and $t+1$ are roots of the first equation, then by Vieta's formulas $$(r+1)+(s+1)+(t+1)=P$$ and $$Q=(r+1)(s+1)(t+1).$$",
+            1
+        ],
+        [
+            "Step 3:\nWe are given that $(r + 1) + (s + 1) + (t + 1) = P$ and $(r + 1)(s + 1)(t + 1) = Q.$",
+            1
+        ],
+        [
+            "Step 4: From the equation $(r + 1) + (s + 1) + (t + 1) = P,$ we get $r + s + t + 3 = P.$ But we are given that $r + s + t = A,$ so $r + s + t + 3 = A + 3 = P.$ Thus, $A = P - 3.$",
+            1
+        ],
+        [
+            "Substitute $A = P - 3$ into $rs + st + tr = B.$",
+            1
+        ],
+        [
+            "$B = rst + r+s+t + rs+st+tr = C + A + B,$ so $B - B = C + A,$ or $0 = C + A.$",
+            1
+        ],
+        [
+            "Step 5: \nSince $0 = C + A,$ we have $C = -A.$  Furthermore, we have $rst = C,$ so $rst = -A.$  Substituting into the equation $(r+1)(s+1)(t+1) = Q$ gives $rst + rs + st + tr + r + s + t + 1 = Q.$  Using our expressions for $rst,$ $r+s+t,$ $rs+st+tr,$ and $r+s+t+3 = P,$ this becomes $-A + B + A + 3 + 1 = Q,$ or $B + 4 = Q.$  Since we also have $Q = rst + r+s+t + rs+st+tr + r+s+t+1,$ we have $-A + B + A + 3 + 1 = -A + B + A + 4 = Q,$ so $4 = Q.$  Since $rst = C = -A,$ we have $C = -A.$",
+            1
+        ],
+        [
+            "Since $rst=C$ and $rst=-A$, we have $C=-A$.  Substituting into the equation $(r+1)(s+1)(t+1)=Q$ gives $rst + rs + st + tr + r + s + t + 1 = Q.$  Using our expressions for $rst,$ $r+s+t,$ $rs+st+tr,$ and $r+s+t+3=P,$ this becomes $-A + B + A + 3 + 1 = Q,$ or $B + 4 = Q.$",
+            1
+        ],
+        [
+            "We have $C = -A$ and $B + 4 = Q.$  We also know that $Q = rst + r + s + t + rs + st + tr + 1 = C + A + B + 1.$  Therefore, we have $B + 4 = C + A + B + 1.$",
+            1
+        ],
+        [
+            "$C + A + B + 1 - B = 4$\n$C + A = 3$\n$A + B + C = ?$",
+            1
+        ]
+    ],
+    "time": 136.55147504806519,
+    "total_tokens": 10496,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

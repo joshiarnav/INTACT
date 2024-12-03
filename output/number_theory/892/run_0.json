@@ -1,0 +1,41 @@
+{
+    "problem": "Given that $33^{-1} \\equiv 77 \\pmod{508}$, find $11^{-1} \\pmod{508}$ as a residue modulo 508.  (Give an answer between 0 and 507, inclusive.)",
+    "level": "Level 5",
+    "type": "Number Theory",
+    "solution": "Since $33^{-1} \\equiv 77 \\pmod{508}$, \\begin{align*}\n11^{-1} &\\equiv (33 \\cdot 3^{-1})^{-1} \\\\\n&\\equiv 33^{-1} \\cdot 3 \\\\\n&\\equiv 77 \\cdot 3 \\\\\n&\\equiv \\boxed{231} \\pmod{508}.\n\\end{align*}",
+    "is_solved": true,
+    "model_solution": "Step 1:  We are given that $33^{-1} \\equiv 77 \\pmod{508}$. Our goal is to find $11^{-1} \\pmod{508}$ as a residue modulo 508. To do this, we need to utilize the relationship between $33$ and $11$ to derive $11^{-1} \\pmod{508}$.\n$11 = 3 \\times 11 - 2 \\times 3 \\times 11 = 3 \\times 11 - 2 \\times 33$\n$11 \\equiv 2 \\times 33 \\pmod{508}$\nStep 2: $11^{-1} \\equiv (2 \\times 33)^{-1} \\equiv (2 \\times 33)^{-1} \\equiv (2 \\times 77)^{-1} \\equiv (2 \\times 77)^{-1} \\pmod{508}$\nStep 3:  Since $2^{-1} \\equiv 254 \\pmod{508}$ and $77 \\times 254 \\equiv 19366 \\pmod{508}$, we can simplify the expression for $11^{-1}$ as follows: \n$11^{-1} \\equiv (2 \\times 77)^{-1} \\equiv (2^{-1} \\times 77)^{-1} \\equiv (254 \\times 77)^{-1} \\equiv 19366^{-1} \\pmod{508}$\n$19366 \\equiv 82 \\pmod{508}$\n$11^{-1} \\equiv 82^{-1} \\equiv -26 \\equiv 482 \\pmod{508}$\n$11^{-1} \\equiv 82^{-1} \\equiv -26 \\equiv 482 \\pmod{508}$",
+    "steps": [
+        "Step 1:  We are given that $33^{-1} \\equiv 77 \\pmod{508}$. Our goal is to find $11^{-1} \\pmod{508}$ as a residue modulo 508. To do this, we need to utilize the relationship between $33$ and $11$ to derive $11^{-1} \\pmod{508}$.\n$11 = 3 \\times 11 - 2 \\times 3 \\times 11 = 3 \\times 11 - 2 \\times 33$\n$11 \\equiv 2 \\times 33 \\pmod{508}$",
+        "Step 2: $11^{-1} \\equiv (2 \\times 33)^{-1} \\equiv (2 \\times 33)^{-1} \\equiv (2 \\times 77)^{-1} \\equiv (2 \\times 77)^{-1} \\pmod{508}$",
+        "Step 3:  Since $2^{-1} \\equiv 254 \\pmod{508}$ and $77 \\times 254 \\equiv 19366 \\pmod{508}$, we can simplify the expression for $11^{-1}$ as follows: \n$11^{-1} \\equiv (2 \\times 77)^{-1} \\equiv (2^{-1} \\times 77)^{-1} \\equiv (254 \\times 77)^{-1} \\equiv 19366^{-1} \\pmod{508}$\n$19366 \\equiv 82 \\pmod{508}$",
+        "$11^{-1} \\equiv 82^{-1} \\equiv -26 \\equiv 482 \\pmod{508}$",
+        "$11^{-1} \\equiv 82^{-1} \\equiv -26 \\equiv 482 \\pmod{508}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We are given that $33^{-1} \\equiv 77 \\pmod{508}$. Our goal is to find $11^{-1} \\pmod{508}$ as a residue modulo 508. To do this, we need to utilize the relationship between $33$ and $11$ to derive $11^{-1} \\pmod{508}$.\n$11 = 3 \\times 11 - 2 \\times 3 \\times 11 = 3 \\times 11 - 2 \\times 33$\n$11 \\equiv 2 \\times 33 \\pmod{508}$",
+            1
+        ],
+        [
+            "Step 2: $11^{-1} \\equiv (2 \\times 33)^{-1} \\equiv (2 \\times 33)^{-1} \\equiv (2 \\times 77)^{-1} \\equiv (2 \\times 77)^{-1} \\pmod{508}$",
+            1
+        ],
+        [
+            "Step 3:  Since $2^{-1} \\equiv 254 \\pmod{508}$ and $77 \\times 254 \\equiv 19366 \\pmod{508}$, we can simplify the expression for $11^{-1}$ as follows: \n$11^{-1} \\equiv (2 \\times 77)^{-1} \\equiv (2^{-1} \\times 77)^{-1} \\equiv (254 \\times 77)^{-1} \\equiv 19366^{-1} \\pmod{508}$\n$19366 \\equiv 82 \\pmod{508}$",
+            1
+        ],
+        [
+            "$11^{-1} \\equiv 82^{-1} \\equiv -26 \\equiv 482 \\pmod{508}$",
+            1
+        ],
+        [
+            "$11^{-1} \\equiv 82^{-1} \\equiv -26 \\equiv 482 \\pmod{508}$",
+            1
+        ]
+    ],
+    "time": 67.06410598754883,
+    "total_tokens": 3897,
+    "final_answer_tokens": 486,
+    "model": "meta-llama/Llama-Vision-Free"
+}

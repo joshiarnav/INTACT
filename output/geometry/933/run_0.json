@@ -1,0 +1,66 @@
+{
+    "problem": "A triangle with sides of 5, 12, and 13 has both an inscribed and a circumscribed circle.  What is the distance between the centers of those circles? Express your answer as a fraction in simplest radical form.",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "The triangle is a right triangle that can be placed in a coordinate system with vertices at $(0,0)$, $(5,0)$, and ($0,12)$. The center of the circumscribed circle is the midpoint of the hypotenuse, which is $(5/2, 6)$.\n\n[asy]\nunitsize(0.5cm);\ndraw((-2,0)--(10,0),Arrow);\ndraw((0,-2)--(0,14),Arrow);\ndraw(Circle((2.5,6),6.5),linewidth(0.7));\ndraw((5,0)--(0,12)--(0,0)--cycle,linewidth(0.7));\ndot((2.5,6));\nlabel(\"{\\tiny 5}\",(5,0),S);\nlabel(\"{\\tiny 12}\",(0,12),NW);\nlabel(\"{\\tiny (5/2,6)}\",(2.5,6),NE);\ndraw((12,0)--(24,0),Arrow);\ndraw((14,-2)--(14,14),Arrow);\ndraw((14,12)--(19,0)--(14,0)--cycle,linewidth(0.7));\ndraw(Circle((16,2),2),linewidth(0.7));\ndraw((16,2)--(17.4,3.4),linewidth(0.7));\ndraw((14,2)--(16,2)--(16,0),linewidth(0.7));\nlabel(\"{\\tiny r}\",(16,1),E);\nlabel(\"{\\tiny r}\",(15,2),N);\nlabel(\"{\\tiny r}\",(16.7,2.4),N);\nlabel(\"{\\tiny 5}\",(19,0),S);\nlabel(\"{\\tiny 5-r}\",(16.5,0),S);\nlabel(\"{\\tiny 5-r}\",(18.2,1.7),E);\nlabel(\"{\\tiny 12}\",(14,12),W);\nlabel(\"{\\tiny 12-r}\",(14,7),W);\nlabel(\"{\\tiny 12-r}\",(15.67,8),E);\n[/asy]\n\n\n\nTo determine the radius $r$ of the inscribed circle notice that the hypotenuse of the triangle is \\[\n(12-r) + (5-r) = 13\\]so $r=2$.\n\n\nSo the center of the inscribed circle is $(2,2)$, and the distance between the two centers is \\[\n\\sqrt{\\displaystyle\\left( \\frac{5}{2} -2\\displaystyle\\right)^{2}+(6-2)^{2}}= \\boxed{\\frac{\\sqrt{65}}{2}}.\n\\]",
+    "is_solved": false,
+    "model_solution": "Step 1:  To find the distance between the incenter and circumcenter of the triangle, we should first understand the properties of the incenter and circumcenter, as well as the given triangle.\n \n Key Properties:\n \n- The incenter is the point of concurrency of the angle bisectors of the triangle, and it is equidistant from the sides of the triangle.\n- The circumcenter is the point of concurrency of the perpendicular bisectors of the sides of the triangle, and it is equidistant from the vertices of the triangle.\n \n- The triangle with sides of 5, 12, and 13 is a right-angled triangle, as it satisfies the Pythagorean theorem (5^2 + 12^2 = 13^2).\nStep 2:  The incenter I, the circumcenter O, and the right angle vertex A lie on the same line, and the distance between I and O can be expressed as the difference between the radius of the circumcircle and the radius of the incircle.\nStep 3:  We can apply Heron's formula to calculate the area of the triangle, which is given by $K = \\sqrt{s(s - a)(s - b)(s - c)}$, where $a$, $b$, and $c$ are the sides of the triangle, and $s = \\frac{a + b + c}{2}$ is the semiperimeter of the triangle.\nStep 4:  The semiperimeter of the triangle is $s = \\frac{5 + 12 + 13}{2} = 15.$ Using Heron's formula, we can find the area of the triangle: $K = \\sqrt{15(15 - 5)(15 - 12)(15 - 13)} = 30.$\nStep 5:  The inradius $r$ can be found using the formula $K = rs$, where $K$ is the area of the triangle and $s$ is the semiperimeter. Solving for $r$, we have $r = \\frac{K}{s} = \\frac{30}{15} = 2.$\nStep 6:\nThe circumradius $R$ can be found using the formula $R = \\frac{abc}{4K}$, where $a$, $b$, and $c$ are the sides of the triangle, and $K$ is the area of the triangle. Substituting the given values, we have $R = \\frac{5 \\cdot 12 \\cdot 13}{4 \\cdot 30} = \\frac{13}{2}.$\nStep 7: $d = \\frac{2}{3} (R-r) = \\frac{2}{3} \\left(\\frac{13}{2}-2\\right) = \\frac{2}{3} \\left(\\frac{13-4}{2}\\right) = \\frac{2}{3} \\left(\\frac{9}{2}\\right) = \\frac{9}{3} = 3.$\nStep 8: The distance $d = \\frac{9}{3} = 3.$\nStep 9: $d = \\frac{2}{3} (R-r) = \\frac{2}{3} \\left(\\frac{13}{2}-2\\right) = \\frac{2}{3} \\left(\\frac{13-4}{2}\\right) = \\frac{2}{3} \\left(\\frac{9}{2}\\right) = \\frac{9}{3} = 3.$\nStep 10:\n\\frac{2}{3} \\left(\\frac{13-4}{2}\\right) = \\frac{2}{3} \\left(\\frac{9}{2}\\right)",
+    "steps": [
+        "Step 1:  To find the distance between the incenter and circumcenter of the triangle, we should first understand the properties of the incenter and circumcenter, as well as the given triangle.\n \n Key Properties:\n \n- The incenter is the point of concurrency of the angle bisectors of the triangle, and it is equidistant from the sides of the triangle.\n- The circumcenter is the point of concurrency of the perpendicular bisectors of the sides of the triangle, and it is equidistant from the vertices of the triangle.\n \n- The triangle with sides of 5, 12, and 13 is a right-angled triangle, as it satisfies the Pythagorean theorem (5^2 + 12^2 = 13^2).",
+        "Step 2:  The incenter I, the circumcenter O, and the right angle vertex A lie on the same line, and the distance between I and O can be expressed as the difference between the radius of the circumcircle and the radius of the incircle.",
+        "Step 3:  We can apply Heron's formula to calculate the area of the triangle, which is given by $K = \\sqrt{s(s - a)(s - b)(s - c)}$, where $a$, $b$, and $c$ are the sides of the triangle, and $s = \\frac{a + b + c}{2}$ is the semiperimeter of the triangle.",
+        "Step 4:  The semiperimeter of the triangle is $s = \\frac{5 + 12 + 13}{2} = 15.$ Using Heron's formula, we can find the area of the triangle: $K = \\sqrt{15(15 - 5)(15 - 12)(15 - 13)} = 30.$",
+        "Step 5:  The inradius $r$ can be found using the formula $K = rs$, where $K$ is the area of the triangle and $s$ is the semiperimeter. Solving for $r$, we have $r = \\frac{K}{s} = \\frac{30}{15} = 2.$",
+        "Step 6:\nThe circumradius $R$ can be found using the formula $R = \\frac{abc}{4K}$, where $a$, $b$, and $c$ are the sides of the triangle, and $K$ is the area of the triangle. Substituting the given values, we have $R = \\frac{5 \\cdot 12 \\cdot 13}{4 \\cdot 30} = \\frac{13}{2}.$",
+        "Step 7: $d = \\frac{2}{3} (R-r) = \\frac{2}{3} \\left(\\frac{13}{2}-2\\right) = \\frac{2}{3} \\left(\\frac{13-4}{2}\\right) = \\frac{2}{3} \\left(\\frac{9}{2}\\right) = \\frac{9}{3} = 3.$",
+        "Step 8: The distance $d = \\frac{9}{3} = 3.$",
+        "Step 9: $d = \\frac{2}{3} (R-r) = \\frac{2}{3} \\left(\\frac{13}{2}-2\\right) = \\frac{2}{3} \\left(\\frac{13-4}{2}\\right) = \\frac{2}{3} \\left(\\frac{9}{2}\\right) = \\frac{9}{3} = 3.$",
+        "Step 10:\n\\frac{2}{3} \\left(\\frac{13-4}{2}\\right) = \\frac{2}{3} \\left(\\frac{9}{2}\\right)"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  To find the distance between the incenter and circumcenter of the triangle, we should first understand the properties of the incenter and circumcenter, as well as the given triangle.\n \n Key Properties:\n \n- The incenter is the point of concurrency of the angle bisectors of the triangle, and it is equidistant from the sides of the triangle.\n- The circumcenter is the point of concurrency of the perpendicular bisectors of the sides of the triangle, and it is equidistant from the vertices of the triangle.\n \n- The triangle with sides of 5, 12, and 13 is a right-angled triangle, as it satisfies the Pythagorean theorem (5^2 + 12^2 = 13^2).",
+            1
+        ],
+        [
+            "Step 2:  The incenter I, the circumcenter O, and the right angle vertex A lie on the same line, and the distance between I and O can be expressed as the difference between the radius of the circumcircle and the radius of the incircle.",
+            1
+        ],
+        [
+            "Step 3:  We can apply Heron's formula to calculate the area of the triangle, which is given by $K = \\sqrt{s(s - a)(s - b)(s - c)}$, where $a$, $b$, and $c$ are the sides of the triangle, and $s = \\frac{a + b + c}{2}$ is the semiperimeter of the triangle.",
+            1
+        ],
+        [
+            "Step 4:  The semiperimeter of the triangle is $s = \\frac{5 + 12 + 13}{2} = 15.$ Using Heron's formula, we can find the area of the triangle: $K = \\sqrt{15(15 - 5)(15 - 12)(15 - 13)} = 30.$",
+            1
+        ],
+        [
+            "Step 5:  The inradius $r$ can be found using the formula $K = rs$, where $K$ is the area of the triangle and $s$ is the semiperimeter. Solving for $r$, we have $r = \\frac{K}{s} = \\frac{30}{15} = 2.$",
+            1
+        ],
+        [
+            "Step 6:\nThe circumradius $R$ can be found using the formula $R = \\frac{abc}{4K}$, where $a$, $b$, and $c$ are the sides of the triangle, and $K$ is the area of the triangle. Substituting the given values, we have $R = \\frac{5 \\cdot 12 \\cdot 13}{4 \\cdot 30} = \\frac{13}{2}.$",
+            1
+        ],
+        [
+            "Step 7: $d = \\frac{2}{3} (R-r) = \\frac{2}{3} \\left(\\frac{13}{2}-2\\right) = \\frac{2}{3} \\left(\\frac{13-4}{2}\\right) = \\frac{2}{3} \\left(\\frac{9}{2}\\right) = \\frac{9}{3} = 3.$",
+            1
+        ],
+        [
+            "Step 8: The distance $d = \\frac{9}{3} = 3.$",
+            1
+        ],
+        [
+            "Step 9: $d = \\frac{2}{3} (R-r) = \\frac{2}{3} \\left(\\frac{13}{2}-2\\right) = \\frac{2}{3} \\left(\\frac{13-4}{2}\\right) = \\frac{2}{3} \\left(\\frac{9}{2}\\right) = \\frac{9}{3} = 3.$",
+            1
+        ],
+        [
+            "Step 10:\n\\frac{2}{3} \\left(\\frac{13-4}{2}\\right) = \\frac{2}{3} \\left(\\frac{9}{2}\\right)",
+            1
+        ]
+    ],
+    "time": 127.49872899055481,
+    "total_tokens": 11981,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

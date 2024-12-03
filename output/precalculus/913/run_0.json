@@ -1,0 +1,66 @@
+{
+    "problem": "In Cartesian space, three spheres centered at $(-2,5,4),$ $(2,1,4),$ and $(4,7,5)$ are all tangent to the $xy$-plane.  The $xy$-plane is one of two planes tangent to all three spheres; the second plane can be written as the equation $ax + bx + cz = d$ for some real numbers $a,$ $b,$ $c,$ and $d.$  Find $\\frac{c}{a}.$",
+    "level": "Level 5",
+    "type": "Precalculus",
+    "solution": "The equation for the $xy$-plane is $z = 0.$\n\n[asy]\nimport three;\nimport solids;\n\nsize(300);\ncurrentprojection = perspective(-2,-2,3);\n\ndraw((2,17,0)--(17,2,0)--(-8,-29,0)--(-29,-8,0)--cycle);\ndraw(shift((4,7,5))*surface(sphere(5)),gray(0.8));\ndraw(shift((-2,5,4))*surface(sphere(4)),gray(0.8));\ndraw(shift((2,1,4))*surface(sphere(4)),gray(0.8));\ndraw((2,17,6)--(17,2,6)--(-8,-29,-1)--(-29,-8,-1)--cycle);\ndraw((0,-29,0)--(-29,0,0));\n\nlabel(\"$x + y = -29$\", (0,-29,0), E);\n[/asy]\n\nLet $\\mathbf{a} = \\begin{pmatrix} -2 \\\\ 5 \\\\ 4 \\end{pmatrix},$ $\\mathbf{b} = \\begin{pmatrix} 2 \\\\ 1 \\\\ 4 \\end{pmatrix},$ and $\\mathbf{c} = \\begin{pmatrix} 4 \\\\ 7 \\\\ 5 \\end{pmatrix}.$  Then the normal vector to the plane passing through the centers of the spheres is\n\\[(\\mathbf{b} - \\mathbf{a}) \\times (\\mathbf{c} - \\mathbf{a}) = \\begin{pmatrix} 4 \\\\ -4 \\\\ 0 \\end{pmatrix} \\times \\begin{pmatrix} 6 \\\\ 2 \\\\ 1 \\end{pmatrix} = \\begin{pmatrix} -4 \\\\ -4 \\\\ 32 \\end{pmatrix}.\\]We can scale this vector, and take $\\begin{pmatrix} 1 \\\\ 1 \\\\ -8 \\end{pmatrix}$ as the normal vector.  Thus, the equation of the plane is of the form $x + y - 8z = d.$  Substituting any of the centers, we find the equation of this plane is\n\\[x + y - 8z = -29.\\]The intersection of this plane with the plane $z = 0$ is the line defined by\n\\[x + y = -29.\\]The equation of any plane containing this line is then of the form\n\\[kx + ky + z = -29k.\\]We want all three spheres to be tangent to this plane.  Then the distance between this plane and the center $(-2,5,4)$ should be 4.  From the formula for the distance between a point and a plane,\n\\[\\frac{|-2k + 5k + 4 + 29k|}{\\sqrt{k^2 + k^2 + 1}} = 4.\\]Then $|32k + 4| = 4 \\sqrt{2k^2 + 1},$ so $|8k + 1| = \\sqrt{2k^2 + 1}.$  Squaring, we get $64k^2 + 16k + 1 = 2k^2 + 1,$ which simplifies to\n\\[62k^2 + 16k = 2k(31k + 8) = 0.\\]The solutions are $k = 0$ and $k = -\\frac{8}{31}.$  The solution $k = 0$ corresponds to the plane $z = 0,$ so the other plane corresponds to $k = -\\frac{8}{31},$ which gives us the equation\n\\[-\\frac{8}{31} x - \\frac{8}{31} y + z = 29 \\cdot \\frac{8}{31}.\\]Thus, $\\frac{c}{a} = \\boxed{-\\frac{31}{8}}.$",
+    "is_solved": false,
+    "model_solution": "Step 1: Let $(x_{1}, y_{1}, z_{1}),$ $(x_{2}, y_{2}, z_{2}),$ and $(x_{3}, y_{3}, z_{3})$ be the points of tangency of the three given spheres with the $xy$-plane.\nStep 2: Since each of the given spheres is tangent to the $xy$-plane, the $z$-coordinate of each point of tangency is zero.  Therefore, we have $z_{1}=0,$ $z_{2}=0,$ and $z_{3}=0.$\nStep 3: The equation of the plane tangent to the three spheres is $ax + by + cz = d.$  Since the origin $(0, 0, 0)$ is on the plane, we have $d = 0.$\nStep 4: Since the plane $ax + by + cz = 0$ is tangent to the three spheres, the distance from each sphere's center to the plane is equal to the sphere's radius.  We can write the equation of the distance from a point $(x, y, z)$ to the plane $ax + by + cz = 0$ as\n$\\frac{ax + by + cz}{\\sqrt{a^{2} + b^{2} + c^{2}}}.$\nTherefore, we have the following system of equations:\n\\begin{align*}\n\\frac{-2 a + 5 b + 4 c}{\\sqrt{a^{2} + b^{2} + c^{2}}} &= r_{1} \\\\\n\\frac{2 a + b + 4 c}{\\sqrt{a^{2} + b^{2} + c^{2}}} &= r_{2} \\\\\n\\frac{4 a + 7 b + 5 c}{\\sqrt{a^{2} + b^{2} + c^{2}}} &= r_{3}\n\\end{align*}\nSince each of the three equations in the system of equations is equal to the same radius $r$, we have the following system of equations:\n\\begin{align*}\n-2 a + 5 b + 4 c &= r_{1} \\sqrt{a^{2} + b^{2} + c^{2}} \\\\\n2 a + b + 4 c &= r_{2} \\sqrt{a^{2} + b^{2} + c^{2}} \\\\\n4 a + 7 b + 5 c &= r_{3} \\sqrt{a^{2} + b^{2} + c^{2}}\n\\end{align*}\nStep 5: Multiplying each equation in the system of equations by $\\sqrt{a^{2} + b^{2} + c^{2}}$ and then subtracting the first equation from each of the other two equations yields\n\\begin{align*}\n4 a + 6 b &= (r_{2} - r_{1}) \\sqrt{a^{2} + b^{2} + c^{2}} \\\\\n8 a + 2 b &= (r_{3} - r_{1}) \\sqrt{a^{2} + b^{2} + c^{2}}\n\\end{align*}\nSubtract the first equation from the second to get $4 a - 4 b = (r_{3} - r_{2}) \\sqrt{a^{2} + b^{2} + c^{2}}.$\nStep 6:\n\\begin{align*}\n4 a - 4 b &= (r_{3} - r_{2}) \\sqrt{a^{2} + b^{2} + c^{2}} \\\\\n4 a + 6 b &= (r_{2} - r_{1}) \\sqrt{a^{2} + b^{2} + c^{2}} \\\\\n\\frac{a}{b} &= \\frac{(r_{3} - r_{2})}{(r_{2} - r_{1})} \\\\\na &= \\frac{b(r_{3} - r_{2})}{(r_{2} - r_{1})} \\\\\n\\end{align*}\nSubstitute the expression for $a$ from Step 6 into the equation $2 a + b + 4 c = r_{2} \\sqrt{a^{2} + b^{2} + c^{2}}$ from Step 4 to get\n\\begin{align*}\n2 \\cdot \\frac{b(r_{3} - r_{2})}{(r_{2} - r_{1})} + b + 4 c &= r_{2} \\sqrt{a^{2} + b^{2} + c^{2}} \\\\\n\\end{align*}\nStep 7:\n\\begin{align*}\nb \\left( \\frac{2(r_{3}-r_{2})}{r_{2}-r_{1}} + 1 \\right) + 4 c &= r_{2} \\sqrt{a^{2} + b^{2} + c^{2}} \\\\\nb \\left( \\frac{2(r_{3}-r_{2})+r_{2}-r_{1}}{r_{2}-r_{1}} \\right) + 4 c &= r_{2} \\sqrt{a^{2} + b^{2} + c^{2}} \\\\\nb \\left( \\frac{2r_{3}-3r_{2}+r_{1}}{r_{2}-r_{1}} \\right) + 4 c &= r_{2} \\sqrt{a^{2} + b^{2} + c^{2}} \\\\ \nb \\left( \\frac{2r_{3}-3r_{2}+r_{1}}{r_{2}-r_{1}} \\right) + 4 c &= r_{2} \\sqrt{\\left( \\frac{b(r_{3}-",
+    "steps": [
+        "Step 1: Let $(x_{1}, y_{1}, z_{1}),$ $(x_{2}, y_{2}, z_{2}),$ and $(x_{3}, y_{3}, z_{3})$ be the points of tangency of the three given spheres with the $xy$-plane.",
+        "Step 2: Since each of the given spheres is tangent to the $xy$-plane, the $z$-coordinate of each point of tangency is zero.  Therefore, we have $z_{1}=0,$ $z_{2}=0,$ and $z_{3}=0.$",
+        "Step 3: The equation of the plane tangent to the three spheres is $ax + by + cz = d.$  Since the origin $(0, 0, 0)$ is on the plane, we have $d = 0.$",
+        "Step 4: Since the plane $ax + by + cz = 0$ is tangent to the three spheres, the distance from each sphere's center to the plane is equal to the sphere's radius.  We can write the equation of the distance from a point $(x, y, z)$ to the plane $ax + by + cz = 0$ as\n$\\frac{ax + by + cz}{\\sqrt{a^{2} + b^{2} + c^{2}}}.$\nTherefore, we have the following system of equations:\n\\begin{align*}\n\\frac{-2 a + 5 b + 4 c}{\\sqrt{a^{2} + b^{2} + c^{2}}} &= r_{1} \\\\\n\\frac{2 a + b + 4 c}{\\sqrt{a^{2} + b^{2} + c^{2}}} &= r_{2} \\\\\n\\frac{4 a + 7 b + 5 c}{\\sqrt{a^{2} + b^{2} + c^{2}}} &= r_{3}\n\\end{align*}",
+        "Since each of the three equations in the system of equations is equal to the same radius $r$, we have the following system of equations:\n\\begin{align*}\n-2 a + 5 b + 4 c &= r_{1} \\sqrt{a^{2} + b^{2} + c^{2}} \\\\\n2 a + b + 4 c &= r_{2} \\sqrt{a^{2} + b^{2} + c^{2}} \\\\\n4 a + 7 b + 5 c &= r_{3} \\sqrt{a^{2} + b^{2} + c^{2}}\n\\end{align*}",
+        "Step 5: Multiplying each equation in the system of equations by $\\sqrt{a^{2} + b^{2} + c^{2}}$ and then subtracting the first equation from each of the other two equations yields\n\\begin{align*}\n4 a + 6 b &= (r_{2} - r_{1}) \\sqrt{a^{2} + b^{2} + c^{2}} \\\\\n8 a + 2 b &= (r_{3} - r_{1}) \\sqrt{a^{2} + b^{2} + c^{2}}\n\\end{align*}",
+        "Subtract the first equation from the second to get $4 a - 4 b = (r_{3} - r_{2}) \\sqrt{a^{2} + b^{2} + c^{2}}.$",
+        "Step 6:\n\\begin{align*}\n4 a - 4 b &= (r_{3} - r_{2}) \\sqrt{a^{2} + b^{2} + c^{2}} \\\\\n4 a + 6 b &= (r_{2} - r_{1}) \\sqrt{a^{2} + b^{2} + c^{2}} \\\\\n\\frac{a}{b} &= \\frac{(r_{3} - r_{2})}{(r_{2} - r_{1})} \\\\\na &= \\frac{b(r_{3} - r_{2})}{(r_{2} - r_{1})} \\\\\n\\end{align*}",
+        "Substitute the expression for $a$ from Step 6 into the equation $2 a + b + 4 c = r_{2} \\sqrt{a^{2} + b^{2} + c^{2}}$ from Step 4 to get\n\\begin{align*}\n2 \\cdot \\frac{b(r_{3} - r_{2})}{(r_{2} - r_{1})} + b + 4 c &= r_{2} \\sqrt{a^{2} + b^{2} + c^{2}} \\\\\n\\end{align*}",
+        "Step 7:\n\\begin{align*}\nb \\left( \\frac{2(r_{3}-r_{2})}{r_{2}-r_{1}} + 1 \\right) + 4 c &= r_{2} \\sqrt{a^{2} + b^{2} + c^{2}} \\\\\nb \\left( \\frac{2(r_{3}-r_{2})+r_{2}-r_{1}}{r_{2}-r_{1}} \\right) + 4 c &= r_{2} \\sqrt{a^{2} + b^{2} + c^{2}} \\\\\nb \\left( \\frac{2r_{3}-3r_{2}+r_{1}}{r_{2}-r_{1}} \\right) + 4 c &= r_{2} \\sqrt{a^{2} + b^{2} + c^{2}} \\\\ \nb \\left( \\frac{2r_{3}-3r_{2}+r_{1}}{r_{2}-r_{1}} \\right) + 4 c &= r_{2} \\sqrt{\\left( \\frac{b(r_{3}-"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Let $(x_{1}, y_{1}, z_{1}),$ $(x_{2}, y_{2}, z_{2}),$ and $(x_{3}, y_{3}, z_{3})$ be the points of tangency of the three given spheres with the $xy$-plane.",
+            1
+        ],
+        [
+            "Step 2: Since each of the given spheres is tangent to the $xy$-plane, the $z$-coordinate of each point of tangency is zero.  Therefore, we have $z_{1}=0,$ $z_{2}=0,$ and $z_{3}=0.$",
+            1
+        ],
+        [
+            "Step 3: The equation of the plane tangent to the three spheres is $ax + by + cz = d.$  Since the origin $(0, 0, 0)$ is on the plane, we have $d = 0.$",
+            1
+        ],
+        [
+            "Step 4: Since the plane $ax + by + cz = 0$ is tangent to the three spheres, the distance from each sphere's center to the plane is equal to the sphere's radius.  We can write the equation of the distance from a point $(x, y, z)$ to the plane $ax + by + cz = 0$ as\n$\\frac{ax + by + cz}{\\sqrt{a^{2} + b^{2} + c^{2}}}.$\nTherefore, we have the following system of equations:\n\\begin{align*}\n\\frac{-2 a + 5 b + 4 c}{\\sqrt{a^{2} + b^{2} + c^{2}}} &= r_{1} \\\\\n\\frac{2 a + b + 4 c}{\\sqrt{a^{2} + b^{2} + c^{2}}} &= r_{2} \\\\\n\\frac{4 a + 7 b + 5 c}{\\sqrt{a^{2} + b^{2} + c^{2}}} &= r_{3}\n\\end{align*}",
+            1
+        ],
+        [
+            "Since each of the three equations in the system of equations is equal to the same radius $r$, we have the following system of equations:\n\\begin{align*}\n-2 a + 5 b + 4 c &= r_{1} \\sqrt{a^{2} + b^{2} + c^{2}} \\\\\n2 a + b + 4 c &= r_{2} \\sqrt{a^{2} + b^{2} + c^{2}} \\\\\n4 a + 7 b + 5 c &= r_{3} \\sqrt{a^{2} + b^{2} + c^{2}}\n\\end{align*}",
+            1
+        ],
+        [
+            "Step 5: Multiplying each equation in the system of equations by $\\sqrt{a^{2} + b^{2} + c^{2}}$ and then subtracting the first equation from each of the other two equations yields\n\\begin{align*}\n4 a + 6 b &= (r_{2} - r_{1}) \\sqrt{a^{2} + b^{2} + c^{2}} \\\\\n8 a + 2 b &= (r_{3} - r_{1}) \\sqrt{a^{2} + b^{2} + c^{2}}\n\\end{align*}",
+            1
+        ],
+        [
+            "Subtract the first equation from the second to get $4 a - 4 b = (r_{3} - r_{2}) \\sqrt{a^{2} + b^{2} + c^{2}}.$",
+            1
+        ],
+        [
+            "Step 6:\n\\begin{align*}\n4 a - 4 b &= (r_{3} - r_{2}) \\sqrt{a^{2} + b^{2} + c^{2}} \\\\\n4 a + 6 b &= (r_{2} - r_{1}) \\sqrt{a^{2} + b^{2} + c^{2}} \\\\\n\\frac{a}{b} &= \\frac{(r_{3} - r_{2})}{(r_{2} - r_{1})} \\\\\na &= \\frac{b(r_{3} - r_{2})}{(r_{2} - r_{1})} \\\\\n\\end{align*}",
+            1
+        ],
+        [
+            "Substitute the expression for $a$ from Step 6 into the equation $2 a + b + 4 c = r_{2} \\sqrt{a^{2} + b^{2} + c^{2}}$ from Step 4 to get\n\\begin{align*}\n2 \\cdot \\frac{b(r_{3} - r_{2})}{(r_{2} - r_{1})} + b + 4 c &= r_{2} \\sqrt{a^{2} + b^{2} + c^{2}} \\\\\n\\end{align*}",
+            1
+        ],
+        [
+            "Step 7:\n\\begin{align*}\nb \\left( \\frac{2(r_{3}-r_{2})}{r_{2}-r_{1}} + 1 \\right) + 4 c &= r_{2} \\sqrt{a^{2} + b^{2} + c^{2}} \\\\\nb \\left( \\frac{2(r_{3}-r_{2})+r_{2}-r_{1}}{r_{2}-r_{1}} \\right) + 4 c &= r_{2} \\sqrt{a^{2} + b^{2} + c^{2}} \\\\\nb \\left( \\frac{2r_{3}-3r_{2}+r_{1}}{r_{2}-r_{1}} \\right) + 4 c &= r_{2} \\sqrt{a^{2} + b^{2} + c^{2}} \\\\ \nb \\left( \\frac{2r_{3}-3r_{2}+r_{1}}{r_{2}-r_{1}} \\right) + 4 c &= r_{2} \\sqrt{\\left( \\frac{b(r_{3}-",
+            1
+        ]
+    ],
+    "time": 136.4983856678009,
+    "total_tokens": 15139,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,41 @@
+{
+    "problem": "Suppose 5 different integers are randomly chosen from between 20 and 69, inclusive.  What is the probability that they each have a different tens digit?",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "In this set of integers, there are 5 tens digits: {2, 3, 4, 5, 6}.  If 5 integers all have different tens digits, then there must be exactly one integer among the 5 with each tens digit.  Since there are 10 different integers for each tens digit, the number of ways to pick, without regard to order, 5 different integers with different tens digits is $10^5$.  The total number of combinations of 5 integers is $\\binom{50}{5}$.  So the probability that 5 integers drawn all have the different tens digits is $$ \\frac{10^5}{\\binom{50}{5}} = \\frac{100000}{2118760} = \\boxed{\\frac{2500}{52969}}. $$",
+    "is_solved": true,
+    "model_solution": "There are $\\binom{50}{5}$ total ways to choose 5 different integers from between 20 and 69, inclusive.\nThere are $5\\cdot 10=50$ integers between 20 and 69 inclusive, and we can choose the tens digits in $\\binom{5}{5}=1$ way and the units digits in $\\binom{10}{1}^{5}=100000$ ways.\nThe probability that they each have a different tens digit is $\\frac{1 \\cdot 100000}{\\binom{50}{5}}$\n\\frac{1 \\cdot 100000}{\\binom{50}{5}} = \\frac{100000}{2118760}\nSimplify the fraction to obtain the final probability. Final Answer",
+    "steps": [
+        "There are $\\binom{50}{5}$ total ways to choose 5 different integers from between 20 and 69, inclusive.",
+        "There are $5\\cdot 10=50$ integers between 20 and 69 inclusive, and we can choose the tens digits in $\\binom{5}{5}=1$ way and the units digits in $\\binom{10}{1}^{5}=100000$ ways.",
+        "The probability that they each have a different tens digit is $\\frac{1 \\cdot 100000}{\\binom{50}{5}}$",
+        "\\frac{1 \\cdot 100000}{\\binom{50}{5}} = \\frac{100000}{2118760}",
+        "Simplify the fraction to obtain the final probability. Final Answer"
+    ],
+    "full_steps": [
+        [
+            "There are $\\binom{50}{5}$ total ways to choose 5 different integers from between 20 and 69, inclusive.",
+            1
+        ],
+        [
+            "There are $5\\cdot 10=50$ integers between 20 and 69 inclusive, and we can choose the tens digits in $\\binom{5}{5}=1$ way and the units digits in $\\binom{10}{1}^{5}=100000$ ways.",
+            1
+        ],
+        [
+            "The probability that they each have a different tens digit is $\\frac{1 \\cdot 100000}{\\binom{50}{5}}$",
+            1
+        ],
+        [
+            "\\frac{1 \\cdot 100000}{\\binom{50}{5}} = \\frac{100000}{2118760}",
+            1
+        ],
+        [
+            "Simplify the fraction to obtain the final probability. Final Answer",
+            1
+        ]
+    ],
+    "time": 67.22538566589355,
+    "total_tokens": 2034,
+    "final_answer_tokens": 249,
+    "model": "meta-llama/Llama-Vision-Free"
+}

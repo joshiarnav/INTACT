@@ -1,0 +1,51 @@
+{
+    "problem": "Let the term $S_n$ be the sum of the first $n$ powers of $2$. For instance, $S_3 = 2^0 + 2^1 + 2^2 = 7$.  Find the largest possible value of the greatest common divisor of two consecutive terms, $S_n$ and $S_{n+1}$, for any $n$.",
+    "level": "Level 4",
+    "type": "Number Theory",
+    "solution": "Note that $S_{n+1}-S_n = 2^n$. Also note that $S_n$ is a geometric series with a sum equal to $2^0\\cdot\\frac{1-2^n}{1-2} = 2^n-1$. Using the Euclidean Algorithm, we obtain: \\begin{align*}\n\\text{gcd}(S_{n+1}, S_n) &= \\text{gcd}(S_{n+1}-S_n, S_n) \\\\\n&= \\text{gcd}(2^n, 2^n-1) \\\\\n&= \\text{gcd}(2^n - (2^n-1), 2^n-1) \\\\\n&= \\text{gcd}(1, 2^n-1) \\\\\n&= 1.\n\\end{align*}Therefore, the greatest common divisor of two consecutive terms is always $1$, so the largest possible value is $\\boxed{1}$.",
+    "is_solved": true,
+    "model_solution": "## Step 1: Write out the expression for S_n\nWe have that $S_n = 2^0 + 2^1 + \\ldots + 2^n = \\frac{2^{n+1}-1}{2-1} = 2^{n+1}-1$.\n\n## Step 2: Write out the expression for S_{n+1}\nWe have that $S_{n+1} = 2^0 + 2^1 + \\ldots + 2^n + 2^{n+1} = \\frac{2^{(n+1)+1}-1}{2-1} = 2^{n+2}-1$.\n\n## Step 3: Write out the expression for S_{n+1} - S_n\nWe have that $S_{n+1} - S_n = (2^{n+2}-1) - (2^{n+1}-1) = 2^{n+2} - 2^{n+1} = 2^{n+1}(2-1) = 2^n$.\n## Step 4: Calculate the greatest common divisor of S_n and S_{n+1}\nSince $S_{n+1} - S_n = 2^n$, we see that $S_n$ and $S_{n+1}$ have a greatest common divisor of at most 1, unless $2^n$ is a factor of $S_n$ for some $n$.\n## Step 5: Consider when 2^n is a factor of S_n\n$2^n$ is a factor of $S_n$ when $2^n$ is a factor of $2^{n+1} - 1$. This is a factorization of $2^{n+1} - 1$ if and only if $2^{n+1} - 1$ is divisible by $2^n$, which is equivalent to $2^{n+1} - 1$ being an even number. Since $2^{n+1}$ is always even, $2^{n+1} - 1$ is only even when $n=0$.\n## Step 6: Evaluate the greatest common divisor of S_n and S_{n+1} for n=0\nWe have $S_0 = 2^0 - 1 = 0$ and $S_1 = 2^0 + 2^1 = 3$, so the greatest common divisor of $S_0$ and $S_1$ is 1.\n## Step 7: The greatest common divisor of S_n and S_{n+1} is 1\nThe greatest common divisor of $S_n$ and $S_{n+1}$ is $\\boxed{1}$.\n## Step 8: The greatest common divisor of S_n and S_{n+1} is 1\n## Step 8: The greatest common divisor of S_n and S_{n+1} is 1",
+    "steps": [
+        "## Step 1: Write out the expression for S_n\nWe have that $S_n = 2^0 + 2^1 + \\ldots + 2^n = \\frac{2^{n+1}-1}{2-1} = 2^{n+1}-1$.\n\n## Step 2: Write out the expression for S_{n+1}\nWe have that $S_{n+1} = 2^0 + 2^1 + \\ldots + 2^n + 2^{n+1} = \\frac{2^{(n+1)+1}-1}{2-1} = 2^{n+2}-1$.\n\n## Step 3: Write out the expression for S_{n+1} - S_n\nWe have that $S_{n+1} - S_n = (2^{n+2}-1) - (2^{n+1}-1) = 2^{n+2} - 2^{n+1} = 2^{n+1}(2-1) = 2^n$.",
+        "## Step 4: Calculate the greatest common divisor of S_n and S_{n+1}\nSince $S_{n+1} - S_n = 2^n$, we see that $S_n$ and $S_{n+1}$ have a greatest common divisor of at most 1, unless $2^n$ is a factor of $S_n$ for some $n$.",
+        "## Step 5: Consider when 2^n is a factor of S_n\n$2^n$ is a factor of $S_n$ when $2^n$ is a factor of $2^{n+1} - 1$. This is a factorization of $2^{n+1} - 1$ if and only if $2^{n+1} - 1$ is divisible by $2^n$, which is equivalent to $2^{n+1} - 1$ being an even number. Since $2^{n+1}$ is always even, $2^{n+1} - 1$ is only even when $n=0$.",
+        "## Step 6: Evaluate the greatest common divisor of S_n and S_{n+1} for n=0\nWe have $S_0 = 2^0 - 1 = 0$ and $S_1 = 2^0 + 2^1 = 3$, so the greatest common divisor of $S_0$ and $S_1$ is 1.",
+        "## Step 7: The greatest common divisor of S_n and S_{n+1} is 1\nThe greatest common divisor of $S_n$ and $S_{n+1}$ is $\\boxed{1}$.",
+        "## Step 8: The greatest common divisor of S_n and S_{n+1} is 1",
+        "## Step 8: The greatest common divisor of S_n and S_{n+1} is 1"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Write out the expression for S_n\nWe have that $S_n = 2^0 + 2^1 + \\ldots + 2^n = \\frac{2^{n+1}-1}{2-1} = 2^{n+1}-1$.\n\n## Step 2: Write out the expression for S_{n+1}\nWe have that $S_{n+1} = 2^0 + 2^1 + \\ldots + 2^n + 2^{n+1} = \\frac{2^{(n+1)+1}-1}{2-1} = 2^{n+2}-1$.\n\n## Step 3: Write out the expression for S_{n+1} - S_n\nWe have that $S_{n+1} - S_n = (2^{n+2}-1) - (2^{n+1}-1) = 2^{n+2} - 2^{n+1} = 2^{n+1}(2-1) = 2^n$.",
+            1
+        ],
+        [
+            "## Step 4: Calculate the greatest common divisor of S_n and S_{n+1}\nSince $S_{n+1} - S_n = 2^n$, we see that $S_n$ and $S_{n+1}$ have a greatest common divisor of at most 1, unless $2^n$ is a factor of $S_n$ for some $n$.",
+            1
+        ],
+        [
+            "## Step 5: Consider when 2^n is a factor of S_n\n$2^n$ is a factor of $S_n$ when $2^n$ is a factor of $2^{n+1} - 1$. This is a factorization of $2^{n+1} - 1$ if and only if $2^{n+1} - 1$ is divisible by $2^n$, which is equivalent to $2^{n+1} - 1$ being an even number. Since $2^{n+1}$ is always even, $2^{n+1} - 1$ is only even when $n=0$.",
+            1
+        ],
+        [
+            "## Step 6: Evaluate the greatest common divisor of S_n and S_{n+1} for n=0\nWe have $S_0 = 2^0 - 1 = 0$ and $S_1 = 2^0 + 2^1 = 3$, so the greatest common divisor of $S_0$ and $S_1$ is 1.",
+            1
+        ],
+        [
+            "## Step 7: The greatest common divisor of S_n and S_{n+1} is 1\nThe greatest common divisor of $S_n$ and $S_{n+1}$ is $\\boxed{1}$.",
+            1
+        ],
+        [
+            "## Step 8: The greatest common divisor of S_n and S_{n+1} is 1",
+            1
+        ],
+        [
+            "## Step 8: The greatest common divisor of S_n and S_{n+1} is 1",
+            1
+        ]
+    ],
+    "time": 91.5919439792633,
+    "total_tokens": 8762,
+    "final_answer_tokens": 770,
+    "model": "meta-llama/Llama-Vision-Free"
+}

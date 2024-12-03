@@ -1,0 +1,56 @@
+{
+    "problem": "The cards of a standard 52-card deck are dealt out in a circle. What is the expected number of pairs of adjacent cards which are both black? Express your answer as a common fraction.",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "The number of pairs of adjacent cards which are both black is equal to the number of black cards which have another black card to their right. For each black card, there is a $\\dfrac{25}{51}$ chance that the card to its right is also black, giving 1 pair, and a $\\dfrac{26}{51}$ chance that the card to its right is red, giving 0 pairs. There are 26 black cards, so the expected value of the number of pairs of adjacent black cards is $$26\\left(\\frac{25}{51}(1)+\\frac{26}{51}(0)\\right)=\\boxed{\\frac{650}{51}}$$",
+    "is_solved": true,
+    "model_solution": "Let $X$ be the number of pairs of adjacent cards which are both black.\nLet $I_i$ be the indicator variable for the pair of cards adjacent to the $i^{th}$ card, where $I_i=1$ if this pair is both black and $I_i=0$ otherwise. Then, $X=\\sum_{i=1}^{52} I_i$.\n$\\mathbb{E}(X) = \\sum_{i=1}^{52} \\mathbb{E}(I_i) = \\sum_{i=1}^{52} \\frac{26}{52} \\cdot \\frac{25}{51}$\n$\\sum_{i=1}^{52} \\frac{26}{52} \\cdot \\frac{25}{51} = \\frac{52 \\cdot 26 \\cdot 25}{52 \\cdot 51} = \\frac{26 \\cdot 25}{51}$\n$\\frac{26 \\cdot 25}{51} = \\frac{650}{51}$\nMultiply the numerator of the fraction by $\\frac{1}{1}$\n$\\frac{650}{51}$\n$\\frac{650}{51}$",
+    "steps": [
+        "Let $X$ be the number of pairs of adjacent cards which are both black.",
+        "Let $I_i$ be the indicator variable for the pair of cards adjacent to the $i^{th}$ card, where $I_i=1$ if this pair is both black and $I_i=0$ otherwise. Then, $X=\\sum_{i=1}^{52} I_i$.",
+        "$\\mathbb{E}(X) = \\sum_{i=1}^{52} \\mathbb{E}(I_i) = \\sum_{i=1}^{52} \\frac{26}{52} \\cdot \\frac{25}{51}$",
+        "$\\sum_{i=1}^{52} \\frac{26}{52} \\cdot \\frac{25}{51} = \\frac{52 \\cdot 26 \\cdot 25}{52 \\cdot 51} = \\frac{26 \\cdot 25}{51}$",
+        "$\\frac{26 \\cdot 25}{51} = \\frac{650}{51}$",
+        "Multiply the numerator of the fraction by $\\frac{1}{1}$",
+        "$\\frac{650}{51}$",
+        "$\\frac{650}{51}$"
+    ],
+    "full_steps": [
+        [
+            "Let $X$ be the number of pairs of adjacent cards which are both black.",
+            1
+        ],
+        [
+            "Let $I_i$ be the indicator variable for the pair of cards adjacent to the $i^{th}$ card, where $I_i=1$ if this pair is both black and $I_i=0$ otherwise. Then, $X=\\sum_{i=1}^{52} I_i$.",
+            1
+        ],
+        [
+            "$\\mathbb{E}(X) = \\sum_{i=1}^{52} \\mathbb{E}(I_i) = \\sum_{i=1}^{52} \\frac{26}{52} \\cdot \\frac{25}{51}$",
+            1
+        ],
+        [
+            "$\\sum_{i=1}^{52} \\frac{26}{52} \\cdot \\frac{25}{51} = \\frac{52 \\cdot 26 \\cdot 25}{52 \\cdot 51} = \\frac{26 \\cdot 25}{51}$",
+            1
+        ],
+        [
+            "$\\frac{26 \\cdot 25}{51} = \\frac{650}{51}$",
+            1
+        ],
+        [
+            "Multiply the numerator of the fraction by $\\frac{1}{1}$",
+            1
+        ],
+        [
+            "$\\frac{650}{51}$",
+            1
+        ],
+        [
+            "$\\frac{650}{51}$",
+            1
+        ]
+    ],
+    "time": 107.91082572937012,
+    "total_tokens": 4365,
+    "final_answer_tokens": 343,
+    "model": "meta-llama/Llama-Vision-Free"
+}

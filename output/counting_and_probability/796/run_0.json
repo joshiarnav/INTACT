@@ -1,0 +1,51 @@
+{
+    "problem": "In how many ways can we seat 8 people around a table if Alice and Bob won't sit next to each other?  (Two seatings are the same if one is a rotation of the other.)",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "There are 8 choices for seats for Alice to sit in.  Once Alice is seated, there are 5 seats left for Bob, since he won't sit in either seat immediately next to Alice.  This leaves 6 people to place in the remaining 6 seats, which can be done in $6!$ ways.  However, we must divide by 8 to account for the 8 rotations of the table.  So the number of arrangements is $\\dfrac{8 \\times 5 \\times 6!}{8} = 5 \\times 6! = \\boxed{3600}$. Alternatively, we can account for the rotations at the beginning, by fixing the table around Alice.  Bob can't sit in her seat, or the two seats next to her.  This leaves 5 places for him to sit.  Then, this leaves 6 unique seats for the 6 remaining people, so there are 6! ways to sit them after Bob is sitting.  So the answer is $5 \\times 6! = \\boxed{3600}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: First, find the total number of ways to seat 8 people around a table without any restrictions.\nStep 2: Since the two seatings are the same if one is a rotation of the other, we can fix one person (say, Alice) in one seat and arrange the remaining 7 people around the table, which gives us (7!)(8) = 30,240 possible seatings.\nStep 3: Of these 30,240 possible seatings, exactly half of them will have Bob sitting next to Alice, and the other half will have Bob separated from Alice.\nStep 4: The number of seatings where Alice and Bob are seated together is 29,860, since half of the total number of seatings is 30,240 / 2 = 15,120, and half of the total possible seatings is 30,240 / 2 = 15,120, which is not the case here, but we know it's half of the total possible seatings.\nStep 5: \nTo find the number of seatings where Alice and Bob are not seated together, subtract the number of seatings where Alice and Bob are seated together from the total number of seatings, giving us 30,240 - 15,120.\nStep 6: 30,240 - 15,120 = 15,120\nStep 5: 30,240 - 15,120 = 15,120 \nFinal Answer",
+    "steps": [
+        "Step 1: First, find the total number of ways to seat 8 people around a table without any restrictions.",
+        "Step 2: Since the two seatings are the same if one is a rotation of the other, we can fix one person (say, Alice) in one seat and arrange the remaining 7 people around the table, which gives us (7!)(8) = 30,240 possible seatings.",
+        "Step 3: Of these 30,240 possible seatings, exactly half of them will have Bob sitting next to Alice, and the other half will have Bob separated from Alice.",
+        "Step 4: The number of seatings where Alice and Bob are seated together is 29,860, since half of the total number of seatings is 30,240 / 2 = 15,120, and half of the total possible seatings is 30,240 / 2 = 15,120, which is not the case here, but we know it's half of the total possible seatings.",
+        "Step 5: \nTo find the number of seatings where Alice and Bob are not seated together, subtract the number of seatings where Alice and Bob are seated together from the total number of seatings, giving us 30,240 - 15,120.",
+        "Step 6: 30,240 - 15,120 = 15,120",
+        "Step 5: 30,240 - 15,120 = 15,120 \nFinal Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1: First, find the total number of ways to seat 8 people around a table without any restrictions.",
+            1
+        ],
+        [
+            "Step 2: Since the two seatings are the same if one is a rotation of the other, we can fix one person (say, Alice) in one seat and arrange the remaining 7 people around the table, which gives us (7!)(8) = 30,240 possible seatings.",
+            1
+        ],
+        [
+            "Step 3: Of these 30,240 possible seatings, exactly half of them will have Bob sitting next to Alice, and the other half will have Bob separated from Alice.",
+            1
+        ],
+        [
+            "Step 4: The number of seatings where Alice and Bob are seated together is 29,860, since half of the total number of seatings is 30,240 / 2 = 15,120, and half of the total possible seatings is 30,240 / 2 = 15,120, which is not the case here, but we know it's half of the total possible seatings.",
+            1
+        ],
+        [
+            "Step 5: \nTo find the number of seatings where Alice and Bob are not seated together, subtract the number of seatings where Alice and Bob are seated together from the total number of seatings, giving us 30,240 - 15,120.",
+            1
+        ],
+        [
+            "Step 6: 30,240 - 15,120 = 15,120",
+            1
+        ],
+        [
+            "Step 5: 30,240 - 15,120 = 15,120 \nFinal Answer",
+            1
+        ]
+    ],
+    "time": 93.86512088775635,
+    "total_tokens": 4088,
+    "final_answer_tokens": 405,
+    "model": "meta-llama/Llama-Vision-Free"
+}

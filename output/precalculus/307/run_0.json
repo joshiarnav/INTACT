@@ -1,0 +1,66 @@
+{
+    "problem": "In triangle $ABC$, medians $\\overline{AD}$ and $\\overline{BE}$ are perpendicular.  If $AC = 22$ and $BC = 31$, then find $AB$.",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "We have that $D$ and $E$ are the midpoints of $\\overline{BC}$ and $\\overline{AC}$, respectively, so\n\\[\\overrightarrow{D} = \\frac{\\overrightarrow{B} + \\overrightarrow{C}}{2} \\quad \\text{and} \\quad \\overrightarrow{E} = \\frac{\\overrightarrow{A} + \\overrightarrow{C}}{2}.\\][asy]\nunitsize(0.2 cm);\n\npair A, B, C, D, E;\n\nB = (0,0);\nC = (31,0);\nA = intersectionpoint(arc(B,17,0,180),arc(C,22,0,180));\nD = (B + C)/2;\nE = (A + C)/2;\n\ndraw(A--B--C--cycle);\ndraw(A--D);\ndraw(B--E);\n\nlabel(\"$A$\", A, N);\nlabel(\"$B$\", B, SW);\nlabel(\"$C$\", C, SE);\nlabel(\"$D$\", D, S);\nlabel(\"$E$\", E, NE);\n[/asy]\n\nAlso, $\\overrightarrow{AD} \\cdot \\overrightarrow{BE} = 0$, or\n\\[\\left( \\overrightarrow{A} - \\frac{\\overrightarrow{B} + \\overrightarrow{C}}{2} \\right) \\cdot \\left( \\overrightarrow{B} - \\frac{\\overrightarrow{A} + \\overrightarrow{C}}{2} \\right) = 0.\\]Multiplying each factor by 2 to get rid of fractions, we get\n\\[(2 \\overrightarrow{A} - \\overrightarrow{B} - \\overrightarrow{C}) \\cdot (2 \\overrightarrow{B} - \\overrightarrow{A} - \\overrightarrow{C}) = 0.\\]Expanding the dot product, we get\n\\[-2 \\overrightarrow{A} \\cdot \\overrightarrow{A} - 2 \\overrightarrow{B} \\cdot \\overrightarrow{B} + \\overrightarrow{C} \\cdot \\overrightarrow{C} + 5 \\overrightarrow{A} \\cdot \\overrightarrow{B} - \\overrightarrow{A} \\cdot \\overrightarrow{C} - \\overrightarrow{B} \\cdot \\overrightarrow{C} = 0.\\]Setting the circumcenter of triangle $ABC$ to be the origin, and using what we know about these dot products, like $\\overrightarrow{A} \\cdot \\overrightarrow{B} = R^2 - \\frac{c^2}{2}$, we get\n\\[-2R^2 - 2R^2 + R^2 + 5 \\left( R^2 - \\frac{c^2}{2} \\right) - \\left( R^2 - \\frac{b^2}{2} \\right) - \\left( R^2 - \\frac{a^2}{2} \\right) = 0.\\]This simplifies to $a^2 + b^2 = 5c^2$.\n\nWe are given that $a = 31$ and $b = 22$, so $5c^2 = 31^2 + 22^2 = 1445$, and $c = \\boxed{17}$.",
+    "is_solved": false,
+    "model_solution": "Step 1:  Since we have a triangle $ABC$ and we are given the lengths of two sides, $AC$ and $BC$, we can use the properties of medians and the Pythagorean Theorem to find the length of side $AB$.\nStep 2:  We can use the fact that the centroid of a triangle divides each median into two segments with a ratio of $2:1$.  Since medians $\\overline{AD}$ and $\\overline{BE}$ are perpendicular, we can let the centroid be point $G$.  Then $AG:GD = BG:GE = 2:1$.\nStep 2:  Let $G$ be the centroid of triangle $ABC$ and let $D$ and $E$ be the midpoints of sides $CB$ and $AC$, respectively.  We can apply the Pythagorean Theorem to right triangle $AGE$, where $G$ is the right angle, $AE = \\frac{AC}{2}$, and $AG = \\frac{AB}{3}$.  This gives us $\\left(\\frac{AC}{2}\\right)^2 + AG^2 = (\\text{length of }AB)^2$.\n$\\left(\\frac{AC}{2}\\right)^2 + AG^2 = (\\text{length of }AB)^2 \\Rightarrow \\left(\\frac{22}{2}\\right)^2 + AG^2 = (\\text{length of }AB)^2 \\Rightarrow 121 + AG^2 = (\\text{length of }AB)^2$\n$\\left(\\frac{AC}{2}\\right)^2 + AG^2 = (\\text{length of }AB)^2 \\Rightarrow \\left(\\frac{31}{2}\\right)^2 + BG^2 = (\\text{length of }AB)^2 \\Rightarrow 121 + BG^2 = (\\text{length of }AB)^2$\nSince $BG = \\frac{2}{3}AB$, we have\n$121 + \\left(\\frac{2}{3}AB\\right)^2 = (\\text{length of }AB)^2$\n$\\left(\\frac{2}{3}AB\\right)^2 = \\left(\\frac{2}{3}\\right)^2 (AB)^2 = \\frac{4}{9}(AB)^2$\n$121 + \\left(\\frac{2}{3}AB\\right)^2 = (\\text{length of }AB)^2 \\Rightarrow 121 + \\frac{4}{9}(AB)^2 = (AB)^2$\n$121 + \\frac{4}{9}(AB)^2 = (AB)^2 \\Rightarrow 121 = (AB)^2 - \\frac{4}{9}(AB)^2 \\Rightarrow 121 = (AB)^2\\left(1 - \\frac{4}{9}\\right) \\Rightarrow 121 = (AB)^2\\left(\\frac{5}{9}\\right)$\n$121 = (AB)^2\\left(\\frac{5}{9}\\right) \\Rightarrow (AB)^2 = \\frac{121 \\times 9}{5}$\n$AB = \\sqrt{\\frac{121 \\times 9}{5}}$",
+    "steps": [
+        "Step 1:  Since we have a triangle $ABC$ and we are given the lengths of two sides, $AC$ and $BC$, we can use the properties of medians and the Pythagorean Theorem to find the length of side $AB$.",
+        "Step 2:  We can use the fact that the centroid of a triangle divides each median into two segments with a ratio of $2:1$.  Since medians $\\overline{AD}$ and $\\overline{BE}$ are perpendicular, we can let the centroid be point $G$.  Then $AG:GD = BG:GE = 2:1$.",
+        "Step 2:  Let $G$ be the centroid of triangle $ABC$ and let $D$ and $E$ be the midpoints of sides $CB$ and $AC$, respectively.  We can apply the Pythagorean Theorem to right triangle $AGE$, where $G$ is the right angle, $AE = \\frac{AC}{2}$, and $AG = \\frac{AB}{3}$.  This gives us $\\left(\\frac{AC}{2}\\right)^2 + AG^2 = (\\text{length of }AB)^2$.",
+        "$\\left(\\frac{AC}{2}\\right)^2 + AG^2 = (\\text{length of }AB)^2 \\Rightarrow \\left(\\frac{22}{2}\\right)^2 + AG^2 = (\\text{length of }AB)^2 \\Rightarrow 121 + AG^2 = (\\text{length of }AB)^2$",
+        "$\\left(\\frac{AC}{2}\\right)^2 + AG^2 = (\\text{length of }AB)^2 \\Rightarrow \\left(\\frac{31}{2}\\right)^2 + BG^2 = (\\text{length of }AB)^2 \\Rightarrow 121 + BG^2 = (\\text{length of }AB)^2$",
+        "Since $BG = \\frac{2}{3}AB$, we have\n$121 + \\left(\\frac{2}{3}AB\\right)^2 = (\\text{length of }AB)^2$",
+        "$\\left(\\frac{2}{3}AB\\right)^2 = \\left(\\frac{2}{3}\\right)^2 (AB)^2 = \\frac{4}{9}(AB)^2$\n$121 + \\left(\\frac{2}{3}AB\\right)^2 = (\\text{length of }AB)^2 \\Rightarrow 121 + \\frac{4}{9}(AB)^2 = (AB)^2$",
+        "$121 + \\frac{4}{9}(AB)^2 = (AB)^2 \\Rightarrow 121 = (AB)^2 - \\frac{4}{9}(AB)^2 \\Rightarrow 121 = (AB)^2\\left(1 - \\frac{4}{9}\\right) \\Rightarrow 121 = (AB)^2\\left(\\frac{5}{9}\\right)$",
+        "$121 = (AB)^2\\left(\\frac{5}{9}\\right) \\Rightarrow (AB)^2 = \\frac{121 \\times 9}{5}$",
+        "$AB = \\sqrt{\\frac{121 \\times 9}{5}}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Since we have a triangle $ABC$ and we are given the lengths of two sides, $AC$ and $BC$, we can use the properties of medians and the Pythagorean Theorem to find the length of side $AB$.",
+            1
+        ],
+        [
+            "Step 2:  We can use the fact that the centroid of a triangle divides each median into two segments with a ratio of $2:1$.  Since medians $\\overline{AD}$ and $\\overline{BE}$ are perpendicular, we can let the centroid be point $G$.  Then $AG:GD = BG:GE = 2:1$.",
+            1
+        ],
+        [
+            "Step 2:  Let $G$ be the centroid of triangle $ABC$ and let $D$ and $E$ be the midpoints of sides $CB$ and $AC$, respectively.  We can apply the Pythagorean Theorem to right triangle $AGE$, where $G$ is the right angle, $AE = \\frac{AC}{2}$, and $AG = \\frac{AB}{3}$.  This gives us $\\left(\\frac{AC}{2}\\right)^2 + AG^2 = (\\text{length of }AB)^2$.",
+            1
+        ],
+        [
+            "$\\left(\\frac{AC}{2}\\right)^2 + AG^2 = (\\text{length of }AB)^2 \\Rightarrow \\left(\\frac{22}{2}\\right)^2 + AG^2 = (\\text{length of }AB)^2 \\Rightarrow 121 + AG^2 = (\\text{length of }AB)^2$",
+            1
+        ],
+        [
+            "$\\left(\\frac{AC}{2}\\right)^2 + AG^2 = (\\text{length of }AB)^2 \\Rightarrow \\left(\\frac{31}{2}\\right)^2 + BG^2 = (\\text{length of }AB)^2 \\Rightarrow 121 + BG^2 = (\\text{length of }AB)^2$",
+            1
+        ],
+        [
+            "Since $BG = \\frac{2}{3}AB$, we have\n$121 + \\left(\\frac{2}{3}AB\\right)^2 = (\\text{length of }AB)^2$",
+            1
+        ],
+        [
+            "$\\left(\\frac{2}{3}AB\\right)^2 = \\left(\\frac{2}{3}\\right)^2 (AB)^2 = \\frac{4}{9}(AB)^2$\n$121 + \\left(\\frac{2}{3}AB\\right)^2 = (\\text{length of }AB)^2 \\Rightarrow 121 + \\frac{4}{9}(AB)^2 = (AB)^2$",
+            1
+        ],
+        [
+            "$121 + \\frac{4}{9}(AB)^2 = (AB)^2 \\Rightarrow 121 = (AB)^2 - \\frac{4}{9}(AB)^2 \\Rightarrow 121 = (AB)^2\\left(1 - \\frac{4}{9}\\right) \\Rightarrow 121 = (AB)^2\\left(\\frac{5}{9}\\right)$",
+            1
+        ],
+        [
+            "$121 = (AB)^2\\left(\\frac{5}{9}\\right) \\Rightarrow (AB)^2 = \\frac{121 \\times 9}{5}$",
+            1
+        ],
+        [
+            "$AB = \\sqrt{\\frac{121 \\times 9}{5}}$",
+            1
+        ]
+    ],
+    "time": 133.1658854484558,
+    "total_tokens": 10336,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

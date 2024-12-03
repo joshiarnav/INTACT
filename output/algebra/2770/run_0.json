@@ -1,0 +1,51 @@
+{
+    "problem": "Circles with centers of $(2,2)$ and $(17,10)$ are both tangent to the $x$-axis. What is the distance between the closest points of the two circles?",
+    "level": "Level 5",
+    "type": "Algebra",
+    "solution": "The radius of the first circle is 2, and the radius of the second circle is 10.  The distances between the centers of the circles is $\\sqrt{(17 - 2)^2 + (10 - 2)^2} = 17,$ so the distance between the two closest points of the two circle is $17 - 2 - 10 = \\boxed{5}.$\n\n[asy]\nunitsize(0.3 cm);\n\ndraw((2,2)--(2,0),dashed);\ndraw((17,10)--(17,0),dashed);\ndraw((-1,0)--(28,0));\ndraw((0,-1)--(0,20));\ndraw(Circle((2,2),2));\ndraw(Circle((17,10),10));\ndraw((2,2)--(17,10));\n\nlabel(\"$2$\", (2,1), E);\nlabel(\"$10$\", (17,5), E);\n\ndot(\"$(2,2)$\", (2,2), NW);\ndot(\"$(17,10)$\", (17,10), NE);\n[/asy]",
+    "is_solved": true,
+    "model_solution": "Step 1:  The first step is to find the radius of each circle. The radius of a circle that is tangent to the x-axis is the distance from the center of the circle to the x-axis.\nStep 2:  The radius of the first circle is the distance from (2,2) to the x-axis, which is 2. The radius of the second circle is the distance from (17,10) to the x-axis, which is 10.\nStep 3: \nFind the distance between the centers of the two circles using the distance formula, which is given by $\\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$. \nThe distance between the centers of the circles is $\\sqrt{(17-2)^2 + (10-2)^2}$\nStep 4: \n$\\sqrt{(17-2)^2 + (10-2)^2} = \\sqrt{15^2 + 8^2} = \\sqrt{225 + 64} = \\sqrt{289}$\nStep 5: \nSubtract twice the smaller radius from the distance between the centers to find the distance between the closest points of the two circles.\nDistance between closest points = $\\sqrt{289} - 2 \\cdot 2$\n$\\sqrt{289} - 2 \\cdot 2 = 17 - 4 = 13$\nFinal Answer: The final answer is 13.",
+    "steps": [
+        "Step 1:  The first step is to find the radius of each circle. The radius of a circle that is tangent to the x-axis is the distance from the center of the circle to the x-axis.",
+        "Step 2:  The radius of the first circle is the distance from (2,2) to the x-axis, which is 2. The radius of the second circle is the distance from (17,10) to the x-axis, which is 10.",
+        "Step 3: \nFind the distance between the centers of the two circles using the distance formula, which is given by $\\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$. \nThe distance between the centers of the circles is $\\sqrt{(17-2)^2 + (10-2)^2}$",
+        "Step 4: \n$\\sqrt{(17-2)^2 + (10-2)^2} = \\sqrt{15^2 + 8^2} = \\sqrt{225 + 64} = \\sqrt{289}$",
+        "Step 5: \nSubtract twice the smaller radius from the distance between the centers to find the distance between the closest points of the two circles.\nDistance between closest points = $\\sqrt{289} - 2 \\cdot 2$",
+        "$\\sqrt{289} - 2 \\cdot 2 = 17 - 4 = 13$",
+        "Final Answer: The final answer is 13."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  The first step is to find the radius of each circle. The radius of a circle that is tangent to the x-axis is the distance from the center of the circle to the x-axis.",
+            1
+        ],
+        [
+            "Step 2:  The radius of the first circle is the distance from (2,2) to the x-axis, which is 2. The radius of the second circle is the distance from (17,10) to the x-axis, which is 10.",
+            1
+        ],
+        [
+            "Step 3: \nFind the distance between the centers of the two circles using the distance formula, which is given by $\\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$. \nThe distance between the centers of the circles is $\\sqrt{(17-2)^2 + (10-2)^2}$",
+            1
+        ],
+        [
+            "Step 4: \n$\\sqrt{(17-2)^2 + (10-2)^2} = \\sqrt{15^2 + 8^2} = \\sqrt{225 + 64} = \\sqrt{289}$",
+            1
+        ],
+        [
+            "Step 5: \nSubtract twice the smaller radius from the distance between the centers to find the distance between the closest points of the two circles.\nDistance between closest points = $\\sqrt{289} - 2 \\cdot 2$",
+            1
+        ],
+        [
+            "$\\sqrt{289} - 2 \\cdot 2 = 17 - 4 = 13$",
+            1
+        ],
+        [
+            "Final Answer: The final answer is 13.",
+            1
+        ]
+    ],
+    "time": 97.49091458320618,
+    "total_tokens": 4244,
+    "final_answer_tokens": 400,
+    "model": "meta-llama/Llama-Vision-Free"
+}

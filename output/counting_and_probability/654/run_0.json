@@ -1,0 +1,41 @@
+{
+    "problem": "If all multiples of 3 and all multiples of 4 are removed from the list of whole numbers 1 through 100, then how many whole numbers are left?",
+    "level": "Level 2",
+    "type": "Counting & Probability",
+    "solution": "We know that every third whole number starting from one must be removed from the list. Since the greatest multiple of $3$ less than $100$ is $3\\cdot33=99$, this gives us a total of $33$ such numbers. We then consider the multiples of four. Every fourth whole number starting from one is a multiple of four and since $4 \\cdot 25=100$, this gives us $25$ such numbers. However, we also have to account for the numbers that are multiples of both $3$ and $4$ which we counted twice. These are the multiples of $12$ (the least common multiple of $3$ and $4$). Since $100 \\div 12 = 8 \\text{ R}4$, we know that there are $8$ multiples of both $3$ and $4$. Thus, we have $33+25-8=50$ numbers that we removed from the list. Since there were $100$ whole numbers total, this leaves us with $100-50=\\boxed{50}$ whole numbers.",
+    "is_solved": true,
+    "model_solution": "Step 1: Determine the number of multiples of 3 from 1 through 100.\nMultiples of 3: 3, 6, 9, 12, ..., 99 \nNumber of multiples of 3 = 33\nStep 2: Determine the number of multiples of 12 (the least common multiple of 3 and 4) from 1 through 100.\nMultiples of 12: 12, 24, 36, ..., 96\nNumber of multiples of 12 = 8\nStep 3: Use the principle of inclusion-exclusion to determine the number of whole numbers left after removing multiples of 3 and 4.\nTotal numbers removed = Number of multiples of 3 + Number of multiples of 4 - Number of multiples of 12\n= 33 + 25 - 8\n= 50\nStep 4: Subtract the total number of numbers removed from the total number of whole numbers from 1 through 100.\n= 100 - 50\n= 50\nStep 5: Final Answer: 50",
+    "steps": [
+        "Step 1: Determine the number of multiples of 3 from 1 through 100.\nMultiples of 3: 3, 6, 9, 12, ..., 99 \nNumber of multiples of 3 = 33",
+        "Step 2: Determine the number of multiples of 12 (the least common multiple of 3 and 4) from 1 through 100.\nMultiples of 12: 12, 24, 36, ..., 96\nNumber of multiples of 12 = 8",
+        "Step 3: Use the principle of inclusion-exclusion to determine the number of whole numbers left after removing multiples of 3 and 4.\nTotal numbers removed = Number of multiples of 3 + Number of multiples of 4 - Number of multiples of 12\n= 33 + 25 - 8\n= 50",
+        "Step 4: Subtract the total number of numbers removed from the total number of whole numbers from 1 through 100.\n= 100 - 50\n= 50",
+        "Step 5: Final Answer: 50"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Determine the number of multiples of 3 from 1 through 100.\nMultiples of 3: 3, 6, 9, 12, ..., 99 \nNumber of multiples of 3 = 33",
+            1
+        ],
+        [
+            "Step 2: Determine the number of multiples of 12 (the least common multiple of 3 and 4) from 1 through 100.\nMultiples of 12: 12, 24, 36, ..., 96\nNumber of multiples of 12 = 8",
+            1
+        ],
+        [
+            "Step 3: Use the principle of inclusion-exclusion to determine the number of whole numbers left after removing multiples of 3 and 4.\nTotal numbers removed = Number of multiples of 3 + Number of multiples of 4 - Number of multiples of 12\n= 33 + 25 - 8\n= 50",
+            1
+        ],
+        [
+            "Step 4: Subtract the total number of numbers removed from the total number of whole numbers from 1 through 100.\n= 100 - 50\n= 50",
+            1
+        ],
+        [
+            "Step 5: Final Answer: 50",
+            1
+        ]
+    ],
+    "time": 70.45173025131226,
+    "total_tokens": 2533,
+    "final_answer_tokens": 316,
+    "model": "meta-llama/Llama-Vision-Free"
+}

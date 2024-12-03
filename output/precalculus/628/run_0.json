@@ -1,0 +1,36 @@
+{
+    "problem": "Evaluate\n\\[\\sum_{n = 0}^\\infty \\frac{\\cos n \\theta}{2^n},\\]where $\\cos \\theta = \\frac{1}{5}.$",
+    "level": "Level 5",
+    "type": "Precalculus",
+    "solution": "Consider the infinite geometric series\n\\[1 + \\frac{e^{i \\theta}}{2} + \\frac{e^{2i \\theta}}{2^2} + \\frac{e^{3i \\theta}}{2^3} + \\dotsb.\\]From the formula for an infinite geometric series, this is equal to\n\\begin{align*}\n\\frac{1}{1 - e^{i \\theta}/2} &= \\frac{2}{2 - \\cos \\theta - i \\sin \\theta} \\\\\n&= \\frac{2(2 - \\cos \\theta + i \\sin \\theta)}{(2 - \\cos \\theta - i \\sin \\theta)(2 - \\cos \\theta + i \\sin \\theta)} \\\\\n&= \\frac{4 -2  \\cos \\theta + 2i \\sin \\theta}{(2 - \\cos \\theta)^2 + \\sin^2 \\theta} \\\\\n&= \\frac{4 - 2 \\cos \\theta + 2i \\sin \\theta}{4 - 4 \\cos \\theta + \\cos^2 \\theta + \\sin^2 \\theta} \\\\\n&= \\frac{4 - 2 \\cos \\theta + 2i \\sin \\theta}{5 - 4 \\cos \\theta}.\n\\end{align*}Thus, the real part is $\\frac{4 - 2 \\cos \\theta}{5 - 4 \\cos \\theta}.$\n\nBut the real part of the infinite geometric series is also\n\\[1 + \\frac{\\cos \\theta}{2} + \\frac{\\cos 2 \\theta}{2^2} + \\frac{\\cos 3 \\theta}{2^3} + \\dotsb,\\]so this is equal to $\\frac{4 - 2/5}{5 - 4/5} = \\boxed{\\frac{6}{7}}.$",
+    "is_solved": false,
+    "model_solution": "## Step 1: Express the series in terms of its partial sums\nWe can express the given series as $\\sum_{n = 0}^\\infty \\frac{\\cos n \\theta}{2^n} = \\lim_{N \\to \\infty} \\sum_{n = 0}^N \\frac{\\cos n \\theta}{2^n}$.\n\n## Step 2: Utilize the formula for the sum of a geometric series\nThe series can be rewritten using the formula for the sum of a geometric series: $\\sum_{n = 0}^N \\frac{\\cos n \\theta}{2^n} = \\frac{1}{2^{N + 1}}\\left(\\frac{1 - e^{(N + 1)\\theta i}}{1 - e^{\\theta i}}\\right)$.\n\n## Step 3: Apply the formula for the sum of a geometric series in the expression\nWe need to find a way to manipulate the series so that it can be expressed in terms of $\\frac{1}{1 - e^{\\theta i}}$, which can be rewritten as $\\frac{1}{1 - \\cos \\theta - i \\sin \\theta}$\n## Step 4: Find a way to express the series in terms of $\\frac{1}{1 - e^{\\theta i}}$\nWe can use the fact that $e^{\\theta i} = \\cos \\theta + i \\sin \\theta$ and express $\\frac{1}{1 - e^{\\theta i}}$ as $\\frac{1 - \\cos \\theta + i \\sin \\theta}{(1 - \\cos \\theta)^2 + \\sin^2 \\theta}$\n## Step 5: Use the formula for the sum of a geometric series to find an expression for the partial sum\n\\[\\sum_{n = 0}^N \\frac{\\cos n \\theta}{2^n} = \\frac{1}{2^{N + 1}}\\left(\\frac{1 - e^{(N + 1)\\theta i}}{1 - e^{\\theta i}}\\right) = \\frac{1}{2^{N + 1}}\\left(\\frac{1 - e^{(N + 1)\\theta i}}{1 - \\cos \\theta - i \\sin \\theta}\\right).\\]\n## Step 6: Evaluate the expression in the limit as N approaches infinity\n$\\lim_{N \\to \\infty} \\frac{1}{2^{N + 1}}\\left(\\frac{1 - e^{(N + 1)\\theta i}}{1 - \\cos \\theta - i \\sin \\theta}\\right) = \\lim_{N \\to \\infty} \\frac{1}{2^{N + 1}}\\left(\\frac{1 - (\\cos ((N + 1)\\theta) + i \\sin ((N + 1)\\theta))}{1 - \\cos \\theta - i \\sin \\theta}\\right)$.",
+    "steps": [
+        "## Step 1: Express the series in terms of its partial sums\nWe can express the given series as $\\sum_{n = 0}^\\infty \\frac{\\cos n \\theta}{2^n} = \\lim_{N \\to \\infty} \\sum_{n = 0}^N \\frac{\\cos n \\theta}{2^n}$.\n\n## Step 2: Utilize the formula for the sum of a geometric series\nThe series can be rewritten using the formula for the sum of a geometric series: $\\sum_{n = 0}^N \\frac{\\cos n \\theta}{2^n} = \\frac{1}{2^{N + 1}}\\left(\\frac{1 - e^{(N + 1)\\theta i}}{1 - e^{\\theta i}}\\right)$.\n\n## Step 3: Apply the formula for the sum of a geometric series in the expression\nWe need to find a way to manipulate the series so that it can be expressed in terms of $\\frac{1}{1 - e^{\\theta i}}$, which can be rewritten as $\\frac{1}{1 - \\cos \\theta - i \\sin \\theta}$",
+        "## Step 4: Find a way to express the series in terms of $\\frac{1}{1 - e^{\\theta i}}$\nWe can use the fact that $e^{\\theta i} = \\cos \\theta + i \\sin \\theta$ and express $\\frac{1}{1 - e^{\\theta i}}$ as $\\frac{1 - \\cos \\theta + i \\sin \\theta}{(1 - \\cos \\theta)^2 + \\sin^2 \\theta}$",
+        "## Step 5: Use the formula for the sum of a geometric series to find an expression for the partial sum\n\\[\\sum_{n = 0}^N \\frac{\\cos n \\theta}{2^n} = \\frac{1}{2^{N + 1}}\\left(\\frac{1 - e^{(N + 1)\\theta i}}{1 - e^{\\theta i}}\\right) = \\frac{1}{2^{N + 1}}\\left(\\frac{1 - e^{(N + 1)\\theta i}}{1 - \\cos \\theta - i \\sin \\theta}\\right).\\]",
+        "## Step 6: Evaluate the expression in the limit as N approaches infinity\n$\\lim_{N \\to \\infty} \\frac{1}{2^{N + 1}}\\left(\\frac{1 - e^{(N + 1)\\theta i}}{1 - \\cos \\theta - i \\sin \\theta}\\right) = \\lim_{N \\to \\infty} \\frac{1}{2^{N + 1}}\\left(\\frac{1 - (\\cos ((N + 1)\\theta) + i \\sin ((N + 1)\\theta))}{1 - \\cos \\theta - i \\sin \\theta}\\right)$."
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Express the series in terms of its partial sums\nWe can express the given series as $\\sum_{n = 0}^\\infty \\frac{\\cos n \\theta}{2^n} = \\lim_{N \\to \\infty} \\sum_{n = 0}^N \\frac{\\cos n \\theta}{2^n}$.\n\n## Step 2: Utilize the formula for the sum of a geometric series\nThe series can be rewritten using the formula for the sum of a geometric series: $\\sum_{n = 0}^N \\frac{\\cos n \\theta}{2^n} = \\frac{1}{2^{N + 1}}\\left(\\frac{1 - e^{(N + 1)\\theta i}}{1 - e^{\\theta i}}\\right)$.\n\n## Step 3: Apply the formula for the sum of a geometric series in the expression\nWe need to find a way to manipulate the series so that it can be expressed in terms of $\\frac{1}{1 - e^{\\theta i}}$, which can be rewritten as $\\frac{1}{1 - \\cos \\theta - i \\sin \\theta}$",
+            1
+        ],
+        [
+            "## Step 4: Find a way to express the series in terms of $\\frac{1}{1 - e^{\\theta i}}$\nWe can use the fact that $e^{\\theta i} = \\cos \\theta + i \\sin \\theta$ and express $\\frac{1}{1 - e^{\\theta i}}$ as $\\frac{1 - \\cos \\theta + i \\sin \\theta}{(1 - \\cos \\theta)^2 + \\sin^2 \\theta}$",
+            1
+        ],
+        [
+            "## Step 5: Use the formula for the sum of a geometric series to find an expression for the partial sum\n\\[\\sum_{n = 0}^N \\frac{\\cos n \\theta}{2^n} = \\frac{1}{2^{N + 1}}\\left(\\frac{1 - e^{(N + 1)\\theta i}}{1 - e^{\\theta i}}\\right) = \\frac{1}{2^{N + 1}}\\left(\\frac{1 - e^{(N + 1)\\theta i}}{1 - \\cos \\theta - i \\sin \\theta}\\right).\\]",
+            1
+        ],
+        [
+            "## Step 6: Evaluate the expression in the limit as N approaches infinity\n$\\lim_{N \\to \\infty} \\frac{1}{2^{N + 1}}\\left(\\frac{1 - e^{(N + 1)\\theta i}}{1 - \\cos \\theta - i \\sin \\theta}\\right) = \\lim_{N \\to \\infty} \\frac{1}{2^{N + 1}}\\left(\\frac{1 - (\\cos ((N + 1)\\theta) + i \\sin ((N + 1)\\theta))}{1 - \\cos \\theta - i \\sin \\theta}\\right)$.",
+            1
+        ]
+    ],
+    "time": 53.59040403366089,
+    "total_tokens": 4302,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

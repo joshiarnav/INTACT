@@ -1,0 +1,66 @@
+{
+    "problem": "In a math class of 30 students, 12 out of 15 girls are freshmen and 11 out of 15 boys are freshmen. What is the probability that in a randomly selected group of five students from the class, there will be two freshmen girls and three freshmen boys? Express your answer as a decimal to the nearest thousandth.",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "We can choose 2 freshmen girls and 3 freshman boys in $\\binom{12}{2}\\binom{11}{3} = 10890$ ways.  There are a total of $\\binom{30}{5} = 142506$ possible groups of 5 students we can choose.  Thus the probability of selecting a group of 5 students with 2 freshman girls and 3 freshmen boys is $\\frac{10890}{142506} \\approx \\boxed{0.076}$.",
+    "is_solved": false,
+    "model_solution": "Step 1: Find the probability of selecting a freshman girl as the first student: P(GF) = 12/15 = 0.8.\nStep 2: Find the probability of selecting a freshman girl as the second student, given that the first student selected was a freshman girl: P(GF|GF) = (11/15) / (14/15) = 11/14 \u2248 0.786.\nStep 3: Find the probability of selecting a freshman boy as the third student, given that the first two students selected were a freshman girl and another freshman girl: P(B|GF,GF) = (11/15) / (12/15) = 11/12 \u2248 0.917\nStep 4: Find the probability of selecting two freshman girls and three freshman boys in a randomly selected group of five students: P = (12/15) * ((11/15) / (14/15)) * ((11/15) / (12/15)) * ((10/15) / (10/15)) * ((9/15) / (8/15)) \u2248 0.179\nStep 5: Calculate the probability of the last two selections: P(FB|FB,FB) = (10/15) / (13/15) = 10/13 \u2248 0.769\nStep 6: Multiply the probabilities of the first 4 steps and the last step: P = (12/15) * ((11/15) / (14/15)) * ((11/15) / (12/15)) * ((10/15) / (10/15)) * ((9/15) / (8/15)) * ((10/15) / (13/15)) \u2248 0.112\nStep 7: Multiply the probabilities of the first 6 steps: P = (12/15) * ((11/15) / (14/15)) * ((11/15) / (12/15)) * ((10/15) / (10/15)) * ((9/15) / (8/15)) * ((10/15) / (13/15)) * (9/15) / (7/15) \u2248 0.087\nStep 8: Multiply the probabilities of the first 7 steps: P = (12/15) * ((11/15) / (14/15)) * ((11/15) / (12/15)) * ((10/15) / (10/15)) * ((9/15) / (8/15)) * ((10/15) / (13/15)) * (9/15) / (7/15) * (8/15) / (6/15) \u2248 0.048\nStep 9: Multiply the probabilities of the first 8 steps: P = (12/15) * ((11/15) / (14/15)) * ((11/15) / (12/15)) * ((10/15) / (10/15)) * ((9/15) / (8/15)) * ((10/15) / (13/15)) * (9/15) / (7/15) * (8/15) / (6/15) * (7/15) / (5/15)\nStep 10: P = (12/15) * ((11/15) / (14/15)) * ((11/15) / (12/15)) * ((10/15) / (10/15)) * ((9/15) / (8/15)) * ((10/15) / (13/15)) * (9/15) / (7/15) * (8/15) / (6/15) * (7/15) / (5/15) * (6/15) / (4/15)",
+    "steps": [
+        "Step 1: Find the probability of selecting a freshman girl as the first student: P(GF) = 12/15 = 0.8.",
+        "Step 2: Find the probability of selecting a freshman girl as the second student, given that the first student selected was a freshman girl: P(GF|GF) = (11/15) / (14/15) = 11/14 \u2248 0.786.",
+        "Step 3: Find the probability of selecting a freshman boy as the third student, given that the first two students selected were a freshman girl and another freshman girl: P(B|GF,GF) = (11/15) / (12/15) = 11/12 \u2248 0.917",
+        "Step 4: Find the probability of selecting two freshman girls and three freshman boys in a randomly selected group of five students: P = (12/15) * ((11/15) / (14/15)) * ((11/15) / (12/15)) * ((10/15) / (10/15)) * ((9/15) / (8/15)) \u2248 0.179",
+        "Step 5: Calculate the probability of the last two selections: P(FB|FB,FB) = (10/15) / (13/15) = 10/13 \u2248 0.769",
+        "Step 6: Multiply the probabilities of the first 4 steps and the last step: P = (12/15) * ((11/15) / (14/15)) * ((11/15) / (12/15)) * ((10/15) / (10/15)) * ((9/15) / (8/15)) * ((10/15) / (13/15)) \u2248 0.112",
+        "Step 7: Multiply the probabilities of the first 6 steps: P = (12/15) * ((11/15) / (14/15)) * ((11/15) / (12/15)) * ((10/15) / (10/15)) * ((9/15) / (8/15)) * ((10/15) / (13/15)) * (9/15) / (7/15) \u2248 0.087",
+        "Step 8: Multiply the probabilities of the first 7 steps: P = (12/15) * ((11/15) / (14/15)) * ((11/15) / (12/15)) * ((10/15) / (10/15)) * ((9/15) / (8/15)) * ((10/15) / (13/15)) * (9/15) / (7/15) * (8/15) / (6/15) \u2248 0.048",
+        "Step 9: Multiply the probabilities of the first 8 steps: P = (12/15) * ((11/15) / (14/15)) * ((11/15) / (12/15)) * ((10/15) / (10/15)) * ((9/15) / (8/15)) * ((10/15) / (13/15)) * (9/15) / (7/15) * (8/15) / (6/15) * (7/15) / (5/15)",
+        "Step 10: P = (12/15) * ((11/15) / (14/15)) * ((11/15) / (12/15)) * ((10/15) / (10/15)) * ((9/15) / (8/15)) * ((10/15) / (13/15)) * (9/15) / (7/15) * (8/15) / (6/15) * (7/15) / (5/15) * (6/15) / (4/15)"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Find the probability of selecting a freshman girl as the first student: P(GF) = 12/15 = 0.8.",
+            1
+        ],
+        [
+            "Step 2: Find the probability of selecting a freshman girl as the second student, given that the first student selected was a freshman girl: P(GF|GF) = (11/15) / (14/15) = 11/14 \u2248 0.786.",
+            1
+        ],
+        [
+            "Step 3: Find the probability of selecting a freshman boy as the third student, given that the first two students selected were a freshman girl and another freshman girl: P(B|GF,GF) = (11/15) / (12/15) = 11/12 \u2248 0.917",
+            1
+        ],
+        [
+            "Step 4: Find the probability of selecting two freshman girls and three freshman boys in a randomly selected group of five students: P = (12/15) * ((11/15) / (14/15)) * ((11/15) / (12/15)) * ((10/15) / (10/15)) * ((9/15) / (8/15)) \u2248 0.179",
+            1
+        ],
+        [
+            "Step 5: Calculate the probability of the last two selections: P(FB|FB,FB) = (10/15) / (13/15) = 10/13 \u2248 0.769",
+            1
+        ],
+        [
+            "Step 6: Multiply the probabilities of the first 4 steps and the last step: P = (12/15) * ((11/15) / (14/15)) * ((11/15) / (12/15)) * ((10/15) / (10/15)) * ((9/15) / (8/15)) * ((10/15) / (13/15)) \u2248 0.112",
+            1
+        ],
+        [
+            "Step 7: Multiply the probabilities of the first 6 steps: P = (12/15) * ((11/15) / (14/15)) * ((11/15) / (12/15)) * ((10/15) / (10/15)) * ((9/15) / (8/15)) * ((10/15) / (13/15)) * (9/15) / (7/15) \u2248 0.087",
+            1
+        ],
+        [
+            "Step 8: Multiply the probabilities of the first 7 steps: P = (12/15) * ((11/15) / (14/15)) * ((11/15) / (12/15)) * ((10/15) / (10/15)) * ((9/15) / (8/15)) * ((10/15) / (13/15)) * (9/15) / (7/15) * (8/15) / (6/15) \u2248 0.048",
+            1
+        ],
+        [
+            "Step 9: Multiply the probabilities of the first 8 steps: P = (12/15) * ((11/15) / (14/15)) * ((11/15) / (12/15)) * ((10/15) / (10/15)) * ((9/15) / (8/15)) * ((10/15) / (13/15)) * (9/15) / (7/15) * (8/15) / (6/15) * (7/15) / (5/15)",
+            1
+        ],
+        [
+            "Step 10: P = (12/15) * ((11/15) / (14/15)) * ((11/15) / (12/15)) * ((10/15) / (10/15)) * ((9/15) / (8/15)) * ((10/15) / (13/15)) * (9/15) / (7/15) * (8/15) / (6/15) * (7/15) / (5/15) * (6/15) / (4/15)",
+            1
+        ]
+    ],
+    "time": 132.92121767997742,
+    "total_tokens": 10150,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

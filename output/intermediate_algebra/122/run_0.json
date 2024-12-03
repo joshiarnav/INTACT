@@ -1,0 +1,66 @@
+{
+    "problem": "Compute the infinite sum $S,$ where\n\\[S = \\frac{1}{2} - \\frac{2}{4} + \\frac{3}{8} - \\frac{4}{16} + \\frac{5}{32} - \\dots + \\frac{n}{2^n} (-1)^{n + 1} + \\dotsb.\\]",
+    "level": "Level 4",
+    "type": "Intermediate Algebra",
+    "solution": "Multiplying the sum by $\\frac{1}{2},$ we get\n\\[\\frac{1}{2} S = \\frac{1}{4} - \\frac{2}{8} + \\frac{3}{16} - \\frac{4}{32} + \\dotsb.\\]Then\n\\begin{align*}\nS + \\frac{1}{2} S &= \\left( \\frac{1}{2} - \\frac{2}{4} + \\frac{3}{8} - \\frac{4}{16} + \\frac{5}{32} - \\dotsb \\right) + \\left( \\frac{1}{4} - \\frac{2}{8} + \\frac{3}{16} - \\frac{4}{32} + \\dotsb \\right) \\\\\n&= \\frac{1}{2} - \\frac{1}{4} + \\frac{1}{8} - \\frac{1}{16} + \\frac{1}{32} - \\dotsb \\\\\n&= \\frac{1/2}{1 + 1/2} = \\frac{1}{3}.\n\\end{align*}This gives us $\\frac{3}{2} S = \\frac{1}{3},$ so $S = \\boxed{\\frac{2}{9}}.$",
+    "is_solved": false,
+    "model_solution": "## Step 1: Write the sum S as an equation\n\\[S = \\frac{1}{2} - \\frac{2}{4} + \\frac{3}{8} - \\frac{4}{16} + \\frac{5}{32} - \\dots + \\frac{n}{2^n} (-1)^{n + 1} + \\dotsb.\\]\n\n## Step 2: Write the sum S again with all the terms\n\\[S = \\left( \\frac{1}{2} - \\frac{2}{4} + \\frac{3}{8} - \\frac{4}{16} + \\frac{5}{32} - \\dots \\right).\\]\n\n## Step 3: Factor out a common factor of 1/2 from the first two terms\n\\[S = \\frac{1}{2} \\left( 1 - \\frac{2}{2} + \\frac{3}{4} - \\frac{4}{8} + \\frac{5}{16} - \\dots \\right).\\]\n\n## Step 4: Factor out a common factor of 1/4 from the last two terms in the parentheses\n\\[S =\n## Step 5: Write the sum S as a geometric series\n\\[S = \\frac{1}{2} \\left( 1 - 2 \\left( \\frac{1}{2} - \\frac{3}{4} + \\frac{4}{8} - \\frac{5}{16} + \\dots \\right) \\right).\\]\n## Step 6: Factor out a common factor of (-1)^n from the terms in the parentheses\n\\[S = \\frac{1}{2} \\left( 1 - 2 \\left( \\frac{(-1)^1}{2} + \\frac{(-1)^2}{4} + \\frac{(-1)^3}{8} + \\frac{(-1)^4}{16} + \\dots \\right) \\right).\\]\n## Step 7: Write the terms in the parentheses as a geometric series\n\\[S = \\frac{1}{2} \\left( 1 - 2 \\left( \\frac{-1}{2} \\left( 1 + \\frac{1}{2} + \\frac{1}{4} + \\frac{1}{8} + \\dots \\right) \\right) \\right).\\]\n## Step 8: Recognize the geometric series in the parentheses as a sum of an infinite geometric series with first term 1 and common ratio 1/2, and compute its sum\n\\[S = \\frac{1}{2} \\left( 1 - 2 \\left( \\frac{-1}{2} \\left( \\frac{1}{1 - 1/2} \\right) \\right) \\right).\\]\n## Step 9: Simplify the expression\n\\[S = \\frac{1}{2} \\left( 1 - 2 \\left( \\frac{-1}{2} \\left( \\frac{1}{1 - 1/2} \\right) \\right) \\right) = \\frac{1}{2} \\left( 1 + 1 \\right) = \\frac{1}{2} \\left( 2 \\right).\\]\n## Step 10\n\\[S = \\frac{1}{2} \\left( 2 \\right) = 1.\\]\n## Step 11\n\\[S = \\frac{1}{2} \\left( 1 - \\frac{-1}{1 - 1/2} \\right).\\]\n## Step 12\n\\[S = \\frac{1}{2} \\left( 1 - \\frac{1}{1 - 1/2} \\right) = \\frac{1}{2} \\left( 1 - \\frac{1}{1/2} \\right).\\]\n## Step 13\n\\[S = \\frac{1}{2} \\left( 1 - \\frac{1}{1/2} \\right) = \\frac{1}{2} \\left( 1 - 2 \\right).\\]",
+    "steps": [
+        "## Step 1: Write the sum S as an equation\n\\[S = \\frac{1}{2} - \\frac{2}{4} + \\frac{3}{8} - \\frac{4}{16} + \\frac{5}{32} - \\dots + \\frac{n}{2^n} (-1)^{n + 1} + \\dotsb.\\]\n\n## Step 2: Write the sum S again with all the terms\n\\[S = \\left( \\frac{1}{2} - \\frac{2}{4} + \\frac{3}{8} - \\frac{4}{16} + \\frac{5}{32} - \\dots \\right).\\]\n\n## Step 3: Factor out a common factor of 1/2 from the first two terms\n\\[S = \\frac{1}{2} \\left( 1 - \\frac{2}{2} + \\frac{3}{4} - \\frac{4}{8} + \\frac{5}{16} - \\dots \\right).\\]\n\n## Step 4: Factor out a common factor of 1/4 from the last two terms in the parentheses\n\\[S =",
+        "## Step 5: Write the sum S as a geometric series\n\\[S = \\frac{1}{2} \\left( 1 - 2 \\left( \\frac{1}{2} - \\frac{3}{4} + \\frac{4}{8} - \\frac{5}{16} + \\dots \\right) \\right).\\]",
+        "## Step 6: Factor out a common factor of (-1)^n from the terms in the parentheses\n\\[S = \\frac{1}{2} \\left( 1 - 2 \\left( \\frac{(-1)^1}{2} + \\frac{(-1)^2}{4} + \\frac{(-1)^3}{8} + \\frac{(-1)^4}{16} + \\dots \\right) \\right).\\]",
+        "## Step 7: Write the terms in the parentheses as a geometric series\n\\[S = \\frac{1}{2} \\left( 1 - 2 \\left( \\frac{-1}{2} \\left( 1 + \\frac{1}{2} + \\frac{1}{4} + \\frac{1}{8} + \\dots \\right) \\right) \\right).\\]",
+        "## Step 8: Recognize the geometric series in the parentheses as a sum of an infinite geometric series with first term 1 and common ratio 1/2, and compute its sum\n\\[S = \\frac{1}{2} \\left( 1 - 2 \\left( \\frac{-1}{2} \\left( \\frac{1}{1 - 1/2} \\right) \\right) \\right).\\]",
+        "## Step 9: Simplify the expression\n\\[S = \\frac{1}{2} \\left( 1 - 2 \\left( \\frac{-1}{2} \\left( \\frac{1}{1 - 1/2} \\right) \\right) \\right) = \\frac{1}{2} \\left( 1 + 1 \\right) = \\frac{1}{2} \\left( 2 \\right).\\]",
+        "## Step 10\n\\[S = \\frac{1}{2} \\left( 2 \\right) = 1.\\]",
+        "## Step 11\n\\[S = \\frac{1}{2} \\left( 1 - \\frac{-1}{1 - 1/2} \\right).\\]",
+        "## Step 12\n\\[S = \\frac{1}{2} \\left( 1 - \\frac{1}{1 - 1/2} \\right) = \\frac{1}{2} \\left( 1 - \\frac{1}{1/2} \\right).\\]",
+        "## Step 13\n\\[S = \\frac{1}{2} \\left( 1 - \\frac{1}{1/2} \\right) = \\frac{1}{2} \\left( 1 - 2 \\right).\\]"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Write the sum S as an equation\n\\[S = \\frac{1}{2} - \\frac{2}{4} + \\frac{3}{8} - \\frac{4}{16} + \\frac{5}{32} - \\dots + \\frac{n}{2^n} (-1)^{n + 1} + \\dotsb.\\]\n\n## Step 2: Write the sum S again with all the terms\n\\[S = \\left( \\frac{1}{2} - \\frac{2}{4} + \\frac{3}{8} - \\frac{4}{16} + \\frac{5}{32} - \\dots \\right).\\]\n\n## Step 3: Factor out a common factor of 1/2 from the first two terms\n\\[S = \\frac{1}{2} \\left( 1 - \\frac{2}{2} + \\frac{3}{4} - \\frac{4}{8} + \\frac{5}{16} - \\dots \\right).\\]\n\n## Step 4: Factor out a common factor of 1/4 from the last two terms in the parentheses\n\\[S =",
+            1
+        ],
+        [
+            "## Step 5: Write the sum S as a geometric series\n\\[S = \\frac{1}{2} \\left( 1 - 2 \\left( \\frac{1}{2} - \\frac{3}{4} + \\frac{4}{8} - \\frac{5}{16} + \\dots \\right) \\right).\\]",
+            1
+        ],
+        [
+            "## Step 6: Factor out a common factor of (-1)^n from the terms in the parentheses\n\\[S = \\frac{1}{2} \\left( 1 - 2 \\left( \\frac{(-1)^1}{2} + \\frac{(-1)^2}{4} + \\frac{(-1)^3}{8} + \\frac{(-1)^4}{16} + \\dots \\right) \\right).\\]",
+            1
+        ],
+        [
+            "## Step 7: Write the terms in the parentheses as a geometric series\n\\[S = \\frac{1}{2} \\left( 1 - 2 \\left( \\frac{-1}{2} \\left( 1 + \\frac{1}{2} + \\frac{1}{4} + \\frac{1}{8} + \\dots \\right) \\right) \\right).\\]",
+            1
+        ],
+        [
+            "## Step 8: Recognize the geometric series in the parentheses as a sum of an infinite geometric series with first term 1 and common ratio 1/2, and compute its sum\n\\[S = \\frac{1}{2} \\left( 1 - 2 \\left( \\frac{-1}{2} \\left( \\frac{1}{1 - 1/2} \\right) \\right) \\right).\\]",
+            1
+        ],
+        [
+            "## Step 9: Simplify the expression\n\\[S = \\frac{1}{2} \\left( 1 - 2 \\left( \\frac{-1}{2} \\left( \\frac{1}{1 - 1/2} \\right) \\right) \\right) = \\frac{1}{2} \\left( 1 + 1 \\right) = \\frac{1}{2} \\left( 2 \\right).\\]",
+            1
+        ],
+        [
+            "## Step 10\n\\[S = \\frac{1}{2} \\left( 2 \\right) = 1.\\]",
+            1
+        ],
+        [
+            "## Step 11\n\\[S = \\frac{1}{2} \\left( 1 - \\frac{-1}{1 - 1/2} \\right).\\]",
+            1
+        ],
+        [
+            "## Step 12\n\\[S = \\frac{1}{2} \\left( 1 - \\frac{1}{1 - 1/2} \\right) = \\frac{1}{2} \\left( 1 - \\frac{1}{1/2} \\right).\\]",
+            1
+        ],
+        [
+            "## Step 13\n\\[S = \\frac{1}{2} \\left( 1 - \\frac{1}{1/2} \\right) = \\frac{1}{2} \\left( 1 - 2 \\right).\\]",
+            1
+        ]
+    ],
+    "time": 133.27239203453064,
+    "total_tokens": 14824,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

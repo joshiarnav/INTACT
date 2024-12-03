@@ -1,0 +1,56 @@
+{
+    "problem": "There are 360 people in my school.  15 take calculus, physics, and chemistry, and 15 don't take any of them.  180 take calculus.  Twice as many students take chemistry as take physics.  75 take both calculus and chemistry, and 75 take both physics and chemistry.  Only 30 take both physics and calculus.  How many students take physics?",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "Let $x$ be the number of students taking physics, so the number in chemistry is $2x$.  There are 15 students taking all three, and 30 students in both physics and calculus, meaning there are $30 - 15 = 15$ students in just physics and calculus.  Similarly there are $60$ students in just chemistry and calculus, and $60$ in physics and chemistry.  Since there are $x$ students in physics and $15 + 15 + 60 = 90$ students taking physics along with other classes, $x - 90$ students are just taking physics.  Similarly, there are $2x - 135$ students taking just chemistry and $90$ students taking just calculus.  Knowing that there are 15 students not taking any of them, the sum of these eight categories is 360, the total number of people at the school:   \\[\n(x - 90) + (2x - 135) + 90 + 60 + 15 + 60 + 15 + 15 = 360.\n\\] We solve for $x$ and find that the number of physics students is $x = \\boxed{110}$.",
+    "is_solved": true,
+    "model_solution": "Let x be the number of students who take physics. Then using the inclusion-exclusion principle, we can write:\n\n|Calculus| + |Physics| + |Chemistry| - |Calculus \u2229 Physics| - |Calculus \u2229 Chemistry| - |Physics \u2229 Chemistry| + |Calculus \u2229 Physics \u2229 Chemistry| = |Total| - |No classes|\n\n180 + x + (2x) - 30 - 75 - 75 + 15 = 360 - 15\nCombine like terms and simplify the equation: 180 + 3x - 30 - 75 - 75 + 15 = 360 - 15.\nSimplify the equation: 30 + 3x = 345.\nSubtract 30 from both sides: 3x = 315.\nDivide both sides by 3.\nDivide both sides by 3: x = 105\nx = 105\nx = 105",
+    "steps": [
+        "Let x be the number of students who take physics. Then using the inclusion-exclusion principle, we can write:\n\n|Calculus| + |Physics| + |Chemistry| - |Calculus \u2229 Physics| - |Calculus \u2229 Chemistry| - |Physics \u2229 Chemistry| + |Calculus \u2229 Physics \u2229 Chemistry| = |Total| - |No classes|\n\n180 + x + (2x) - 30 - 75 - 75 + 15 = 360 - 15",
+        "Combine like terms and simplify the equation: 180 + 3x - 30 - 75 - 75 + 15 = 360 - 15.",
+        "Simplify the equation: 30 + 3x = 345.",
+        "Subtract 30 from both sides: 3x = 315.",
+        "Divide both sides by 3.",
+        "Divide both sides by 3: x = 105",
+        "x = 105",
+        "x = 105"
+    ],
+    "full_steps": [
+        [
+            "Let x be the number of students who take physics. Then using the inclusion-exclusion principle, we can write:\n\n|Calculus| + |Physics| + |Chemistry| - |Calculus \u2229 Physics| - |Calculus \u2229 Chemistry| - |Physics \u2229 Chemistry| + |Calculus \u2229 Physics \u2229 Chemistry| = |Total| - |No classes|\n\n180 + x + (2x) - 30 - 75 - 75 + 15 = 360 - 15",
+            1
+        ],
+        [
+            "Combine like terms and simplify the equation: 180 + 3x - 30 - 75 - 75 + 15 = 360 - 15.",
+            1
+        ],
+        [
+            "Simplify the equation: 30 + 3x = 345.",
+            1
+        ],
+        [
+            "Subtract 30 from both sides: 3x = 315.",
+            1
+        ],
+        [
+            "Divide both sides by 3.",
+            1
+        ],
+        [
+            "Divide both sides by 3: x = 105",
+            1
+        ],
+        [
+            "x = 105",
+            1
+        ],
+        [
+            "x = 105",
+            1
+        ]
+    ],
+    "time": 103.00938248634338,
+    "total_tokens": 4988,
+    "final_answer_tokens": 339,
+    "model": "meta-llama/Llama-Vision-Free"
+}

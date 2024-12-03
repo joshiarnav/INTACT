@@ -1,0 +1,61 @@
+{
+    "problem": "A student must choose a program of four courses from a list of courses consisting of English, Algebra, Geometry, History, Art, and Latin. This program must contain English and at least one mathematics course. In how many ways can this program be chosen?",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "The program must contain exactly $3$ of the $5$ classes that are not English. Therefore, there are $\\tbinom{5}{3} = 10$ valid programs if we ignore the mathematics requirement.\n\nSince there are $2$ math classes (Algebra and Geometry), $3$ of the $5$ classes besides English are not math. Therefore, there is only one program that satisfies the English requirement, but does not satisfy the mathematics requirement (the program consisting of English, History, Art, and Latin). It follows that the number of programs satisfying both requirements is $10-1=\\boxed{9}.$",
+    "is_solved": true,
+    "model_solution": "Step 1: Determine the number of mathematics courses available to the student.\nStep 2: There are 2 mathematics courses available to the student, Algebra and Geometry.\nStep 3: The student must choose at least one mathematics course. There are two possibilities: the student chooses one mathematics course or chooses both mathematics courses.\nStep 4: \nCase 1: Exactly one mathematics course is chosen. The student can choose either Algebra or Geometry. Once a mathematics course is chosen, the student must choose two other non-mathematics courses from the remaining three courses (History, Art, and Latin) in 3C2 ways, which is equal to 3. Since there are 2 mathematics courses to choose from, there are a total of 2 x 3 = 6 programs that can be chosen in this case.\nCase 2: Both mathematics courses are chosen. The student must choose two other non-mathematics courses from the remaining three courses (History, Art, and Latin) in 3C2 ways, which is equal to 3.\nStep 5: \nCase 1: Exactly one mathematics course is chosen. There are a total of 6 ways to choose this program.\nCase 2: Both mathematics courses are chosen. There are a total of 3 ways to choose this program. Since the two cases are mutually exclusive, the total number of ways the student can choose the program is the sum of the two cases.\nStep 6: The total number of ways the student can choose the program is 6 + 3 = 9.\nStep 7: The total number of ways the student can choose the program is 6 + 3 = 9.\nStep 8: Final Answer: The final answer is 9.",
+    "steps": [
+        "Step 1: Determine the number of mathematics courses available to the student.",
+        "Step 2: There are 2 mathematics courses available to the student, Algebra and Geometry.",
+        "Step 3: The student must choose at least one mathematics course. There are two possibilities: the student chooses one mathematics course or chooses both mathematics courses.",
+        "Step 4: \nCase 1: Exactly one mathematics course is chosen. The student can choose either Algebra or Geometry. Once a mathematics course is chosen, the student must choose two other non-mathematics courses from the remaining three courses (History, Art, and Latin) in 3C2 ways, which is equal to 3. Since there are 2 mathematics courses to choose from, there are a total of 2 x 3 = 6 programs that can be chosen in this case.",
+        "Case 2: Both mathematics courses are chosen. The student must choose two other non-mathematics courses from the remaining three courses (History, Art, and Latin) in 3C2 ways, which is equal to 3.",
+        "Step 5: \nCase 1: Exactly one mathematics course is chosen. There are a total of 6 ways to choose this program.\nCase 2: Both mathematics courses are chosen. There are a total of 3 ways to choose this program. Since the two cases are mutually exclusive, the total number of ways the student can choose the program is the sum of the two cases.",
+        "Step 6: The total number of ways the student can choose the program is 6 + 3 = 9.",
+        "Step 7: The total number of ways the student can choose the program is 6 + 3 = 9.",
+        "Step 8: Final Answer: The final answer is 9."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Determine the number of mathematics courses available to the student.",
+            1
+        ],
+        [
+            "Step 2: There are 2 mathematics courses available to the student, Algebra and Geometry.",
+            1
+        ],
+        [
+            "Step 3: The student must choose at least one mathematics course. There are two possibilities: the student chooses one mathematics course or chooses both mathematics courses.",
+            1
+        ],
+        [
+            "Step 4: \nCase 1: Exactly one mathematics course is chosen. The student can choose either Algebra or Geometry. Once a mathematics course is chosen, the student must choose two other non-mathematics courses from the remaining three courses (History, Art, and Latin) in 3C2 ways, which is equal to 3. Since there are 2 mathematics courses to choose from, there are a total of 2 x 3 = 6 programs that can be chosen in this case.",
+            1
+        ],
+        [
+            "Case 2: Both mathematics courses are chosen. The student must choose two other non-mathematics courses from the remaining three courses (History, Art, and Latin) in 3C2 ways, which is equal to 3.",
+            1
+        ],
+        [
+            "Step 5: \nCase 1: Exactly one mathematics course is chosen. There are a total of 6 ways to choose this program.\nCase 2: Both mathematics courses are chosen. There are a total of 3 ways to choose this program. Since the two cases are mutually exclusive, the total number of ways the student can choose the program is the sum of the two cases.",
+            1
+        ],
+        [
+            "Step 6: The total number of ways the student can choose the program is 6 + 3 = 9.",
+            1
+        ],
+        [
+            "Step 7: The total number of ways the student can choose the program is 6 + 3 = 9.",
+            1
+        ],
+        [
+            "Step 8: Final Answer: The final answer is 9.",
+            1
+        ]
+    ],
+    "time": 121.65716409683228,
+    "total_tokens": 5707,
+    "final_answer_tokens": 468,
+    "model": "meta-llama/Llama-Vision-Free"
+}

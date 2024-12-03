@@ -1,0 +1,46 @@
+{
+    "problem": "The Senate has 100 members, 55 Republicans and 45 Democrats.  In how many ways can I choose a 5-person committee consisting of 3 Republicans and 2 Democrats?",
+    "level": "Level 3",
+    "type": "Counting & Probability",
+    "solution": "There are 55 ways to choose the first Republican, 54 ways to choose the second Republican, and 53 ways to choose the third Republican; however, we must divide by $3!$ because order does not matter.  So the number of ways to choose Republicans is $\\dfrac{55 \\times 54 \\times 53}{3!} = 26,\\!235$. There are 45 ways to choose the first Democrat and 44 ways to choose the second Democrat, but we must divide by $2!$ because order does not matter.  So the number of ways to choose the Democrats is $\\dfrac{45 \\times 44}{2!} = 990$.  So there are $26,\\!235 \\times 990 = \\boxed{25,\\!972,\\!650}$ ways to choose a committee.",
+    "is_solved": true,
+    "model_solution": "Calculate the number of ways to choose 3 Republicans from 55 Republicans.\n\nC(55,3) = 55! / (3!(55-3)!) =  ?\nC(55,3) = 55! / (3!(55-3)!) = 54,915\nC(45,2) = 45! / (2!(45-2)!) = ?\nC(45,2) = 45! / (2!(45-2)!) = 990\nCalculate the number of ways to choose a 5-person committee consisting of 3 Republicans and 2 Democrats: (54,915) \u00d7 (990) = ?\n(54,915) \u00d7 (990) = 54,615,450\nThe final answer is: 54,615,450",
+    "steps": [
+        "Calculate the number of ways to choose 3 Republicans from 55 Republicans.\n\nC(55,3) = 55! / (3!(55-3)!) =  ?",
+        "C(55,3) = 55! / (3!(55-3)!) = 54,915\nC(45,2) = 45! / (2!(45-2)!) = ?",
+        "C(45,2) = 45! / (2!(45-2)!) = 990",
+        "Calculate the number of ways to choose a 5-person committee consisting of 3 Republicans and 2 Democrats: (54,915) \u00d7 (990) = ?",
+        "(54,915) \u00d7 (990) = 54,615,450",
+        "The final answer is: 54,615,450"
+    ],
+    "full_steps": [
+        [
+            "Calculate the number of ways to choose 3 Republicans from 55 Republicans.\n\nC(55,3) = 55! / (3!(55-3)!) =  ?",
+            1
+        ],
+        [
+            "C(55,3) = 55! / (3!(55-3)!) = 54,915\nC(45,2) = 45! / (2!(45-2)!) = ?",
+            1
+        ],
+        [
+            "C(45,2) = 45! / (2!(45-2)!) = 990",
+            1
+        ],
+        [
+            "Calculate the number of ways to choose a 5-person committee consisting of 3 Republicans and 2 Democrats: (54,915) \u00d7 (990) = ?",
+            1
+        ],
+        [
+            "(54,915) \u00d7 (990) = 54,615,450",
+            1
+        ],
+        [
+            "The final answer is: 54,615,450",
+            1
+        ]
+    ],
+    "time": 81.0350866317749,
+    "total_tokens": 2590,
+    "final_answer_tokens": 263,
+    "model": "meta-llama/Llama-Vision-Free"
+}

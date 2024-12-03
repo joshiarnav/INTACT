@@ -1,0 +1,66 @@
+{
+    "problem": "What is the smallest positive value of $m$ so that the equation $10x^2 - mx + 420 = 0$ has integral solutions?",
+    "level": "Level 5",
+    "type": "Algebra",
+    "solution": "Let $p$ and $q$ be the solutions the the equation $10x^2 - mx + 420 = 0$. We use the fact that the sum and product of the roots of a quadratic equation $ax^2+bx+c = 0$ are given by $-b/a$ and $c/a$, respectively, so $p+q = m/10$ and $pq = 420/10 = 42$. Since $m = 10(p+q)$, we minimize $m$ by minimizing the sum $p+q$. Since $p$ and $q$ are integers and multiply to 42, the possible values of $(p,q)$ are $(1,42),(2,21),(3,14),(6,7),(7,6),(14,3),(21,2),(42,1)$. (Note that if $p$ and $q$ are both negative, then $p+q$ is negative, so $m$ would be negative, which is excluded by the problem.) The sum $p+q$ is minimized when $(p,q) = (6,7)$ or $(7,6)$. In either case, $m = 10(p+q) = 10(6+7) = \\boxed{130}.$",
+    "is_solved": false,
+    "model_solution": "Step 1:  To begin solving this problem, we need to recall the properties of quadratic equations and their roots.\nThe equation is given as $10x^2 - mx + 420 = 0.$\nWe can apply the quadratic formula to find the roots, which states that for an equation in the form $ax^2 + bx + c = 0,$ the roots are given by $x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}.$\nStep 2: For the equation $10x^2 - mx + 420 = 0$, we can identify $a = 10$, $b = -m$, and $c = 420$. Applying the quadratic formula, we get $x = \\frac{m \\pm \\sqrt{m^2 - 16800}}{20}$.\nStep 3: We want the solutions to be integers, which means the expression inside the square root, $m^2 - 16800$, must be a perfect square.\nStep 4: Let $m^2 - 16800 = n^2$, where $n$ is an integer. We can then write $m$ as $\\sqrt{16800 + n^2}$, and since $m$ is the smallest positive value, we want to minimize the value of $n$ while ensuring that $m$ is an integer.\nStep 5: We can start by considering the smallest possible values of $n$ and compute the corresponding values of $m$. Since $\\sqrt{16800} \\approx 129.6$, the smallest possible value of $n$ that makes $\\sqrt{16800 + n^2}$ an integer is $n=129$, giving $m^2=16800+129^2=270025$, and $m = 325$.\nStep 6: Let $m = 325$ and plug it into the original equation $10x^2 - mx + 420 = 0$ to check if it has integral solutions.\nStep 7:\n Plug $m = 325$ into the equation $10x^2 - 325x + 420 = 0$ and try to factor it or use the quadratic formula to find the roots.\nStep 8:\n Plug $m = 325$ into the equation $10x^2 - 325x + 420 = 0$. We can use the quadratic formula to find the roots: $x = \\frac{325 \\pm \\sqrt{325^2 - 4(10)(420)}}{20}$.\nStep 9:\n $\\frac{325 \\pm \\sqrt{325^2 - 4(10)(420)}}{20} = \\frac{325 \\pm \\sqrt{105625 - 16800}}{20} = \\frac{325 \\pm \\sqrt{88925}}{20} = \\frac{325 \\pm 299.75}{20}$\nStep 10:\n$\\frac{325 \\pm 299.75}{20} = 16.275 \\pm 14.9875 = 31.2625, -2.9875$\n\nSince the solutions are not integers, this means $m = 325$ does not work.\n\nWe need to continue searching for the smallest positive integer value of $m$ that works.",
+    "steps": [
+        "Step 1:  To begin solving this problem, we need to recall the properties of quadratic equations and their roots.\nThe equation is given as $10x^2 - mx + 420 = 0.$\nWe can apply the quadratic formula to find the roots, which states that for an equation in the form $ax^2 + bx + c = 0,$ the roots are given by $x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}.$",
+        "Step 2: For the equation $10x^2 - mx + 420 = 0$, we can identify $a = 10$, $b = -m$, and $c = 420$. Applying the quadratic formula, we get $x = \\frac{m \\pm \\sqrt{m^2 - 16800}}{20}$.",
+        "Step 3: We want the solutions to be integers, which means the expression inside the square root, $m^2 - 16800$, must be a perfect square.",
+        "Step 4: Let $m^2 - 16800 = n^2$, where $n$ is an integer. We can then write $m$ as $\\sqrt{16800 + n^2}$, and since $m$ is the smallest positive value, we want to minimize the value of $n$ while ensuring that $m$ is an integer.",
+        "Step 5: We can start by considering the smallest possible values of $n$ and compute the corresponding values of $m$. Since $\\sqrt{16800} \\approx 129.6$, the smallest possible value of $n$ that makes $\\sqrt{16800 + n^2}$ an integer is $n=129$, giving $m^2=16800+129^2=270025$, and $m = 325$.",
+        "Step 6: Let $m = 325$ and plug it into the original equation $10x^2 - mx + 420 = 0$ to check if it has integral solutions.",
+        "Step 7:\n Plug $m = 325$ into the equation $10x^2 - 325x + 420 = 0$ and try to factor it or use the quadratic formula to find the roots.",
+        "Step 8:\n Plug $m = 325$ into the equation $10x^2 - 325x + 420 = 0$. We can use the quadratic formula to find the roots: $x = \\frac{325 \\pm \\sqrt{325^2 - 4(10)(420)}}{20}$.",
+        "Step 9:\n $\\frac{325 \\pm \\sqrt{325^2 - 4(10)(420)}}{20} = \\frac{325 \\pm \\sqrt{105625 - 16800}}{20} = \\frac{325 \\pm \\sqrt{88925}}{20} = \\frac{325 \\pm 299.75}{20}$",
+        "Step 10:\n$\\frac{325 \\pm 299.75}{20} = 16.275 \\pm 14.9875 = 31.2625, -2.9875$\n\nSince the solutions are not integers, this means $m = 325$ does not work.\n\nWe need to continue searching for the smallest positive integer value of $m$ that works."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  To begin solving this problem, we need to recall the properties of quadratic equations and their roots.\nThe equation is given as $10x^2 - mx + 420 = 0.$\nWe can apply the quadratic formula to find the roots, which states that for an equation in the form $ax^2 + bx + c = 0,$ the roots are given by $x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}.$",
+            1
+        ],
+        [
+            "Step 2: For the equation $10x^2 - mx + 420 = 0$, we can identify $a = 10$, $b = -m$, and $c = 420$. Applying the quadratic formula, we get $x = \\frac{m \\pm \\sqrt{m^2 - 16800}}{20}$.",
+            1
+        ],
+        [
+            "Step 3: We want the solutions to be integers, which means the expression inside the square root, $m^2 - 16800$, must be a perfect square.",
+            1
+        ],
+        [
+            "Step 4: Let $m^2 - 16800 = n^2$, where $n$ is an integer. We can then write $m$ as $\\sqrt{16800 + n^2}$, and since $m$ is the smallest positive value, we want to minimize the value of $n$ while ensuring that $m$ is an integer.",
+            1
+        ],
+        [
+            "Step 5: We can start by considering the smallest possible values of $n$ and compute the corresponding values of $m$. Since $\\sqrt{16800} \\approx 129.6$, the smallest possible value of $n$ that makes $\\sqrt{16800 + n^2}$ an integer is $n=129$, giving $m^2=16800+129^2=270025$, and $m = 325$.",
+            1
+        ],
+        [
+            "Step 6: Let $m = 325$ and plug it into the original equation $10x^2 - mx + 420 = 0$ to check if it has integral solutions.",
+            1
+        ],
+        [
+            "Step 7:\n Plug $m = 325$ into the equation $10x^2 - 325x + 420 = 0$ and try to factor it or use the quadratic formula to find the roots.",
+            1
+        ],
+        [
+            "Step 8:\n Plug $m = 325$ into the equation $10x^2 - 325x + 420 = 0$. We can use the quadratic formula to find the roots: $x = \\frac{325 \\pm \\sqrt{325^2 - 4(10)(420)}}{20}$.",
+            1
+        ],
+        [
+            "Step 9:\n $\\frac{325 \\pm \\sqrt{325^2 - 4(10)(420)}}{20} = \\frac{325 \\pm \\sqrt{105625 - 16800}}{20} = \\frac{325 \\pm \\sqrt{88925}}{20} = \\frac{325 \\pm 299.75}{20}$",
+            1
+        ],
+        [
+            "Step 10:\n$\\frac{325 \\pm 299.75}{20} = 16.275 \\pm 14.9875 = 31.2625, -2.9875$\n\nSince the solutions are not integers, this means $m = 325$ does not work.\n\nWe need to continue searching for the smallest positive integer value of $m$ that works.",
+            1
+        ]
+    ],
+    "time": 131.1072199344635,
+    "total_tokens": 9769,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

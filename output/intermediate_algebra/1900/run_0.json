@@ -1,0 +1,41 @@
+{
+    "problem": "Let $a,$ $b,$ $c,$ $d,$ and $e$ be the distinct roots of the equation $x^5 + 7x^4 - 2 = 0.$  Find\n\\begin{align*}\n&\\frac{a^5}{(a - b)(a - c)(a - d)(a - e)} + \\frac{b^5}{(b - a)(b - c)(b - d)(b - e)} \\\\\n&\\quad + \\frac{c^5}{(c - a)(c - b)(c - d)(c - e)} + \\frac{d^5}{(d - a)(d - b)(d - c)(d - e)} \\\\\n&\\quad + \\frac{e^5}{(e - a)(e - b)(e - c)(e - d)}.\n\\end{align*}",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "Consider the polynomial\n\\begin{align*}\np(x) &= \\frac{a^5 (x - b)(x - c)(x - d)(x - e)}{(a - b)(a - c)(a - d)(a - e)} + \\frac{b^5 (x - a)(x - c)(x - d)(x - e)}{(b - a)(b - c)(b - d)(b - e)} \\\\\n&\\quad + \\frac{c^5 (x - a)(x - b)(x - d)(x - e)}{(c - a)(c - b)(c - d)(c - e)} + \\frac{d^5 (x - a)(x - b)(x - c)(x - e)}{(d - a)(d - b)(d - c)(d - e)} \\\\\n&\\quad + \\frac{e^5 (x - a)(x - b)(x - c)(x - d)}{(e - a)(e - b)(e - c)(e - d)}.\n\\end{align*}Note that $p(x)$ is a polynomial of degree at most 4.  Also, $p(a) = a^5,$ $p(b) = b^5,$ $p(c) = c^5,$ $p(d) = d^5,$ and $p(e) = e^5.$  This might lead us to conclude that $p(x) = x^5,$ but as we just observed, $p(x)$ is a polynomial of degree 4.\n\nSo, consider the polynomial\n\\[q(x) = x^5 - p(x).\\]The polynomial $q(x)$ becomes 0 at $x = a,$ $b,$ $c,$ $d,$ and $e.$  Therefore,\n\\[q(x) = x^5 - p(x) = (x - a)(x - b)(x - c)(x - d)(x - e) r(x)\\]for some polynomial $r(x).$\n\nSince $p(x)$ is a polynomial of degree at most 4, $q(x) = x^5 - p(x)$ is a polynomial of degree 5.  Furthermore, the leading coefficient is 1.  Therefore, $r(x) = 1,$ and\n\\[q(x) = x^5 - p(x) = (x - a)(x - b)(x - c)(x - d)(x - e).\\]Then\n\\[p(x) = x^5 - (x - a)(x - b)(x - c)(x - d)(x - e),\\]which expands as\n\\[p(x) = (a + b + c + d + e) x^4 + \\dotsb.\\]This is important, because the expression given in the problem is the coefficient of $x^4$ in $p(x).$  Hence, the expression given in the problem is equal to $a + b + c + d + e.$  By Vieta's formulas, this is $\\boxed{-7}.$",
+    "is_solved": true,
+    "model_solution": "## Step 1: Since the given equation is a fifth degree polynomial, we can express it in terms of its roots a, b, c, d, and e as follows:\n\\[x^5 + 7x^4 - 2 = (x - a)(x - b)(x - c)(x - d)(x - e).\\]\n\n## Step 2: When $x = a$, we have $a^5 + 7a^4 - 2 = (a - b)(a - c)(a - d)(a - e)$.\n\n## Step 3: Similarly, we can write the other expressions by replacing $a$ with $b$, $c$, $d$, and $e$ in the equation.\n\n## Step 4: The given expression can now be rewritten by replacing each denominator with its corresponding expression from step 2.\n\n## Step 5: After replacing the denominators, we need to express the given expression as a sum of fractions.\n\n## Step 6: The given expression now becomes\n\\[\\frac{a^5}{a^5 + 7a^4 - 2} + \\frac{b^5}{b^5 + 7b\n## Step 7: Evaluating the expression for each root, we obtain\n\\[\\frac{a^5}{a^5 + 7a^4 - 2} + \\frac{b^5}{b^5 + 7b^4 - 2} + \\frac{c^5}{c^5 + 7c^4 - 2} + \\frac{d^5}{d^5 + 7d^4 - 2} + \\frac{e^5}{e^5 + 7e^4 - 2}.\\]\n## Step 8: \n\\[\\frac{a^5}{(a - b)(a - c)(a - d)(a - e)} + \\frac{b^5}{(b - a)(b - c)(b - d)(b - e)} + \\frac{c^5}{(c - a)(c - b)(c - d)(c - e)} + \\frac{d^5}{(d - a)(d - b)(d - c)(d - e)} + \\frac{e^5}{(e - a)(e - b)(e - c)(e - d)}\\]\n\\[= \\frac{a^5}{a^5 + 7a^4 - 2} + \\frac{b^5}{b^5 + 7b^4 - 2} + \\frac{c^5}{c^5 + 7c^4 - 2} + \\frac{d^5}{d^5 + 7d^4 - 2} + \\frac{e^5}{e^5 + 7e^4 - 2}\\]\n\\[= \\frac{a^5}{P\n## Step 9:  \\[= \\frac{a^5}{7a^4 - 2} + \\frac{b^5}{7b^4 - 2} + \\frac{c^5}{7c^4 - 2} + \\frac{d^5}{7d^4 - 2} + \\frac{e^5}{7e^4 - 2}\\]\n\\[= \\frac{a^5}{a^4(7a - \\frac{2}{a^4})} + \\frac{b^5}{b^4(7b - \\frac{2}{b^4})} + \\frac{c^5}{c^4(7c - \\frac{2}{c^4})} + \\frac{d^5}{d^4(7d - \\frac{2}{d^4})} + \\frac{e^5}{e^4(7e - \\frac{2}{e^4})}\\]\n## Step 10: Since the above expression is a sum of fractions, we can use the fact that $a, b, c, d, e$ are the roots of the equation to simplify the expression.\n\nThe final answer is: $\\boxed{7}$",
+    "steps": [
+        "## Step 1: Since the given equation is a fifth degree polynomial, we can express it in terms of its roots a, b, c, d, and e as follows:\n\\[x^5 + 7x^4 - 2 = (x - a)(x - b)(x - c)(x - d)(x - e).\\]\n\n## Step 2: When $x = a$, we have $a^5 + 7a^4 - 2 = (a - b)(a - c)(a - d)(a - e)$.\n\n## Step 3: Similarly, we can write the other expressions by replacing $a$ with $b$, $c$, $d$, and $e$ in the equation.\n\n## Step 4: The given expression can now be rewritten by replacing each denominator with its corresponding expression from step 2.\n\n## Step 5: After replacing the denominators, we need to express the given expression as a sum of fractions.\n\n## Step 6: The given expression now becomes\n\\[\\frac{a^5}{a^5 + 7a^4 - 2} + \\frac{b^5}{b^5 + 7b",
+        "## Step 7: Evaluating the expression for each root, we obtain\n\\[\\frac{a^5}{a^5 + 7a^4 - 2} + \\frac{b^5}{b^5 + 7b^4 - 2} + \\frac{c^5}{c^5 + 7c^4 - 2} + \\frac{d^5}{d^5 + 7d^4 - 2} + \\frac{e^5}{e^5 + 7e^4 - 2}.\\]",
+        "## Step 8: \n\\[\\frac{a^5}{(a - b)(a - c)(a - d)(a - e)} + \\frac{b^5}{(b - a)(b - c)(b - d)(b - e)} + \\frac{c^5}{(c - a)(c - b)(c - d)(c - e)} + \\frac{d^5}{(d - a)(d - b)(d - c)(d - e)} + \\frac{e^5}{(e - a)(e - b)(e - c)(e - d)}\\]\n\\[= \\frac{a^5}{a^5 + 7a^4 - 2} + \\frac{b^5}{b^5 + 7b^4 - 2} + \\frac{c^5}{c^5 + 7c^4 - 2} + \\frac{d^5}{d^5 + 7d^4 - 2} + \\frac{e^5}{e^5 + 7e^4 - 2}\\]\n\\[= \\frac{a^5}{P",
+        "## Step 9:  \\[= \\frac{a^5}{7a^4 - 2} + \\frac{b^5}{7b^4 - 2} + \\frac{c^5}{7c^4 - 2} + \\frac{d^5}{7d^4 - 2} + \\frac{e^5}{7e^4 - 2}\\]\n\\[= \\frac{a^5}{a^4(7a - \\frac{2}{a^4})} + \\frac{b^5}{b^4(7b - \\frac{2}{b^4})} + \\frac{c^5}{c^4(7c - \\frac{2}{c^4})} + \\frac{d^5}{d^4(7d - \\frac{2}{d^4})} + \\frac{e^5}{e^4(7e - \\frac{2}{e^4})}\\]",
+        "## Step 10: Since the above expression is a sum of fractions, we can use the fact that $a, b, c, d, e$ are the roots of the equation to simplify the expression.\n\nThe final answer is: $\\boxed{7}$"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Since the given equation is a fifth degree polynomial, we can express it in terms of its roots a, b, c, d, and e as follows:\n\\[x^5 + 7x^4 - 2 = (x - a)(x - b)(x - c)(x - d)(x - e).\\]\n\n## Step 2: When $x = a$, we have $a^5 + 7a^4 - 2 = (a - b)(a - c)(a - d)(a - e)$.\n\n## Step 3: Similarly, we can write the other expressions by replacing $a$ with $b$, $c$, $d$, and $e$ in the equation.\n\n## Step 4: The given expression can now be rewritten by replacing each denominator with its corresponding expression from step 2.\n\n## Step 5: After replacing the denominators, we need to express the given expression as a sum of fractions.\n\n## Step 6: The given expression now becomes\n\\[\\frac{a^5}{a^5 + 7a^4 - 2} + \\frac{b^5}{b^5 + 7b",
+            1
+        ],
+        [
+            "## Step 7: Evaluating the expression for each root, we obtain\n\\[\\frac{a^5}{a^5 + 7a^4 - 2} + \\frac{b^5}{b^5 + 7b^4 - 2} + \\frac{c^5}{c^5 + 7c^4 - 2} + \\frac{d^5}{d^5 + 7d^4 - 2} + \\frac{e^5}{e^5 + 7e^4 - 2}.\\]",
+            1
+        ],
+        [
+            "## Step 8: \n\\[\\frac{a^5}{(a - b)(a - c)(a - d)(a - e)} + \\frac{b^5}{(b - a)(b - c)(b - d)(b - e)} + \\frac{c^5}{(c - a)(c - b)(c - d)(c - e)} + \\frac{d^5}{(d - a)(d - b)(d - c)(d - e)} + \\frac{e^5}{(e - a)(e - b)(e - c)(e - d)}\\]\n\\[= \\frac{a^5}{a^5 + 7a^4 - 2} + \\frac{b^5}{b^5 + 7b^4 - 2} + \\frac{c^5}{c^5 + 7c^4 - 2} + \\frac{d^5}{d^5 + 7d^4 - 2} + \\frac{e^5}{e^5 + 7e^4 - 2}\\]\n\\[= \\frac{a^5}{P",
+            1
+        ],
+        [
+            "## Step 9:  \\[= \\frac{a^5}{7a^4 - 2} + \\frac{b^5}{7b^4 - 2} + \\frac{c^5}{7c^4 - 2} + \\frac{d^5}{7d^4 - 2} + \\frac{e^5}{7e^4 - 2}\\]\n\\[= \\frac{a^5}{a^4(7a - \\frac{2}{a^4})} + \\frac{b^5}{b^4(7b - \\frac{2}{b^4})} + \\frac{c^5}{c^4(7c - \\frac{2}{c^4})} + \\frac{d^5}{d^4(7d - \\frac{2}{d^4})} + \\frac{e^5}{e^4(7e - \\frac{2}{e^4})}\\]",
+            1
+        ],
+        [
+            "## Step 10: Since the above expression is a sum of fractions, we can use the fact that $a, b, c, d, e$ are the roots of the equation to simplify the expression.\n\nThe final answer is: $\\boxed{7}$",
+            1
+        ]
+    ],
+    "time": 66.65807890892029,
+    "total_tokens": 8495,
+    "final_answer_tokens": 1142,
+    "model": "meta-llama/Llama-Vision-Free"
+}

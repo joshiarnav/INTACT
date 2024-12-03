@@ -1,0 +1,26 @@
+{
+    "problem": "Quadrilateral $QABO$ is constructed as shown. Determine the area of $QABO$. [asy]\nsize(5cm);defaultpen(fontsize(9));\npair o = (0, 0); pair q = (0, 12); pair b = (12, 0);\npair a = (2, 12);\n\ndraw((-2, 0)--(15, 0), Arrow);\ndraw((0, -2)--(0, 15), Arrow);\ndraw(q--a--b);\n\nlabel(\"$Q(0, 12)$\", q, W);\nlabel(\"$A(2, 12)$\", a, NE);\nlabel(\"$B(12, 0)$\", b, S);\nlabel(\"$O(0, 0)$\", o, SW);\nlabel(\"$x$\", (15, 0), E);\nlabel(\"$y$\", (0, 15), N);\n\n[/asy]",
+    "level": "Level 1",
+    "type": "Geometry",
+    "solution": "If point $T$ is placed at $(2,0)$, then $T$ is on $OB$ and $AT$ is perpendicular to $OB$. [asy]\nsize(5cm);defaultpen(fontsize(9));\npair o = (0, 0); pair q = (0, 12); pair b = (12, 0);\npair a = (2, 12); pair t = (2, 0);\n\ndraw((-2, 0)--(15, 0), Arrow);\ndraw((0, -2)--(0, 15), Arrow);\ndraw(q--a--b);\ndraw(a--t);\n\nlabel(\"$Q(0, 12)$\", q, W);\nlabel(\"$A(2, 12)$\", a, NE);\nlabel(\"$B(12, 0)$\", b, S);\nlabel(\"$O(0, 0)$\", o, SW);\nlabel(\"$x$\", (15, 0), E);\nlabel(\"$y$\", (0, 15), N);\nlabel(\"$T(2, 0)$\", t, S + 0.6 * E);\n[/asy] Since $QO$ is perpendicular to $OB$, then $QO$ is parallel to $AT$. Both $QA$ and $OT$ are horizontal, so then $QA$ is parallel to $OT$. Therefore, $QATO$ is a rectangle. The area of rectangle $QATO$ is $QA\\times QO$ or $(2-0)\\times(12-0)=24$.\n\nSince $AT$ is perpendicular to $TB$, we can treat $AT$ as the height of $\\triangle ATB$ and $TB$ as the base. The area of $\\triangle ATB$ is $$\\frac{1}{2}\\times TB\\times AT = \\frac{1}{2}\\times(12-2)\\times(12-0)=\\frac{1}{2}\\times10\\times12=60.$$The area of $QABO$ is the sum of the areas of rectangle $QATO$ and $\\triangle ATB$, or $24+60=\\boxed{84}$.",
+    "is_solved": false,
+    "model_solution": "Step 1:  To determine the area of quadrilateral $QABO$, we can consider breaking it down into simpler shapes whose areas are easier to calculate.\nStep 2:  The quadrilateral can be divided into two triangles: $\\triangle OAB$ and $\\triangle OQA$.\nStep 3:  We can then calculate the area of each triangle using the formula for the area of a triangle, which is $\\frac{1}{2} \\times$ base $\\times$ height.\nStep 4:  The area of $\\triangle OAB$ can be calculated using the base $OB$ and the height $QA$.\nStep 5:  The area of $\\triangle OQA$ can be calculated using the base $OA$ and the height $QB$.\n\nWe will calculate the area of each triangle separately and then add them together to find the total area of quadrilateral $QABO$.\nStep 2:  The area of $\\triangle OAB$ is $\\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2} \\times 12 \\times 12 = 72.$",
+    "steps": [
+        "Step 1:  To determine the area of quadrilateral $QABO$, we can consider breaking it down into simpler shapes whose areas are easier to calculate.\nStep 2:  The quadrilateral can be divided into two triangles: $\\triangle OAB$ and $\\triangle OQA$.\nStep 3:  We can then calculate the area of each triangle using the formula for the area of a triangle, which is $\\frac{1}{2} \\times$ base $\\times$ height.\nStep 4:  The area of $\\triangle OAB$ can be calculated using the base $OB$ and the height $QA$.\nStep 5:  The area of $\\triangle OQA$ can be calculated using the base $OA$ and the height $QB$.\n\nWe will calculate the area of each triangle separately and then add them together to find the total area of quadrilateral $QABO$.",
+        "Step 2:  The area of $\\triangle OAB$ is $\\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2} \\times 12 \\times 12 = 72.$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  To determine the area of quadrilateral $QABO$, we can consider breaking it down into simpler shapes whose areas are easier to calculate.\nStep 2:  The quadrilateral can be divided into two triangles: $\\triangle OAB$ and $\\triangle OQA$.\nStep 3:  We can then calculate the area of each triangle using the formula for the area of a triangle, which is $\\frac{1}{2} \\times$ base $\\times$ height.\nStep 4:  The area of $\\triangle OAB$ can be calculated using the base $OB$ and the height $QA$.\nStep 5:  The area of $\\triangle OQA$ can be calculated using the base $OA$ and the height $QB$.\n\nWe will calculate the area of each triangle separately and then add them together to find the total area of quadrilateral $QABO$.",
+            1
+        ],
+        [
+            "Step 2:  The area of $\\triangle OAB$ is $\\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2} \\times 12 \\times 12 = 72.$",
+            1
+        ]
+    ],
+    "time": 26.838272094726562,
+    "total_tokens": 1870,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

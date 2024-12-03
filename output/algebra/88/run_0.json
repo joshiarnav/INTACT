@@ -1,0 +1,36 @@
+{
+    "problem": "A parabola with equation $y=x^2+bx+c$ passes through the points $(-1,-11)$ and $(3,17)$. What is $c$?",
+    "level": "Level 5",
+    "type": "Algebra",
+    "solution": "We substitute these two points into the given equation to solve for $c$. Plugging in $(-1,-11)$, we get $-11=(-1)^2-1b+c\\Rightarrow -b+c=-12$. Plugging in $(3,17)$, we get $17=3^2+3b+c \\Rightarrow 3b+c=8$. In summary, we have the two equations \\begin{align*}\n-b+c&=-12\\\\\n3b+c&=8\n\\end{align*} Multiplying the first equation by 3, we have $-3b+3c=-36$. Adding the second equation to this last one, we have $(-3b+3c)+(3b+c)=-36+8 \\Rightarrow c=\\boxed{-7}$.\n\nThe parabola is graphed below: [asy]\n\nLabel f;\n\nf.p=fontsize(4);\n\nxaxis(-9,4,Ticks(f, 2.0));\n\nyaxis(-13,17,Ticks(f, 2.0));\n\nreal f(real x)\n\n{\n\nreturn x^2+5x-7;\n\n}\n\ndraw(graph(f,-8,3), Arrows(4));\n\n[/asy]",
+    "is_solved": true,
+    "model_solution": "Step 1: Write the equation of the parabola for the two given points.\n$-11=(-1)^2+b(-1)+c$\n$17=3^2+b(3)+c$\nStep 2: Simplify the two equations.\n$-11=1-b+c$\n$17=9+3b+c$\nStep 3: Subtract the first equation from the second equation.\n$28=8+4b$\n$4b=20$\n\nFinal Answer: The final answer is 5.",
+    "steps": [
+        "Step 1: Write the equation of the parabola for the two given points.\n$-11=(-1)^2+b(-1)+c$\n$17=3^2+b(3)+c$",
+        "Step 2: Simplify the two equations.\n$-11=1-b+c$\n$17=9+3b+c$",
+        "Step 3: Subtract the first equation from the second equation.\n$28=8+4b$",
+        "$4b=20$\n\nFinal Answer: The final answer is 5."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Write the equation of the parabola for the two given points.\n$-11=(-1)^2+b(-1)+c$\n$17=3^2+b(3)+c$",
+            1
+        ],
+        [
+            "Step 2: Simplify the two equations.\n$-11=1-b+c$\n$17=9+3b+c$",
+            1
+        ],
+        [
+            "Step 3: Subtract the first equation from the second equation.\n$28=8+4b$",
+            1
+        ],
+        [
+            "$4b=20$\n\nFinal Answer: The final answer is 5.",
+            1
+        ]
+    ],
+    "time": 54.74484300613403,
+    "total_tokens": 1424,
+    "final_answer_tokens": 203,
+    "model": "meta-llama/Llama-Vision-Free"
+}

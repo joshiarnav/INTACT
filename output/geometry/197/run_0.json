@@ -1,0 +1,46 @@
+{
+    "problem": "In triangle $ABC$, $\\angle ABC = 90^\\circ$, and point $D$ lies on segment $BC$ such that $AD$ is an angle bisector.  If $AB = 105$ and $BD = 42$, then find $AC$.",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "By the angle bisector theorem, $AC/CD = AB/BD = 105/42 = 5/2$.  Let $AC = 5x$ and $CD = 2x$.\n\n[asy]\nunitsize(0.03 cm);\n\npair A, B, C, D;\n\nA = (0,105);\nB = (0,0);\nC = (100,0);\nD = (42,0);\n\ndraw(A--B--C--cycle);\ndraw(A--D);\n\nlabel(\"$A$\", A, NW);\nlabel(\"$B$\", B, SW);\nlabel(\"$C$\", C, SE);\nlabel(\"$D$\", D, S);\nlabel(\"$42$\", (B + D)/2, S);\nlabel(\"$105$\", (A + B)/2, W);\nlabel(\"$2x$\", (C + D)/2, S);\nlabel(\"$5x$\", (A + C)/2, NE);\n[/asy]\n\nThen by Pythagoras, $(2x + 42)^2 + 105^2 = (5x)^2$.  This simplifies to $21x^2 - 168x - 12789 = 0$, which factors as $21(x - 29)(x + 21) = 0$, so $x = 29$.  Therefore, $AC = 5x = \\boxed{145}$.",
+    "is_solved": true,
+    "model_solution": "Step 1:  We are given a triangle $ABC$ where $\\angle ABC = 90^\\circ$, and point $D$ lies on segment $BC$ such that $AD$ is an angle bisector. We also know that $AB = 105$ and $BD = 42$. Our goal is to find the length of $AC$.\nStep 2:  To begin, we can use the Angle Bisector Theorem to relate the lengths of the segments $BD$ and $CD$ to the lengths of the sides $AB$ and $AC$.\nStep 3:  The Angle Bisector Theorem states that in a triangle, an angle bisector divides the opposite side into segments that are proportional to the other two sides of the triangle.\nStep 4:  Applying the theorem to triangle $ABC$, we have the equation $\\frac{BD}{CD} = \\frac{AB}{AC}$.\nStep 5:  Solving for $CD$, we find that $CD = \\frac{AB \\cdot CD}{BD} = \\frac{105 \\cdot CD}{42}$.\nStep 6:  From this, we can express $CD$ in terms of $BC$\nStep 2:\n$CD = \\frac{105 \\cdot CD}{42} \\Rightarrow 42CD = 105CD \\Rightarrow 63CD = BC$\n$CD = \\frac{21}{7} = 3$\n$AC = \\frac{AB \\cdot AC}{BC} = \\frac{105 \\cdot AC}{63}$\n$AC = \\frac{105 \\cdot AC}{63} \\Rightarrow 63AC = 105AC \\Rightarrow 42AC = BC$\n$AC = \\frac{21}{7} = 3$\n$AC = \\frac{AB \\cdot AC}{BC} = \\frac{105 \\cdot AC}{63}$",
+    "steps": [
+        "Step 1:  We are given a triangle $ABC$ where $\\angle ABC = 90^\\circ$, and point $D$ lies on segment $BC$ such that $AD$ is an angle bisector. We also know that $AB = 105$ and $BD = 42$. Our goal is to find the length of $AC$.\nStep 2:  To begin, we can use the Angle Bisector Theorem to relate the lengths of the segments $BD$ and $CD$ to the lengths of the sides $AB$ and $AC$.\nStep 3:  The Angle Bisector Theorem states that in a triangle, an angle bisector divides the opposite side into segments that are proportional to the other two sides of the triangle.\nStep 4:  Applying the theorem to triangle $ABC$, we have the equation $\\frac{BD}{CD} = \\frac{AB}{AC}$.\nStep 5:  Solving for $CD$, we find that $CD = \\frac{AB \\cdot CD}{BD} = \\frac{105 \\cdot CD}{42}$.\nStep 6:  From this, we can express $CD$ in terms of $BC$",
+        "Step 2:\n$CD = \\frac{105 \\cdot CD}{42} \\Rightarrow 42CD = 105CD \\Rightarrow 63CD = BC$",
+        "$CD = \\frac{21}{7} = 3$",
+        "$AC = \\frac{AB \\cdot AC}{BC} = \\frac{105 \\cdot AC}{63}$",
+        "$AC = \\frac{105 \\cdot AC}{63} \\Rightarrow 63AC = 105AC \\Rightarrow 42AC = BC$\n$AC = \\frac{21}{7} = 3$",
+        "$AC = \\frac{AB \\cdot AC}{BC} = \\frac{105 \\cdot AC}{63}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We are given a triangle $ABC$ where $\\angle ABC = 90^\\circ$, and point $D$ lies on segment $BC$ such that $AD$ is an angle bisector. We also know that $AB = 105$ and $BD = 42$. Our goal is to find the length of $AC$.\nStep 2:  To begin, we can use the Angle Bisector Theorem to relate the lengths of the segments $BD$ and $CD$ to the lengths of the sides $AB$ and $AC$.\nStep 3:  The Angle Bisector Theorem states that in a triangle, an angle bisector divides the opposite side into segments that are proportional to the other two sides of the triangle.\nStep 4:  Applying the theorem to triangle $ABC$, we have the equation $\\frac{BD}{CD} = \\frac{AB}{AC}$.\nStep 5:  Solving for $CD$, we find that $CD = \\frac{AB \\cdot CD}{BD} = \\frac{105 \\cdot CD}{42}$.\nStep 6:  From this, we can express $CD$ in terms of $BC$",
+            1
+        ],
+        [
+            "Step 2:\n$CD = \\frac{105 \\cdot CD}{42} \\Rightarrow 42CD = 105CD \\Rightarrow 63CD = BC$",
+            1
+        ],
+        [
+            "$CD = \\frac{21}{7} = 3$",
+            1
+        ],
+        [
+            "$AC = \\frac{AB \\cdot AC}{BC} = \\frac{105 \\cdot AC}{63}$",
+            1
+        ],
+        [
+            "$AC = \\frac{105 \\cdot AC}{63} \\Rightarrow 63AC = 105AC \\Rightarrow 42AC = BC$\n$AC = \\frac{21}{7} = 3$",
+            1
+        ],
+        [
+            "$AC = \\frac{AB \\cdot AC}{BC} = \\frac{105 \\cdot AC}{63}$",
+            1
+        ]
+    ],
+    "time": 79.78167963027954,
+    "total_tokens": 5280,
+    "final_answer_tokens": 506,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,31 @@
+{
+    "problem": "A right pyramid has a square base with area 288 square cm. Its peak is 15 cm from each of the other vertices. What is the volume of the pyramid, in cubic centimeters?",
+    "level": "Level 4",
+    "type": "Geometry",
+    "solution": "[asy]\nimport three;\ntriple A = (0,0,0);\ntriple B = (1,0,0);\ntriple C = (1,1,0);\ntriple D = (0,1,0);\ntriple P = (0.5,0.5,1);\ndraw(B--C--D--P--B);\ndraw(P--C);\ndraw(B--A--D,dashed);\ndraw(P--A,dashed);\nlabel(\"$A$\",A,NW);\nlabel(\"$B$\",B,W);\nlabel(\"$C$\",C,S);\nlabel(\"$D$\",D,E);\nlabel(\"$P$\",P,N);\ntriple F= (0.5,0.5,0);\nlabel(\"$F$\",F,S);\ntriple M=(B+C)/2;\ndraw(P--F--B,dashed);\n[/asy]\n\nLet $F$ be the center of the square base.  Since the pyramid is a right pyramid, triangle $PFB$ is a right triangle.  The area of the base of the pyramid is 288 square cm, so the length of each side of the base is $12\\sqrt{2}$ cm.  Since $F$ is the center of the base, $FB$ is half the diagonal of the base, or $(12\\sqrt{2}\\cdot\\sqrt{2})/2 = 12$ cm.  Applying the Pythagorean Theorem to triangle $PFB$ gives  \\[PF = \\sqrt{PB^2 - FB^2} = \\sqrt{225 - 144} = \\sqrt{81} = 9,\\]so the volume of the pyramid is $[ABCD](PF)/3 = (288)(9)/3 = 288\\cdot 3 = \\boxed{864}$ cubic centimeters.",
+    "is_solved": true,
+    "model_solution": "Step 1: The area of the base is given by the formula $A = s^{2}$, where $s$ is the side length of the square base. We need to find the length of the side of the square base to determine its area.\n\n$A = 288, s^{2} = A$\n$s^{2} = 288$\n$s = \\sqrt{288}$\nStep 2:\n$\\sqrt{288} = \\sqrt{(144)(2)} = \\sqrt{(12^{2})(2)} = 12\\sqrt{2}$\nStep 3:\nThe height of the pyramid is 15 cm. The slant height of the pyramid can be found using the Pythagorean Theorem, which states that the square of the hypotenuse of a right triangle is equal to the sum of the squares of the other two sides. Since the slant height is the hypotenuse of a right triangle formed by the height and half the diagonal of the base, we can find the length of the slant height.\n\n\nThe final answer is: $\\boxed{144\\sqrt{95}}$",
+    "steps": [
+        "Step 1: The area of the base is given by the formula $A = s^{2}$, where $s$ is the side length of the square base. We need to find the length of the side of the square base to determine its area.\n\n$A = 288, s^{2} = A$\n$s^{2} = 288$\n$s = \\sqrt{288}$",
+        "Step 2:\n$\\sqrt{288} = \\sqrt{(144)(2)} = \\sqrt{(12^{2})(2)} = 12\\sqrt{2}$",
+        "Step 3:\nThe height of the pyramid is 15 cm. The slant height of the pyramid can be found using the Pythagorean Theorem, which states that the square of the hypotenuse of a right triangle is equal to the sum of the squares of the other two sides. Since the slant height is the hypotenuse of a right triangle formed by the height and half the diagonal of the base, we can find the length of the slant height.\n\n\nThe final answer is: $\\boxed{144\\sqrt{95}}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: The area of the base is given by the formula $A = s^{2}$, where $s$ is the side length of the square base. We need to find the length of the side of the square base to determine its area.\n\n$A = 288, s^{2} = A$\n$s^{2} = 288$\n$s = \\sqrt{288}$",
+            1
+        ],
+        [
+            "Step 2:\n$\\sqrt{288} = \\sqrt{(144)(2)} = \\sqrt{(12^{2})(2)} = 12\\sqrt{2}$",
+            1
+        ],
+        [
+            "Step 3:\nThe height of the pyramid is 15 cm. The slant height of the pyramid can be found using the Pythagorean Theorem, which states that the square of the hypotenuse of a right triangle is equal to the sum of the squares of the other two sides. Since the slant height is the hypotenuse of a right triangle formed by the height and half the diagonal of the base, we can find the length of the slant height.\n\n\nThe final answer is: $\\boxed{144\\sqrt{95}}$",
+            1
+        ]
+    ],
+    "time": 39.2151403427124,
+    "total_tokens": 1464,
+    "final_answer_tokens": 328,
+    "model": "meta-llama/Llama-Vision-Free"
+}

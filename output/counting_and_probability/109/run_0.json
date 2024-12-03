@@ -1,0 +1,26 @@
+{
+    "problem": "What is the nearest integer to $(5+2\\sqrt7)^4$?",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "When we expand this out, we get a bunch of terms with $\\sqrt7$ in them. To avoid painful estimation, we do the following trick: Add $(5-2\\sqrt7)^4$ to this expression. We know that $(5-2\\sqrt7)^4$ is small, since $2\\sqrt7=\\sqrt{28}$ is close to $5=\\sqrt{25}$, at least compared to $6=\\sqrt{36}$. When we add these together, the $\\sqrt7$ terms magically cancel out. By the Binomial Theorem, $$(5+2\\sqrt7)^4=5^4+4\\cdot5^3\\cdot(2\\sqrt7)+6\\cdot5^2\\cdot(2\\sqrt7)^2+4\\cdot5\\cdot(2\\sqrt7)^3+(2\\sqrt7)^4$$ whereas $$(5-2\\sqrt7)^4=5^4-4\\cdot5^3\\cdot(2\\sqrt7)+6\\cdot5^2\\cdot(2\\sqrt7)^2-4\\cdot5\\cdot(2\\sqrt7)^3+(2\\sqrt7)^4.$$ Therefore, their sum is $$2(5^4+6\\cdot5^2(2\\sqrt7)^2+(2\\sqrt7)^4)=2(625+4200+784)=11218.$$ Since the term we added, $(5-2\\sqrt7)^4$, is less than a half (actually, it's less than .01), $\\boxed{11218}$ is the closest integer to $(5+2\\sqrt7)^4$.",
+    "is_solved": true,
+    "model_solution": "## Step 1:  We need to find the value of $(5+2\\sqrt7)^4$.\n## Step 2:  To do this, we can apply the binomial expansion formula, $(a+b)^n$, where in this case $a = 5$, $b = 2\\sqrt7$, and $n = 4$.\n## Step 3:  The binomial expansion formula gives us: $(a+b)^n = {n \\choose 0}a^n b^0 + {n \\choose 1}a^{n-1}b^1 + {n \\choose 2}a^{n-2}b^2 + \\cdots + {n \\choose n}a^0 b^n$.\n## Step 4:  Substituting our values into the formula, we get: $(5+2\\sqrt7)^4 = 5^4 + {4 \\choose 1}5^3(2\\sqrt7) + {4 \\choose 2}5^2(2\\sqrt7)^2 + {4 \\choose 3}5(2\\sqrt7)^3 + (2\\sqrt7)^\n## Step 5:  Calculating the individual terms, we get: $625 + 4(125)(2\\sqrt7) + 6(25)(28) + 4(5)(56\\sqrt7) + 448 = 625 + 1000\\sqrt7 + 4200 + 1120\\sqrt7 + 448 = 6273 + 2120\\sqrt7$.\n\nThe final answer is: $\\boxed{6274}$",
+    "steps": [
+        "## Step 1:  We need to find the value of $(5+2\\sqrt7)^4$.\n## Step 2:  To do this, we can apply the binomial expansion formula, $(a+b)^n$, where in this case $a = 5$, $b = 2\\sqrt7$, and $n = 4$.\n## Step 3:  The binomial expansion formula gives us: $(a+b)^n = {n \\choose 0}a^n b^0 + {n \\choose 1}a^{n-1}b^1 + {n \\choose 2}a^{n-2}b^2 + \\cdots + {n \\choose n}a^0 b^n$.\n## Step 4:  Substituting our values into the formula, we get: $(5+2\\sqrt7)^4 = 5^4 + {4 \\choose 1}5^3(2\\sqrt7) + {4 \\choose 2}5^2(2\\sqrt7)^2 + {4 \\choose 3}5(2\\sqrt7)^3 + (2\\sqrt7)^",
+        "## Step 5:  Calculating the individual terms, we get: $625 + 4(125)(2\\sqrt7) + 6(25)(28) + 4(5)(56\\sqrt7) + 448 = 625 + 1000\\sqrt7 + 4200 + 1120\\sqrt7 + 448 = 6273 + 2120\\sqrt7$.\n\nThe final answer is: $\\boxed{6274}$"
+    ],
+    "full_steps": [
+        [
+            "## Step 1:  We need to find the value of $(5+2\\sqrt7)^4$.\n## Step 2:  To do this, we can apply the binomial expansion formula, $(a+b)^n$, where in this case $a = 5$, $b = 2\\sqrt7$, and $n = 4$.\n## Step 3:  The binomial expansion formula gives us: $(a+b)^n = {n \\choose 0}a^n b^0 + {n \\choose 1}a^{n-1}b^1 + {n \\choose 2}a^{n-2}b^2 + \\cdots + {n \\choose n}a^0 b^n$.\n## Step 4:  Substituting our values into the formula, we get: $(5+2\\sqrt7)^4 = 5^4 + {4 \\choose 1}5^3(2\\sqrt7) + {4 \\choose 2}5^2(2\\sqrt7)^2 + {4 \\choose 3}5(2\\sqrt7)^3 + (2\\sqrt7)^",
+            1
+        ],
+        [
+            "## Step 5:  Calculating the individual terms, we get: $625 + 4(125)(2\\sqrt7) + 6(25)(28) + 4(5)(56\\sqrt7) + 448 = 625 + 1000\\sqrt7 + 4200 + 1120\\sqrt7 + 448 = 6273 + 2120\\sqrt7$.\n\nThe final answer is: $\\boxed{6274}$",
+            1
+        ]
+    ],
+    "time": 25.416956901550293,
+    "total_tokens": 1504,
+    "final_answer_tokens": 424,
+    "model": "meta-llama/Llama-Vision-Free"
+}

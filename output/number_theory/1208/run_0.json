@@ -1,0 +1,66 @@
+{
+    "problem": "An integer $X$ has the following properties:\n\n1.) $X$ is a multiple of 17\n\n2.) $X$ is less than 1000\n\n3.) $X$ is one less than a multiple of 8.\n\nWhat is the largest possible value of $X$?",
+    "level": "Level 4",
+    "type": "Number Theory",
+    "solution": "Let the desired number be $a$. Then \\begin{align*}\na \\equiv 0 & \\pmod {17}\\\\\na \\equiv -1\\equiv 7 & \\pmod 8\n\\end{align*} The first congruence implies that there exists a non-negative integer $n$ such that $a=17n$. Substituting this into the second congruence yields $$17n\\equiv 7\\pmod 8,$$ $$\\implies n\\equiv 7\\pmod 8.$$ So $n$ has a lower bound of $7$. Then $$n\\ge 7,$$ $$\\implies a=17n\\ge 119.$$ $119$ satisfies both congruences, so subtracting it from both sides of both congruences gives \\begin{align*}\na-119\\equiv -119\\equiv 0 &\\pmod {17}\\nonumber\\\\\na-119\\equiv -112\\equiv 0 &\\pmod 8\\nonumber\n\\end{align*} Since $\\gcd(17,8)=1$, we get $a-119\\equiv 0\\pmod{17\\cdot 8}.$ That is, $a\\equiv 119\\pmod {136}.$\n\nNote that every number that satisfies this congruence satisfies the original two congruences. The largest number of the form $119+136m$ for some non-negative integer $m$, and less than $1000$, is $119+136\\cdot 6=\\boxed{935}.$",
+    "is_solved": false,
+    "model_solution": "Step 1: List the multiples of 17 that are less than 1000.\n$17,34,51,68,85,102,119,136,153,170,187,204,221,238,255,272,289,306,323,340,357,374,391,408,425,442,459,476,493,510,527,544,561,578,595,612,629,646,663,680,697,714,731,748,765,782,799,816,833,850,867,884,901,918,935,952,969,986$\nStep 2: From the list in Step 1, note which numbers are one less than a multiple of 8.\nStep 3: Identify the largest number in the subset of the list from Step 2 that is one less than a multiple of 8.\nStep 4: Find the largest number from Step 3 that satisfies the condition for X.\nStep 4: Note that the numbers that are one less than a multiple of 8 are 7, 15, 23, 31, 39, 47, 55, 63, 71, 79, 87, 95, 103, 111, 119, 127, 135, 143, 151, 159, 167, 175, 183, 191, 199, 207, 215, 223, 231, 239, 247, 255, 263, 271, 279, 287, 295, 303, 311, 319, 327, 335, 343, 351, 359, 367, 375, 383, 391, 399, 407, 415, 423, 431, 439, 447, 455, 463, 471, 479, 487, 495, 503, 511, 519, 527, 535, 543, 551, 559, 567, 575, 583, 591, 599, 607, 615,\nStep 4: Find the largest number from the subset in Step 2 that is one less than a multiple of 8.\nStep 4: From the list in Step 4, note that the largest number that is one less than a multiple of 8 is 991.\nStep 5: Note that 991 is not one less than a multiple of 17.\nStep 6: Determine the largest multiple of 17 that is less than 991.\nStep 7: List the multiples of 17 that are less than 991: 17, 34, 51, 68, 85, 102, 119, 136, 153, 170, 187, 204, 221, 238, 255, 272, 289, 306, 323, 340, 357, 374, 391, 408, 425, 442, 459, 476, 493, 510, 527, 544, 561, 578, 595, 612, 629, 646, 663, 680, 697, 714, 731, 748, 765, 782, 799, 816, 833, 850, 867, 884, 901, 918, 935, 952, 969, 986",
+    "steps": [
+        "Step 1: List the multiples of 17 that are less than 1000.\n$17,34,51,68,85,102,119,136,153,170,187,204,221,238,255,272,289,306,323,340,357,374,391,408,425,442,459,476,493,510,527,544,561,578,595,612,629,646,663,680,697,714,731,748,765,782,799,816,833,850,867,884,901,918,935,952,969,986$",
+        "Step 2: From the list in Step 1, note which numbers are one less than a multiple of 8.",
+        "Step 3: Identify the largest number in the subset of the list from Step 2 that is one less than a multiple of 8.",
+        "Step 4: Find the largest number from Step 3 that satisfies the condition for X.",
+        "Step 4: Note that the numbers that are one less than a multiple of 8 are 7, 15, 23, 31, 39, 47, 55, 63, 71, 79, 87, 95, 103, 111, 119, 127, 135, 143, 151, 159, 167, 175, 183, 191, 199, 207, 215, 223, 231, 239, 247, 255, 263, 271, 279, 287, 295, 303, 311, 319, 327, 335, 343, 351, 359, 367, 375, 383, 391, 399, 407, 415, 423, 431, 439, 447, 455, 463, 471, 479, 487, 495, 503, 511, 519, 527, 535, 543, 551, 559, 567, 575, 583, 591, 599, 607, 615,",
+        "Step 4: Find the largest number from the subset in Step 2 that is one less than a multiple of 8.",
+        "Step 4: From the list in Step 4, note that the largest number that is one less than a multiple of 8 is 991.",
+        "Step 5: Note that 991 is not one less than a multiple of 17.",
+        "Step 6: Determine the largest multiple of 17 that is less than 991.",
+        "Step 7: List the multiples of 17 that are less than 991: 17, 34, 51, 68, 85, 102, 119, 136, 153, 170, 187, 204, 221, 238, 255, 272, 289, 306, 323, 340, 357, 374, 391, 408, 425, 442, 459, 476, 493, 510, 527, 544, 561, 578, 595, 612, 629, 646, 663, 680, 697, 714, 731, 748, 765, 782, 799, 816, 833, 850, 867, 884, 901, 918, 935, 952, 969, 986"
+    ],
+    "full_steps": [
+        [
+            "Step 1: List the multiples of 17 that are less than 1000.\n$17,34,51,68,85,102,119,136,153,170,187,204,221,238,255,272,289,306,323,340,357,374,391,408,425,442,459,476,493,510,527,544,561,578,595,612,629,646,663,680,697,714,731,748,765,782,799,816,833,850,867,884,901,918,935,952,969,986$",
+            1
+        ],
+        [
+            "Step 2: From the list in Step 1, note which numbers are one less than a multiple of 8.",
+            1
+        ],
+        [
+            "Step 3: Identify the largest number in the subset of the list from Step 2 that is one less than a multiple of 8.",
+            1
+        ],
+        [
+            "Step 4: Find the largest number from Step 3 that satisfies the condition for X.",
+            1
+        ],
+        [
+            "Step 4: Note that the numbers that are one less than a multiple of 8 are 7, 15, 23, 31, 39, 47, 55, 63, 71, 79, 87, 95, 103, 111, 119, 127, 135, 143, 151, 159, 167, 175, 183, 191, 199, 207, 215, 223, 231, 239, 247, 255, 263, 271, 279, 287, 295, 303, 311, 319, 327, 335, 343, 351, 359, 367, 375, 383, 391, 399, 407, 415, 423, 431, 439, 447, 455, 463, 471, 479, 487, 495, 503, 511, 519, 527, 535, 543, 551, 559, 567, 575, 583, 591, 599, 607, 615,",
+            1
+        ],
+        [
+            "Step 4: Find the largest number from the subset in Step 2 that is one less than a multiple of 8.",
+            1
+        ],
+        [
+            "Step 4: From the list in Step 4, note that the largest number that is one less than a multiple of 8 is 991.",
+            1
+        ],
+        [
+            "Step 5: Note that 991 is not one less than a multiple of 17.",
+            1
+        ],
+        [
+            "Step 6: Determine the largest multiple of 17 that is less than 991.",
+            1
+        ],
+        [
+            "Step 7: List the multiples of 17 that are less than 991: 17, 34, 51, 68, 85, 102, 119, 136, 153, 170, 187, 204, 221, 238, 255, 272, 289, 306, 323, 340, 357, 374, 391, 408, 425, 442, 459, 476, 493, 510, 527, 544, 561, 578, 595, 612, 629, 646, 663, 680, 697, 714, 731, 748, 765, 782, 799, 816, 833, 850, 867, 884, 901, 918, 935, 952, 969, 986",
+            1
+        ]
+    ],
+    "time": 135.49665212631226,
+    "total_tokens": 10438,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

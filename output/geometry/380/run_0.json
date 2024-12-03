@@ -1,0 +1,51 @@
+{
+    "problem": "Two nonadjacent vertices of a rectangle are $(4,3)$ and $(-4,-3),$ and the other two vertices have integer coordinates. How many rectangles satisfy these conditions?",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "The diagonals of a rectangle are of the same length and bisect each other.  The diagonal determined by the two given points has its midpoint at $(0, 0),$ and it has length \\[\\sqrt{(4-(-4))^2 + (3-(-3))^2} = \\sqrt{8^2 + 6^2} = 10.\\]Thus, the other diagonal must have its midpoint at $(0, 0)$ and also have length $10.$ This means that the other two vertices of the rectangle must lie on the circle $x^2 + y^2 = 5^2.$ The number of lattice points (points with integer coordinates) on this circle is $12$: we have \\[(\\pm 4, \\pm 3), (\\pm 3, \\pm 4), (\\pm 5, 0), (0, \\pm 5).\\]These points pair up to give $6$ possible diagonals, of which $1$ is the given diagonal. Therefore, there are $6-1=5$ choices for the other diagonal, which uniquely determines a rectangle. Thus there are $\\boxed{5}$ possible rectangles.",
+    "is_solved": true,
+    "model_solution": "Step 1: Let the coordinates of the other two vertices be (a, b) and (c, d), and calculate the distances between the two given points and the given points to the other two points.\nStep 2: The distance between (4, 3) and (-4, -3) is $\\sqrt{(4-(-4))^2 + (3-(-3))^2} = 5\\sqrt{2}$. Therefore, the distance between (a, b) and (c, d) must be $5\\sqrt{2}$ as well.\nStep 3: Since $d(a, b, c) = 5\\sqrt{2}$ and $a, b,$ and $c$ are integers, we conclude that $|a - c| = 5$ and $|b - d| = 5$, and that $(a, b)$ and $(c, d)$ are the vertices of a $5 \\times 5$ rectangle.\nStep 4: There are four ways to choose which of the four sides of length 5 has length 5: the sides of length 5 can be either horizontal or vertical, and they can either be on the left or on the right (or top or bottom), and we can choose either the top or the bottom to be the side of length 5.\nStep 5: Now we need to calculate the number of rectangles that satisfy the conditions and find the total number of rectangles that satisfy these conditions.\nStep 6: There are four ways to choose which side has length 5, and for each of these four ways, there are four ways to choose the coordinates of the vertices of the $2\\times 5$ rectangle and $5\\times 2$ rectangle, so there are $4\\cdot 4 = 16$ rectangles that satisfy the conditions.\nStep 7: There are $4$ rectangles that satisfy the conditions for each of $a=4$ and $a=-4$, and similarly for the other values of $a$ and $b$, so the total number of rectangles that satisfy the conditions is $4\\times 2\\times 2=\\boxed{16}$. Final Answer",
+    "steps": [
+        "Step 1: Let the coordinates of the other two vertices be (a, b) and (c, d), and calculate the distances between the two given points and the given points to the other two points.",
+        "Step 2: The distance between (4, 3) and (-4, -3) is $\\sqrt{(4-(-4))^2 + (3-(-3))^2} = 5\\sqrt{2}$. Therefore, the distance between (a, b) and (c, d) must be $5\\sqrt{2}$ as well.",
+        "Step 3: Since $d(a, b, c) = 5\\sqrt{2}$ and $a, b,$ and $c$ are integers, we conclude that $|a - c| = 5$ and $|b - d| = 5$, and that $(a, b)$ and $(c, d)$ are the vertices of a $5 \\times 5$ rectangle.",
+        "Step 4: There are four ways to choose which of the four sides of length 5 has length 5: the sides of length 5 can be either horizontal or vertical, and they can either be on the left or on the right (or top or bottom), and we can choose either the top or the bottom to be the side of length 5.",
+        "Step 5: Now we need to calculate the number of rectangles that satisfy the conditions and find the total number of rectangles that satisfy these conditions.",
+        "Step 6: There are four ways to choose which side has length 5, and for each of these four ways, there are four ways to choose the coordinates of the vertices of the $2\\times 5$ rectangle and $5\\times 2$ rectangle, so there are $4\\cdot 4 = 16$ rectangles that satisfy the conditions.",
+        "Step 7: There are $4$ rectangles that satisfy the conditions for each of $a=4$ and $a=-4$, and similarly for the other values of $a$ and $b$, so the total number of rectangles that satisfy the conditions is $4\\times 2\\times 2=\\boxed{16}$. Final Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Let the coordinates of the other two vertices be (a, b) and (c, d), and calculate the distances between the two given points and the given points to the other two points.",
+            1
+        ],
+        [
+            "Step 2: The distance between (4, 3) and (-4, -3) is $\\sqrt{(4-(-4))^2 + (3-(-3))^2} = 5\\sqrt{2}$. Therefore, the distance between (a, b) and (c, d) must be $5\\sqrt{2}$ as well.",
+            1
+        ],
+        [
+            "Step 3: Since $d(a, b, c) = 5\\sqrt{2}$ and $a, b,$ and $c$ are integers, we conclude that $|a - c| = 5$ and $|b - d| = 5$, and that $(a, b)$ and $(c, d)$ are the vertices of a $5 \\times 5$ rectangle.",
+            1
+        ],
+        [
+            "Step 4: There are four ways to choose which of the four sides of length 5 has length 5: the sides of length 5 can be either horizontal or vertical, and they can either be on the left or on the right (or top or bottom), and we can choose either the top or the bottom to be the side of length 5.",
+            1
+        ],
+        [
+            "Step 5: Now we need to calculate the number of rectangles that satisfy the conditions and find the total number of rectangles that satisfy these conditions.",
+            1
+        ],
+        [
+            "Step 6: There are four ways to choose which side has length 5, and for each of these four ways, there are four ways to choose the coordinates of the vertices of the $2\\times 5$ rectangle and $5\\times 2$ rectangle, so there are $4\\cdot 4 = 16$ rectangles that satisfy the conditions.",
+            1
+        ],
+        [
+            "Step 7: There are $4$ rectangles that satisfy the conditions for each of $a=4$ and $a=-4$, and similarly for the other values of $a$ and $b$, so the total number of rectangles that satisfy the conditions is $4\\times 2\\times 2=\\boxed{16}$. Final Answer",
+            1
+        ]
+    ],
+    "time": 97.19388937950134,
+    "total_tokens": 4985,
+    "final_answer_tokens": 548,
+    "model": "meta-llama/Llama-Vision-Free"
+}

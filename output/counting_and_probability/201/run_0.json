@@ -1,0 +1,66 @@
+{
+    "problem": "A fair coin is flipped 7 times.  What is the probability that at least 5 of the flips come up heads?",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "First, we count the number of total outcomes.  Each toss has 2 possibilities - heads or tails - so the 7 tosses have $2^7 = 128$ possible outcomes.\n\nTo count the number of outcomes with at least 5 heads, we need to use casework.\n\nCase 1: 5 heads. To count the number of ways that 5 heads can come up, we simply need to choose 5 of the 7 tosses to be heads (the other 2 tosses will then automatically be tails).  So this can be done in $\\binom{7}{5} = 21$ ways.\n\nCase 2: 6 heads. Here we have to choose 6 of the tosses to be heads; this can be done in $\\binom{7}{6} = 7$ ways.\n\nCase 3: 7 heads. There's only 1 way to do this -- all 7 tosses must be heads.\n\nSo there are $21 + 7 + 1 = 29$ successful outcomes, hence the probability is $\\boxed{\\frac{29}{128}}$.",
+    "is_solved": false,
+    "model_solution": "Let \\(n=7\\), the number of trials, and let \\(x\\) be the number of trials with a \"success\" (heads).  Then we have to find the probability of \\(x \\geq 5\\), or the probability that at least 5 of the flips come up heads.\nUse the binomial probability formula with the appropriate values of \\(n\\) and \\(k\\) to calculate the probabilities of the cases \\(x=5\\), \\(x=6\\), and \\(x=7\\),\nCalculate the probabilities of the cases \\(x=5\\), \\(x=6\\), and \\(x=7\\) using the binomial probability formula: \\(P(x=k) = {n \\choose k} p^k (1-p)^{n-k}\\), where \\(n = 7\\), \\(p = \\frac{1}{2}\\), and \\(k\\) is the number of heads for each case.\nCalculate \\(P(x=5)\\): \\(P(x=5) = {7 \\choose 5} \\left(\\frac{1}{2}\\right)^5 \\left(1 - \\frac{1}{2}\\right)^{7-5}\\)\nCalculate \\(P(x=6)\\): \\(P(x=6) = {7 \\choose 6} \\left(\\frac{1}{2}\\right)^6 \\left(1 - \\frac{1}{2}\\right)^{7-6}\\)\nCalculate \\(P(x=7)\\): \\(P(x=7) = {7 \\choose 7} \\left(\\frac{1}{2}\\right)^7 \\left(1 - \\frac{1}{2}\\right)^{7-7}\\)\nCalculate the value of \\(P(x=5)\\):\n\\[P(x=5) = {7 \\choose 5} \\left(\\frac{1}{2}\\right)^5 \\left(1 - \\frac{1}{2}\\right)^{7-5}\\]\n\\[P(x=5) = 21\\left(\\frac{1}{2}\\right)^5 \\left(\\frac{1}{2}\\right)^2\\]\n\\[P(x=5) = 21\\left(\\frac{1}{2}\\right)^7\\]\n\\[P(x=5) = 21 \\times \\frac{1}{128}\\]\n\\[P(x=5) = \\frac{21}{128}\\]\nCalculate the value of \\(P(x=6)\\):\n\\[P(x=6) = {7 \\choose 6} \\left(\\frac{1}{2}\\right)^6 \\left(1 - \\frac{1}{2}\\right)^{7-6}\\]\n\\[P(x=6) = 7\\left(\\frac{1}{2}\\right)^6 \\left(\\frac{1}{2}\\right)^1\\]\n\\[P(x=6) = 7\\left(\\frac{1}{2}\\right)^7\\]\n\\[P(x=6) = 7 \\times \\frac{1}{128}\\]\n\\[P(x=6) = \\frac{7}{128}\\]\nCalculate the value of \\(P(x=7)\\):\n\\[P(x=7) = {7 \\choose 7} \\left(\\frac{1}{2}\\right)^7 \\left(1 - \\frac{1}{2}\\right)^{7-7}\\]\n\\[P(x=7) = 1 \\left(\\frac{1}{2}\\right)^7 \\left(\\frac{1}{2}\\right)^0\\]\n\\[P(x=7) = 1 \\left(\\frac{1}{2}\\right)^7\\]\n\\[P(x=7) = \\frac{1}{128}\\]\nAdd the values of \\(P(x=5)\\), \\(P(x=6)\\), and \\(P(x=7)\\) to find the total probability that at least 5 of the flips come up heads.",
+    "steps": [
+        "Let \\(n=7\\), the number of trials, and let \\(x\\) be the number of trials with a \"success\" (heads).  Then we have to find the probability of \\(x \\geq 5\\), or the probability that at least 5 of the flips come up heads.",
+        "Use the binomial probability formula with the appropriate values of \\(n\\) and \\(k\\) to calculate the probabilities of the cases \\(x=5\\), \\(x=6\\), and \\(x=7\\),",
+        "Calculate the probabilities of the cases \\(x=5\\), \\(x=6\\), and \\(x=7\\) using the binomial probability formula: \\(P(x=k) = {n \\choose k} p^k (1-p)^{n-k}\\), where \\(n = 7\\), \\(p = \\frac{1}{2}\\), and \\(k\\) is the number of heads for each case.",
+        "Calculate \\(P(x=5)\\): \\(P(x=5) = {7 \\choose 5} \\left(\\frac{1}{2}\\right)^5 \\left(1 - \\frac{1}{2}\\right)^{7-5}\\)",
+        "Calculate \\(P(x=6)\\): \\(P(x=6) = {7 \\choose 6} \\left(\\frac{1}{2}\\right)^6 \\left(1 - \\frac{1}{2}\\right)^{7-6}\\)",
+        "Calculate \\(P(x=7)\\): \\(P(x=7) = {7 \\choose 7} \\left(\\frac{1}{2}\\right)^7 \\left(1 - \\frac{1}{2}\\right)^{7-7}\\)",
+        "Calculate the value of \\(P(x=5)\\):\n\\[P(x=5) = {7 \\choose 5} \\left(\\frac{1}{2}\\right)^5 \\left(1 - \\frac{1}{2}\\right)^{7-5}\\]\n\\[P(x=5) = 21\\left(\\frac{1}{2}\\right)^5 \\left(\\frac{1}{2}\\right)^2\\]\n\\[P(x=5) = 21\\left(\\frac{1}{2}\\right)^7\\]\n\\[P(x=5) = 21 \\times \\frac{1}{128}\\]\n\\[P(x=5) = \\frac{21}{128}\\]",
+        "Calculate the value of \\(P(x=6)\\):\n\\[P(x=6) = {7 \\choose 6} \\left(\\frac{1}{2}\\right)^6 \\left(1 - \\frac{1}{2}\\right)^{7-6}\\]\n\\[P(x=6) = 7\\left(\\frac{1}{2}\\right)^6 \\left(\\frac{1}{2}\\right)^1\\]\n\\[P(x=6) = 7\\left(\\frac{1}{2}\\right)^7\\]\n\\[P(x=6) = 7 \\times \\frac{1}{128}\\]\n\\[P(x=6) = \\frac{7}{128}\\]",
+        "Calculate the value of \\(P(x=7)\\):\n\\[P(x=7) = {7 \\choose 7} \\left(\\frac{1}{2}\\right)^7 \\left(1 - \\frac{1}{2}\\right)^{7-7}\\]\n\\[P(x=7) = 1 \\left(\\frac{1}{2}\\right)^7 \\left(\\frac{1}{2}\\right)^0\\]\n\\[P(x=7) = 1 \\left(\\frac{1}{2}\\right)^7\\]\n\\[P(x=7) = \\frac{1}{128}\\]",
+        "Add the values of \\(P(x=5)\\), \\(P(x=6)\\), and \\(P(x=7)\\) to find the total probability that at least 5 of the flips come up heads."
+    ],
+    "full_steps": [
+        [
+            "Let \\(n=7\\), the number of trials, and let \\(x\\) be the number of trials with a \"success\" (heads).  Then we have to find the probability of \\(x \\geq 5\\), or the probability that at least 5 of the flips come up heads.",
+            1
+        ],
+        [
+            "Use the binomial probability formula with the appropriate values of \\(n\\) and \\(k\\) to calculate the probabilities of the cases \\(x=5\\), \\(x=6\\), and \\(x=7\\),",
+            1
+        ],
+        [
+            "Calculate the probabilities of the cases \\(x=5\\), \\(x=6\\), and \\(x=7\\) using the binomial probability formula: \\(P(x=k) = {n \\choose k} p^k (1-p)^{n-k}\\), where \\(n = 7\\), \\(p = \\frac{1}{2}\\), and \\(k\\) is the number of heads for each case.",
+            1
+        ],
+        [
+            "Calculate \\(P(x=5)\\): \\(P(x=5) = {7 \\choose 5} \\left(\\frac{1}{2}\\right)^5 \\left(1 - \\frac{1}{2}\\right)^{7-5}\\)",
+            1
+        ],
+        [
+            "Calculate \\(P(x=6)\\): \\(P(x=6) = {7 \\choose 6} \\left(\\frac{1}{2}\\right)^6 \\left(1 - \\frac{1}{2}\\right)^{7-6}\\)",
+            1
+        ],
+        [
+            "Calculate \\(P(x=7)\\): \\(P(x=7) = {7 \\choose 7} \\left(\\frac{1}{2}\\right)^7 \\left(1 - \\frac{1}{2}\\right)^{7-7}\\)",
+            1
+        ],
+        [
+            "Calculate the value of \\(P(x=5)\\):\n\\[P(x=5) = {7 \\choose 5} \\left(\\frac{1}{2}\\right)^5 \\left(1 - \\frac{1}{2}\\right)^{7-5}\\]\n\\[P(x=5) = 21\\left(\\frac{1}{2}\\right)^5 \\left(\\frac{1}{2}\\right)^2\\]\n\\[P(x=5) = 21\\left(\\frac{1}{2}\\right)^7\\]\n\\[P(x=5) = 21 \\times \\frac{1}{128}\\]\n\\[P(x=5) = \\frac{21}{128}\\]",
+            1
+        ],
+        [
+            "Calculate the value of \\(P(x=6)\\):\n\\[P(x=6) = {7 \\choose 6} \\left(\\frac{1}{2}\\right)^6 \\left(1 - \\frac{1}{2}\\right)^{7-6}\\]\n\\[P(x=6) = 7\\left(\\frac{1}{2}\\right)^6 \\left(\\frac{1}{2}\\right)^1\\]\n\\[P(x=6) = 7\\left(\\frac{1}{2}\\right)^7\\]\n\\[P(x=6) = 7 \\times \\frac{1}{128}\\]\n\\[P(x=6) = \\frac{7}{128}\\]",
+            1
+        ],
+        [
+            "Calculate the value of \\(P(x=7)\\):\n\\[P(x=7) = {7 \\choose 7} \\left(\\frac{1}{2}\\right)^7 \\left(1 - \\frac{1}{2}\\right)^{7-7}\\]\n\\[P(x=7) = 1 \\left(\\frac{1}{2}\\right)^7 \\left(\\frac{1}{2}\\right)^0\\]\n\\[P(x=7) = 1 \\left(\\frac{1}{2}\\right)^7\\]\n\\[P(x=7) = \\frac{1}{128}\\]",
+            1
+        ],
+        [
+            "Add the values of \\(P(x=5)\\), \\(P(x=6)\\), and \\(P(x=7)\\) to find the total probability that at least 5 of the flips come up heads.",
+            1
+        ]
+    ],
+    "time": 135.66665124893188,
+    "total_tokens": 9870,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

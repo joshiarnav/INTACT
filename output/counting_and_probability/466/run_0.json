@@ -1,0 +1,66 @@
+{
+    "problem": "A Senate committee has 5 Democrats and 5 Republicans.  In how many ways can they sit around a circular table if each member sits next to two members of the other party? (Two seatings are the same if one is a rotation of the other.)",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "The only way that the Senators can be seated is if the seats alternate by party.  Fix the rotation by placing the youngest Democrat in the top seat, so that we have removed the overcounting of rotations of the same arrangement.  Now there are $4!$ ways to place the remaining Democrats in the other Democratic seats, and $5!$ ways to place the Republicans in the Republican seats, for a total of $5! \\times 4! = \\boxed{2,\\!880}$ arrangements.",
+    "is_solved": false,
+    "model_solution": "Step 1: First, seat the 5 Democrats in a circle, so that the 5 spaces between them alternates between Democrat and Republican.\nStep 2: There are 5! ways to arrange the Democrats.\nStep 3: There are 5! ways to arrange the Republicans in the alternating Democratic spaces.\nStep 4: Since rotations of the same arrangement should be considered the same, divide by the number of possible rotations, which is 5.\nMultiply the number of ways to arrange the Democrats by the number of ways to arrange the Republicans.\nStep 5: \n5!/5 \u00d7 5!\nStep 6: \n= 5! \u00d7 5!/5\n= 5! \u00d7 4!\n= 120 \u00d7 24\n= 120 \u00d7 24\n= 120 \u00d7 24\n= 2880\n= 2880",
+    "steps": [
+        "Step 1: First, seat the 5 Democrats in a circle, so that the 5 spaces between them alternates between Democrat and Republican.",
+        "Step 2: There are 5! ways to arrange the Democrats.",
+        "Step 3: There are 5! ways to arrange the Republicans in the alternating Democratic spaces.",
+        "Step 4: Since rotations of the same arrangement should be considered the same, divide by the number of possible rotations, which is 5.",
+        "Multiply the number of ways to arrange the Democrats by the number of ways to arrange the Republicans.",
+        "Step 5: \n5!/5 \u00d7 5!",
+        "Step 6: \n= 5! \u00d7 5!/5\n= 5! \u00d7 4!\n= 120 \u00d7 24",
+        "= 120 \u00d7 24",
+        "= 120 \u00d7 24\n= 2880",
+        "= 2880"
+    ],
+    "full_steps": [
+        [
+            "Step 1: First, seat the 5 Democrats in a circle, so that the 5 spaces between them alternates between Democrat and Republican.",
+            1
+        ],
+        [
+            "Step 2: There are 5! ways to arrange the Democrats.",
+            1
+        ],
+        [
+            "Step 3: There are 5! ways to arrange the Republicans in the alternating Democratic spaces.",
+            1
+        ],
+        [
+            "Step 4: Since rotations of the same arrangement should be considered the same, divide by the number of possible rotations, which is 5.",
+            1
+        ],
+        [
+            "Multiply the number of ways to arrange the Democrats by the number of ways to arrange the Republicans.",
+            1
+        ],
+        [
+            "Step 5: \n5!/5 \u00d7 5!",
+            1
+        ],
+        [
+            "Step 6: \n= 5! \u00d7 5!/5\n= 5! \u00d7 4!\n= 120 \u00d7 24",
+            1
+        ],
+        [
+            "= 120 \u00d7 24",
+            1
+        ],
+        [
+            "= 120 \u00d7 24\n= 2880",
+            1
+        ],
+        [
+            "= 2880",
+            1
+        ]
+    ],
+    "time": 130.9898293018341,
+    "total_tokens": 4624,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

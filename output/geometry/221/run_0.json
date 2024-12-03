@@ -1,0 +1,26 @@
+{
+    "problem": "In $\\triangle PQR$, we have $PQ = QR = 34$ and $PR = 32$.  Find the length of median $\\overline{QM}$.",
+    "level": "Level 3",
+    "type": "Geometry",
+    "solution": "Because $\\triangle PQR$ is isosceles with $PQ=QR$, median $\\overline{QM}$ is also an altitude:\n\n\n[asy]\nsize(100);\npair P,Q,R,M,NN;\nP = (0,0);\nQ = (0.5,0.9);\nR = (1,0);\nNN = (0.5,0);\nM = (Q+R)/2;\ndraw(rightanglemark(Q,NN,P,2.5));\ndraw(P--Q--R--P);\ndraw(Q--NN);\nlabel(\"$P$\",P,SW);\nlabel(\"$R$\",R,SE);\nlabel(\"$Q$\",Q,N);\nlabel(\"$M$\",NN,S);\n[/asy]\n\nWe have $MP = PR/2 = 16$, so right triangle $PQM$ gives us  \\begin{align*}\nQM &= \\sqrt{PQ^2 - PM^2}\\\\\n&= \\sqrt{34^2 - 16^2}\\\\\n&= \\sqrt{(34-16)(34+16)}\\\\\n& = \\boxed{30}.\n\\end{align*}  (We might also have recognized that $PM/PQ = 8/17$, so $QM/PQ = 15/17$.)",
+    "is_solved": true,
+    "model_solution": "Step 1:  Since $\\overline{QM}$ is a median of $\\triangle PQR$, $M$ is the midpoint of $\\overline{PR}$, so $PM = MR = 16$.\nSince $\\overline{QM}$ is a median of $\\triangle PQR$, $M$ is the midpoint of $\\overline{PR}$, so $PM = MR = 16$.\nStep 2:  By Apollonius' Theorem, $PQ^2 + PR^2 = 2PM^2 + 2QM^2$ so $34^2 + 32^2 = 2(16^2) + 2QM^2$, which implies $Q M^2 = \\frac{34^2 + 32^2 - 2(16^2)}{2} = \\frac{1156 + 1024 - 512}{2} = \\frac{1668}{2} = 834$.\nFinal Answer",
+    "steps": [
+        "Step 1:  Since $\\overline{QM}$ is a median of $\\triangle PQR$, $M$ is the midpoint of $\\overline{PR}$, so $PM = MR = 16$.\nSince $\\overline{QM}$ is a median of $\\triangle PQR$, $M$ is the midpoint of $\\overline{PR}$, so $PM = MR = 16$.",
+        "Step 2:  By Apollonius' Theorem, $PQ^2 + PR^2 = 2PM^2 + 2QM^2$ so $34^2 + 32^2 = 2(16^2) + 2QM^2$, which implies $Q M^2 = \\frac{34^2 + 32^2 - 2(16^2)}{2} = \\frac{1156 + 1024 - 512}{2} = \\frac{1668}{2} = 834$.\nFinal Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Since $\\overline{QM}$ is a median of $\\triangle PQR$, $M$ is the midpoint of $\\overline{PR}$, so $PM = MR = 16$.\nSince $\\overline{QM}$ is a median of $\\triangle PQR$, $M$ is the midpoint of $\\overline{PR}$, so $PM = MR = 16$.",
+            1
+        ],
+        [
+            "Step 2:  By Apollonius' Theorem, $PQ^2 + PR^2 = 2PM^2 + 2QM^2$ so $34^2 + 32^2 = 2(16^2) + 2QM^2$, which implies $Q M^2 = \\frac{34^2 + 32^2 - 2(16^2)}{2} = \\frac{1156 + 1024 - 512}{2} = \\frac{1668}{2} = 834$.\nFinal Answer",
+            1
+        ]
+    ],
+    "time": 25.352502822875977,
+    "total_tokens": 971,
+    "final_answer_tokens": 303,
+    "model": "meta-llama/Llama-Vision-Free"
+}

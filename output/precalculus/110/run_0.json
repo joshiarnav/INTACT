@@ -1,0 +1,66 @@
+{
+    "problem": "The triangles whose vertices are $\\overrightarrow{A},$ $\\overrightarrow{B},$ and $\\overrightarrow{C}$ has area 12.  Find the area of the triangle whose vertices are $-\\overrightarrow{A} + \\overrightarrow{B} + \\overrightarrow{C},$ $\\overrightarrow{A} - \\overrightarrow{B} + \\overrightarrow{C},$ and $\\overrightarrow{A} + \\overrightarrow{B} - \\overrightarrow{C}.$",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "Let $D,$ $E,$ and $F$ be the points corresponding to $-\\overrightarrow{A} + \\overrightarrow{B} + \\overrightarrow{C},$ $\\overrightarrow{A} - \\overrightarrow{B} + \\overrightarrow{C},$ and $\\overrightarrow{A} + \\overrightarrow{B} - \\overrightarrow{C},$ respectively.\n\n[asy]\nunitsize(0.4 cm);\n\npair A, B, C, D, E, F;\n\nA = (2,4);\nB = (0,0);\nC = (7,0);\nD = -A + B + C;\nE = A - B + C;\nF = A + B - C;\n\ndraw(A--B--C--cycle);\ndraw(D--E--F--cycle,dashed);\n\nlabel(\"$A$\", A, N);\nlabel(\"$B$\", B, SW);\nlabel(\"$C$\", C, SE);\nlabel(\"$D$\", D, S);\nlabel(\"$E$\", E, NE);\nlabel(\"$F$\", F, NW);\n[/asy]\n\nThen\n\\[\\frac{\\overrightarrow{E} + \\overrightarrow{F}}{2} = \\frac{(\\overrightarrow{A} - \\overrightarrow{B} + \\overrightarrow{C}) + (\\overrightarrow{A} + \\overrightarrow{B} - \\overrightarrow{C})}{2} = \\overrightarrow{A},\\]so $A$ is the midpoint of $\\overline{EF}.$  Similarly, $B$ is the midpoint of $\\overline{DF},$ and $C$ is the midpoint of $\\overline{DE},$ so the area of triangle $ABC$ is $\\frac{1}{4}$ the area of triangle $DEF.$  In other words, the area of triangle $DEF$ is $4 \\cdot 12 = \\boxed{48}.$",
+    "is_solved": false,
+    "model_solution": "Step 1: The area of a triangle with vertices $\\overrightarrow{u},$ $\\overrightarrow{v},$ $\\overrightarrow{w}$ is given by the formula $\\frac{1}{2}\\left|\\overrightarrow{u}\\times\\overrightarrow{v}+\\overrightarrow{v}\\times\\overrightarrow{w}+\\overrightarrow{w}\\times\\overrightarrow{u}\\right|$.\n \nHint: Use this formula for the area of the original triangle, and then apply it to the new triangle with vertices $-\\overrightarrow{A} + \\overrightarrow{B} + \\overrightarrow{C},$ $\\overrightarrow{A} - \\overrightarrow{B} + \\overrightarrow{C},$ and $\\overrightarrow{A} + \\overrightarrow{B} - \\overrightarrow{C}.$\nStep 2: The area of the original triangle is given by the formula $\\frac{1}{2}\\left|\\overrightarrow{A}\\times\\overrightarrow{B}+\\overrightarrow{B}\\times\\overrightarrow{C}+\\overrightarrow{C}\\times\\overrightarrow{A}\\right|=12.$\nStep 3: The area of the new triangle is given by $\\frac{1}{2}\\left|(-\\overrightarrow{A}+\\overrightarrow{B}+\\overrightarrow{C})\\times(\\overrightarrow{A}-\\overrightarrow{B}+\\overrightarrow{C})+(\\overrightarrow{A}-\\overrightarrow{B}+\\overrightarrow{C})\\times(\\overrightarrow{A}+\\overrightarrow{B}-\\overrightarrow{C})+(\\overrightarrow{A}+\\overrightarrow{B}-\\overrightarrow{C})\\times(-\\overrightarrow{A}+\\overrightarrow{B}+\\overrightarrow{C})\\right|.$\nStep 4:  $\\frac{1}{2}\\left|(-\\overrightarrow{A}+\\overrightarrow{B}+\\overrightarrow{C})\\times(\\overrightarrow{A}-\\overrightarrow{B}+\\overrightarrow{C})+(\\overrightarrow{A}-\\overrightarrow{B}+\\overrightarrow{C})\\times(\\overrightarrow{A}+\\overrightarrow{B}-\\overrightarrow{C})+(\\overrightarrow{A}+\\overrightarrow{B}-\\overrightarrow{C})\\times(-\\overrightarrow{A}+\\overrightarrow{B}+\\overrightarrow{C})\\right| = \\frac{1}{2}\\left|(-2\\overrightarrow{A})\\times(2\\overrightarrow{B})+2\\overrightarrow{A}\\times2\\overrightarrow{C}+2\\overrightarrow{B}\\times(-2\\overrightarrow{C})\\right|.$\n$\\frac{1}{2}\\left|(-2\\overrightarrow{A})\\times(2\\overrightarrow{B})+2\\overrightarrow{A}\\times2\\overrightarrow{C}+2\\overrightarrow{B}\\times(-2\\overrightarrow{C})\\right| = \\frac{1}{2}\\left|4\\overrightarrow{A}\\times\\overrightarrow{B}+4\\overrightarrow{A}\\times\\overrightarrow{C}-4\\overrightarrow{B}\\times\\overrightarrow{C}\\right| = 4\\left|\\overrightarrow{A}\\times\\overrightarrow{B}+\\overrightarrow{A}\\times\\overrightarrow{C}-\\overrightarrow{B}\\times\\overrightarrow{C}\\right|.$\n$\\frac{1}{2}\\left|\\overrightarrow{A}\\times\\overrightarrow{B}+\\overrightarrow{B}\\times\\overrightarrow{C}+\\overrightarrow{C}\\times\\overrightarrow{A}\\right|=12.$\n$\\frac{1}{2}\\left|\\overrightarrow{A}\\times\\overrightarrow{B}+\\overrightarrow{B}\\times\\overrightarrow{C}+\\overrightarrow{C}\\times\\overrightarrow{A}\\right| = 12.$\nThe area of the new triangle is $4\\left|\\overrightarrow{A}\\times\\overrightarrow{B}+\\overrightarrow{A}\\times\\overrightarrow{C}-\\overrightarrow{B}\\times\\overrightarrow{C}\\right|.$\n$\\left|\\overrightarrow{A}\\times\\overrightarrow{B}+\\overrightarrow{A}\\times\\overrightarrow{C}-\\overrightarrow{B}\\times\\overrightarrow{C}\\right| = \\left|\\overrightarrow{A}\\times\\overrightarrow{B}+\\overrightarrow{B}\\times\\overrightarrow{C}+\\overrightarrow{C}\\times\\overrightarrow{A}\\right|.$\n$\\left|\\overrightarrow{A}\\times\\overrightarrow{B}+\\overrightarrow{B}\\times\\overrightarrow{C}+\\overrightarrow{C}\\times\\overrightarrow{A}\\right| = 12.$",
+    "steps": [
+        "Step 1: The area of a triangle with vertices $\\overrightarrow{u},$ $\\overrightarrow{v},$ $\\overrightarrow{w}$ is given by the formula $\\frac{1}{2}\\left|\\overrightarrow{u}\\times\\overrightarrow{v}+\\overrightarrow{v}\\times\\overrightarrow{w}+\\overrightarrow{w}\\times\\overrightarrow{u}\\right|$.\n \nHint: Use this formula for the area of the original triangle, and then apply it to the new triangle with vertices $-\\overrightarrow{A} + \\overrightarrow{B} + \\overrightarrow{C},$ $\\overrightarrow{A} - \\overrightarrow{B} + \\overrightarrow{C},$ and $\\overrightarrow{A} + \\overrightarrow{B} - \\overrightarrow{C}.$",
+        "Step 2: The area of the original triangle is given by the formula $\\frac{1}{2}\\left|\\overrightarrow{A}\\times\\overrightarrow{B}+\\overrightarrow{B}\\times\\overrightarrow{C}+\\overrightarrow{C}\\times\\overrightarrow{A}\\right|=12.$",
+        "Step 3: The area of the new triangle is given by $\\frac{1}{2}\\left|(-\\overrightarrow{A}+\\overrightarrow{B}+\\overrightarrow{C})\\times(\\overrightarrow{A}-\\overrightarrow{B}+\\overrightarrow{C})+(\\overrightarrow{A}-\\overrightarrow{B}+\\overrightarrow{C})\\times(\\overrightarrow{A}+\\overrightarrow{B}-\\overrightarrow{C})+(\\overrightarrow{A}+\\overrightarrow{B}-\\overrightarrow{C})\\times(-\\overrightarrow{A}+\\overrightarrow{B}+\\overrightarrow{C})\\right|.$",
+        "Step 4:  $\\frac{1}{2}\\left|(-\\overrightarrow{A}+\\overrightarrow{B}+\\overrightarrow{C})\\times(\\overrightarrow{A}-\\overrightarrow{B}+\\overrightarrow{C})+(\\overrightarrow{A}-\\overrightarrow{B}+\\overrightarrow{C})\\times(\\overrightarrow{A}+\\overrightarrow{B}-\\overrightarrow{C})+(\\overrightarrow{A}+\\overrightarrow{B}-\\overrightarrow{C})\\times(-\\overrightarrow{A}+\\overrightarrow{B}+\\overrightarrow{C})\\right| = \\frac{1}{2}\\left|(-2\\overrightarrow{A})\\times(2\\overrightarrow{B})+2\\overrightarrow{A}\\times2\\overrightarrow{C}+2\\overrightarrow{B}\\times(-2\\overrightarrow{C})\\right|.$",
+        "$\\frac{1}{2}\\left|(-2\\overrightarrow{A})\\times(2\\overrightarrow{B})+2\\overrightarrow{A}\\times2\\overrightarrow{C}+2\\overrightarrow{B}\\times(-2\\overrightarrow{C})\\right| = \\frac{1}{2}\\left|4\\overrightarrow{A}\\times\\overrightarrow{B}+4\\overrightarrow{A}\\times\\overrightarrow{C}-4\\overrightarrow{B}\\times\\overrightarrow{C}\\right| = 4\\left|\\overrightarrow{A}\\times\\overrightarrow{B}+\\overrightarrow{A}\\times\\overrightarrow{C}-\\overrightarrow{B}\\times\\overrightarrow{C}\\right|.$",
+        "$\\frac{1}{2}\\left|\\overrightarrow{A}\\times\\overrightarrow{B}+\\overrightarrow{B}\\times\\overrightarrow{C}+\\overrightarrow{C}\\times\\overrightarrow{A}\\right|=12.$",
+        "$\\frac{1}{2}\\left|\\overrightarrow{A}\\times\\overrightarrow{B}+\\overrightarrow{B}\\times\\overrightarrow{C}+\\overrightarrow{C}\\times\\overrightarrow{A}\\right| = 12.$",
+        "The area of the new triangle is $4\\left|\\overrightarrow{A}\\times\\overrightarrow{B}+\\overrightarrow{A}\\times\\overrightarrow{C}-\\overrightarrow{B}\\times\\overrightarrow{C}\\right|.$",
+        "$\\left|\\overrightarrow{A}\\times\\overrightarrow{B}+\\overrightarrow{A}\\times\\overrightarrow{C}-\\overrightarrow{B}\\times\\overrightarrow{C}\\right| = \\left|\\overrightarrow{A}\\times\\overrightarrow{B}+\\overrightarrow{B}\\times\\overrightarrow{C}+\\overrightarrow{C}\\times\\overrightarrow{A}\\right|.$",
+        "$\\left|\\overrightarrow{A}\\times\\overrightarrow{B}+\\overrightarrow{B}\\times\\overrightarrow{C}+\\overrightarrow{C}\\times\\overrightarrow{A}\\right| = 12.$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: The area of a triangle with vertices $\\overrightarrow{u},$ $\\overrightarrow{v},$ $\\overrightarrow{w}$ is given by the formula $\\frac{1}{2}\\left|\\overrightarrow{u}\\times\\overrightarrow{v}+\\overrightarrow{v}\\times\\overrightarrow{w}+\\overrightarrow{w}\\times\\overrightarrow{u}\\right|$.\n \nHint: Use this formula for the area of the original triangle, and then apply it to the new triangle with vertices $-\\overrightarrow{A} + \\overrightarrow{B} + \\overrightarrow{C},$ $\\overrightarrow{A} - \\overrightarrow{B} + \\overrightarrow{C},$ and $\\overrightarrow{A} + \\overrightarrow{B} - \\overrightarrow{C}.$",
+            1
+        ],
+        [
+            "Step 2: The area of the original triangle is given by the formula $\\frac{1}{2}\\left|\\overrightarrow{A}\\times\\overrightarrow{B}+\\overrightarrow{B}\\times\\overrightarrow{C}+\\overrightarrow{C}\\times\\overrightarrow{A}\\right|=12.$",
+            1
+        ],
+        [
+            "Step 3: The area of the new triangle is given by $\\frac{1}{2}\\left|(-\\overrightarrow{A}+\\overrightarrow{B}+\\overrightarrow{C})\\times(\\overrightarrow{A}-\\overrightarrow{B}+\\overrightarrow{C})+(\\overrightarrow{A}-\\overrightarrow{B}+\\overrightarrow{C})\\times(\\overrightarrow{A}+\\overrightarrow{B}-\\overrightarrow{C})+(\\overrightarrow{A}+\\overrightarrow{B}-\\overrightarrow{C})\\times(-\\overrightarrow{A}+\\overrightarrow{B}+\\overrightarrow{C})\\right|.$",
+            1
+        ],
+        [
+            "Step 4:  $\\frac{1}{2}\\left|(-\\overrightarrow{A}+\\overrightarrow{B}+\\overrightarrow{C})\\times(\\overrightarrow{A}-\\overrightarrow{B}+\\overrightarrow{C})+(\\overrightarrow{A}-\\overrightarrow{B}+\\overrightarrow{C})\\times(\\overrightarrow{A}+\\overrightarrow{B}-\\overrightarrow{C})+(\\overrightarrow{A}+\\overrightarrow{B}-\\overrightarrow{C})\\times(-\\overrightarrow{A}+\\overrightarrow{B}+\\overrightarrow{C})\\right| = \\frac{1}{2}\\left|(-2\\overrightarrow{A})\\times(2\\overrightarrow{B})+2\\overrightarrow{A}\\times2\\overrightarrow{C}+2\\overrightarrow{B}\\times(-2\\overrightarrow{C})\\right|.$",
+            1
+        ],
+        [
+            "$\\frac{1}{2}\\left|(-2\\overrightarrow{A})\\times(2\\overrightarrow{B})+2\\overrightarrow{A}\\times2\\overrightarrow{C}+2\\overrightarrow{B}\\times(-2\\overrightarrow{C})\\right| = \\frac{1}{2}\\left|4\\overrightarrow{A}\\times\\overrightarrow{B}+4\\overrightarrow{A}\\times\\overrightarrow{C}-4\\overrightarrow{B}\\times\\overrightarrow{C}\\right| = 4\\left|\\overrightarrow{A}\\times\\overrightarrow{B}+\\overrightarrow{A}\\times\\overrightarrow{C}-\\overrightarrow{B}\\times\\overrightarrow{C}\\right|.$",
+            1
+        ],
+        [
+            "$\\frac{1}{2}\\left|\\overrightarrow{A}\\times\\overrightarrow{B}+\\overrightarrow{B}\\times\\overrightarrow{C}+\\overrightarrow{C}\\times\\overrightarrow{A}\\right|=12.$",
+            1
+        ],
+        [
+            "$\\frac{1}{2}\\left|\\overrightarrow{A}\\times\\overrightarrow{B}+\\overrightarrow{B}\\times\\overrightarrow{C}+\\overrightarrow{C}\\times\\overrightarrow{A}\\right| = 12.$",
+            1
+        ],
+        [
+            "The area of the new triangle is $4\\left|\\overrightarrow{A}\\times\\overrightarrow{B}+\\overrightarrow{A}\\times\\overrightarrow{C}-\\overrightarrow{B}\\times\\overrightarrow{C}\\right|.$",
+            1
+        ],
+        [
+            "$\\left|\\overrightarrow{A}\\times\\overrightarrow{B}+\\overrightarrow{A}\\times\\overrightarrow{C}-\\overrightarrow{B}\\times\\overrightarrow{C}\\right| = \\left|\\overrightarrow{A}\\times\\overrightarrow{B}+\\overrightarrow{B}\\times\\overrightarrow{C}+\\overrightarrow{C}\\times\\overrightarrow{A}\\right|.$",
+            1
+        ],
+        [
+            "$\\left|\\overrightarrow{A}\\times\\overrightarrow{B}+\\overrightarrow{B}\\times\\overrightarrow{C}+\\overrightarrow{C}\\times\\overrightarrow{A}\\right| = 12.$",
+            1
+        ]
+    ],
+    "time": 134.86379504203796,
+    "total_tokens": 16934,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,66 @@
+{
+    "problem": "In triangle $ABC$, $AB=\\sqrt{30}$, $AC=\\sqrt{6}$, and $BC=\\sqrt{15}$. There is a point $D$ for which $\\overline{AD}$ bisects $\\overline{BC}$, and $\\angle ADB$ is a right angle. Find the value of the ratio\n\\[\\dfrac{[ADB]}{[ABC]}.\\]In other words, compute the ratio of the area of triangle $ADB$ to the area of triangle $ABC.$",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "Let $E$ be the midpoint of $\\overline{BC}.$\n\n[asy]\nunitsize(1 cm);\n\npair A, B, C, D, E;\n\nA = (0,0);\nB = (sqrt(30),0);\nC = intersectionpoint(arc(A,sqrt(6),0,180),arc(B,sqrt(15),0,180));\nD = intersectionpoint(A--interp(A,(B + C)/2,5),Circle((A + B)/2, abs(A - B)/2));\nE = (B + C)/2;\n\ndraw(A--B--C--cycle);\ndraw(A--D--B);\n\nlabel(\"$A$\", A, SW);\nlabel(\"$B$\", B, SE);\nlabel(\"$C$\", C, N);\nlabel(\"$D$\", D, N);\nlabel(\"$E$\", E, N);\n[/asy]\n\nThen $BE = CE = \\frac{BC}{2} = \\frac{\\sqrt{15}}{2},$ so by Stewart's Theorem applied to median $\\overline{AE}$ of triangle $ABC,$\n\\[6 \\cdot \\frac{\\sqrt{15}}{2} + 30 \\cdot \\frac{\\sqrt{15}}{2} = \\sqrt{15} \\left( AE^2 + \\frac{\\sqrt{15}}{2} \\cdot \\frac{\\sqrt{15}}{2} \\right).\\]This leads to $AE = \\frac{\\sqrt{57}}{2}.$\n\nLet $x = DE$ and $y = BD.$  Then by the Pythagorean Theorem applied to right triangles $BDE$ and $BDA,$\n\\begin{align*}\nx^2 + y^2 &= \\frac{15}{4}, \\\\\n\\left( x + \\frac{\\sqrt{57}}{2} \\right)^2 + y^2 &= 30.\n\\end{align*}Subtracting these equations, we get\n\\[x \\sqrt{57} + \\frac{57}{4} = \\frac{105}{4},\\]so $x = \\frac{4 \\sqrt{57}}{19}.$\n\nNow, we want $\\frac{[ADB]}{[ABC]}.$  Since $E$ is the midpoint of $\\overline{BC},$ $[ABC] = 2 [ABE],$ so\n\\[\\frac{[ADB]}{2 [ABE]} = \\frac{AD}{2AE} = \\frac{\\frac{\\sqrt{57}}{2} + \\frac{4 \\sqrt{57}}{19}}{2 \\cdot \\frac{\\sqrt{57}}{2}} = \\boxed{\\frac{27}{38}}.\\]",
+    "is_solved": false,
+    "model_solution": "Step 1:  The problem provides the side lengths of triangle $ABC$ as $AB = \\sqrt{30}$, $AC = \\sqrt{6}$, and $BC = \\sqrt{15}$. We need to find the ratio of the area of triangle $ADB$ to the area of triangle $ABC$. To approach this, we can use the concept of the area of triangles and the properties of right-angled triangles.\nStep 2:  We are given that $\\overline{AD}$ bisects $\\overline{BC}$, so $BD = DC = \\frac{\\sqrt{15}}{2}$.\nStep 3:  We can also use the fact that $\\angle ADB$ is a right angle, which allows us to apply the Pythagorean theorem to find the length of $AD$.\nStep 4:  The Pythagorean theorem states that in a right-angled triangle, the square of the length of the hypotenuse is equal to the sum of the squares of the lengths of the other two sides.\nStep 5:  We can use this theorem in triangle $ADB$ to find the length of $AD$, and then use it in triangle $ABC$\nStep 2:\n\\[\\dfrac{[ADB]}{[ABC]} = \\dfrac{1}{2} \\cdot \\dfrac{BD}{BC} = \\dfrac{1}{2} \\cdot \\dfrac{\\frac{\\sqrt{15}}{2}}{\\sqrt{15}} = \\dfrac{1}{4}.\\]\nStep 3:\nUsing the Pythagorean theorem, we find that $AD = \\sqrt{AB^2 - BD^2}.$\nStep 4:\n$AD = \\sqrt{AB^2 - BD^2} = \\sqrt{30 - \\frac{15}{4}} = \\sqrt{\\frac{90}{4}} = \\frac{\\sqrt{90}}{2} = \\frac{3\\sqrt{10}}{2}$\nStep 5:\nUsing the formula for the area of a triangle, we have \\[\\dfrac{[ADB]}{[ABC]} = \\dfrac{\\frac{1}{2} \\cdot AD \\cdot BD}{\\frac{1}{2} \\cdot AB \\cdot BC} = \\dfrac{AD \\cdot BD}{AB \\cdot BC}.\\]\nStep 6:\n\\[\\dfrac{[ADB]}{[ABC]} = \\dfrac{AD \\cdot BD}{AB \\cdot BC} = \\dfrac{\\frac{3\\sqrt{10}}{2} \\cdot \\frac{\\sqrt{15}}{2}}{\\sqrt{30} \\cdot \\sqrt{15}}\\]\n\\[\\dfrac{[ADB]}{[ABC]} = \\dfrac{\\frac{3\\sqrt{10}}{2} \\cdot \\frac{\\sqrt{15}}{2}}{\\sqrt{30} \\cdot \\sqrt{15}} = \\dfrac{\\frac{3\\sqrt{150}}{4}}{\\sqrt{450}} = \\dfrac{\\frac{3\\sqrt{150}}{4}}{\\sqrt{450}} = \\dfrac{\\frac{3\\sqrt{2\\cdot 3\\cdot 5^2}}{4}}{\\sqrt{2\\cdot 3^2\\cdot 5^2}} = \\dfrac{\\frac{3\\cdot 5\\sqrt{2}}{4}}{3\\cdot 5\\sqrt{2}}\\]\n\\dfrac{[ADB]}{[ABC]} = \\dfrac{\\frac{3\\cdot 5\\sqrt{2}}{4}}{3\\cdot 5\\sqrt{2}} = \\frac{1}{4}\nUsing the Pythagorean theorem, we find that $AD = \\sqrt{AB^2 - BD^2}.$\n$AD = \\sqrt{AB^2 - BD^2} = \\sqrt{30 - \\frac{15}{4}} = \\sqrt{\\frac{90}{4}} = \\frac{\\sqrt{90}}{2} = \\frac{3\\sqrt{10}}{2}$",
+    "steps": [
+        "Step 1:  The problem provides the side lengths of triangle $ABC$ as $AB = \\sqrt{30}$, $AC = \\sqrt{6}$, and $BC = \\sqrt{15}$. We need to find the ratio of the area of triangle $ADB$ to the area of triangle $ABC$. To approach this, we can use the concept of the area of triangles and the properties of right-angled triangles.\nStep 2:  We are given that $\\overline{AD}$ bisects $\\overline{BC}$, so $BD = DC = \\frac{\\sqrt{15}}{2}$.\nStep 3:  We can also use the fact that $\\angle ADB$ is a right angle, which allows us to apply the Pythagorean theorem to find the length of $AD$.\nStep 4:  The Pythagorean theorem states that in a right-angled triangle, the square of the length of the hypotenuse is equal to the sum of the squares of the lengths of the other two sides.\nStep 5:  We can use this theorem in triangle $ADB$ to find the length of $AD$, and then use it in triangle $ABC$",
+        "Step 2:\n\\[\\dfrac{[ADB]}{[ABC]} = \\dfrac{1}{2} \\cdot \\dfrac{BD}{BC} = \\dfrac{1}{2} \\cdot \\dfrac{\\frac{\\sqrt{15}}{2}}{\\sqrt{15}} = \\dfrac{1}{4}.\\]",
+        "Step 3:\nUsing the Pythagorean theorem, we find that $AD = \\sqrt{AB^2 - BD^2}.$",
+        "Step 4:\n$AD = \\sqrt{AB^2 - BD^2} = \\sqrt{30 - \\frac{15}{4}} = \\sqrt{\\frac{90}{4}} = \\frac{\\sqrt{90}}{2} = \\frac{3\\sqrt{10}}{2}$",
+        "Step 5:\nUsing the formula for the area of a triangle, we have \\[\\dfrac{[ADB]}{[ABC]} = \\dfrac{\\frac{1}{2} \\cdot AD \\cdot BD}{\\frac{1}{2} \\cdot AB \\cdot BC} = \\dfrac{AD \\cdot BD}{AB \\cdot BC}.\\]",
+        "Step 6:\n\\[\\dfrac{[ADB]}{[ABC]} = \\dfrac{AD \\cdot BD}{AB \\cdot BC} = \\dfrac{\\frac{3\\sqrt{10}}{2} \\cdot \\frac{\\sqrt{15}}{2}}{\\sqrt{30} \\cdot \\sqrt{15}}\\]",
+        "\\[\\dfrac{[ADB]}{[ABC]} = \\dfrac{\\frac{3\\sqrt{10}}{2} \\cdot \\frac{\\sqrt{15}}{2}}{\\sqrt{30} \\cdot \\sqrt{15}} = \\dfrac{\\frac{3\\sqrt{150}}{4}}{\\sqrt{450}} = \\dfrac{\\frac{3\\sqrt{150}}{4}}{\\sqrt{450}} = \\dfrac{\\frac{3\\sqrt{2\\cdot 3\\cdot 5^2}}{4}}{\\sqrt{2\\cdot 3^2\\cdot 5^2}} = \\dfrac{\\frac{3\\cdot 5\\sqrt{2}}{4}}{3\\cdot 5\\sqrt{2}}\\]",
+        "\\dfrac{[ADB]}{[ABC]} = \\dfrac{\\frac{3\\cdot 5\\sqrt{2}}{4}}{3\\cdot 5\\sqrt{2}} = \\frac{1}{4}",
+        "Using the Pythagorean theorem, we find that $AD = \\sqrt{AB^2 - BD^2}.$",
+        "$AD = \\sqrt{AB^2 - BD^2} = \\sqrt{30 - \\frac{15}{4}} = \\sqrt{\\frac{90}{4}} = \\frac{\\sqrt{90}}{2} = \\frac{3\\sqrt{10}}{2}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  The problem provides the side lengths of triangle $ABC$ as $AB = \\sqrt{30}$, $AC = \\sqrt{6}$, and $BC = \\sqrt{15}$. We need to find the ratio of the area of triangle $ADB$ to the area of triangle $ABC$. To approach this, we can use the concept of the area of triangles and the properties of right-angled triangles.\nStep 2:  We are given that $\\overline{AD}$ bisects $\\overline{BC}$, so $BD = DC = \\frac{\\sqrt{15}}{2}$.\nStep 3:  We can also use the fact that $\\angle ADB$ is a right angle, which allows us to apply the Pythagorean theorem to find the length of $AD$.\nStep 4:  The Pythagorean theorem states that in a right-angled triangle, the square of the length of the hypotenuse is equal to the sum of the squares of the lengths of the other two sides.\nStep 5:  We can use this theorem in triangle $ADB$ to find the length of $AD$, and then use it in triangle $ABC$",
+            1
+        ],
+        [
+            "Step 2:\n\\[\\dfrac{[ADB]}{[ABC]} = \\dfrac{1}{2} \\cdot \\dfrac{BD}{BC} = \\dfrac{1}{2} \\cdot \\dfrac{\\frac{\\sqrt{15}}{2}}{\\sqrt{15}} = \\dfrac{1}{4}.\\]",
+            1
+        ],
+        [
+            "Step 3:\nUsing the Pythagorean theorem, we find that $AD = \\sqrt{AB^2 - BD^2}.$",
+            1
+        ],
+        [
+            "Step 4:\n$AD = \\sqrt{AB^2 - BD^2} = \\sqrt{30 - \\frac{15}{4}} = \\sqrt{\\frac{90}{4}} = \\frac{\\sqrt{90}}{2} = \\frac{3\\sqrt{10}}{2}$",
+            1
+        ],
+        [
+            "Step 5:\nUsing the formula for the area of a triangle, we have \\[\\dfrac{[ADB]}{[ABC]} = \\dfrac{\\frac{1}{2} \\cdot AD \\cdot BD}{\\frac{1}{2} \\cdot AB \\cdot BC} = \\dfrac{AD \\cdot BD}{AB \\cdot BC}.\\]",
+            1
+        ],
+        [
+            "Step 6:\n\\[\\dfrac{[ADB]}{[ABC]} = \\dfrac{AD \\cdot BD}{AB \\cdot BC} = \\dfrac{\\frac{3\\sqrt{10}}{2} \\cdot \\frac{\\sqrt{15}}{2}}{\\sqrt{30} \\cdot \\sqrt{15}}\\]",
+            1
+        ],
+        [
+            "\\[\\dfrac{[ADB]}{[ABC]} = \\dfrac{\\frac{3\\sqrt{10}}{2} \\cdot \\frac{\\sqrt{15}}{2}}{\\sqrt{30} \\cdot \\sqrt{15}} = \\dfrac{\\frac{3\\sqrt{150}}{4}}{\\sqrt{450}} = \\dfrac{\\frac{3\\sqrt{150}}{4}}{\\sqrt{450}} = \\dfrac{\\frac{3\\sqrt{2\\cdot 3\\cdot 5^2}}{4}}{\\sqrt{2\\cdot 3^2\\cdot 5^2}} = \\dfrac{\\frac{3\\cdot 5\\sqrt{2}}{4}}{3\\cdot 5\\sqrt{2}}\\]",
+            1
+        ],
+        [
+            "\\dfrac{[ADB]}{[ABC]} = \\dfrac{\\frac{3\\cdot 5\\sqrt{2}}{4}}{3\\cdot 5\\sqrt{2}} = \\frac{1}{4}",
+            1
+        ],
+        [
+            "Using the Pythagorean theorem, we find that $AD = \\sqrt{AB^2 - BD^2}.$",
+            1
+        ],
+        [
+            "$AD = \\sqrt{AB^2 - BD^2} = \\sqrt{30 - \\frac{15}{4}} = \\sqrt{\\frac{90}{4}} = \\frac{\\sqrt{90}}{2} = \\frac{3\\sqrt{10}}{2}$",
+            1
+        ]
+    ],
+    "time": 132.50559973716736,
+    "total_tokens": 14758,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

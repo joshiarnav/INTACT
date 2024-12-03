@@ -1,0 +1,51 @@
+{
+    "problem": "Find the area of an equiangular octagon with side lengths 1, 2, 2, 4, 1, 2, 2, 4, in that order.",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "Any equiangular octagon has all its interior angles equal to $135^\\circ$ and can thus be inscribed in a square or rectangle.  We draw the octagon and extend four of its sides to form a rectangle $ABCD$:\n\n[asy]\npair A, B, C, D;\nA=(0,0);\nB=(0,1+3*sqrt(2));\nC=(2+3*sqrt(2),1+3*sqrt(2));\nD=(2+3*sqrt(2),0);\ndraw(A--B--C--D--cycle,dashed);\nfilldraw((2*sqrt(2),0)--(0,2*sqrt(2))--(0,1+2*sqrt(2))--(sqrt(2),1+3*sqrt(2)) --(sqrt(2)+2,1+3*sqrt(2)) -- (2+3*sqrt(2),1+sqrt(2)) -- (2+3*sqrt(2),sqrt(2)) --(2*sqrt(2)+2,0) --cycle,heavycyan );\nlabel(\"4\",((2*sqrt(2),0)--(0,2*sqrt(2))),SW); label(\"2\",((0,1+2*sqrt(2))--(sqrt(2),1+3*sqrt(2))),NW);\nlabel(\"1\",((0,2*sqrt(2))--(0,1+2*sqrt(2))),W); label(\"2\",((sqrt(2),1+3*sqrt(2)) --(sqrt(2)+2,1+3*sqrt(2))),N);\n\nlabel(\"4\",((sqrt(2)+2,1+3*sqrt(2)) -- (2+3*sqrt(2),1+sqrt(2))),NE);\nlabel(\"1\",((2+3*sqrt(2),1+sqrt(2)) -- (2+3*sqrt(2),sqrt(2))),E);\n\nlabel(\"2\",((2+3*sqrt(2),sqrt(2)) --(2*sqrt(2)+2,0)),SE);\nlabel(\"2\",((2*sqrt(2),0)--(2*sqrt(2)+2,0)),S);\nlabel(\"$A$\",A,SW); label(\"$B$\",B,NW); label(\"$C$\",C,NE); label(\"$D$\",D,SE);\n[/asy] Notice that the area of the octagon is equal to the area of $ABCD$ minus the area of the four triangles.  All four triangles are isosceles right triangles, so we can find their leg lengths and areas.  The triangle with $A$ as a vertex has leg length $4/\\sqrt{2}=2\\sqrt{2}$ and area $(1/2)(2\\sqrt{2})^2=4$.  Similarly, the triangles with $B$, $C$, and $D$ as a vertex have leg lengths $\\sqrt{2}$, $2\\sqrt{2}$, and $\\sqrt{2}$ respectively, and areas $1$, $4$, and $1$ respectively.\n\nNow we can compute the sides of rectangle $ABCD$. $AB=2\\sqrt{2}+1+\\sqrt{2}=1+3\\sqrt{2}$ and $CB=\\sqrt{2}+2+2\\sqrt{2}=2+3\\sqrt{2}$.  It follows that the area of $ABCD$ is \\[(1+3\\sqrt{2})(2+3\\sqrt{2})=20+9\\sqrt{2}.\\]Finally, the area of the octagon is $20+9\\sqrt{2}-1-4-1-4=\\boxed{10+9\\sqrt{2}}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: Divide the octagon into 8 congruent isosceles triangles by drawing lines from the center of the octagon to each of its vertices.\nStep 2: Each triangle is isosceles, so the altitude of each triangle is also a median, and thus also an angle bisector. Find the area of one triangle.\nStep 3: The base of each triangle is 1 or 2, and the height of each triangle must be calculated using the Pythagorean theorem.\nStep 4: For the triangles with a base of 1, calculate the height using the Pythagorean theorem. Also, for the triangles with a base of 2, calculate the height using the Pythagorean theorem.\nStep 5: Calculate the area of one triangle using the formula (base \u00d7 height) / 2, and then multiply by 8 to find the total area of the octagon.\nStep 4: For the triangles with a base of 1, the height is \u221a(1\u00b2 - (0.5)\u00b2) = \u221a(1 - 0.25) = \u221a0.75. For the triangles with a base of 2, the height is \u221a(2\u00b2 - (1)\u00b2) = \u221a(4 - 1) = \u221a3.\nStep 5: Calculate the area of one triangle using the formula (base \u00d7 height) / 2, and then multiply by 8 to find the total area of the octagon.",
+    "steps": [
+        "Step 1: Divide the octagon into 8 congruent isosceles triangles by drawing lines from the center of the octagon to each of its vertices.",
+        "Step 2: Each triangle is isosceles, so the altitude of each triangle is also a median, and thus also an angle bisector. Find the area of one triangle.",
+        "Step 3: The base of each triangle is 1 or 2, and the height of each triangle must be calculated using the Pythagorean theorem.",
+        "Step 4: For the triangles with a base of 1, calculate the height using the Pythagorean theorem. Also, for the triangles with a base of 2, calculate the height using the Pythagorean theorem.",
+        "Step 5: Calculate the area of one triangle using the formula (base \u00d7 height) / 2, and then multiply by 8 to find the total area of the octagon.",
+        "Step 4: For the triangles with a base of 1, the height is \u221a(1\u00b2 - (0.5)\u00b2) = \u221a(1 - 0.25) = \u221a0.75. For the triangles with a base of 2, the height is \u221a(2\u00b2 - (1)\u00b2) = \u221a(4 - 1) = \u221a3.",
+        "Step 5: Calculate the area of one triangle using the formula (base \u00d7 height) / 2, and then multiply by 8 to find the total area of the octagon."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Divide the octagon into 8 congruent isosceles triangles by drawing lines from the center of the octagon to each of its vertices.",
+            1
+        ],
+        [
+            "Step 2: Each triangle is isosceles, so the altitude of each triangle is also a median, and thus also an angle bisector. Find the area of one triangle.",
+            1
+        ],
+        [
+            "Step 3: The base of each triangle is 1 or 2, and the height of each triangle must be calculated using the Pythagorean theorem.",
+            1
+        ],
+        [
+            "Step 4: For the triangles with a base of 1, calculate the height using the Pythagorean theorem. Also, for the triangles with a base of 2, calculate the height using the Pythagorean theorem.",
+            1
+        ],
+        [
+            "Step 5: Calculate the area of one triangle using the formula (base \u00d7 height) / 2, and then multiply by 8 to find the total area of the octagon.",
+            1
+        ],
+        [
+            "Step 4: For the triangles with a base of 1, the height is \u221a(1\u00b2 - (0.5)\u00b2) = \u221a(1 - 0.25) = \u221a0.75. For the triangles with a base of 2, the height is \u221a(2\u00b2 - (1)\u00b2) = \u221a(4 - 1) = \u221a3.",
+            1
+        ],
+        [
+            "Step 5: Calculate the area of one triangle using the formula (base \u00d7 height) / 2, and then multiply by 8 to find the total area of the octagon.",
+            1
+        ]
+    ],
+    "time": 96.5623140335083,
+    "total_tokens": 3715,
+    "final_answer_tokens": 405,
+    "model": "meta-llama/Llama-Vision-Free"
+}

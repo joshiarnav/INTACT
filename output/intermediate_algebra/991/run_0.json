@@ -1,0 +1,31 @@
+{
+    "problem": "If $m$ and $n$ are integers such that $3m + 4n = 100$, what is the smallest possible value of $\\left| m - n \\right|$ ?",
+    "level": "Level 2",
+    "type": "Intermediate Algebra",
+    "solution": "From $3m + 4n = 100$ we can get that $n = 25 - \\frac{3}{4}m$.  Then we want to minimize $$\\left| m - n \\right| = \\left| m - 25 + \\frac{3}{4}m \\right| =\\left|  \\frac{7}{4}m - 25 \\right| = \\left|  7m - 100 \\right|$$In other words we want $7m$ as close to $100$ as possible while still giving us integer solutions for $m$ and $n$ to the equation $3m + 4n = 100$.\n\nBy trial and error, we can find that the solution to $3m + 4n = 100$ that makes $m$ closest to $\\frac{100}{7}$ is $(m,n) = (16,13)$.  Then we have $\\left| m - n \\right| = 16-13 =\\boxed{3}$.",
+    "is_solved": true,
+    "model_solution": "Step 1:  Since we are tasked with finding the smallest possible value of $\\left| m - n \\right|$, we can start by manipulating the given equation.\n$3m + 4n = 100$\n$4n = 100 - 3m$\n$n = \\frac{100-3m}{4}$\nStep 2: \n$\\left| m - n \\right| = \\left| m - \\frac{100-3m}{4} \\right|$\n$= \\left| \\frac{4m - 100 + 3m}{4} \\right|$\n$= \\left| \\frac{7m - 100}{4} \\right|$\n$\\geq \\frac{7\\left| m - \\frac{100}{7} \\right|}{4}$\nStep 3: Since $\\left| m - n \\right| \\geq \\frac{7\\left| m - \\frac{100}{7} \\right|}{4}$, in order to minimize $\\left| m - n \\right|$, we need to minimize $\\left| m - \\frac{100}{7} \\right|$.\n\nFinal Answer",
+    "steps": [
+        "Step 1:  Since we are tasked with finding the smallest possible value of $\\left| m - n \\right|$, we can start by manipulating the given equation.\n$3m + 4n = 100$\n$4n = 100 - 3m$\n$n = \\frac{100-3m}{4}$",
+        "Step 2: \n$\\left| m - n \\right| = \\left| m - \\frac{100-3m}{4} \\right|$\n$= \\left| \\frac{4m - 100 + 3m}{4} \\right|$\n$= \\left| \\frac{7m - 100}{4} \\right|$\n$\\geq \\frac{7\\left| m - \\frac{100}{7} \\right|}{4}$",
+        "Step 3: Since $\\left| m - n \\right| \\geq \\frac{7\\left| m - \\frac{100}{7} \\right|}{4}$, in order to minimize $\\left| m - n \\right|$, we need to minimize $\\left| m - \\frac{100}{7} \\right|$.\n\nFinal Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Since we are tasked with finding the smallest possible value of $\\left| m - n \\right|$, we can start by manipulating the given equation.\n$3m + 4n = 100$\n$4n = 100 - 3m$\n$n = \\frac{100-3m}{4}$",
+            1
+        ],
+        [
+            "Step 2: \n$\\left| m - n \\right| = \\left| m - \\frac{100-3m}{4} \\right|$\n$= \\left| \\frac{4m - 100 + 3m}{4} \\right|$\n$= \\left| \\frac{7m - 100}{4} \\right|$\n$\\geq \\frac{7\\left| m - \\frac{100}{7} \\right|}{4}$",
+            1
+        ],
+        [
+            "Step 3: Since $\\left| m - n \\right| \\geq \\frac{7\\left| m - \\frac{100}{7} \\right|}{4}$, in order to minimize $\\left| m - n \\right|$, we need to minimize $\\left| m - \\frac{100}{7} \\right|$.\n\nFinal Answer",
+            1
+        ]
+    ],
+    "time": 39.0305278301239,
+    "total_tokens": 1593,
+    "final_answer_tokens": 348,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,36 @@
+{
+    "problem": "Each of five, standard, six-sided dice is rolled once. Two of the dice come up the same, but the other three are all different from those two and different from each other. The pair is set aside, and the other three dice are re-rolled. The dice are said to show a \"full house\" if three of the dice show the same value and the other two show the same value (and potentially, but not necessarily, all five dice show the same value). What is the probability that after the second set of rolls, the dice show a full house?",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "There are a total of $6^3=216$ possible sets of dice rolls. If one of the re-rolled dice matches the pair we set aside and the other two form a pair, we will have a full house. But we will also have a full house if all three re-rolled dice come up the same.\n\nConsider the first case. There are $3$ ways to pick which of the three dice will match a pair, and then $5$ ways to pick a value for the other two dice so that they form a pair (but don't match the first three dice), for a total of $3\\cdot 5=15$ possible outcomes, plus the outcome that all five dice match.\n\nIn the second case, we need all three dice to match each other. There are $5$ ways to pick which value the three dice will have so that they don't match the first pair, plus the outcome that all five dice match.\n\nSo there are a total of $15+5=20$ ways to get a full house without all five dice matching, added to the possibility that all five dice match, which makes $21$ ways to get a full house. So, the probability is $$\\frac{\\text{successful outcomes}}{\\text{total outcomes}}=\\frac{21}{216}=\\boxed{\\frac{7}{72}}.$$",
+    "is_solved": true,
+    "model_solution": "Step 1:  Determine the possible arrangements of the numbers on the five dice that result in a pair and three different numbers, which will be rolled again.\nStep 2:  There are $6$ possibilities for the number on each of the two dice that show the same number, so there are $6\\cdot 6=36$ possible arrangements for the pair. There are $5$ possibilities for the first of the three different numbers, $4$ possibilities for the second, and $3$ possibilities for the third, so there are $5\\cdot 4\\cdot 3=60$ possible arrangements for the three different numbers. Therefore, there are $36\\cdot60=2160$ possible arrangements of the numbers on the five dice that result in a pair and three different numbers.\nStep 2:  There are $6^3=216$ possible arrangements of the three different numbers on the three dice, because each of the three dice can come up in any of the six possible values.\nThe probability that after the second set of rolls the dice show a full house is $\\frac{216}{(2160)\\cdot216}=\\frac{1}{108}$.\nFinal Answer",
+    "steps": [
+        "Step 1:  Determine the possible arrangements of the numbers on the five dice that result in a pair and three different numbers, which will be rolled again.",
+        "Step 2:  There are $6$ possibilities for the number on each of the two dice that show the same number, so there are $6\\cdot 6=36$ possible arrangements for the pair. There are $5$ possibilities for the first of the three different numbers, $4$ possibilities for the second, and $3$ possibilities for the third, so there are $5\\cdot 4\\cdot 3=60$ possible arrangements for the three different numbers. Therefore, there are $36\\cdot60=2160$ possible arrangements of the numbers on the five dice that result in a pair and three different numbers.",
+        "Step 2:  There are $6^3=216$ possible arrangements of the three different numbers on the three dice, because each of the three dice can come up in any of the six possible values.",
+        "The probability that after the second set of rolls the dice show a full house is $\\frac{216}{(2160)\\cdot216}=\\frac{1}{108}$.\nFinal Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Determine the possible arrangements of the numbers on the five dice that result in a pair and three different numbers, which will be rolled again.",
+            1
+        ],
+        [
+            "Step 2:  There are $6$ possibilities for the number on each of the two dice that show the same number, so there are $6\\cdot 6=36$ possible arrangements for the pair. There are $5$ possibilities for the first of the three different numbers, $4$ possibilities for the second, and $3$ possibilities for the third, so there are $5\\cdot 4\\cdot 3=60$ possible arrangements for the three different numbers. Therefore, there are $36\\cdot60=2160$ possible arrangements of the numbers on the five dice that result in a pair and three different numbers.",
+            1
+        ],
+        [
+            "Step 2:  There are $6^3=216$ possible arrangements of the three different numbers on the three dice, because each of the three dice can come up in any of the six possible values.",
+            1
+        ],
+        [
+            "The probability that after the second set of rolls the dice show a full house is $\\frac{216}{(2160)\\cdot216}=\\frac{1}{108}$.\nFinal Answer",
+            1
+        ]
+    ],
+    "time": 55.2035698890686,
+    "total_tokens": 2737,
+    "final_answer_tokens": 420,
+    "model": "meta-llama/Llama-Vision-Free"
+}

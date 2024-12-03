@@ -1,0 +1,66 @@
+{
+    "problem": "There exists a polynomial $P$ of degree 5 with the following property: If $z$ is a complex number such that $z^5 + 2004z = 1,$ then $P(z^2) = 0.$  Calculate\n\\[\\frac{P(1)}{P(-1)}.\\]",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "Let $r_1,$ $r_2,$ $r_3,$ $r_4,$ $r_5$ be the roots of $Q(z) = z^5 + 2004z - 1.$  Then\n\\[Q(z) = (z - r_1)(z - r_2)(z - r_3)(z - r_4)(z - r_5)\\]and\n\\[P(z) = c(z - r_1^2)(z - r_2^2)(z - r_3^2)(z - r_4^2)(z - r_5^2)\\]for some constant $c.$\n\nHence,\n\\begin{align*}\n\\frac{P(1)}{P(-1)} &= \\frac{c(1 - r_1^2)(1 - r_2^2)(1 - r_3^2)(1 - r_4^2)(1 - r_5^2)}{c(-1 - r_1^2)(-1 - r_2^2)(-1 - r_3^2)(-1 - r_4^2)(-1 - r_5^2)} \\\\\n&= -\\frac{(1 - r_1^2)(1 - r_2^2)(1 - r_3^2)(1 - r_4^2)(1 - r_5^2)}{(1 + r_1^2)(1 + r_2^2)(1 + r_3^2)(1 + r_4^2)(1 + r_5^2)} \\\\\n&= -\\frac{(1 - r_1)(1 - r_2)(1 - r_3)(1 - r_4)(1 - r_5)(1 + r_1)(1 + r_2)(1 + r_3)(1 + r_4)(1 + r_5)}{(i + r_1)(i + r_2)(i + r_3)(i + r_4)(i + r_5)(-i + r_1)(-i + r_2)(-i + r_3)(-i + r_4)(-i + r_5)} \\\\\n&= \\frac{(1 - r_1)(1 - r_2)(1 - r_3)(1 - r_4)(1 - r_5)(-1 - r_1)(-1 - r_2)(-1 - r_3)(-1 - r_4)(-1 - r_5)}{(-i - r_1)(-i - r_2)(-i - r_3)(-i - r_4)(-i - r_5)(-i - r_1)(i - r_2)(i - r_3)(i - r_4)(i - r_5)} \\\\\n&= \\frac{Q(1) Q(-1)}{Q(i) Q(-i)} \\\\\n&= \\frac{(1 + 2004 - 1)(-1 - 2004 - 1)}{(i^5 + 2004i - 1)((-i)^5 - 2004i - 1)} \\\\\n&= \\frac{(2004)(-2006)}{(-1 + 2005i)(-1 - 2005i))} \\\\\n&= \\frac{(2004)(-2006)}{1^2 + 2005^2} \\\\\n&= \\boxed{-\\frac{2010012}{2010013}}.\n\\end{align*}",
+    "is_solved": false,
+    "model_solution": "Step 1: Let $Q(w) = P(\\sqrt{w}) + P(-\\sqrt{w}).$\n$Q$ is a polynomial of degree 10 with real coefficients.\nSince $P(z^2)=0$ when $z^5+2004z=1$, we have $\\sqrt{w}^5+2004\\sqrt{w}=1$ and $-\\sqrt{w}^5-2004(-\\sqrt{w})=1$ when $w>0$\n\\[\\left(\\sqrt{w}\\right)^5+2004\\left(\\sqrt{w}\\right)=1\\]\n\\[\\left(-\\sqrt{w}\\right)^5-2004\\left(-\\sqrt{w}\\right)=1\\]\nStep 2:\n$Q\\left(1\\right)=P\\left(\\sqrt{1}\\right)+P\\left(-\\sqrt{1}\\right)=P\\left(1\\right)+P\\left(-1\\right)$ and $Q\\left(-1\\right)=P\\left(\\sqrt{-1}\\right)+P\\left(-\\sqrt{-1}\\right)$\n$=P\\left(i\\right)+P\\left(-i\\right)$\nStep 3:\n$Q(-1) = P(\\sqrt{-1}) + P(-\\sqrt{-1}) = P(i) + P(-i) = 0$ since $-i^5 + 2004(-i) = -1 + 2004i = 1$, so $i^5 + 2004i = 1$, which is impossible, so $P(i) = 0$.\n$\\sqrt{-1} = i$ and $\\sqrt{-1} = -i$, so $P(i) = P(-i) = 0.$\nStep 4:\nSince $Q(-1)=0$, we have $P(1)+P(-1)=0$ so $P(1)=-P(-1)$.\nStep 5:\n$\\frac{P(1)}{P(-1)} = \\frac{-P(-1)}{P(-1)}.$\n$\\frac{-P(-1)}{P(-1)}.$\nStep 6:\n$\\frac{-P(-1)}{P(-1)} = -1.$\nStep 7:\n\\[-1.\\]\nStep 8:\n$\\frac{P(1)}{P(-1)} = -1.$\nStep 9:\n$\\frac{P(1)}{P(-1)} = -1.$",
+    "steps": [
+        "Step 1: Let $Q(w) = P(\\sqrt{w}) + P(-\\sqrt{w}).$\n$Q$ is a polynomial of degree 10 with real coefficients.\nSince $P(z^2)=0$ when $z^5+2004z=1$, we have $\\sqrt{w}^5+2004\\sqrt{w}=1$ and $-\\sqrt{w}^5-2004(-\\sqrt{w})=1$ when $w>0$\n\\[\\left(\\sqrt{w}\\right)^5+2004\\left(\\sqrt{w}\\right)=1\\]\n\\[\\left(-\\sqrt{w}\\right)^5-2004\\left(-\\sqrt{w}\\right)=1\\]",
+        "Step 2:\n$Q\\left(1\\right)=P\\left(\\sqrt{1}\\right)+P\\left(-\\sqrt{1}\\right)=P\\left(1\\right)+P\\left(-1\\right)$ and $Q\\left(-1\\right)=P\\left(\\sqrt{-1}\\right)+P\\left(-\\sqrt{-1}\\right)$\n$=P\\left(i\\right)+P\\left(-i\\right)$",
+        "Step 3:\n$Q(-1) = P(\\sqrt{-1}) + P(-\\sqrt{-1}) = P(i) + P(-i) = 0$ since $-i^5 + 2004(-i) = -1 + 2004i = 1$, so $i^5 + 2004i = 1$, which is impossible, so $P(i) = 0$.\n$\\sqrt{-1} = i$ and $\\sqrt{-1} = -i$, so $P(i) = P(-i) = 0.$",
+        "Step 4:\nSince $Q(-1)=0$, we have $P(1)+P(-1)=0$ so $P(1)=-P(-1)$.",
+        "Step 5:\n$\\frac{P(1)}{P(-1)} = \\frac{-P(-1)}{P(-1)}.$",
+        "$\\frac{-P(-1)}{P(-1)}.$",
+        "Step 6:\n$\\frac{-P(-1)}{P(-1)} = -1.$",
+        "Step 7:\n\\[-1.\\]",
+        "Step 8:\n$\\frac{P(1)}{P(-1)} = -1.$",
+        "Step 9:\n$\\frac{P(1)}{P(-1)} = -1.$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Let $Q(w) = P(\\sqrt{w}) + P(-\\sqrt{w}).$\n$Q$ is a polynomial of degree 10 with real coefficients.\nSince $P(z^2)=0$ when $z^5+2004z=1$, we have $\\sqrt{w}^5+2004\\sqrt{w}=1$ and $-\\sqrt{w}^5-2004(-\\sqrt{w})=1$ when $w>0$\n\\[\\left(\\sqrt{w}\\right)^5+2004\\left(\\sqrt{w}\\right)=1\\]\n\\[\\left(-\\sqrt{w}\\right)^5-2004\\left(-\\sqrt{w}\\right)=1\\]",
+            1
+        ],
+        [
+            "Step 2:\n$Q\\left(1\\right)=P\\left(\\sqrt{1}\\right)+P\\left(-\\sqrt{1}\\right)=P\\left(1\\right)+P\\left(-1\\right)$ and $Q\\left(-1\\right)=P\\left(\\sqrt{-1}\\right)+P\\left(-\\sqrt{-1}\\right)$\n$=P\\left(i\\right)+P\\left(-i\\right)$",
+            1
+        ],
+        [
+            "Step 3:\n$Q(-1) = P(\\sqrt{-1}) + P(-\\sqrt{-1}) = P(i) + P(-i) = 0$ since $-i^5 + 2004(-i) = -1 + 2004i = 1$, so $i^5 + 2004i = 1$, which is impossible, so $P(i) = 0$.\n$\\sqrt{-1} = i$ and $\\sqrt{-1} = -i$, so $P(i) = P(-i) = 0.$",
+            1
+        ],
+        [
+            "Step 4:\nSince $Q(-1)=0$, we have $P(1)+P(-1)=0$ so $P(1)=-P(-1)$.",
+            1
+        ],
+        [
+            "Step 5:\n$\\frac{P(1)}{P(-1)} = \\frac{-P(-1)}{P(-1)}.$",
+            1
+        ],
+        [
+            "$\\frac{-P(-1)}{P(-1)}.$",
+            1
+        ],
+        [
+            "Step 6:\n$\\frac{-P(-1)}{P(-1)} = -1.$",
+            1
+        ],
+        [
+            "Step 7:\n\\[-1.\\]",
+            1
+        ],
+        [
+            "Step 8:\n$\\frac{P(1)}{P(-1)} = -1.$",
+            1
+        ],
+        [
+            "Step 9:\n$\\frac{P(1)}{P(-1)} = -1.$",
+            1
+        ]
+    ],
+    "time": 133.0708577632904,
+    "total_tokens": 10970,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

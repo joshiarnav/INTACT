@@ -1,0 +1,41 @@
+{
+    "problem": "$A$, $B$ and $C$ are circular regions as shown. There are 7 items in circle $C$. There are exactly 20 items in $A$ and 10 of those items are not in $B$. How many items are in $B$, but not in $C$?\n\n[asy]\ndraw(Circle((0,0),50));\nlabel(\"$A$\",(39,39));\ndraw(Circle((10,-10),32));\nlabel(\"$B$\",(-16,16));\ndraw(Circle((5,-5),20));\nlabel(\"$C$\",(22,-22));\n[/asy]",
+    "level": "Level 1",
+    "type": "Counting & Probability",
+    "solution": "Everything in circle $B$ is either in circle $B$, but not in circle $C$; or in both circle $B$ and circle $C$. Similarly, everything in Circle $A$ is either in circle $A$, but not in circle $B$; or in both circle $A$ and circle $B$. Additionally, everything in circle $C$ is in circle $B$ and everything in circle $B$ is in circle $A$. We are told that there are exactly 20 items in $A$ and 10 of those items are in $A$, but not in $B$. This means that there is a total of $$20-10=10$$ items in circle $B$. we are also told that there are 7 items in circle $C$. Because everything in circle $C$ is in circle $B$, we get that there are $$10-7=\\boxed{3}$$ items in circle $B$ but not in circle $C$.",
+    "is_solved": false,
+    "model_solution": "Let $x$ be the number of items in $B$ that are not in $A$, and let $y$ be the number of items in $B$ that are also in $A$. Then $x+y$ is the total number of items in $B$.\nSince there are 10 items in $A$ that are not in $B$ and there are 20 items in $A$, we have $10=20-y$ so $y=20-10=10$.\nSince $x+y=10$ and $y=10$, we have $x=0$.\nSince we know $x=0$, then the number of items in $B$ that are not in $A$ is $0$. Therefore, the number of items in $B$ that are also in $A$ is $10$, and the total number of items in $B$ is $10$, since $x+y=10$ and $x=0$.\nWe know that the total number of items in $A$ is 20, and 10 of those items are not in $B$. Therefore, the number of items in $B$ that are also in $A$ is 20-10=10, and the total number of items in $B$ is $\\boxed{10}$.",
+    "steps": [
+        "Let $x$ be the number of items in $B$ that are not in $A$, and let $y$ be the number of items in $B$ that are also in $A$. Then $x+y$ is the total number of items in $B$.",
+        "Since there are 10 items in $A$ that are not in $B$ and there are 20 items in $A$, we have $10=20-y$ so $y=20-10=10$.",
+        "Since $x+y=10$ and $y=10$, we have $x=0$.",
+        "Since we know $x=0$, then the number of items in $B$ that are not in $A$ is $0$. Therefore, the number of items in $B$ that are also in $A$ is $10$, and the total number of items in $B$ is $10$, since $x+y=10$ and $x=0$.",
+        "We know that the total number of items in $A$ is 20, and 10 of those items are not in $B$. Therefore, the number of items in $B$ that are also in $A$ is 20-10=10, and the total number of items in $B$ is $\\boxed{10}$."
+    ],
+    "full_steps": [
+        [
+            "Let $x$ be the number of items in $B$ that are not in $A$, and let $y$ be the number of items in $B$ that are also in $A$. Then $x+y$ is the total number of items in $B$.",
+            1
+        ],
+        [
+            "Since there are 10 items in $A$ that are not in $B$ and there are 20 items in $A$, we have $10=20-y$ so $y=20-10=10$.",
+            1
+        ],
+        [
+            "Since $x+y=10$ and $y=10$, we have $x=0$.",
+            1
+        ],
+        [
+            "Since we know $x=0$, then the number of items in $B$ that are not in $A$ is $0$. Therefore, the number of items in $B$ that are also in $A$ is $10$, and the total number of items in $B$ is $10$, since $x+y=10$ and $x=0$.",
+            1
+        ],
+        [
+            "We know that the total number of items in $A$ is 20, and 10 of those items are not in $B$. Therefore, the number of items in $B$ that are also in $A$ is 20-10=10, and the total number of items in $B$ is $\\boxed{10}$.",
+            1
+        ]
+    ],
+    "time": 66.24623489379883,
+    "total_tokens": 3404,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

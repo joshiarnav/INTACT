@@ -1,0 +1,66 @@
+{
+    "problem": "An angle $x$ is chosen at random from the interval $0^{\\circ} < x < 90^{\\circ}$.  Let $p$ be the probability that the numbers $\\sin^2 x$, $\\cos^2 x$, and $\\sin x \\cos x$ are not the lengths of the sides of a triangle.  Given that $p=d/n$, where $d$ is the number of degrees in $\\arctan m$ and $m$ and $n$ are positive integers with $m+n<1000$, find $m+n$.",
+    "level": "Level 5",
+    "type": "Precalculus",
+    "solution": "Because $\\cos(90^{\\circ}-x)=\\sin x$ and $\\sin(90^{\\circ}-x)=\\cos x$, it suffices to consider $x$ in the interval $0^{\\circ}<x\\le45^{\\circ}$.  For such $x$, $$\\cos^2\nx\\ge\\sin x\\cos x\\ge\\sin^2 x,$$so the three numbers are not the lengths of the sides of a triangle if and only if $$\\cos^2\nx\\ge\\sin^2 x+ \\sin x \\cos x,$$which is equivalent to $\\cos\n2x\\ge{1\\over2}\\sin 2x$, or $\\tan 2x \\le2$. Because the tangent function is increasing in the interval $0^{\\circ}\\le\nx\\le45^{\\circ}$, this inequality is equivalent to $x\\le{1\\over2} \\arctan2$. It follows that $$p={{{1\\over2} \\arctan 2}\\over45^{\\circ}}={{\\arctan\n2}\\over90^{\\circ}},$$so $m + n = \\boxed{92}$.",
+    "is_solved": false,
+    "model_solution": "Step 1:  We are given that an angle $x$ is chosen randomly from the interval $0^{\\circ} < x < 90^{\\circ}$.\nStep 2:  The problem requires us to find the probability $p$ that the numbers $\\sin^2 x$, $\\cos^2 x$, and $\\sin x \\cos x$ are not the lengths of the sides of a triangle.\nStep 3:  To approach this, we first need to understand the conditions for a triangle to be valid, i.e., the sum of the lengths of any two sides must be greater than the length of the third side.\nStep 4:  We can use this condition to derive inequalities involving the given expressions.\nStep 5:  We know that $\\sin^2 x + \\cos^2 x = 1$, and we're interested in the conditions where the other two expressions cannot satisfy the triangle inequality.\nStep 6:  We can represent $\\sin^2 x$ and $\\cos^2 x$ as $a$ and $b$ respectively, and $\\sin x \\cos x$ as $c$.\nStep 7:  We need to find the conditions under which the triangle\nStep 8:  $\\frac{1}{2}(b - a) < c < \\frac{1}{2}(a + b)$ \n cannot be satisfied.\nStep 9:  The condition $(a + b)^2 > 4ac$ must be violated.\nStep 10:  We need to find when $(a + b)^2 > 4ac$ cannot be satisfied.\nStep 11:\n\\[(a + b)^2 > 4ac \\implies a^2 - 2ab + b^2 > 4ac \\implies 1 - 2ab > 4ac \\implies 1 - 2ab + 2ac > 0.\\]\n\n\\[(a + b)^2 > 4ac \\implies a^2 - 2ab + b^2 > 4ac \\implies 1 - 2ab > 4ac \\implies 1 - 2ab + 2ac > 0.\\]\n\n\\[1 - 2ab + 2ac > 0 \\implies 2ac - 2ab > -1 \\implies ac - ab > -\\frac{1}{2} \\implies \\frac{1}{2}(b - a) < c.\\]\n\nTherefore, we need to find when $\\frac{1}{2}(b - a) < c < \\frac{1}{2}(a + b)$ cannot be satisfied.\nStep 2:\n\\begin{align*}\n& \\text{(a + b)^2 > 4ac} \\\\\n& \\text{where a = sin^2 x, b = cos^2 x, c = sin x cos x} \\\\\n& \\text{and 0 < x < 90} \\\\\n& \\text{then we have} \\\\\n& \\text{(sin^2 x + cos^2 x)^2 > 4 sin^2 x cos^2 x} \\\\\n& \\text{which is true since 1 > 0} \\\\\n& \\text{but (sin^2 x + cos^2 x)^2 = 1, so we need to find when} \\\\\n& \\text{1 > 4 sin^2 x cos^2 x} \\\\\n& \\text{is false.} \\\\\n& \\text{1 > 4 sin^2 x cos^2 x} \\\\\n& \\text{is false when sin^2 x cos^2 x > 1/4, which is when} \\\\\n& \\text{sin 2x > 1/2} \\\\\n& \\text{which is when 2x > 30 degrees, or x\nStep 3:\n\\[\\frac{\\pi}{6} < x < \\frac{\\pi}{4}\\]\nStep 4:\n\\[\\frac{\\pi}{6} < x < \\frac{\\pi}{4}\\]\n\\[\\frac{\\pi}{6} < x < \\frac{\\pi}{4} \\implies 30^\\circ < x < 45^\\circ\\]\nThe interval of $x$ is $30^\\circ < x < 45^\\circ$, so the length of the interval is $45^\\circ - 30^\\circ = 15^\\circ$.",
+    "steps": [
+        "Step 1:  We are given that an angle $x$ is chosen randomly from the interval $0^{\\circ} < x < 90^{\\circ}$.\nStep 2:  The problem requires us to find the probability $p$ that the numbers $\\sin^2 x$, $\\cos^2 x$, and $\\sin x \\cos x$ are not the lengths of the sides of a triangle.\nStep 3:  To approach this, we first need to understand the conditions for a triangle to be valid, i.e., the sum of the lengths of any two sides must be greater than the length of the third side.\nStep 4:  We can use this condition to derive inequalities involving the given expressions.\nStep 5:  We know that $\\sin^2 x + \\cos^2 x = 1$, and we're interested in the conditions where the other two expressions cannot satisfy the triangle inequality.\nStep 6:  We can represent $\\sin^2 x$ and $\\cos^2 x$ as $a$ and $b$ respectively, and $\\sin x \\cos x$ as $c$.\nStep 7:  We need to find the conditions under which the triangle",
+        "Step 8:  $\\frac{1}{2}(b - a) < c < \\frac{1}{2}(a + b)$ \n cannot be satisfied.",
+        "Step 9:  The condition $(a + b)^2 > 4ac$ must be violated.",
+        "Step 10:  We need to find when $(a + b)^2 > 4ac$ cannot be satisfied.",
+        "Step 11:\n\\[(a + b)^2 > 4ac \\implies a^2 - 2ab + b^2 > 4ac \\implies 1 - 2ab > 4ac \\implies 1 - 2ab + 2ac > 0.\\]\n\n\\[(a + b)^2 > 4ac \\implies a^2 - 2ab + b^2 > 4ac \\implies 1 - 2ab > 4ac \\implies 1 - 2ab + 2ac > 0.\\]\n\n\\[1 - 2ab + 2ac > 0 \\implies 2ac - 2ab > -1 \\implies ac - ab > -\\frac{1}{2} \\implies \\frac{1}{2}(b - a) < c.\\]\n\nTherefore, we need to find when $\\frac{1}{2}(b - a) < c < \\frac{1}{2}(a + b)$ cannot be satisfied.",
+        "Step 2:\n\\begin{align*}\n& \\text{(a + b)^2 > 4ac} \\\\\n& \\text{where a = sin^2 x, b = cos^2 x, c = sin x cos x} \\\\\n& \\text{and 0 < x < 90} \\\\\n& \\text{then we have} \\\\\n& \\text{(sin^2 x + cos^2 x)^2 > 4 sin^2 x cos^2 x} \\\\\n& \\text{which is true since 1 > 0} \\\\\n& \\text{but (sin^2 x + cos^2 x)^2 = 1, so we need to find when} \\\\\n& \\text{1 > 4 sin^2 x cos^2 x} \\\\\n& \\text{is false.} \\\\\n& \\text{1 > 4 sin^2 x cos^2 x} \\\\\n& \\text{is false when sin^2 x cos^2 x > 1/4, which is when} \\\\\n& \\text{sin 2x > 1/2} \\\\\n& \\text{which is when 2x > 30 degrees, or x",
+        "Step 3:\n\\[\\frac{\\pi}{6} < x < \\frac{\\pi}{4}\\]",
+        "Step 4:\n\\[\\frac{\\pi}{6} < x < \\frac{\\pi}{4}\\]",
+        "\\[\\frac{\\pi}{6} < x < \\frac{\\pi}{4} \\implies 30^\\circ < x < 45^\\circ\\]",
+        "The interval of $x$ is $30^\\circ < x < 45^\\circ$, so the length of the interval is $45^\\circ - 30^\\circ = 15^\\circ$."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We are given that an angle $x$ is chosen randomly from the interval $0^{\\circ} < x < 90^{\\circ}$.\nStep 2:  The problem requires us to find the probability $p$ that the numbers $\\sin^2 x$, $\\cos^2 x$, and $\\sin x \\cos x$ are not the lengths of the sides of a triangle.\nStep 3:  To approach this, we first need to understand the conditions for a triangle to be valid, i.e., the sum of the lengths of any two sides must be greater than the length of the third side.\nStep 4:  We can use this condition to derive inequalities involving the given expressions.\nStep 5:  We know that $\\sin^2 x + \\cos^2 x = 1$, and we're interested in the conditions where the other two expressions cannot satisfy the triangle inequality.\nStep 6:  We can represent $\\sin^2 x$ and $\\cos^2 x$ as $a$ and $b$ respectively, and $\\sin x \\cos x$ as $c$.\nStep 7:  We need to find the conditions under which the triangle",
+            1
+        ],
+        [
+            "Step 8:  $\\frac{1}{2}(b - a) < c < \\frac{1}{2}(a + b)$ \n cannot be satisfied.",
+            1
+        ],
+        [
+            "Step 9:  The condition $(a + b)^2 > 4ac$ must be violated.",
+            1
+        ],
+        [
+            "Step 10:  We need to find when $(a + b)^2 > 4ac$ cannot be satisfied.",
+            1
+        ],
+        [
+            "Step 11:\n\\[(a + b)^2 > 4ac \\implies a^2 - 2ab + b^2 > 4ac \\implies 1 - 2ab > 4ac \\implies 1 - 2ab + 2ac > 0.\\]\n\n\\[(a + b)^2 > 4ac \\implies a^2 - 2ab + b^2 > 4ac \\implies 1 - 2ab > 4ac \\implies 1 - 2ab + 2ac > 0.\\]\n\n\\[1 - 2ab + 2ac > 0 \\implies 2ac - 2ab > -1 \\implies ac - ab > -\\frac{1}{2} \\implies \\frac{1}{2}(b - a) < c.\\]\n\nTherefore, we need to find when $\\frac{1}{2}(b - a) < c < \\frac{1}{2}(a + b)$ cannot be satisfied.",
+            1
+        ],
+        [
+            "Step 2:\n\\begin{align*}\n& \\text{(a + b)^2 > 4ac} \\\\\n& \\text{where a = sin^2 x, b = cos^2 x, c = sin x cos x} \\\\\n& \\text{and 0 < x < 90} \\\\\n& \\text{then we have} \\\\\n& \\text{(sin^2 x + cos^2 x)^2 > 4 sin^2 x cos^2 x} \\\\\n& \\text{which is true since 1 > 0} \\\\\n& \\text{but (sin^2 x + cos^2 x)^2 = 1, so we need to find when} \\\\\n& \\text{1 > 4 sin^2 x cos^2 x} \\\\\n& \\text{is false.} \\\\\n& \\text{1 > 4 sin^2 x cos^2 x} \\\\\n& \\text{is false when sin^2 x cos^2 x > 1/4, which is when} \\\\\n& \\text{sin 2x > 1/2} \\\\\n& \\text{which is when 2x > 30 degrees, or x",
+            1
+        ],
+        [
+            "Step 3:\n\\[\\frac{\\pi}{6} < x < \\frac{\\pi}{4}\\]",
+            1
+        ],
+        [
+            "Step 4:\n\\[\\frac{\\pi}{6} < x < \\frac{\\pi}{4}\\]",
+            1
+        ],
+        [
+            "\\[\\frac{\\pi}{6} < x < \\frac{\\pi}{4} \\implies 30^\\circ < x < 45^\\circ\\]",
+            1
+        ],
+        [
+            "The interval of $x$ is $30^\\circ < x < 45^\\circ$, so the length of the interval is $45^\\circ - 30^\\circ = 15^\\circ$.",
+            1
+        ]
+    ],
+    "time": 135.08991718292236,
+    "total_tokens": 15676,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

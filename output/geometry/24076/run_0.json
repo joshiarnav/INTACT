@@ -1,0 +1,46 @@
+{
+    "problem": "There are two different isosceles triangles whose side lengths are integers and whose areas are $120.$ One of these two triangles, $\\triangle XYZ,$ is shown. Determine the perimeter of the second triangle.\n\n[asy]\ndraw((0,0)--(30,0)--(15,-8)--cycle,black+linewidth(1));\nlabel(\"$X$\",(0,0),W);\nlabel(\"$Y$\",(15,-8),S);\nlabel(\"$Z$\",(30,0),E);\nlabel(\"30\",(0,0)--(30,0),N);\nlabel(\"17\",(0,0)--(15,-8),SW);\nlabel(\"17\",(15,-8)--(30,0),SE);\n[/asy]",
+    "level": "Level 4",
+    "type": "Geometry",
+    "solution": "Since $XY=YZ,$ then $\\triangle XYZ$ is isosceles. Draw altitude $YW$ from $Y$ to $W$ on $XZ.$ Altitude $YW$ bisects the base $XZ$ so that $$XW=WZ=\\frac{30}{2}=15,$$as shown.\n\n[asy]\ndraw((0,0)--(30,0)--(15,-8)--cycle,black+linewidth(1));\ndraw((15,0)--(15,-8),black+linewidth(1)+dashed);\ndraw((15,0)--(15,-1)--(14,-1)--(14,0)--cycle,black+linewidth(1));\nlabel(\"$X$\",(0,0),W);\nlabel(\"$Y$\",(15,-8),S);\nlabel(\"$Z$\",(30,0),E);\nlabel(\"$W$\",(15,0),N);\nlabel(\"17\",(0,0)--(15,-8),SW);\nlabel(\"17\",(15,-8)--(30,0),SE);\nlabel(\"15\",(0,0)--(15,0),N);\nlabel(\"15\",(15,0)--(30,0),N);\n[/asy]\n\nSince $\\angle YWX=90^{\\circ},$ $\\triangle YWX$ is right angled. By the Pythagorean Theorem, $17^2=YW^2+15^2$ or $YW^2=17^2-15^2$ or $YW^2=289-225=64,$ and so $YW=\\sqrt{64}=8,$ since $YW>0.$\n\nWe rotate $\\triangle XWY$ clockwise $90^{\\circ}$ about $W$ and similarly rotate $\\triangle ZWY$ counter-clockwise $90^{\\circ}$ about $W$ to obtain a new isosceles triangle with the same area. The new triangle formed has two equal sides of length $17$ (since $XY$ and $ZY$ form these sides) and a third side having length twice that of $YW$ or $2\\times8=16$ (since the new base consists of two copies of $YW$).\n\nTherefore, the desired perimeter is $17+17+16= \\boxed{50}.$",
+    "is_solved": false,
+    "model_solution": "Since the area of $\\triangle XYZ$ is $120,$ we have $\\frac{1}{2}(17)(b)=120,$ where $b$ is the length of the base of $\\triangle XYZ.$\n$30 = b$\nThe perimeter of the second triangle is $2a+30$, where $a$ is a positive integer.\nThe equation $\\frac{1}{2}(17)(b)=120$ can be solved to find that $b=30$\nSince the base of $\\triangle XYZ$ is $30$, the height of $\\triangle XYZ$ is $17$, and since $\\triangle XYZ$ is isosceles, its altitude is perpendicular to its base, the altitude of the second triangle must be $17.$\nLet $h$ be the height of the second triangle and let $b$ be the length of its base.\n\nWe can now solve for the perimeter of the second triangle by setting $2a+30=2\\left(\\frac{h}{2}\\right)+30= h+30.$",
+    "steps": [
+        "Since the area of $\\triangle XYZ$ is $120,$ we have $\\frac{1}{2}(17)(b)=120,$ where $b$ is the length of the base of $\\triangle XYZ.$",
+        "$30 = b$",
+        "The perimeter of the second triangle is $2a+30$, where $a$ is a positive integer.",
+        "The equation $\\frac{1}{2}(17)(b)=120$ can be solved to find that $b=30$",
+        "Since the base of $\\triangle XYZ$ is $30$, the height of $\\triangle XYZ$ is $17$, and since $\\triangle XYZ$ is isosceles, its altitude is perpendicular to its base, the altitude of the second triangle must be $17.$",
+        "Let $h$ be the height of the second triangle and let $b$ be the length of its base.\n\nWe can now solve for the perimeter of the second triangle by setting $2a+30=2\\left(\\frac{h}{2}\\right)+30= h+30.$"
+    ],
+    "full_steps": [
+        [
+            "Since the area of $\\triangle XYZ$ is $120,$ we have $\\frac{1}{2}(17)(b)=120,$ where $b$ is the length of the base of $\\triangle XYZ.$",
+            1
+        ],
+        [
+            "$30 = b$",
+            1
+        ],
+        [
+            "The perimeter of the second triangle is $2a+30$, where $a$ is a positive integer.",
+            1
+        ],
+        [
+            "The equation $\\frac{1}{2}(17)(b)=120$ can be solved to find that $b=30$",
+            1
+        ],
+        [
+            "Since the base of $\\triangle XYZ$ is $30$, the height of $\\triangle XYZ$ is $17$, and since $\\triangle XYZ$ is isosceles, its altitude is perpendicular to its base, the altitude of the second triangle must be $17.$",
+            1
+        ],
+        [
+            "Let $h$ be the height of the second triangle and let $b$ be the length of its base.\n\nWe can now solve for the perimeter of the second triangle by setting $2a+30=2\\left(\\frac{h}{2}\\right)+30= h+30.$",
+            1
+        ]
+    ],
+    "time": 79.58796763420105,
+    "total_tokens": 3805,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

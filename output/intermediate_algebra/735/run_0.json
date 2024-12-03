@@ -1,0 +1,66 @@
+{
+    "problem": "Let $(x,y)$ be a pair of real numbers satisfying \\[\n56x + 33y = \\frac{-y}{x^2+y^2}, \\qquad \\text{and} \\qquad 33x-56y = \\frac{x}{x^2+y^2}.\n\\]Determine the value of $|x| + |y|$.",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "Observe that \\[\n\\frac{1}{x+yi} = \\frac{x - yi}{x^2 + y^2} = 33x - 56 y + (56x + 33y)i = (33 + 56i)(x + yi).\n\\]So \\[\n(x+yi)^2 = \\frac{1}{33+56i} = \\frac{1}{(7 +4i)^2} = \\left( \\frac{7 - 4i}{65} \\right)^2.\n\\]It follows that $(x,y) = \\pm \\left( \\frac{7}{65}, -\\frac{4}{65} \\right)$, so $|x| + |y| = \\boxed{\\frac{11}{65}}$.",
+    "is_solved": false,
+    "model_solution": "Step 1: To solve the given system of equations, multiply both sides of the first equation by $x^2 + y^2$ to clear the fraction, resulting in:\n\\[\n56x(x^2 + y^2) + 33y(x^2 + y^2) = -y.\n\\]\nAlso, multiply both sides of the second equation by $x^2 + y^2$ to clear the fraction, resulting in:\n\\[\n33x(x^2 + y^2) - 56y(x^2 + y^2) = x.\n\\]\nStep 2:\n\\[\n(56x+33y)(x^2+y^2)=-y, \\text{ and } (33x-56y)(x^2+y^2)=x.\n\\]\nExpand the two equations from Step 1 to obtain:\n\\[\n56x^3+33x^2y+56x^2y+33y^3=-y(x^2+y^2), \\qquad \\text{and} \\qquad 33x^3-56x^2y+33xy^2-56y^3=x(x^2+y^2).\nStep 3:\n\\[\n(56x^3 + 33x^2y + 56x^2y + 33y^3) = -y(x^2 + y^2), \\qquad (33x^3 - 56x^2y + 33xy^2 - 56y^3) = x(x^2 + y^2)\n\\]\nStep 4:\nRearrange the first equation to obtain $y = \\frac{-(56x^3 + 89x^2y + 33y^3)}{x^2+y^2}$ and substitute this expression into the second equation to get $33x^3 - 56x^2y + 33xy^2 - 56y^3 = x \\left(\\frac{-(56x^3 + 89x^2y + 33y^3)}{x^2+y^2}\\right)(x^2+y^2)$, which simplifies to $33x^3 - 56x^2y + 33xy^2 - 56y^3 = -x(56x^3 + 89x^2y + 33y^3)$.\nStep 5:\n\\[\n33x^3 - 56x^2y + 33xy^2 - 56y^3 = -x(56x^3 + 89x^2y + 33y^3)\n\\]\n\\[\n\\implies 33x^3 - 56x^2y + 33xy^2 - 56y^3 = -56x^4 - 89x^3y - 33x^2y^2\n\\]\n\\[\n\\implies 56x^4 + 89x^3y + 33x^2y^2 + 33xy^2 - 56y^3 = 0\n\\]\n\\[\n\\implies 56x^4 + 89x^3y + 33x^2y^2 + 33xy^2 - 56y^3 = 0\n\\]\nStep 6:\n\\[\n(56x^4 + 89x^3y + 33x^2y^2 + 33xy^2 - 56y^3) = 0\n\\]\n\\[\n\\implies 56(x^4 + \\frac{89}{56}x^3y + \\frac{33}{56}x^2y^2 + \\frac{33}{56}xy^2 - \\frac{56}{56}y^3) = 0\n\\]\n\\[\n\\implies x^4 + \\frac{89}{56}x^3y + \\frac{33}{56}x^2y^2 + \\frac{33}{56}xy^2 - y^3 = 0\n\\]\nRecognize that $x^4 + \\frac{89}{56}x^3y + \\frac{33}{56}x^2y^2 + \\frac{33}{56}xy^2 - y^3 = 0$ can be factored as a sum of cubes\nStep 7:\n\\[\nx^4 + \\frac{89}{56}x^3y + \\frac{33}{56}x^2y^2 + \\frac{33}{56}xy^2 - y^3 = 0\n\\]\n\\[\n\\implies x^4 + \\frac{1}{56}x^3y(89) + \\frac{1}{56}x^2y^2(33) + \\frac{1}{56}xy^2(33) - \\frac{1}{56}y^3(56) = 0\n\\]\n\\[\n\\implies (x^2 + y^2)\\left[x^2 + \\frac{89}{56}xy - y^2\\right] = 0\n\\]\nStep 8: $\\left[x^2 + \\frac{89}{56}xy - y^2\\right] = 0 \\implies x^2 + \\frac{89}{56}xy - y^2 = 0$",
+    "steps": [
+        "Step 1: To solve the given system of equations, multiply both sides of the first equation by $x^2 + y^2$ to clear the fraction, resulting in:\n\\[\n56x(x^2 + y^2) + 33y(x^2 + y^2) = -y.\n\\]\nAlso, multiply both sides of the second equation by $x^2 + y^2$ to clear the fraction, resulting in:\n\\[\n33x(x^2 + y^2) - 56y(x^2 + y^2) = x.\n\\]",
+        "Step 2:\n\\[\n(56x+33y)(x^2+y^2)=-y, \\text{ and } (33x-56y)(x^2+y^2)=x.\n\\]",
+        "Expand the two equations from Step 1 to obtain:\n\\[\n56x^3+33x^2y+56x^2y+33y^3=-y(x^2+y^2), \\qquad \\text{and} \\qquad 33x^3-56x^2y+33xy^2-56y^3=x(x^2+y^2).",
+        "Step 3:\n\\[\n(56x^3 + 33x^2y + 56x^2y + 33y^3) = -y(x^2 + y^2), \\qquad (33x^3 - 56x^2y + 33xy^2 - 56y^3) = x(x^2 + y^2)\n\\]",
+        "Step 4:\nRearrange the first equation to obtain $y = \\frac{-(56x^3 + 89x^2y + 33y^3)}{x^2+y^2}$ and substitute this expression into the second equation to get $33x^3 - 56x^2y + 33xy^2 - 56y^3 = x \\left(\\frac{-(56x^3 + 89x^2y + 33y^3)}{x^2+y^2}\\right)(x^2+y^2)$, which simplifies to $33x^3 - 56x^2y + 33xy^2 - 56y^3 = -x(56x^3 + 89x^2y + 33y^3)$.",
+        "Step 5:\n\\[\n33x^3 - 56x^2y + 33xy^2 - 56y^3 = -x(56x^3 + 89x^2y + 33y^3)\n\\]\n\\[\n\\implies 33x^3 - 56x^2y + 33xy^2 - 56y^3 = -56x^4 - 89x^3y - 33x^2y^2\n\\]\n\\[\n\\implies 56x^4 + 89x^3y + 33x^2y^2 + 33xy^2 - 56y^3 = 0\n\\]\n\\[\n\\implies 56x^4 + 89x^3y + 33x^2y^2 + 33xy^2 - 56y^3 = 0\n\\]",
+        "Step 6:\n\\[\n(56x^4 + 89x^3y + 33x^2y^2 + 33xy^2 - 56y^3) = 0\n\\]\n\\[\n\\implies 56(x^4 + \\frac{89}{56}x^3y + \\frac{33}{56}x^2y^2 + \\frac{33}{56}xy^2 - \\frac{56}{56}y^3) = 0\n\\]\n\\[\n\\implies x^4 + \\frac{89}{56}x^3y + \\frac{33}{56}x^2y^2 + \\frac{33}{56}xy^2 - y^3 = 0\n\\]",
+        "Recognize that $x^4 + \\frac{89}{56}x^3y + \\frac{33}{56}x^2y^2 + \\frac{33}{56}xy^2 - y^3 = 0$ can be factored as a sum of cubes",
+        "Step 7:\n\\[\nx^4 + \\frac{89}{56}x^3y + \\frac{33}{56}x^2y^2 + \\frac{33}{56}xy^2 - y^3 = 0\n\\]\n\\[\n\\implies x^4 + \\frac{1}{56}x^3y(89) + \\frac{1}{56}x^2y^2(33) + \\frac{1}{56}xy^2(33) - \\frac{1}{56}y^3(56) = 0\n\\]\n\\[\n\\implies (x^2 + y^2)\\left[x^2 + \\frac{89}{56}xy - y^2\\right] = 0\n\\]",
+        "Step 8: $\\left[x^2 + \\frac{89}{56}xy - y^2\\right] = 0 \\implies x^2 + \\frac{89}{56}xy - y^2 = 0$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: To solve the given system of equations, multiply both sides of the first equation by $x^2 + y^2$ to clear the fraction, resulting in:\n\\[\n56x(x^2 + y^2) + 33y(x^2 + y^2) = -y.\n\\]\nAlso, multiply both sides of the second equation by $x^2 + y^2$ to clear the fraction, resulting in:\n\\[\n33x(x^2 + y^2) - 56y(x^2 + y^2) = x.\n\\]",
+            1
+        ],
+        [
+            "Step 2:\n\\[\n(56x+33y)(x^2+y^2)=-y, \\text{ and } (33x-56y)(x^2+y^2)=x.\n\\]",
+            1
+        ],
+        [
+            "Expand the two equations from Step 1 to obtain:\n\\[\n56x^3+33x^2y+56x^2y+33y^3=-y(x^2+y^2), \\qquad \\text{and} \\qquad 33x^3-56x^2y+33xy^2-56y^3=x(x^2+y^2).",
+            1
+        ],
+        [
+            "Step 3:\n\\[\n(56x^3 + 33x^2y + 56x^2y + 33y^3) = -y(x^2 + y^2), \\qquad (33x^3 - 56x^2y + 33xy^2 - 56y^3) = x(x^2 + y^2)\n\\]",
+            1
+        ],
+        [
+            "Step 4:\nRearrange the first equation to obtain $y = \\frac{-(56x^3 + 89x^2y + 33y^3)}{x^2+y^2}$ and substitute this expression into the second equation to get $33x^3 - 56x^2y + 33xy^2 - 56y^3 = x \\left(\\frac{-(56x^3 + 89x^2y + 33y^3)}{x^2+y^2}\\right)(x^2+y^2)$, which simplifies to $33x^3 - 56x^2y + 33xy^2 - 56y^3 = -x(56x^3 + 89x^2y + 33y^3)$.",
+            1
+        ],
+        [
+            "Step 5:\n\\[\n33x^3 - 56x^2y + 33xy^2 - 56y^3 = -x(56x^3 + 89x^2y + 33y^3)\n\\]\n\\[\n\\implies 33x^3 - 56x^2y + 33xy^2 - 56y^3 = -56x^4 - 89x^3y - 33x^2y^2\n\\]\n\\[\n\\implies 56x^4 + 89x^3y + 33x^2y^2 + 33xy^2 - 56y^3 = 0\n\\]\n\\[\n\\implies 56x^4 + 89x^3y + 33x^2y^2 + 33xy^2 - 56y^3 = 0\n\\]",
+            1
+        ],
+        [
+            "Step 6:\n\\[\n(56x^4 + 89x^3y + 33x^2y^2 + 33xy^2 - 56y^3) = 0\n\\]\n\\[\n\\implies 56(x^4 + \\frac{89}{56}x^3y + \\frac{33}{56}x^2y^2 + \\frac{33}{56}xy^2 - \\frac{56}{56}y^3) = 0\n\\]\n\\[\n\\implies x^4 + \\frac{89}{56}x^3y + \\frac{33}{56}x^2y^2 + \\frac{33}{56}xy^2 - y^3 = 0\n\\]",
+            1
+        ],
+        [
+            "Recognize that $x^4 + \\frac{89}{56}x^3y + \\frac{33}{56}x^2y^2 + \\frac{33}{56}xy^2 - y^3 = 0$ can be factored as a sum of cubes",
+            1
+        ],
+        [
+            "Step 7:\n\\[\nx^4 + \\frac{89}{56}x^3y + \\frac{33}{56}x^2y^2 + \\frac{33}{56}xy^2 - y^3 = 0\n\\]\n\\[\n\\implies x^4 + \\frac{1}{56}x^3y(89) + \\frac{1}{56}x^2y^2(33) + \\frac{1}{56}xy^2(33) - \\frac{1}{56}y^3(56) = 0\n\\]\n\\[\n\\implies (x^2 + y^2)\\left[x^2 + \\frac{89}{56}xy - y^2\\right] = 0\n\\]",
+            1
+        ],
+        [
+            "Step 8: $\\left[x^2 + \\frac{89}{56}xy - y^2\\right] = 0 \\implies x^2 + \\frac{89}{56}xy - y^2 = 0$",
+            1
+        ]
+    ],
+    "time": 136.29413223266602,
+    "total_tokens": 15136,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

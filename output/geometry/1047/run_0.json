@@ -1,0 +1,66 @@
+{
+    "problem": "A right triangle is inscribed in a circle with a diameter $100$ units long. What is the maximum area of the triangle, in square units?",
+    "level": "Level 4",
+    "type": "Geometry",
+    "solution": "Let the triangle be $ABC$, with hypotenuse $\\overline{AB}$, and let $O$ be the center of the circle.   The hypotenuse of a right triangle that is inscribed in a circle is a diameter of the circle, so $\\overline{AB}$ is the diameter of the circle.  Since point $C$ is on the circle, point $C$ is $100/2=50$ units from the midpoint of $\\overline{AB}$ (which is the center of the circle).  So, point $C$ cannot be any more than 50 units from $\\overline{AB}$.  This maximum can be achieved when $\\overline{OC}\\perp\\overline{AB}$.  The area of $\\triangle ABC$ then is $(50)(100)/2 = \\boxed{2500}$ square units.\n\n[asy]\npair A,B,C,O;\nA = (-1,0);\nB=-A;\nC = (0,1);\ndraw(A--B--C--A);\ndraw(C--(0,0),dashed);\nO = (0,0);\nlabel(\"$O$\",O,S);\nlabel(\"$A$\",A,W);\nlabel(\"$B$\",B,E);\nlabel(\"$C$\",C,N);\ndraw(Circle(O,1));\n[/asy]",
+    "is_solved": false,
+    "model_solution": "Step 1: Let the right triangle be $\\triangle ABC$, where $B$ is the right angle and $AB$ and $AC$ are the legs of the triangle, and $A$ and $C$ are the endpoints of the diameter of the circle.\nStep 2: Since $B$ is the right angle, the hypotenuse of $\\triangle ABC$ is the diameter of the circle, which has length $100.$\nStep 3: The area of a right triangle is given by $\\frac{1}{2} \\times (\\text{leg}_1) \\times (\\text{leg}_2)$, so in this case, the area of $\\triangle ABC$ is $\\frac{1}{2} \\times AB \\times AC$.\nStep 4: To maximize the area of $\\triangle ABC$, we need to maximize the product $AB \\cdot AC$.\n\nThis is not the final step.\nStep 5: By the geometry of the circle, we know that $AB + AC = 100,$ and $AB$ and $AC$ must be positive. Therefore, we can write $AB = 100 - AC.$\nStep 6: Substituting $AB = 100 - AC$ into the expression for the area of $\\triangle ABC$, we get $\\frac{1}{2} \\times (100-AC) \\times AC$.\nStep 7: $\\frac{1}{2} \\times (100-AC) \\times AC = 50AC - \\frac{1}{2}AC^2$\nStep 8: We want to maximize $50AC - \\frac{1}{2}AC^2$.\nStep 9: To maximize $50AC - \\frac{1}{2}AC^2$, we can complete the square for the quadratic expression, which will give us a form $(a-b)^2$ which is maximized when $a=b$.\nStep 10: $50AC - \\frac{1}{2}AC^2 = -\\frac{1}{2}(AC^2-100AC)= -\\frac{1}{2}\\left((AC-50)^2-2500\\right)$",
+    "steps": [
+        "Step 1: Let the right triangle be $\\triangle ABC$, where $B$ is the right angle and $AB$ and $AC$ are the legs of the triangle, and $A$ and $C$ are the endpoints of the diameter of the circle.",
+        "Step 2: Since $B$ is the right angle, the hypotenuse of $\\triangle ABC$ is the diameter of the circle, which has length $100.$",
+        "Step 3: The area of a right triangle is given by $\\frac{1}{2} \\times (\\text{leg}_1) \\times (\\text{leg}_2)$, so in this case, the area of $\\triangle ABC$ is $\\frac{1}{2} \\times AB \\times AC$.",
+        "Step 4: To maximize the area of $\\triangle ABC$, we need to maximize the product $AB \\cdot AC$.\n\nThis is not the final step.",
+        "Step 5: By the geometry of the circle, we know that $AB + AC = 100,$ and $AB$ and $AC$ must be positive. Therefore, we can write $AB = 100 - AC.$",
+        "Step 6: Substituting $AB = 100 - AC$ into the expression for the area of $\\triangle ABC$, we get $\\frac{1}{2} \\times (100-AC) \\times AC$.",
+        "Step 7: $\\frac{1}{2} \\times (100-AC) \\times AC = 50AC - \\frac{1}{2}AC^2$",
+        "Step 8: We want to maximize $50AC - \\frac{1}{2}AC^2$.",
+        "Step 9: To maximize $50AC - \\frac{1}{2}AC^2$, we can complete the square for the quadratic expression, which will give us a form $(a-b)^2$ which is maximized when $a=b$.",
+        "Step 10: $50AC - \\frac{1}{2}AC^2 = -\\frac{1}{2}(AC^2-100AC)= -\\frac{1}{2}\\left((AC-50)^2-2500\\right)$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Let the right triangle be $\\triangle ABC$, where $B$ is the right angle and $AB$ and $AC$ are the legs of the triangle, and $A$ and $C$ are the endpoints of the diameter of the circle.",
+            1
+        ],
+        [
+            "Step 2: Since $B$ is the right angle, the hypotenuse of $\\triangle ABC$ is the diameter of the circle, which has length $100.$",
+            1
+        ],
+        [
+            "Step 3: The area of a right triangle is given by $\\frac{1}{2} \\times (\\text{leg}_1) \\times (\\text{leg}_2)$, so in this case, the area of $\\triangle ABC$ is $\\frac{1}{2} \\times AB \\times AC$.",
+            1
+        ],
+        [
+            "Step 4: To maximize the area of $\\triangle ABC$, we need to maximize the product $AB \\cdot AC$.\n\nThis is not the final step.",
+            1
+        ],
+        [
+            "Step 5: By the geometry of the circle, we know that $AB + AC = 100,$ and $AB$ and $AC$ must be positive. Therefore, we can write $AB = 100 - AC.$",
+            1
+        ],
+        [
+            "Step 6: Substituting $AB = 100 - AC$ into the expression for the area of $\\triangle ABC$, we get $\\frac{1}{2} \\times (100-AC) \\times AC$.",
+            1
+        ],
+        [
+            "Step 7: $\\frac{1}{2} \\times (100-AC) \\times AC = 50AC - \\frac{1}{2}AC^2$",
+            1
+        ],
+        [
+            "Step 8: We want to maximize $50AC - \\frac{1}{2}AC^2$.",
+            1
+        ],
+        [
+            "Step 9: To maximize $50AC - \\frac{1}{2}AC^2$, we can complete the square for the quadratic expression, which will give us a form $(a-b)^2$ which is maximized when $a=b$.",
+            1
+        ],
+        [
+            "Step 10: $50AC - \\frac{1}{2}AC^2 = -\\frac{1}{2}(AC^2-100AC)= -\\frac{1}{2}\\left((AC-50)^2-2500\\right)$",
+            1
+        ]
+    ],
+    "time": 139.6012921333313,
+    "total_tokens": 6960,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

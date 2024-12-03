@@ -1,0 +1,31 @@
+{
+    "problem": "Alice, Bailey, Cindy, and Daniel walked around their neighborhoods selling pens. Alice earned $\\$25.67$, Bailey earned $\\$17.21$, Cindy earned $\\$39.17$, and Daniel earned $\\$26.32$. After the sale, they pooled their money together and went to the bank to convert the coins into dollars. How many cents in change did they have left after they converted as many of the coins into bills as they could?",
+    "level": "Level 2",
+    "type": "Number Theory",
+    "solution": "Instead of adding large numbers together, we can find the residue for each person for easier computation. We convert the amount they earned to cents and find the modulo $100$ for each.  \\begin{align*}\n2567 &\\equiv 67 \\pmod{100}\\\\\n1721 &\\equiv 21 \\pmod{100}\\\\\n3917 &\\equiv 17 \\pmod{100}\\\\\n2632 &\\equiv 32 \\pmod{100}\n\\end{align*}We want to find the modulo $100$ of the total number of cents. We can add the separate residues to get $$67+21+17+32 \\equiv 137 \\equiv 37 \\pmod{100}$$Therefore, they have $\\boxed{37}$ cents left after converting as much of the money into bills as possible.",
+    "is_solved": false,
+    "model_solution": "Step 1:  Sum the total amount earned by Alice, Bailey, Cindy, and Daniel.\nStep 2:  Multiply each amount by 100 to convert it to cents, and then sum the amounts earned by Alice, Bailey, Cindy, and Daniel in cents.\nStep 3:  Find the largest power of $5$ that divides the total amount, then subtract it from the total amount to get the final amount that needs to be converted into bills.",
+    "steps": [
+        "Step 1:  Sum the total amount earned by Alice, Bailey, Cindy, and Daniel.",
+        "Step 2:  Multiply each amount by 100 to convert it to cents, and then sum the amounts earned by Alice, Bailey, Cindy, and Daniel in cents.",
+        "Step 3:  Find the largest power of $5$ that divides the total amount, then subtract it from the total amount to get the final amount that needs to be converted into bills."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Sum the total amount earned by Alice, Bailey, Cindy, and Daniel.",
+            1
+        ],
+        [
+            "Step 2:  Multiply each amount by 100 to convert it to cents, and then sum the amounts earned by Alice, Bailey, Cindy, and Daniel in cents.",
+            1
+        ],
+        [
+            "Step 3:  Find the largest power of $5$ that divides the total amount, then subtract it from the total amount to get the final amount that needs to be converted into bills.",
+            1
+        ]
+    ],
+    "time": 40.942320585250854,
+    "total_tokens": 1259,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

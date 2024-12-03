@@ -1,0 +1,51 @@
+{
+    "problem": "How many interior diagonals does a regular nine-sided polygon have?  (An $\\emph{interior diagonal }$ is a segment connecting two vertices which do not have an edge between them.)",
+    "level": "Level 4",
+    "type": "Prealgebra",
+    "solution": "There are 9 vertices in the polygon, so from each vertex there are potentially 8 other vertices to which we could extend a diagonal.  However, 2 of these 8 points are connected to the original point by an edge, so they are not connected by interior diagonals.  So each vertex is connected to 6 other points by interior diagonals.  This gives a preliminary count of $9 \\times 6 = 54$ interior diagonals.  However, we have counted each diagonal twice (once for each of its endpoints), so we must divide by 2 to correct for this overcounting, and the answer is $\\dfrac{9\\times 6}{2} = \\boxed{27}$ diagonals.",
+    "is_solved": true,
+    "model_solution": "Step 1: A nine-sided polygon has 9 vertices.\nStep 2: Each pair of vertices that are not next to each other determines an interior diagonal. (e.g. in a square, the diagonals are from A to C and from B to D).\nStep 3: The number of interior diagonals from a given vertex is 6.\nStep 4: The total number of interior diagonals is the product of the number of vertices and the number of diagonals from a given vertex, minus the number of vertices times 1 (in order to avoid overcounting).\nStep 5: There are $9\\cdot6=54$ interior diagonals, but we have overcounted each diagonal twice.\nStep 6: There are $54/2=27$ interior diagonals.\nStep 7: Final Answer: The final answer is 27.",
+    "steps": [
+        "Step 1: A nine-sided polygon has 9 vertices.",
+        "Step 2: Each pair of vertices that are not next to each other determines an interior diagonal. (e.g. in a square, the diagonals are from A to C and from B to D).",
+        "Step 3: The number of interior diagonals from a given vertex is 6.",
+        "Step 4: The total number of interior diagonals is the product of the number of vertices and the number of diagonals from a given vertex, minus the number of vertices times 1 (in order to avoid overcounting).",
+        "Step 5: There are $9\\cdot6=54$ interior diagonals, but we have overcounted each diagonal twice.",
+        "Step 6: There are $54/2=27$ interior diagonals.",
+        "Step 7: Final Answer: The final answer is 27."
+    ],
+    "full_steps": [
+        [
+            "Step 1: A nine-sided polygon has 9 vertices.",
+            1
+        ],
+        [
+            "Step 2: Each pair of vertices that are not next to each other determines an interior diagonal. (e.g. in a square, the diagonals are from A to C and from B to D).",
+            1
+        ],
+        [
+            "Step 3: The number of interior diagonals from a given vertex is 6.",
+            1
+        ],
+        [
+            "Step 4: The total number of interior diagonals is the product of the number of vertices and the number of diagonals from a given vertex, minus the number of vertices times 1 (in order to avoid overcounting).",
+            1
+        ],
+        [
+            "Step 5: There are $9\\cdot6=54$ interior diagonals, but we have overcounted each diagonal twice.",
+            1
+        ],
+        [
+            "Step 6: There are $54/2=27$ interior diagonals.",
+            1
+        ],
+        [
+            "Step 7: Final Answer: The final answer is 27.",
+            1
+        ]
+    ],
+    "time": 93.30672836303711,
+    "total_tokens": 2963,
+    "final_answer_tokens": 277,
+    "model": "meta-llama/Llama-Vision-Free"
+}

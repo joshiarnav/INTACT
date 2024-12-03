@@ -1,0 +1,66 @@
+{
+    "problem": "Let $a$ and $b$ be nonzero real constants such that $|a| \\neq |b|.$  Find the number of distinct values of $x$ satisfying\n\\[\\frac{x - a}{b} + \\frac{x - b}{a} = \\frac{b}{x - a} + \\frac{a}{x - b}.\\]",
+    "level": "Level 4",
+    "type": "Intermediate Algebra",
+    "solution": "Combining the fractions on each side, we get\n\\[\\frac{ax - a^2 + bx - b^2}{ab} = \\frac{ax - a^2 + bx - b^2}{(x - a)(x - b)}.\\]Note that the numerators are equal.  The solution to $ax - a^2 + bx - b^2 = 0$ is\n\\[x = \\frac{a^2 + b^2}{a + b}.\\]Otherwise,\n\\[\\frac{1}{ab} = \\frac{1}{(x - a)(x - b)},\\]so $(x - a)(x - b) = ab.$  Then $x^2 - (a + b) x + ab = ab,$ so $x^2 - (a + b) x = 0.$  Hence, $x = 0$ or $x = a + b.$\n\nThus, there are $\\boxed{3}$ solutions, namely $x = 0,$ $x = a + b,$ and $x = \\frac{a^2 + b^2}{a + b}.$\n\n(If $\\frac{a^2 + b^2}{a + b} = a + b,$ then $a^2 + b^2 = a^2 + 2ab + b^2,$ so $2ab = 0.$  This is impossible, since $a$ and $b$ are non-zero, so all three solutions are distinct.)",
+    "is_solved": false,
+    "model_solution": "## Step 1: Multiply both sides of the equation by the least common denominator\n$(x - a)(x - b) \\left(\\frac{x - a}{b} + \\frac{x - b}{a}\\right) = (x - a)(x - b) \\left(\\frac{b}{x - a} + \\frac{a}{x - b}\\right)$\n\n## Step 2: Simplify both sides of the equation\n$(x - a)^2 (x - b) + b(x - a)(x - b) = a(x - a)(x - b) + b(x - a)^2$\n\n## Step 3: Expand both sides of the equation\n$(x^2 - 2ax + a^2)(x - b) + bx^2 - b^2x - abx + ab^2 = ax^2 - a^2x - abx + a^2b + bx^2 - b^2x - abx + a^2b$\n\n## Step 4: Distribute the terms on both sides of the equation\n$x^3 - 2ax^2 + a^2x - bx^2 + 2\n## Step 5: Combine like terms\n$x^3 - 3ax^2 + a^2x - b^2x + 2abx - a^2b = 2ax^2 - 2abx + 2a^2b - a^2x - b^2x$\n## Step 6: Move all terms to one side of the equation\n$x^3 - 3ax^2 + a^2x - b^2x + 2abx - a^2b - 2ax^2 + 2abx - 2a^2b + a^2x + b^2x = 0$\n## Step 7: Combine like terms\n$x^3 - 5ax^2 + 3abx - a^2b = 0$\n## Step 8: Factor out a common factor\n$x^3 - (5a)x^2 + (3ab)x - a^2b = 0$\n## Step 9: Treat the cubic equation as a quadratic equation in terms of $x^2$\nLet $y = x^2$.  Then the equation becomes $y^{\\frac{3}{2}} - 5ay + 3ab = 0$\n## Step 10: Treat the quadratic equation as a quadratic equation in terms of $y$\n$y^{\\frac{3}{2}} - 5ay + 3ab = 0 \\rightarrow y^{\\frac{3}{2}} - 5ay = -3ab$\n## Step 11: Use the quadratic formula to solve for y\n$y = \\frac{-(-5a) \\pm \\sqrt{(-5a)^2 - 4(1)(-3ab)}}{2(1)}$\n$y = \\frac{5a \\pm \\sqrt{25a^2 + 12ab}}{2}$\n## Step 12: Take the square root of y to solve for x\n$x = \\pm \\sqrt{y} = \\pm \\sqrt{\\frac{5a \\pm \\sqrt{25a^2 + 12ab}}{2}}$\n## Step 13: Consider the restrictions on a and b such that |a| \u2260 |b| and note that the expression inside the square root must be nonnegative\n$25a^2 + 12ab \\geq 0$",
+    "steps": [
+        "## Step 1: Multiply both sides of the equation by the least common denominator\n$(x - a)(x - b) \\left(\\frac{x - a}{b} + \\frac{x - b}{a}\\right) = (x - a)(x - b) \\left(\\frac{b}{x - a} + \\frac{a}{x - b}\\right)$\n\n## Step 2: Simplify both sides of the equation\n$(x - a)^2 (x - b) + b(x - a)(x - b) = a(x - a)(x - b) + b(x - a)^2$\n\n## Step 3: Expand both sides of the equation\n$(x^2 - 2ax + a^2)(x - b) + bx^2 - b^2x - abx + ab^2 = ax^2 - a^2x - abx + a^2b + bx^2 - b^2x - abx + a^2b$\n\n## Step 4: Distribute the terms on both sides of the equation\n$x^3 - 2ax^2 + a^2x - bx^2 + 2",
+        "## Step 5: Combine like terms\n$x^3 - 3ax^2 + a^2x - b^2x + 2abx - a^2b = 2ax^2 - 2abx + 2a^2b - a^2x - b^2x$",
+        "## Step 6: Move all terms to one side of the equation\n$x^3 - 3ax^2 + a^2x - b^2x + 2abx - a^2b - 2ax^2 + 2abx - 2a^2b + a^2x + b^2x = 0$",
+        "## Step 7: Combine like terms\n$x^3 - 5ax^2 + 3abx - a^2b = 0$",
+        "## Step 8: Factor out a common factor\n$x^3 - (5a)x^2 + (3ab)x - a^2b = 0$",
+        "## Step 9: Treat the cubic equation as a quadratic equation in terms of $x^2$\nLet $y = x^2$.  Then the equation becomes $y^{\\frac{3}{2}} - 5ay + 3ab = 0$",
+        "## Step 10: Treat the quadratic equation as a quadratic equation in terms of $y$\n$y^{\\frac{3}{2}} - 5ay + 3ab = 0 \\rightarrow y^{\\frac{3}{2}} - 5ay = -3ab$",
+        "## Step 11: Use the quadratic formula to solve for y\n$y = \\frac{-(-5a) \\pm \\sqrt{(-5a)^2 - 4(1)(-3ab)}}{2(1)}$\n$y = \\frac{5a \\pm \\sqrt{25a^2 + 12ab}}{2}$",
+        "## Step 12: Take the square root of y to solve for x\n$x = \\pm \\sqrt{y} = \\pm \\sqrt{\\frac{5a \\pm \\sqrt{25a^2 + 12ab}}{2}}$",
+        "## Step 13: Consider the restrictions on a and b such that |a| \u2260 |b| and note that the expression inside the square root must be nonnegative\n$25a^2 + 12ab \\geq 0$"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Multiply both sides of the equation by the least common denominator\n$(x - a)(x - b) \\left(\\frac{x - a}{b} + \\frac{x - b}{a}\\right) = (x - a)(x - b) \\left(\\frac{b}{x - a} + \\frac{a}{x - b}\\right)$\n\n## Step 2: Simplify both sides of the equation\n$(x - a)^2 (x - b) + b(x - a)(x - b) = a(x - a)(x - b) + b(x - a)^2$\n\n## Step 3: Expand both sides of the equation\n$(x^2 - 2ax + a^2)(x - b) + bx^2 - b^2x - abx + ab^2 = ax^2 - a^2x - abx + a^2b + bx^2 - b^2x - abx + a^2b$\n\n## Step 4: Distribute the terms on both sides of the equation\n$x^3 - 2ax^2 + a^2x - bx^2 + 2",
+            1
+        ],
+        [
+            "## Step 5: Combine like terms\n$x^3 - 3ax^2 + a^2x - b^2x + 2abx - a^2b = 2ax^2 - 2abx + 2a^2b - a^2x - b^2x$",
+            1
+        ],
+        [
+            "## Step 6: Move all terms to one side of the equation\n$x^3 - 3ax^2 + a^2x - b^2x + 2abx - a^2b - 2ax^2 + 2abx - 2a^2b + a^2x + b^2x = 0$",
+            1
+        ],
+        [
+            "## Step 7: Combine like terms\n$x^3 - 5ax^2 + 3abx - a^2b = 0$",
+            1
+        ],
+        [
+            "## Step 8: Factor out a common factor\n$x^3 - (5a)x^2 + (3ab)x - a^2b = 0$",
+            1
+        ],
+        [
+            "## Step 9: Treat the cubic equation as a quadratic equation in terms of $x^2$\nLet $y = x^2$.  Then the equation becomes $y^{\\frac{3}{2}} - 5ay + 3ab = 0$",
+            1
+        ],
+        [
+            "## Step 10: Treat the quadratic equation as a quadratic equation in terms of $y$\n$y^{\\frac{3}{2}} - 5ay + 3ab = 0 \\rightarrow y^{\\frac{3}{2}} - 5ay = -3ab$",
+            1
+        ],
+        [
+            "## Step 11: Use the quadratic formula to solve for y\n$y = \\frac{-(-5a) \\pm \\sqrt{(-5a)^2 - 4(1)(-3ab)}}{2(1)}$\n$y = \\frac{5a \\pm \\sqrt{25a^2 + 12ab}}{2}$",
+            1
+        ],
+        [
+            "## Step 12: Take the square root of y to solve for x\n$x = \\pm \\sqrt{y} = \\pm \\sqrt{\\frac{5a \\pm \\sqrt{25a^2 + 12ab}}{2}}$",
+            1
+        ],
+        [
+            "## Step 13: Consider the restrictions on a and b such that |a| \u2260 |b| and note that the expression inside the square root must be nonnegative\n$25a^2 + 12ab \\geq 0$",
+            1
+        ]
+    ],
+    "time": 133.23891830444336,
+    "total_tokens": 12958,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

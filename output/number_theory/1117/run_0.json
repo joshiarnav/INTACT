@@ -1,0 +1,51 @@
+{
+    "problem": "Find the remainder when $24^{50} - 15^{50}$ is divided by 13.",
+    "level": "Level 4",
+    "type": "Number Theory",
+    "solution": "We note that $24 \\equiv -2 \\pmod{13}$ and $15 \\equiv 2 \\pmod{13}$.  We cleverly use these congruences to set up values that vanish in the arithmetic: $$ 24^{50} - 15^{50} \\equiv (-2)^{50} - 2^{50} \\equiv 2^{50} - 2^{50} \\equiv \\boxed{0} \\pmod{13}. $$",
+    "is_solved": true,
+    "model_solution": "## Step 1: Use modular arithmetic to reduce the bases modulo 13\n$24^{50} - 15^{50} \\equiv 11^{50} - 2^{50} \\pmod{13}$\n## Step 2: Apply Fermat's Little Theorem to reduce the exponents modulo 12\n$11^{50} - 2^{50} \\equiv 11^{12 \\cdot 4 + 2} - 2^{12 \\cdot 4 + 4} \\equiv 11^2 - 2^4 \\pmod{13}$\n## Step 3: Apply the properties of modular arithmetic to simplify the expression\n$11^2 - 2^4 \\equiv 121 - 16 \\pmod{13}$\n## Step 4: Simplify $121 - 16$ modulo 13\n$121 - 16 \\equiv 105 \\pmod{13}$\n## Step 5: Simplify 105 modulo 13\n$105 \\equiv 0 \\pmod{13}$\n## Step 6: Use the result of the previous step to find the remainder\n$105 \\equiv 0 \\pmod{13}$\n## Step 7: Since 105 is divisible by 13, the remainder is 0.\n\nFinal Answer: The final answer is: $\\boxed{0}$",
+    "steps": [
+        "## Step 1: Use modular arithmetic to reduce the bases modulo 13\n$24^{50} - 15^{50} \\equiv 11^{50} - 2^{50} \\pmod{13}$",
+        "## Step 2: Apply Fermat's Little Theorem to reduce the exponents modulo 12\n$11^{50} - 2^{50} \\equiv 11^{12 \\cdot 4 + 2} - 2^{12 \\cdot 4 + 4} \\equiv 11^2 - 2^4 \\pmod{13}$",
+        "## Step 3: Apply the properties of modular arithmetic to simplify the expression\n$11^2 - 2^4 \\equiv 121 - 16 \\pmod{13}$",
+        "## Step 4: Simplify $121 - 16$ modulo 13\n$121 - 16 \\equiv 105 \\pmod{13}$",
+        "## Step 5: Simplify 105 modulo 13\n$105 \\equiv 0 \\pmod{13}$",
+        "## Step 6: Use the result of the previous step to find the remainder\n$105 \\equiv 0 \\pmod{13}$",
+        "## Step 7: Since 105 is divisible by 13, the remainder is 0.\n\nFinal Answer: The final answer is: $\\boxed{0}$"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Use modular arithmetic to reduce the bases modulo 13\n$24^{50} - 15^{50} \\equiv 11^{50} - 2^{50} \\pmod{13}$",
+            1
+        ],
+        [
+            "## Step 2: Apply Fermat's Little Theorem to reduce the exponents modulo 12\n$11^{50} - 2^{50} \\equiv 11^{12 \\cdot 4 + 2} - 2^{12 \\cdot 4 + 4} \\equiv 11^2 - 2^4 \\pmod{13}$",
+            1
+        ],
+        [
+            "## Step 3: Apply the properties of modular arithmetic to simplify the expression\n$11^2 - 2^4 \\equiv 121 - 16 \\pmod{13}$",
+            1
+        ],
+        [
+            "## Step 4: Simplify $121 - 16$ modulo 13\n$121 - 16 \\equiv 105 \\pmod{13}$",
+            1
+        ],
+        [
+            "## Step 5: Simplify 105 modulo 13\n$105 \\equiv 0 \\pmod{13}$",
+            1
+        ],
+        [
+            "## Step 6: Use the result of the previous step to find the remainder\n$105 \\equiv 0 \\pmod{13}$",
+            1
+        ],
+        [
+            "## Step 7: Since 105 is divisible by 13, the remainder is 0.\n\nFinal Answer: The final answer is: $\\boxed{0}$",
+            1
+        ]
+    ],
+    "time": 98.0907678604126,
+    "total_tokens": 3761,
+    "final_answer_tokens": 364,
+    "model": "meta-llama/Llama-Vision-Free"
+}

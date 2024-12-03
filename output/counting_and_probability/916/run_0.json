@@ -1,0 +1,41 @@
+{
+    "problem": "How many diagonals does hexagon $ABCDEF$ have?\n\n[asy]size(101);\nstring[] labels = {\"$C$\",\"$B$\",\"$A$\",\"$F$\",\"$E$\",\"$D$\"};\npath p;\nfor(int i = 0; i<6; ++i)\n{\np = p--dir(360*i/6);\nlabel(labels[i],dir(360*i/6),dir(360*i/6),fontsize(10pt));\n}\ndraw(p--cycle);\nlabel(\"1\",(0,1.03),fontsize(10));[/asy]",
+    "level": "Level 2",
+    "type": "Counting & Probability",
+    "solution": "Since there are 6 points, we have ${6 \\choose 2} = 15$ different line segments to connect the vertices. However, 6 of those line segments are the sides of the hexagon. The remaining $ 15 - 6 = \\boxed{9}$ segments are the diagonals of the hexagon.",
+    "is_solved": true,
+    "model_solution": "From each vertex of hexagon $ABCDEF$, there are two diagonals.\nThere are $6$ vertices in the hexagon.\nIf each vertex has 2 diagonals and there are 6 vertices, then there are $6\\cdot2=12$ total diagonals.\nEach diagonal is counted twice in this total, so the actual number of diagonals in the hexagon is $\\frac{12}{2}=6$.\nSince each diagonal is counted twice, we need to divide the total number of diagonals by $2$.\n \nFinal Answer: The final answer is 6. I hope it is correct.",
+    "steps": [
+        "From each vertex of hexagon $ABCDEF$, there are two diagonals.",
+        "There are $6$ vertices in the hexagon.",
+        "If each vertex has 2 diagonals and there are 6 vertices, then there are $6\\cdot2=12$ total diagonals.",
+        "Each diagonal is counted twice in this total, so the actual number of diagonals in the hexagon is $\\frac{12}{2}=6$.",
+        "Since each diagonal is counted twice, we need to divide the total number of diagonals by $2$.\n \nFinal Answer: The final answer is 6. I hope it is correct."
+    ],
+    "full_steps": [
+        [
+            "From each vertex of hexagon $ABCDEF$, there are two diagonals.",
+            1
+        ],
+        [
+            "There are $6$ vertices in the hexagon.",
+            1
+        ],
+        [
+            "If each vertex has 2 diagonals and there are 6 vertices, then there are $6\\cdot2=12$ total diagonals.",
+            1
+        ],
+        [
+            "Each diagonal is counted twice in this total, so the actual number of diagonals in the hexagon is $\\frac{12}{2}=6$.",
+            1
+        ],
+        [
+            "Since each diagonal is counted twice, we need to divide the total number of diagonals by $2$.\n \nFinal Answer: The final answer is 6. I hope it is correct.",
+            1
+        ]
+    ],
+    "time": 66.60289931297302,
+    "total_tokens": 2502,
+    "final_answer_tokens": 309,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,66 @@
+{
+    "problem": "Find the imaginary part of \\[(\\cos12^\\circ+i\\sin12^\\circ+\\cos48^\\circ+i\\sin48^\\circ)^6.\\]",
+    "level": "Level 3",
+    "type": "Precalculus",
+    "solution": "Using the sum-to-product formula, we have\n\\begin{align*}\n\\cos 12^{\\circ} + \\cos 48^{\\circ} &= 2 \\cos 30^{\\circ} \\cos 18^{\\circ}, \\\\\n\\sin 12^{\\circ} + \\sin 48^{\\circ} &= 2 \\sin 30^{\\circ} \\cos 18^{\\circ}. \\\\\n\\end{align*}Therefore,\n\\begin{align*}\n(\\cos 12^{\\circ} + i \\sin 12^{\\circ} + \\cos 48^{\\circ} + i \\sin 48^{\\circ})^6 &= [2\\cos 18^{\\circ} (\\cos 30^{\\circ} + i \\sin 30^{\\circ})]^6 \\\\\n&= 64\\cos^6 18^{\\circ} (\\cos 180^{\\circ} + i \\sin 180^{\\circ}) \\\\\n&= -64\\cos^6 18^{\\circ},\n\\end{align*}which is real. Hence, the imaginary part is $\\boxed{0}$.\n\n(See if you can also find a geometric solution!)",
+    "is_solved": false,
+    "model_solution": "DeMoivre's Theorem.\n$$(\\cos12^\\circ+i\\sin12^\\circ+\\cos48^\\circ+i\\sin48^\\circ)^6$$\n$$=(\\cos12^\\circ+i\\sin12^\\circ+(\\cos24^\\circ+i\\sin24^\\circ)^2)^6$$\n$$=(\\cos12^\\circ+i\\sin12^\\circ+(\\cos24^\\circ+i\\sin24^\\circ)^2)^6$$\n$$=(\\cos12^\\circ+i\\sin12^\\circ+$$$$(\\cos48^\\circ+i\\sin48^\\circ)^2)^6$$\n$$=(\\cos12^\\circ+i\\sin12^\\circ+(\\cos48^\\circ+i\\sin48^\\circ)^2)^6$$\n$$=(\\cos12^\\circ+i\\sin12^\\circ+(\\cos24^\\circ+i\\sin24^\\circ)^2)^6$$\n$$=(\\cos12^\\circ+i\\sin12^\\circ+\\cos24^\\circ(\\cos48^\\circ+i\\sin48^\\circ)-\\sin24^\\circ(\\cos48^\\circ+i\\sin48^\\circ))^6$$\n$$(\\cos12^\\circ+i\\sin12^\\circ+\\cos24^\\circ(\\cos48^\\circ+i\\sin48^\\circ)-\\sin24^\\circ(\\cos48^\\circ+i\\sin48^\\circ))^6$$\n$$=(\\cos12^\\circ+i\\sin12^\\circ+\\cos24^\\circ\\cos48^\\circ-\\sin24^\\circ\\sin48^\\circ+i\\sin24^\\circ\\cos48^\\circ+\\cos24^\\circ\\sin48^\\circ)^6$$\n$$(\\cos12^\\circ+i\\sin12^\\circ+\\cos24^\\circ\\cos48^\\circ-\\sin24^\\circ\\sin48^\\circ+i\\sin24^\\circ\\cos48^\\circ+\\cos24^\\circ\\sin48^\\circ))^6$$\n$$=(\\cos(12^\\circ+24^\\circ\\cos48^\\circ-24^\\circ\\sin48^\\circ)+i\\sin(12^\\circ+24^\\circ\\cos48^\\circ-24^\\circ\\sin48^\\circ))^6$$\n$$=(\\cos(12^\\circ+24^\\circ\\cos48^\\circ-24^\\circ\\sin48^\\circ)+i\\sin(12^\\circ+24^\\circ\\cos48^\\circ-24^\\circ\\sin48^\\circ))^6$$\n$$=\\cos(6(12^\\circ+24^\\circ\\cos48^\\circ-24^\\circ\\sin48^\\circ))+i\\sin(6(12^\\circ+24^\\circ\\cos48^\\circ-24^\\circ\\sin48^\\circ)).$$\n$$=\\cos(72^\\circ+288^\\circ\\cos48^\\circ-288^\\circ\\sin48^\\circ)+i\\sin(72^\\circ+288^\\circ\\cos48^\\circ-288^\\circ\\sin48^\\circ).$$\n$$=\\cos(72^\\circ+288^\\circ\\cos48^\\circ-288^\\circ\\sin48^\\circ)+i\\sin(72^\\circ+288^\\circ\\cos48^\\circ-288^\\circ\\sin48^\\circ)$$\n$$=\\cos72^\\circ+i\\sin72^\\circ+\\sin72^\\circ+i\\cos72^\\circ.$$\n$$=\\cos72^\\circ+i\\sin72^\\circ+\\sin72^\\circ+i\\cos72^\\circ.$$\n$$=i(\\sin72^\\circ+\\cos72^\\circ)+i(\\cos72^\\circ+\\sin72^\\circ)$$\n$$=i(\\sin72^\\circ+\\cos72^\\circ)+i(\\cos72^\\circ+\\sin72^\\circ).$$\n$$=2i(\\sin72^\\circ+\\cos72^\\circ).$$\n$$=2i(\\sin72^\\circ+\\cos72^\\circ)$$\n$$=2i(\\cos(90^\\circ-72^\\circ)+\\sin(90^\\circ-72^\\circ))$$\n$$=2i(\\cos18^\\circ+\\sin18^\\circ)$$",
+    "steps": [
+        "DeMoivre's Theorem.\n$$(\\cos12^\\circ+i\\sin12^\\circ+\\cos48^\\circ+i\\sin48^\\circ)^6$$\n$$=(\\cos12^\\circ+i\\sin12^\\circ+(\\cos24^\\circ+i\\sin24^\\circ)^2)^6$$",
+        "$$=(\\cos12^\\circ+i\\sin12^\\circ+(\\cos24^\\circ+i\\sin24^\\circ)^2)^6$$\n$$=(\\cos12^\\circ+i\\sin12^\\circ+$$$$(\\cos48^\\circ+i\\sin48^\\circ)^2)^6$$",
+        "$$=(\\cos12^\\circ+i\\sin12^\\circ+(\\cos48^\\circ+i\\sin48^\\circ)^2)^6$$\n$$=(\\cos12^\\circ+i\\sin12^\\circ+(\\cos24^\\circ+i\\sin24^\\circ)^2)^6$$\n$$=(\\cos12^\\circ+i\\sin12^\\circ+\\cos24^\\circ(\\cos48^\\circ+i\\sin48^\\circ)-\\sin24^\\circ(\\cos48^\\circ+i\\sin48^\\circ))^6$$",
+        "$$(\\cos12^\\circ+i\\sin12^\\circ+\\cos24^\\circ(\\cos48^\\circ+i\\sin48^\\circ)-\\sin24^\\circ(\\cos48^\\circ+i\\sin48^\\circ))^6$$\n$$=(\\cos12^\\circ+i\\sin12^\\circ+\\cos24^\\circ\\cos48^\\circ-\\sin24^\\circ\\sin48^\\circ+i\\sin24^\\circ\\cos48^\\circ+\\cos24^\\circ\\sin48^\\circ)^6$$",
+        "$$(\\cos12^\\circ+i\\sin12^\\circ+\\cos24^\\circ\\cos48^\\circ-\\sin24^\\circ\\sin48^\\circ+i\\sin24^\\circ\\cos48^\\circ+\\cos24^\\circ\\sin48^\\circ))^6$$\n$$=(\\cos(12^\\circ+24^\\circ\\cos48^\\circ-24^\\circ\\sin48^\\circ)+i\\sin(12^\\circ+24^\\circ\\cos48^\\circ-24^\\circ\\sin48^\\circ))^6$$",
+        "$$=(\\cos(12^\\circ+24^\\circ\\cos48^\\circ-24^\\circ\\sin48^\\circ)+i\\sin(12^\\circ+24^\\circ\\cos48^\\circ-24^\\circ\\sin48^\\circ))^6$$\n$$=\\cos(6(12^\\circ+24^\\circ\\cos48^\\circ-24^\\circ\\sin48^\\circ))+i\\sin(6(12^\\circ+24^\\circ\\cos48^\\circ-24^\\circ\\sin48^\\circ)).$$",
+        "$$=\\cos(72^\\circ+288^\\circ\\cos48^\\circ-288^\\circ\\sin48^\\circ)+i\\sin(72^\\circ+288^\\circ\\cos48^\\circ-288^\\circ\\sin48^\\circ).$$",
+        "$$=\\cos(72^\\circ+288^\\circ\\cos48^\\circ-288^\\circ\\sin48^\\circ)+i\\sin(72^\\circ+288^\\circ\\cos48^\\circ-288^\\circ\\sin48^\\circ)$$\n$$=\\cos72^\\circ+i\\sin72^\\circ+\\sin72^\\circ+i\\cos72^\\circ.$$\n$$=\\cos72^\\circ+i\\sin72^\\circ+\\sin72^\\circ+i\\cos72^\\circ.$$\n$$=i(\\sin72^\\circ+\\cos72^\\circ)+i(\\cos72^\\circ+\\sin72^\\circ)$$\n$$=i(\\sin72^\\circ+\\cos72^\\circ)+i(\\cos72^\\circ+\\sin72^\\circ).$$\n$$=2i(\\sin72^\\circ+\\cos72^\\circ).$$",
+        "$$=2i(\\sin72^\\circ+\\cos72^\\circ)$$\n$$=2i(\\cos(90^\\circ-72^\\circ)+\\sin(90^\\circ-72^\\circ))$$",
+        "$$=2i(\\cos18^\\circ+\\sin18^\\circ)$$"
+    ],
+    "full_steps": [
+        [
+            "DeMoivre's Theorem.\n$$(\\cos12^\\circ+i\\sin12^\\circ+\\cos48^\\circ+i\\sin48^\\circ)^6$$\n$$=(\\cos12^\\circ+i\\sin12^\\circ+(\\cos24^\\circ+i\\sin24^\\circ)^2)^6$$",
+            1
+        ],
+        [
+            "$$=(\\cos12^\\circ+i\\sin12^\\circ+(\\cos24^\\circ+i\\sin24^\\circ)^2)^6$$\n$$=(\\cos12^\\circ+i\\sin12^\\circ+$$$$(\\cos48^\\circ+i\\sin48^\\circ)^2)^6$$",
+            1
+        ],
+        [
+            "$$=(\\cos12^\\circ+i\\sin12^\\circ+(\\cos48^\\circ+i\\sin48^\\circ)^2)^6$$\n$$=(\\cos12^\\circ+i\\sin12^\\circ+(\\cos24^\\circ+i\\sin24^\\circ)^2)^6$$\n$$=(\\cos12^\\circ+i\\sin12^\\circ+\\cos24^\\circ(\\cos48^\\circ+i\\sin48^\\circ)-\\sin24^\\circ(\\cos48^\\circ+i\\sin48^\\circ))^6$$",
+            1
+        ],
+        [
+            "$$(\\cos12^\\circ+i\\sin12^\\circ+\\cos24^\\circ(\\cos48^\\circ+i\\sin48^\\circ)-\\sin24^\\circ(\\cos48^\\circ+i\\sin48^\\circ))^6$$\n$$=(\\cos12^\\circ+i\\sin12^\\circ+\\cos24^\\circ\\cos48^\\circ-\\sin24^\\circ\\sin48^\\circ+i\\sin24^\\circ\\cos48^\\circ+\\cos24^\\circ\\sin48^\\circ)^6$$",
+            1
+        ],
+        [
+            "$$(\\cos12^\\circ+i\\sin12^\\circ+\\cos24^\\circ\\cos48^\\circ-\\sin24^\\circ\\sin48^\\circ+i\\sin24^\\circ\\cos48^\\circ+\\cos24^\\circ\\sin48^\\circ))^6$$\n$$=(\\cos(12^\\circ+24^\\circ\\cos48^\\circ-24^\\circ\\sin48^\\circ)+i\\sin(12^\\circ+24^\\circ\\cos48^\\circ-24^\\circ\\sin48^\\circ))^6$$",
+            1
+        ],
+        [
+            "$$=(\\cos(12^\\circ+24^\\circ\\cos48^\\circ-24^\\circ\\sin48^\\circ)+i\\sin(12^\\circ+24^\\circ\\cos48^\\circ-24^\\circ\\sin48^\\circ))^6$$\n$$=\\cos(6(12^\\circ+24^\\circ\\cos48^\\circ-24^\\circ\\sin48^\\circ))+i\\sin(6(12^\\circ+24^\\circ\\cos48^\\circ-24^\\circ\\sin48^\\circ)).$$",
+            1
+        ],
+        [
+            "$$=\\cos(72^\\circ+288^\\circ\\cos48^\\circ-288^\\circ\\sin48^\\circ)+i\\sin(72^\\circ+288^\\circ\\cos48^\\circ-288^\\circ\\sin48^\\circ).$$",
+            1
+        ],
+        [
+            "$$=\\cos(72^\\circ+288^\\circ\\cos48^\\circ-288^\\circ\\sin48^\\circ)+i\\sin(72^\\circ+288^\\circ\\cos48^\\circ-288^\\circ\\sin48^\\circ)$$\n$$=\\cos72^\\circ+i\\sin72^\\circ+\\sin72^\\circ+i\\cos72^\\circ.$$\n$$=\\cos72^\\circ+i\\sin72^\\circ+\\sin72^\\circ+i\\cos72^\\circ.$$\n$$=i(\\sin72^\\circ+\\cos72^\\circ)+i(\\cos72^\\circ+\\sin72^\\circ)$$\n$$=i(\\sin72^\\circ+\\cos72^\\circ)+i(\\cos72^\\circ+\\sin72^\\circ).$$\n$$=2i(\\sin72^\\circ+\\cos72^\\circ).$$",
+            1
+        ],
+        [
+            "$$=2i(\\sin72^\\circ+\\cos72^\\circ)$$\n$$=2i(\\cos(90^\\circ-72^\\circ)+\\sin(90^\\circ-72^\\circ))$$",
+            1
+        ],
+        [
+            "$$=2i(\\cos18^\\circ+\\sin18^\\circ)$$",
+            1
+        ]
+    ],
+    "time": 134.31891775131226,
+    "total_tokens": 11843,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

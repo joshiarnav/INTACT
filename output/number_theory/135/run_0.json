@@ -1,0 +1,66 @@
+{
+    "problem": "Let $n = 3^{17} + 3^{10}$. It is known that $11$ divides into $n+1$. If $n$ can be written in base $10$ as $ABCACCBAB$, where $A,B,C$ are distinct digits such that $A$ and $C$ are odd and $B$ is not divisible by $3$, find $100A + 10B + C$.",
+    "level": "Level 5",
+    "type": "Number Theory",
+    "solution": "Notice that $3^{17} + 3^{10} = 3^{10} \\cdot (3^7 + 1)$; thus $9$ divides into $3^{17} + 3^{10}$. Furthermore, using the sum of seventh powers factorization, it follows that $3+1 = 4$ divides into $3^7 + 1$.\n\nUsing the divisibility criterion for $4$, we know that $\\overline{AB}$ must be divisible by $4$. Thus $B$ is even and not divisible by $3$. Also, $A$ is odd, so $\\overline{AB} = 10A + B$, where $4$ does not divide into $10A$. Thus, $4$ cannot divide into $B$ either, otherwise $10A + B$ would not be divisible by $4$. Then, $B$ must be equal to $2$.\n\nUsing the divisibility criterion for $9$, it follows that $3(A+B+C)$ is divisible by $9$, that is $3$ divides into $A+C+2$. Thus, $A+C = 4,7,10,13,16 \\quad (*)$. Using the divisibility criterion for $11$, since \\begin{align*}10^{8} \\cdot A + 10^7 \\cdot B + \\cdots + B &\\equiv (-1)^8 \\cdot A + (-1)^7 \\cdot B + \\cdots + B \\\\ &\\equiv A - B + \\cdots + B \\\\ &\\equiv -1 \\pmod{11},\\end{align*}then the alternating sum of digits, which works out to be $B+C-A \\equiv -1 \\pmod{11}$. Thus, $2+C-A$ is either equal to $10$ or $-1$, so $A-C = 3,-8$.\n\nIn the former case when $A-C = 3$, summing with $(*)$ yields that $2A \\in \\{7,10,13,16,19\\}$, of which only $A = 5$ fit the problem conditions. This yields that $C = 2$. However, we know that $B$ and $C$ are distinct, so we can eliminate this possibility. Thus, $A-C = -8$, of which only $C = 9, A = 1$ works. The answer is $\\boxed{129}$.",
+    "is_solved": false,
+    "model_solution": "Step 1:  Let's start by rewriting $n$ as given in the problem: $n = 3^{17} + 3^{10}$.\nStep 2:  We are also given that $11$ divides $n+1$, which implies that $n+1$ is divisible by $11$.\nStep 3:  The divisibility rule of $11$ states that for a number to be divisible by $11$, the difference between the sum of its digits in the odd places and the sum of its digits in the even places must be divisible by $11$.\nStep 4:  Therefore, we have the congruence $n+1 \\equiv 0 \\pmod{11}$.\nStep 5:  This can be rewritten as $3^{17} + 3^{10} + 1 \\equiv 0 \\pmod{11}$.\nStep 6:  Using the properties of modular arithmetic, we can simplify this congruence to $3^7 \\cdot 3^{10} + 1 \\equiv 0 \\pmod{11}$.\nStep 7:  We can further simplify $3^{10}$ as $3^{9\nStep 8:  We have $3^7 \\equiv 2 \\pmod{11}$ and $3^5 \\equiv 4 \\pmod{11}$.\nStep 9:  $3^7 \\equiv 2 \\pmod{11}$ and $3^{10} \\equiv 4 \\cdot 3^5 \\equiv 1 \\pmod{11}$ and $3^9 \\equiv 3 \\pmod{11}$.\nStep 10: \n\\begin{align*}\nn+1 &\\equiv 0 \\pmod{11}\\\\\n\\Rightarrow\\qquad n &\\equiv -1 \\pmod{11}\\\\\n\\Rightarrow\\qquad n &\\equiv 10 \\pmod{11}\n\\end{align*}\n\\begin{align*}\nn &\\equiv 10 \\pmod{11}\\\\\n\\Rightarrow\\qquad ABCACCBAB &\\equiv 10 \\pmod{11}\\\\\n\\Rightarrow\\qquad 10A+11B+C &\\equiv 10 \\pmod{11}\\\\\n\\Rightarrow\\qquad 10A+C &\\equiv 10 \\pmod{11}\n\\end{align*}\nSince $10A+C \\equiv 10 \\pmod{11}$, we must have $C=2$.\nSince $C = 2$, we have $10A + 2 \\equiv 10 \\pmod{11}$.\n$\\Rightarrow\\qquad 10A \\equiv 8 \\pmod{11}$\nSince $10A \\equiv 8 \\pmod{11}$, we must have $A=9$.\nStep 11: $n \\equiv 3^{17} + 3^{10} \\equiv 3^{10} (3^7 + 1) \\equiv 3^{10} (2 + 1) \\equiv 3^{10} \\cdot 3 \\equiv 3 \\cdot 1 \\equiv 3 \\pmod{11}$\nSince $C = 2$, we have $10A + 2 \\equiv 10 \\pmod{11}$.\n$\\Rightarrow\\qquad 10A \\equiv 8 \\pmod{11}$",
+    "steps": [
+        "Step 1:  Let's start by rewriting $n$ as given in the problem: $n = 3^{17} + 3^{10}$.\nStep 2:  We are also given that $11$ divides $n+1$, which implies that $n+1$ is divisible by $11$.\nStep 3:  The divisibility rule of $11$ states that for a number to be divisible by $11$, the difference between the sum of its digits in the odd places and the sum of its digits in the even places must be divisible by $11$.\nStep 4:  Therefore, we have the congruence $n+1 \\equiv 0 \\pmod{11}$.\nStep 5:  This can be rewritten as $3^{17} + 3^{10} + 1 \\equiv 0 \\pmod{11}$.\nStep 6:  Using the properties of modular arithmetic, we can simplify this congruence to $3^7 \\cdot 3^{10} + 1 \\equiv 0 \\pmod{11}$.\nStep 7:  We can further simplify $3^{10}$ as $3^{9",
+        "Step 8:  We have $3^7 \\equiv 2 \\pmod{11}$ and $3^5 \\equiv 4 \\pmod{11}$.",
+        "Step 9:  $3^7 \\equiv 2 \\pmod{11}$ and $3^{10} \\equiv 4 \\cdot 3^5 \\equiv 1 \\pmod{11}$ and $3^9 \\equiv 3 \\pmod{11}$.",
+        "Step 10: \n\\begin{align*}\nn+1 &\\equiv 0 \\pmod{11}\\\\\n\\Rightarrow\\qquad n &\\equiv -1 \\pmod{11}\\\\\n\\Rightarrow\\qquad n &\\equiv 10 \\pmod{11}\n\\end{align*}",
+        "\\begin{align*}\nn &\\equiv 10 \\pmod{11}\\\\\n\\Rightarrow\\qquad ABCACCBAB &\\equiv 10 \\pmod{11}\\\\\n\\Rightarrow\\qquad 10A+11B+C &\\equiv 10 \\pmod{11}\\\\\n\\Rightarrow\\qquad 10A+C &\\equiv 10 \\pmod{11}\n\\end{align*}",
+        "Since $10A+C \\equiv 10 \\pmod{11}$, we must have $C=2$.",
+        "Since $C = 2$, we have $10A + 2 \\equiv 10 \\pmod{11}$.\n$\\Rightarrow\\qquad 10A \\equiv 8 \\pmod{11}$",
+        "Since $10A \\equiv 8 \\pmod{11}$, we must have $A=9$.",
+        "Step 11: $n \\equiv 3^{17} + 3^{10} \\equiv 3^{10} (3^7 + 1) \\equiv 3^{10} (2 + 1) \\equiv 3^{10} \\cdot 3 \\equiv 3 \\cdot 1 \\equiv 3 \\pmod{11}$",
+        "Since $C = 2$, we have $10A + 2 \\equiv 10 \\pmod{11}$.\n$\\Rightarrow\\qquad 10A \\equiv 8 \\pmod{11}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Let's start by rewriting $n$ as given in the problem: $n = 3^{17} + 3^{10}$.\nStep 2:  We are also given that $11$ divides $n+1$, which implies that $n+1$ is divisible by $11$.\nStep 3:  The divisibility rule of $11$ states that for a number to be divisible by $11$, the difference between the sum of its digits in the odd places and the sum of its digits in the even places must be divisible by $11$.\nStep 4:  Therefore, we have the congruence $n+1 \\equiv 0 \\pmod{11}$.\nStep 5:  This can be rewritten as $3^{17} + 3^{10} + 1 \\equiv 0 \\pmod{11}$.\nStep 6:  Using the properties of modular arithmetic, we can simplify this congruence to $3^7 \\cdot 3^{10} + 1 \\equiv 0 \\pmod{11}$.\nStep 7:  We can further simplify $3^{10}$ as $3^{9",
+            1
+        ],
+        [
+            "Step 8:  We have $3^7 \\equiv 2 \\pmod{11}$ and $3^5 \\equiv 4 \\pmod{11}$.",
+            1
+        ],
+        [
+            "Step 9:  $3^7 \\equiv 2 \\pmod{11}$ and $3^{10} \\equiv 4 \\cdot 3^5 \\equiv 1 \\pmod{11}$ and $3^9 \\equiv 3 \\pmod{11}$.",
+            1
+        ],
+        [
+            "Step 10: \n\\begin{align*}\nn+1 &\\equiv 0 \\pmod{11}\\\\\n\\Rightarrow\\qquad n &\\equiv -1 \\pmod{11}\\\\\n\\Rightarrow\\qquad n &\\equiv 10 \\pmod{11}\n\\end{align*}",
+            1
+        ],
+        [
+            "\\begin{align*}\nn &\\equiv 10 \\pmod{11}\\\\\n\\Rightarrow\\qquad ABCACCBAB &\\equiv 10 \\pmod{11}\\\\\n\\Rightarrow\\qquad 10A+11B+C &\\equiv 10 \\pmod{11}\\\\\n\\Rightarrow\\qquad 10A+C &\\equiv 10 \\pmod{11}\n\\end{align*}",
+            1
+        ],
+        [
+            "Since $10A+C \\equiv 10 \\pmod{11}$, we must have $C=2$.",
+            1
+        ],
+        [
+            "Since $C = 2$, we have $10A + 2 \\equiv 10 \\pmod{11}$.\n$\\Rightarrow\\qquad 10A \\equiv 8 \\pmod{11}$",
+            1
+        ],
+        [
+            "Since $10A \\equiv 8 \\pmod{11}$, we must have $A=9$.",
+            1
+        ],
+        [
+            "Step 11: $n \\equiv 3^{17} + 3^{10} \\equiv 3^{10} (3^7 + 1) \\equiv 3^{10} (2 + 1) \\equiv 3^{10} \\cdot 3 \\equiv 3 \\cdot 1 \\equiv 3 \\pmod{11}$",
+            1
+        ],
+        [
+            "Since $C = 2$, we have $10A + 2 \\equiv 10 \\pmod{11}$.\n$\\Rightarrow\\qquad 10A \\equiv 8 \\pmod{11}$",
+            1
+        ]
+    ],
+    "time": 137.41360330581665,
+    "total_tokens": 12940,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

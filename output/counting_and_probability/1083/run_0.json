@@ -1,0 +1,66 @@
+{
+    "problem": "Ten circles are all the same size. Each pair of these circles overlap but no circle is exactly on top of another circle. What is the greatest possible total number of intersection points of these ten circles?",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "We first note that each circle can intersect any other circle a maximum of two times.\n\nTo begin, the first circle is drawn. The second circle is then drawn overlapping the first, and two points of intersection are created. Since each pair of circles overlap (but are not exactly on top of one another), then the third circle drawn can intersect the first circle twice and the second circle twice. We continue in this manner with each new circle drawn intersecting each of the previously drawn circles exactly twice. That is, the third circle drawn intersects each of the two previous circles twice, the fourth circle intersects each of the three previous circles twice, and so on.  Diagrams showing possible arrangements for $3,$ $4,$ and $5$ circles, each giving the maximum number of intersections, are shown below.\n\n[asy]\ndraw((Circle((-6,.2),1)));\ndraw((Circle((-5,.2),1)));\ndraw((Circle((-5.5,1.2-sqrt(3)),1)));\ndraw((Circle((-2,-0.3),1)));\ndraw((Circle((-2,0.3),1)));\ndraw((Circle((-.5,-0.3),1)));\ndraw((Circle((-.5,0.3),1)));\n\ndraw((Circle((3.6,.3),1)));\ndraw((Circle((2,.3),1)));\ndraw((Circle((2.3,-0.3),1)));\ndraw((Circle((3.3,-0.3),1)));\ndraw((Circle((2.8,.8),1)));\n[/asy]\n\n\nThe resulting numbers of intersections are summarized in the table below.\n\n\\begin{tabular}{|c|c|c|}\\hline\nCircles&New intersections&Total number of intersections\\\\ \\hline\n1&0&0\\\\ \\hline\n2&2&2\\\\ \\hline\n3&$2\\times2=4$&$2+4$\\\\ \\hline\n4&$3\\times2=6$&$2+4+6$\\\\ \\hline\n5&$4\\times2=8$&$2+4+6+8$\\\\ \\hline\n6&$5\\times2=10$&$2+4+6+8+10$\\\\ \\hline\n\\end{tabular}\n\nContinuing in this vein, the greatest possible total number of intersection points using ten circles is\\[2+4+6+8+10+12+14+16+18=\\boxed{90}.\\] Or, we notice that every unique pair of circles carries at most two unique intersections. There are $\\binom{10}{2} = \\frac{10\\cdot 9}{2!} = 45$ different pairs of circles, which give a total of $2\\cdot 45 = \\boxed{90}$ possible intersections.\n\nTo be complete, we technically need to show that this number is possible, though we don't expect students to do this to answer the question. The diagram below demonstrates a possible positioning of the ten circles that achieves the maximum $90$ points of intersection. That is, every pair of circles intersects exactly twice and all points of intersection are distinct from one another. It is interesting to note that this diagram is constructed by positioning each of the ten circles' centres at one of the ten vertices of a suitably sized regular decagon, as shown.\n\n[asy]\ndraw((.31,-.95)--(0,0)--(.31,.95)--(1.12,1.54)--(2.12,1.54)--(2.93,.95)--(3.24,0)--(2.93,-.95)--(2.12,-1.54)--(1.12,-1.54)--cycle,linewidth(1));\ndraw((Circle((.31,-.95),2.12)));\ndraw((Circle((0,0),2.12)));\ndraw((Circle((.31,.95),2.12)));\ndraw((Circle((1.12,1.54),2.12)));\ndraw((Circle((2.12,1.54),2.12)));\ndraw((Circle((2.93,.95),2.12)));\ndraw((Circle((3.24,0),2.12)));\ndraw((Circle((2.93,-.95),2.12)));\ndraw((Circle((2.12,-1.54),2.12)));\ndraw((Circle((1.12,-1.54),2.12)));\n[/asy]",
+    "is_solved": false,
+    "model_solution": "Step 1: For any pair of circles, there can be a maximum of 2 intersection points.\nStep 2: There are $\\binom{10}{2}=\\frac{10\\cdot9}{2}=45$ pairs of circles.\nStep 3: Each pair of circles produces 2 intersection points. Therefore, the maximum total number of intersection points is $2 \\cdot 45=90$\nStep 4: However, it is not possible for all 45 pairs of circles to overlap at exactly 2 points each, as this would require each non-intersecting pair of circles also to intersect with each other, which is impossible given the statement in the problem that \"no circle is exactly on top of another circle.\" Thus, there must be fewer than 45 pairs of circles that intersect in exactly 2 points each, so the total number of intersection points is less than $2 \\cdot 45 = 90$.\nStep 5: Each of the 10 circles intersects with 9 other circles, giving a total of $10\\cdot9 = 90$ intersections. However, each intersection is counted twice (once for each circle involved), so the true number of intersections is $90/2 = 45$ intersections, each of which has 2 points, but all these points are also intersections of pairs of circles.\nStep 6: Since each of the 45 intersections has 2 points, there are $45\\cdot2=90$ points of intersection, but we already know from the problem statement that no circle is exactly on top of another circle. Therefore, the total number of intersection points must be less than $90$, so the greatest possible total number of intersection points is less than $90$.\nStep 7: Each pair of circles intersects in exactly two points, and there are $\\binom{10}{2}$ pairs of circles. Therefore, the greatest possible total number of intersection points is $2\\binom{10}{2}=2\\cdot \\frac{10\\cdot 9}{2}$.\nStep 8: Therefore, the greatest possible total number of intersection points is $2\\cdot \\frac{10\\cdot 9}{2}=2\\cdot 45 = 90.$\nStep 9: However, each intersection point is shared by two pairs of circles. Therefore, the greatest possible total number of intersection points is $90/2=45.$\nStep 10: Since each of the 45 intersections has 2 points, the greatest possible total number of intersection points is $2\\cdot 45=90$, but this is not possible according to Steps 4 and 6.",
+    "steps": [
+        "Step 1: For any pair of circles, there can be a maximum of 2 intersection points.",
+        "Step 2: There are $\\binom{10}{2}=\\frac{10\\cdot9}{2}=45$ pairs of circles.",
+        "Step 3: Each pair of circles produces 2 intersection points. Therefore, the maximum total number of intersection points is $2 \\cdot 45=90$",
+        "Step 4: However, it is not possible for all 45 pairs of circles to overlap at exactly 2 points each, as this would require each non-intersecting pair of circles also to intersect with each other, which is impossible given the statement in the problem that \"no circle is exactly on top of another circle.\" Thus, there must be fewer than 45 pairs of circles that intersect in exactly 2 points each, so the total number of intersection points is less than $2 \\cdot 45 = 90$.",
+        "Step 5: Each of the 10 circles intersects with 9 other circles, giving a total of $10\\cdot9 = 90$ intersections. However, each intersection is counted twice (once for each circle involved), so the true number of intersections is $90/2 = 45$ intersections, each of which has 2 points, but all these points are also intersections of pairs of circles.",
+        "Step 6: Since each of the 45 intersections has 2 points, there are $45\\cdot2=90$ points of intersection, but we already know from the problem statement that no circle is exactly on top of another circle. Therefore, the total number of intersection points must be less than $90$, so the greatest possible total number of intersection points is less than $90$.",
+        "Step 7: Each pair of circles intersects in exactly two points, and there are $\\binom{10}{2}$ pairs of circles. Therefore, the greatest possible total number of intersection points is $2\\binom{10}{2}=2\\cdot \\frac{10\\cdot 9}{2}$.",
+        "Step 8: Therefore, the greatest possible total number of intersection points is $2\\cdot \\frac{10\\cdot 9}{2}=2\\cdot 45 = 90.$",
+        "Step 9: However, each intersection point is shared by two pairs of circles. Therefore, the greatest possible total number of intersection points is $90/2=45.$",
+        "Step 10: Since each of the 45 intersections has 2 points, the greatest possible total number of intersection points is $2\\cdot 45=90$, but this is not possible according to Steps 4 and 6."
+    ],
+    "full_steps": [
+        [
+            "Step 1: For any pair of circles, there can be a maximum of 2 intersection points.",
+            1
+        ],
+        [
+            "Step 2: There are $\\binom{10}{2}=\\frac{10\\cdot9}{2}=45$ pairs of circles.",
+            1
+        ],
+        [
+            "Step 3: Each pair of circles produces 2 intersection points. Therefore, the maximum total number of intersection points is $2 \\cdot 45=90$",
+            1
+        ],
+        [
+            "Step 4: However, it is not possible for all 45 pairs of circles to overlap at exactly 2 points each, as this would require each non-intersecting pair of circles also to intersect with each other, which is impossible given the statement in the problem that \"no circle is exactly on top of another circle.\" Thus, there must be fewer than 45 pairs of circles that intersect in exactly 2 points each, so the total number of intersection points is less than $2 \\cdot 45 = 90$.",
+            1
+        ],
+        [
+            "Step 5: Each of the 10 circles intersects with 9 other circles, giving a total of $10\\cdot9 = 90$ intersections. However, each intersection is counted twice (once for each circle involved), so the true number of intersections is $90/2 = 45$ intersections, each of which has 2 points, but all these points are also intersections of pairs of circles.",
+            1
+        ],
+        [
+            "Step 6: Since each of the 45 intersections has 2 points, there are $45\\cdot2=90$ points of intersection, but we already know from the problem statement that no circle is exactly on top of another circle. Therefore, the total number of intersection points must be less than $90$, so the greatest possible total number of intersection points is less than $90$.",
+            1
+        ],
+        [
+            "Step 7: Each pair of circles intersects in exactly two points, and there are $\\binom{10}{2}$ pairs of circles. Therefore, the greatest possible total number of intersection points is $2\\binom{10}{2}=2\\cdot \\frac{10\\cdot 9}{2}$.",
+            1
+        ],
+        [
+            "Step 8: Therefore, the greatest possible total number of intersection points is $2\\cdot \\frac{10\\cdot 9}{2}=2\\cdot 45 = 90.$",
+            1
+        ],
+        [
+            "Step 9: However, each intersection point is shared by two pairs of circles. Therefore, the greatest possible total number of intersection points is $90/2=45.$",
+            1
+        ],
+        [
+            "Step 10: Since each of the 45 intersections has 2 points, the greatest possible total number of intersection points is $2\\cdot 45=90$, but this is not possible according to Steps 4 and 6.",
+            1
+        ]
+    ],
+    "time": 135.54374027252197,
+    "total_tokens": 7885,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

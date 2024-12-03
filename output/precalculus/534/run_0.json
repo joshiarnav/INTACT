@@ -1,0 +1,66 @@
+{
+    "problem": "Find all the solutions to\n\\[\\arctan \\frac{1}{x} + \\arctan \\frac{1}{x + 2} = \\arctan \\frac{4}{x + 3}.\\]Enter all the solutions, separated by commas.",
+    "level": "Level 3",
+    "type": "Precalculus",
+    "solution": "Taking the tangent of both sides, we get\n\\[\\tan \\left( \\arctan \\frac{1}{x} + \\arctan \\frac{1}{x + 2} \\right) = \\frac{4}{x + 3}.\\]From the tangent addition formula,\n\\[\\frac{\\frac{1}{x} + \\frac{1}{x + 2}}{1 - \\frac{1}{x} \\cdot \\frac{1}{x + 2}} = \\frac{4}{x + 3}.\\]This simplifies to\n\\[\\frac{2x + 2}{x^2 + 2x - 1} = \\frac{4}{x + 3},\\]which further reduces to $x^2 = 5.$  Hence, $x = \\pm \\sqrt{5}.$\n\nIf $x = -\\sqrt{5},$ then $\\arctan \\frac{1}{x} + \\arctan \\frac{1}{x + 2}$ is negative but $\\arctan \\frac{4}{x + 3}$ is positive, so $x = -\\sqrt{5}$ is not a solution.\n\nOn the other hand, if $x = \\sqrt{5},$ then both $\\arctan \\frac{1}{x} + \\arctan \\frac{1}{x + 2}$ and $\\arctan \\frac{4}{x + 3}$ are positive.\nFurthermore, they both lie between 0 and $\\frac{\\pi}{2},$ and our work above shows that their tangents are equal, so they must be equal.\n\nTherefore, the only solution is $x = \\boxed{\\sqrt{5}}.$",
+    "is_solved": false,
+    "model_solution": "Step 1: Move all three arctan terms to the left-hand side.\n\\[\\arctan \\frac{1}{x} + \\arctan \\frac{1}{x + 2} - \\arctan \\frac{4}{x + 3} = 0\\]\nStep 2: Apply the tangent addition formula to simplify the left-hand side.\n\\[\\tan \\left( \\arctan \\frac{1}{x} + \\arctan \\frac{1}{x + 2} \\right) = \\tan \\left( \\arctan \\frac{4}{x + 3} \\right)\\] \n\\[\\frac{\\frac{1}{x} + \\frac{1}{x + 2}}{1 - \\frac{1}{x} \\cdot \\frac{1}{x + 2}} = \\frac{4}{x + 3}\\]\nStep 3: Simplify the equation\n\\[\\frac{\\frac{1}{x} + \\frac{1}{x + 2}}{\\frac{x + 2 - x}{x(x + 2)}} = \\frac{4}{x + 3}\\]\n\\[\\frac{\\frac{(x + 2) + x}{x(x + 2)}}{\\frac{2}{x(x + 2)}} = \\frac{4}{x + 3}\\]\n\\[\\frac{x + 2 + x}{2} = \\frac{4}{x + 3}\\]\n\\[\\frac{2x + 2}{2} = \\frac{4}{x + 3}\\]\n\\[x + 1 = \\frac{4}{x + 3}\\]\n\\[x + 1(x + 3) = 4\\]\n\\[x^2 + 4x - 3 = 0\\]\nFactor the quadratic equation.\n\\[(x + 7)(x - 1) = 0\\]\nSolve for x.\nx + 7 = 0 or x - 1 = 0\nx = -7 or x = 1\nCheck the solutions in the original equation.\n\n\\[\\arctan \\frac{1}{-7} + \\arctan \\frac{1}{-7 + 2} = \\arctan \\frac{4}{-7 + 3}\\]\n\\[\\arctan \\frac{1}{-7} + \\arctan \\frac{1}{-5} = \\arctan \\frac{4}{-4}\\]\n\\[\\arctan \\frac{1}{-7} + \\arctan \\frac{1}{-5} = \\arctan \\frac{4}{-4}\\]\n\\[\\arctan \\frac{1}{-7} = \\arctan (-1) - \\arctan \\frac{1}{5}\\]\n\\[\\arctan \\frac{1}{-7} = \\arctan \\left( \\frac{-1 - \\frac{1}{5}}{1 + \\frac{(-1)(1)}{5}} \\right)\\]\n\\[\\arctan \\frac{1}{-7} = \\arctan \\left( \\frac{-6/5}{4/5\n\\[\\arctan \\frac{1}{-7} = \\arctan \\left( \\frac{-6/5}{4/5} \\right)\\]\n\\[\\arctan \\frac{1}{-7} = \\arctan \\left( -\\frac{6}{4} \\right)\\]\n\\[\\arctan \\frac{1}{-7} = \\arctan \\left( -\\frac{3}{2} \\right)\\]\n\\[\\arctan \\left( -\\frac{3}{2} \\right) \\neq \\arctan \\frac{4}{-4}\\]\nStep 4: Check the solution x = 1 in the original equation.\n\\[\\arctan \\frac{1}{1} + \\arctan \\frac{1}{1 + 2} = \\arctan \\frac{4}{1 + 3}\\]\n\\[\\arctan 1 + \\arctan \\frac{1}{3} = \\arctan 1\\]\n\\[\\frac{\\pi}{4} + \\arctan \\frac{1}{3} = \\frac{\\pi}{4}\\]\n\\[\\frac{\\pi}{4} - \\frac{\\pi}{4} + \\arctan \\frac{1}{3} = 0\\]\n\\[0 + \\arctan \\frac{1}{3} = 0\\]\n\\[\\arctan \\frac{1}{3} = 0\\]\n\\[\\arctan \\frac{1}{3} \\neq 0\\]\nStep 5: \n\\[\\arctan \\frac{1}{3} = \\arctan \\left( \\frac{1}{3} \\right)\\]\n\\[0 = \\arctan \\left( \\frac{1}{3} \\right)\\]\nThis equation is not true for any x, so x = 1 is not a solution to the original equation.",
+    "steps": [
+        "Step 1: Move all three arctan terms to the left-hand side.\n\\[\\arctan \\frac{1}{x} + \\arctan \\frac{1}{x + 2} - \\arctan \\frac{4}{x + 3} = 0\\]",
+        "Step 2: Apply the tangent addition formula to simplify the left-hand side.\n\\[\\tan \\left( \\arctan \\frac{1}{x} + \\arctan \\frac{1}{x + 2} \\right) = \\tan \\left( \\arctan \\frac{4}{x + 3} \\right)\\] \n\\[\\frac{\\frac{1}{x} + \\frac{1}{x + 2}}{1 - \\frac{1}{x} \\cdot \\frac{1}{x + 2}} = \\frac{4}{x + 3}\\]",
+        "Step 3: Simplify the equation\n\\[\\frac{\\frac{1}{x} + \\frac{1}{x + 2}}{\\frac{x + 2 - x}{x(x + 2)}} = \\frac{4}{x + 3}\\]\n\\[\\frac{\\frac{(x + 2) + x}{x(x + 2)}}{\\frac{2}{x(x + 2)}} = \\frac{4}{x + 3}\\]\n\\[\\frac{x + 2 + x}{2} = \\frac{4}{x + 3}\\]",
+        "\\[\\frac{2x + 2}{2} = \\frac{4}{x + 3}\\]\n\\[x + 1 = \\frac{4}{x + 3}\\]\n\\[x + 1(x + 3) = 4\\]\n\\[x^2 + 4x - 3 = 0\\]",
+        "Factor the quadratic equation.\n\\[(x + 7)(x - 1) = 0\\]",
+        "Solve for x.\nx + 7 = 0 or x - 1 = 0\nx = -7 or x = 1",
+        "Check the solutions in the original equation.\n\n\\[\\arctan \\frac{1}{-7} + \\arctan \\frac{1}{-7 + 2} = \\arctan \\frac{4}{-7 + 3}\\]\n\\[\\arctan \\frac{1}{-7} + \\arctan \\frac{1}{-5} = \\arctan \\frac{4}{-4}\\]\n\\[\\arctan \\frac{1}{-7} + \\arctan \\frac{1}{-5} = \\arctan \\frac{4}{-4}\\]\n\\[\\arctan \\frac{1}{-7} = \\arctan (-1) - \\arctan \\frac{1}{5}\\]\n\\[\\arctan \\frac{1}{-7} = \\arctan \\left( \\frac{-1 - \\frac{1}{5}}{1 + \\frac{(-1)(1)}{5}} \\right)\\]\n\\[\\arctan \\frac{1}{-7} = \\arctan \\left( \\frac{-6/5}{4/5",
+        "\\[\\arctan \\frac{1}{-7} = \\arctan \\left( \\frac{-6/5}{4/5} \\right)\\]\n\\[\\arctan \\frac{1}{-7} = \\arctan \\left( -\\frac{6}{4} \\right)\\]\n\\[\\arctan \\frac{1}{-7} = \\arctan \\left( -\\frac{3}{2} \\right)\\]\n\\[\\arctan \\left( -\\frac{3}{2} \\right) \\neq \\arctan \\frac{4}{-4}\\]",
+        "Step 4: Check the solution x = 1 in the original equation.\n\\[\\arctan \\frac{1}{1} + \\arctan \\frac{1}{1 + 2} = \\arctan \\frac{4}{1 + 3}\\]\n\\[\\arctan 1 + \\arctan \\frac{1}{3} = \\arctan 1\\]\n\\[\\frac{\\pi}{4} + \\arctan \\frac{1}{3} = \\frac{\\pi}{4}\\]\n\\[\\frac{\\pi}{4} - \\frac{\\pi}{4} + \\arctan \\frac{1}{3} = 0\\]\n\\[0 + \\arctan \\frac{1}{3} = 0\\]\n\\[\\arctan \\frac{1}{3} = 0\\]\n\\[\\arctan \\frac{1}{3} \\neq 0\\]",
+        "Step 5: \n\\[\\arctan \\frac{1}{3} = \\arctan \\left( \\frac{1}{3} \\right)\\]\n\\[0 = \\arctan \\left( \\frac{1}{3} \\right)\\]\nThis equation is not true for any x, so x = 1 is not a solution to the original equation."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Move all three arctan terms to the left-hand side.\n\\[\\arctan \\frac{1}{x} + \\arctan \\frac{1}{x + 2} - \\arctan \\frac{4}{x + 3} = 0\\]",
+            1
+        ],
+        [
+            "Step 2: Apply the tangent addition formula to simplify the left-hand side.\n\\[\\tan \\left( \\arctan \\frac{1}{x} + \\arctan \\frac{1}{x + 2} \\right) = \\tan \\left( \\arctan \\frac{4}{x + 3} \\right)\\] \n\\[\\frac{\\frac{1}{x} + \\frac{1}{x + 2}}{1 - \\frac{1}{x} \\cdot \\frac{1}{x + 2}} = \\frac{4}{x + 3}\\]",
+            1
+        ],
+        [
+            "Step 3: Simplify the equation\n\\[\\frac{\\frac{1}{x} + \\frac{1}{x + 2}}{\\frac{x + 2 - x}{x(x + 2)}} = \\frac{4}{x + 3}\\]\n\\[\\frac{\\frac{(x + 2) + x}{x(x + 2)}}{\\frac{2}{x(x + 2)}} = \\frac{4}{x + 3}\\]\n\\[\\frac{x + 2 + x}{2} = \\frac{4}{x + 3}\\]",
+            1
+        ],
+        [
+            "\\[\\frac{2x + 2}{2} = \\frac{4}{x + 3}\\]\n\\[x + 1 = \\frac{4}{x + 3}\\]\n\\[x + 1(x + 3) = 4\\]\n\\[x^2 + 4x - 3 = 0\\]",
+            1
+        ],
+        [
+            "Factor the quadratic equation.\n\\[(x + 7)(x - 1) = 0\\]",
+            1
+        ],
+        [
+            "Solve for x.\nx + 7 = 0 or x - 1 = 0\nx = -7 or x = 1",
+            1
+        ],
+        [
+            "Check the solutions in the original equation.\n\n\\[\\arctan \\frac{1}{-7} + \\arctan \\frac{1}{-7 + 2} = \\arctan \\frac{4}{-7 + 3}\\]\n\\[\\arctan \\frac{1}{-7} + \\arctan \\frac{1}{-5} = \\arctan \\frac{4}{-4}\\]\n\\[\\arctan \\frac{1}{-7} + \\arctan \\frac{1}{-5} = \\arctan \\frac{4}{-4}\\]\n\\[\\arctan \\frac{1}{-7} = \\arctan (-1) - \\arctan \\frac{1}{5}\\]\n\\[\\arctan \\frac{1}{-7} = \\arctan \\left( \\frac{-1 - \\frac{1}{5}}{1 + \\frac{(-1)(1)}{5}} \\right)\\]\n\\[\\arctan \\frac{1}{-7} = \\arctan \\left( \\frac{-6/5}{4/5",
+            1
+        ],
+        [
+            "\\[\\arctan \\frac{1}{-7} = \\arctan \\left( \\frac{-6/5}{4/5} \\right)\\]\n\\[\\arctan \\frac{1}{-7} = \\arctan \\left( -\\frac{6}{4} \\right)\\]\n\\[\\arctan \\frac{1}{-7} = \\arctan \\left( -\\frac{3}{2} \\right)\\]\n\\[\\arctan \\left( -\\frac{3}{2} \\right) \\neq \\arctan \\frac{4}{-4}\\]",
+            1
+        ],
+        [
+            "Step 4: Check the solution x = 1 in the original equation.\n\\[\\arctan \\frac{1}{1} + \\arctan \\frac{1}{1 + 2} = \\arctan \\frac{4}{1 + 3}\\]\n\\[\\arctan 1 + \\arctan \\frac{1}{3} = \\arctan 1\\]\n\\[\\frac{\\pi}{4} + \\arctan \\frac{1}{3} = \\frac{\\pi}{4}\\]\n\\[\\frac{\\pi}{4} - \\frac{\\pi}{4} + \\arctan \\frac{1}{3} = 0\\]\n\\[0 + \\arctan \\frac{1}{3} = 0\\]\n\\[\\arctan \\frac{1}{3} = 0\\]\n\\[\\arctan \\frac{1}{3} \\neq 0\\]",
+            1
+        ],
+        [
+            "Step 5: \n\\[\\arctan \\frac{1}{3} = \\arctan \\left( \\frac{1}{3} \\right)\\]\n\\[0 = \\arctan \\left( \\frac{1}{3} \\right)\\]\nThis equation is not true for any x, so x = 1 is not a solution to the original equation.",
+            1
+        ]
+    ],
+    "time": 133.56314945220947,
+    "total_tokens": 13474,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

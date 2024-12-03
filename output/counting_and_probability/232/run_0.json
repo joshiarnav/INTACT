@@ -1,0 +1,46 @@
+{
+    "problem": "A point $(x,y)$ is randomly and uniformly chosen inside the square with vertices (0,0), (0,2), (2,2), and (2,0).  What is the probability that $x+y < 3$?",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "We note that the points for which $x+y<3$ are those that lie below the line $x+y = 3$, or $y= -x + 3$.  As the diagram below illustrates, these are all the points in the square except those in the triangle with vertices (2,1), (2,2), and (1,2).\n\n[asy]\ndefaultpen(.7);\n\ndraw((-.1,0)--(3,0),Arrow);\ndraw((0,-.1)--(0,4),Arrow);\n\ndraw((0,2)--(2,2)--(2,0));\ndraw((-.5,3.5)--(2.5,.5),dashed,Arrows);\n\nfill((0,0)--(0,2)--(1,2)--(2,1)--(2,0)--cycle,gray(.7));\n\nlabel(\"(1,2)\",(1,2),NE);\nlabel(\"(2,2)\",(2,2),NE);\nlabel(\"(2,1)\",(2,1),NE);\n[/asy]\n\nSince this is a right triangle whose sides both of length 1, its area is $\\frac{1}{2} \\cdot 1^2 = 1/2$.  Since the square in question has side length 2, its area is $2^2 = 4$, so the shaded region has area $4 - 1/2 = 7/2$.  Our probability is therefore $\\dfrac{7/2}{4} = \\boxed{\\dfrac{7}{8}}$.",
+    "is_solved": true,
+    "model_solution": "Step 1:  The problem involves finding the probability that a randomly chosen point $(x,y)$ inside a square with vertices (0,0), (0,2), (2,2), and (2,0) satisfies the condition $x+y < 3$.\nStep 2:  To solve this, we need to visualize the region inside the square that satisfies the given inequality $x+y < 3$.\nStep 3:  We can start by plotting the line $x+y=3$ and then determining the region on one side of this line that lies within the square.\nStep 4:  The inequality $x+y < 3$ is satisfied by the points below the line $x+y=3$.\nStep 5:  This inequality can be rewritten as $y < -x + 3$, indicating that the points below the line $x+y=3$ satisfy the given condition.\nStep 6:  By plotting the line $x+y=3$, we can see that the points in the region below this line and within the square will satisfy $x+y < 3$.\nStep 7:  The region that satisfies the condition forms a triangle with vertices (2,\nStep 2:  The area of the triangle formed by the points (2,1), (2,2), and (1,2) is $\\frac{1}{2}\\cdot1\\cdot1=\\frac{1}{2}$.\nStep 3:  The area of the entire square is $2^2=4.$\nThe area of the region that satisfies the condition is $4-\\frac{1}{2}=\\frac{7}{2}$.\nSince the probability is the ratio of the area of the region that satisfies the condition to the area of the entire square, the probability is $\\dfrac{7/2}{4} = \\dfrac{7}{8}$.\nThe area of the region that satisfies the condition is $4-\\frac{1}{2}=\\frac{7}{2}$.",
+    "steps": [
+        "Step 1:  The problem involves finding the probability that a randomly chosen point $(x,y)$ inside a square with vertices (0,0), (0,2), (2,2), and (2,0) satisfies the condition $x+y < 3$.\nStep 2:  To solve this, we need to visualize the region inside the square that satisfies the given inequality $x+y < 3$.\nStep 3:  We can start by plotting the line $x+y=3$ and then determining the region on one side of this line that lies within the square.\nStep 4:  The inequality $x+y < 3$ is satisfied by the points below the line $x+y=3$.\nStep 5:  This inequality can be rewritten as $y < -x + 3$, indicating that the points below the line $x+y=3$ satisfy the given condition.\nStep 6:  By plotting the line $x+y=3$, we can see that the points in the region below this line and within the square will satisfy $x+y < 3$.\nStep 7:  The region that satisfies the condition forms a triangle with vertices (2,",
+        "Step 2:  The area of the triangle formed by the points (2,1), (2,2), and (1,2) is $\\frac{1}{2}\\cdot1\\cdot1=\\frac{1}{2}$.",
+        "Step 3:  The area of the entire square is $2^2=4.$",
+        "The area of the region that satisfies the condition is $4-\\frac{1}{2}=\\frac{7}{2}$.",
+        "Since the probability is the ratio of the area of the region that satisfies the condition to the area of the entire square, the probability is $\\dfrac{7/2}{4} = \\dfrac{7}{8}$.",
+        "The area of the region that satisfies the condition is $4-\\frac{1}{2}=\\frac{7}{2}$."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  The problem involves finding the probability that a randomly chosen point $(x,y)$ inside a square with vertices (0,0), (0,2), (2,2), and (2,0) satisfies the condition $x+y < 3$.\nStep 2:  To solve this, we need to visualize the region inside the square that satisfies the given inequality $x+y < 3$.\nStep 3:  We can start by plotting the line $x+y=3$ and then determining the region on one side of this line that lies within the square.\nStep 4:  The inequality $x+y < 3$ is satisfied by the points below the line $x+y=3$.\nStep 5:  This inequality can be rewritten as $y < -x + 3$, indicating that the points below the line $x+y=3$ satisfy the given condition.\nStep 6:  By plotting the line $x+y=3$, we can see that the points in the region below this line and within the square will satisfy $x+y < 3$.\nStep 7:  The region that satisfies the condition forms a triangle with vertices (2,",
+            1
+        ],
+        [
+            "Step 2:  The area of the triangle formed by the points (2,1), (2,2), and (1,2) is $\\frac{1}{2}\\cdot1\\cdot1=\\frac{1}{2}$.",
+            1
+        ],
+        [
+            "Step 3:  The area of the entire square is $2^2=4.$",
+            1
+        ],
+        [
+            "The area of the region that satisfies the condition is $4-\\frac{1}{2}=\\frac{7}{2}$.",
+            1
+        ],
+        [
+            "Since the probability is the ratio of the area of the region that satisfies the condition to the area of the entire square, the probability is $\\dfrac{7/2}{4} = \\dfrac{7}{8}$.",
+            1
+        ],
+        [
+            "The area of the region that satisfies the condition is $4-\\frac{1}{2}=\\frac{7}{2}$.",
+            1
+        ]
+    ],
+    "time": 80.9354248046875,
+    "total_tokens": 5449,
+    "final_answer_tokens": 531,
+    "model": "meta-llama/Llama-Vision-Free"
+}

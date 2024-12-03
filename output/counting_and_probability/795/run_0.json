@@ -1,0 +1,36 @@
+{
+    "problem": "How many nine-digit numbers can be made using each of the digits 1 through 9 exactly once with the digits alternating between odd and even?",
+    "level": "Level 3",
+    "type": "Counting & Probability",
+    "solution": "There are five odd digits and four even digits to be used. Because the digits must alternate between odd and even, this means that there is only one possible way to distribute odds (O) and evens (E): OEOEOEOEO. Now, there are $5\\cdot 4\\cdot 3\\cdot 2 = 120$ ways to arrange the odd numbers, as there are five choices for the first slot, four for the second, and so on. Similarly, there are $4 \\cdot 3 \\cdot 2 = 24$ ways to arrange the even numbers. Our final answer is the product of $120$ and $24$, which is $\\boxed{2880}$.",
+    "is_solved": true,
+    "model_solution": "Step 1:  Determine the number of odd and even digits available: There are 5 odd digits (1, 3, 5, 7, 9) and 4 even digits (2, 4, 6, 8).\nStep 2: \nSelect 5 spots out of 9 for odd digits.\nThere are 9C5 = 126 ways to do this.\nStep 3:\nFor each of the 126 ways to select 5 spots for odd digits, there are 5! ways to arrange the 5 odd digits in those spots and 4! ways to arrange the 4 even digits in the remaining spots.\nStep 4: \nFor each of the 126 ways to select 5 spots for odd digits, there are 5! = 120 ways to arrange the 5 odd digits in those spots, and 4! = 24 ways to arrange the 4 even digits in the remaining spots. So, the total number of nine-digit numbers that can be made is 126 \u00d7 120 \u00d7 24 = 3628800. Final Answer",
+    "steps": [
+        "Step 1:  Determine the number of odd and even digits available: There are 5 odd digits (1, 3, 5, 7, 9) and 4 even digits (2, 4, 6, 8).",
+        "Step 2: \nSelect 5 spots out of 9 for odd digits.\nThere are 9C5 = 126 ways to do this.",
+        "Step 3:\nFor each of the 126 ways to select 5 spots for odd digits, there are 5! ways to arrange the 5 odd digits in those spots and 4! ways to arrange the 4 even digits in the remaining spots.",
+        "Step 4: \nFor each of the 126 ways to select 5 spots for odd digits, there are 5! = 120 ways to arrange the 5 odd digits in those spots, and 4! = 24 ways to arrange the 4 even digits in the remaining spots. So, the total number of nine-digit numbers that can be made is 126 \u00d7 120 \u00d7 24 = 3628800. Final Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Determine the number of odd and even digits available: There are 5 odd digits (1, 3, 5, 7, 9) and 4 even digits (2, 4, 6, 8).",
+            1
+        ],
+        [
+            "Step 2: \nSelect 5 spots out of 9 for odd digits.\nThere are 9C5 = 126 ways to do this.",
+            1
+        ],
+        [
+            "Step 3:\nFor each of the 126 ways to select 5 spots for odd digits, there are 5! ways to arrange the 5 odd digits in those spots and 4! ways to arrange the 4 even digits in the remaining spots.",
+            1
+        ],
+        [
+            "Step 4: \nFor each of the 126 ways to select 5 spots for odd digits, there are 5! = 120 ways to arrange the 5 odd digits in those spots, and 4! = 24 ways to arrange the 4 even digits in the remaining spots. So, the total number of nine-digit numbers that can be made is 126 \u00d7 120 \u00d7 24 = 3628800. Final Answer",
+            1
+        ]
+    ],
+    "time": 54.74370574951172,
+    "total_tokens": 1741,
+    "final_answer_tokens": 315,
+    "model": "meta-llama/Llama-Vision-Free"
+}

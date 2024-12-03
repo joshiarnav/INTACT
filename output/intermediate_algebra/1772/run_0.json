@@ -1,0 +1,66 @@
+{
+    "problem": "There exist nonzero integers $a$ and $b$ such that the quadratic\n\\[(ax - b)^2 + (bx - a)^2 = x\\]has one integer root and one non-integer root.  Find the non-integer root.",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "The given equation expands to\n\\[(a^2 + b^2) x^2 - (4ab + 1) x + a^2 + b^2 = 0.\\]Since the quadratic has an integer root, its discriminant is nonnegative:\n\\[(4ab + 1)^2 - 4(a^2 + b^2)^2 \\ge 0.\\]This factors as\n\\[(4ab + 1 + 2a^2 + 2b^2)(4ab + 1 - 2a^2 - 2b^2) \\ge 0.\\]We can write this as\n\\[[1 + 2(a + b)^2][1 - 2(a - b)^2] \\ge 0.\\]Since $1 + 2(a + b)^2$ is always nonnegative,\n\\[1 - 2(a - b)^2 \\ge 0,\\]so $(a - b)^2 \\le \\frac{1}{2}.$\n\nRecall that $a$ and $b$ are integers.  If $a$ and $b$ are distinct, then $(a - b)^2 \\ge 1,$ so we must have $a = b.$  Then the given equation becomes\n\\[2a^2 x^2 - (4a^2 + 1) x + 2a^2 = 0.\\]Let $r$ and $s$ be the roots, where $r$ is the integer.  Then by Vieta's formulas,\n\\[r + s = \\frac{4a^2 + 1}{2a^2} = 2 + \\frac{1}{2a^2},\\]and $rs = 1.$\n\nSince $rs = 1,$ either both $r$ and $s$ are positive, or both $r$ and $s$ are negative.  Since $r + s$ is positive, $r$ and $s$ are positive.  Since $a$ is an integer,\n\\[r + s = 2 + \\frac{1}{2a^2} < 3,\\]so the integer $r$ must be 1 or 2.  If $r = 1,$ then $s = 1,$ so both roots are integers, contradiction.  Hence, $r = 2,$ and $s = \\boxed{\\frac{1}{2}}.$  (For these values, we can take $a = 1.$)",
+    "is_solved": false,
+    "model_solution": "Step 1: Expand the equation to get \\[a^2 x^2 - 2abx + b^2 + b^2 x^2 - 2abx + a^2 = x.\\]\nStep 2: Combine like terms and rearrange, obtaining \\[x^2 (a^2 + b^2) - 4abx + a^2 + b^2 - x = 0.\\]\nStep 3: To simplify the equation, let $c = a^2 + b^2$ and $d = a^2 + b^2 - 1.$ The equation becomes \\[cx^2 - 4abx + d - x = 0,\\]or \\[cx^2 - (4ab + 1) x + d = 0.\\]\nStep 4: By Vieta's Formulas, the sum of the roots is $\\frac{4ab + 1}{c}.$ Since one of the roots is an integer, we can write the other root as $r = \\frac{d}{c} - \\frac{4ab + 1}{2c}.$\nSince $r$ is not an integer, we can write $\\frac{d}{c} - \\frac{4ab + 1}{2c} = \\frac{d - (4ab + 1)/2}{c}.$ We can simplify the numerator to get $\\frac{2d - 4ab - 1}{2c}$\nStep 5:\n\\[\\frac{2d - 4ab - 1}{2c} = \\frac{2(a^2 + b^2 - 1) - 4ab - 1}{2(a^2 + b^2)} = \\frac{2(a^2 - 2ab + b^2) - 2b^2 - 1}{2(a^2 + b^2)}\\]\nSince $\\frac{2(a^2 - 2ab + b^2) - 2b^2 - 1}{2(a^2 + b^2)} = \\frac{2(a - b)^2 - 2b^2 - 1}{2(a^2 + b^2)} = \\frac{2((a - b)^2 - b^2/2 - 1/2)}{2(a^2 + b^2)},$ let $x = (a - b)^2 - b^2/2 - 1/2$ and $y = a^2 + b^2, $ so that the expression equals $\\frac{x}{y}.$\nLet $y = a^2 + b^2.$ Then the equation $\\frac{x}{y} = \\frac{2((a - b)^2 - b^2/2 - 1/2)}{2(a^2 + b^2)}$ simplifies to\n$\\frac{x}{y} = \\frac{(a - b)^2 - b^2/2 - 1/2}{a^2 + b^2}.$\nSince $(a - b)^2 = a^2 - 2ab + b^2,$ we can substitute to get $\\frac{x}{y} = \\frac{a^2 - 2ab + b^2 - b^2/2 - 1/2}{a^2 + b^2}.$\nSince $a^2 - 2ab + b^2 - b^2/2 - 1/2 = a^2 - 2ab + b^2 - b^2/2 - 1/2 = \\frac{2(a^2 - 2ab + b^2) - 2b^2 - 1}{2} = 2((a - b)^2 - b^2/2 - 1/2) = 2x,$ we can substitute to get $\\frac{x}{y} = \\frac{2x}{a^2 + b^2}.$",
+    "steps": [
+        "Step 1: Expand the equation to get \\[a^2 x^2 - 2abx + b^2 + b^2 x^2 - 2abx + a^2 = x.\\]",
+        "Step 2: Combine like terms and rearrange, obtaining \\[x^2 (a^2 + b^2) - 4abx + a^2 + b^2 - x = 0.\\]",
+        "Step 3: To simplify the equation, let $c = a^2 + b^2$ and $d = a^2 + b^2 - 1.$ The equation becomes \\[cx^2 - 4abx + d - x = 0,\\]or \\[cx^2 - (4ab + 1) x + d = 0.\\]",
+        "Step 4: By Vieta's Formulas, the sum of the roots is $\\frac{4ab + 1}{c}.$ Since one of the roots is an integer, we can write the other root as $r = \\frac{d}{c} - \\frac{4ab + 1}{2c}.$",
+        "Since $r$ is not an integer, we can write $\\frac{d}{c} - \\frac{4ab + 1}{2c} = \\frac{d - (4ab + 1)/2}{c}.$ We can simplify the numerator to get $\\frac{2d - 4ab - 1}{2c}$",
+        "Step 5:\n\\[\\frac{2d - 4ab - 1}{2c} = \\frac{2(a^2 + b^2 - 1) - 4ab - 1}{2(a^2 + b^2)} = \\frac{2(a^2 - 2ab + b^2) - 2b^2 - 1}{2(a^2 + b^2)}\\]",
+        "Since $\\frac{2(a^2 - 2ab + b^2) - 2b^2 - 1}{2(a^2 + b^2)} = \\frac{2(a - b)^2 - 2b^2 - 1}{2(a^2 + b^2)} = \\frac{2((a - b)^2 - b^2/2 - 1/2)}{2(a^2 + b^2)},$ let $x = (a - b)^2 - b^2/2 - 1/2$ and $y = a^2 + b^2, $ so that the expression equals $\\frac{x}{y}.$",
+        "Let $y = a^2 + b^2.$ Then the equation $\\frac{x}{y} = \\frac{2((a - b)^2 - b^2/2 - 1/2)}{2(a^2 + b^2)}$ simplifies to\n$\\frac{x}{y} = \\frac{(a - b)^2 - b^2/2 - 1/2}{a^2 + b^2}.$",
+        "Since $(a - b)^2 = a^2 - 2ab + b^2,$ we can substitute to get $\\frac{x}{y} = \\frac{a^2 - 2ab + b^2 - b^2/2 - 1/2}{a^2 + b^2}.$",
+        "Since $a^2 - 2ab + b^2 - b^2/2 - 1/2 = a^2 - 2ab + b^2 - b^2/2 - 1/2 = \\frac{2(a^2 - 2ab + b^2) - 2b^2 - 1}{2} = 2((a - b)^2 - b^2/2 - 1/2) = 2x,$ we can substitute to get $\\frac{x}{y} = \\frac{2x}{a^2 + b^2}.$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Expand the equation to get \\[a^2 x^2 - 2abx + b^2 + b^2 x^2 - 2abx + a^2 = x.\\]",
+            1
+        ],
+        [
+            "Step 2: Combine like terms and rearrange, obtaining \\[x^2 (a^2 + b^2) - 4abx + a^2 + b^2 - x = 0.\\]",
+            1
+        ],
+        [
+            "Step 3: To simplify the equation, let $c = a^2 + b^2$ and $d = a^2 + b^2 - 1.$ The equation becomes \\[cx^2 - 4abx + d - x = 0,\\]or \\[cx^2 - (4ab + 1) x + d = 0.\\]",
+            1
+        ],
+        [
+            "Step 4: By Vieta's Formulas, the sum of the roots is $\\frac{4ab + 1}{c}.$ Since one of the roots is an integer, we can write the other root as $r = \\frac{d}{c} - \\frac{4ab + 1}{2c}.$",
+            1
+        ],
+        [
+            "Since $r$ is not an integer, we can write $\\frac{d}{c} - \\frac{4ab + 1}{2c} = \\frac{d - (4ab + 1)/2}{c}.$ We can simplify the numerator to get $\\frac{2d - 4ab - 1}{2c}$",
+            1
+        ],
+        [
+            "Step 5:\n\\[\\frac{2d - 4ab - 1}{2c} = \\frac{2(a^2 + b^2 - 1) - 4ab - 1}{2(a^2 + b^2)} = \\frac{2(a^2 - 2ab + b^2) - 2b^2 - 1}{2(a^2 + b^2)}\\]",
+            1
+        ],
+        [
+            "Since $\\frac{2(a^2 - 2ab + b^2) - 2b^2 - 1}{2(a^2 + b^2)} = \\frac{2(a - b)^2 - 2b^2 - 1}{2(a^2 + b^2)} = \\frac{2((a - b)^2 - b^2/2 - 1/2)}{2(a^2 + b^2)},$ let $x = (a - b)^2 - b^2/2 - 1/2$ and $y = a^2 + b^2, $ so that the expression equals $\\frac{x}{y}.$",
+            1
+        ],
+        [
+            "Let $y = a^2 + b^2.$ Then the equation $\\frac{x}{y} = \\frac{2((a - b)^2 - b^2/2 - 1/2)}{2(a^2 + b^2)}$ simplifies to\n$\\frac{x}{y} = \\frac{(a - b)^2 - b^2/2 - 1/2}{a^2 + b^2}.$",
+            1
+        ],
+        [
+            "Since $(a - b)^2 = a^2 - 2ab + b^2,$ we can substitute to get $\\frac{x}{y} = \\frac{a^2 - 2ab + b^2 - b^2/2 - 1/2}{a^2 + b^2}.$",
+            1
+        ],
+        [
+            "Since $a^2 - 2ab + b^2 - b^2/2 - 1/2 = a^2 - 2ab + b^2 - b^2/2 - 1/2 = \\frac{2(a^2 - 2ab + b^2) - 2b^2 - 1}{2} = 2((a - b)^2 - b^2/2 - 1/2) = 2x,$ we can substitute to get $\\frac{x}{y} = \\frac{2x}{a^2 + b^2}.$",
+            1
+        ]
+    ],
+    "time": 133.49911046028137,
+    "total_tokens": 10423,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

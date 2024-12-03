@@ -1,0 +1,66 @@
+{
+    "problem": "Let $S$ be the set of all points $(x,y,z)$ such that $x^2 + y^2 + z^2 \\le 25$ and $z \\ge 0.$  Compute the side length of the largest cube contained in $S.$",
+    "level": "Level 5",
+    "type": "Precalculus",
+    "solution": "Note that $S$ is the upper-half of a sphere with radius 5.\n\nLet $s$ be the side length of the cube.  Then one face of the cube aligns with the $xy$-plane; the center of this face is at $O = (0,0,0).$\n\n[asy]\nunitsize(1.2 cm);\n\npair A, B, C, D, O, T, X, Y, Z;\npair x, y, z;\n\nx = (2,-0.2);\ny = (1.2,0.8);\nz = (0,2);\n\nX = (0,0);\nY = x;\nT = y;\nA = z;\nZ = x + y;\nB = x + z;\nD = y + z;\nC = x + y + z;\nO = (X + Y + T + Z)/4;\n\ndraw(X--Y--Z--C--D--A--cycle);\ndraw(B--A);\ndraw(B--C);\ndraw(B--Y);\ndraw(T--X,dashed);\ndraw(T--D,dashed);\ndraw(T--Z,dashed);\ndraw(O--Z,dashed);\ndraw(O--C,dashed);\n\nlabel(\"$A$\", Z, E);\nlabel(\"$B$\", C, NE);\ndot(\"$O$\", O, SW);\nlabel(\"$s$\", (C + Z)/2, dir(0));\n[/asy]\n\nLet $A$ be one vertex of this face, so\n\\[OA = \\frac{\\sqrt{2}}{2} s.\\]Let $B$ be the vertex above $A,$ so $AB = s$ and $OB = 5.$  Then by Pythagoras, $OA^2 + AB^2 = OB^2,$ so\n\\[\\frac{s^2}{2} + s^2 = 25.\\]Then $s^2 = \\frac{50}{3},$ so $s = \\boxed{\\frac{5 \\sqrt{6}}{3}}.$",
+    "is_solved": false,
+    "model_solution": "Step 1:  We are given the set $S$, which consists of all points $(x,y,z)$ that satisfy the conditions $x^2 + y^2 + z^2 \\le 25$ and $z \\ge 0.$\nStep 2:  The first condition, $x^2 + y^2 + z^2 \\le 25,$ represents the equation of a sphere with radius $5$ centered at the origin.\nStep 3:  The second condition, $z \\ge 0,$ restricts the points to the half-space above the $xy$-plane.\nStep 4:  The problem asks us to find the side length of the largest cube contained in $S,$ which means we need to find the maximum side length of a cube that can be inscribed in the region defined by $S.$\n\nThe problem does not specify any further steps to be taken at this point.\nStep 2:  The sphere of radius $5$ centered at the origin is tangent to the $xy$-plane at $(0,0,0),$ so the distance from the origin to the $xy$-plane is $5.$ This means the $z$-coordinate of the highest point on the sphere is $5.$\nStep 3:  The diameter of the sphere in the $z$ direction must be less than or equal to the side length of the cube. Therefore, we have the inequality $2 \\cdot 5 \\le s.$\nStep 3:  Since $10 \\le s,$ the cube must have $z$-coordinate of its vertex at $5.$ The largest cube inscribed in a sphere in the first octant has its $x$ and $y$ coordinates of its vertices on the circle $x^2 + y^2 = 25 - 5^2.$\nStep 3:  Since the largest circle that can be inscribed in the cube has radius $\\frac{s}{2},$ we have the equation $\\left(\\frac{s}{2}\\right)^2 + \\left(\\frac{s}{2}\\right)^2 = 5^2 - 5^2.$\nSince $\\left(\\frac{s}{2}\\right)^2 + \\left(\\frac{s}{2}\\right)^2 = 5^2 - 5^2$ is not an equation, we need to find an equation that relates the radius of the circle to the side length of the cube. The correct equation is $\\left(\\frac{s}{2}\\right)^2 = 5^2 - 5^2.$\nStep 4: $\\left(\\frac{s}{2}\\right)^2 = 5^2 - 5^2.$\n$\\left(\\frac{s}{2}\\right)^2 = 0.$\n$\\frac{s}{2} = 0.$\nStep 5: $\\frac{s}{2} = 0.$ \n$\\frac{s}{2} = 0.$ \n$s = 0.$",
+    "steps": [
+        "Step 1:  We are given the set $S$, which consists of all points $(x,y,z)$ that satisfy the conditions $x^2 + y^2 + z^2 \\le 25$ and $z \\ge 0.$\nStep 2:  The first condition, $x^2 + y^2 + z^2 \\le 25,$ represents the equation of a sphere with radius $5$ centered at the origin.\nStep 3:  The second condition, $z \\ge 0,$ restricts the points to the half-space above the $xy$-plane.\nStep 4:  The problem asks us to find the side length of the largest cube contained in $S,$ which means we need to find the maximum side length of a cube that can be inscribed in the region defined by $S.$\n\nThe problem does not specify any further steps to be taken at this point.",
+        "Step 2:  The sphere of radius $5$ centered at the origin is tangent to the $xy$-plane at $(0,0,0),$ so the distance from the origin to the $xy$-plane is $5.$ This means the $z$-coordinate of the highest point on the sphere is $5.$",
+        "Step 3:  The diameter of the sphere in the $z$ direction must be less than or equal to the side length of the cube. Therefore, we have the inequality $2 \\cdot 5 \\le s.$",
+        "Step 3:  Since $10 \\le s,$ the cube must have $z$-coordinate of its vertex at $5.$ The largest cube inscribed in a sphere in the first octant has its $x$ and $y$ coordinates of its vertices on the circle $x^2 + y^2 = 25 - 5^2.$",
+        "Step 3:  Since the largest circle that can be inscribed in the cube has radius $\\frac{s}{2},$ we have the equation $\\left(\\frac{s}{2}\\right)^2 + \\left(\\frac{s}{2}\\right)^2 = 5^2 - 5^2.$",
+        "Since $\\left(\\frac{s}{2}\\right)^2 + \\left(\\frac{s}{2}\\right)^2 = 5^2 - 5^2$ is not an equation, we need to find an equation that relates the radius of the circle to the side length of the cube. The correct equation is $\\left(\\frac{s}{2}\\right)^2 = 5^2 - 5^2.$",
+        "Step 4: $\\left(\\frac{s}{2}\\right)^2 = 5^2 - 5^2.$",
+        "$\\left(\\frac{s}{2}\\right)^2 = 0.$",
+        "$\\frac{s}{2} = 0.$",
+        "Step 5: $\\frac{s}{2} = 0.$ \n$\\frac{s}{2} = 0.$ \n$s = 0.$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We are given the set $S$, which consists of all points $(x,y,z)$ that satisfy the conditions $x^2 + y^2 + z^2 \\le 25$ and $z \\ge 0.$\nStep 2:  The first condition, $x^2 + y^2 + z^2 \\le 25,$ represents the equation of a sphere with radius $5$ centered at the origin.\nStep 3:  The second condition, $z \\ge 0,$ restricts the points to the half-space above the $xy$-plane.\nStep 4:  The problem asks us to find the side length of the largest cube contained in $S,$ which means we need to find the maximum side length of a cube that can be inscribed in the region defined by $S.$\n\nThe problem does not specify any further steps to be taken at this point.",
+            1
+        ],
+        [
+            "Step 2:  The sphere of radius $5$ centered at the origin is tangent to the $xy$-plane at $(0,0,0),$ so the distance from the origin to the $xy$-plane is $5.$ This means the $z$-coordinate of the highest point on the sphere is $5.$",
+            1
+        ],
+        [
+            "Step 3:  The diameter of the sphere in the $z$ direction must be less than or equal to the side length of the cube. Therefore, we have the inequality $2 \\cdot 5 \\le s.$",
+            1
+        ],
+        [
+            "Step 3:  Since $10 \\le s,$ the cube must have $z$-coordinate of its vertex at $5.$ The largest cube inscribed in a sphere in the first octant has its $x$ and $y$ coordinates of its vertices on the circle $x^2 + y^2 = 25 - 5^2.$",
+            1
+        ],
+        [
+            "Step 3:  Since the largest circle that can be inscribed in the cube has radius $\\frac{s}{2},$ we have the equation $\\left(\\frac{s}{2}\\right)^2 + \\left(\\frac{s}{2}\\right)^2 = 5^2 - 5^2.$",
+            1
+        ],
+        [
+            "Since $\\left(\\frac{s}{2}\\right)^2 + \\left(\\frac{s}{2}\\right)^2 = 5^2 - 5^2$ is not an equation, we need to find an equation that relates the radius of the circle to the side length of the cube. The correct equation is $\\left(\\frac{s}{2}\\right)^2 = 5^2 - 5^2.$",
+            1
+        ],
+        [
+            "Step 4: $\\left(\\frac{s}{2}\\right)^2 = 5^2 - 5^2.$",
+            1
+        ],
+        [
+            "$\\left(\\frac{s}{2}\\right)^2 = 0.$",
+            1
+        ],
+        [
+            "$\\frac{s}{2} = 0.$",
+            1
+        ],
+        [
+            "Step 5: $\\frac{s}{2} = 0.$ \n$\\frac{s}{2} = 0.$ \n$s = 0.$",
+            1
+        ]
+    ],
+    "time": 134.79738354682922,
+    "total_tokens": 11403,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

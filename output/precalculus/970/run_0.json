@@ -1,0 +1,46 @@
+{
+    "problem": "In triangle $LMN$, we have $\\angle M = 90^\\circ$, $MN = 2$, and $LM = \\sqrt{21}$. What is $\\sin L$?",
+    "level": "Level 1",
+    "type": "Precalculus",
+    "solution": "[asy]\npair L,M,N;\nN = (0,0);\nM = (2,0);\nL = (2,-sqrt(21));\ndraw(L--M--N--L);\ndraw(rightanglemark(L,M,N,10));\nlabel(\"$M$\",M,NE);\nlabel(\"$L$\",L,SE);\nlabel(\"$N$\",N,NW);\nlabel(\"$2$\",(N+M)/2,NW);\nlabel(\"$\\sqrt{21}$\",(M+L)/2,E);\n[/asy]\n\nBecause this is a right triangle, $\\sin L = \\frac{MN}{LN}.$\n\nUsing the Pythagorean Theorem, we find that $$LN = \\sqrt{MN^2 + LM^2} = \\sqrt{4 + 21} = 5.$$Then $\\sin L = \\boxed{\\frac{2}{5}}$.",
+    "is_solved": true,
+    "model_solution": "Step 1:  Apply the Pythagorean Theorem to find the length of side LN. \nThe Pythagorean Theorem states that $a^2 + b^2 = c^2$, where a and b are the legs of a right triangle and c is the hypotenuse.\nIn this case, $LN^2 = LM^2 - MN^2$\nWe know that $LM = \\sqrt{21}$ and $MN = 2$.\nStep 2: $LN^2 = (\\sqrt{21})^2 - 2^2$\n$LN^2 = 21 - 4$\n$LN^2 = 17$\n$LN = \\sqrt{17}$\nStep 3: $\\sin L = \\frac{MN}{LM}$\n$\\sin L = \\frac{2}{\\sqrt{21}}$\n$\\sin L = \\frac{2}{\\sqrt{21}} \\times \\frac{\\sqrt{21}}{\\sqrt{21}}$\n$\\sin L = \\frac{2\\sqrt{21}}{21}$\nStep 4: $\\sin L = \\frac{2\\sqrt{21}}{21}$\nStep 5: Rationalize the denominator if necessary. In this case, the answer is already rationalized. Final Answer",
+    "steps": [
+        "Step 1:  Apply the Pythagorean Theorem to find the length of side LN. \nThe Pythagorean Theorem states that $a^2 + b^2 = c^2$, where a and b are the legs of a right triangle and c is the hypotenuse.\nIn this case, $LN^2 = LM^2 - MN^2$\nWe know that $LM = \\sqrt{21}$ and $MN = 2$.",
+        "Step 2: $LN^2 = (\\sqrt{21})^2 - 2^2$\n$LN^2 = 21 - 4$\n$LN^2 = 17$\n$LN = \\sqrt{17}$",
+        "Step 3: $\\sin L = \\frac{MN}{LM}$\n$\\sin L = \\frac{2}{\\sqrt{21}}$",
+        "$\\sin L = \\frac{2}{\\sqrt{21}} \\times \\frac{\\sqrt{21}}{\\sqrt{21}}$\n$\\sin L = \\frac{2\\sqrt{21}}{21}$",
+        "Step 4: $\\sin L = \\frac{2\\sqrt{21}}{21}$",
+        "Step 5: Rationalize the denominator if necessary. In this case, the answer is already rationalized. Final Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Apply the Pythagorean Theorem to find the length of side LN. \nThe Pythagorean Theorem states that $a^2 + b^2 = c^2$, where a and b are the legs of a right triangle and c is the hypotenuse.\nIn this case, $LN^2 = LM^2 - MN^2$\nWe know that $LM = \\sqrt{21}$ and $MN = 2$.",
+            1
+        ],
+        [
+            "Step 2: $LN^2 = (\\sqrt{21})^2 - 2^2$\n$LN^2 = 21 - 4$\n$LN^2 = 17$\n$LN = \\sqrt{17}$",
+            1
+        ],
+        [
+            "Step 3: $\\sin L = \\frac{MN}{LM}$\n$\\sin L = \\frac{2}{\\sqrt{21}}$",
+            1
+        ],
+        [
+            "$\\sin L = \\frac{2}{\\sqrt{21}} \\times \\frac{\\sqrt{21}}{\\sqrt{21}}$\n$\\sin L = \\frac{2\\sqrt{21}}{21}$",
+            1
+        ],
+        [
+            "Step 4: $\\sin L = \\frac{2\\sqrt{21}}{21}$",
+            1
+        ],
+        [
+            "Step 5: Rationalize the denominator if necessary. In this case, the answer is already rationalized. Final Answer",
+            1
+        ]
+    ],
+    "time": 83.42329406738281,
+    "total_tokens": 3556,
+    "final_answer_tokens": 367,
+    "model": "meta-llama/Llama-Vision-Free"
+}

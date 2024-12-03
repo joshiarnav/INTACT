@@ -1,0 +1,41 @@
+{
+    "problem": "Distinct points $A$ and $B$ are on a semicircle with diameter $MN$ and center $C$.  The point $P$ is on $CN$ and $\\angle CAP = \\angle CBP = 10^\\circ$.  If arc $MA$ is equal to $40^\\circ$, then find arc $BN$ (in degrees).\n\n[asy]\nimport geometry;\nimport graph;\n\nunitsize(2 cm);\n\npair A, B, C, M, N, P;\n\nM = (-1,0);\nN = (1,0);\nC = (0,0);\nA = dir(140);\nB = dir(20);\nP = extension(A, A + rotate(10)*(C - A), B, B + rotate(10)*(C - B));\n\ndraw(M--N);\ndraw(arc(C,1,0,180));\ndraw(A--C--B);\ndraw(A--P--B);\n\nlabel(\"$A$\", A, NW);\nlabel(\"$B$\", B, NE);\nlabel(\"$C$\", C, S);\nlabel(\"$M$\", M, SW);\nlabel(\"$N$\", N, SE);\nlabel(\"$P$\", P, S);\n[/asy]",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "Since $\\angle CAP = \\angle CBP = 10^\\circ$, quadrilateral $ABPC$ is cyclic.\n\n[asy]\nimport geometry;\nimport graph;\n\nunitsize(2 cm);\n\npair A, B, C, M, N, P;\n\nM = (-1,0);\nN = (1,0);\nC = (0,0);\nA = dir(140);\nB = dir(20);\nP = extension(A, A + rotate(10)*(C - A), B, B + rotate(10)*(C - B));\n\ndraw(M--N);\ndraw(arc(C,1,0,180));\ndraw(A--C--B);\ndraw(A--P--B);\ndraw(A--B);\ndraw(circumcircle(A,B,C),dashed);\n\nlabel(\"$A$\", A, W);\nlabel(\"$B$\", B, E);\nlabel(\"$C$\", C, S);\nlabel(\"$M$\", M, SW);\nlabel(\"$N$\", N, SE);\nlabel(\"$P$\", P, S);\n[/asy]\n\nSince $\\angle ACM = 40^\\circ$, $\\angle ACP = 140^\\circ$, so $\\angle ABP = 40^\\circ$.  Then $\\angle ABC = \\angle ABP - \\angle CBP = 40^\n\\circ - 10^\\circ = 30^\\circ$.\n\nSince $CA = CB$, triangle $ABC$ is isosceles, and $\\angle BAC = \\angle ABC = 30^\\circ$.  Then $\\angle BAP = \\angle BAC - \\angle CAP = 30^\\circ - 10^\\circ = 20^\\circ$.  Hence, $\\angle BCP = \\angle BAP = \\boxed{20^\\circ}$.",
+    "is_solved": false,
+    "model_solution": "Since the measure of arc $MA$ is given as 40$^\\circ$ and arc $MA$ is part of arc $MB$ with measure $180^\\circ$, we can find the measure of arc $MB$ as follows: \\begin{align*}\n\\text{arc } MB&=\\text{arc } MA+\\text{arc } AB\\\\\n&=40^\\circ+180^\\circ-2\\cdot 10^\\circ\\\\\n&=40^\\circ+180^\\circ-20^\\circ\\\\\n&=200^\\circ\n\\end{align*}\nSince the measure of arc $MB$ is given as $200^\\circ$, we can find the measure of arc $MB$ as follows:\n\\begin{align*}\n\\text{arc } MB&=200^\\circ\n\\end{align*}\nSince angles $CAP$ and $CBP$ are given as $10^\\circ$, we have that $\\angle APC = \\angle BPC = 10^\\circ$.\nSince $\\angle APC = \\angle BPC = 10^\\circ$, it follows that $\\angle MPC=180^\\circ-\\angle APC-\\angle BPC=180^\\circ-10^\\circ-10^\\circ=160^\\circ$.\nSince $\\angle MPC = 160^\\circ$, it follows that the measure of arc $MC$ is equal to $\\angle MPC$, so arc $MC = \\angle MPC = 160^\\circ$.",
+    "steps": [
+        "Since the measure of arc $MA$ is given as 40$^\\circ$ and arc $MA$ is part of arc $MB$ with measure $180^\\circ$, we can find the measure of arc $MB$ as follows: \\begin{align*}\n\\text{arc } MB&=\\text{arc } MA+\\text{arc } AB\\\\\n&=40^\\circ+180^\\circ-2\\cdot 10^\\circ\\\\\n&=40^\\circ+180^\\circ-20^\\circ\\\\\n&=200^\\circ\n\\end{align*}",
+        "Since the measure of arc $MB$ is given as $200^\\circ$, we can find the measure of arc $MB$ as follows:\n\\begin{align*}\n\\text{arc } MB&=200^\\circ\n\\end{align*}",
+        "Since angles $CAP$ and $CBP$ are given as $10^\\circ$, we have that $\\angle APC = \\angle BPC = 10^\\circ$.",
+        "Since $\\angle APC = \\angle BPC = 10^\\circ$, it follows that $\\angle MPC=180^\\circ-\\angle APC-\\angle BPC=180^\\circ-10^\\circ-10^\\circ=160^\\circ$.",
+        "Since $\\angle MPC = 160^\\circ$, it follows that the measure of arc $MC$ is equal to $\\angle MPC$, so arc $MC = \\angle MPC = 160^\\circ$."
+    ],
+    "full_steps": [
+        [
+            "Since the measure of arc $MA$ is given as 40$^\\circ$ and arc $MA$ is part of arc $MB$ with measure $180^\\circ$, we can find the measure of arc $MB$ as follows: \\begin{align*}\n\\text{arc } MB&=\\text{arc } MA+\\text{arc } AB\\\\\n&=40^\\circ+180^\\circ-2\\cdot 10^\\circ\\\\\n&=40^\\circ+180^\\circ-20^\\circ\\\\\n&=200^\\circ\n\\end{align*}",
+            1
+        ],
+        [
+            "Since the measure of arc $MB$ is given as $200^\\circ$, we can find the measure of arc $MB$ as follows:\n\\begin{align*}\n\\text{arc } MB&=200^\\circ\n\\end{align*}",
+            1
+        ],
+        [
+            "Since angles $CAP$ and $CBP$ are given as $10^\\circ$, we have that $\\angle APC = \\angle BPC = 10^\\circ$.",
+            1
+        ],
+        [
+            "Since $\\angle APC = \\angle BPC = 10^\\circ$, it follows that $\\angle MPC=180^\\circ-\\angle APC-\\angle BPC=180^\\circ-10^\\circ-10^\\circ=160^\\circ$.",
+            1
+        ],
+        [
+            "Since $\\angle MPC = 160^\\circ$, it follows that the measure of arc $MC$ is equal to $\\angle MPC$, so arc $MC = \\angle MPC = 160^\\circ$.",
+            1
+        ]
+    ],
+    "time": 69.94457340240479,
+    "total_tokens": 5217,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

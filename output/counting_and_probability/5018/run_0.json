@@ -1,0 +1,46 @@
+{
+    "problem": "In a shooting match, eight clay targets are arranged in two hanging columns of three targets each and one column of two targets. A marksman is to break all the targets according to the following rules:\n1) The marksman first chooses a column from which a target is to be broken.\n2) The marksman must then break the lowest remaining target in the chosen column.\nIf the rules are followed, in how many different orders can the eight targets be broken?\n",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "Suppose that the columns are labeled $A$, $B$, and $C$. Consider the string $AAABBBCC$. Since the arrangements of the strings is bijective to the order of shooting, the answer is the number of ways to arrange the letters which is $\\frac{8!}{3! \\cdot 3! \\cdot 2!} = \\boxed{560}$.",
+    "is_solved": true,
+    "model_solution": "Permute 3 A's, 3 B's, and 2 C's\nThe next step is to use the formula for permutations with repeated elements: \n\n\\frac{n!}{n_{1}!n_{2}!n_{3}!}\n\\frac{8!}{3!3!2!}\n\\frac{8!}{3!3!2!} = \\frac{40320}{(6)(6)(2)}\n\\frac{40320}{(6)(6)(2)} = \\frac{40320}{72} = 560\n\\frac{8!}{3!3!2!} = \\frac{40320}{(6)(6)(2)}",
+    "steps": [
+        "Permute 3 A's, 3 B's, and 2 C's",
+        "The next step is to use the formula for permutations with repeated elements: \n\n\\frac{n!}{n_{1}!n_{2}!n_{3}!}",
+        "\\frac{8!}{3!3!2!}",
+        "\\frac{8!}{3!3!2!} = \\frac{40320}{(6)(6)(2)}",
+        "\\frac{40320}{(6)(6)(2)} = \\frac{40320}{72} = 560",
+        "\\frac{8!}{3!3!2!} = \\frac{40320}{(6)(6)(2)}"
+    ],
+    "full_steps": [
+        [
+            "Permute 3 A's, 3 B's, and 2 C's",
+            1
+        ],
+        [
+            "The next step is to use the formula for permutations with repeated elements: \n\n\\frac{n!}{n_{1}!n_{2}!n_{3}!}",
+            1
+        ],
+        [
+            "\\frac{8!}{3!3!2!}",
+            1
+        ],
+        [
+            "\\frac{8!}{3!3!2!} = \\frac{40320}{(6)(6)(2)}",
+            1
+        ],
+        [
+            "\\frac{40320}{(6)(6)(2)} = \\frac{40320}{72} = 560",
+            1
+        ],
+        [
+            "\\frac{8!}{3!3!2!} = \\frac{40320}{(6)(6)(2)}",
+            1
+        ]
+    ],
+    "time": 78.95696187019348,
+    "total_tokens": 2876,
+    "final_answer_tokens": 298,
+    "model": "meta-llama/Llama-Vision-Free"
+}

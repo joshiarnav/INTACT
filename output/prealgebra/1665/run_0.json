@@ -1,0 +1,51 @@
+{
+    "problem": "Betty has between $40$ and $50$ pennies that she wants to arrange in a rectangular array. She notices she can arrange the pennies in three different ways without any gaps or spaces. However, if Betty adds two more pennies to her collection, she can only arrange the pennies in one way without any gaps or spaces: a straight line. How many pennies did Betty originally have?\n\nNote: An $a \\times b$ rectangle is considered the same as a $b \\times a$ rectangle.",
+    "level": "Level 3",
+    "type": "Prealgebra",
+    "solution": "Let the number of pennies that Betty has be $n.$ If after adding two more pennies, Betty can only arrange the pennies in a straight line, then $n+2$ must be prime. Since all primes greater than $2$ are odd, $n$ must be odd as well. Because she can arrange $n$ pennies in three different ways, $n$ must have four factors other than $1$ and itself. Hence we examine the odd numbers between $40$ and $50:$\n\n$\\bullet$ $41$ factors as $1 \\cdot 41$ only.\n\n$\\bullet$ $43$ factors as $1 \\cdot 43$ only.\n\n$\\bullet$ $45$ factors as $1 \\cdot 45$ or $3 \\cdot 15$ or $5 \\cdot 9$.\n\n$\\bullet$ $47$ factors as $1 \\cdot 47$ only.\n\n$\\bullet$ $49$ factors as $1 \\cdot 49$ or $7 \\cdot 7$.\n\nThe only number with four factors other than $1$ or itself is $45.$ If we add $2$ to $45,$ we get $47,$ which is indeed prime. Hence, Betty has $\\boxed{45}$ pennies.",
+    "is_solved": true,
+    "model_solution": "Let $x$, $y$, and $z$ be the three different ways to arrange the pennies in a rectangular array, with $x<y<z$.\nSince $xy$ divides $40$ and $50$, we have $xy \\in \\{1, 2, 4, 5, 10, 20, 25, 50\\}.$\nSince $x<y<z$, we have $xy$ and $xz$ are less than $x^2$, but $xy$ is not a divisor of $x^2$. So $xy$ cannot be 1, 2, 4, or 25.\n$xy$ cannot be 5 or 10, since $x$ and $y$ cannot be negative.\n$xy \\in \\{20, 50\\}$\nSince $x<y<z$, we have $x=2$ and $y=10$ or $x=5$ and $y=4$.\nSince $x<y<z$, we have $z>xy$ and $z=xy+1$ since $x, y > 0$ and $x, y$ are integers. \n\nFinal Answer: The final answer is 42.",
+    "steps": [
+        "Let $x$, $y$, and $z$ be the three different ways to arrange the pennies in a rectangular array, with $x<y<z$.",
+        "Since $xy$ divides $40$ and $50$, we have $xy \\in \\{1, 2, 4, 5, 10, 20, 25, 50\\}.$",
+        "Since $x<y<z$, we have $xy$ and $xz$ are less than $x^2$, but $xy$ is not a divisor of $x^2$. So $xy$ cannot be 1, 2, 4, or 25.",
+        "$xy$ cannot be 5 or 10, since $x$ and $y$ cannot be negative.",
+        "$xy \\in \\{20, 50\\}$",
+        "Since $x<y<z$, we have $x=2$ and $y=10$ or $x=5$ and $y=4$.",
+        "Since $x<y<z$, we have $z>xy$ and $z=xy+1$ since $x, y > 0$ and $x, y$ are integers. \n\nFinal Answer: The final answer is 42."
+    ],
+    "full_steps": [
+        [
+            "Let $x$, $y$, and $z$ be the three different ways to arrange the pennies in a rectangular array, with $x<y<z$.",
+            1
+        ],
+        [
+            "Since $xy$ divides $40$ and $50$, we have $xy \\in \\{1, 2, 4, 5, 10, 20, 25, 50\\}.$",
+            1
+        ],
+        [
+            "Since $x<y<z$, we have $xy$ and $xz$ are less than $x^2$, but $xy$ is not a divisor of $x^2$. So $xy$ cannot be 1, 2, 4, or 25.",
+            1
+        ],
+        [
+            "$xy$ cannot be 5 or 10, since $x$ and $y$ cannot be negative.",
+            1
+        ],
+        [
+            "$xy \\in \\{20, 50\\}$",
+            1
+        ],
+        [
+            "Since $x<y<z$, we have $x=2$ and $y=10$ or $x=5$ and $y=4$.",
+            1
+        ],
+        [
+            "Since $x<y<z$, we have $z>xy$ and $z=xy+1$ since $x, y > 0$ and $x, y$ are integers. \n\nFinal Answer: The final answer is 42.",
+            1
+        ]
+    ],
+    "time": 97.69078540802002,
+    "total_tokens": 4462,
+    "final_answer_tokens": 421,
+    "model": "meta-llama/Llama-Vision-Free"
+}

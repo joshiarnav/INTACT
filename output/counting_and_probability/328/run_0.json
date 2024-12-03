@@ -1,0 +1,26 @@
+{
+    "problem": "There are nine unit triangles in the three rows of this triangle. If you add three more rows to the bottom of this triangle so that each row has 2 more unit triangles than the previous row, how many unit triangles will there be?\n\n[asy]\ndraw((0,0)--(15,26)--(30,0)--cycle);\ndraw((5,8.7)--(10,0)--(20,17.3));\ndraw((20,0)--(25,8.7)--(5,8.7));\ndraw((20,0)--(10,17.3)--(20,17.3));\n[/asy]",
+    "level": "Level 2",
+    "type": "Counting & Probability",
+    "solution": "There are 7 triangles in the next row after the third, 9 in the next row after that, and 11 in the row after that. After adding three rows, there are $9+7+9+11=\\boxed{36}$ triangles total.",
+    "is_solved": false,
+    "model_solution": "Let $n$ be the number of unit triangles in the new figure.\n\nWe have $\\begin{cases} 3 + (4) + (5) + (6) + (7) = \\frac{5(7)}{2} = 17.5, \\\\ 3 + (4) + (5) + (6) + (7) + (8) + (9) + (10) + (11) = \\frac{9(11)}{2} = 49.5, \\\\ 17.5 + \\frac{9(11)}{2} = 17.5 + 49.5 = 67. \\end{cases}$\nThe next step is:\n$\\begin{array}{lcl} 67 + \\frac{11(13)}{2} &= &67 + 77.5 = 144.5, \\\\ 67 + \\frac{11(13)}{2} + \\frac{13(15)}{2} &= &144.5 + 97.5 = 242, \\\\ 67 + \\frac{11(13)}{2} + \\frac{13(15)}{2} + \\frac{15(17)}{2} &= &242 + 127.5 = \\boxed{369.5}. \\end{array}$",
+    "steps": [
+        "Let $n$ be the number of unit triangles in the new figure.\n\nWe have $\\begin{cases} 3 + (4) + (5) + (6) + (7) = \\frac{5(7)}{2} = 17.5, \\\\ 3 + (4) + (5) + (6) + (7) + (8) + (9) + (10) + (11) = \\frac{9(11)}{2} = 49.5, \\\\ 17.5 + \\frac{9(11)}{2} = 17.5 + 49.5 = 67. \\end{cases}$",
+        "The next step is:\n$\\begin{array}{lcl} 67 + \\frac{11(13)}{2} &= &67 + 77.5 = 144.5, \\\\ 67 + \\frac{11(13)}{2} + \\frac{13(15)}{2} &= &144.5 + 97.5 = 242, \\\\ 67 + \\frac{11(13)}{2} + \\frac{13(15)}{2} + \\frac{15(17)}{2} &= &242 + 127.5 = \\boxed{369.5}. \\end{array}$"
+    ],
+    "full_steps": [
+        [
+            "Let $n$ be the number of unit triangles in the new figure.\n\nWe have $\\begin{cases} 3 + (4) + (5) + (6) + (7) = \\frac{5(7)}{2} = 17.5, \\\\ 3 + (4) + (5) + (6) + (7) + (8) + (9) + (10) + (11) = \\frac{9(11)}{2} = 49.5, \\\\ 17.5 + \\frac{9(11)}{2} = 17.5 + 49.5 = 67. \\end{cases}$",
+            1
+        ],
+        [
+            "The next step is:\n$\\begin{array}{lcl} 67 + \\frac{11(13)}{2} &= &67 + 77.5 = 144.5, \\\\ 67 + \\frac{11(13)}{2} + \\frac{13(15)}{2} &= &144.5 + 97.5 = 242, \\\\ 67 + \\frac{11(13)}{2} + \\frac{13(15)}{2} + \\frac{15(17)}{2} &= &242 + 127.5 = \\boxed{369.5}. \\end{array}$",
+            1
+        ]
+    ],
+    "time": 27.895911693572998,
+    "total_tokens": 1623,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

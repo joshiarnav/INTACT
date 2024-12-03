@@ -1,0 +1,26 @@
+{
+    "problem": "Each of the integers $1,$ $2,$ $3,$ $\\dots,$ $16$ is written on a separate slip of paper and these slips are placed in a pile. Jillian will randomly draw slips from the pile without replacement and will continue drawing until two of the numbers she has drawn from the pile have a product that is a perfect square. What is the maximum number of slips that Jillian can draw without obtaining a product that is a perfect square?",
+    "level": "Level 5",
+    "type": "Number Theory",
+    "solution": "Recall that an integer is called square-free if the only exponent which appears in the prime factorization of the integer is $1.$ For example, $2\\cdot3\\cdot11$ is square-free, but $7^3\\cdot13$ and $2^2\\cdot3$ are not. We define the \"square-free part\" of a positive integer which is not a perfect square to be largest square-free factor of the integer. For example, the square-free part of $18$ is $6,$ and the square-free part of $54$ is $6.$ Perfect squares have a square-free part of $1.$\n\nNotice that two positive integers multiply to give a perfect square if and only if either their square free parts are equal or the integers are both perfect squares. Therefore, if we look at the square free parts of the integers between $1$ and $16,$ the maximum number of slips that Jillian can draw is the number of distinct square free parts that appear. The table below (broken into two lines) shows the square-free parts of the integers between $1$ and $16.$ \\begin{tabular}{cccccccc}\n1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\\\ \\hline\n1 & 2 & 3 & 1 & 5 & 6 & 7 & 2\n\\end{tabular} \\begin{tabular}{cccccccc}\n9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 \\\\ \\hline\n1 & 10 & 11 & 3 & 13 & 14 & 15 & 1\n\\end{tabular} Jillian may draw the slips marked $5,$ $6,$ $7,$ $10,$ $11,$ $13,$ $14,$ and $15,$ as well as one from each of the sets $\\{1,4,9,16\\},$ $\\{2,8\\},$ and $\\{3,12\\}$ for a total of $\\boxed{11}$ slips.",
+    "is_solved": false,
+    "model_solution": "Step 1: Jillian will draw one of each of the prime numbers 2, 3, 5, 7, 11, and 13 from the pile, which will require 6 draws.\nStep 2: After drawing the prime numbers 2, 3, 5, 7, 11, and 13, we have $6$ numbers remaining in the pile, namely $1,$ $4,$ $6,$ $8,$ $9,$ and $10.$ Jillian can draw $5$ of these remaining slips without drawing a pair whose product is a perfect square.",
+    "steps": [
+        "Step 1: Jillian will draw one of each of the prime numbers 2, 3, 5, 7, 11, and 13 from the pile, which will require 6 draws.",
+        "Step 2: After drawing the prime numbers 2, 3, 5, 7, 11, and 13, we have $6$ numbers remaining in the pile, namely $1,$ $4,$ $6,$ $8,$ $9,$ and $10.$ Jillian can draw $5$ of these remaining slips without drawing a pair whose product is a perfect square."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Jillian will draw one of each of the prime numbers 2, 3, 5, 7, 11, and 13 from the pile, which will require 6 draws.",
+            1
+        ],
+        [
+            "Step 2: After drawing the prime numbers 2, 3, 5, 7, 11, and 13, we have $6$ numbers remaining in the pile, namely $1,$ $4,$ $6,$ $8,$ $9,$ and $10.$ Jillian can draw $5$ of these remaining slips without drawing a pair whose product is a perfect square.",
+            1
+        ]
+    ],
+    "time": 26.31677794456482,
+    "total_tokens": 953,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

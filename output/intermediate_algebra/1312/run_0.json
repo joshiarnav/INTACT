@@ -1,0 +1,66 @@
+{
+    "problem": "Let \\[A = \\lceil \\log_2 2 \\rceil + \\lceil \\log_2 3 \\rceil + \\dots + \\lceil \\log_2 1000 \\rceil\\]and \\[B =  \\lfloor \\log_2 2 \\rfloor + \\lfloor \\log_2 3 \\rfloor + \\dots + \\lfloor \\log_2 1000 \\rfloor.\\]Compute $A-B.$",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "Grouping the corresponding terms in $A-B,$ we can write \\[A-B = \\left(\\lceil \\log_2 2 \\rceil - \\lfloor \\log_2 2 \\rfloor\\right) + \\left(\\lceil \\log_2 3 \\rceil - \\lfloor \\log_2 3 \\rfloor\\right) + \\dots + \\left(\\lceil \\log_2 1000 \\rceil - \\lfloor \\log_2 1000 \\rfloor\\right). \\]For a real number $x,$ we have $\\lceil x \\rceil - \\lfloor x \\rfloor = 1$ if $x$ is not an integer, and $\\lceil x\\rceil - \\lfloor x\\rfloor = 0$ otherwise. Therefore, $A-B$ is simply equal to the number of non-integer values in the list $\\log_2 2, \\log_2 3, \\dots, \\log_2 1000.$\n\nThe only integer values in the list are $\\log_2 2 = 1,$ $\\log_2 4 =2,$ and so on, up to $\\log_2 512 = 9.$ Since there are $999$ numbers in the list and $9$ of them are integers, the number of non-integers is $999-9 = \\boxed{990}.$",
+    "is_solved": false,
+    "model_solution": "Step 1: We calculate the values of $\\lceil \\log_2 n \\rceil$ and $\\lfloor \\log_2 n \\rfloor$ for $n = 2, 3, \\dots, 1000.$\nStep 2: \\[A-B = \\left( \\lceil \\log_2 2 \\rceil + \\lceil \\log_2 3 \\rceil + \\dots + \\lceil \\log_2 1000 \\rceil \\right) - \\left( \\lfloor \\log_2 2 \\rfloor + \\lfloor \\log_2 3 \\rfloor + \\dots + \\lfloor \\log_2 1000 \\rfloor \\right)\\]\n\\[= \\left( \\lceil \\log_2 2 \\rceil - \\lfloor \\log_2 2 \\rfloor \\right) + \\left( \\lceil \\log_2 3 \\rceil - \\lfloor \\log_2 3 \\rfloor \\right) + \\dots + \\left( \\lceil \\log_2 1000 \\rceil - \\lfloor \\log_2 1000 \\rfloor \\right)\\]\nStep 3:\n\\[= \\left( 1-0 \\right) + \\left( 1-0 \\right) + \\left( 1-0 \\right) + \\dots + \\left( 9-0 \\right) + \\left( 9-1 \\right) + \\left( 9-2 \\right) + \\dots + \\left( 10-3 \\right) + \\left( 10-4 \\right) + \\left( 10-4 \\right) + \\dots + \\left( 10-9 \\right) + \\left( 10-9 \\right) + \\dots + \\left( 10-9 \\right) + \\left( 10-9 \\right)\\]\nStep 4:\n\\[= 1 + 1 + \\dots + 1 + 8 + 7 + \\dots + 1 + 10 + 10 + \\dots + 10 + 10\\]\n\\[= 999 + 9 \\cdot 10 + 9 \\cdot 9 + 9 \\cdot 8 + \\dots + 9 \\cdot 1 + 0\\]\n\\[= 999 + 9 \\left( 1+2+\\dots+9+10 \\right) - 9\\]\n\\[= 999 + 9 \\left( \\frac{10 \\cdot 11}{2} \\right) - 9\\]\n\\[= 999 + 495 - 9\\]\n\\[= 1485 - 9\\]\n\\[= 1476\\]\n$= 999 + 495 - 9 = 1485 - 9 = 1476$\n= 999 + 495 - 9\n= 1485 - 9\n= 1476\n= 999 + 9 \\left( \\frac{10 \\cdot 11}{2} \\right) - 9\n$= 999 + 9 \\left( 1+2+\\dots+9+10 \\right) - 9$\n$= 999 + 495 - 9$\n$= 999 + 9 \\left( \\frac{10 \\cdot 11}{2} \\right) - 9$",
+    "steps": [
+        "Step 1: We calculate the values of $\\lceil \\log_2 n \\rceil$ and $\\lfloor \\log_2 n \\rfloor$ for $n = 2, 3, \\dots, 1000.$",
+        "Step 2: \\[A-B = \\left( \\lceil \\log_2 2 \\rceil + \\lceil \\log_2 3 \\rceil + \\dots + \\lceil \\log_2 1000 \\rceil \\right) - \\left( \\lfloor \\log_2 2 \\rfloor + \\lfloor \\log_2 3 \\rfloor + \\dots + \\lfloor \\log_2 1000 \\rfloor \\right)\\]\n\\[= \\left( \\lceil \\log_2 2 \\rceil - \\lfloor \\log_2 2 \\rfloor \\right) + \\left( \\lceil \\log_2 3 \\rceil - \\lfloor \\log_2 3 \\rfloor \\right) + \\dots + \\left( \\lceil \\log_2 1000 \\rceil - \\lfloor \\log_2 1000 \\rfloor \\right)\\]",
+        "Step 3:\n\\[= \\left( 1-0 \\right) + \\left( 1-0 \\right) + \\left( 1-0 \\right) + \\dots + \\left( 9-0 \\right) + \\left( 9-1 \\right) + \\left( 9-2 \\right) + \\dots + \\left( 10-3 \\right) + \\left( 10-4 \\right) + \\left( 10-4 \\right) + \\dots + \\left( 10-9 \\right) + \\left( 10-9 \\right) + \\dots + \\left( 10-9 \\right) + \\left( 10-9 \\right)\\]",
+        "Step 4:\n\\[= 1 + 1 + \\dots + 1 + 8 + 7 + \\dots + 1 + 10 + 10 + \\dots + 10 + 10\\]\n\\[= 999 + 9 \\cdot 10 + 9 \\cdot 9 + 9 \\cdot 8 + \\dots + 9 \\cdot 1 + 0\\]\n\\[= 999 + 9 \\left( 1+2+\\dots+9+10 \\right) - 9\\]\n\\[= 999 + 9 \\left( \\frac{10 \\cdot 11}{2} \\right) - 9\\]\n\\[= 999 + 495 - 9\\]\n\\[= 1485 - 9\\]\n\\[= 1476\\]",
+        "$= 999 + 495 - 9 = 1485 - 9 = 1476$",
+        "= 999 + 495 - 9\n= 1485 - 9\n= 1476",
+        "= 999 + 9 \\left( \\frac{10 \\cdot 11}{2} \\right) - 9",
+        "$= 999 + 9 \\left( 1+2+\\dots+9+10 \\right) - 9$",
+        "$= 999 + 495 - 9$",
+        "$= 999 + 9 \\left( \\frac{10 \\cdot 11}{2} \\right) - 9$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: We calculate the values of $\\lceil \\log_2 n \\rceil$ and $\\lfloor \\log_2 n \\rfloor$ for $n = 2, 3, \\dots, 1000.$",
+            1
+        ],
+        [
+            "Step 2: \\[A-B = \\left( \\lceil \\log_2 2 \\rceil + \\lceil \\log_2 3 \\rceil + \\dots + \\lceil \\log_2 1000 \\rceil \\right) - \\left( \\lfloor \\log_2 2 \\rfloor + \\lfloor \\log_2 3 \\rfloor + \\dots + \\lfloor \\log_2 1000 \\rfloor \\right)\\]\n\\[= \\left( \\lceil \\log_2 2 \\rceil - \\lfloor \\log_2 2 \\rfloor \\right) + \\left( \\lceil \\log_2 3 \\rceil - \\lfloor \\log_2 3 \\rfloor \\right) + \\dots + \\left( \\lceil \\log_2 1000 \\rceil - \\lfloor \\log_2 1000 \\rfloor \\right)\\]",
+            1
+        ],
+        [
+            "Step 3:\n\\[= \\left( 1-0 \\right) + \\left( 1-0 \\right) + \\left( 1-0 \\right) + \\dots + \\left( 9-0 \\right) + \\left( 9-1 \\right) + \\left( 9-2 \\right) + \\dots + \\left( 10-3 \\right) + \\left( 10-4 \\right) + \\left( 10-4 \\right) + \\dots + \\left( 10-9 \\right) + \\left( 10-9 \\right) + \\dots + \\left( 10-9 \\right) + \\left( 10-9 \\right)\\]",
+            1
+        ],
+        [
+            "Step 4:\n\\[= 1 + 1 + \\dots + 1 + 8 + 7 + \\dots + 1 + 10 + 10 + \\dots + 10 + 10\\]\n\\[= 999 + 9 \\cdot 10 + 9 \\cdot 9 + 9 \\cdot 8 + \\dots + 9 \\cdot 1 + 0\\]\n\\[= 999 + 9 \\left( 1+2+\\dots+9+10 \\right) - 9\\]\n\\[= 999 + 9 \\left( \\frac{10 \\cdot 11}{2} \\right) - 9\\]\n\\[= 999 + 495 - 9\\]\n\\[= 1485 - 9\\]\n\\[= 1476\\]",
+            1
+        ],
+        [
+            "$= 999 + 495 - 9 = 1485 - 9 = 1476$",
+            1
+        ],
+        [
+            "= 999 + 495 - 9\n= 1485 - 9\n= 1476",
+            1
+        ],
+        [
+            "= 999 + 9 \\left( \\frac{10 \\cdot 11}{2} \\right) - 9",
+            1
+        ],
+        [
+            "$= 999 + 9 \\left( 1+2+\\dots+9+10 \\right) - 9$",
+            1
+        ],
+        [
+            "$= 999 + 495 - 9$",
+            1
+        ],
+        [
+            "$= 999 + 9 \\left( \\frac{10 \\cdot 11}{2} \\right) - 9$",
+            1
+        ]
+    ],
+    "time": 135.81551456451416,
+    "total_tokens": 14155,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

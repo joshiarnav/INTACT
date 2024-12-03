@@ -1,0 +1,41 @@
+{
+    "problem": "Let $\\mathbf{u}$ and $\\mathbf{v}$ be unit vectors, and let $\\mathbf{w}$ be a vector such that\n\\[\\mathbf{w} + \\mathbf{w} \\times \\mathbf{u} = \\mathbf{v}.\\]Find the largest possible value of $(\\mathbf{u} \\times \\mathbf{v}) \\cdot \\mathbf{w}.$",
+    "level": "Level 5",
+    "type": "Precalculus",
+    "solution": "From $\\mathbf{w} + \\mathbf{w} \\times \\mathbf{u} = \\mathbf{v},$\n\\[\\mathbf{w} \\times \\mathbf{u} = \\mathbf{v} - \\mathbf{w}.\\]Then\n\\begin{align*}\n\\|\\mathbf{w} \\times \\mathbf{u}\\|^2 &= \\|\\mathbf{v} - \\mathbf{w}\\|^2 \\\\\n&= \\|\\mathbf{v}\\|^2 - 2 \\mathbf{v} \\cdot \\mathbf{w} + \\|\\mathbf{w}\\|^2 \\\\\n&= 1 - 2 \\mathbf{v} \\cdot \\mathbf{w} + \\|\\mathbf{w}\\|^2.\n\\end{align*}Hence,\n\\[\\mathbf{v} \\cdot \\mathbf{w} = \\frac{1 +\\|\\mathbf{w}\\|^2 - \\|\\mathbf{w} \\times \\mathbf{u}\\|^2}{2}. \\quad (*)\\]Also from $\\mathbf{w} + \\mathbf{w} \\times \\mathbf{u} = \\mathbf{v},$ we can take the dot product with $\\mathbf{v},$ to get\n\\[\\mathbf{w} \\cdot \\mathbf{v} + (\\mathbf{w} \\times \\mathbf{u}) \\cdot \\mathbf{v} = \\mathbf{v} \\cdot \\mathbf{v} = 1.\\]By the scalar triple product, $(\\mathbf{w} \\times \\mathbf{u}) \\cdot \\mathbf{v} = (\\mathbf{u} \\times \\mathbf{v}) \\cdot \\mathbf{w},$ so\n\\[(\\mathbf{u} \\times \\mathbf{v}) \\cdot \\mathbf{w} = 1 - \\mathbf{v} \\cdot \\mathbf{w}.\\]From equation $(*),$\n\\begin{align*}\n(\\mathbf{u} \\times \\mathbf{v}) \\cdot \\mathbf{w} &= 1 - \\frac{1 +\\|\\mathbf{w}\\|^2 - \\|\\mathbf{w} \\times \\mathbf{u}\\|^2}{2} \\\\\n&= \\frac{1}{2} - \\frac{1}{2} \\|\\mathbf{w}\\|^2 + \\frac{1}{2} \\|\\mathbf{w} \\times \\mathbf{u}\\|^2.\n\\end{align*}Let $\\theta$ be the angle between $\\mathbf{u}$ and $\\mathbf{w}.$  Then\n\\begin{align*}\n(\\mathbf{u} \\times \\mathbf{v}) \\cdot \\mathbf{w} &= \\frac{1}{2} - \\frac{1}{2} \\|\\mathbf{w}\\|^2 + \\frac{1}{2} \\|\\mathbf{w} \\times \\mathbf{u}\\|^2 \\\\\n&= \\frac{1}{2} - \\frac{1}{2} \\|\\mathbf{w}\\|^2 + \\frac{1}{2} \\|\\mathbf{u}\\|^2 \\|\\mathbf{w}\\|^2 \\sin^2 \\theta \\\\\n&= \\frac{1}{2} - \\frac{1}{2} \\|\\mathbf{w}\\|^2 + \\frac{1}{2} \\|\\mathbf{w}\\|^2 \\sin^2 \\theta \\\\\n&= \\frac{1}{2} - \\frac{1}{2} \\|\\mathbf{w}\\|^2 \\cos^2 \\theta \\\\\n&\\le \\frac{1}{2}.\n\\end{align*}Equality occurs when $\\mathbf{u} = \\begin{pmatrix} 1 \\\\ 0 \\\\ 0 \\end{pmatrix},$ $\\mathbf{v} = \\begin{pmatrix} 0 \\\\ 1 \\\\ 0 \\end{pmatrix},$ and $\\mathbf{w} = \\begin{pmatrix} 0 \\\\ 1/2 \\\\ 1/2 \\end{pmatrix},$ so the largest possible value of $(\\mathbf{u} \\times \\mathbf{v}) \\cdot \\mathbf{w}$ is $\\boxed{\\frac{1}{2}}.$",
+    "is_solved": false,
+    "model_solution": "Step 1: We are given $\\mathbf{w} + \\mathbf{w} \\times \\mathbf{u} = \\mathbf{v}.$ We can take the dot product of both sides with $\\mathbf{u} \\times \\mathbf{v}$ to obtain $(\\mathbf{u} \\times \\mathbf{v}) \\cdot \\mathbf{w} + (\\mathbf{u} \\times \\mathbf{v}) \\cdot (\\mathbf{w} \\times \\mathbf{u}) = (\\mathbf{u} \\times \\mathbf{v}) \\cdot \\mathbf{v}.$\nStep 2: Since $\\mathbf{u}$ and $\\mathbf{v}$ are unit vectors, we have $(\\mathbf{u} \\times \\mathbf{v}) \\cdot (\\mathbf{w} \\times \\mathbf{u}) = \\|\\mathbf{u}\\| \\|\\mathbf{v}\\| \\|\\mathbf{w}\\| \\sin \\theta \\sin \\phi = \\|\\mathbf{w}\\| \\sin \\phi,$ where $\\theta$ is the angle between $\\mathbf{u}$ and $\\mathbf{v}$ and $\\phi$ is the angle between $\\mathbf{w}$ and $\\mathbf{u} \\times \\mathbf{v}.$\nStep 3: $(\\mathbf{u} \\times \\mathbf{v}) \\cdot \\mathbf{v} = 0$ by the definition of the cross product, so we have $(\\mathbf{u} \\times \\mathbf{v}) \\cdot \\mathbf{w} = - (\\mathbf{u} \\times \\mathbf{v}) \\cdot (\\mathbf{w} \\times \\mathbf{u}) = -\\|\\mathbf{w}\\| \\sin \\phi.$\nSince $(\\mathbf{u} \\times \\mathbf{v}) \\cdot \\mathbf{w} = -\\|\\mathbf{w}\\| \\sin \\phi$ and $\\mathbf{w}$ is a unit vector, we have $\\|\\mathbf{w}\\| = 1,$ so $(\\mathbf{u} \\times \\mathbf{v}) \\cdot \\mathbf{w} = -\\sin \\phi.$\nStep 4: Since $0 \\le \\phi \\le \\frac{\\pi}{2},$ we have $-\\frac{\\pi}{2} \\le -\\phi \\le 0.$ Then we have $-\\frac{\\pi}{2} \\le -\\phi \\le 0,$ which implies $-\\frac{\\pi}{2} \\le \\sin \\phi \\le 0.$",
+    "steps": [
+        "Step 1: We are given $\\mathbf{w} + \\mathbf{w} \\times \\mathbf{u} = \\mathbf{v}.$ We can take the dot product of both sides with $\\mathbf{u} \\times \\mathbf{v}$ to obtain $(\\mathbf{u} \\times \\mathbf{v}) \\cdot \\mathbf{w} + (\\mathbf{u} \\times \\mathbf{v}) \\cdot (\\mathbf{w} \\times \\mathbf{u}) = (\\mathbf{u} \\times \\mathbf{v}) \\cdot \\mathbf{v}.$",
+        "Step 2: Since $\\mathbf{u}$ and $\\mathbf{v}$ are unit vectors, we have $(\\mathbf{u} \\times \\mathbf{v}) \\cdot (\\mathbf{w} \\times \\mathbf{u}) = \\|\\mathbf{u}\\| \\|\\mathbf{v}\\| \\|\\mathbf{w}\\| \\sin \\theta \\sin \\phi = \\|\\mathbf{w}\\| \\sin \\phi,$ where $\\theta$ is the angle between $\\mathbf{u}$ and $\\mathbf{v}$ and $\\phi$ is the angle between $\\mathbf{w}$ and $\\mathbf{u} \\times \\mathbf{v}.$",
+        "Step 3: $(\\mathbf{u} \\times \\mathbf{v}) \\cdot \\mathbf{v} = 0$ by the definition of the cross product, so we have $(\\mathbf{u} \\times \\mathbf{v}) \\cdot \\mathbf{w} = - (\\mathbf{u} \\times \\mathbf{v}) \\cdot (\\mathbf{w} \\times \\mathbf{u}) = -\\|\\mathbf{w}\\| \\sin \\phi.$",
+        "Since $(\\mathbf{u} \\times \\mathbf{v}) \\cdot \\mathbf{w} = -\\|\\mathbf{w}\\| \\sin \\phi$ and $\\mathbf{w}$ is a unit vector, we have $\\|\\mathbf{w}\\| = 1,$ so $(\\mathbf{u} \\times \\mathbf{v}) \\cdot \\mathbf{w} = -\\sin \\phi.$",
+        "Step 4: Since $0 \\le \\phi \\le \\frac{\\pi}{2},$ we have $-\\frac{\\pi}{2} \\le -\\phi \\le 0.$ Then we have $-\\frac{\\pi}{2} \\le -\\phi \\le 0,$ which implies $-\\frac{\\pi}{2} \\le \\sin \\phi \\le 0.$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: We are given $\\mathbf{w} + \\mathbf{w} \\times \\mathbf{u} = \\mathbf{v}.$ We can take the dot product of both sides with $\\mathbf{u} \\times \\mathbf{v}$ to obtain $(\\mathbf{u} \\times \\mathbf{v}) \\cdot \\mathbf{w} + (\\mathbf{u} \\times \\mathbf{v}) \\cdot (\\mathbf{w} \\times \\mathbf{u}) = (\\mathbf{u} \\times \\mathbf{v}) \\cdot \\mathbf{v}.$",
+            1
+        ],
+        [
+            "Step 2: Since $\\mathbf{u}$ and $\\mathbf{v}$ are unit vectors, we have $(\\mathbf{u} \\times \\mathbf{v}) \\cdot (\\mathbf{w} \\times \\mathbf{u}) = \\|\\mathbf{u}\\| \\|\\mathbf{v}\\| \\|\\mathbf{w}\\| \\sin \\theta \\sin \\phi = \\|\\mathbf{w}\\| \\sin \\phi,$ where $\\theta$ is the angle between $\\mathbf{u}$ and $\\mathbf{v}$ and $\\phi$ is the angle between $\\mathbf{w}$ and $\\mathbf{u} \\times \\mathbf{v}.$",
+            1
+        ],
+        [
+            "Step 3: $(\\mathbf{u} \\times \\mathbf{v}) \\cdot \\mathbf{v} = 0$ by the definition of the cross product, so we have $(\\mathbf{u} \\times \\mathbf{v}) \\cdot \\mathbf{w} = - (\\mathbf{u} \\times \\mathbf{v}) \\cdot (\\mathbf{w} \\times \\mathbf{u}) = -\\|\\mathbf{w}\\| \\sin \\phi.$",
+            1
+        ],
+        [
+            "Since $(\\mathbf{u} \\times \\mathbf{v}) \\cdot \\mathbf{w} = -\\|\\mathbf{w}\\| \\sin \\phi$ and $\\mathbf{w}$ is a unit vector, we have $\\|\\mathbf{w}\\| = 1,$ so $(\\mathbf{u} \\times \\mathbf{v}) \\cdot \\mathbf{w} = -\\sin \\phi.$",
+            1
+        ],
+        [
+            "Step 4: Since $0 \\le \\phi \\le \\frac{\\pi}{2},$ we have $-\\frac{\\pi}{2} \\le -\\phi \\le 0.$ Then we have $-\\frac{\\pi}{2} \\le -\\phi \\le 0,$ which implies $-\\frac{\\pi}{2} \\le \\sin \\phi \\le 0.$",
+            1
+        ]
+    ],
+    "time": 65.19363379478455,
+    "total_tokens": 5444,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,56 @@
+{
+    "problem": "Mike draws five cards from a standard 52-card deck. What is the probability that he draws a card from at least three of the four suits? Express your answer as a simplified fraction.",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "We calculate the probability that he does not draw a card from at least three of the suits. To do this, we calculate the number of sets of 5 cards from at most two suits and divide by $\\binom{52}5$, the number of sets of 5 cards. Since there are $\\binom42=6$ choices for the two suits, and $\\binom{26}5$ ways to choose 5 cards from the 26 in those two suits, our answer would appear to be $6\\binom{26}5$. But this triple-counts the ways to choose the cards from a single suit: 5 hearts is included in 5 (hearts and spades), 5 (hearts and clubs), and 5 (hearts and diamonds). So we subtract twice the number of ways to choose cards from a single suit: $6\\binom{26}5-2\\cdot4\\binom{13}5$. We divide this by $\\binom{52}5$ to get $$\\frac{6\\cdot26\\cdot25\\cdot24\\cdot23\\cdot22-8\\cdot13\\cdot12\\cdot11\\cdot10\\cdot9}{52\\cdot51\\cdot50\\cdot49\\cdot48}=\\frac{88}{595}.$$Therefore, the probability that he draws three or four of the suits is $1-\\frac{88}{595}=\\boxed{\\frac{507}{595}}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: Find the total number of ways to draw 5 cards from a 52-card deck.\n\\(\\ _{\\,52}C_{5}\\)\nStep 2: Find the number of ways to draw at least 3 cards from 4 suits. \n\\({}_{\\,13}C_{3}\\cdot{}_{\\,13}C_{1}\\cdot{}_{\\,13}C_{1}\\cdot{}_{\\,13}C_{1}+{}_{\\,13}C_{3} \\cdot{}_{\\,13}C_{2}\\cdot{}_{\\,13}C_{1}+{}_{\\,13}C_{3}\\cdot{}_{\\,13}C_{1}\\cdot{}_{ \\,13}C_{2}+{}_{\\,13}C_{4}\\cdot{}_{\\,13}C_{1}\\)\nStep 3:\n\\(\\frac{\\left({}_{13}C_{3}\\cdot{}_{13}C_{1}\\cdot{}_{13}C_{1}\\cdot{}_{13}C_{1} \\right)+\\left({}_{13}C_{3}\\cdot{}_{13}C_{2}\\cdot{}_{13}C_{1}\\right)+\\left({}_{13 }C_{3}\\cdot{}_{13}C_{1}\\cdot{}_{13}C_{2}\\right)+\\left({}_{13}C_{4}\\cdot{}_{13}C _{1}\\right)}{\\left({}_{52}C_{5}\\right)}\\)\n\\(\\frac{\\left({}_{13}C_{3}\\cdot{}_{13}C_{1}\\cdot{}_{13}C_{1}\\cdot{}_{13}C_{1} \\right)+\\left({}_{13}C_{3}\\cdot{}_{13}C_{2}\\cdot{}_{13}C_{1}\\right)+\\left({}_{13 }C_{3}\\cdot{}_{13}C_{1}\\cdot{}_{13}C_{2}\\right)+\\left({}_{13}C_{4}\\cdot{}_{13}C _{1}\\right)}{\\left({}_{52}C_{5}\\right)}=\\frac{^{286}{\\left({}_{52}C_{5}\\right)} }\\)\n\\(\\frac{\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{1}\\right)\\left({}_{13}C_{1} \\right)\\left({}_{13}C_{1}\\right)+\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{2} \\right)\\left({}_{13}C_{1}\\right)+\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{1} \\right)\\left({}_{13}C_{2}\\right)+\\left({}_{13}C_{4}\\right)\\left({}_{13}C_{1} \\right)}{\\left({}_{52}C_{5}\\right)}=\\frac{40,320}{2,598,960}\\)\n\\(=0.0155\\)\n\\(\\frac{\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{1}\\right)\\left({}_{13}C_{1} \\right)\\left({}_{13}C_{1}\\right)+\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{2} \\right)\\left({}_{13}C_{1}\\right)+\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{1} \\right)\\left({}_{13}C_{2}\\right)+\\left({}_{13}C_{4}\\right)\\left({}_{13}C_{1} \\right)}{\\left({}_{52}C_{5}\\right)}=\\frac{40,320}{2,598,960}\\)\n\\(=\\frac{40,320}{2,598,960}\\)\n\\(\\frac{\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{1}\\right)\\left({}_{13}C_{1} \\right)\\left({}_{13}C_{1}\\right)+\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{2} \\right)\\left({}_{13}C_{1}\\right)+\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{1} \\right)\\left({}_{13}C_{2}\\right)+\\left({}_{13}C_{4}\\right)\\left({}_{13}C_{1} \\right)}{\\left({}_{52}C_{5}\\right)}=\\frac{40,320}{2,598,960}\\)\n\\(\\frac{\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{1}\\right)\\left({}_{13}C_{1} \\right)\\left({}_{13}C_{1}\\right)+\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{2} \\right)\\left({}_{13}C_{1}\\right)+\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{1} \\right)\\left({}_{13}C_{2}\\right)+\\left({}_{13}C_{4}\\right)\\left({}_{13}C_{1} \\right)}{\\left({}_{52}C_{5}\\right)}=\\frac{40,320}{2,598,960}\\)",
+    "steps": [
+        "Step 1: Find the total number of ways to draw 5 cards from a 52-card deck.\n\\(\\ _{\\,52}C_{5}\\)",
+        "Step 2: Find the number of ways to draw at least 3 cards from 4 suits. \n\\({}_{\\,13}C_{3}\\cdot{}_{\\,13}C_{1}\\cdot{}_{\\,13}C_{1}\\cdot{}_{\\,13}C_{1}+{}_{\\,13}C_{3} \\cdot{}_{\\,13}C_{2}\\cdot{}_{\\,13}C_{1}+{}_{\\,13}C_{3}\\cdot{}_{\\,13}C_{1}\\cdot{}_{ \\,13}C_{2}+{}_{\\,13}C_{4}\\cdot{}_{\\,13}C_{1}\\)",
+        "Step 3:\n\\(\\frac{\\left({}_{13}C_{3}\\cdot{}_{13}C_{1}\\cdot{}_{13}C_{1}\\cdot{}_{13}C_{1} \\right)+\\left({}_{13}C_{3}\\cdot{}_{13}C_{2}\\cdot{}_{13}C_{1}\\right)+\\left({}_{13 }C_{3}\\cdot{}_{13}C_{1}\\cdot{}_{13}C_{2}\\right)+\\left({}_{13}C_{4}\\cdot{}_{13}C _{1}\\right)}{\\left({}_{52}C_{5}\\right)}\\)",
+        "\\(\\frac{\\left({}_{13}C_{3}\\cdot{}_{13}C_{1}\\cdot{}_{13}C_{1}\\cdot{}_{13}C_{1} \\right)+\\left({}_{13}C_{3}\\cdot{}_{13}C_{2}\\cdot{}_{13}C_{1}\\right)+\\left({}_{13 }C_{3}\\cdot{}_{13}C_{1}\\cdot{}_{13}C_{2}\\right)+\\left({}_{13}C_{4}\\cdot{}_{13}C _{1}\\right)}{\\left({}_{52}C_{5}\\right)}=\\frac{^{286}{\\left({}_{52}C_{5}\\right)} }\\)",
+        "\\(\\frac{\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{1}\\right)\\left({}_{13}C_{1} \\right)\\left({}_{13}C_{1}\\right)+\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{2} \\right)\\left({}_{13}C_{1}\\right)+\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{1} \\right)\\left({}_{13}C_{2}\\right)+\\left({}_{13}C_{4}\\right)\\left({}_{13}C_{1} \\right)}{\\left({}_{52}C_{5}\\right)}=\\frac{40,320}{2,598,960}\\)\n\\(=0.0155\\)",
+        "\\(\\frac{\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{1}\\right)\\left({}_{13}C_{1} \\right)\\left({}_{13}C_{1}\\right)+\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{2} \\right)\\left({}_{13}C_{1}\\right)+\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{1} \\right)\\left({}_{13}C_{2}\\right)+\\left({}_{13}C_{4}\\right)\\left({}_{13}C_{1} \\right)}{\\left({}_{52}C_{5}\\right)}=\\frac{40,320}{2,598,960}\\)\n\\(=\\frac{40,320}{2,598,960}\\)",
+        "\\(\\frac{\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{1}\\right)\\left({}_{13}C_{1} \\right)\\left({}_{13}C_{1}\\right)+\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{2} \\right)\\left({}_{13}C_{1}\\right)+\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{1} \\right)\\left({}_{13}C_{2}\\right)+\\left({}_{13}C_{4}\\right)\\left({}_{13}C_{1} \\right)}{\\left({}_{52}C_{5}\\right)}=\\frac{40,320}{2,598,960}\\)",
+        "\\(\\frac{\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{1}\\right)\\left({}_{13}C_{1} \\right)\\left({}_{13}C_{1}\\right)+\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{2} \\right)\\left({}_{13}C_{1}\\right)+\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{1} \\right)\\left({}_{13}C_{2}\\right)+\\left({}_{13}C_{4}\\right)\\left({}_{13}C_{1} \\right)}{\\left({}_{52}C_{5}\\right)}=\\frac{40,320}{2,598,960}\\)"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Find the total number of ways to draw 5 cards from a 52-card deck.\n\\(\\ _{\\,52}C_{5}\\)",
+            1
+        ],
+        [
+            "Step 2: Find the number of ways to draw at least 3 cards from 4 suits. \n\\({}_{\\,13}C_{3}\\cdot{}_{\\,13}C_{1}\\cdot{}_{\\,13}C_{1}\\cdot{}_{\\,13}C_{1}+{}_{\\,13}C_{3} \\cdot{}_{\\,13}C_{2}\\cdot{}_{\\,13}C_{1}+{}_{\\,13}C_{3}\\cdot{}_{\\,13}C_{1}\\cdot{}_{ \\,13}C_{2}+{}_{\\,13}C_{4}\\cdot{}_{\\,13}C_{1}\\)",
+            1
+        ],
+        [
+            "Step 3:\n\\(\\frac{\\left({}_{13}C_{3}\\cdot{}_{13}C_{1}\\cdot{}_{13}C_{1}\\cdot{}_{13}C_{1} \\right)+\\left({}_{13}C_{3}\\cdot{}_{13}C_{2}\\cdot{}_{13}C_{1}\\right)+\\left({}_{13 }C_{3}\\cdot{}_{13}C_{1}\\cdot{}_{13}C_{2}\\right)+\\left({}_{13}C_{4}\\cdot{}_{13}C _{1}\\right)}{\\left({}_{52}C_{5}\\right)}\\)",
+            1
+        ],
+        [
+            "\\(\\frac{\\left({}_{13}C_{3}\\cdot{}_{13}C_{1}\\cdot{}_{13}C_{1}\\cdot{}_{13}C_{1} \\right)+\\left({}_{13}C_{3}\\cdot{}_{13}C_{2}\\cdot{}_{13}C_{1}\\right)+\\left({}_{13 }C_{3}\\cdot{}_{13}C_{1}\\cdot{}_{13}C_{2}\\right)+\\left({}_{13}C_{4}\\cdot{}_{13}C _{1}\\right)}{\\left({}_{52}C_{5}\\right)}=\\frac{^{286}{\\left({}_{52}C_{5}\\right)} }\\)",
+            1
+        ],
+        [
+            "\\(\\frac{\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{1}\\right)\\left({}_{13}C_{1} \\right)\\left({}_{13}C_{1}\\right)+\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{2} \\right)\\left({}_{13}C_{1}\\right)+\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{1} \\right)\\left({}_{13}C_{2}\\right)+\\left({}_{13}C_{4}\\right)\\left({}_{13}C_{1} \\right)}{\\left({}_{52}C_{5}\\right)}=\\frac{40,320}{2,598,960}\\)\n\\(=0.0155\\)",
+            1
+        ],
+        [
+            "\\(\\frac{\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{1}\\right)\\left({}_{13}C_{1} \\right)\\left({}_{13}C_{1}\\right)+\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{2} \\right)\\left({}_{13}C_{1}\\right)+\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{1} \\right)\\left({}_{13}C_{2}\\right)+\\left({}_{13}C_{4}\\right)\\left({}_{13}C_{1} \\right)}{\\left({}_{52}C_{5}\\right)}=\\frac{40,320}{2,598,960}\\)\n\\(=\\frac{40,320}{2,598,960}\\)",
+            1
+        ],
+        [
+            "\\(\\frac{\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{1}\\right)\\left({}_{13}C_{1} \\right)\\left({}_{13}C_{1}\\right)+\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{2} \\right)\\left({}_{13}C_{1}\\right)+\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{1} \\right)\\left({}_{13}C_{2}\\right)+\\left({}_{13}C_{4}\\right)\\left({}_{13}C_{1} \\right)}{\\left({}_{52}C_{5}\\right)}=\\frac{40,320}{2,598,960}\\)",
+            1
+        ],
+        [
+            "\\(\\frac{\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{1}\\right)\\left({}_{13}C_{1} \\right)\\left({}_{13}C_{1}\\right)+\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{2} \\right)\\left({}_{13}C_{1}\\right)+\\left({}_{13}C_{3}\\right)\\left({}_{13}C_{1} \\right)\\left({}_{13}C_{2}\\right)+\\left({}_{13}C_{4}\\right)\\left({}_{13}C_{1} \\right)}{\\left({}_{52}C_{5}\\right)}=\\frac{40,320}{2,598,960}\\)",
+            1
+        ]
+    ],
+    "time": 109.38474702835083,
+    "total_tokens": 11161,
+    "final_answer_tokens": 1283,
+    "model": "meta-llama/Llama-Vision-Free"
+}

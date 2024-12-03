@@ -1,0 +1,51 @@
+{
+    "problem": "Find the foot of the perpendicular from the point $A = (1,8,4)$ to the line passing through $B = (0,-1,3)$ and $C = (2,-3,-1).$",
+    "level": "Level 5",
+    "type": "Precalculus",
+    "solution": "The direction vector for line $BC$ is\n\\[\\overrightarrow{BC} = \\begin{pmatrix} 2 \\\\ -3 \\\\ -1 \\end{pmatrix} - \\begin{pmatrix} 0 \\\\ -1 \\\\ 3 \\end{pmatrix} = \\begin{pmatrix} 2 \\\\ -2 \\\\ -4 \\end{pmatrix}.\\]Hence, line $BC$ can be parameterized by\n\\[\\begin{pmatrix} 0 \\\\ -1 \\\\ 3 \\end{pmatrix} + t \\begin{pmatrix} 2 \\\\ -2 \\\\ -4 \\end{pmatrix} = \\begin{pmatrix} 2t  \\\\ -1 - 2t \\\\ 3 - 4t \\end{pmatrix}.\\][asy]\nunitsize (0.6 cm);\n\npair A, B, C, D, E, F, H;\n\nA = (2,5);\nB = (0,0);\nC = (8,0);\nD = (A + reflect(B,C)*(A))/2;\n\ndraw(A--B--C--cycle);\ndraw(A--D);\n\nlabel(\"$A$\", A, N);\nlabel(\"$B$\", B, SW);\nlabel(\"$C$\", C, SE);\nlabel(\"$D$\", D, S);\n[/asy]\n\nSetting $D$ to be a point on this line, we get\n\\[\\overrightarrow{AD} = \\begin{pmatrix} 2t  \\\\ -1 - 2t \\\\ 3 - 4t \\end{pmatrix} - \\begin{pmatrix} 1 \\\\ 8 \\\\ 4 \\end{pmatrix} = \\begin{pmatrix} -1 + 2t  \\\\ -9 - 2t \\\\ -1 - 4t \\end{pmatrix}.\\]Since $\\overrightarrow{AD}$ is orthogonal to $\\overline{BC},$\n\\[\\begin{pmatrix} -1 + 2t  \\\\ -9 - 2t \\\\ -1 - 4t \\end{pmatrix} \\cdot \\begin{pmatrix} 2 \\\\ -2 \\\\ -4 \\end{pmatrix} = 0.\\]Then $(-1 + 2t)(2) + (-9 - 2t)(-2) + (-1 - 4t)(-4) = 0.$  Solving for $t,$ we find $t = -\\frac{5}{6}.$  Hence, $D = \\boxed{\\left( -\\frac{5}{3}, \\frac{2}{3}, \\frac{19}{3} \\right)}.$",
+    "is_solved": true,
+    "model_solution": "Step 1: Find the direction vector of the line passing through B and C.\n$\\mathbf{v}=\\overrightarrow{BC}=(2-0,-3-(-1),-1-3)=\\begin{pmatrix}2\\\\-4\\\\-4\\end{pmatrix}$\nStep 2: Find the vector $\\mathbf{w}$ from $A$ perpendicular to the line passing through $B$ and $C$.\n\\mathbf{w} = \\overrightarrow{AB} = \\begin{pmatrix}1-0\\\\8-(-1)\\\\4-3\\end{pmatrix} = \\begin{pmatrix}1\\\\9\\\\1\\end{pmatrix}\nStep 3: Compute the dot product $\\mathbf{v}\\cdot\\mathbf{w}$.\n$\\mathbf{v}\\cdot\\mathbf{w} = \\begin{pmatrix}2\\\\-4\\\\-4\\end{pmatrix}\\cdot \\begin{pmatrix}1\\\\9\\\\1\\end{pmatrix} = 2-36-4 = -38$\nStep 4: Calculate the projection of $\\mathbf{w}$ onto $\\mathbf{v}$, which is a scalar $k$ such that $\\mathbf{w}-k\\mathbf{v}$ is perpendicular to $\\mathbf{v}$.\n$k = \\frac{\\mathbf{v}\\cdot\\mathbf{w}}{\\mathbf{v}\\cdot\\mathbf{v}}$\n$k = \\frac{-38}{4+16+16}$\n$k = \\frac{-38}{36}$\n$k = -\\frac{19}{18}$\nStep 5: \n$\\mathbf{w}-k\\mathbf{v}=\\begin{pmatrix}1\\\\9\\\\1\\end{pmatrix}-\\left(-\\frac{19}{18}\\right)\\begin{pmatrix}2\\\\-4\\\\-4\\end{pmatrix}=\\begin{pmatrix}1\\\\9\\\\1\\end{pmatrix}+\\begin{pmatrix}\\frac{19}{9}\\\\-\\frac{38}{9}\\\\\\frac{38}{9}\\end{pmatrix}=\\begin{pmatrix}\\frac{28}{9}\\\\\\frac{53}{9}\\\\\\frac{47}{9}\\end{pmatrix}$\nStep 6:\nThe point $D$ is given by $\\overrightarrow{BD}=B+(1/2)\\overrightarrow{BC}$\n$D=(0+1/2(2),-1+1/2(-4),3+1/2(-4))=(1,-3,-1)$\nStep 7:\n$\\overrightarrow{BD}=\\begin{pmatrix}1\\\\-3\\\\-1\\end{pmatrix}$\nFinal Answer",
+    "steps": [
+        "Step 1: Find the direction vector of the line passing through B and C.\n$\\mathbf{v}=\\overrightarrow{BC}=(2-0,-3-(-1),-1-3)=\\begin{pmatrix}2\\\\-4\\\\-4\\end{pmatrix}$",
+        "Step 2: Find the vector $\\mathbf{w}$ from $A$ perpendicular to the line passing through $B$ and $C$.\n\\mathbf{w} = \\overrightarrow{AB} = \\begin{pmatrix}1-0\\\\8-(-1)\\\\4-3\\end{pmatrix} = \\begin{pmatrix}1\\\\9\\\\1\\end{pmatrix}",
+        "Step 3: Compute the dot product $\\mathbf{v}\\cdot\\mathbf{w}$.\n$\\mathbf{v}\\cdot\\mathbf{w} = \\begin{pmatrix}2\\\\-4\\\\-4\\end{pmatrix}\\cdot \\begin{pmatrix}1\\\\9\\\\1\\end{pmatrix} = 2-36-4 = -38$",
+        "Step 4: Calculate the projection of $\\mathbf{w}$ onto $\\mathbf{v}$, which is a scalar $k$ such that $\\mathbf{w}-k\\mathbf{v}$ is perpendicular to $\\mathbf{v}$.\n$k = \\frac{\\mathbf{v}\\cdot\\mathbf{w}}{\\mathbf{v}\\cdot\\mathbf{v}}$\n$k = \\frac{-38}{4+16+16}$\n$k = \\frac{-38}{36}$\n$k = -\\frac{19}{18}$",
+        "Step 5: \n$\\mathbf{w}-k\\mathbf{v}=\\begin{pmatrix}1\\\\9\\\\1\\end{pmatrix}-\\left(-\\frac{19}{18}\\right)\\begin{pmatrix}2\\\\-4\\\\-4\\end{pmatrix}=\\begin{pmatrix}1\\\\9\\\\1\\end{pmatrix}+\\begin{pmatrix}\\frac{19}{9}\\\\-\\frac{38}{9}\\\\\\frac{38}{9}\\end{pmatrix}=\\begin{pmatrix}\\frac{28}{9}\\\\\\frac{53}{9}\\\\\\frac{47}{9}\\end{pmatrix}$",
+        "Step 6:\nThe point $D$ is given by $\\overrightarrow{BD}=B+(1/2)\\overrightarrow{BC}$\n$D=(0+1/2(2),-1+1/2(-4),3+1/2(-4))=(1,-3,-1)$",
+        "Step 7:\n$\\overrightarrow{BD}=\\begin{pmatrix}1\\\\-3\\\\-1\\end{pmatrix}$\nFinal Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Find the direction vector of the line passing through B and C.\n$\\mathbf{v}=\\overrightarrow{BC}=(2-0,-3-(-1),-1-3)=\\begin{pmatrix}2\\\\-4\\\\-4\\end{pmatrix}$",
+            1
+        ],
+        [
+            "Step 2: Find the vector $\\mathbf{w}$ from $A$ perpendicular to the line passing through $B$ and $C$.\n\\mathbf{w} = \\overrightarrow{AB} = \\begin{pmatrix}1-0\\\\8-(-1)\\\\4-3\\end{pmatrix} = \\begin{pmatrix}1\\\\9\\\\1\\end{pmatrix}",
+            1
+        ],
+        [
+            "Step 3: Compute the dot product $\\mathbf{v}\\cdot\\mathbf{w}$.\n$\\mathbf{v}\\cdot\\mathbf{w} = \\begin{pmatrix}2\\\\-4\\\\-4\\end{pmatrix}\\cdot \\begin{pmatrix}1\\\\9\\\\1\\end{pmatrix} = 2-36-4 = -38$",
+            1
+        ],
+        [
+            "Step 4: Calculate the projection of $\\mathbf{w}$ onto $\\mathbf{v}$, which is a scalar $k$ such that $\\mathbf{w}-k\\mathbf{v}$ is perpendicular to $\\mathbf{v}$.\n$k = \\frac{\\mathbf{v}\\cdot\\mathbf{w}}{\\mathbf{v}\\cdot\\mathbf{v}}$\n$k = \\frac{-38}{4+16+16}$\n$k = \\frac{-38}{36}$\n$k = -\\frac{19}{18}$",
+            1
+        ],
+        [
+            "Step 5: \n$\\mathbf{w}-k\\mathbf{v}=\\begin{pmatrix}1\\\\9\\\\1\\end{pmatrix}-\\left(-\\frac{19}{18}\\right)\\begin{pmatrix}2\\\\-4\\\\-4\\end{pmatrix}=\\begin{pmatrix}1\\\\9\\\\1\\end{pmatrix}+\\begin{pmatrix}\\frac{19}{9}\\\\-\\frac{38}{9}\\\\\\frac{38}{9}\\end{pmatrix}=\\begin{pmatrix}\\frac{28}{9}\\\\\\frac{53}{9}\\\\\\frac{47}{9}\\end{pmatrix}$",
+            1
+        ],
+        [
+            "Step 6:\nThe point $D$ is given by $\\overrightarrow{BD}=B+(1/2)\\overrightarrow{BC}$\n$D=(0+1/2(2),-1+1/2(-4),3+1/2(-4))=(1,-3,-1)$",
+            1
+        ],
+        [
+            "Step 7:\n$\\overrightarrow{BD}=\\begin{pmatrix}1\\\\-3\\\\-1\\end{pmatrix}$\nFinal Answer",
+            1
+        ]
+    ],
+    "time": 92.53884315490723,
+    "total_tokens": 6485,
+    "final_answer_tokens": 703,
+    "model": "meta-llama/Llama-Vision-Free"
+}

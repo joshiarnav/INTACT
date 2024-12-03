@@ -1,0 +1,56 @@
+{
+    "problem": "The hyperbola \\[\\frac{(x-3)^2}{5^2} - \\frac{(y+1)^2}{4^2} = 1\\]has two asymptotes, one with positive slope and one with negative slope. Compute the $x-$intercept of the one with positive slope. (Enter your answer as an ordered pair.)",
+    "level": "Level 4",
+    "type": "Intermediate Algebra",
+    "solution": "We know that the asymptotes of the hyperbola are given by the two equations \\[\\frac{x-3}{5} = \\pm \\frac{y+1}{4}.\\]We see that choosing the $+$ sign will give an asymptote with positive slope: \\[\\frac{x-3}{5} = \\frac{y+1}{4}.\\]To compute the $x-$intercept of this line, we set $y=0,$ giving \\[\\frac{x-3}{5} = \\frac{1}{4}.\\]Then $x-3 = \\frac{5}{4},$ so $x = 3+\\frac{5}{4}=\\frac{17}{4}.$ Thus, the $x-$intercept is $(x,y)=\\boxed{\\left(\\frac{17}{4},0\\right)}.$[asy]\nvoid axes(real x0, real x1, real y0, real y1)\n{\n\tdraw((x0,0)--(x1,0),EndArrow);\n    draw((0,y0)--(0,y1),EndArrow);\n    label(\"$x$\",(x1,0),E);\n    label(\"$y$\",(0,y1),N);\n    for (int i=floor(x0)+1; i<x1; ++i)\n    \tdraw((i,.1)--(i,-.1));\n    for (int i=floor(y0)+1; i<y1; ++i)\n    \tdraw((.1,i)--(-.1,i));\n}\npath[] yh(real a, real b, real h, real k, real x0, real x1, bool upper=true, bool lower=true, pen color=black)\n{\n\treal f(real x) { return k + a / b * sqrt(b^2 + (x-h)^2); }\n    real g(real x) { return k - a / b * sqrt(b^2 + (x-h)^2); }\n    if (upper) { draw(graph(f, x0, x1),color,  Arrows); }\n    if (lower) { draw(graph(g, x0, x1),color,  Arrows); }\n    path [] arr = {graph(f, x0, x1), graph(g, x0, x1)};\n    return arr;\n}\nvoid xh(real a, real b, real h, real k, real y0, real y1, bool right=true, bool left=true, pen color=black)\n{\n\tpath [] arr = yh(a, b, k, h, y0, y1, false, false);\n    if (right) draw(reflect((0,0),(1,1))*arr[0],color,  Arrows);\n    if (left) draw(reflect((0,0),(1,1))*arr[1],color,  Arrows);\n}\nvoid e(real a, real b, real h, real k)\n{\n\tdraw(shift((h,k))*scale(a,b)*unitcircle);\n}\nsize(8cm);\naxes(-5,11,-6,5);\nxh(5,4,3,-1,-5,3);\nreal f(real x) { return -1 + 0.8*(x-3); }\ndraw(graph(f,-2,8),dotted,Arrows);\nreal g(real x) { return -1 - 0.8*(x-3); }\ndraw(graph(g,-2,8),dotted,Arrows);\ndot((17/4,0));\n[/asy]",
+    "is_solved": true,
+    "model_solution": "Step 1:  The problem presents a hyperbola with its equation given as \\[\\frac{(x-3)^2}{5^2} - \\frac{(y+1)^2}{4^2} = 1.\\]\nThe first step is to find the equations of the asymptotes of the hyperbola by analyzing the coefficients of the terms and the standard form of the hyperbola equation.\nStep 2:  The equation of the asymptotes for the given hyperbola has the form \\[y - (-1) = \\pm \\frac{4}{5} (x - 3)\\]\nStep 2: Solve for y in the equation for the asymptote with positive slope to isolate y and find the x-intercept.\nStep 3: \\[y - (-1) = \\frac{4}{5} (x - 3)\\]\n\\[y + 1 = \\frac{4}{5} x - \\frac{12}{5}\\]\n\\[y = \\frac{4}{5} x - \\frac{12}{5} - 1\\]\n\\[y = \\frac{4}{5} x - \\frac{17}{5}\\]\nTo find the x-intercept, set y = 0 and solve for x.\n\\[0 = \\frac{4}{5} x - \\frac{17}{5}\\]\n\\[0 + \\frac{17}{5} = \\frac{4}{5} x\\]\n\\[\\frac{17}{4} = x\\]\n\\[\\left(\\frac{17}{4}, 0\\right)\\]\n\\[\\frac{17}{4} = x\\]\n\\[\\left(\\frac{17}{4}, 0\\right)\\]",
+    "steps": [
+        "Step 1:  The problem presents a hyperbola with its equation given as \\[\\frac{(x-3)^2}{5^2} - \\frac{(y+1)^2}{4^2} = 1.\\]\nThe first step is to find the equations of the asymptotes of the hyperbola by analyzing the coefficients of the terms and the standard form of the hyperbola equation.",
+        "Step 2:  The equation of the asymptotes for the given hyperbola has the form \\[y - (-1) = \\pm \\frac{4}{5} (x - 3)\\]",
+        "Step 2: Solve for y in the equation for the asymptote with positive slope to isolate y and find the x-intercept.",
+        "Step 3: \\[y - (-1) = \\frac{4}{5} (x - 3)\\]\n\\[y + 1 = \\frac{4}{5} x - \\frac{12}{5}\\]\n\\[y = \\frac{4}{5} x - \\frac{12}{5} - 1\\]\n\\[y = \\frac{4}{5} x - \\frac{17}{5}\\]",
+        "To find the x-intercept, set y = 0 and solve for x.\n\\[0 = \\frac{4}{5} x - \\frac{17}{5}\\]\n\\[0 + \\frac{17}{5} = \\frac{4}{5} x\\]\n\\[\\frac{17}{4} = x\\]",
+        "\\[\\left(\\frac{17}{4}, 0\\right)\\]",
+        "\\[\\frac{17}{4} = x\\]",
+        "\\[\\left(\\frac{17}{4}, 0\\right)\\]"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  The problem presents a hyperbola with its equation given as \\[\\frac{(x-3)^2}{5^2} - \\frac{(y+1)^2}{4^2} = 1.\\]\nThe first step is to find the equations of the asymptotes of the hyperbola by analyzing the coefficients of the terms and the standard form of the hyperbola equation.",
+            1
+        ],
+        [
+            "Step 2:  The equation of the asymptotes for the given hyperbola has the form \\[y - (-1) = \\pm \\frac{4}{5} (x - 3)\\]",
+            1
+        ],
+        [
+            "Step 2: Solve for y in the equation for the asymptote with positive slope to isolate y and find the x-intercept.",
+            1
+        ],
+        [
+            "Step 3: \\[y - (-1) = \\frac{4}{5} (x - 3)\\]\n\\[y + 1 = \\frac{4}{5} x - \\frac{12}{5}\\]\n\\[y = \\frac{4}{5} x - \\frac{12}{5} - 1\\]\n\\[y = \\frac{4}{5} x - \\frac{17}{5}\\]",
+            1
+        ],
+        [
+            "To find the x-intercept, set y = 0 and solve for x.\n\\[0 = \\frac{4}{5} x - \\frac{17}{5}\\]\n\\[0 + \\frac{17}{5} = \\frac{4}{5} x\\]\n\\[\\frac{17}{4} = x\\]",
+            1
+        ],
+        [
+            "\\[\\left(\\frac{17}{4}, 0\\right)\\]",
+            1
+        ],
+        [
+            "\\[\\frac{17}{4} = x\\]",
+            1
+        ],
+        [
+            "\\[\\left(\\frac{17}{4}, 0\\right)\\]",
+            1
+        ]
+    ],
+    "time": 105.56726598739624,
+    "total_tokens": 6177,
+    "final_answer_tokens": 496,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,36 @@
+{
+    "problem": "Find the value of $(52+6\\sqrt{43})^{3/2}-(52-6\\sqrt{43})^{3/2}$.",
+    "level": "Level 3",
+    "type": "Intermediate Algebra",
+    "solution": "We hope that we can write $52 + 6\\sqrt{43}$ as the square of some expression of the form $a + b\\sqrt{43},$ where $a$ and $b$ are integers. To find $a$ and $b,$ we write \\[52 + 6\\sqrt{43} = (a+b\\sqrt{43})^2 = (a^2 + 43b^2) + 2ab\\sqrt{43}.\\]Therefore, $a^2 + 43b^2 = 52$ and $2ab = 6.$ Testing pairs $(a, b)$ such that $2ab=6,$ we find a solution, $(a,b)=(3,1),$ so indeed, \\[\\sqrt{52+6\\sqrt{43}} = 3+\\sqrt{43}.\\]Similarly, we have \\[\\sqrt{52-6\\sqrt{43}} = -3+\\sqrt{43}\\](remembering to take the positive square root). Now we can compute the answer: \\[\\begin{aligned} (52+6\\sqrt{43})^{3/2}-(52-6\\sqrt{43})^{3/2} &= (52+6\\sqrt{43})(3+\\sqrt{43}) - (52-6\\sqrt{43})(-3+\\sqrt{43}) \\\\ &= 2 \\cdot 52 \\cdot 3 + 2 \\cdot 6 \\cdot 43 \\\\ &= \\boxed{828}. \\end{aligned}\\]",
+    "is_solved": true,
+    "model_solution": "Step 1: Apply the formula $(a+b)^{3/2}-(a-b)^{3/2}=2\\sqrt{a^2-b^2}$.\nStep 2: $2\\sqrt{52^2-(6\\sqrt{43})^2}=2\\sqrt{2704-1032}=2\\sqrt{1672}$.\nStep 3: $2\\sqrt{1672}=2\\sqrt{4\\cdot 417}=2\\cdot2\\sqrt{417}=4\\sqrt{417}$\n$4\\sqrt{417}=4\\sqrt{9\\cdot 46}=4\\cdot3\\sqrt{46}=12\\sqrt{46}$ Final Answer",
+    "steps": [
+        "Step 1: Apply the formula $(a+b)^{3/2}-(a-b)^{3/2}=2\\sqrt{a^2-b^2}$.",
+        "Step 2: $2\\sqrt{52^2-(6\\sqrt{43})^2}=2\\sqrt{2704-1032}=2\\sqrt{1672}$.",
+        "Step 3: $2\\sqrt{1672}=2\\sqrt{4\\cdot 417}=2\\cdot2\\sqrt{417}=4\\sqrt{417}$",
+        "$4\\sqrt{417}=4\\sqrt{9\\cdot 46}=4\\cdot3\\sqrt{46}=12\\sqrt{46}$ Final Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Apply the formula $(a+b)^{3/2}-(a-b)^{3/2}=2\\sqrt{a^2-b^2}$.",
+            1
+        ],
+        [
+            "Step 2: $2\\sqrt{52^2-(6\\sqrt{43})^2}=2\\sqrt{2704-1032}=2\\sqrt{1672}$.",
+            1
+        ],
+        [
+            "Step 3: $2\\sqrt{1672}=2\\sqrt{4\\cdot 417}=2\\cdot2\\sqrt{417}=4\\sqrt{417}$",
+            1
+        ],
+        [
+            "$4\\sqrt{417}=4\\sqrt{9\\cdot 46}=4\\cdot3\\sqrt{46}=12\\sqrt{46}$ Final Answer",
+            1
+        ]
+    ],
+    "time": 56.731767654418945,
+    "total_tokens": 1518,
+    "final_answer_tokens": 240,
+    "model": "meta-llama/Llama-Vision-Free"
+}

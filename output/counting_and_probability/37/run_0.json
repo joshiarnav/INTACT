@@ -1,0 +1,51 @@
+{
+    "problem": "We call a number a mountain number if its middle digit is larger than any other digit.  For example, 284 is a mountain number.  How many 3-digit mountain numbers are there?",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "We will break this into three cases.\n\nCase 1: numbers of the form $xyx$ ($x \\ne 0$).\n\nAny pair of nonzero digits has a corresponding palindrome ($xyx$) mountain number, so the number of these is $\\binom{9}{2} = 36$.\n\nCase 2: numbers of the form $xyz$ ($z \\ne 0, x \\ne z$).\n\nAny group of three nonzero digits ($y > x > z > 0$) has two corresponding mountain numbers ($xyz$ and $zyx$), so the number of these is $2 \\times \\binom{9}{3} = 168$.\n\nCase 3: numbers of the form $xy0$ ($x \\ne 0, y \\ne 0$).\n\nAny pair of nonzero digits has a corresponding mountain number in the form $xy0$, so there are $\\binom{9}{2} = 36$ of these.\n\nSo the total number of mountain numbers is $36 + 168 + 36 = \\boxed{240}$.",
+    "is_solved": true,
+    "model_solution": "Let a, b, and c be the digits of the 3-digit mountain number abc.\nThe value of $b$ can be any of the numbers 1 through 9, since it cannot be zero and it must be the largest digit.\nThere are 9 choices for b; for each choice of b, there are 9 choices for a if a is less than b, and there is only 1 choice for a if a is greater than b.\nFor each value of b, there are 9 choices for a if a < b, and there is only 1 choice for a if a > b.\nThere are 9 choices of b, and for each of these, $a$ can be chosen in 9 ways if $a<b$, and there are 9 possible choices for $a$ if $a>b$.\nFor each value of $b$, the number of choices for $a$ is $\\left\\lfloor\\frac{9}{2}\\right\\rfloor=4$ if $b$ is odd, and $\\left\\lfloor\\frac{9}{2}\\right\\rfloor=4$ if $b$ is even.\nThe total number of 3-digit mountain numbers is $9\\left(4+4\\right)$.\nFinal Answer",
+    "steps": [
+        "Let a, b, and c be the digits of the 3-digit mountain number abc.",
+        "The value of $b$ can be any of the numbers 1 through 9, since it cannot be zero and it must be the largest digit.",
+        "There are 9 choices for b; for each choice of b, there are 9 choices for a if a is less than b, and there is only 1 choice for a if a is greater than b.",
+        "For each value of b, there are 9 choices for a if a < b, and there is only 1 choice for a if a > b.",
+        "There are 9 choices of b, and for each of these, $a$ can be chosen in 9 ways if $a<b$, and there are 9 possible choices for $a$ if $a>b$.",
+        "For each value of $b$, the number of choices for $a$ is $\\left\\lfloor\\frac{9}{2}\\right\\rfloor=4$ if $b$ is odd, and $\\left\\lfloor\\frac{9}{2}\\right\\rfloor=4$ if $b$ is even.",
+        "The total number of 3-digit mountain numbers is $9\\left(4+4\\right)$.\nFinal Answer"
+    ],
+    "full_steps": [
+        [
+            "Let a, b, and c be the digits of the 3-digit mountain number abc.",
+            1
+        ],
+        [
+            "The value of $b$ can be any of the numbers 1 through 9, since it cannot be zero and it must be the largest digit.",
+            1
+        ],
+        [
+            "There are 9 choices for b; for each choice of b, there are 9 choices for a if a is less than b, and there is only 1 choice for a if a is greater than b.",
+            1
+        ],
+        [
+            "For each value of b, there are 9 choices for a if a < b, and there is only 1 choice for a if a > b.",
+            1
+        ],
+        [
+            "There are 9 choices of b, and for each of these, $a$ can be chosen in 9 ways if $a<b$, and there are 9 possible choices for $a$ if $a>b$.",
+            1
+        ],
+        [
+            "For each value of $b$, the number of choices for $a$ is $\\left\\lfloor\\frac{9}{2}\\right\\rfloor=4$ if $b$ is odd, and $\\left\\lfloor\\frac{9}{2}\\right\\rfloor=4$ if $b$ is even.",
+            1
+        ],
+        [
+            "The total number of 3-digit mountain numbers is $9\\left(4+4\\right)$.\nFinal Answer",
+            1
+        ]
+    ],
+    "time": 98.22255873680115,
+    "total_tokens": 3388,
+    "final_answer_tokens": 363,
+    "model": "meta-llama/Llama-Vision-Free"
+}

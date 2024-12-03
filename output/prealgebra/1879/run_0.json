@@ -1,0 +1,46 @@
+{
+    "problem": "Three squares each have sides of length 6 units and overlap each other as shown below. The points where the sides cross are midpoints. Find the area of the gray figure in square units.\n\n[asy]\n\nsize(3cm,3cm);\n\nfill((0,1)--(1,1)--(1,2)--(0,2)--cycle,lightgray);\nfill((0.5,0.5)--(1.5,0.5)--(1.5,1.5)--(0.5,1.5)\n--cycle,lightgray);\nfill((1,0)--(2,0)--(2,1)--(1,1)--cycle,lightgray);\n\ndraw((0,1)--(1,1)--(1,2)--(0,2)--(0,1));\ndraw((0.5,0.5)--(1.5,0.5)--(1.5,1.5)--(0.5,1.5)\n--(0.5,0.5));\ndraw((1,0)--(2,0)--(2,1)--(1,1)--(1,0));\n\ndraw((-0.4,1)--(-0.4,2),Bars);\nlabel(\"6\",(-0.4,1.5),UnFill(1));\n\n[/asy]",
+    "level": "Level 3",
+    "type": "Prealgebra",
+    "solution": "Partition the figure by extending the sides of the ``middle'' square as shown at the right. Each original square contains four $3 \\times 3$ small squares. The shaded figure consists of ten $3 \\times 3$ squares, so its area is $10 \\times 9 = \\boxed{90\\text{ square\nunits}}$.\n\n[asy]\n\nsize(3cm,3cm);\n\nfill((0,1)--(1,1)--(1,2)--(0,2)--cycle,lightgray);\nfill((0.5,0.5)--(1.5,0.5)--(1.5,1.5)--(0.5,1.5)\n--cycle,lightgray);\nfill((1,0)--(2,0)--(2,1)--(1,1)--cycle,lightgray);\n\ndraw((0,1)--(1,1)--(1,2)--(0,2)--(0,1));\ndraw((0.5,0.5)--(1.5,0.5)--(1.5,1.5)--(0.5,1.5)\n--(0.5,0.5));\ndraw((1,0)--(2,0)--(2,1)--(1,1)--(1,0));\n\ndraw((-0.4,1)--(-0.4,2),Bars);\nlabel(\"6\",(-0.4,1.5),UnFill(1));\n\ndraw((0.5,1.5)--(0.5,2));\ndraw((0,1.5)--(0.5,1.5));\n\ndraw((1.5,0.5)--(2,0.5));\ndraw((1.5,0)--(1.5,0.5));\n\nlabel(\"3\",(0.25,2),N);\nlabel(\"3\",(0.75,2),N);\n\n[/asy]",
+    "is_solved": true,
+    "model_solution": "To find the total area of the gray figure, calculate the area of each square and then subtract the areas of the three triangles formed by the overlap. The area of each square is $6^2=36$ square units.\nThe area of each triangle is $\\frac12\\cdot6\\cdot3=9$ square units.\nThere are three overlapping triangles with area 9 square units each. \nThere are three overlapping triangles with area 9 square units each.\nThe total area of the gray figure is $3\\cdot 36-3\\cdot 9=108-27=81$ square units.\nSubtract the areas of the three triangles from the total area of the three squares.\nSubtract the areas of the three triangles from the total area of the three squares.",
+    "steps": [
+        "To find the total area of the gray figure, calculate the area of each square and then subtract the areas of the three triangles formed by the overlap. The area of each square is $6^2=36$ square units.",
+        "The area of each triangle is $\\frac12\\cdot6\\cdot3=9$ square units.",
+        "There are three overlapping triangles with area 9 square units each. \nThere are three overlapping triangles with area 9 square units each.",
+        "The total area of the gray figure is $3\\cdot 36-3\\cdot 9=108-27=81$ square units.",
+        "Subtract the areas of the three triangles from the total area of the three squares.",
+        "Subtract the areas of the three triangles from the total area of the three squares."
+    ],
+    "full_steps": [
+        [
+            "To find the total area of the gray figure, calculate the area of each square and then subtract the areas of the three triangles formed by the overlap. The area of each square is $6^2=36$ square units.",
+            1
+        ],
+        [
+            "The area of each triangle is $\\frac12\\cdot6\\cdot3=9$ square units.",
+            1
+        ],
+        [
+            "There are three overlapping triangles with area 9 square units each. \nThere are three overlapping triangles with area 9 square units each.",
+            1
+        ],
+        [
+            "The total area of the gray figure is $3\\cdot 36-3\\cdot 9=108-27=81$ square units.",
+            1
+        ],
+        [
+            "Subtract the areas of the three triangles from the total area of the three squares.",
+            1
+        ],
+        [
+            "Subtract the areas of the three triangles from the total area of the three squares.",
+            1
+        ]
+    ],
+    "time": 82.03244352340698,
+    "total_tokens": 5409,
+    "final_answer_tokens": 498,
+    "model": "meta-llama/Llama-Vision-Free"
+}

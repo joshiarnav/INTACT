@@ -1,0 +1,21 @@
+{
+    "problem": "Altitudes $\\overline{AD}$ and $\\overline{BE}$ of $\\triangle ABC$ intersect at $H$.  If $\\angle BAC = 54^\\circ$ and $\\angle ABC = 52^\\circ$, then what is $\\angle AHB$?",
+    "level": "Level 4",
+    "type": "Geometry",
+    "solution": "First, we build a diagram:\n\n[asy]\n\nsize(150); defaultpen(linewidth(0.8));\n\npair B = (0,0), C = (3,0), A = (1.8,2), P = foot(A,B,C), Q = foot(B,A,C),H = intersectionpoint(B--Q,A--P);\n\ndraw(A--B--C--cycle);\n\ndraw(A--P^^B--Q);\n\nlabel(\"$A$\",A,N); label(\"$B$\",B,W); label(\"$C$\",C,E); label(\"$D$\",P,S); label(\"$E$\",Q,E); label(\"$H$\",H,NW);\n\ndraw(rightanglemark(C,P,H,3.5));\n\ndraw(rightanglemark(H,Q,C,3.5));\n\n[/asy]\n\nWe have $\\angle AHB = \\angle DHE$, and from quadrilateral $CDHE$, we have  \\begin{align*}\n\\angle DHE &= 360^\\circ - \\angle HEC - \\angle ECD - \\angle CDH \\\\\n&= 360^\\circ - 90^\\circ - \\angle ACB - 90^\\circ\\\\\n&= 180^\\circ - \\angle ACB.\n\\end{align*}From triangle $ABC$, we have $180^\\circ - \\angle ACB = \\angle BAC + \\angle ABC = 54^\\circ + 52^\\circ = \\boxed{106^\\circ}$.",
+    "is_solved": true,
+    "model_solution": "Step 1:  The given problem involves finding the measure of angle AHB in triangle ABC.\nStep 2:  We are given that altitudes AD and BE of triangle ABC intersect at point H.\nStep 3:  It's also mentioned that angle BAC is 54 degrees and angle ABC is 52 degrees.\nStep 4:  We can start by identifying the angles of the triangle and using this information to find the measure of angle AHB.\nStep 5:  We know that the sum of the angles in a triangle is always 180 degrees.\nStep 6:  So, we can start by finding the measure of angle ACB in triangle ABC.\n\nThe final answer is: $\\boxed{74}$",
+    "steps": [
+        "Step 1:  The given problem involves finding the measure of angle AHB in triangle ABC.\nStep 2:  We are given that altitudes AD and BE of triangle ABC intersect at point H.\nStep 3:  It's also mentioned that angle BAC is 54 degrees and angle ABC is 52 degrees.\nStep 4:  We can start by identifying the angles of the triangle and using this information to find the measure of angle AHB.\nStep 5:  We know that the sum of the angles in a triangle is always 180 degrees.\nStep 6:  So, we can start by finding the measure of angle ACB in triangle ABC.\n\nThe final answer is: $\\boxed{74}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  The given problem involves finding the measure of angle AHB in triangle ABC.\nStep 2:  We are given that altitudes AD and BE of triangle ABC intersect at point H.\nStep 3:  It's also mentioned that angle BAC is 54 degrees and angle ABC is 52 degrees.\nStep 4:  We can start by identifying the angles of the triangle and using this information to find the measure of angle AHB.\nStep 5:  We know that the sum of the angles in a triangle is always 180 degrees.\nStep 6:  So, we can start by finding the measure of angle ACB in triangle ABC.\n\nThe final answer is: $\\boxed{74}$",
+            1
+        ]
+    ],
+    "time": 14.503396034240723,
+    "total_tokens": 522,
+    "final_answer_tokens": 242,
+    "model": "meta-llama/Llama-Vision-Free"
+}

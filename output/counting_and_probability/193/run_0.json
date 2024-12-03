@@ -1,0 +1,66 @@
+{
+    "problem": "A target consists of four concentric circles with radii 4 inches, 6 inches, 8 inches and 10 inches as shown. Given that a dart is thrown that hits the target at a random point, what is the probability that it hits a shaded region? Express your answer as a common fraction.\n\n[asy]size(100); import graph; fill(Circle((0,0),5),gray(.6));\n\nclip(Circle((0,0),2) ^^ Circle((0,0),3) ^^ Circle((0,0),4),fillrule(1));\ndraw(Circle((0,0),2) ^^ Circle((0,0),3) ^^ Circle((0,0),4) ^^ Circle((0,0),5));[/asy]",
+    "level": "Level 3",
+    "type": "Counting & Probability",
+    "solution": "The total area of the target is $\\pi\\cdot 10^2=100\\pi$.  The area of the inner shaded region is the area of a circle with radius 4, and that is equal to $\\pi\\cdot 4^2=16\\pi$.  We can calculate the area of the shaded ring as the difference in areas of a circle with radius 8 and with radius 6.  This gives an area of $\\pi \\cdot 8^2 - \\pi \\cdot 6^2 = 28\\pi$.  The total shaded area is $16\\pi+28\\pi=44\\pi$.  The probability a dart will hit a shaded region is equal to $\\frac{44\\pi}{100\\pi}=\\boxed{\\frac{11}{25}}$.",
+    "is_solved": false,
+    "model_solution": "Step 1:  To find the probability of the dart hitting the shaded region, we first need to calculate the total area of the target and the area of the shaded regions.\nStep 2:  The target consists of four concentric circles with radii of 4 inches, 6 inches, 8 inches, and 10 inches.\nStep 3:  We can calculate the area of each circle using the formula $A = \\pi r^2$, where $A$ is the area and $r$ is the radius of the circle.\nStep 4:  The areas of the circles with radii 2, 3, 4, and 5 are $\\pi \\cdot 2^2$, $\\pi \\cdot 3^2$, $\\pi \\cdot 4^2$, and $\\pi \\cdot 5^2$, respectively.\nStep 5:  We can simplify these expressions to get $\\pi \\cdot 4$, $\\pi \\cdot 9$, $\\pi \\cdot 16$, and $\\pi \\cdot 25$.\nStep 6:  Now, we need to find the areas of the shaded regions, which are the annuli (ring-shaped areas) formed by\nStep 2: \nThe areas of the shaded regions can be calculated by subtracting the area of the smaller circle from the area of the larger circle for each annulus. Therefore, the areas of the shaded regions are $\\pi \\cdot 4^2 - \\pi \\cdot 2^2$, $\\pi \\cdot 6^2 - \\pi \\cdot 3^2$, $\\pi \\cdot 8^2 - \\pi \\cdot 4^2$, and $\\pi \\cdot 10^2 - \\pi \\cdot 6^2$, which simplify to $\\pi \\cdot 12$, $\\pi \\cdot 27$, $\\pi \\cdot 40$, and $\\pi \\cdot 56$.\nStep 2: \n$\\pi \\cdot 12 + \\pi \\cdot 27 + \\pi \\cdot 40 + \\pi \\cdot 56$\n$\\pi \\cdot 135$\nThe total area of the target is $\\pi \\cdot 4^2 + \\pi \\cdot 6^2 + \\pi \\cdot 8^2 + \\pi \\cdot 10^2$, which simplifies to $\\pi \\cdot 16 + \\pi \\cdot 36 + \\pi \\cdot 64 + \\pi \\cdot 100$, resulting in $\\pi \\cdot 216$.\nStep 2: $\\frac{\\pi \\cdot 135}{\\pi \\cdot 216}$\n$\\frac{\\pi \\cdot 135}{\\pi \\cdot 216} = \\frac{135}{216} = \\frac{5 \\cdot 27}{3 \\cdot 72} = \\frac{5 \\cdot 3 \\cdot 9}{3 \\cdot 3 \\cdot 24} = \\frac{5 \\cdot 3 \\cdot 3 \\cdot 3}{3 \\cdot 3 \\cdot 3 \\cdot 8} = \\frac{5}{8}$\n$\\frac{\\pi \\cdot 135}{\\pi \\cdot 216} = \\frac{135}{216}$\n$\\frac{135}{216}$\n$\\frac{135}{216}$",
+    "steps": [
+        "Step 1:  To find the probability of the dart hitting the shaded region, we first need to calculate the total area of the target and the area of the shaded regions.\nStep 2:  The target consists of four concentric circles with radii of 4 inches, 6 inches, 8 inches, and 10 inches.\nStep 3:  We can calculate the area of each circle using the formula $A = \\pi r^2$, where $A$ is the area and $r$ is the radius of the circle.\nStep 4:  The areas of the circles with radii 2, 3, 4, and 5 are $\\pi \\cdot 2^2$, $\\pi \\cdot 3^2$, $\\pi \\cdot 4^2$, and $\\pi \\cdot 5^2$, respectively.\nStep 5:  We can simplify these expressions to get $\\pi \\cdot 4$, $\\pi \\cdot 9$, $\\pi \\cdot 16$, and $\\pi \\cdot 25$.\nStep 6:  Now, we need to find the areas of the shaded regions, which are the annuli (ring-shaped areas) formed by",
+        "Step 2: \nThe areas of the shaded regions can be calculated by subtracting the area of the smaller circle from the area of the larger circle for each annulus. Therefore, the areas of the shaded regions are $\\pi \\cdot 4^2 - \\pi \\cdot 2^2$, $\\pi \\cdot 6^2 - \\pi \\cdot 3^2$, $\\pi \\cdot 8^2 - \\pi \\cdot 4^2$, and $\\pi \\cdot 10^2 - \\pi \\cdot 6^2$, which simplify to $\\pi \\cdot 12$, $\\pi \\cdot 27$, $\\pi \\cdot 40$, and $\\pi \\cdot 56$.",
+        "Step 2: \n$\\pi \\cdot 12 + \\pi \\cdot 27 + \\pi \\cdot 40 + \\pi \\cdot 56$",
+        "$\\pi \\cdot 135$",
+        "The total area of the target is $\\pi \\cdot 4^2 + \\pi \\cdot 6^2 + \\pi \\cdot 8^2 + \\pi \\cdot 10^2$, which simplifies to $\\pi \\cdot 16 + \\pi \\cdot 36 + \\pi \\cdot 64 + \\pi \\cdot 100$, resulting in $\\pi \\cdot 216$.",
+        "Step 2: $\\frac{\\pi \\cdot 135}{\\pi \\cdot 216}$",
+        "$\\frac{\\pi \\cdot 135}{\\pi \\cdot 216} = \\frac{135}{216} = \\frac{5 \\cdot 27}{3 \\cdot 72} = \\frac{5 \\cdot 3 \\cdot 9}{3 \\cdot 3 \\cdot 24} = \\frac{5 \\cdot 3 \\cdot 3 \\cdot 3}{3 \\cdot 3 \\cdot 3 \\cdot 8} = \\frac{5}{8}$",
+        "$\\frac{\\pi \\cdot 135}{\\pi \\cdot 216} = \\frac{135}{216}$",
+        "$\\frac{135}{216}$",
+        "$\\frac{135}{216}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  To find the probability of the dart hitting the shaded region, we first need to calculate the total area of the target and the area of the shaded regions.\nStep 2:  The target consists of four concentric circles with radii of 4 inches, 6 inches, 8 inches, and 10 inches.\nStep 3:  We can calculate the area of each circle using the formula $A = \\pi r^2$, where $A$ is the area and $r$ is the radius of the circle.\nStep 4:  The areas of the circles with radii 2, 3, 4, and 5 are $\\pi \\cdot 2^2$, $\\pi \\cdot 3^2$, $\\pi \\cdot 4^2$, and $\\pi \\cdot 5^2$, respectively.\nStep 5:  We can simplify these expressions to get $\\pi \\cdot 4$, $\\pi \\cdot 9$, $\\pi \\cdot 16$, and $\\pi \\cdot 25$.\nStep 6:  Now, we need to find the areas of the shaded regions, which are the annuli (ring-shaped areas) formed by",
+            1
+        ],
+        [
+            "Step 2: \nThe areas of the shaded regions can be calculated by subtracting the area of the smaller circle from the area of the larger circle for each annulus. Therefore, the areas of the shaded regions are $\\pi \\cdot 4^2 - \\pi \\cdot 2^2$, $\\pi \\cdot 6^2 - \\pi \\cdot 3^2$, $\\pi \\cdot 8^2 - \\pi \\cdot 4^2$, and $\\pi \\cdot 10^2 - \\pi \\cdot 6^2$, which simplify to $\\pi \\cdot 12$, $\\pi \\cdot 27$, $\\pi \\cdot 40$, and $\\pi \\cdot 56$.",
+            1
+        ],
+        [
+            "Step 2: \n$\\pi \\cdot 12 + \\pi \\cdot 27 + \\pi \\cdot 40 + \\pi \\cdot 56$",
+            1
+        ],
+        [
+            "$\\pi \\cdot 135$",
+            1
+        ],
+        [
+            "The total area of the target is $\\pi \\cdot 4^2 + \\pi \\cdot 6^2 + \\pi \\cdot 8^2 + \\pi \\cdot 10^2$, which simplifies to $\\pi \\cdot 16 + \\pi \\cdot 36 + \\pi \\cdot 64 + \\pi \\cdot 100$, resulting in $\\pi \\cdot 216$.",
+            1
+        ],
+        [
+            "Step 2: $\\frac{\\pi \\cdot 135}{\\pi \\cdot 216}$",
+            1
+        ],
+        [
+            "$\\frac{\\pi \\cdot 135}{\\pi \\cdot 216} = \\frac{135}{216} = \\frac{5 \\cdot 27}{3 \\cdot 72} = \\frac{5 \\cdot 3 \\cdot 9}{3 \\cdot 3 \\cdot 24} = \\frac{5 \\cdot 3 \\cdot 3 \\cdot 3}{3 \\cdot 3 \\cdot 3 \\cdot 8} = \\frac{5}{8}$",
+            1
+        ],
+        [
+            "$\\frac{\\pi \\cdot 135}{\\pi \\cdot 216} = \\frac{135}{216}$",
+            1
+        ],
+        [
+            "$\\frac{135}{216}$",
+            1
+        ],
+        [
+            "$\\frac{135}{216}$",
+            1
+        ]
+    ],
+    "time": 226.29811453819275,
+    "total_tokens": 15077,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,66 @@
+{
+    "problem": "Every card in a deck has a picture of one shape - circle, square, or triangle, which is painted in one of the three colors - red, blue, or green. Furthermore, each color is applied in one of three shades - light, medium, or dark. The deck has 27 cards, with every shape-color-shade combination represented. A set of three cards from the deck is called complementary if all of the following statements are true:\ni. Either each of the three cards has a different shape or all three of the card have the same shape.\nii. Either each of the three cards has a different color or all three of the cards have the same color.\niii. Either each of the three cards has a different shade or all three of the cards have the same shade.\nHow many different complementary three-card sets are there?\n",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "Case 1: All three attributes are the same. This is impossible since sets contain distinct cards.\nCase 2: Two of the three attributes are the same. There are ${3\\choose 2}$ ways to pick the two attributes in question. Then there are $3$ ways to pick the value of the first attribute, $3$ ways to pick the value of the second attribute, and $1$ way to arrange the positions of the third attribute, giving us ${3\\choose 2} \\cdot 3 \\cdot 3 = 27$ ways.\nCase 3: One of the three attributes are the same. There are ${3\\choose 1}$ ways to pick the one attribute in question, and then $3$ ways to pick the value of that attribute. Then there are $3!$ ways to arrange the positions of the next two attributes, giving us ${3\\choose 1} \\cdot 3 \\cdot 3! = 54$ ways.\nCase 4: None of the three attributes are the same. We fix the order of the first attribute, and then there are $3!$ ways to pick the ordering of the second attribute and $3!$ ways to pick the ordering of the third attribute. This gives us $(3!)^2 = 36$ ways.\nAdding the cases up, we get $27 + 54 + 36 = \\boxed{117}$.",
+    "is_solved": false,
+    "model_solution": "Case 1: All three attributes are the same. \n\nThere are 27 ways to choose a card that is a given shape-color-shade combination.\nCase 2: Two of the three attributes are the same.\n\nThere are $\\binom{3}{2}$ ways to choose which two attributes are the same, and $3$ ways to choose the shared value of those attributes. There are $27$ ways to choose the card that has a different value for the remaining attribute. There are $3$ ways to choose the other two cards, such that they have the same value for the remaining attribute and the same value for the two attributes that are the same.\n\n$\\binom{3}{2}\\cdot 3\\cdot 27\\cdot 3$\nCase 3: One of the three attributes are the same.\n\nThere are $\\binom{3}{1}$ ways to choose which attribute is the same, and $3$ ways to choose the shared value of that attribute. There are $9$ ways to choose the card that has a different value for the two attributes, and $2$ ways to choose the other two cards, such that they have the same value for the attribute that is the same and different values for the other two attributes.\nCase 4: No attributes are the same.\n\nThere are 3! ways to choose the shape, color, and shade of one card. There are 9 ways to choose the shape, color, and shade of the second card. There are 6 ways to choose the shape, color, and shade of the third card.\n\n$3!\\cdot 9\\cdot 6$\nCase 4: No attributes are the same.\n\n$\\binom{3}{1}\\cdot 3\\cdot 9\\cdot 2$\nCase 4: No attributes are the same.\n\n$3!\\cdot 9\\cdot 6$\n$\\binom{3}{1}\\cdot 3\\cdot 9\\cdot 2 + 3!\\cdot 9\\cdot 6$\n$\\binom{3}{2}\\cdot 3\\cdot 27\\cdot 3 + 3!\\cdot 9\\cdot 6$\n$\\binom{3}{2}\\cdot 3\\cdot 27\\cdot 3 + 3!\\cdot 9\\cdot 6 = 729 + 486 = 1215$\n$\\binom{3}{2}\\cdot 3\\cdot 27\\cdot 3 + 3!\\cdot 9\\cdot 6$",
+    "steps": [
+        "Case 1: All three attributes are the same. \n\nThere are 27 ways to choose a card that is a given shape-color-shade combination.",
+        "Case 2: Two of the three attributes are the same.\n\nThere are $\\binom{3}{2}$ ways to choose which two attributes are the same, and $3$ ways to choose the shared value of those attributes. There are $27$ ways to choose the card that has a different value for the remaining attribute. There are $3$ ways to choose the other two cards, such that they have the same value for the remaining attribute and the same value for the two attributes that are the same.\n\n$\\binom{3}{2}\\cdot 3\\cdot 27\\cdot 3$",
+        "Case 3: One of the three attributes are the same.\n\nThere are $\\binom{3}{1}$ ways to choose which attribute is the same, and $3$ ways to choose the shared value of that attribute. There are $9$ ways to choose the card that has a different value for the two attributes, and $2$ ways to choose the other two cards, such that they have the same value for the attribute that is the same and different values for the other two attributes.",
+        "Case 4: No attributes are the same.\n\nThere are 3! ways to choose the shape, color, and shade of one card. There are 9 ways to choose the shape, color, and shade of the second card. There are 6 ways to choose the shape, color, and shade of the third card.\n\n$3!\\cdot 9\\cdot 6$",
+        "Case 4: No attributes are the same.\n\n$\\binom{3}{1}\\cdot 3\\cdot 9\\cdot 2$",
+        "Case 4: No attributes are the same.\n\n$3!\\cdot 9\\cdot 6$",
+        "$\\binom{3}{1}\\cdot 3\\cdot 9\\cdot 2 + 3!\\cdot 9\\cdot 6$",
+        "$\\binom{3}{2}\\cdot 3\\cdot 27\\cdot 3 + 3!\\cdot 9\\cdot 6$",
+        "$\\binom{3}{2}\\cdot 3\\cdot 27\\cdot 3 + 3!\\cdot 9\\cdot 6 = 729 + 486 = 1215$",
+        "$\\binom{3}{2}\\cdot 3\\cdot 27\\cdot 3 + 3!\\cdot 9\\cdot 6$"
+    ],
+    "full_steps": [
+        [
+            "Case 1: All three attributes are the same. \n\nThere are 27 ways to choose a card that is a given shape-color-shade combination.",
+            1
+        ],
+        [
+            "Case 2: Two of the three attributes are the same.\n\nThere are $\\binom{3}{2}$ ways to choose which two attributes are the same, and $3$ ways to choose the shared value of those attributes. There are $27$ ways to choose the card that has a different value for the remaining attribute. There are $3$ ways to choose the other two cards, such that they have the same value for the remaining attribute and the same value for the two attributes that are the same.\n\n$\\binom{3}{2}\\cdot 3\\cdot 27\\cdot 3$",
+            1
+        ],
+        [
+            "Case 3: One of the three attributes are the same.\n\nThere are $\\binom{3}{1}$ ways to choose which attribute is the same, and $3$ ways to choose the shared value of that attribute. There are $9$ ways to choose the card that has a different value for the two attributes, and $2$ ways to choose the other two cards, such that they have the same value for the attribute that is the same and different values for the other two attributes.",
+            1
+        ],
+        [
+            "Case 4: No attributes are the same.\n\nThere are 3! ways to choose the shape, color, and shade of one card. There are 9 ways to choose the shape, color, and shade of the second card. There are 6 ways to choose the shape, color, and shade of the third card.\n\n$3!\\cdot 9\\cdot 6$",
+            1
+        ],
+        [
+            "Case 4: No attributes are the same.\n\n$\\binom{3}{1}\\cdot 3\\cdot 9\\cdot 2$",
+            1
+        ],
+        [
+            "Case 4: No attributes are the same.\n\n$3!\\cdot 9\\cdot 6$",
+            1
+        ],
+        [
+            "$\\binom{3}{1}\\cdot 3\\cdot 9\\cdot 2 + 3!\\cdot 9\\cdot 6$",
+            1
+        ],
+        [
+            "$\\binom{3}{2}\\cdot 3\\cdot 27\\cdot 3 + 3!\\cdot 9\\cdot 6$",
+            1
+        ],
+        [
+            "$\\binom{3}{2}\\cdot 3\\cdot 27\\cdot 3 + 3!\\cdot 9\\cdot 6 = 729 + 486 = 1215$",
+            1
+        ],
+        [
+            "$\\binom{3}{2}\\cdot 3\\cdot 27\\cdot 3 + 3!\\cdot 9\\cdot 6$",
+            1
+        ]
+    ],
+    "time": 135.5888991355896,
+    "total_tokens": 11480,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

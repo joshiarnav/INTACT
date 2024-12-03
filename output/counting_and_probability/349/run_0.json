@@ -1,0 +1,56 @@
+{
+    "problem": "If Anna flips 8 coins, what is the probability that she gets more heads than tails?",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "We could solve this problem using casework, but using a little bit of symmetry and complementary probability gives us a more elegant solution. Since each coin flips heads and tails with equal probability, by the principle of symmetry the probability of getting more heads than tails is the equal to the probability of getting more tails than heads. Additionally, there are only three possible outcomes: getting more heads than tails, getting more tails than heads, or getting the same number of both. If we let $x$ represent the probability of the first outcome (which is the same as the probability of the second outcome) and $y$ represent the probability of the third outcome, we get the equation $2x + y = 1 \\Rightarrow x=\\dfrac{1-y}{2}$. So all we need to do is calculate the probability of getting the same number of heads and tails and we can then easily solve for what we want using the principle of complementary probability. Since there are two equally likely outcomes for each flip, there are a total of $2^8$ equally likely possible outcomes for flipping the 8 coins. We will have the same number of both heads and tails if we have exactly 4 of each, which we can count by selecting 4 out of the 8 flips to be heads which can occur in $\\binom{8}{4}=70$ ways. So $y=\\dfrac{70}{256}=\\dfrac{35}{128}$, and substituting that back into our first equation gives us the probability that we want: $x=\\boxed{\\dfrac{93}{256}}$.",
+    "is_solved": true,
+    "model_solution": "Step 1:  Determine the total number of possible outcomes when flipping 8 coins.\nThere are 2^8 = 256 possible outcomes.\nStep 2:  Count the number of outcomes where Anna gets more heads than tails by finding the combinations of 9 heads or 10 heads, since getting exactly 4.5 heads is not possible.\nStep 3:  The number of combinations for 9 heads out of 8 coins is 8 choose 9, which is not possible, so we only consider 10 heads being not possible as well. However, we can have 5, 6, 7, or 8 heads. The number of combinations for these scenarios are 8 choose 5, 8 choose 6, 8 choose 7, and 8 choose 8 respectively.\nStep 4: \n8 choose 5 = 56\n8 choose 6 = 28\n8 choose 7 = 8\n8 choose 8 = 1\nTotal combinations = 56 + 28 + 8 + 1 = 93\nStep 5: \nThe probability of getting more heads than tails is the total number of combinations with more heads than tails divided by the total number of possible outcomes.\nProbability = (Total combinations) / (Total possible outcomes)\n= 93 / 256\nCalculate the probability.\n= 93/256 \n= 0.36328125\nStep 6:\nProbability of getting more heads than tails = 93/256 = 0.36328125\nStep 7: Final Answer: 0.36328125",
+    "steps": [
+        "Step 1:  Determine the total number of possible outcomes when flipping 8 coins.\nThere are 2^8 = 256 possible outcomes.",
+        "Step 2:  Count the number of outcomes where Anna gets more heads than tails by finding the combinations of 9 heads or 10 heads, since getting exactly 4.5 heads is not possible.",
+        "Step 3:  The number of combinations for 9 heads out of 8 coins is 8 choose 9, which is not possible, so we only consider 10 heads being not possible as well. However, we can have 5, 6, 7, or 8 heads. The number of combinations for these scenarios are 8 choose 5, 8 choose 6, 8 choose 7, and 8 choose 8 respectively.",
+        "Step 4: \n8 choose 5 = 56\n8 choose 6 = 28\n8 choose 7 = 8\n8 choose 8 = 1\nTotal combinations = 56 + 28 + 8 + 1 = 93",
+        "Step 5: \nThe probability of getting more heads than tails is the total number of combinations with more heads than tails divided by the total number of possible outcomes.\nProbability = (Total combinations) / (Total possible outcomes)\n= 93 / 256",
+        "Calculate the probability.\n= 93/256 \n= 0.36328125",
+        "Step 6:\nProbability of getting more heads than tails = 93/256 = 0.36328125",
+        "Step 7: Final Answer: 0.36328125"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Determine the total number of possible outcomes when flipping 8 coins.\nThere are 2^8 = 256 possible outcomes.",
+            1
+        ],
+        [
+            "Step 2:  Count the number of outcomes where Anna gets more heads than tails by finding the combinations of 9 heads or 10 heads, since getting exactly 4.5 heads is not possible.",
+            1
+        ],
+        [
+            "Step 3:  The number of combinations for 9 heads out of 8 coins is 8 choose 9, which is not possible, so we only consider 10 heads being not possible as well. However, we can have 5, 6, 7, or 8 heads. The number of combinations for these scenarios are 8 choose 5, 8 choose 6, 8 choose 7, and 8 choose 8 respectively.",
+            1
+        ],
+        [
+            "Step 4: \n8 choose 5 = 56\n8 choose 6 = 28\n8 choose 7 = 8\n8 choose 8 = 1\nTotal combinations = 56 + 28 + 8 + 1 = 93",
+            1
+        ],
+        [
+            "Step 5: \nThe probability of getting more heads than tails is the total number of combinations with more heads than tails divided by the total number of possible outcomes.\nProbability = (Total combinations) / (Total possible outcomes)\n= 93 / 256",
+            1
+        ],
+        [
+            "Calculate the probability.\n= 93/256 \n= 0.36328125",
+            1
+        ],
+        [
+            "Step 6:\nProbability of getting more heads than tails = 93/256 = 0.36328125",
+            1
+        ],
+        [
+            "Step 7: Final Answer: 0.36328125",
+            1
+        ]
+    ],
+    "time": 105.15140223503113,
+    "total_tokens": 4746,
+    "final_answer_tokens": 407,
+    "model": "meta-llama/Llama-Vision-Free"
+}

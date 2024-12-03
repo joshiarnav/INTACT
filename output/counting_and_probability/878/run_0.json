@@ -1,0 +1,66 @@
+{
+    "problem": "Legolas flips a fair coin 2008 times, and Gimli flips another fair coin 2009 times. What is the probability that Gimli flips more heads than Legolas?",
+    "level": "Level 3",
+    "type": "Counting & Probability",
+    "solution": "After Gimli has flipped his coin 2008 times, the probability that he has more heads than Legolas is equal the probability that Legolas has more heads than him. Call this probability $p$. Then there is a $1-2p$ probability that they have the same number of heads. If Gimli already has more heads, he will have more heads after he flips again. If he has fewer heads, he cannot have more after just one more flip. If they are even, there is a $1/2$ chance he will flip another head, and therefore have more heads. In all, Gimli flips more heads than Legolas with probability $p+\\frac12(1-2p)=p+\\frac12-p=\\boxed{\\frac{1}{2}}$.",
+    "is_solved": false,
+    "model_solution": "Let $L$ denote the number of heads that Legolas flips and $G$ denote the number of heads Gimli flips. We can represent the probability that Gimli flips more heads than Legolas as\n\n\\[P(G>L).\\]\nNote that \\(L\\) and \\(G\\) are binomial random variables with parameters \\((2008,p)\\) and \\((2009,p)\\) respectively, where \\(p=\\frac{1}{2}\\). Because the binomial distribution is symmetric, the events \\(L=k\\) and \\(L=2008-k\\) have the same probability for \\(0\\leq k\\leq 2008\\). Therefore, we can write\n\\[P(G>L)=\\sum_{k=0}^{2008}\\binom{2008}{k}\\left(\\frac{1}{2}\\right)^{k}\\left( \\frac{1}{2}\\right)^{2008-k}P(G>2008-k).\\]\n\\[P(G>2008-k)=\\sum_{j=2009-k}^{2009}\\binom{2009}{j}\\left(\\frac{1}{2}\\right)^{j} \\left(\\frac{1}{2}\\right)^{2009-j}.\\]\n\\[\\sum_{k=0}^{2008} \\left[\\binom{2008}{k}\\left(\\frac{1}{2}\\right)^{k}\\left(\\frac{1}{2} \\right)^{2008-k}\\sum_{j=2009-k}^{2009}\\binom{2009}{j}\\left(\\frac{1}{2}\\right)^{j }\\left(\\frac{1}{2}\\right)^{2009-j}\\right].\\]\n\\[\\sum_{k=0}^{2008} \\left[\\binom{2008}{k}\\left(\\frac{1}{2}\\right)^{2008}\\sum_{j=2009-k} ^{2009}\\binom{2009}{j}\\left(\\frac{1}{2}\\right)^{2009}\\right].\\]\n\\[\\sum_{k=0}^{2008} \\left[\\binom{2008}{k}\\left(\\frac{1}{2}\\right)^{2008}\\sum_{j=2009-k} ^{2009}\\binom{2009}{j}\\left(\\frac{1}{2}\\right)^{2009}\\right]\\] \\[= \\frac{1}{2^{2008}}\\sum_{k=0}^{2008}\\binom{2008}{k}\\sum_{j=2009-k} ^{2009}\\binom{2009}{j}\\]\n\\[\\sum_{k=0}^{2008}\\binom{2008}{k}\\sum_{j=2009-k}^{2009}\\binom{2009}{j}=\\sum_{k=0 }^{2008}\\binom{2008}{k}\\left[\\binom{2009}{2009-k}+\\binom{2009}{2009-(2008-k)}\\right]\\]\n\\[\\sum_{k=0}^{2008}\\binom{2008}{k}\\left[\\binom{2009}{2009-k}+\\binom{2009}{2009-(200 8-k)}\\right]=\\sum_{k=0}^{2008}\\binom{2008}{k}\\left[\\binom{2009}{2009-k}+\\binom{ 2009}{k}\\right]\\]\n\\[\\sum_{k=0}^{2008}\\binom{2008}{k}\\left[\\binom{2009}{2009-k}+\\binom{2009}{k}\\right] =\\sum_{k=0}^{2008}\\binom{2008}{k}\\left[\\binom{2009}{2009-k}+\\binom{2009}{k}\\right]\\]\n\\[=\\sum_{k=0}^{2008}\\binom{2008}{k}\\binom{2009}{2009-k}+\\sum_{k=0}^{2008}\\binom{2 009}{k}\\binom{2008}{k}\\]\n\\[=\\sum_{k=0}^{2008}\\binom{2008}{k}\\binom{2009}{2009-k}+\\sum_{j=0}^{2008} \\binom{2009}{j}\\binom{2008}{j}.\\]",
+    "steps": [
+        "Let $L$ denote the number of heads that Legolas flips and $G$ denote the number of heads Gimli flips. We can represent the probability that Gimli flips more heads than Legolas as\n\n\\[P(G>L).\\]",
+        "Note that \\(L\\) and \\(G\\) are binomial random variables with parameters \\((2008,p)\\) and \\((2009,p)\\) respectively, where \\(p=\\frac{1}{2}\\). Because the binomial distribution is symmetric, the events \\(L=k\\) and \\(L=2008-k\\) have the same probability for \\(0\\leq k\\leq 2008\\). Therefore, we can write\n\\[P(G>L)=\\sum_{k=0}^{2008}\\binom{2008}{k}\\left(\\frac{1}{2}\\right)^{k}\\left( \\frac{1}{2}\\right)^{2008-k}P(G>2008-k).\\]\n\\[P(G>2008-k)=\\sum_{j=2009-k}^{2009}\\binom{2009}{j}\\left(\\frac{1}{2}\\right)^{j} \\left(\\frac{1}{2}\\right)^{2009-j}.\\]",
+        "\\[\\sum_{k=0}^{2008} \\left[\\binom{2008}{k}\\left(\\frac{1}{2}\\right)^{k}\\left(\\frac{1}{2} \\right)^{2008-k}\\sum_{j=2009-k}^{2009}\\binom{2009}{j}\\left(\\frac{1}{2}\\right)^{j }\\left(\\frac{1}{2}\\right)^{2009-j}\\right].\\]",
+        "\\[\\sum_{k=0}^{2008} \\left[\\binom{2008}{k}\\left(\\frac{1}{2}\\right)^{2008}\\sum_{j=2009-k} ^{2009}\\binom{2009}{j}\\left(\\frac{1}{2}\\right)^{2009}\\right].\\]",
+        "\\[\\sum_{k=0}^{2008} \\left[\\binom{2008}{k}\\left(\\frac{1}{2}\\right)^{2008}\\sum_{j=2009-k} ^{2009}\\binom{2009}{j}\\left(\\frac{1}{2}\\right)^{2009}\\right]\\] \\[= \\frac{1}{2^{2008}}\\sum_{k=0}^{2008}\\binom{2008}{k}\\sum_{j=2009-k} ^{2009}\\binom{2009}{j}\\]",
+        "\\[\\sum_{k=0}^{2008}\\binom{2008}{k}\\sum_{j=2009-k}^{2009}\\binom{2009}{j}=\\sum_{k=0 }^{2008}\\binom{2008}{k}\\left[\\binom{2009}{2009-k}+\\binom{2009}{2009-(2008-k)}\\right]\\]",
+        "\\[\\sum_{k=0}^{2008}\\binom{2008}{k}\\left[\\binom{2009}{2009-k}+\\binom{2009}{2009-(200 8-k)}\\right]=\\sum_{k=0}^{2008}\\binom{2008}{k}\\left[\\binom{2009}{2009-k}+\\binom{ 2009}{k}\\right]\\]",
+        "\\[\\sum_{k=0}^{2008}\\binom{2008}{k}\\left[\\binom{2009}{2009-k}+\\binom{2009}{k}\\right] =\\sum_{k=0}^{2008}\\binom{2008}{k}\\left[\\binom{2009}{2009-k}+\\binom{2009}{k}\\right]\\]",
+        "\\[=\\sum_{k=0}^{2008}\\binom{2008}{k}\\binom{2009}{2009-k}+\\sum_{k=0}^{2008}\\binom{2 009}{k}\\binom{2008}{k}\\]",
+        "\\[=\\sum_{k=0}^{2008}\\binom{2008}{k}\\binom{2009}{2009-k}+\\sum_{j=0}^{2008} \\binom{2009}{j}\\binom{2008}{j}.\\]"
+    ],
+    "full_steps": [
+        [
+            "Let $L$ denote the number of heads that Legolas flips and $G$ denote the number of heads Gimli flips. We can represent the probability that Gimli flips more heads than Legolas as\n\n\\[P(G>L).\\]",
+            1
+        ],
+        [
+            "Note that \\(L\\) and \\(G\\) are binomial random variables with parameters \\((2008,p)\\) and \\((2009,p)\\) respectively, where \\(p=\\frac{1}{2}\\). Because the binomial distribution is symmetric, the events \\(L=k\\) and \\(L=2008-k\\) have the same probability for \\(0\\leq k\\leq 2008\\). Therefore, we can write\n\\[P(G>L)=\\sum_{k=0}^{2008}\\binom{2008}{k}\\left(\\frac{1}{2}\\right)^{k}\\left( \\frac{1}{2}\\right)^{2008-k}P(G>2008-k).\\]\n\\[P(G>2008-k)=\\sum_{j=2009-k}^{2009}\\binom{2009}{j}\\left(\\frac{1}{2}\\right)^{j} \\left(\\frac{1}{2}\\right)^{2009-j}.\\]",
+            1
+        ],
+        [
+            "\\[\\sum_{k=0}^{2008} \\left[\\binom{2008}{k}\\left(\\frac{1}{2}\\right)^{k}\\left(\\frac{1}{2} \\right)^{2008-k}\\sum_{j=2009-k}^{2009}\\binom{2009}{j}\\left(\\frac{1}{2}\\right)^{j }\\left(\\frac{1}{2}\\right)^{2009-j}\\right].\\]",
+            1
+        ],
+        [
+            "\\[\\sum_{k=0}^{2008} \\left[\\binom{2008}{k}\\left(\\frac{1}{2}\\right)^{2008}\\sum_{j=2009-k} ^{2009}\\binom{2009}{j}\\left(\\frac{1}{2}\\right)^{2009}\\right].\\]",
+            1
+        ],
+        [
+            "\\[\\sum_{k=0}^{2008} \\left[\\binom{2008}{k}\\left(\\frac{1}{2}\\right)^{2008}\\sum_{j=2009-k} ^{2009}\\binom{2009}{j}\\left(\\frac{1}{2}\\right)^{2009}\\right]\\] \\[= \\frac{1}{2^{2008}}\\sum_{k=0}^{2008}\\binom{2008}{k}\\sum_{j=2009-k} ^{2009}\\binom{2009}{j}\\]",
+            1
+        ],
+        [
+            "\\[\\sum_{k=0}^{2008}\\binom{2008}{k}\\sum_{j=2009-k}^{2009}\\binom{2009}{j}=\\sum_{k=0 }^{2008}\\binom{2008}{k}\\left[\\binom{2009}{2009-k}+\\binom{2009}{2009-(2008-k)}\\right]\\]",
+            1
+        ],
+        [
+            "\\[\\sum_{k=0}^{2008}\\binom{2008}{k}\\left[\\binom{2009}{2009-k}+\\binom{2009}{2009-(200 8-k)}\\right]=\\sum_{k=0}^{2008}\\binom{2008}{k}\\left[\\binom{2009}{2009-k}+\\binom{ 2009}{k}\\right]\\]",
+            1
+        ],
+        [
+            "\\[\\sum_{k=0}^{2008}\\binom{2008}{k}\\left[\\binom{2009}{2009-k}+\\binom{2009}{k}\\right] =\\sum_{k=0}^{2008}\\binom{2008}{k}\\left[\\binom{2009}{2009-k}+\\binom{2009}{k}\\right]\\]",
+            1
+        ],
+        [
+            "\\[=\\sum_{k=0}^{2008}\\binom{2008}{k}\\binom{2009}{2009-k}+\\sum_{k=0}^{2008}\\binom{2 009}{k}\\binom{2008}{k}\\]",
+            1
+        ],
+        [
+            "\\[=\\sum_{k=0}^{2008}\\binom{2008}{k}\\binom{2009}{2009-k}+\\sum_{j=0}^{2008} \\binom{2009}{j}\\binom{2008}{j}.\\]",
+            1
+        ]
+    ],
+    "time": 129.98862862586975,
+    "total_tokens": 13558,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

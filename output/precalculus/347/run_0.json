@@ -1,0 +1,61 @@
+{
+    "problem": "Find the vector $\\mathbf{v}$ such that\n\\[\\begin{pmatrix} 2 & 3 & -1 \\\\ 0 & 4 & 5 \\\\ 4 & 0 & -2 \\end{pmatrix} \\mathbf{v} = \\begin{pmatrix} 2 \\\\ 27 \\\\ -14 \\end{pmatrix}.\\]",
+    "level": "Level 3",
+    "type": "Precalculus",
+    "solution": "Let $\\mathbf{v} = \\begin{pmatrix} x \\\\ y \\\\  z \\end{pmatrix}.$  Then\n\\[\\begin{pmatrix} 2 & 3 & -1 \\\\ 0 & 4 & 5 \\\\ 4 & 0 & -2 \\end{pmatrix} \\begin{pmatrix} x \\\\ y \\\\  z \\end{pmatrix} = \\begin{pmatrix} 2 \\\\ 27 \\\\ -14 \\end{pmatrix}.\\]This gives us the system of equations\n\\begin{align*}\n2x + 3y - z &= 2, \\\\\n4y + 5z &= 27, \\\\\n4x - 2z &= -14.\n\\end{align*}Solving, we find $x = -2,$ $y = 3,$ and $z = 3,$ so $\\mathbf{v} = \\boxed{\\begin{pmatrix} -2 \\\\ 3 \\\\ 3 \\end{pmatrix}}.$",
+    "is_solved": true,
+    "model_solution": "## Step 1: Write the given matrix equation in the form of $\\mathbf{Av} = \\mathbf{b}$.\n\\[\\begin{pmatrix} 2 & 3 & -1 \\\\ 0 & 4 & 5 \\\\ 4 & 0 & -2 \\end{pmatrix} \\mathbf{v} = \\begin{pmatrix} 2 \\\\ 27 \\\\ -14 \\end{pmatrix}.\\]\n\n## Step 2: Write the augmented matrix $\\left[\\mathbf{A}|\\mathbf{b}\\right]$ by combining $\\mathbf{A}$ and $\\mathbf{b}$.\n\\[\\left[\\mathbf{A}|\\mathbf{b}\\right] = \\begin{pmatrix} 2 & 3 & -1 & | & 2 \\\\ 0 & 4 & 5 & | & 27 \\\\ 4 & 0 & -2 & | & -14 \\end{pmatrix}.\\]\n\n## Step 3: Perform Gaussian elimination to transform the augmented matrix to row-echelon form.\nPerforming row operations to get the row-echelon form:\n- Divide the first row by\n## Step 4: Divide the first row by 2 to get a leading 1.\n\\[\\left[\\mathbf{A}|\\mathbf{b}\\right] = \\begin{pmatrix} 1 & \\frac{3}{2} & -\\frac{1}{2} & | & 1 \\\\ 0 & 4 & 5 & | & 27 \\\\ 4 & 0 & -2 & | & -14 \\end{pmatrix}.\\]\n## Step 5: Perform $R_3 - 4R_1$ to eliminate the entry below the leading 1 in the first column.\n\\[\\left[\\mathbf{A}|\\mathbf{b}\\right] = \\begin{pmatrix} 1 & \\frac{3}{2} & -\\frac{1}{2} & | & 1 \\\\ 0 & 4 & 5 & | & 27 \\\\ 0 & -6 & -4 & | & -30 \\end{pmatrix}\\]\n## Step 6: Perform $R_3 + 6R_2$ to get a leading 1 in the second row, second column.\n\\[\\left[\\mathbf{A}|\\mathbf{b}\\right] = \\begin{pmatrix} 1 & \\frac{3}{2} & -\\frac{1}{2} & | & 1 \\\\ 0 & 4 & 5 & | & 27 \\\\ 0 & 0 & -34 & | & -222 \\end{pmatrix}\\]\n## Step 7: Perform $R_2 \\div 4$ to get a leading 1 in the second row, second column.\n\\[\\left[\\mathbf{A}|\\mathbf{b}\\right] = \\begin{pmatrix} 1 & \\frac{3}{2} & -\\frac{1}{2} & | & 1 \\\\ 0 & 1 & \\frac{5}{4} & | & \\frac{27}{4} \\\\ 0 & 0 & -34 & | & -222 \\end{pmatrix}\\]\n## Step 8: Perform $R_1 - \\frac{3}{2}R_2$ and $R_1 + \\frac{1}{2}R_3$ to eliminate the entries below the leading 1 in the first column.\n\\[\\left[\\mathbf{A}|\\mathbf{b}\\right] = \\begin{pmatrix} 1 & 0 & -2 & | & \\frac{7}{4} \\\\ 0 & 1 & \\frac{5}{4} & | & \\frac{27}{4} \\\\ 0 & 0 & -34 & | & -222 \\end{pmatrix}\\]\n## Step 9: Perform $R_1 + 2R_3$ and $R_2 - \\frac{5}{34}R_3$ to get a leading 1 in the third row, third column.\n\\[\\left[\\mathbf{A}|\\mathbf{b}\\right] = \\begin{pmatrix} 1 & 0 & 0 & | & -\\frac{167}{34} \\\\ 0 & 1 & 0 & | & \\frac{119}{34} \\\\ 0 & 0 & 1 & | & -6 \\end{pmatrix}\\]\n## Step 10: From the row-echelon form, read off the solution to the system of linear equations.\n\\[\\mathbf{v} = \\begin{pmatrix} -\\frac{167}{34} \\\\ \\frac{119}{34} \\\\ -6 \\end{pmatrix}.\\]\n## Step 11: Final Answer:\n\\[\\mathbf{v} = \\begin{pmatrix} -\\frac{167}{34} \\\\ \\frac{119}{34} \\\\ -6 \\end{pmatrix}.\\]",
+    "steps": [
+        "## Step 1: Write the given matrix equation in the form of $\\mathbf{Av} = \\mathbf{b}$.\n\\[\\begin{pmatrix} 2 & 3 & -1 \\\\ 0 & 4 & 5 \\\\ 4 & 0 & -2 \\end{pmatrix} \\mathbf{v} = \\begin{pmatrix} 2 \\\\ 27 \\\\ -14 \\end{pmatrix}.\\]\n\n## Step 2: Write the augmented matrix $\\left[\\mathbf{A}|\\mathbf{b}\\right]$ by combining $\\mathbf{A}$ and $\\mathbf{b}$.\n\\[\\left[\\mathbf{A}|\\mathbf{b}\\right] = \\begin{pmatrix} 2 & 3 & -1 & | & 2 \\\\ 0 & 4 & 5 & | & 27 \\\\ 4 & 0 & -2 & | & -14 \\end{pmatrix}.\\]\n\n## Step 3: Perform Gaussian elimination to transform the augmented matrix to row-echelon form.\nPerforming row operations to get the row-echelon form:\n- Divide the first row by",
+        "## Step 4: Divide the first row by 2 to get a leading 1.\n\\[\\left[\\mathbf{A}|\\mathbf{b}\\right] = \\begin{pmatrix} 1 & \\frac{3}{2} & -\\frac{1}{2} & | & 1 \\\\ 0 & 4 & 5 & | & 27 \\\\ 4 & 0 & -2 & | & -14 \\end{pmatrix}.\\]",
+        "## Step 5: Perform $R_3 - 4R_1$ to eliminate the entry below the leading 1 in the first column.\n\\[\\left[\\mathbf{A}|\\mathbf{b}\\right] = \\begin{pmatrix} 1 & \\frac{3}{2} & -\\frac{1}{2} & | & 1 \\\\ 0 & 4 & 5 & | & 27 \\\\ 0 & -6 & -4 & | & -30 \\end{pmatrix}\\]",
+        "## Step 6: Perform $R_3 + 6R_2$ to get a leading 1 in the second row, second column.\n\\[\\left[\\mathbf{A}|\\mathbf{b}\\right] = \\begin{pmatrix} 1 & \\frac{3}{2} & -\\frac{1}{2} & | & 1 \\\\ 0 & 4 & 5 & | & 27 \\\\ 0 & 0 & -34 & | & -222 \\end{pmatrix}\\]",
+        "## Step 7: Perform $R_2 \\div 4$ to get a leading 1 in the second row, second column.\n\\[\\left[\\mathbf{A}|\\mathbf{b}\\right] = \\begin{pmatrix} 1 & \\frac{3}{2} & -\\frac{1}{2} & | & 1 \\\\ 0 & 1 & \\frac{5}{4} & | & \\frac{27}{4} \\\\ 0 & 0 & -34 & | & -222 \\end{pmatrix}\\]",
+        "## Step 8: Perform $R_1 - \\frac{3}{2}R_2$ and $R_1 + \\frac{1}{2}R_3$ to eliminate the entries below the leading 1 in the first column.\n\\[\\left[\\mathbf{A}|\\mathbf{b}\\right] = \\begin{pmatrix} 1 & 0 & -2 & | & \\frac{7}{4} \\\\ 0 & 1 & \\frac{5}{4} & | & \\frac{27}{4} \\\\ 0 & 0 & -34 & | & -222 \\end{pmatrix}\\]",
+        "## Step 9: Perform $R_1 + 2R_3$ and $R_2 - \\frac{5}{34}R_3$ to get a leading 1 in the third row, third column.\n\\[\\left[\\mathbf{A}|\\mathbf{b}\\right] = \\begin{pmatrix} 1 & 0 & 0 & | & -\\frac{167}{34} \\\\ 0 & 1 & 0 & | & \\frac{119}{34} \\\\ 0 & 0 & 1 & | & -6 \\end{pmatrix}\\]",
+        "## Step 10: From the row-echelon form, read off the solution to the system of linear equations.\n\\[\\mathbf{v} = \\begin{pmatrix} -\\frac{167}{34} \\\\ \\frac{119}{34} \\\\ -6 \\end{pmatrix}.\\]",
+        "## Step 11: Final Answer:\n\\[\\mathbf{v} = \\begin{pmatrix} -\\frac{167}{34} \\\\ \\frac{119}{34} \\\\ -6 \\end{pmatrix}.\\]"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Write the given matrix equation in the form of $\\mathbf{Av} = \\mathbf{b}$.\n\\[\\begin{pmatrix} 2 & 3 & -1 \\\\ 0 & 4 & 5 \\\\ 4 & 0 & -2 \\end{pmatrix} \\mathbf{v} = \\begin{pmatrix} 2 \\\\ 27 \\\\ -14 \\end{pmatrix}.\\]\n\n## Step 2: Write the augmented matrix $\\left[\\mathbf{A}|\\mathbf{b}\\right]$ by combining $\\mathbf{A}$ and $\\mathbf{b}$.\n\\[\\left[\\mathbf{A}|\\mathbf{b}\\right] = \\begin{pmatrix} 2 & 3 & -1 & | & 2 \\\\ 0 & 4 & 5 & | & 27 \\\\ 4 & 0 & -2 & | & -14 \\end{pmatrix}.\\]\n\n## Step 3: Perform Gaussian elimination to transform the augmented matrix to row-echelon form.\nPerforming row operations to get the row-echelon form:\n- Divide the first row by",
+            1
+        ],
+        [
+            "## Step 4: Divide the first row by 2 to get a leading 1.\n\\[\\left[\\mathbf{A}|\\mathbf{b}\\right] = \\begin{pmatrix} 1 & \\frac{3}{2} & -\\frac{1}{2} & | & 1 \\\\ 0 & 4 & 5 & | & 27 \\\\ 4 & 0 & -2 & | & -14 \\end{pmatrix}.\\]",
+            1
+        ],
+        [
+            "## Step 5: Perform $R_3 - 4R_1$ to eliminate the entry below the leading 1 in the first column.\n\\[\\left[\\mathbf{A}|\\mathbf{b}\\right] = \\begin{pmatrix} 1 & \\frac{3}{2} & -\\frac{1}{2} & | & 1 \\\\ 0 & 4 & 5 & | & 27 \\\\ 0 & -6 & -4 & | & -30 \\end{pmatrix}\\]",
+            1
+        ],
+        [
+            "## Step 6: Perform $R_3 + 6R_2$ to get a leading 1 in the second row, second column.\n\\[\\left[\\mathbf{A}|\\mathbf{b}\\right] = \\begin{pmatrix} 1 & \\frac{3}{2} & -\\frac{1}{2} & | & 1 \\\\ 0 & 4 & 5 & | & 27 \\\\ 0 & 0 & -34 & | & -222 \\end{pmatrix}\\]",
+            1
+        ],
+        [
+            "## Step 7: Perform $R_2 \\div 4$ to get a leading 1 in the second row, second column.\n\\[\\left[\\mathbf{A}|\\mathbf{b}\\right] = \\begin{pmatrix} 1 & \\frac{3}{2} & -\\frac{1}{2} & | & 1 \\\\ 0 & 1 & \\frac{5}{4} & | & \\frac{27}{4} \\\\ 0 & 0 & -34 & | & -222 \\end{pmatrix}\\]",
+            1
+        ],
+        [
+            "## Step 8: Perform $R_1 - \\frac{3}{2}R_2$ and $R_1 + \\frac{1}{2}R_3$ to eliminate the entries below the leading 1 in the first column.\n\\[\\left[\\mathbf{A}|\\mathbf{b}\\right] = \\begin{pmatrix} 1 & 0 & -2 & | & \\frac{7}{4} \\\\ 0 & 1 & \\frac{5}{4} & | & \\frac{27}{4} \\\\ 0 & 0 & -34 & | & -222 \\end{pmatrix}\\]",
+            1
+        ],
+        [
+            "## Step 9: Perform $R_1 + 2R_3$ and $R_2 - \\frac{5}{34}R_3$ to get a leading 1 in the third row, third column.\n\\[\\left[\\mathbf{A}|\\mathbf{b}\\right] = \\begin{pmatrix} 1 & 0 & 0 & | & -\\frac{167}{34} \\\\ 0 & 1 & 0 & | & \\frac{119}{34} \\\\ 0 & 0 & 1 & | & -6 \\end{pmatrix}\\]",
+            1
+        ],
+        [
+            "## Step 10: From the row-echelon form, read off the solution to the system of linear equations.\n\\[\\mathbf{v} = \\begin{pmatrix} -\\frac{167}{34} \\\\ \\frac{119}{34} \\\\ -6 \\end{pmatrix}.\\]",
+            1
+        ],
+        [
+            "## Step 11: Final Answer:\n\\[\\mathbf{v} = \\begin{pmatrix} -\\frac{167}{34} \\\\ \\frac{119}{34} \\\\ -6 \\end{pmatrix}.\\]",
+            1
+        ]
+    ],
+    "time": 120.1352379322052,
+    "total_tokens": 15175,
+    "final_answer_tokens": 1226,
+    "model": "meta-llama/Llama-Vision-Free"
+}

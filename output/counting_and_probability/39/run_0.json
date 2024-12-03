@@ -1,0 +1,56 @@
+{
+    "problem": "The Boston weatherman says there is a 75 percent chance of rain for each day of the Labor Day four-day weekend. If it doesn't rain, then the weather will be sunny.  Paul and Yuri want it to be sunny one of those days for a World War III preenactment, but if it's sunny for more than one day they won't know what to do with themselves. What is the probability they get the weather they want? Give your answer as a fraction.",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "There are $\\binom{4}{3}=4$ ways to choose which three of the four days it will be rainy so that the other day it will be sunny. For any of those 4 choices, there is a $\\left( \\frac{3}{4} \\right) ^3 \\left( \\frac{1}{4} \\right) ^1 = \\frac{27}{256}$ chance for that choice to happen, because there is a $\\frac{3}{4}$ chance that we get what we want when we want it to be rainy, and a $\\frac{1}{4}$ chance that we get what we want when we want it to be sunny. The total probability is then $4 \\cdot \\frac{27}{256}= \\boxed{\\frac{27}{64}}$.",
+    "is_solved": true,
+    "model_solution": "Let $p$ be the probability that the weather is sunny, and let $q$ be the probability that it rains. We have that $p=0.25$ and $q=0.75$.\n\nSince the weather for each day is independent, the probability that it is sunny on day $i$ and rainy on day $j$ for $i\\neq j$ is $pq=0.25\\cdot0.75=0.1875$.\nThe probability that it is sunny on one of the four days is $4\\cdot\\binom{4}{1}(pq)^1(q^3)=4\\cdot 4(0.25)(0.75)^4$.\n$4\\cdot 4(0.25)(0.75)^4=4\\cdot4\\left(\\frac{1}{4}\\right)\\left(\\frac{3}{4}\\right)^4=4\\cdot4\\left(\\frac{1}{4}\\right)\\left(\\frac{81}{256}\\right)$\n$4\\cdot4\\left(\\frac{1}{4}\\right)\\left(\\frac{81}{256}\\right)=4\\cdot\\left(\\frac{1}{4}\\right)\\left(\\frac{324}{256}\\right)=\\frac{324}{256}=\\frac{81}{64}$\n$\\frac{324}{256}=\\frac{81}{64}$\n$\\frac{81}{64}$\n$4\\cdot\\left(\\frac{1}{4}\\right)\\left(\\frac{81}{64}\\right)=\\frac{81}{64}$\n$\\frac{81}{64}$",
+    "steps": [
+        "Let $p$ be the probability that the weather is sunny, and let $q$ be the probability that it rains. We have that $p=0.25$ and $q=0.75$.\n\nSince the weather for each day is independent, the probability that it is sunny on day $i$ and rainy on day $j$ for $i\\neq j$ is $pq=0.25\\cdot0.75=0.1875$.",
+        "The probability that it is sunny on one of the four days is $4\\cdot\\binom{4}{1}(pq)^1(q^3)=4\\cdot 4(0.25)(0.75)^4$.",
+        "$4\\cdot 4(0.25)(0.75)^4=4\\cdot4\\left(\\frac{1}{4}\\right)\\left(\\frac{3}{4}\\right)^4=4\\cdot4\\left(\\frac{1}{4}\\right)\\left(\\frac{81}{256}\\right)$",
+        "$4\\cdot4\\left(\\frac{1}{4}\\right)\\left(\\frac{81}{256}\\right)=4\\cdot\\left(\\frac{1}{4}\\right)\\left(\\frac{324}{256}\\right)=\\frac{324}{256}=\\frac{81}{64}$",
+        "$\\frac{324}{256}=\\frac{81}{64}$",
+        "$\\frac{81}{64}$",
+        "$4\\cdot\\left(\\frac{1}{4}\\right)\\left(\\frac{81}{64}\\right)=\\frac{81}{64}$",
+        "$\\frac{81}{64}$"
+    ],
+    "full_steps": [
+        [
+            "Let $p$ be the probability that the weather is sunny, and let $q$ be the probability that it rains. We have that $p=0.25$ and $q=0.75$.\n\nSince the weather for each day is independent, the probability that it is sunny on day $i$ and rainy on day $j$ for $i\\neq j$ is $pq=0.25\\cdot0.75=0.1875$.",
+            1
+        ],
+        [
+            "The probability that it is sunny on one of the four days is $4\\cdot\\binom{4}{1}(pq)^1(q^3)=4\\cdot 4(0.25)(0.75)^4$.",
+            1
+        ],
+        [
+            "$4\\cdot 4(0.25)(0.75)^4=4\\cdot4\\left(\\frac{1}{4}\\right)\\left(\\frac{3}{4}\\right)^4=4\\cdot4\\left(\\frac{1}{4}\\right)\\left(\\frac{81}{256}\\right)$",
+            1
+        ],
+        [
+            "$4\\cdot4\\left(\\frac{1}{4}\\right)\\left(\\frac{81}{256}\\right)=4\\cdot\\left(\\frac{1}{4}\\right)\\left(\\frac{324}{256}\\right)=\\frac{324}{256}=\\frac{81}{64}$",
+            1
+        ],
+        [
+            "$\\frac{324}{256}=\\frac{81}{64}$",
+            1
+        ],
+        [
+            "$\\frac{81}{64}$",
+            1
+        ],
+        [
+            "$4\\cdot\\left(\\frac{1}{4}\\right)\\left(\\frac{81}{64}\\right)=\\frac{81}{64}$",
+            1
+        ],
+        [
+            "$\\frac{81}{64}$",
+            1
+        ]
+    ],
+    "time": 109.14737725257874,
+    "total_tokens": 6650,
+    "final_answer_tokens": 502,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,56 @@
+{
+    "problem": "Three friends have a total of 6 identical pencils, and each one has at least one pencil. In how many ways can this happen?",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "The largest number of pencils that any friend can have is four. There are 3 ways that this can happen: $(4,1,1)$, $(1,4,1)$ and $(1,1,4)$. There are 6 ways one person can have 3 pencils: $(3,2,1)$, $(3,1,2)$, $(2,3,1)$, $(2,1,3)$, $(1,2,3)$ and $(1,3,2)$. There is only one way all three can have two pencils each: $(2,2,2)$. The total number of possibilities is $3+6+1=\\boxed{10}$.",
+    "is_solved": true,
+    "model_solution": "Step 1:  We are given that three friends have a total of 6 identical pencils, with each one having at least one pencil. \n\nWe need to find the number of ways this can happen. To begin, we can set aside one pencil for each friend, ensuring that each friend has at least one pencil. \n\nWe are left with 3 pencils to distribute among the three friends.\nStep 2:  This problem is equivalent to placing 3 identical balls into 3 distinct boxes, which is a classic stars and bars problem. The number of ways to distribute the 3 remaining pencils among the 3 friends is given by the formula $\\binom{n+k-1}{k-1}$, where n is the number of objects to distribute (pencils) and k is the number of boxes (friends).\nStep 3:\n$\\binom{3+3-1}{3-1} = \\binom{5}{2}$\n$\\binom{5}{2} = \\frac{5!}{2!(5-2)!} = \\frac{5*4}{2*1} = 10$\nStep 4: \n$\\binom{5}{2} = 10$\nStep 5:\n10\n$\\binom{3+3-1}{3-1} = \\binom{5}{2}$\n$\\binom{5}{2} = \\frac{5!}{2!(5-2)!} = \\frac{5*4}{2*1} = 10$",
+    "steps": [
+        "Step 1:  We are given that three friends have a total of 6 identical pencils, with each one having at least one pencil. \n\nWe need to find the number of ways this can happen. To begin, we can set aside one pencil for each friend, ensuring that each friend has at least one pencil. \n\nWe are left with 3 pencils to distribute among the three friends.",
+        "Step 2:  This problem is equivalent to placing 3 identical balls into 3 distinct boxes, which is a classic stars and bars problem. The number of ways to distribute the 3 remaining pencils among the 3 friends is given by the formula $\\binom{n+k-1}{k-1}$, where n is the number of objects to distribute (pencils) and k is the number of boxes (friends).",
+        "Step 3:\n$\\binom{3+3-1}{3-1} = \\binom{5}{2}$",
+        "$\\binom{5}{2} = \\frac{5!}{2!(5-2)!} = \\frac{5*4}{2*1} = 10$",
+        "Step 4: \n$\\binom{5}{2} = 10$",
+        "Step 5:\n10",
+        "$\\binom{3+3-1}{3-1} = \\binom{5}{2}$",
+        "$\\binom{5}{2} = \\frac{5!}{2!(5-2)!} = \\frac{5*4}{2*1} = 10$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We are given that three friends have a total of 6 identical pencils, with each one having at least one pencil. \n\nWe need to find the number of ways this can happen. To begin, we can set aside one pencil for each friend, ensuring that each friend has at least one pencil. \n\nWe are left with 3 pencils to distribute among the three friends.",
+            1
+        ],
+        [
+            "Step 2:  This problem is equivalent to placing 3 identical balls into 3 distinct boxes, which is a classic stars and bars problem. The number of ways to distribute the 3 remaining pencils among the 3 friends is given by the formula $\\binom{n+k-1}{k-1}$, where n is the number of objects to distribute (pencils) and k is the number of boxes (friends).",
+            1
+        ],
+        [
+            "Step 3:\n$\\binom{3+3-1}{3-1} = \\binom{5}{2}$",
+            1
+        ],
+        [
+            "$\\binom{5}{2} = \\frac{5!}{2!(5-2)!} = \\frac{5*4}{2*1} = 10$",
+            1
+        ],
+        [
+            "Step 4: \n$\\binom{5}{2} = 10$",
+            1
+        ],
+        [
+            "Step 5:\n10",
+            1
+        ],
+        [
+            "$\\binom{3+3-1}{3-1} = \\binom{5}{2}$",
+            1
+        ],
+        [
+            "$\\binom{5}{2} = \\frac{5!}{2!(5-2)!} = \\frac{5*4}{2*1} = 10$",
+            1
+        ]
+    ],
+    "time": 105.10976552963257,
+    "total_tokens": 5035,
+    "final_answer_tokens": 405,
+    "model": "meta-llama/Llama-Vision-Free"
+}

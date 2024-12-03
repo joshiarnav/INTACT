@@ -1,0 +1,56 @@
+{
+    "problem": "Jo adds up all the positive integers from 1 to 100. Kate does a similar thing with the first 100 positive integers; however, she first rounds every integer to its nearest multiple of 10 (rounding 5s up) and then adds the 100 values. What is the positive difference between Jo's sum and Kate's sum?",
+    "level": "Level 4",
+    "type": "Algebra",
+    "solution": "Consider the numbers $1, 2, 3,..., 10$. Jo would add these integers up as is, while Kate would round the first four down to 0, decreasing her sum by $1+2+3+4=10$, and would round the last six up to 10, increasing her sum by $5+4+3+2+1+0=15$. Thus, her sum is $-10+15=5$ more than Jo's sum for the numbers $1, 2, 3,..., 10$. This same logic applies to the numbers $11, 12, 13,..., 20$ also, and in general it applies to every ten numbers greater than 20. Since there are ten sets of ten numbers from 1 to 100, Kate's sum is $10 \\cdot 5 = \\boxed{50}$ more than Jo's sum.",
+    "is_solved": true,
+    "model_solution": "Let's list the first few positive integers to the nearest multiple of 10:\n1 to 4 round down to 0, 5 rounds up to 10, 6 to 9 round up to 10\n10 to 14 round down to 10, 15 rounds up to 20, 16 to 19 round up to 20\n20 to 24 round down to 20, 25 rounds up to 30, 26 to 29 round up to 30\n...\n90 to 94 round down to 90, 95 rounds up to 100, 96 to 99 round up to 100\nFor each multiple of 10 from 0 to 100, we can count the number of integers that round down and the number that round up. We see that for each k from 0 to 9, the numbers 5k through 5k + 4 round down to 5k and the numbers 5k + 5 through 5k + 9 round up to 5k + 10.\nFor each k from 0 to 9, the numbers 5k through 5k + 4 round down to 5k and the numbers 5k + 5 through 5k + 9 round up to 5k + 10, so the 5 numbers that round down to 5k contribute 5(5k) to the sum and the 5 numbers that round up to 5k + 10 contribute 5(5k + 10) to the sum.\nFor each k from 0 to 9, the numbers 5k through 5k + 4 round down to 5k and the numbers 5k + 5 through 5k + 9 round up to 5k + 10, so the 5 numbers that round down to 5k contribute 5(5k) to the sum and the 5 numbers that round up to 5k + 10 contribute 5(5k + 10) to the sum, which gives a total of $5(5k+5(5k+10))=150(2k+1)$ to Kate's sum.\nSince $2k+1$ is odd for each $k$ from $0$ to $9$, we can rewrite Kate's sum as $150(2k+1)=300\\left(\\frac{2k+1}{2}\\right)=300(1+0+1+2+3+4+5+6+7+8+9).$\nKate's sum is $300(1+0+1+2+3+4+5+6+7+8+9)=300\\left(\\frac{0+100}{2}\\right)=30\\cdot100=3000$\nJo's sum is $\\frac{100(100+1)}{2}=5050$, so the positive difference between Jo's sum and Kate's sum is $5050-3000=2050$.\nSince $2k+1$ is odd for each $k$ from $0$ to $9$, we can rewrite Kate's sum as $150(2k+1)=300\\left(\\frac{2k+1}{2}\\right)=300(1+0+1+2+3+4+5+6+7+8+9).$",
+    "steps": [
+        "Let's list the first few positive integers to the nearest multiple of 10:\n1 to 4 round down to 0, 5 rounds up to 10, 6 to 9 round up to 10\n10 to 14 round down to 10, 15 rounds up to 20, 16 to 19 round up to 20\n20 to 24 round down to 20, 25 rounds up to 30, 26 to 29 round up to 30\n...\n90 to 94 round down to 90, 95 rounds up to 100, 96 to 99 round up to 100",
+        "For each multiple of 10 from 0 to 100, we can count the number of integers that round down and the number that round up. We see that for each k from 0 to 9, the numbers 5k through 5k + 4 round down to 5k and the numbers 5k + 5 through 5k + 9 round up to 5k + 10.",
+        "For each k from 0 to 9, the numbers 5k through 5k + 4 round down to 5k and the numbers 5k + 5 through 5k + 9 round up to 5k + 10, so the 5 numbers that round down to 5k contribute 5(5k) to the sum and the 5 numbers that round up to 5k + 10 contribute 5(5k + 10) to the sum.",
+        "For each k from 0 to 9, the numbers 5k through 5k + 4 round down to 5k and the numbers 5k + 5 through 5k + 9 round up to 5k + 10, so the 5 numbers that round down to 5k contribute 5(5k) to the sum and the 5 numbers that round up to 5k + 10 contribute 5(5k + 10) to the sum, which gives a total of $5(5k+5(5k+10))=150(2k+1)$ to Kate's sum.",
+        "Since $2k+1$ is odd for each $k$ from $0$ to $9$, we can rewrite Kate's sum as $150(2k+1)=300\\left(\\frac{2k+1}{2}\\right)=300(1+0+1+2+3+4+5+6+7+8+9).$",
+        "Kate's sum is $300(1+0+1+2+3+4+5+6+7+8+9)=300\\left(\\frac{0+100}{2}\\right)=30\\cdot100=3000$",
+        "Jo's sum is $\\frac{100(100+1)}{2}=5050$, so the positive difference between Jo's sum and Kate's sum is $5050-3000=2050$.",
+        "Since $2k+1$ is odd for each $k$ from $0$ to $9$, we can rewrite Kate's sum as $150(2k+1)=300\\left(\\frac{2k+1}{2}\\right)=300(1+0+1+2+3+4+5+6+7+8+9).$"
+    ],
+    "full_steps": [
+        [
+            "Let's list the first few positive integers to the nearest multiple of 10:\n1 to 4 round down to 0, 5 rounds up to 10, 6 to 9 round up to 10\n10 to 14 round down to 10, 15 rounds up to 20, 16 to 19 round up to 20\n20 to 24 round down to 20, 25 rounds up to 30, 26 to 29 round up to 30\n...\n90 to 94 round down to 90, 95 rounds up to 100, 96 to 99 round up to 100",
+            1
+        ],
+        [
+            "For each multiple of 10 from 0 to 100, we can count the number of integers that round down and the number that round up. We see that for each k from 0 to 9, the numbers 5k through 5k + 4 round down to 5k and the numbers 5k + 5 through 5k + 9 round up to 5k + 10.",
+            1
+        ],
+        [
+            "For each k from 0 to 9, the numbers 5k through 5k + 4 round down to 5k and the numbers 5k + 5 through 5k + 9 round up to 5k + 10, so the 5 numbers that round down to 5k contribute 5(5k) to the sum and the 5 numbers that round up to 5k + 10 contribute 5(5k + 10) to the sum.",
+            1
+        ],
+        [
+            "For each k from 0 to 9, the numbers 5k through 5k + 4 round down to 5k and the numbers 5k + 5 through 5k + 9 round up to 5k + 10, so the 5 numbers that round down to 5k contribute 5(5k) to the sum and the 5 numbers that round up to 5k + 10 contribute 5(5k + 10) to the sum, which gives a total of $5(5k+5(5k+10))=150(2k+1)$ to Kate's sum.",
+            1
+        ],
+        [
+            "Since $2k+1$ is odd for each $k$ from $0$ to $9$, we can rewrite Kate's sum as $150(2k+1)=300\\left(\\frac{2k+1}{2}\\right)=300(1+0+1+2+3+4+5+6+7+8+9).$",
+            1
+        ],
+        [
+            "Kate's sum is $300(1+0+1+2+3+4+5+6+7+8+9)=300\\left(\\frac{0+100}{2}\\right)=30\\cdot100=3000$",
+            1
+        ],
+        [
+            "Jo's sum is $\\frac{100(100+1)}{2}=5050$, so the positive difference between Jo's sum and Kate's sum is $5050-3000=2050$.",
+            1
+        ],
+        [
+            "Since $2k+1$ is odd for each $k$ from $0$ to $9$, we can rewrite Kate's sum as $150(2k+1)=300\\left(\\frac{2k+1}{2}\\right)=300(1+0+1+2+3+4+5+6+7+8+9).$",
+            1
+        ]
+    ],
+    "time": 103.63643670082092,
+    "total_tokens": 9371,
+    "final_answer_tokens": 838,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,66 @@
+{
+    "problem": "Let $\\triangle ABC$ be a triangle such that $AB = 13,$ $BC = 14,$ and $CA = 15.$ Meanwhile, $D$ is a point on $BC$ such that $AD$ bisects $\\angle A.$ Find the area of $\\triangle ADC.$",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "First of all, let us make a sketch, although it is far from necessary: [asy]\npair pA, pB, pC, pD, pE;\npA = (0, 12);\npB = (-5, 0);\npC = (9, 0);\npD = (pB * 15 + pC * 13) / (13 + 15);\ndraw(pA--pB--pC--pA);\ndraw(pA--pD);\nlabel(\"$A$\", pA, N);\nlabel(\"$B$\", pB, SW);\nlabel(\"$C$\", pC, SE);\nlabel(\"$D$\", pD, S);\n[/asy] A $13:14:15$ triangle is a Heronian triangle, or a triangle that has integer sides and integer area. This can easily be verified using Heron's Formula. In fact, it is easy to find that a $13:14:15$ triangle is merely two $9:12:15$ and $5:12:13$ right triangles mashed together at the common leg.\n\nRegardless, the first step is finding the area of the triangle. Since the perimeter is $13 + 14 + 15 = 42,$ we have that $s = 21.$ Therefore, \\begin{align*}\n[\\triangle ABC] &= \\sqrt{s(s-a)(s-b)(s-c)} \\\\\n&= \\sqrt{21(21 - 13)(21 - 14)(21 - 15)} = \\sqrt{21 \\cdot 8 \\cdot 7 \\cdot 6} \\\\\n&= \\sqrt{7 \\cdot 3 \\cdot 4 \\cdot 2 \\cdot 7 \\cdot 3 \\cdot 2} = \\sqrt{7^2 \\cdot 3^2 \\cdot 2^4} \\\\\n&= 7 \\cdot 3 \\cdot 2^2 = 84.\n\\end{align*}By the Angle Bisector Theorem, we know that $BD : DC = AB : AC = 13 : 15.$ That means that the area of $\\triangle ABD$ to $\\triangle ADC$ must also have the $13 : 15$ ratio, and that means the ratio of $[\\triangle ADC] : [\\triangle ABC]$ is $15 : 28.$\n\nThen, $[\\triangle ADC] = \\frac{15}{28} \\cdot [\\triangle ABC] = \\frac{15}{28} \\cdot 84 = \\boxed{45}.$",
+    "is_solved": false,
+    "model_solution": "Step 1:  To find the area of $\\triangle ADC$, we can use the Angle Bisector Theorem, which states that the ratio of the lengths of the two segments created by the angle bisector equals the ratio of the lengths of the two sides of the triangle that contain the angle.\nStep 2:  Using this theorem, we can find the ratio $BD/DC$ by dividing the ratio of the sides $AB$ and $AC$, resulting in $BD/DC = AB/AC = 13/15$.\nStep 3:  We can then use this ratio to calculate the area of $\\triangle ABD$ and $\\triangle ADC$ using the formula for the area of a triangle, which is $\\frac{1}{2}ab\\sin C$.\nStep 4:  The area of $\\triangle ABD$ is given by $\\frac{1}{2}\\cdot 13 \\cdot BD \\cdot \\sin 70^\\circ$, and the area of $\\triangle ADC$ is given by $\\frac{1}{2}\\cdot 15 \\cdot DC \\cdot \\sin 70^\\circ$.\nStep 5:  Therefore, the area of $\\triangle ADC$ is $\\frac{1\nStep 2: $\\frac{BD}{DC} = \\frac{13}{15} \\Rightarrow BD = \\frac{13}{28}BC$\nStep 3: $\\frac{BD}{DC} = \\frac{13}{15} \\Rightarrow BD = \\frac{13}{28}BC = \\frac{13}{28} \\cdot 14$\nStep 4: $\\frac{BD}{DC} = \\frac{13}{15} \\Rightarrow DC = \\frac{15}{28}BC = \\frac{15}{28} \\cdot 14$\nStep 5: $(\\frac{13}{28} \\cdot 14)^2 = (\\frac{13}{2})^2$\nStep 6: $(\\frac{13}{2})^2 \\cdot \\frac{1}{2} \\cdot 15 \\cdot 14 \\cdot \\sin 70^\\circ$\nStep 7: $(\\frac{13}{2})^2 \\cdot \\frac{1}{2} \\cdot 15 \\cdot 14 \\cdot \\sin 70^\\circ = \\frac{13^2}{2^2} \\cdot \\frac{1}{2} \\cdot 15 \\cdot 7 \\cdot \\sin 70^\\circ$\nStep 8: $\\frac{13^2}{2^2} \\cdot \\frac{1}{2} \\cdot 15 \\cdot 7 \\cdot \\sin 70^\\circ = \\frac{13^2}{2^2} \\cdot \\frac{15 \\cdot 7}{2} \\cdot \\sin 70^\\circ$\n$\\frac{13^2}{2^2} \\cdot \\frac{15 \\cdot 7}{2} \\cdot \\sin 70^\\circ = \\frac{13^2}{2^2} \\cdot \\frac{15 \\cdot 7}{2} \\cdot \\frac{\\sqrt{3} - 1}{2}$\n$\\frac{13^2}{2^2} \\cdot \\frac{15 \\cdot 7}{2} \\cdot \\frac{\\sqrt{3} - 1}{2} = \\frac{13^2 \\cdot 15 \\cdot 7}{2^4} \\cdot \\frac{\\sqrt{3} - 1}{2}$",
+    "steps": [
+        "Step 1:  To find the area of $\\triangle ADC$, we can use the Angle Bisector Theorem, which states that the ratio of the lengths of the two segments created by the angle bisector equals the ratio of the lengths of the two sides of the triangle that contain the angle.\nStep 2:  Using this theorem, we can find the ratio $BD/DC$ by dividing the ratio of the sides $AB$ and $AC$, resulting in $BD/DC = AB/AC = 13/15$.\nStep 3:  We can then use this ratio to calculate the area of $\\triangle ABD$ and $\\triangle ADC$ using the formula for the area of a triangle, which is $\\frac{1}{2}ab\\sin C$.\nStep 4:  The area of $\\triangle ABD$ is given by $\\frac{1}{2}\\cdot 13 \\cdot BD \\cdot \\sin 70^\\circ$, and the area of $\\triangle ADC$ is given by $\\frac{1}{2}\\cdot 15 \\cdot DC \\cdot \\sin 70^\\circ$.\nStep 5:  Therefore, the area of $\\triangle ADC$ is $\\frac{1",
+        "Step 2: $\\frac{BD}{DC} = \\frac{13}{15} \\Rightarrow BD = \\frac{13}{28}BC$",
+        "Step 3: $\\frac{BD}{DC} = \\frac{13}{15} \\Rightarrow BD = \\frac{13}{28}BC = \\frac{13}{28} \\cdot 14$",
+        "Step 4: $\\frac{BD}{DC} = \\frac{13}{15} \\Rightarrow DC = \\frac{15}{28}BC = \\frac{15}{28} \\cdot 14$",
+        "Step 5: $(\\frac{13}{28} \\cdot 14)^2 = (\\frac{13}{2})^2$",
+        "Step 6: $(\\frac{13}{2})^2 \\cdot \\frac{1}{2} \\cdot 15 \\cdot 14 \\cdot \\sin 70^\\circ$",
+        "Step 7: $(\\frac{13}{2})^2 \\cdot \\frac{1}{2} \\cdot 15 \\cdot 14 \\cdot \\sin 70^\\circ = \\frac{13^2}{2^2} \\cdot \\frac{1}{2} \\cdot 15 \\cdot 7 \\cdot \\sin 70^\\circ$",
+        "Step 8: $\\frac{13^2}{2^2} \\cdot \\frac{1}{2} \\cdot 15 \\cdot 7 \\cdot \\sin 70^\\circ = \\frac{13^2}{2^2} \\cdot \\frac{15 \\cdot 7}{2} \\cdot \\sin 70^\\circ$",
+        "$\\frac{13^2}{2^2} \\cdot \\frac{15 \\cdot 7}{2} \\cdot \\sin 70^\\circ = \\frac{13^2}{2^2} \\cdot \\frac{15 \\cdot 7}{2} \\cdot \\frac{\\sqrt{3} - 1}{2}$",
+        "$\\frac{13^2}{2^2} \\cdot \\frac{15 \\cdot 7}{2} \\cdot \\frac{\\sqrt{3} - 1}{2} = \\frac{13^2 \\cdot 15 \\cdot 7}{2^4} \\cdot \\frac{\\sqrt{3} - 1}{2}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  To find the area of $\\triangle ADC$, we can use the Angle Bisector Theorem, which states that the ratio of the lengths of the two segments created by the angle bisector equals the ratio of the lengths of the two sides of the triangle that contain the angle.\nStep 2:  Using this theorem, we can find the ratio $BD/DC$ by dividing the ratio of the sides $AB$ and $AC$, resulting in $BD/DC = AB/AC = 13/15$.\nStep 3:  We can then use this ratio to calculate the area of $\\triangle ABD$ and $\\triangle ADC$ using the formula for the area of a triangle, which is $\\frac{1}{2}ab\\sin C$.\nStep 4:  The area of $\\triangle ABD$ is given by $\\frac{1}{2}\\cdot 13 \\cdot BD \\cdot \\sin 70^\\circ$, and the area of $\\triangle ADC$ is given by $\\frac{1}{2}\\cdot 15 \\cdot DC \\cdot \\sin 70^\\circ$.\nStep 5:  Therefore, the area of $\\triangle ADC$ is $\\frac{1",
+            1
+        ],
+        [
+            "Step 2: $\\frac{BD}{DC} = \\frac{13}{15} \\Rightarrow BD = \\frac{13}{28}BC$",
+            1
+        ],
+        [
+            "Step 3: $\\frac{BD}{DC} = \\frac{13}{15} \\Rightarrow BD = \\frac{13}{28}BC = \\frac{13}{28} \\cdot 14$",
+            1
+        ],
+        [
+            "Step 4: $\\frac{BD}{DC} = \\frac{13}{15} \\Rightarrow DC = \\frac{15}{28}BC = \\frac{15}{28} \\cdot 14$",
+            1
+        ],
+        [
+            "Step 5: $(\\frac{13}{28} \\cdot 14)^2 = (\\frac{13}{2})^2$",
+            1
+        ],
+        [
+            "Step 6: $(\\frac{13}{2})^2 \\cdot \\frac{1}{2} \\cdot 15 \\cdot 14 \\cdot \\sin 70^\\circ$",
+            1
+        ],
+        [
+            "Step 7: $(\\frac{13}{2})^2 \\cdot \\frac{1}{2} \\cdot 15 \\cdot 14 \\cdot \\sin 70^\\circ = \\frac{13^2}{2^2} \\cdot \\frac{1}{2} \\cdot 15 \\cdot 7 \\cdot \\sin 70^\\circ$",
+            1
+        ],
+        [
+            "Step 8: $\\frac{13^2}{2^2} \\cdot \\frac{1}{2} \\cdot 15 \\cdot 7 \\cdot \\sin 70^\\circ = \\frac{13^2}{2^2} \\cdot \\frac{15 \\cdot 7}{2} \\cdot \\sin 70^\\circ$",
+            1
+        ],
+        [
+            "$\\frac{13^2}{2^2} \\cdot \\frac{15 \\cdot 7}{2} \\cdot \\sin 70^\\circ = \\frac{13^2}{2^2} \\cdot \\frac{15 \\cdot 7}{2} \\cdot \\frac{\\sqrt{3} - 1}{2}$",
+            1
+        ],
+        [
+            "$\\frac{13^2}{2^2} \\cdot \\frac{15 \\cdot 7}{2} \\cdot \\frac{\\sqrt{3} - 1}{2} = \\frac{13^2 \\cdot 15 \\cdot 7}{2^4} \\cdot \\frac{\\sqrt{3} - 1}{2}$",
+            1
+        ]
+    ],
+    "time": 130.30415534973145,
+    "total_tokens": 11662,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

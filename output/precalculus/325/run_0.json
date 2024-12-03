@@ -1,0 +1,36 @@
+{
+    "problem": "In triangle $ABC,$ $BC = 32,$ $\\tan B = \\frac{3}{2},$ and $\\tan C = \\frac{1}{2}.$  Find the area of the triangle.",
+    "level": "Level 3",
+    "type": "Precalculus",
+    "solution": "Let $\\overline{AD}$ be the altitude from $A,$ and let $x = AD.$\n\n[asy]\nunitsize (0.15 cm);\n\npair A, B, C, D;\n\nB = (0,0);\nC = (32,0);\nA = (8,12);\nD = (8,0);\n\ndraw(A--B--C--cycle);\ndraw(A--D);\n\nlabel(\"$A$\", A, N);\nlabel(\"$B$\", B, SW);\nlabel(\"$C$\", C, SE);\nlabel(\"$D$\", D, S);\nlabel(\"$x$\", (A + D)/2, E);\n[/asy]\n\nThen $BD = \\frac{x}{3/2} = \\frac{2x}{3},$ and $CD = \\frac{x}{1/2} = 2x,$ so\n\\[BC = BD + DC = \\frac{2x}{3} + 2x = \\frac{8x}{3}.\\]Since $BC = 32,$ $x = 12.$\n\nTherefore, $[ABC] = \\frac{1}{2} \\cdot AD \\cdot BC = \\frac{1}{2} \\cdot 12 \\cdot 32 = \\boxed{192}.$",
+    "is_solved": true,
+    "model_solution": "Step 1: Draw the altitude from vertex $A$ to side $BC.$\nStep 2: Let $D$ be the foot of the altitude, and let $h$ denote the length of the altitude from $A$ to $BC.$ If we let $x$ be the length of the segment of the altitude from $A$ to $BC,$ we can use the tangent function to write $\\tan B = \\frac{3}{2} = \\frac{3x}{32-x},$ and solve for $x$ to find the length of the altitude from $A$ to $BC.$\nStep 3:\n\\[\n\\begin{aligned}\n\\tan B &= \\frac{3x}{32-x} \\\\\n\\frac{3}{2} &= \\frac{3x}{32-x} \\\\\n6(32-x) &= 3(2x) \\\\\n192-6x &= 6x \\\\\n192 &= 12x \\\\\n16 &= x \\\\\n\\end{aligned}\n\\]\nStep 4: The area of a triangle with base $b$ and altitude $h$ is given by $A = \\frac{1}{2}bh.$  We now have $b = 32$ and $h = 16,$ so we can compute the area of $ABC.$\n\n\nFinal Answer: The final answer is: $\\boxed{256}$",
+    "steps": [
+        "Step 1: Draw the altitude from vertex $A$ to side $BC.$",
+        "Step 2: Let $D$ be the foot of the altitude, and let $h$ denote the length of the altitude from $A$ to $BC.$ If we let $x$ be the length of the segment of the altitude from $A$ to $BC,$ we can use the tangent function to write $\\tan B = \\frac{3}{2} = \\frac{3x}{32-x},$ and solve for $x$ to find the length of the altitude from $A$ to $BC.$",
+        "Step 3:\n\\[\n\\begin{aligned}\n\\tan B &= \\frac{3x}{32-x} \\\\\n\\frac{3}{2} &= \\frac{3x}{32-x} \\\\\n6(32-x) &= 3(2x) \\\\\n192-6x &= 6x \\\\\n192 &= 12x \\\\\n16 &= x \\\\\n\\end{aligned}\n\\]",
+        "Step 4: The area of a triangle with base $b$ and altitude $h$ is given by $A = \\frac{1}{2}bh.$  We now have $b = 32$ and $h = 16,$ so we can compute the area of $ABC.$\n\n\nFinal Answer: The final answer is: $\\boxed{256}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Draw the altitude from vertex $A$ to side $BC.$",
+            1
+        ],
+        [
+            "Step 2: Let $D$ be the foot of the altitude, and let $h$ denote the length of the altitude from $A$ to $BC.$ If we let $x$ be the length of the segment of the altitude from $A$ to $BC,$ we can use the tangent function to write $\\tan B = \\frac{3}{2} = \\frac{3x}{32-x},$ and solve for $x$ to find the length of the altitude from $A$ to $BC.$",
+            1
+        ],
+        [
+            "Step 3:\n\\[\n\\begin{aligned}\n\\tan B &= \\frac{3x}{32-x} \\\\\n\\frac{3}{2} &= \\frac{3x}{32-x} \\\\\n6(32-x) &= 3(2x) \\\\\n192-6x &= 6x \\\\\n192 &= 12x \\\\\n16 &= x \\\\\n\\end{aligned}\n\\]",
+            1
+        ],
+        [
+            "Step 4: The area of a triangle with base $b$ and altitude $h$ is given by $A = \\frac{1}{2}bh.$  We now have $b = 32$ and $h = 16,$ so we can compute the area of $ABC.$\n\n\nFinal Answer: The final answer is: $\\boxed{256}$",
+            1
+        ]
+    ],
+    "time": 52.45453333854675,
+    "total_tokens": 2128,
+    "final_answer_tokens": 386,
+    "model": "meta-llama/Llama-Vision-Free"
+}

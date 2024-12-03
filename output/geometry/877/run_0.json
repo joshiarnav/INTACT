@@ -1,0 +1,66 @@
+{
+    "problem": "Points $X$ and $Y$ lie on sides $AB$ and $AC$ respectively of triangle $ABC$. If $AB=7$, $AC=10$, $AX=4$ and $AY=6$, what is the ratio of the area of triangle $AXY$ to the area of triangle $ABC$?",
+    "level": "Level 4",
+    "type": "Geometry",
+    "solution": "Triangles $AXC$ and $ABC$ share an altitude from $C$, so \\[\\frac{[AXC]}{[ABC]} = \\frac{AX}{AB} =\\frac47.\\] Therefore, $[AXC] = \\frac47[ABC]$.\n\nTriangles $AXY$ and $AXC$ share an altitude from $X$, so \\[\\frac{[AXY]}{[AXC]}=\\frac{AY}{AC} = \\frac{6}{10} = \\frac35.\\] Therefore, $[AXY] = \\frac35[AXC]$, so \\[[AXY] = \\frac35[AXC] = \\frac35\\cdot \\frac47[ABC] = \\frac{12}{35}[ABC],\\] which means that the desired ratio is $\\boxed{\\frac{12}{35}}$.\n\n\n[asy]\nsize(7cm);\npair A=(2,7), B=(0,0), C=(6,-0.5), X=(A+B)/2, Y=6/10*A+4/10*C;\npair[] dots={A,B,C,X,Y};\ndot(dots);\ndraw(A--B--C--cycle);\ndraw(X--Y);\nlabel(\"$A$\",A,N);\nlabel(\"$B$\",B,SW);\nlabel(\"$C$\",C,SE);\nlabel(\"$X$\",X,W);\nlabel(\"$Y$\",Y,E);\ndraw(C--X);\n[/asy]",
+    "is_solved": false,
+    "model_solution": "Step 1: Use the formula for the area of a triangle, which is (base \u00d7 height)/2, to set up expressions for the areas of triangles AXY and ABC.\nStep 2: Apply the formula for the area of a triangle to triangles AXY and ABC, using the given side lengths to determine the bases and heights of the triangles.\nStep 3: Use the fact that the ratio of the areas of two similar triangles is equal to the square of the ratio of their corresponding side lengths to find the ratio of the areas of triangles AXY and ABC.\nStep 4: Calculate the ratio of the area of triangle AXY to the area of triangle ABC, using the ratio of the bases and the heights of the triangles.\nStep 2:\nArea of triangle AXY = (1/2) \u00d7 4 \u00d7 6 = 12\nArea of triangle ABC = (1/2) \u00d7 7 \u00d7 10\u221a(1 - (4/7)\u00b2) = 35\u221a(1 - 16/49) = 35\u221a(33/49) = 35(\u221a33)/7 = 5\u221a33\nStep 3:  $\\frac{[AXY]}{[ABC]} =\\frac{12}{35(\\sqrt{33})/7}=\\frac{12}{5\\sqrt{33}}=\\frac{12}{5\\sqrt{33}}\\times\\frac{\\sqrt{33}}{\\sqrt{33}}=\\frac{12\\sqrt{33}}{165}$\nStep 4: $\\frac{[AXY]}{[ABC]}=\\frac{12\\sqrt{33}}{165}=\\frac{4}{\\frac{5\\sqrt{33}}{41}}=\\frac{4}{5}\\times\\frac{\\sqrt{33}}{\\sqrt{33}}=\\frac{4}{5}$\nStep 4: $\\frac{[AXY]}{[ABC]}=\\frac{12\\sqrt{33}}{165}=\\frac{4}{5}\\times\\frac{\\sqrt{33}}{\\sqrt{33}}=\\frac{4}{5}$\nStep 5:\n$\\frac{[AXY]}{[ABC]}=\\frac{12\\sqrt{33}}{165}=\\frac{4}{5}$\n$\\frac{[AXY]}{[ABC]} = \\frac{(AX \u00d7 AY)}{(AB \u00d7 AC)} = \\frac{4 \u00d7 6}{7 \u00d7 10} = \\frac{24}{70} = \\frac{12}{35}$",
+    "steps": [
+        "Step 1: Use the formula for the area of a triangle, which is (base \u00d7 height)/2, to set up expressions for the areas of triangles AXY and ABC.",
+        "Step 2: Apply the formula for the area of a triangle to triangles AXY and ABC, using the given side lengths to determine the bases and heights of the triangles.",
+        "Step 3: Use the fact that the ratio of the areas of two similar triangles is equal to the square of the ratio of their corresponding side lengths to find the ratio of the areas of triangles AXY and ABC.",
+        "Step 4: Calculate the ratio of the area of triangle AXY to the area of triangle ABC, using the ratio of the bases and the heights of the triangles.",
+        "Step 2:\nArea of triangle AXY = (1/2) \u00d7 4 \u00d7 6 = 12\nArea of triangle ABC = (1/2) \u00d7 7 \u00d7 10\u221a(1 - (4/7)\u00b2) = 35\u221a(1 - 16/49) = 35\u221a(33/49) = 35(\u221a33)/7 = 5\u221a33",
+        "Step 3:  $\\frac{[AXY]}{[ABC]} =\\frac{12}{35(\\sqrt{33})/7}=\\frac{12}{5\\sqrt{33}}=\\frac{12}{5\\sqrt{33}}\\times\\frac{\\sqrt{33}}{\\sqrt{33}}=\\frac{12\\sqrt{33}}{165}$",
+        "Step 4: $\\frac{[AXY]}{[ABC]}=\\frac{12\\sqrt{33}}{165}=\\frac{4}{\\frac{5\\sqrt{33}}{41}}=\\frac{4}{5}\\times\\frac{\\sqrt{33}}{\\sqrt{33}}=\\frac{4}{5}$",
+        "Step 4: $\\frac{[AXY]}{[ABC]}=\\frac{12\\sqrt{33}}{165}=\\frac{4}{5}\\times\\frac{\\sqrt{33}}{\\sqrt{33}}=\\frac{4}{5}$",
+        "Step 5:\n$\\frac{[AXY]}{[ABC]}=\\frac{12\\sqrt{33}}{165}=\\frac{4}{5}$",
+        "$\\frac{[AXY]}{[ABC]} = \\frac{(AX \u00d7 AY)}{(AB \u00d7 AC)} = \\frac{4 \u00d7 6}{7 \u00d7 10} = \\frac{24}{70} = \\frac{12}{35}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Use the formula for the area of a triangle, which is (base \u00d7 height)/2, to set up expressions for the areas of triangles AXY and ABC.",
+            1
+        ],
+        [
+            "Step 2: Apply the formula for the area of a triangle to triangles AXY and ABC, using the given side lengths to determine the bases and heights of the triangles.",
+            1
+        ],
+        [
+            "Step 3: Use the fact that the ratio of the areas of two similar triangles is equal to the square of the ratio of their corresponding side lengths to find the ratio of the areas of triangles AXY and ABC.",
+            1
+        ],
+        [
+            "Step 4: Calculate the ratio of the area of triangle AXY to the area of triangle ABC, using the ratio of the bases and the heights of the triangles.",
+            1
+        ],
+        [
+            "Step 2:\nArea of triangle AXY = (1/2) \u00d7 4 \u00d7 6 = 12\nArea of triangle ABC = (1/2) \u00d7 7 \u00d7 10\u221a(1 - (4/7)\u00b2) = 35\u221a(1 - 16/49) = 35\u221a(33/49) = 35(\u221a33)/7 = 5\u221a33",
+            1
+        ],
+        [
+            "Step 3:  $\\frac{[AXY]}{[ABC]} =\\frac{12}{35(\\sqrt{33})/7}=\\frac{12}{5\\sqrt{33}}=\\frac{12}{5\\sqrt{33}}\\times\\frac{\\sqrt{33}}{\\sqrt{33}}=\\frac{12\\sqrt{33}}{165}$",
+            1
+        ],
+        [
+            "Step 4: $\\frac{[AXY]}{[ABC]}=\\frac{12\\sqrt{33}}{165}=\\frac{4}{\\frac{5\\sqrt{33}}{41}}=\\frac{4}{5}\\times\\frac{\\sqrt{33}}{\\sqrt{33}}=\\frac{4}{5}$",
+            1
+        ],
+        [
+            "Step 4: $\\frac{[AXY]}{[ABC]}=\\frac{12\\sqrt{33}}{165}=\\frac{4}{5}\\times\\frac{\\sqrt{33}}{\\sqrt{33}}=\\frac{4}{5}$",
+            1
+        ],
+        [
+            "Step 5:\n$\\frac{[AXY]}{[ABC]}=\\frac{12\\sqrt{33}}{165}=\\frac{4}{5}$",
+            1
+        ],
+        [
+            "$\\frac{[AXY]}{[ABC]} = \\frac{(AX \u00d7 AY)}{(AB \u00d7 AC)} = \\frac{4 \u00d7 6}{7 \u00d7 10} = \\frac{24}{70} = \\frac{12}{35}$",
+            1
+        ]
+    ],
+    "time": 137.0767207145691,
+    "total_tokens": 8199,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

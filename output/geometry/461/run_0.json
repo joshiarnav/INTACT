@@ -1,0 +1,51 @@
+{
+    "problem": "The lateral surface area of the frustum of a solid right cone is the product of one-half the slant height ($L$) and the sum of the circumferences of the two circular faces. What is the number of square centimeters in the total surface area of the frustum shown here? Express your answer in terms of $\\pi$.\n\n[asy]\ndraw( scale(1,.2)*arc(origin,10,180,360) ) ;\ndraw( scale(1,.2)*arc(origin,10,15,165) , dashed ) ; //yes, there is a gap\ndraw( (-10,0)--(10,0) , dotted ) ;\nlabel(\"20cm\",(0,0),S);\ndraw((0,0)--(0,8));\nlabel(\"8cm\",(0,4),E);\ndraw( shift(0,8)*scale(1,.2)*circle(origin,4) ) ;\ndraw( (-4,8)--(4,8) , dotted ) ;\nlabel(\"8cm\",(0,8),N);\ndraw((-10,0)--(-4,8));\ndraw((10,0)--(4,8));\nlabel(\"$L$\",(5,4),NE);\n[/asy]",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "The circumferences of the bases are $2 \\pi \\cdot 4 = 8 \\pi$ and $2 \\pi \\cdot 10 = 20 \\pi$.  To find the slant height, we drop perpendiculars.\n\n[asy]\nunitsize(0.3 cm);\n\ndraw((-10,0)--(10,0)--(4,8)--(-4,8)--cycle);\ndraw((4,0)--(4,8));\ndraw((-4,0)--(-4,8));\n\nlabel(\"$8$\", (0,0), S);\nlabel(\"$6$\", (7,0), S);\nlabel(\"$6$\", (-7,0), S);\nlabel(\"$8$\", (0,8), N);\nlabel(\"$8$\", (4,4), W);\nlabel(\"$L$\", (7,4), NE);\n[/asy]\n\nWe have created a right triangle with legs 6 and 8, so the hypotenuse is $L = 10$.\n\nHence, the total surface area of the frustum, including the two bases, is \\[\\pi \\cdot 4^2 + \\pi \\cdot 10^2 + \\frac{1}{2} \\cdot 10 \\cdot (8 \\pi + 20 \\pi) = \\boxed{256 \\pi}.\\]",
+    "is_solved": true,
+    "model_solution": "Step 1:  Let's start by understanding the given problem and the information provided. The problem asks for the total surface area of the frustum of a solid right cone. We are given the slant height ($L$) and the dimensions of the two circular faces of the frustum.\nStep 2:  To find the total surface area, we need to calculate the lateral surface area and the areas of the two circular faces.\nStep 3:  We know that the lateral surface area is the product of one-half the slant height ($L$) and the sum of the circumferences of the two circular faces. We can express this as $\\frac{1}{2} L(2\\pi r_1+2\\pi r_2)$, where $r_1$ and $r_2$ are the radii of the two circular faces.\nStep 4:  Given that the height of the frustum is $8$ cm and the diameters of the smaller and larger circular faces are $8$ cm and $20$ cm respectively, we can find the radii of the faces to be $4$ cm and $10$ cm.\nStep 5:  Next, we can\nStep 2:  We can use the Pythagorean theorem to find the slant height ($L$), given the height of the frustum and the dimensions of the circular faces.\n\nLet's continue with the next step.\nStep 3:  To find the slant height $L$, we can use the Pythagorean theorem, which states that in a right-angled triangle, the square of the length of the hypotenuse is equal to the sum of the squares of the lengths of the other two sides. In this case, we can consider the height of the frustum as one side, and the difference between the radii of the two circular faces as the other side. Applying the Pythagorean theorem, we get $L=\\sqrt{10^2-4^2}=4\\sqrt{5}$.\nStep 4: \n$\\frac{1}{2} L(2\\pi r_1+2\\pi r_2) = \\frac{1}{2}(4\\sqrt{5})(2\\pi(4)+2\\pi(10)) = 28\\pi\\sqrt{5}.$\nStep 5:  The area of the smaller circular face is $\\pi r_1^2 = \\pi(4)^2 = 16\\pi$, and the area of the larger circular face is $\\pi r_2^2 = \\pi(10)^2 = 100\\pi$. We can add these areas to the lateral surface area to find the total surface area of the frustum.\n\n$28\\pi\\sqrt{5}+16\\pi+100\\pi=$\n$28\\pi\\sqrt{5}+116\\pi$\n$28\\pi\\sqrt{5}+116\\pi$",
+    "steps": [
+        "Step 1:  Let's start by understanding the given problem and the information provided. The problem asks for the total surface area of the frustum of a solid right cone. We are given the slant height ($L$) and the dimensions of the two circular faces of the frustum.\nStep 2:  To find the total surface area, we need to calculate the lateral surface area and the areas of the two circular faces.\nStep 3:  We know that the lateral surface area is the product of one-half the slant height ($L$) and the sum of the circumferences of the two circular faces. We can express this as $\\frac{1}{2} L(2\\pi r_1+2\\pi r_2)$, where $r_1$ and $r_2$ are the radii of the two circular faces.\nStep 4:  Given that the height of the frustum is $8$ cm and the diameters of the smaller and larger circular faces are $8$ cm and $20$ cm respectively, we can find the radii of the faces to be $4$ cm and $10$ cm.\nStep 5:  Next, we can",
+        "Step 2:  We can use the Pythagorean theorem to find the slant height ($L$), given the height of the frustum and the dimensions of the circular faces.\n\nLet's continue with the next step.",
+        "Step 3:  To find the slant height $L$, we can use the Pythagorean theorem, which states that in a right-angled triangle, the square of the length of the hypotenuse is equal to the sum of the squares of the lengths of the other two sides. In this case, we can consider the height of the frustum as one side, and the difference between the radii of the two circular faces as the other side. Applying the Pythagorean theorem, we get $L=\\sqrt{10^2-4^2}=4\\sqrt{5}$.",
+        "Step 4: \n$\\frac{1}{2} L(2\\pi r_1+2\\pi r_2) = \\frac{1}{2}(4\\sqrt{5})(2\\pi(4)+2\\pi(10)) = 28\\pi\\sqrt{5}.$",
+        "Step 5:  The area of the smaller circular face is $\\pi r_1^2 = \\pi(4)^2 = 16\\pi$, and the area of the larger circular face is $\\pi r_2^2 = \\pi(10)^2 = 100\\pi$. We can add these areas to the lateral surface area to find the total surface area of the frustum.\n\n$28\\pi\\sqrt{5}+16\\pi+100\\pi=$",
+        "$28\\pi\\sqrt{5}+116\\pi$",
+        "$28\\pi\\sqrt{5}+116\\pi$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Let's start by understanding the given problem and the information provided. The problem asks for the total surface area of the frustum of a solid right cone. We are given the slant height ($L$) and the dimensions of the two circular faces of the frustum.\nStep 2:  To find the total surface area, we need to calculate the lateral surface area and the areas of the two circular faces.\nStep 3:  We know that the lateral surface area is the product of one-half the slant height ($L$) and the sum of the circumferences of the two circular faces. We can express this as $\\frac{1}{2} L(2\\pi r_1+2\\pi r_2)$, where $r_1$ and $r_2$ are the radii of the two circular faces.\nStep 4:  Given that the height of the frustum is $8$ cm and the diameters of the smaller and larger circular faces are $8$ cm and $20$ cm respectively, we can find the radii of the faces to be $4$ cm and $10$ cm.\nStep 5:  Next, we can",
+            1
+        ],
+        [
+            "Step 2:  We can use the Pythagorean theorem to find the slant height ($L$), given the height of the frustum and the dimensions of the circular faces.\n\nLet's continue with the next step.",
+            1
+        ],
+        [
+            "Step 3:  To find the slant height $L$, we can use the Pythagorean theorem, which states that in a right-angled triangle, the square of the length of the hypotenuse is equal to the sum of the squares of the lengths of the other two sides. In this case, we can consider the height of the frustum as one side, and the difference between the radii of the two circular faces as the other side. Applying the Pythagorean theorem, we get $L=\\sqrt{10^2-4^2}=4\\sqrt{5}$.",
+            1
+        ],
+        [
+            "Step 4: \n$\\frac{1}{2} L(2\\pi r_1+2\\pi r_2) = \\frac{1}{2}(4\\sqrt{5})(2\\pi(4)+2\\pi(10)) = 28\\pi\\sqrt{5}.$",
+            1
+        ],
+        [
+            "Step 5:  The area of the smaller circular face is $\\pi r_1^2 = \\pi(4)^2 = 16\\pi$, and the area of the larger circular face is $\\pi r_2^2 = \\pi(10)^2 = 100\\pi$. We can add these areas to the lateral surface area to find the total surface area of the frustum.\n\n$28\\pi\\sqrt{5}+16\\pi+100\\pi=$",
+            1
+        ],
+        [
+            "$28\\pi\\sqrt{5}+116\\pi$",
+            1
+        ],
+        [
+            "$28\\pi\\sqrt{5}+116\\pi$",
+            1
+        ]
+    ],
+    "time": 95.6257574558258,
+    "total_tokens": 10954,
+    "final_answer_tokens": 928,
+    "model": "meta-llama/Llama-Vision-Free"
+}

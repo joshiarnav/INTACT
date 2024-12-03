@@ -1,0 +1,56 @@
+{
+    "problem": "Forty cards are placed into a box, each bearing a number 1, 2, 3, 4, 5, 6, 7, 8, 9, or 10, with each number entered on four cards. Four cards are drawn from the box at random and without replacement. Let $p$ be the probability that all four cards bear the same number. Let $q$ be the probability that three of the cards bear a number $a$ and the other bears a number $b$ that is not equal to $a$. What is the value of $q/p$?",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "The total number of ways that the numbers can be chosen is $\\binom{40}{4}.$ Exactly 10 of these possibilities result in the four cards having the same number.\n\nNow we need to determine the number of ways that three cards can have a number $a$ and the other card have a number $b$, with $b\\ne a$. There are $10\\cdot 9 = 90$  ways to choose the distinct numbers $a$ and $b$. (Notice that the order in which we choose these two number matters, since we get 3 of $a$ and 1 of $b$.)\n\nFor each value of $a$ there are $\\binom{4}{3}$ ways to choose the three cards with $a$ and for each value of $b$ there are $\\binom{4}{1}$ ways to choose the card with $b$. Hence the number of ways that three cards have some  number $a$ and the other card has some distinct number $b$ is $$90\\cdot\\binom{4}{3}\\cdot\\binom{4}{1}=90\\cdot 4 \\cdot 4 = 1440.$$ So the probabilities $p$ and $q$ are $\\displaystyle \\frac{10}{\\binom{40}{4}}$ and $\\displaystyle \\frac{1440}{\\binom{40}{4}}$, respectively, which implies that $$\\frac{q}{p} = \\frac{1440}{10} = \\boxed{144}.$$",
+    "is_solved": true,
+    "model_solution": "Step 1: Determine the total number of ways to draw four cards from the 40-card deck without replacement.\n$\\binom{40}{4}=\\frac{40!}{(40-4)!4!}=\\frac{40!}{36!4!}=\\frac{40\\cdot 39\\cdot 38\\cdot 37}{4!}=91390$\nStep 2:\nFind the number of ways to draw four cards with the same number.\n$\\binom{10}{1}\\binom{4}{4}=10$\n\nFind the number of ways to draw three cards with one number and the fourth card with a different number.\n$\\binom{10}{1}\\binom{4}{3}\\binom{9}{1}\\binom{4}{1}=10\\cdot 4\\cdot 9\\cdot 4=1440$\nStep 3:\n$p=\\frac{\\text{number of ways to draw four cards with the same number}}{\\text{total number of ways to draw four cards}}=\\frac{10}{91390}$;\n$q=\\frac{\\text{number of ways to draw three cards with one number and the fourth card with a different number}}{\\text{total number of ways to draw four cards}}=\\frac{1440}{91390}$\nStep 4:\n$\\frac{q}{p}=\\frac{1440/91390}{10/91390}$\n$\\frac{q}{p}=\\frac{1440}{10}=\\frac{144}{1}$\n$\\frac{q}{p}=\\frac{1440/91390}{10/91390}$\n$\\frac{1440/91390}{10/91390}=\\frac{1440}{10}$\n$\\frac{1440/91390}{10/91390}=\\frac{1440}{10}$",
+    "steps": [
+        "Step 1: Determine the total number of ways to draw four cards from the 40-card deck without replacement.\n$\\binom{40}{4}=\\frac{40!}{(40-4)!4!}=\\frac{40!}{36!4!}=\\frac{40\\cdot 39\\cdot 38\\cdot 37}{4!}=91390$",
+        "Step 2:\nFind the number of ways to draw four cards with the same number.\n$\\binom{10}{1}\\binom{4}{4}=10$\n\nFind the number of ways to draw three cards with one number and the fourth card with a different number.\n$\\binom{10}{1}\\binom{4}{3}\\binom{9}{1}\\binom{4}{1}=10\\cdot 4\\cdot 9\\cdot 4=1440$",
+        "Step 3:\n$p=\\frac{\\text{number of ways to draw four cards with the same number}}{\\text{total number of ways to draw four cards}}=\\frac{10}{91390}$;\n$q=\\frac{\\text{number of ways to draw three cards with one number and the fourth card with a different number}}{\\text{total number of ways to draw four cards}}=\\frac{1440}{91390}$",
+        "Step 4:\n$\\frac{q}{p}=\\frac{1440/91390}{10/91390}$",
+        "$\\frac{q}{p}=\\frac{1440}{10}=\\frac{144}{1}$",
+        "$\\frac{q}{p}=\\frac{1440/91390}{10/91390}$",
+        "$\\frac{1440/91390}{10/91390}=\\frac{1440}{10}$",
+        "$\\frac{1440/91390}{10/91390}=\\frac{1440}{10}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Determine the total number of ways to draw four cards from the 40-card deck without replacement.\n$\\binom{40}{4}=\\frac{40!}{(40-4)!4!}=\\frac{40!}{36!4!}=\\frac{40\\cdot 39\\cdot 38\\cdot 37}{4!}=91390$",
+            1
+        ],
+        [
+            "Step 2:\nFind the number of ways to draw four cards with the same number.\n$\\binom{10}{1}\\binom{4}{4}=10$\n\nFind the number of ways to draw three cards with one number and the fourth card with a different number.\n$\\binom{10}{1}\\binom{4}{3}\\binom{9}{1}\\binom{4}{1}=10\\cdot 4\\cdot 9\\cdot 4=1440$",
+            1
+        ],
+        [
+            "Step 3:\n$p=\\frac{\\text{number of ways to draw four cards with the same number}}{\\text{total number of ways to draw four cards}}=\\frac{10}{91390}$;\n$q=\\frac{\\text{number of ways to draw three cards with one number and the fourth card with a different number}}{\\text{total number of ways to draw four cards}}=\\frac{1440}{91390}$",
+            1
+        ],
+        [
+            "Step 4:\n$\\frac{q}{p}=\\frac{1440/91390}{10/91390}$",
+            1
+        ],
+        [
+            "$\\frac{q}{p}=\\frac{1440}{10}=\\frac{144}{1}$",
+            1
+        ],
+        [
+            "$\\frac{q}{p}=\\frac{1440/91390}{10/91390}$",
+            1
+        ],
+        [
+            "$\\frac{1440/91390}{10/91390}=\\frac{1440}{10}$",
+            1
+        ],
+        [
+            "$\\frac{1440/91390}{10/91390}=\\frac{1440}{10}$",
+            1
+        ]
+    ],
+    "time": 102.3364040851593,
+    "total_tokens": 7491,
+    "final_answer_tokens": 570,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,26 @@
+{
+    "problem": "Compute $$1\\cdot 2^2+2\\cdot 3^2+3\\cdot4^2+\\cdots+19\\cdot 20^2.$$",
+    "level": "Level 3",
+    "type": "Intermediate Algebra",
+    "solution": "We can write the sum as\n\\begin{align*}\n0 \\cdot 1^2 + 1 \\cdot 2^2 + 3 \\cdot 4^2 + \\dots + 19 \\cdot 20^2 &= \\sum_{n = 1}^{20} (n - 1) n^2 \\\\\n&= \\sum_{n = 1}^{20} (n^3 - n^2) \\\\\n&= \\sum_{n = 1}^{20} n^3 - \\sum_{n = 1}^{20} n^2 \\\\\n&= \\frac{20^2 \\cdot 21^2}{4} - \\frac{20 \\cdot 21 \\cdot 41}{6} \\\\\n&= 20 \\cdot 21 \\cdot \\left( \\frac{20 \\cdot 21}{4} - \\frac{41}{6} \\right) \\\\\n&= \\boxed{41230}.\n\\end{align*}",
+    "is_solved": false,
+    "model_solution": "## Step 1: Apply the formula for the sum of squares\n$$\\sum_{i=1}^{n} i^2=\\frac{n(n+1)(2n+1)}{6}$$\n\n## Step 2: Differentiate the sum of squares formula\n$$\\sum_{i=1}^{n} i^3=\\frac{n^2(n+1)^2}{4}$$\n\n## Step 3: Differentiate the sum of squares formula again\n$$\\sum_{i=1}^{n} i^4=\\frac{n(n+1)(2n+1)(3n^2+3n-1)}{30}$$\n\n## Step 4: Apply the sum of squares, sum of cubes, and sum of fourth powers formulas\n$$\\sum_{i=1}^{n} i^2=\\frac{n(n+1)(2n+1)}{6}$$\n$$\\sum_{i=1}^{n} i^3=\\frac{n^2(n+1)^2}{4}$$\n$$\\sum_{i=1}^{n} i^4=\\frac{n(n+1)(2n+1)(\n## Step 5: Compute the sum using the derived formulas\n$$(1+2+\\cdots+20)\\sum_{i=1}^{20} i-\\sum_{i=1}^{20} i^2$$",
+    "steps": [
+        "## Step 1: Apply the formula for the sum of squares\n$$\\sum_{i=1}^{n} i^2=\\frac{n(n+1)(2n+1)}{6}$$\n\n## Step 2: Differentiate the sum of squares formula\n$$\\sum_{i=1}^{n} i^3=\\frac{n^2(n+1)^2}{4}$$\n\n## Step 3: Differentiate the sum of squares formula again\n$$\\sum_{i=1}^{n} i^4=\\frac{n(n+1)(2n+1)(3n^2+3n-1)}{30}$$\n\n## Step 4: Apply the sum of squares, sum of cubes, and sum of fourth powers formulas\n$$\\sum_{i=1}^{n} i^2=\\frac{n(n+1)(2n+1)}{6}$$\n$$\\sum_{i=1}^{n} i^3=\\frac{n^2(n+1)^2}{4}$$\n$$\\sum_{i=1}^{n} i^4=\\frac{n(n+1)(2n+1)(",
+        "## Step 5: Compute the sum using the derived formulas\n$$(1+2+\\cdots+20)\\sum_{i=1}^{20} i-\\sum_{i=1}^{20} i^2$$"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Apply the formula for the sum of squares\n$$\\sum_{i=1}^{n} i^2=\\frac{n(n+1)(2n+1)}{6}$$\n\n## Step 2: Differentiate the sum of squares formula\n$$\\sum_{i=1}^{n} i^3=\\frac{n^2(n+1)^2}{4}$$\n\n## Step 3: Differentiate the sum of squares formula again\n$$\\sum_{i=1}^{n} i^4=\\frac{n(n+1)(2n+1)(3n^2+3n-1)}{30}$$\n\n## Step 4: Apply the sum of squares, sum of cubes, and sum of fourth powers formulas\n$$\\sum_{i=1}^{n} i^2=\\frac{n(n+1)(2n+1)}{6}$$\n$$\\sum_{i=1}^{n} i^3=\\frac{n^2(n+1)^2}{4}$$\n$$\\sum_{i=1}^{n} i^4=\\frac{n(n+1)(2n+1)(",
+            1
+        ],
+        [
+            "## Step 5: Compute the sum using the derived formulas\n$$(1+2+\\cdots+20)\\sum_{i=1}^{20} i-\\sum_{i=1}^{20} i^2$$",
+            1
+        ]
+    ],
+    "time": 27.125218152999878,
+    "total_tokens": 1490,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

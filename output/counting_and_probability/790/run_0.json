@@ -1,0 +1,41 @@
+{
+    "problem": "3 cards are chosen at random from a standard 52-card deck.  What is the probability that they form a pair?  (A 3-card hand is a 'pair' if two of the cards match in rank but the third card is different.  For example, 668 is a pair, but 999 is not.)",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "There are $\\binom{52}{3} = 22,\\!100$ ways to choose 3 cards out of 52, without regard to order.  To choose two cards of matching rank, there are 13 different ranks and $\\binom{4}{2} = 6$ combinations of suits to choose from, for a total of $13 \\times 6 = 78$ different possibilities.  There are 48 remaining cards not in the same rank as the first two.  This means there are $78 \\times 48 = 3,\\!744$ ways to choose a hand that is a pair.  So the probability that a randomly drawn hand is a pair is $\\dfrac{3744}{22100} = \\boxed{\\dfrac{72}{425}}$.",
+    "is_solved": true,
+    "model_solution": "Step 1:  To find the probability that 3 cards chosen at random from a standard 52-card deck form a pair, we need to calculate the total number of possible 3-card hands and the number of hands that form a pair.\nStep 2:  There are $\\binom{52}{3} = \\frac{52!}{3!(52-3)!} = 22,100$ ways to choose a 3-card hand from a 52-card deck.\nStep 3:  To calculate the number of 3-card hands that form a pair, we can count the number of ways to choose the pair and the remaining card separately. There are $\\binom{13}{1} = 13$ ways to choose the rank of the pair, and for each rank, there are $\\binom{4}{2} = 6$ ways to choose the two cards of that rank. Therefore, there are $13\\cdot 6 = 78$ ways to choose the pair. For the remaining card, there are $\\binom{48}{1} = 48$ ways to choose a card that is not of the same rank as the pair. Hence, the total number of 3-card hands that form a pair is $78\\cdot 48 = 3,744$.\nStep 4:  The probability that the 3 cards chosen form a pair is $\\frac{3,744}{22,100}$\nStep 5: Final Answer. $\\frac{3744}{22100} = \\boxed{\\frac{6}{85}}$",
+    "steps": [
+        "Step 1:  To find the probability that 3 cards chosen at random from a standard 52-card deck form a pair, we need to calculate the total number of possible 3-card hands and the number of hands that form a pair.",
+        "Step 2:  There are $\\binom{52}{3} = \\frac{52!}{3!(52-3)!} = 22,100$ ways to choose a 3-card hand from a 52-card deck.",
+        "Step 3:  To calculate the number of 3-card hands that form a pair, we can count the number of ways to choose the pair and the remaining card separately. There are $\\binom{13}{1} = 13$ ways to choose the rank of the pair, and for each rank, there are $\\binom{4}{2} = 6$ ways to choose the two cards of that rank. Therefore, there are $13\\cdot 6 = 78$ ways to choose the pair. For the remaining card, there are $\\binom{48}{1} = 48$ ways to choose a card that is not of the same rank as the pair. Hence, the total number of 3-card hands that form a pair is $78\\cdot 48 = 3,744$.",
+        "Step 4:  The probability that the 3 cards chosen form a pair is $\\frac{3,744}{22,100}$",
+        "Step 5: Final Answer. $\\frac{3744}{22100} = \\boxed{\\frac{6}{85}}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  To find the probability that 3 cards chosen at random from a standard 52-card deck form a pair, we need to calculate the total number of possible 3-card hands and the number of hands that form a pair.",
+            1
+        ],
+        [
+            "Step 2:  There are $\\binom{52}{3} = \\frac{52!}{3!(52-3)!} = 22,100$ ways to choose a 3-card hand from a 52-card deck.",
+            1
+        ],
+        [
+            "Step 3:  To calculate the number of 3-card hands that form a pair, we can count the number of ways to choose the pair and the remaining card separately. There are $\\binom{13}{1} = 13$ ways to choose the rank of the pair, and for each rank, there are $\\binom{4}{2} = 6$ ways to choose the two cards of that rank. Therefore, there are $13\\cdot 6 = 78$ ways to choose the pair. For the remaining card, there are $\\binom{48}{1} = 48$ ways to choose a card that is not of the same rank as the pair. Hence, the total number of 3-card hands that form a pair is $78\\cdot 48 = 3,744$.",
+            1
+        ],
+        [
+            "Step 4:  The probability that the 3 cards chosen form a pair is $\\frac{3,744}{22,100}$",
+            1
+        ],
+        [
+            "Step 5: Final Answer. $\\frac{3744}{22100} = \\boxed{\\frac{6}{85}}$",
+            1
+        ]
+    ],
+    "time": 69.60846400260925,
+    "total_tokens": 3414,
+    "final_answer_tokens": 454,
+    "model": "meta-llama/Llama-Vision-Free"
+}

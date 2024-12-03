@@ -1,0 +1,66 @@
+{
+    "problem": "Below is a portion of the graph of a function, $y=f(x)$:\n\n[asy]\nimport graph; size(8cm); real lsf=0.5; pen dps=linewidth(0.7)+fontsize(10); defaultpen(dps); pen ds=black; real xmin=-3.25,xmax=5.25,ymin=-3.25,ymax=4.25;\n\npen cqcqcq=rgb(0.75,0.75,0.75);\n\n/*grid*/ pen gs=linewidth(0.7)+cqcqcq+linetype(\"2 2\"); real gx=1,gy=1;\nfor(real i=ceil(xmin/gx)*gx;i<=floor(xmax/gx)*gx;i+=gx) draw((i,ymin)--(i,ymax),gs); for(real i=ceil(ymin/gy)*gy;i<=floor(ymax/gy)*gy;i+=gy) draw((xmin,i)--(xmax,i),gs);\n\nLabel laxis; laxis.p=fontsize(10);\n\nxaxis(\"\",xmin,xmax,Ticks(laxis,Step=1.0,Size=2,NoZero),Arrows(6),above=true); yaxis(\"\",ymin,ymax,Ticks(laxis,Step=1.0,Size=2,NoZero),Arrows(6),above=true);\nreal f1(real x){return (x-4)/(x-3);}\ndraw(graph(f1,-3.25,2.7),linewidth(1));\ndraw(graph(f1,3.2,5.25),linewidth(1));\nclip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle);\nlabel(\"$y=f(x)$\",(5.5,0.6),E);\n[/asy]\n\nSuppose we define another function by $g(x)=f(x+a)$. On the evidence of the graph above, for what choice of $a$ is it true that $g(x)$ is identical to its inverse, $g^{-1}(x)$?",
+    "level": "Level 5",
+    "type": "Algebra",
+    "solution": "Note that the graph of $g(x)$ is identical to the graph of $f(x)$ shifted $a$ units to the left. (This is true because if $(x,f(x))$ is a point on the graph of $f$, then $(x-a,f(x))$ is the corresponding point on the graph of $g$.)\n\nThe graph of a function and its inverse are reflections of each other across the line $y=x$. Therefore, if $g(x)$ is its own inverse, then the graph of $g(x)$ must be symmetric with respect to the line $y=x$.\n\nThe graph of $f(x)$ is symmetric with respect to the line $y=x-2$: [asy]\ndraw((-1.25,-3.25)--(5.25,3.25),red+0.75+dashed);\nimport graph; size(8cm); real lsf=0.5; pen dps=linewidth(0.7)+fontsize(10); defaultpen(dps); pen ds=black; real xmin=-3.25,xmax=5.25,ymin=-3.25,ymax=4.25;\n\npen cqcqcq=rgb(0.75,0.75,0.75);\n\n/*grid*/ pen gs=linewidth(0.7)+cqcqcq+linetype(\"2 2\"); real gx=1,gy=1;\nfor(real i=ceil(xmin/gx)*gx;i<=floor(xmax/gx)*gx;i+=gx) draw((i,ymin)--(i,ymax),gs); for(real i=ceil(ymin/gy)*gy;i<=floor(ymax/gy)*gy;i+=gy) draw((xmin,i)--(xmax,i),gs);\n\nLabel laxis; laxis.p=fontsize(10);\n\nxaxis(\"\",xmin,xmax,Ticks(laxis,Step=1.0,Size=2,NoZero),Arrows(6),above=true); yaxis(\"\",ymin,ymax,Ticks(laxis,Step=1.0,Size=2,NoZero),Arrows(6),above=true);\nreal f1(real x){return (x-4)/(x-3);}\ndraw(graph(f1,-3.25,2.7),linewidth(1));\ndraw(graph(f1,3.2,5.25),linewidth(1));\nclip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle);\n\nlabel(\"$y=f(x)$\",(5.5,0.6),E);\n[/asy]\n\nTherefore, to make this graph symmetric with respect to $y=x$, we must shift it $2$ places to the left: [asy]\ndraw((-3.25,-3.25)--(4.25,4.25),red+0.75+dashed);\nimport graph; size(8.7cm); real lsf=0.5; pen dps=linewidth(0.7)+fontsize(10); defaultpen(dps); pen ds=black; real xmin=-3.25,xmax=5.25,ymin=-3.25,ymax=4.25;\n\npen cqcqcq=rgb(0.75,0.75,0.75);\n\n/*grid*/ pen gs=linewidth(0.7)+cqcqcq+linetype(\"2 2\"); real gx=1,gy=1;\nfor(real i=ceil(xmin/gx)*gx;i<=floor(xmax/gx)*gx;i+=gx) draw((i,ymin)--(i,ymax),gs); for(real i=ceil(ymin/gy)*gy;i<=floor(ymax/gy)*gy;i+=gy) draw((xmin,i)--(xmax,i),gs);\n\nLabel laxis; laxis.p=fontsize(10);\n\nxaxis(\"\",xmin,xmax,Ticks(laxis,Step=1.0,Size=2,NoZero),Arrows(6),above=true); yaxis(\"\",ymin,ymax,Ticks(laxis,Step=1.0,Size=2,NoZero),Arrows(6),above=true);\nreal f1(real x){return (x-2)/(x-1);}\ndraw(graph(f1,-3.25,0.7),linewidth(1));\ndraw(graph(f1,1.2,5.25),linewidth(1));\nclip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle);\n\nlabel(\"$y=f(x+2)$\",(5.5,0.8),E);\n[/asy]\n\nSo, $a=\\boxed{2}$.",
+    "is_solved": false,
+    "model_solution": "Step 1:  To determine the value of $a$ for which $g(x)$ is identical to its inverse, $g^{-1}(x)$, we must first understand how the function $g(x)$ is related to $f(x)$.\nStep 2:  The function $g(x)$ is defined as $g(x) = f(x + a)$. This means that the graph of $g(x)$ is the graph of $f(x)$ shifted $a$ units to the left.\nStep 3:  We're given the graph of $f(x)$, and we need to find the value of $a$ such that the graph of $g(x)$, which is $f(x)$ shifted $a$ units to the left, is identical to its inverse, $g^{-1}(x)$.\nStep 4:  The inverse of a function is found by reflecting the original graph across the line $y = x$. So, to get the graph of $g^{-1}(x)$, we need to reflect the graph of $g(x)$ across the line $y = x$.\nStep 5:  The graph of $g^{-1}(x)$ will be the reflection of\nStep 6:  To find the value of $a$ such that $g(x)$ is identical to $g^{-1}(x)$, we need to shift the graph of $f(x)$ and see for which shift the resulting graph is symmetric about the line $y=x$.\nStep 7:  To find the shift needed to make the graph of $g(x)$ identical to $g^{-1}(x)$, we consider a horizontal shift of the graph of $f(x)$, which corresponds to replacing $x$ by $x - a$. This transforms the function $f(x)$ into $g(x) = f(x - a)$.\nStep 8:  Therefore, we want $g(x) = f(x - a)$ to be symmetric about the line $y = x$, which means that we need the graph of $f(x - a)$ to be symmetric about the line $y = x$.\nStep 9:  The graph of $f(x - a)$ being symmetric about the line $y = x$ implies that the graph of $f(x - a)$ is a reflection of the graph of $f(x)$ across the line $y = x$.\nStep 10: \nWe see from the graph that the function $f(x)$ is symmetric about the line $x=2$, and so the graph of $g(x)=f(x-2)$ will be symmetric about the line $y=x$.\nStep 11:  $a = \\boxed{2}$\nStep 12: $a = 2$\nStep 12: Since the function $f(x)$ is symmetric about the line $x=2$, the graph of $g(x)=f(x-2)$ will be symmetric about the line $y=x$.\nStep 13: $a = 2$",
+    "steps": [
+        "Step 1:  To determine the value of $a$ for which $g(x)$ is identical to its inverse, $g^{-1}(x)$, we must first understand how the function $g(x)$ is related to $f(x)$.\nStep 2:  The function $g(x)$ is defined as $g(x) = f(x + a)$. This means that the graph of $g(x)$ is the graph of $f(x)$ shifted $a$ units to the left.\nStep 3:  We're given the graph of $f(x)$, and we need to find the value of $a$ such that the graph of $g(x)$, which is $f(x)$ shifted $a$ units to the left, is identical to its inverse, $g^{-1}(x)$.\nStep 4:  The inverse of a function is found by reflecting the original graph across the line $y = x$. So, to get the graph of $g^{-1}(x)$, we need to reflect the graph of $g(x)$ across the line $y = x$.\nStep 5:  The graph of $g^{-1}(x)$ will be the reflection of",
+        "Step 6:  To find the value of $a$ such that $g(x)$ is identical to $g^{-1}(x)$, we need to shift the graph of $f(x)$ and see for which shift the resulting graph is symmetric about the line $y=x$.",
+        "Step 7:  To find the shift needed to make the graph of $g(x)$ identical to $g^{-1}(x)$, we consider a horizontal shift of the graph of $f(x)$, which corresponds to replacing $x$ by $x - a$. This transforms the function $f(x)$ into $g(x) = f(x - a)$.",
+        "Step 8:  Therefore, we want $g(x) = f(x - a)$ to be symmetric about the line $y = x$, which means that we need the graph of $f(x - a)$ to be symmetric about the line $y = x$.",
+        "Step 9:  The graph of $f(x - a)$ being symmetric about the line $y = x$ implies that the graph of $f(x - a)$ is a reflection of the graph of $f(x)$ across the line $y = x$.",
+        "Step 10: \nWe see from the graph that the function $f(x)$ is symmetric about the line $x=2$, and so the graph of $g(x)=f(x-2)$ will be symmetric about the line $y=x$.",
+        "Step 11:  $a = \\boxed{2}$",
+        "Step 12: $a = 2$",
+        "Step 12: Since the function $f(x)$ is symmetric about the line $x=2$, the graph of $g(x)=f(x-2)$ will be symmetric about the line $y=x$.",
+        "Step 13: $a = 2$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  To determine the value of $a$ for which $g(x)$ is identical to its inverse, $g^{-1}(x)$, we must first understand how the function $g(x)$ is related to $f(x)$.\nStep 2:  The function $g(x)$ is defined as $g(x) = f(x + a)$. This means that the graph of $g(x)$ is the graph of $f(x)$ shifted $a$ units to the left.\nStep 3:  We're given the graph of $f(x)$, and we need to find the value of $a$ such that the graph of $g(x)$, which is $f(x)$ shifted $a$ units to the left, is identical to its inverse, $g^{-1}(x)$.\nStep 4:  The inverse of a function is found by reflecting the original graph across the line $y = x$. So, to get the graph of $g^{-1}(x)$, we need to reflect the graph of $g(x)$ across the line $y = x$.\nStep 5:  The graph of $g^{-1}(x)$ will be the reflection of",
+            1
+        ],
+        [
+            "Step 6:  To find the value of $a$ such that $g(x)$ is identical to $g^{-1}(x)$, we need to shift the graph of $f(x)$ and see for which shift the resulting graph is symmetric about the line $y=x$.",
+            1
+        ],
+        [
+            "Step 7:  To find the shift needed to make the graph of $g(x)$ identical to $g^{-1}(x)$, we consider a horizontal shift of the graph of $f(x)$, which corresponds to replacing $x$ by $x - a$. This transforms the function $f(x)$ into $g(x) = f(x - a)$.",
+            1
+        ],
+        [
+            "Step 8:  Therefore, we want $g(x) = f(x - a)$ to be symmetric about the line $y = x$, which means that we need the graph of $f(x - a)$ to be symmetric about the line $y = x$.",
+            1
+        ],
+        [
+            "Step 9:  The graph of $f(x - a)$ being symmetric about the line $y = x$ implies that the graph of $f(x - a)$ is a reflection of the graph of $f(x)$ across the line $y = x$.",
+            1
+        ],
+        [
+            "Step 10: \nWe see from the graph that the function $f(x)$ is symmetric about the line $x=2$, and so the graph of $g(x)=f(x-2)$ will be symmetric about the line $y=x$.",
+            1
+        ],
+        [
+            "Step 11:  $a = \\boxed{2}$",
+            1
+        ],
+        [
+            "Step 12: $a = 2$",
+            1
+        ],
+        [
+            "Step 12: Since the function $f(x)$ is symmetric about the line $x=2$, the graph of $g(x)=f(x-2)$ will be symmetric about the line $y=x$.",
+            1
+        ],
+        [
+            "Step 13: $a = 2$",
+            1
+        ]
+    ],
+    "time": 136.35434937477112,
+    "total_tokens": 19500,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

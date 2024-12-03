@@ -1,0 +1,21 @@
+{
+    "problem": "Compute $\\tan 315^\\circ$.",
+    "level": "Level 2",
+    "type": "Geometry",
+    "solution": "Let $P$ be the point on the unit circle that is $315^\\circ$ counterclockwise from $(1,0)$, and let $D$ be the foot of the altitude from $P$ to the $x$-axis, as shown below.\n\n[asy]\n\npair A,C,P,O,D;\n\ndraw((0,-1.2)--(0,1.2),p=black+1.2bp,Arrows(0.15cm));\n\ndraw((-1.2,0)--(1.2,0),p=black+1.2bp,Arrows(0.15cm));\n\nA = (1,0);\n\nO= (0,0);\n\nlabel(\"$x$\",(1.2,0),SE);\n\nlabel(\"$y$\",(0,1.2),NE);\n\nP = rotate(315)*A;\n\nD = foot(P,A,-A);\n\ndraw(O--P--D);\n\ndraw(rightanglemark(O,D,P,2));\n\ndraw(Circle(O,1));\n\nlabel(\"$O$\",O,NW);\n\nlabel(\"$P$\",P,SE);\n\n//label(\"$A$\",A,SE);\n\nlabel(\"$D$\",D,N);\n\n[/asy]\n\nTriangle $POD$ is a 45-45-90 triangle, so $DO = DP = \\frac{\\sqrt{2}}{2}$.  Therefore, the coordinates of $P$ are $\\left(\\frac{\\sqrt{2}}{2}, -\\frac{\\sqrt{2}}{2}\\right)$, so $\\tan 315^\\circ = \\frac{\\sin 315^\\circ}{\\cos 315^\\circ} = \\frac{-\\sqrt{2}/2}{\\sqrt{2}/2} = \\boxed{-1}$.",
+    "is_solved": true,
+    "model_solution": "## Step 1:  We are asked to find the value of $\\tan 315^\\circ$.\n## Step 2:  To compute this, we can use the fact that the tangent function is periodic with a period of $180^\\circ$, meaning that $\\tan \\theta = \\tan (\\theta + 180^\\circ)$ for any angle $\\theta$.\n## Step 3:  So, $\\tan 315^\\circ = \\tan (315^\\circ - 360^\\circ)$.\n## Step 4:  Now, we can use the property of the tangent function that $\\tan (\\theta - 180^\\circ) = -\\tan \\theta$ for any angle $\\theta$.\n## Step 5:  Therefore, $\\tan 315^\\circ = \\tan (-45^\\circ)$.\n\nThe final answer is: $\\boxed{-1}$",
+    "steps": [
+        "## Step 1:  We are asked to find the value of $\\tan 315^\\circ$.\n## Step 2:  To compute this, we can use the fact that the tangent function is periodic with a period of $180^\\circ$, meaning that $\\tan \\theta = \\tan (\\theta + 180^\\circ)$ for any angle $\\theta$.\n## Step 3:  So, $\\tan 315^\\circ = \\tan (315^\\circ - 360^\\circ)$.\n## Step 4:  Now, we can use the property of the tangent function that $\\tan (\\theta - 180^\\circ) = -\\tan \\theta$ for any angle $\\theta$.\n## Step 5:  Therefore, $\\tan 315^\\circ = \\tan (-45^\\circ)$.\n\nThe final answer is: $\\boxed{-1}$"
+    ],
+    "full_steps": [
+        [
+            "## Step 1:  We are asked to find the value of $\\tan 315^\\circ$.\n## Step 2:  To compute this, we can use the fact that the tangent function is periodic with a period of $180^\\circ$, meaning that $\\tan \\theta = \\tan (\\theta + 180^\\circ)$ for any angle $\\theta$.\n## Step 3:  So, $\\tan 315^\\circ = \\tan (315^\\circ - 360^\\circ)$.\n## Step 4:  Now, we can use the property of the tangent function that $\\tan (\\theta - 180^\\circ) = -\\tan \\theta$ for any angle $\\theta$.\n## Step 5:  Therefore, $\\tan 315^\\circ = \\tan (-45^\\circ)$.\n\nThe final answer is: $\\boxed{-1}$",
+            1
+        ]
+    ],
+    "time": 12.883610248565674,
+    "total_tokens": 485,
+    "final_answer_tokens": 225,
+    "model": "meta-llama/Llama-Vision-Free"
+}

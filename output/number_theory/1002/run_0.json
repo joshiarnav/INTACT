@@ -1,0 +1,66 @@
+{
+    "problem": "What is the largest integer less than $2010$ that has a remainder of $5$ when divided by $7,$ a remainder of $10$ when divided by $11,$ and a remainder of $10$ when divided by $13$?",
+    "level": "Level 5",
+    "type": "Number Theory",
+    "solution": "We want a remainder of $10$ when divided by both $11$ and $13$. The least common multiple of $11$ and $13$ is $143$. We add $10$ to the number such that the remainder would be $10$ when divided by $11$ and $13$ so we get $143+10=153$. However, that does not give a remainder of $5$ when divided by $7$, so we add more $143$s until we get a value that works. We get that $153+143+143=439$ gives a remainder of $5$ when divided by $7$.\n\nSince we want the largest integer less than 2010, we keep adding the least common multiple of $7$, $11$, and $13$ until we go over. The least common multiple is $7 \\cdot 11 \\cdot 13 =1001$. We add it to $439$ to get $1440$, adding it again would give a value greater than $2010$, so our answer is $\\boxed{1440}$.",
+    "is_solved": false,
+    "model_solution": "Step 1:  We need to find the largest integer less than $2010$ that has a remainder of $5$ when divided by $7,$ a remainder of $10$ when divided by $11,$ and a remainder of $10$ when divided by $13.$\nStep 2:  To simplify the problem, we can use the Chinese Remainder Theorem, which allows us to find the solution to a system of congruences.\nStep 3:  We have the system of congruences:\nStep 4:  $a \\equiv 5 \\pmod 7$\nStep 5:  $a \\equiv 10 \\pmod {11}$\nStep 6:  $a \\equiv 10 \\pmod {13}$\nStep 7:  To apply the Chinese Remainder Theorem, we need to find the solution to each congruence and then combine them to find the solution to the system.\nStep 8:  First, we need to find the solutions to each individual congruence.\nStep 9:  Starting with $a \\equiv 5 \\pmod 7,$ we can express $a$ as $7n + 5$\nStep 2:\nWe need to find the solutions to each individual congruence.\nStarting with $a \\equiv 5 \\pmod 7,$ we can express $a$ as $7n + 5,$ where $n$ is an integer.\nWe can then substitute this expression for $a$ into the second congruence, $a \\equiv 10 \\pmod {11},$ to find the value of $n.$\nSubstitute $a = 7n + 5$ into $a \\equiv 10 \\pmod {11}$ to get $7n + 5 \\equiv 10 \\pmod {11}.$\nSubstitute $a = 7n + 5$ into $a \\equiv 10 \\pmod {11}$ to get $7n + 5 \\equiv 10 \\pmod {11}$ and simplify to get $7n \\equiv 5 \\pmod {11}$\nSolve $7n \\equiv 5 \\pmod {11}$ to get $n \\equiv 2 \\pmod {11}$\nStep 3: \nSolve $n \\equiv 2 \\pmod {11}$ to get $n = 11k + 2$\nSubstitute $n = 11k + 2$ into $a = 7n + 5$ to get $a = 7(11k + 2) + 5$\nSimplify $a = 7(11k + 2) + 5$ to get $a = 77k + 19$\nSubstitute $a = 77k + 19$ into $a \\equiv 10 \\pmod {13}$ to get $77k + 19 \\equiv 10 \\pmod {13}$.\n$77k + 19 \\equiv 10 \\pmod {13}$\n$77k + 19 \\equiv 10 \\pmod {13}$ simplifies to $0k + 6 \\equiv 10 \\pmod {13}$, which simplifies to $6 \\equiv 10 \\pmod {13}$, which simplifies to $6 \\equiv 10 - 13 \\pmod {13}$, which simplifies to $6 \\equiv -3 \\pmod {13}$, which is equivalent to $6 + 13 \\equiv -3 \\pmod {13}$, which simplifies to $19 \\equiv -3 \\pmod {13}$, which simplifies to $19 - 26 \\equiv -3 \\pmod {13}$, which simplifies to $-7 \\equiv -3 \\pmod {13}$, which is equivalent to $-7 + 13 \\equiv -3 \\pmod {13}$, which simplifies to $6 \\equiv -3 \\pmod {13}$, which is equivalent to $13 \\equiv -3 + 13 \\pmod {13}$, which simplifies to $13 \\equiv 10 \\pmod {13}$.\nSince $6 \\equiv 10 \\pmod {13}$ is false, let's go back to $77k + 19 \\equiv 10 \\pmod {13}$ and try to find the correct solution for k.",
+    "steps": [
+        "Step 1:  We need to find the largest integer less than $2010$ that has a remainder of $5$ when divided by $7,$ a remainder of $10$ when divided by $11,$ and a remainder of $10$ when divided by $13.$\nStep 2:  To simplify the problem, we can use the Chinese Remainder Theorem, which allows us to find the solution to a system of congruences.\nStep 3:  We have the system of congruences:\nStep 4:  $a \\equiv 5 \\pmod 7$\nStep 5:  $a \\equiv 10 \\pmod {11}$\nStep 6:  $a \\equiv 10 \\pmod {13}$\nStep 7:  To apply the Chinese Remainder Theorem, we need to find the solution to each congruence and then combine them to find the solution to the system.\nStep 8:  First, we need to find the solutions to each individual congruence.\nStep 9:  Starting with $a \\equiv 5 \\pmod 7,$ we can express $a$ as $7n + 5$",
+        "Step 2:\nWe need to find the solutions to each individual congruence.\nStarting with $a \\equiv 5 \\pmod 7,$ we can express $a$ as $7n + 5,$ where $n$ is an integer.\nWe can then substitute this expression for $a$ into the second congruence, $a \\equiv 10 \\pmod {11},$ to find the value of $n.$",
+        "Substitute $a = 7n + 5$ into $a \\equiv 10 \\pmod {11}$ to get $7n + 5 \\equiv 10 \\pmod {11}.$",
+        "Substitute $a = 7n + 5$ into $a \\equiv 10 \\pmod {11}$ to get $7n + 5 \\equiv 10 \\pmod {11}$ and simplify to get $7n \\equiv 5 \\pmod {11}$",
+        "Solve $7n \\equiv 5 \\pmod {11}$ to get $n \\equiv 2 \\pmod {11}$",
+        "Step 3: \nSolve $n \\equiv 2 \\pmod {11}$ to get $n = 11k + 2$\nSubstitute $n = 11k + 2$ into $a = 7n + 5$ to get $a = 7(11k + 2) + 5$\nSimplify $a = 7(11k + 2) + 5$ to get $a = 77k + 19$",
+        "Substitute $a = 77k + 19$ into $a \\equiv 10 \\pmod {13}$ to get $77k + 19 \\equiv 10 \\pmod {13}$.",
+        "$77k + 19 \\equiv 10 \\pmod {13}$",
+        "$77k + 19 \\equiv 10 \\pmod {13}$ simplifies to $0k + 6 \\equiv 10 \\pmod {13}$, which simplifies to $6 \\equiv 10 \\pmod {13}$, which simplifies to $6 \\equiv 10 - 13 \\pmod {13}$, which simplifies to $6 \\equiv -3 \\pmod {13}$, which is equivalent to $6 + 13 \\equiv -3 \\pmod {13}$, which simplifies to $19 \\equiv -3 \\pmod {13}$, which simplifies to $19 - 26 \\equiv -3 \\pmod {13}$, which simplifies to $-7 \\equiv -3 \\pmod {13}$, which is equivalent to $-7 + 13 \\equiv -3 \\pmod {13}$, which simplifies to $6 \\equiv -3 \\pmod {13}$, which is equivalent to $13 \\equiv -3 + 13 \\pmod {13}$, which simplifies to $13 \\equiv 10 \\pmod {13}$.",
+        "Since $6 \\equiv 10 \\pmod {13}$ is false, let's go back to $77k + 19 \\equiv 10 \\pmod {13}$ and try to find the correct solution for k."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We need to find the largest integer less than $2010$ that has a remainder of $5$ when divided by $7,$ a remainder of $10$ when divided by $11,$ and a remainder of $10$ when divided by $13.$\nStep 2:  To simplify the problem, we can use the Chinese Remainder Theorem, which allows us to find the solution to a system of congruences.\nStep 3:  We have the system of congruences:\nStep 4:  $a \\equiv 5 \\pmod 7$\nStep 5:  $a \\equiv 10 \\pmod {11}$\nStep 6:  $a \\equiv 10 \\pmod {13}$\nStep 7:  To apply the Chinese Remainder Theorem, we need to find the solution to each congruence and then combine them to find the solution to the system.\nStep 8:  First, we need to find the solutions to each individual congruence.\nStep 9:  Starting with $a \\equiv 5 \\pmod 7,$ we can express $a$ as $7n + 5$",
+            1
+        ],
+        [
+            "Step 2:\nWe need to find the solutions to each individual congruence.\nStarting with $a \\equiv 5 \\pmod 7,$ we can express $a$ as $7n + 5,$ where $n$ is an integer.\nWe can then substitute this expression for $a$ into the second congruence, $a \\equiv 10 \\pmod {11},$ to find the value of $n.$",
+            1
+        ],
+        [
+            "Substitute $a = 7n + 5$ into $a \\equiv 10 \\pmod {11}$ to get $7n + 5 \\equiv 10 \\pmod {11}.$",
+            1
+        ],
+        [
+            "Substitute $a = 7n + 5$ into $a \\equiv 10 \\pmod {11}$ to get $7n + 5 \\equiv 10 \\pmod {11}$ and simplify to get $7n \\equiv 5 \\pmod {11}$",
+            1
+        ],
+        [
+            "Solve $7n \\equiv 5 \\pmod {11}$ to get $n \\equiv 2 \\pmod {11}$",
+            1
+        ],
+        [
+            "Step 3: \nSolve $n \\equiv 2 \\pmod {11}$ to get $n = 11k + 2$\nSubstitute $n = 11k + 2$ into $a = 7n + 5$ to get $a = 7(11k + 2) + 5$\nSimplify $a = 7(11k + 2) + 5$ to get $a = 77k + 19$",
+            1
+        ],
+        [
+            "Substitute $a = 77k + 19$ into $a \\equiv 10 \\pmod {13}$ to get $77k + 19 \\equiv 10 \\pmod {13}$.",
+            1
+        ],
+        [
+            "$77k + 19 \\equiv 10 \\pmod {13}$",
+            1
+        ],
+        [
+            "$77k + 19 \\equiv 10 \\pmod {13}$ simplifies to $0k + 6 \\equiv 10 \\pmod {13}$, which simplifies to $6 \\equiv 10 \\pmod {13}$, which simplifies to $6 \\equiv 10 - 13 \\pmod {13}$, which simplifies to $6 \\equiv -3 \\pmod {13}$, which is equivalent to $6 + 13 \\equiv -3 \\pmod {13}$, which simplifies to $19 \\equiv -3 \\pmod {13}$, which simplifies to $19 - 26 \\equiv -3 \\pmod {13}$, which simplifies to $-7 \\equiv -3 \\pmod {13}$, which is equivalent to $-7 + 13 \\equiv -3 \\pmod {13}$, which simplifies to $6 \\equiv -3 \\pmod {13}$, which is equivalent to $13 \\equiv -3 + 13 \\pmod {13}$, which simplifies to $13 \\equiv 10 \\pmod {13}$.",
+            1
+        ],
+        [
+            "Since $6 \\equiv 10 \\pmod {13}$ is false, let's go back to $77k + 19 \\equiv 10 \\pmod {13}$ and try to find the correct solution for k.",
+            1
+        ]
+    ],
+    "time": 134.56058359146118,
+    "total_tokens": 13410,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

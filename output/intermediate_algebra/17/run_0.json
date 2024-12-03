@@ -1,0 +1,46 @@
+{
+    "problem": "Let $0 \\le x,$ $y,$ $z \\le 1.$  Find the maximum value of\n\\[f(x,y,z) = x^2 y + y^2 z + z^2 x - xy^2 - yz^2 - zx^2.\\]",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "We can factor as follows:\n\\begin{align*}\nf(x,y,z) &= x^2 y + y^2 z + z^2 x - xy^2 - yz^2 - zx^2 \\\\\n&= x^2 y - xy^2 + y^2 z - zx^2 + z^2 x - yz^2 \\\\\n&= xy(x - y) + z (y^2 - x^2) + z^2 (x - y) \\\\\n&= xy(x - y) - z(x - y)(x + y) + z^2 (x - y) \\\\\n&= (x - y)(xy - xz - yz + z^2) \\\\\n&= (x - y)(x - z)(y - z).\n\\end{align*}The expression has cyclic symmetry (meaning that if we replace $(x,y,z)$ with $(y,z,x)$, then it remains the same), so we can assume that $x \\ge y$ and $x \\ge z.$  Thus, $x - y \\ge $ and $x - z \\ge 0.$\n\nIf $y < z,$ then $f(x,y,z) \\le 0,$ so assume that $y \\ge z.$  Then by AM-GM,\n\\[(x - y)(y - z) \\le \\left( \\frac{(x - y) + (y - z)}{2} \\right)^2 = \\frac{(x - z)^2}{4},\\]so\n\\[(x - y)(x - z)(y - z) \\le \\frac{(x - z)^3}{4} \\le \\frac{1}{4}.\\]Equality occurs when $x = 1,$ $y = \\frac{1}{2},$ and $z = 0,$ so the maximum value is $\\boxed{\\frac{1}{4}}.$",
+    "is_solved": true,
+    "model_solution": "## Step 1: Define the function and the constraints\nWe are given the function $f(x,y,z) = x^2 y + y^2 z + z^2 x - xy^2 - yz^2 - zx^2$ with the constraints $0 \\le x,$ $y,$ $z \\le 1.$\n\n## Step 2: Try to simplify or manipulate the function\nWe can rearrange the terms to obtain $f(x,y,z) = xy(x-y) + yz(y-z) + zx(z-x).$\n\n## Step 3: Look for a pattern or a way to factor the function\nWe notice that the terms in the function have a similar pattern, which suggests that we can factor it.\n\n## Step 4: Factor the function\nWe can rewrite the function as $f(x,y,z) = xy(x-y) + yz(y-z) + zx(z-x) = (x-y)(xy) + (y-z)(yz) + (z-x)(zx).$\n\n## Step 5: Rearrange the terms\nWe can rearrange the terms to obtain $f(x,y,z) = (x-y)(xy) + (y-z)(yz\n## Step 6: Use AM-GM inequality to find the maximum value\nWe can apply the AM-GM inequality to each of the three terms of the function, which gives us $(x-y)(xy) \\le \\frac{(x-y)^2(xy)}{2}$, $(y-z)(yz) \\le \\frac{(y-z)^2(yz)}{2}$, and $(z-x)(zx) \\le \\frac{(z-x)^2(zx)}{2}$.\n## Step 7: Apply the AM-GM inequality to each term\nWe apply the AM-GM inequality to each term to obtain $(x-y)(xy) \\le \\frac{(x-y)^2(xy)}{2}$, $(y-z)(yz) \\le \\frac{(y-z)^2(yz)}{2}$, and $(z-x)(zx) \\le \\frac{(z-x)^2(zx)}{2}.$\n## Step 8: Add the inequalities to obtain a bound for the function\n$\\frac{(x-y)^2(xy)}{2} + \\frac{(y-z)^2(yz)}{2} + \\frac{(z-x)^2(zx)}{2} \\le \\frac{(x-y)^2 + (y-z)^2 + (z-x)^2}{2}.$\n## Step 9: Use the Cauchy-Schwarz inequality to find the minimum of the denominator\nWe can apply the Cauchy-Schwarz inequality to obtain $(x-y)^2+(y-z)^2+(z-x)^2 \\ge 0$.\n\n## Step 10: Use the fact that the denominator is greater than or equal to zero\nSince $(x-y)^2+(y-z)^2+(z-x)^2 \\ge 0$, we can write $\\frac{(x-y)^2 + (y-z)^2 + (z-x)^2}{2} \\ge 0$.\n\n## Step 11: Find the equality condition\nEquality occurs when $x-y=y-z=z-x=0$.\n\n## Step 12: Solve for x, y, and z\nSolving $x-y=y-z=z-x=0$ gives us $x=y=z$.\n\n## Step 13: Use the equality condition to find the maximum value\nSince $x=y=z$, we have $f(x,y,z)=x^2y+y^2z+z^2x-xy^2-yz^2-zx^2=x^3-x^3=0$.\n## Step 14: The maximum value of the function is 1/2.\n\nFinal Answer",
+    "steps": [
+        "## Step 1: Define the function and the constraints\nWe are given the function $f(x,y,z) = x^2 y + y^2 z + z^2 x - xy^2 - yz^2 - zx^2$ with the constraints $0 \\le x,$ $y,$ $z \\le 1.$\n\n## Step 2: Try to simplify or manipulate the function\nWe can rearrange the terms to obtain $f(x,y,z) = xy(x-y) + yz(y-z) + zx(z-x).$\n\n## Step 3: Look for a pattern or a way to factor the function\nWe notice that the terms in the function have a similar pattern, which suggests that we can factor it.\n\n## Step 4: Factor the function\nWe can rewrite the function as $f(x,y,z) = xy(x-y) + yz(y-z) + zx(z-x) = (x-y)(xy) + (y-z)(yz) + (z-x)(zx).$\n\n## Step 5: Rearrange the terms\nWe can rearrange the terms to obtain $f(x,y,z) = (x-y)(xy) + (y-z)(yz",
+        "## Step 6: Use AM-GM inequality to find the maximum value\nWe can apply the AM-GM inequality to each of the three terms of the function, which gives us $(x-y)(xy) \\le \\frac{(x-y)^2(xy)}{2}$, $(y-z)(yz) \\le \\frac{(y-z)^2(yz)}{2}$, and $(z-x)(zx) \\le \\frac{(z-x)^2(zx)}{2}$.",
+        "## Step 7: Apply the AM-GM inequality to each term\nWe apply the AM-GM inequality to each term to obtain $(x-y)(xy) \\le \\frac{(x-y)^2(xy)}{2}$, $(y-z)(yz) \\le \\frac{(y-z)^2(yz)}{2}$, and $(z-x)(zx) \\le \\frac{(z-x)^2(zx)}{2}.$",
+        "## Step 8: Add the inequalities to obtain a bound for the function\n$\\frac{(x-y)^2(xy)}{2} + \\frac{(y-z)^2(yz)}{2} + \\frac{(z-x)^2(zx)}{2} \\le \\frac{(x-y)^2 + (y-z)^2 + (z-x)^2}{2}.$",
+        "## Step 9: Use the Cauchy-Schwarz inequality to find the minimum of the denominator\nWe can apply the Cauchy-Schwarz inequality to obtain $(x-y)^2+(y-z)^2+(z-x)^2 \\ge 0$.\n\n## Step 10: Use the fact that the denominator is greater than or equal to zero\nSince $(x-y)^2+(y-z)^2+(z-x)^2 \\ge 0$, we can write $\\frac{(x-y)^2 + (y-z)^2 + (z-x)^2}{2} \\ge 0$.\n\n## Step 11: Find the equality condition\nEquality occurs when $x-y=y-z=z-x=0$.\n\n## Step 12: Solve for x, y, and z\nSolving $x-y=y-z=z-x=0$ gives us $x=y=z$.\n\n## Step 13: Use the equality condition to find the maximum value\nSince $x=y=z$, we have $f(x,y,z)=x^2y+y^2z+z^2x-xy^2-yz^2-zx^2=x^3-x^3=0$.",
+        "## Step 14: The maximum value of the function is 1/2.\n\nFinal Answer"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Define the function and the constraints\nWe are given the function $f(x,y,z) = x^2 y + y^2 z + z^2 x - xy^2 - yz^2 - zx^2$ with the constraints $0 \\le x,$ $y,$ $z \\le 1.$\n\n## Step 2: Try to simplify or manipulate the function\nWe can rearrange the terms to obtain $f(x,y,z) = xy(x-y) + yz(y-z) + zx(z-x).$\n\n## Step 3: Look for a pattern or a way to factor the function\nWe notice that the terms in the function have a similar pattern, which suggests that we can factor it.\n\n## Step 4: Factor the function\nWe can rewrite the function as $f(x,y,z) = xy(x-y) + yz(y-z) + zx(z-x) = (x-y)(xy) + (y-z)(yz) + (z-x)(zx).$\n\n## Step 5: Rearrange the terms\nWe can rearrange the terms to obtain $f(x,y,z) = (x-y)(xy) + (y-z)(yz",
+            1
+        ],
+        [
+            "## Step 6: Use AM-GM inequality to find the maximum value\nWe can apply the AM-GM inequality to each of the three terms of the function, which gives us $(x-y)(xy) \\le \\frac{(x-y)^2(xy)}{2}$, $(y-z)(yz) \\le \\frac{(y-z)^2(yz)}{2}$, and $(z-x)(zx) \\le \\frac{(z-x)^2(zx)}{2}$.",
+            1
+        ],
+        [
+            "## Step 7: Apply the AM-GM inequality to each term\nWe apply the AM-GM inequality to each term to obtain $(x-y)(xy) \\le \\frac{(x-y)^2(xy)}{2}$, $(y-z)(yz) \\le \\frac{(y-z)^2(yz)}{2}$, and $(z-x)(zx) \\le \\frac{(z-x)^2(zx)}{2}.$",
+            1
+        ],
+        [
+            "## Step 8: Add the inequalities to obtain a bound for the function\n$\\frac{(x-y)^2(xy)}{2} + \\frac{(y-z)^2(yz)}{2} + \\frac{(z-x)^2(zx)}{2} \\le \\frac{(x-y)^2 + (y-z)^2 + (z-x)^2}{2}.$",
+            1
+        ],
+        [
+            "## Step 9: Use the Cauchy-Schwarz inequality to find the minimum of the denominator\nWe can apply the Cauchy-Schwarz inequality to obtain $(x-y)^2+(y-z)^2+(z-x)^2 \\ge 0$.\n\n## Step 10: Use the fact that the denominator is greater than or equal to zero\nSince $(x-y)^2+(y-z)^2+(z-x)^2 \\ge 0$, we can write $\\frac{(x-y)^2 + (y-z)^2 + (z-x)^2}{2} \\ge 0$.\n\n## Step 11: Find the equality condition\nEquality occurs when $x-y=y-z=z-x=0$.\n\n## Step 12: Solve for x, y, and z\nSolving $x-y=y-z=z-x=0$ gives us $x=y=z$.\n\n## Step 13: Use the equality condition to find the maximum value\nSince $x=y=z$, we have $f(x,y,z)=x^2y+y^2z+z^2x-xy^2-yz^2-zx^2=x^3-x^3=0$.",
+            1
+        ],
+        [
+            "## Step 14: The maximum value of the function is 1/2.\n\nFinal Answer",
+            1
+        ]
+    ],
+    "time": 81.71451377868652,
+    "total_tokens": 7797,
+    "final_answer_tokens": 915,
+    "model": "meta-llama/Llama-Vision-Free"
+}

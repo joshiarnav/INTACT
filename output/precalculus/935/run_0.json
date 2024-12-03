@@ -1,0 +1,46 @@
+{
+    "problem": "Find the matrix that corresponds to reflecting over the vector $\\begin{pmatrix} -1 \\\\ 3 \\end{pmatrix}.$",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "Let $\\mathbf{v} = \\begin{pmatrix} x \\\\ y \\end{pmatrix},$ let $\\mathbf{r}$ be the reflection of $\\mathbf{v}$ over $\\begin{pmatrix} -1 \\\\ 3 \\end{pmatrix},$ and let $\\mathbf{p}$ be the projection of $\\mathbf{v}$ onto $\\begin{pmatrix} -1 \\\\ 3 \\end{pmatrix}.$\n\nNote that $\\mathbf{p}$ is the midpoint of $\\mathbf{v}$ and $\\mathbf{r}.$  Thus, we can use $\\mathbf{p}$ to compute the reflection matrix.\n\n[asy]\nunitsize(1 cm);\n\npair D, P, R, V;\n\nD = (-1,3);\nV = (0.5,2.5);\nR = reflect((0,0),D)*(V);\nP = (V + R)/2;\n\ndraw((-3,0)--(2,0));\ndraw((0,-1)--(0,4));\ndraw((0,0)--D,Arrow(6));\ndraw((0,0)--V,red,Arrow(6));\ndraw((0,0)--R,blue,Arrow(6));\ndraw((0,0)--P,green,Arrow(6));\ndraw(V--R,dashed);\n\nlabel(\"$\\mathbf{p}$\", P, SW);\nlabel(\"$\\mathbf{v}$\", V, E);\nlabel(\"$\\mathbf{r}$\", R, SW);\n[/asy]\n\nFrom the projection formula,\n\\begin{align*}\n\\mathbf{p} &= \\operatorname{proj}_{\\begin{pmatrix} -1 \\\\ 3 \\end{pmatrix}} \\begin{pmatrix} x \\\\ y \\end{pmatrix} \\\\\n&= \\frac{\\begin{pmatrix} x \\\\ y \\end{pmatrix} \\cdot \\begin{pmatrix} -1 \\\\ 3 \\end{pmatrix}}{\\begin{pmatrix} -1 \\\\ 3 \\end{pmatrix} \\cdot \\begin{pmatrix} -1 \\\\ 3 \\end{pmatrix}} \\begin{pmatrix} 2 \\\\ -3 \\end{pmatrix} \\\\\n&= \\frac{-x + 3y}{10} \\begin{pmatrix} -1 \\\\ 3 \\end{pmatrix} \\\\\n&= \\begin{pmatrix} \\frac{x - 3y}{10} \\\\ \\frac{-3x + 9y}{10} \\end{pmatrix}.\n\\end{align*}Since $\\mathbf{p}$ is the midpoint of $\\mathbf{v}$ and $\\mathbf{r},$\n\\[\\mathbf{p} = \\frac{\\mathbf{v} + \\mathbf{r}}{2}.\\]Then\n\\begin{align*}\n\\mathbf{r} &= 2 \\mathbf{p} - \\mathbf{v} \\\\\n&= 2 \\begin{pmatrix} \\frac{x - 3y}{10} \\\\ \\frac{-3x + 9y}{10} \\end{pmatrix} - \\begin{pmatrix} x \\\\ y \\end{pmatrix} \\\\\n&= \\begin{pmatrix} \\frac{-4x - 3y}{5} \\\\ \\frac{-3x + 4y}{5} \\end{pmatrix} \\\\\n&= \\begin{pmatrix} -4/5 & -3/5 \\\\ -3/5 & 4/5 \\end{pmatrix} \\begin{pmatrix} x \\\\ y \\end{pmatrix}.\n\\end{align*}Thus, the matrix is $\\boxed{\\begin{pmatrix} -4/5 & -3/5 \\\\ -3/5 & 4/5 \\end{pmatrix}}.$",
+    "is_solved": true,
+    "model_solution": "Step 1:  To find the matrix for reflecting over the vector $\\begin{pmatrix} -1 \\\\ 3 \\end{pmatrix},$ we first need to normalize this vector to get a unit vector.\n$\\begin{pmatrix} -1 \\\\ 3 \\end{pmatrix} \\rightarrow \\frac{1}{\\sqrt{(-1)^2+3^2}}\\begin{pmatrix} -1 \\\\ 3 \\end{pmatrix} = \\frac{1}{\\sqrt{10}}\\begin{pmatrix} -1 \\\\ 3 \\end{pmatrix}.$\nStep 2:  The reflection matrix for a vector $\\begin{pmatrix} a \\\\ b \\end{pmatrix}$ is given by $\\begin{pmatrix} 2a^2-s & 2ab \\\\ 2ab & 2b^2-s \\end{pmatrix}$, where $s = a^2+b^2$. In this case, $a = -\\frac{1}{\\sqrt{10}}$ and $b = \\frac{3}{\\sqrt{10}}$, so $s = \\frac{10}{10} = 1$.\n$\\begin{pmatrix} 2\\left(-\\frac{1}{\\sqrt{10}}\\right)^2-1 & 2\\left(-\\frac{1}{\\sqrt{10}}\\right)\\left(\\frac{3}{\\sqrt{10}}\\right) \\\\ 2\\left(-\\frac{1}{\\sqrt{10}}\\right)\\left(\\frac{3}{\\sqrt{10}}\\right) & 2\\left(\\frac{3}{\\sqrt{10}}\\right)^2-1 \\end{pmatrix}$\nStep 3: $\\begin{pmatrix} 2\\left(-\\frac{1}{\\sqrt{10}}\\right)^2-1 & 2\\left(-\\frac{1}{\\sqrt{10}}\\right)\\left(\\frac{3}{\\sqrt{10}}\\right) \\\\ 2\\left(-\\frac{1}{\\sqrt{10}}\\right)\\left(\\frac{3}{\\sqrt{10}}\\right) & 2\\left(\\frac{3}{\\sqrt{10}}\\right)^2-1 \\end{pmatrix} = \\begin{pmatrix} \\frac{-1}{5} & \\frac{-3}{5} \\\\ \\frac{-3}{5} & \\frac{11}{5} \\end{pmatrix}$\n$\\begin{pmatrix} \\frac{-1}{5} & \\frac{-3}{5} \\\\ \\frac{-3}{5} & \\frac{11}{5} \\end{pmatrix}$\n$\\begin{pmatrix} \\frac{-1}{5} & \\frac{-3}{5} \\\\ \\frac{-3}{5} & \\frac{11}{5} \\end{pmatrix}$",
+    "steps": [
+        "Step 1:  To find the matrix for reflecting over the vector $\\begin{pmatrix} -1 \\\\ 3 \\end{pmatrix},$ we first need to normalize this vector to get a unit vector.\n$\\begin{pmatrix} -1 \\\\ 3 \\end{pmatrix} \\rightarrow \\frac{1}{\\sqrt{(-1)^2+3^2}}\\begin{pmatrix} -1 \\\\ 3 \\end{pmatrix} = \\frac{1}{\\sqrt{10}}\\begin{pmatrix} -1 \\\\ 3 \\end{pmatrix}.$",
+        "Step 2:  The reflection matrix for a vector $\\begin{pmatrix} a \\\\ b \\end{pmatrix}$ is given by $\\begin{pmatrix} 2a^2-s & 2ab \\\\ 2ab & 2b^2-s \\end{pmatrix}$, where $s = a^2+b^2$. In this case, $a = -\\frac{1}{\\sqrt{10}}$ and $b = \\frac{3}{\\sqrt{10}}$, so $s = \\frac{10}{10} = 1$.",
+        "$\\begin{pmatrix} 2\\left(-\\frac{1}{\\sqrt{10}}\\right)^2-1 & 2\\left(-\\frac{1}{\\sqrt{10}}\\right)\\left(\\frac{3}{\\sqrt{10}}\\right) \\\\ 2\\left(-\\frac{1}{\\sqrt{10}}\\right)\\left(\\frac{3}{\\sqrt{10}}\\right) & 2\\left(\\frac{3}{\\sqrt{10}}\\right)^2-1 \\end{pmatrix}$",
+        "Step 3: $\\begin{pmatrix} 2\\left(-\\frac{1}{\\sqrt{10}}\\right)^2-1 & 2\\left(-\\frac{1}{\\sqrt{10}}\\right)\\left(\\frac{3}{\\sqrt{10}}\\right) \\\\ 2\\left(-\\frac{1}{\\sqrt{10}}\\right)\\left(\\frac{3}{\\sqrt{10}}\\right) & 2\\left(\\frac{3}{\\sqrt{10}}\\right)^2-1 \\end{pmatrix} = \\begin{pmatrix} \\frac{-1}{5} & \\frac{-3}{5} \\\\ \\frac{-3}{5} & \\frac{11}{5} \\end{pmatrix}$",
+        "$\\begin{pmatrix} \\frac{-1}{5} & \\frac{-3}{5} \\\\ \\frac{-3}{5} & \\frac{11}{5} \\end{pmatrix}$",
+        "$\\begin{pmatrix} \\frac{-1}{5} & \\frac{-3}{5} \\\\ \\frac{-3}{5} & \\frac{11}{5} \\end{pmatrix}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  To find the matrix for reflecting over the vector $\\begin{pmatrix} -1 \\\\ 3 \\end{pmatrix},$ we first need to normalize this vector to get a unit vector.\n$\\begin{pmatrix} -1 \\\\ 3 \\end{pmatrix} \\rightarrow \\frac{1}{\\sqrt{(-1)^2+3^2}}\\begin{pmatrix} -1 \\\\ 3 \\end{pmatrix} = \\frac{1}{\\sqrt{10}}\\begin{pmatrix} -1 \\\\ 3 \\end{pmatrix}.$",
+            1
+        ],
+        [
+            "Step 2:  The reflection matrix for a vector $\\begin{pmatrix} a \\\\ b \\end{pmatrix}$ is given by $\\begin{pmatrix} 2a^2-s & 2ab \\\\ 2ab & 2b^2-s \\end{pmatrix}$, where $s = a^2+b^2$. In this case, $a = -\\frac{1}{\\sqrt{10}}$ and $b = \\frac{3}{\\sqrt{10}}$, so $s = \\frac{10}{10} = 1$.",
+            1
+        ],
+        [
+            "$\\begin{pmatrix} 2\\left(-\\frac{1}{\\sqrt{10}}\\right)^2-1 & 2\\left(-\\frac{1}{\\sqrt{10}}\\right)\\left(\\frac{3}{\\sqrt{10}}\\right) \\\\ 2\\left(-\\frac{1}{\\sqrt{10}}\\right)\\left(\\frac{3}{\\sqrt{10}}\\right) & 2\\left(\\frac{3}{\\sqrt{10}}\\right)^2-1 \\end{pmatrix}$",
+            1
+        ],
+        [
+            "Step 3: $\\begin{pmatrix} 2\\left(-\\frac{1}{\\sqrt{10}}\\right)^2-1 & 2\\left(-\\frac{1}{\\sqrt{10}}\\right)\\left(\\frac{3}{\\sqrt{10}}\\right) \\\\ 2\\left(-\\frac{1}{\\sqrt{10}}\\right)\\left(\\frac{3}{\\sqrt{10}}\\right) & 2\\left(\\frac{3}{\\sqrt{10}}\\right)^2-1 \\end{pmatrix} = \\begin{pmatrix} \\frac{-1}{5} & \\frac{-3}{5} \\\\ \\frac{-3}{5} & \\frac{11}{5} \\end{pmatrix}$",
+            1
+        ],
+        [
+            "$\\begin{pmatrix} \\frac{-1}{5} & \\frac{-3}{5} \\\\ \\frac{-3}{5} & \\frac{11}{5} \\end{pmatrix}$",
+            1
+        ],
+        [
+            "$\\begin{pmatrix} \\frac{-1}{5} & \\frac{-3}{5} \\\\ \\frac{-3}{5} & \\frac{11}{5} \\end{pmatrix}$",
+            1
+        ]
+    ],
+    "time": 80.51567769050598,
+    "total_tokens": 6121,
+    "final_answer_tokens": 716,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,61 @@
+{
+    "problem": "If $a$, $b$, and $c$ are positive integers satisfying $ab+c = bc+a = ac+b = 41$, what is the value of $a+b+c$?",
+    "level": "Level 5",
+    "type": "Algebra",
+    "solution": "The first equality implies that $ab+c-bc-a = b(a-c)-(a-c) = 0 \\Rightarrow (b-1)(a-c) = 0$. By symmetry, we have: \\begin{align*}\n(b-1)(a-c) &= 0 \\\\\n(c-1)(b-a) &= 0 \\\\\n(a-1)(c-b) &= 0\n\\end{align*} By inspection, at least one of the following is true: $a=b$, $b=c$, or $c=a$. Without loss of generality, assume $a=b$. Substituting this into the first of our original equations, we obtain $a^2+c = ac+a \\Rightarrow a^2+c = a(c+1)=41$. Since $41$ is prime and $a$ and $c$ are positive integers, either $a=1$ or $a=41$. Note that if $a=41$, then $c+1 = 1 \\Rightarrow c=0$, a contradiction with the fact that $c$ is positive. Thus, $a=b=1 \\Rightarrow c+1=41 \\Rightarrow c=40$. Therefore $a+b+c = \\boxed{42}$",
+    "is_solved": true,
+    "model_solution": "Step 1: Begin by manipulating the first two given equations: ab+c = bc+a and bc+a = ac+b.\nStep 2: Subtracting the first equation from the second equation yields (bc+a) - (ab+c) = (ac+b) - (bc+a), which simplifies to bc - ab + a - c = ac - bc + b - a.\nStep 3: Factoring yields b(c - a) + a - c = a(c - b) + b - a, which further simplifies to b(c - a) - a(c - b) = a - b - a + c.\nStep 4: \nb(c - a) - a(c - b) = a - b - a + c \n(b - a)c - ab + a^2 - ab = -a + c \n(c - a)(b - a) = -a + c + ab - a^2\nStep 5:\n(b - a)c - a(b - a) = -a + c \nc(b - a) - a(b - a) = -a + c \n(c - a)(b - a) = -a + c \n\nnow, we can factor out the common (b-a) from the left side:\n\n(c - a)(b - a) = (c - a)(-a + c)\n(b - a)(-a + c) = (c - a)(-a + c) \na = c\nStep 6: Substitute $a = c$ into the equation $ac+b = 41$ to obtain $a^2+b = 41$.\nStep 7: Since $a^2+b=41$ and $a$ is a positive integer, it follows that $a^2$ is less than or equal to 40. The only perfect square less than or equal to 40 is 36, so $a^2 = 36$, and $b = 5$.\nStep 8: \nSince $a^2=36$, it follows that $a=6$.\n\nFinal Answer: The final answer is: $\\boxed{15}$",
+    "steps": [
+        "Step 1: Begin by manipulating the first two given equations: ab+c = bc+a and bc+a = ac+b.",
+        "Step 2: Subtracting the first equation from the second equation yields (bc+a) - (ab+c) = (ac+b) - (bc+a), which simplifies to bc - ab + a - c = ac - bc + b - a.",
+        "Step 3: Factoring yields b(c - a) + a - c = a(c - b) + b - a, which further simplifies to b(c - a) - a(c - b) = a - b - a + c.",
+        "Step 4: \nb(c - a) - a(c - b) = a - b - a + c \n(b - a)c - ab + a^2 - ab = -a + c \n(c - a)(b - a) = -a + c + ab - a^2",
+        "Step 5:\n(b - a)c - a(b - a) = -a + c \nc(b - a) - a(b - a) = -a + c \n(c - a)(b - a) = -a + c \n\nnow, we can factor out the common (b-a) from the left side:\n\n(c - a)(b - a) = (c - a)(-a + c)",
+        "(b - a)(-a + c) = (c - a)(-a + c) \na = c",
+        "Step 6: Substitute $a = c$ into the equation $ac+b = 41$ to obtain $a^2+b = 41$.",
+        "Step 7: Since $a^2+b=41$ and $a$ is a positive integer, it follows that $a^2$ is less than or equal to 40. The only perfect square less than or equal to 40 is 36, so $a^2 = 36$, and $b = 5$.",
+        "Step 8: \nSince $a^2=36$, it follows that $a=6$.\n\nFinal Answer: The final answer is: $\\boxed{15}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Begin by manipulating the first two given equations: ab+c = bc+a and bc+a = ac+b.",
+            1
+        ],
+        [
+            "Step 2: Subtracting the first equation from the second equation yields (bc+a) - (ab+c) = (ac+b) - (bc+a), which simplifies to bc - ab + a - c = ac - bc + b - a.",
+            1
+        ],
+        [
+            "Step 3: Factoring yields b(c - a) + a - c = a(c - b) + b - a, which further simplifies to b(c - a) - a(c - b) = a - b - a + c.",
+            1
+        ],
+        [
+            "Step 4: \nb(c - a) - a(c - b) = a - b - a + c \n(b - a)c - ab + a^2 - ab = -a + c \n(c - a)(b - a) = -a + c + ab - a^2",
+            1
+        ],
+        [
+            "Step 5:\n(b - a)c - a(b - a) = -a + c \nc(b - a) - a(b - a) = -a + c \n(c - a)(b - a) = -a + c \n\nnow, we can factor out the common (b-a) from the left side:\n\n(c - a)(b - a) = (c - a)(-a + c)",
+            1
+        ],
+        [
+            "(b - a)(-a + c) = (c - a)(-a + c) \na = c",
+            1
+        ],
+        [
+            "Step 6: Substitute $a = c$ into the equation $ac+b = 41$ to obtain $a^2+b = 41$.",
+            1
+        ],
+        [
+            "Step 7: Since $a^2+b=41$ and $a$ is a positive integer, it follows that $a^2$ is less than or equal to 40. The only perfect square less than or equal to 40 is 36, so $a^2 = 36$, and $b = 5$.",
+            1
+        ],
+        [
+            "Step 8: \nSince $a^2=36$, it follows that $a=6$.\n\nFinal Answer: The final answer is: $\\boxed{15}$",
+            1
+        ]
+    ],
+    "time": 123.28603959083557,
+    "total_tokens": 6249,
+    "final_answer_tokens": 540,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,66 @@
+{
+    "problem": "How many non-congruent right triangles are there, all of whose sides have positive integer lengths, and one of whose legs (i.e. not the hypotenuse) has length $162$?",
+    "level": "Level 5",
+    "type": "Algebra",
+    "solution": "Let $x$ be the length of the hypotenuse, and let $y$ be the length of the other leg.  Then we have $x^2-y^2=162^2$.  Factoring both sides gives $(x+y)(x-y)=(2\\times3^4)^2=2^2\\times3^8$.  A pair of positive integers $(x,y)$ gives a solution to this equation if and only if $(x+y)$ and $(x-y)$ are factors whose product is $2^2*3^8$.  For positive integers $a$ and $b$, the equations $x+y=a$ and $x-y=b$ have positive integer solutions if and only if  $a-b$ is an even positive integer.  Thus if $ab=2^2*3^8$ and the difference between $a$ and $b$ is even, then we get a valid triangle with $x+y=a$ and $x-y=b$.  Since $ab$ is even, at least one of the factors is even, and since their difference is even, the other must be as well.  Since $x+y>x-y$ we have $a>b$ i.e. $a>2\\times3^4.$  Since the prime factorization of $a$ must have exactly one $2$, the choices for $a$ that give valid triangles are $2\\times3^5,2\\times3^6,2\\times3^7,2\\times3^8.$  Thus there are $\\boxed{4}$ valid triangles.",
+    "is_solved": false,
+    "model_solution": "Step 1: Let $a$ be the length of the other leg of the right triangle, and let $b$ be the length of the hypotenuse.\nStep 2: By the Pythagorean Theorem, we must have $a^2+b^2=162^2$, or $a^2+b^2=26244$\nStep 3: Since $a$ and $b$ are positive integers, $a^2$ and $b^2$ must also be positive integers, so $a^2 \\le 26244.$ By trial and error, we can find that $a^2 \\le 1953^2 < 26244.$\nStep 4: Since $a^2 \\le 1953^2 < 26244$, we have $a \\le  1953$, so let $a = 1953$. Then $a^2 + b^2 = 26244 \\Rightarrow 1953^2 + b^2 = 26244$ so $b^2 = 26244 - 1953^2$.\nStep 5:  $b^2 = 26244 - 1953^2= 26244 - 3809801= -3807177$, which is not a perfect square, so there is no right triangle with one leg of length $1953$ and hypotenuse $b$.\n \nNote: This is not the final step.\nStep 6: Let $a \\le 1952$, and let $b$ be the corresponding length of the hypotenuse. Then, we must have $a^2+b^2=26244$, or $b^2=26244-a^2.$\nStep 7: Since $a^2 \\le 1952^2 < 26244$, we have $a \\le  44$ and $a$ must be even, so let $a=2n$ for some $n \\ge 1$. Then $a^2 = 4n^2$, so $26244 - 4n^2$ is an integer, and we can rewrite the equation as $b^2 = 26244 - 4n^2 = 4(6571 - n^2)$.\nStep 8:  Since $b^2=4(6571-n^2)$ is a perfect square, we must have $6571-n^2$ is also a perfect square, since 4 divides any perfect square.\nStep 9:\nLet $6571-n^2=m^2$ for some nonnegative integer $m$. Then $m^2+n^2=6571$.\nStep 10:\nWe can write $m^2+n^2=6571$ as $(m+n)(m-n)=6571$.",
+    "steps": [
+        "Step 1: Let $a$ be the length of the other leg of the right triangle, and let $b$ be the length of the hypotenuse.",
+        "Step 2: By the Pythagorean Theorem, we must have $a^2+b^2=162^2$, or $a^2+b^2=26244$",
+        "Step 3: Since $a$ and $b$ are positive integers, $a^2$ and $b^2$ must also be positive integers, so $a^2 \\le 26244.$ By trial and error, we can find that $a^2 \\le 1953^2 < 26244.$",
+        "Step 4: Since $a^2 \\le 1953^2 < 26244$, we have $a \\le  1953$, so let $a = 1953$. Then $a^2 + b^2 = 26244 \\Rightarrow 1953^2 + b^2 = 26244$ so $b^2 = 26244 - 1953^2$.",
+        "Step 5:  $b^2 = 26244 - 1953^2= 26244 - 3809801= -3807177$, which is not a perfect square, so there is no right triangle with one leg of length $1953$ and hypotenuse $b$.\n \nNote: This is not the final step.",
+        "Step 6: Let $a \\le 1952$, and let $b$ be the corresponding length of the hypotenuse. Then, we must have $a^2+b^2=26244$, or $b^2=26244-a^2.$",
+        "Step 7: Since $a^2 \\le 1952^2 < 26244$, we have $a \\le  44$ and $a$ must be even, so let $a=2n$ for some $n \\ge 1$. Then $a^2 = 4n^2$, so $26244 - 4n^2$ is an integer, and we can rewrite the equation as $b^2 = 26244 - 4n^2 = 4(6571 - n^2)$.",
+        "Step 8:  Since $b^2=4(6571-n^2)$ is a perfect square, we must have $6571-n^2$ is also a perfect square, since 4 divides any perfect square.",
+        "Step 9:\nLet $6571-n^2=m^2$ for some nonnegative integer $m$. Then $m^2+n^2=6571$.",
+        "Step 10:\nWe can write $m^2+n^2=6571$ as $(m+n)(m-n)=6571$."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Let $a$ be the length of the other leg of the right triangle, and let $b$ be the length of the hypotenuse.",
+            1
+        ],
+        [
+            "Step 2: By the Pythagorean Theorem, we must have $a^2+b^2=162^2$, or $a^2+b^2=26244$",
+            1
+        ],
+        [
+            "Step 3: Since $a$ and $b$ are positive integers, $a^2$ and $b^2$ must also be positive integers, so $a^2 \\le 26244.$ By trial and error, we can find that $a^2 \\le 1953^2 < 26244.$",
+            1
+        ],
+        [
+            "Step 4: Since $a^2 \\le 1953^2 < 26244$, we have $a \\le  1953$, so let $a = 1953$. Then $a^2 + b^2 = 26244 \\Rightarrow 1953^2 + b^2 = 26244$ so $b^2 = 26244 - 1953^2$.",
+            1
+        ],
+        [
+            "Step 5:  $b^2 = 26244 - 1953^2= 26244 - 3809801= -3807177$, which is not a perfect square, so there is no right triangle with one leg of length $1953$ and hypotenuse $b$.\n \nNote: This is not the final step.",
+            1
+        ],
+        [
+            "Step 6: Let $a \\le 1952$, and let $b$ be the corresponding length of the hypotenuse. Then, we must have $a^2+b^2=26244$, or $b^2=26244-a^2.$",
+            1
+        ],
+        [
+            "Step 7: Since $a^2 \\le 1952^2 < 26244$, we have $a \\le  44$ and $a$ must be even, so let $a=2n$ for some $n \\ge 1$. Then $a^2 = 4n^2$, so $26244 - 4n^2$ is an integer, and we can rewrite the equation as $b^2 = 26244 - 4n^2 = 4(6571 - n^2)$.",
+            1
+        ],
+        [
+            "Step 8:  Since $b^2=4(6571-n^2)$ is a perfect square, we must have $6571-n^2$ is also a perfect square, since 4 divides any perfect square.",
+            1
+        ],
+        [
+            "Step 9:\nLet $6571-n^2=m^2$ for some nonnegative integer $m$. Then $m^2+n^2=6571$.",
+            1
+        ],
+        [
+            "Step 10:\nWe can write $m^2+n^2=6571$ as $(m+n)(m-n)=6571$.",
+            1
+        ]
+    ],
+    "time": 134.65881037712097,
+    "total_tokens": 8698,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

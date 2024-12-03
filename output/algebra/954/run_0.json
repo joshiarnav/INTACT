@@ -1,0 +1,41 @@
+{
+    "problem": "Let \\[f(x) = \\left\\{\n\\begin{array}{cl} x^2-4 & \\text{ if }x < 7, \\\\\nx-13 & \\text{ if } x \\geq 7.\n\\end{array}\n\\right.\\] What is $f(f(f(17)))$?",
+    "level": "Level 2",
+    "type": "Algebra",
+    "solution": "We approach this problem by working from the inside out, so we first find $f(17)$. Since $17 \\geq 7$, $f(17) = 17 - 13 = 4$. Next, $4<7$, so $f(f(17))=f(4)=(4)^2-4=12$. Finally we have that since $12 \\geq 7$, $f(f(f(17)))=f(12)=12-13=\\boxed{-1}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: Since $17 \\geq 7$, we use the second piece of the function, $f(x)=x-13$, to get $f(17) = 17 - 13 = 4$.\nStep 2: Since $f(17)=4$ and $4<7$, we use the first piece of the function, $f(x)=x^2-4$, to get $f(f(17))=f(4)=4^2-4=12$.\nStep 3: Since $f(f(17))=12$ and $12\\geq7$, we use the second piece of the function, $f(x)=x-13$, to get $f(f(f(17)))=f(12)=12-13=-1$.\nStep 4: Since $f(f(f(17)))=-1$ and $-1<7$, we use the first piece of the function, $f(x)=x^2-4$, to get $f(f(f(17)))=f(-1)=(-1)^2-4=3$.\nStep 5: Since $f(f(f(17)))=3$ and $3<7$, we use the first piece of the function, $f(x)=x^2-4$, to get $f(f(f(17)))=f(3)=3^2-4=5$.\nFinal Answer: The final answer is 5.",
+    "steps": [
+        "Step 1: Since $17 \\geq 7$, we use the second piece of the function, $f(x)=x-13$, to get $f(17) = 17 - 13 = 4$.",
+        "Step 2: Since $f(17)=4$ and $4<7$, we use the first piece of the function, $f(x)=x^2-4$, to get $f(f(17))=f(4)=4^2-4=12$.",
+        "Step 3: Since $f(f(17))=12$ and $12\\geq7$, we use the second piece of the function, $f(x)=x-13$, to get $f(f(f(17)))=f(12)=12-13=-1$.",
+        "Step 4: Since $f(f(f(17)))=-1$ and $-1<7$, we use the first piece of the function, $f(x)=x^2-4$, to get $f(f(f(17)))=f(-1)=(-1)^2-4=3$.",
+        "Step 5: Since $f(f(f(17)))=3$ and $3<7$, we use the first piece of the function, $f(x)=x^2-4$, to get $f(f(f(17)))=f(3)=3^2-4=5$.\nFinal Answer: The final answer is 5."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Since $17 \\geq 7$, we use the second piece of the function, $f(x)=x-13$, to get $f(17) = 17 - 13 = 4$.",
+            1
+        ],
+        [
+            "Step 2: Since $f(17)=4$ and $4<7$, we use the first piece of the function, $f(x)=x^2-4$, to get $f(f(17))=f(4)=4^2-4=12$.",
+            1
+        ],
+        [
+            "Step 3: Since $f(f(17))=12$ and $12\\geq7$, we use the second piece of the function, $f(x)=x-13$, to get $f(f(f(17)))=f(12)=12-13=-1$.",
+            1
+        ],
+        [
+            "Step 4: Since $f(f(f(17)))=-1$ and $-1<7$, we use the first piece of the function, $f(x)=x^2-4$, to get $f(f(f(17)))=f(-1)=(-1)^2-4=3$.",
+            1
+        ],
+        [
+            "Step 5: Since $f(f(f(17)))=3$ and $3<7$, we use the first piece of the function, $f(x)=x^2-4$, to get $f(f(f(17)))=f(3)=3^2-4=5$.\nFinal Answer: The final answer is 5.",
+            1
+        ]
+    ],
+    "time": 67.37391781806946,
+    "total_tokens": 3054,
+    "final_answer_tokens": 434,
+    "model": "meta-llama/Llama-Vision-Free"
+}

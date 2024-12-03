@@ -1,0 +1,66 @@
+{
+    "problem": "Find the matrix $\\mathbf{P}$ such that for any vector $\\mathbf{v},$ $\\mathbf{P} \\mathbf{v}$ is the projection of $\\mathbf{v}$ onto the $yz$-plane.",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "The projection $\\mathbf{P}$ takes $\\begin{pmatrix} x \\\\ y \\\\ z \\end{pmatrix}$ to $\\begin{pmatrix} 0 \\\\ y \\\\ z \\end{pmatrix}.$\n\n[asy]\nimport three;\n\nsize(180);\ncurrentprojection = perspective(6,3,2);\n\ntriple I = (1,0,0), J = (0,1,0), K = (0,0,1), O = (0,0,0);\ntriple V = (2.2,2.5,2.5), W = (0,2.5,2.5);\n\ndraw(V--W,dashed);\ndraw(O--V, red, Arrow3(6));\ndraw(O--W,blue, Arrow3(6));\ndraw(O--3*I, Arrow3(6));\ndraw(O--3*J, Arrow3(6));\ndraw(O--3*K, Arrow3(6));\n\nlabel(\"$x$\", 3.2*I);\nlabel(\"$y$\", 3.2*J);\nlabel(\"$z$\", 3.2*K);\nlabel(\"$\\mathbf{v}$\", V, NW);\nlabel(\"$\\mathbf{w}$\", W, NE);\n[/asy]\n\nThus,\n\\[\\mathbf{P} \\mathbf{i} = \\begin{pmatrix} 0 \\\\ 0 \\\\ 0 \\end{pmatrix}, \\quad \\mathbf{P} \\mathbf{j} = \\begin{pmatrix} 0 \\\\ 1 \\\\ 0 \\end{pmatrix}, \\quad \\mathbf{P} \\mathbf{k} = \\begin{pmatrix} 0 \\\\ 0 \\\\ 1 \\end{pmatrix},\\]so\n\\[\\mathbf{P} = \\boxed{\\begin{pmatrix} 0 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}}.\\]",
+    "is_solved": false,
+    "model_solution": "Step 1:  The problem requires finding a matrix $\\mathbf{P}$ that projects any given vector $\\mathbf{v}$ onto the $yz$-plane.\nStep 2:  To achieve this, we first need to understand that a projection onto the $yz$-plane essentially involves setting the $x$-component of the vector to zero.\nStep 3:  This can be represented as a matrix multiplication of the form $\\mathbf{P} \\mathbf{v} = \\mathbf{0} \\mathbf{v}_x + \\mathbf{I} \\mathbf{v}_y + \\mathbf{I} \\mathbf{v}_z$, where $\\mathbf{v}_x$, $\\mathbf{v}_y$, and $\\mathbf{v}_z$ are the components of $\\mathbf{v}$.\nStep 4:  This step is represented by the equation $\\mathbf{P} \\mathbf{v} = \\begin{pmatrix} 0 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix} \\mathbf{\nStep 2: $\\mathbf{P} = \\begin{pmatrix} 0 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}$\nStep 3: $\\mathbf{P}^2 = \\begin{pmatrix} 0 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix} \\begin{pmatrix} 0 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix} = \\begin{pmatrix} 0 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix} = \\mathbf{P}$\nStep 4: $\\mathbf{P}^2 = \\mathbf{P}$\nStep 5: $\\mathbf{P}$ is an idempotent matrix.\nStep 6: \n\\mathbf{P} \\mathbf{v} = \\begin{pmatrix} 0 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix} \\mathbf{v} = \\begin{pmatrix} 0 \\\\ v_y \\\\ v_z \\end{pmatrix}.\nStep 7: $\\mathbf{P}$ projects $\\mathbf{v}$ onto the $yz$-plane, so $\\mathbf{P}^T = \\mathbf{P}$ and $\\mathbf{P}^2 = \\mathbf{P}$.\nStep 8: \n$\\mathbf{P}^T = \\begin{pmatrix} 0 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}^T = \\begin{pmatrix} 0 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix} = \\mathbf{P}$\nStep 9: $\\mathbf{P}$ is symmetric.\nStep 10:\n$\\mathbf{P}$ projects $\\mathbf{v}$ onto the $yz$-plane, so it must annihilate the $x$-component of $\\mathbf{v}$.",
+    "steps": [
+        "Step 1:  The problem requires finding a matrix $\\mathbf{P}$ that projects any given vector $\\mathbf{v}$ onto the $yz$-plane.\nStep 2:  To achieve this, we first need to understand that a projection onto the $yz$-plane essentially involves setting the $x$-component of the vector to zero.\nStep 3:  This can be represented as a matrix multiplication of the form $\\mathbf{P} \\mathbf{v} = \\mathbf{0} \\mathbf{v}_x + \\mathbf{I} \\mathbf{v}_y + \\mathbf{I} \\mathbf{v}_z$, where $\\mathbf{v}_x$, $\\mathbf{v}_y$, and $\\mathbf{v}_z$ are the components of $\\mathbf{v}$.\nStep 4:  This step is represented by the equation $\\mathbf{P} \\mathbf{v} = \\begin{pmatrix} 0 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix} \\mathbf{",
+        "Step 2: $\\mathbf{P} = \\begin{pmatrix} 0 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}$",
+        "Step 3: $\\mathbf{P}^2 = \\begin{pmatrix} 0 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix} \\begin{pmatrix} 0 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix} = \\begin{pmatrix} 0 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix} = \\mathbf{P}$",
+        "Step 4: $\\mathbf{P}^2 = \\mathbf{P}$",
+        "Step 5: $\\mathbf{P}$ is an idempotent matrix.",
+        "Step 6: \n\\mathbf{P} \\mathbf{v} = \\begin{pmatrix} 0 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix} \\mathbf{v} = \\begin{pmatrix} 0 \\\\ v_y \\\\ v_z \\end{pmatrix}.",
+        "Step 7: $\\mathbf{P}$ projects $\\mathbf{v}$ onto the $yz$-plane, so $\\mathbf{P}^T = \\mathbf{P}$ and $\\mathbf{P}^2 = \\mathbf{P}$.",
+        "Step 8: \n$\\mathbf{P}^T = \\begin{pmatrix} 0 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}^T = \\begin{pmatrix} 0 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix} = \\mathbf{P}$",
+        "Step 9: $\\mathbf{P}$ is symmetric.",
+        "Step 10:\n$\\mathbf{P}$ projects $\\mathbf{v}$ onto the $yz$-plane, so it must annihilate the $x$-component of $\\mathbf{v}$."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  The problem requires finding a matrix $\\mathbf{P}$ that projects any given vector $\\mathbf{v}$ onto the $yz$-plane.\nStep 2:  To achieve this, we first need to understand that a projection onto the $yz$-plane essentially involves setting the $x$-component of the vector to zero.\nStep 3:  This can be represented as a matrix multiplication of the form $\\mathbf{P} \\mathbf{v} = \\mathbf{0} \\mathbf{v}_x + \\mathbf{I} \\mathbf{v}_y + \\mathbf{I} \\mathbf{v}_z$, where $\\mathbf{v}_x$, $\\mathbf{v}_y$, and $\\mathbf{v}_z$ are the components of $\\mathbf{v}$.\nStep 4:  This step is represented by the equation $\\mathbf{P} \\mathbf{v} = \\begin{pmatrix} 0 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix} \\mathbf{",
+            1
+        ],
+        [
+            "Step 2: $\\mathbf{P} = \\begin{pmatrix} 0 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}$",
+            1
+        ],
+        [
+            "Step 3: $\\mathbf{P}^2 = \\begin{pmatrix} 0 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix} \\begin{pmatrix} 0 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix} = \\begin{pmatrix} 0 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix} = \\mathbf{P}$",
+            1
+        ],
+        [
+            "Step 4: $\\mathbf{P}^2 = \\mathbf{P}$",
+            1
+        ],
+        [
+            "Step 5: $\\mathbf{P}$ is an idempotent matrix.",
+            1
+        ],
+        [
+            "Step 6: \n\\mathbf{P} \\mathbf{v} = \\begin{pmatrix} 0 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix} \\mathbf{v} = \\begin{pmatrix} 0 \\\\ v_y \\\\ v_z \\end{pmatrix}.",
+            1
+        ],
+        [
+            "Step 7: $\\mathbf{P}$ projects $\\mathbf{v}$ onto the $yz$-plane, so $\\mathbf{P}^T = \\mathbf{P}$ and $\\mathbf{P}^2 = \\mathbf{P}$.",
+            1
+        ],
+        [
+            "Step 8: \n$\\mathbf{P}^T = \\begin{pmatrix} 0 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}^T = \\begin{pmatrix} 0 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix} = \\mathbf{P}$",
+            1
+        ],
+        [
+            "Step 9: $\\mathbf{P}$ is symmetric.",
+            1
+        ],
+        [
+            "Step 10:\n$\\mathbf{P}$ projects $\\mathbf{v}$ onto the $yz$-plane, so it must annihilate the $x$-component of $\\mathbf{v}$.",
+            1
+        ]
+    ],
+    "time": 131.66421818733215,
+    "total_tokens": 12896,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

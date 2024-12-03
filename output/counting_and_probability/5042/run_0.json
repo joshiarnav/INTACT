@@ -1,0 +1,66 @@
+{
+    "problem": "A mail carrier delivers mail to the nineteen houses on the east side of Elm Street. The carrier notices that no two adjacent houses ever get mail on the same day, but that there are never more than two houses in a row that get no mail on the same day. How many different patterns of mail delivery are possible?\n",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "Let $0$ represent a house that does not receive mail and $1$ represent a house that does receive mail. This problem is now asking for the number of $19$-digit strings of $0$'s and $1$'s such that there are no two consecutive $1$'s and no three consecutive $0$'s.\nThe last two digits of any $n$-digit string can't be $11$, so the only possibilities are $00$, $01$, and $10$.\nLet $a_n$ be the number of $n$-digit strings ending in $00$, $b_n$ be the number of $n$-digit strings ending in $01$, and $c_n$ be the number of $n$-digit strings ending in $10$.\nIf an $n$-digit string ends in $00$, then the previous digit must be a $1$, and the last two digits of the $n-1$ digits substring will be $10$. So\\[a_{n} = c_{n-1}.\\]\nIf an $n$-digit string ends in $01$, then the previous digit can be either a $0$ or a $1$, and the last two digits of the $n-1$ digits substring can be either $00$ or $10$. So\\[b_{n} = a_{n-1} + c_{n-1}.\\]\nIf an $n$-digit string ends in $10$, then the previous digit must be a $0$, and the last two digits of the $n-1$ digits substring will be $01$. So\\[c_{n} = b_{n-1}.\\]\nClearly, $a_2=b_2=c_2=1$. Using the recursive equations and initial values:\\[\\begin{array}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|} \\multicolumn{19}{c}{}\\\\\\hline n&2&3&4&5&6&7&8&9&10&11&12&13&14&15&16&17&18&19\\\\\\hline a_n&1&1&1&2&2&3&4&5&7&9&12&16&21&28&37&49&65&86\\\\\\hline b_n&1&2&2&3&4&5&7&9&12&16&21&28&37&49&65&86&114&151\\\\\\hline c_n&1&1&2&2&3&4&5&7&9&12&16&21&28&37&49&65&86&114\\\\\\hline \\end{array}\\]\nAs a result $a_{19}+b_{19}+c_{19}=\\boxed{351}$.",
+    "is_solved": false,
+    "model_solution": "Let $a_n$ denote the number of patterns on $n$ houses. Since no two adjacent houses get mail on the same day, we can alternate between the two types of houses: those that get mail and those that don't.\nSince there are two types of houses, let $a_n$ denote the number of patterns ending in a house that receives mail, and let $b_n$ denote the number of patterns ending in a house that does not receive mail.\nThe problem can be split into two cases: ending in a house that receives mail and ending in a house that does not receive mail.\n\n\\[ a_{n+1} = b_n + a_n \\]\n\\[ b_{n+1} = a_n + b_n \\]\nLet $T_n = a_n + b_n$. Then the given equations can be written as\n\n\\[ a_{n+1} - a_n = b_n \\]\n\\[ b_{n+1} - b_n = a_n \\]\n\nAdding these two equations yields\n\n\\[ a_{n+1} + b_{n+1} - (a_n + b_n) = a_n + b_n \\]\n\\[ a_{n+1} + b_{n+1} - 2a_n - 2b_n = 0 \\]\n\\[ a_{n+1} + b_{n+1} = 2a_n + 2b_n \\]\n\\[ T_{n+1} = 2T_n \\]\nSince $T_1 = a_1 + b_1 = 2$, we find that $T_{19} = 2^{19-1} = 2^{18} = 262,144.$\nSince $T_1 = a_1 + b_1 = 2$, we have $a_1 = 1, b_1 = 1$.\nSince $T_{n+1} = 2T_n$ and $T_1 = 2$, we have $T_{19} = 2^{18}$, so we can find $T_{18}$ by dividing by $2$:\n\\[T_{18} = \\frac{T_{19}}{2} = \\frac{2^{18}}{2} = 2^{17}\\]\n\\[a_{18} = \\frac{a_{19}}{2}\\]\n\\[b_{18} = \\frac{b_{19}}{2} = \\frac{2^{18} - a_{18}}{2} = 2^{17} - a_{18}\\]\nSolve the system of equations to find $a_{18}$ and $b_{18}$.\n\n\\[a_{18} = \\frac{a_{19}}{2} = \\frac{1}{2}\\]\n\\[2^{17} - a_{18} = \\frac{b_{19}}{2} = \\frac{2^{18} - a_{19}}{2} = 2^{17} - \\frac{1}{2}\\]\n\\[a_{18} = \\frac{1}{2}\\]\n\\[b_{18} = 2^{17} - \\frac{1}{2}\\]",
+    "steps": [
+        "Let $a_n$ denote the number of patterns on $n$ houses. Since no two adjacent houses get mail on the same day, we can alternate between the two types of houses: those that get mail and those that don't.",
+        "Since there are two types of houses, let $a_n$ denote the number of patterns ending in a house that receives mail, and let $b_n$ denote the number of patterns ending in a house that does not receive mail.",
+        "The problem can be split into two cases: ending in a house that receives mail and ending in a house that does not receive mail.\n\n\\[ a_{n+1} = b_n + a_n \\]\n\\[ b_{n+1} = a_n + b_n \\]",
+        "Let $T_n = a_n + b_n$. Then the given equations can be written as\n\n\\[ a_{n+1} - a_n = b_n \\]\n\\[ b_{n+1} - b_n = a_n \\]\n\nAdding these two equations yields\n\n\\[ a_{n+1} + b_{n+1} - (a_n + b_n) = a_n + b_n \\]\n\\[ a_{n+1} + b_{n+1} - 2a_n - 2b_n = 0 \\]\n\\[ a_{n+1} + b_{n+1} = 2a_n + 2b_n \\]\n\\[ T_{n+1} = 2T_n \\]",
+        "Since $T_1 = a_1 + b_1 = 2$, we find that $T_{19} = 2^{19-1} = 2^{18} = 262,144.$",
+        "Since $T_1 = a_1 + b_1 = 2$, we have $a_1 = 1, b_1 = 1$.",
+        "Since $T_{n+1} = 2T_n$ and $T_1 = 2$, we have $T_{19} = 2^{18}$, so we can find $T_{18}$ by dividing by $2$:\n\\[T_{18} = \\frac{T_{19}}{2} = \\frac{2^{18}}{2} = 2^{17}\\]",
+        "\\[a_{18} = \\frac{a_{19}}{2}\\]",
+        "\\[b_{18} = \\frac{b_{19}}{2} = \\frac{2^{18} - a_{18}}{2} = 2^{17} - a_{18}\\]",
+        "Solve the system of equations to find $a_{18}$ and $b_{18}$.\n\n\\[a_{18} = \\frac{a_{19}}{2} = \\frac{1}{2}\\]\n\\[2^{17} - a_{18} = \\frac{b_{19}}{2} = \\frac{2^{18} - a_{19}}{2} = 2^{17} - \\frac{1}{2}\\]\n\\[a_{18} = \\frac{1}{2}\\]\n\\[b_{18} = 2^{17} - \\frac{1}{2}\\]"
+    ],
+    "full_steps": [
+        [
+            "Let $a_n$ denote the number of patterns on $n$ houses. Since no two adjacent houses get mail on the same day, we can alternate between the two types of houses: those that get mail and those that don't.",
+            1
+        ],
+        [
+            "Since there are two types of houses, let $a_n$ denote the number of patterns ending in a house that receives mail, and let $b_n$ denote the number of patterns ending in a house that does not receive mail.",
+            1
+        ],
+        [
+            "The problem can be split into two cases: ending in a house that receives mail and ending in a house that does not receive mail.\n\n\\[ a_{n+1} = b_n + a_n \\]\n\\[ b_{n+1} = a_n + b_n \\]",
+            1
+        ],
+        [
+            "Let $T_n = a_n + b_n$. Then the given equations can be written as\n\n\\[ a_{n+1} - a_n = b_n \\]\n\\[ b_{n+1} - b_n = a_n \\]\n\nAdding these two equations yields\n\n\\[ a_{n+1} + b_{n+1} - (a_n + b_n) = a_n + b_n \\]\n\\[ a_{n+1} + b_{n+1} - 2a_n - 2b_n = 0 \\]\n\\[ a_{n+1} + b_{n+1} = 2a_n + 2b_n \\]\n\\[ T_{n+1} = 2T_n \\]",
+            1
+        ],
+        [
+            "Since $T_1 = a_1 + b_1 = 2$, we find that $T_{19} = 2^{19-1} = 2^{18} = 262,144.$",
+            1
+        ],
+        [
+            "Since $T_1 = a_1 + b_1 = 2$, we have $a_1 = 1, b_1 = 1$.",
+            1
+        ],
+        [
+            "Since $T_{n+1} = 2T_n$ and $T_1 = 2$, we have $T_{19} = 2^{18}$, so we can find $T_{18}$ by dividing by $2$:\n\\[T_{18} = \\frac{T_{19}}{2} = \\frac{2^{18}}{2} = 2^{17}\\]",
+            1
+        ],
+        [
+            "\\[a_{18} = \\frac{a_{19}}{2}\\]",
+            1
+        ],
+        [
+            "\\[b_{18} = \\frac{b_{19}}{2} = \\frac{2^{18} - a_{18}}{2} = 2^{17} - a_{18}\\]",
+            1
+        ],
+        [
+            "Solve the system of equations to find $a_{18}$ and $b_{18}$.\n\n\\[a_{18} = \\frac{a_{19}}{2} = \\frac{1}{2}\\]\n\\[2^{17} - a_{18} = \\frac{b_{19}}{2} = \\frac{2^{18} - a_{19}}{2} = 2^{17} - \\frac{1}{2}\\]\n\\[a_{18} = \\frac{1}{2}\\]\n\\[b_{18} = 2^{17} - \\frac{1}{2}\\]",
+            1
+        ]
+    ],
+    "time": 137.77118492126465,
+    "total_tokens": 9580,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

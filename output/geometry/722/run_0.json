@@ -1,0 +1,66 @@
+{
+    "problem": "Find the area of a triangle with side lengths 13, 17, and $12\\sqrt{2}$.",
+    "level": "Level 4",
+    "type": "Geometry",
+    "solution": "We begin by drawing a diagram and labeling the vertices $A$, $B$, and $C$ as shown:\n\n[asy]\npair A, B, C;\nA=(0,0); B=(17,0); C=(5,12);\ndraw(A--B--C--cycle);\nlabel(\"$A$\",A,W); label(\"$B$\",B,E); label(\"$C$\",C,N);\nlabel(\"$13$\",(A+C)/2,NW); label(\"$12\\sqrt{2}$\",(B+C)/2,NE); label(\"$17$\",(A+B)/2,S);\n[/asy]\n\nWe drop a perpendicular from $C$ to $\\overline{AB}$ and label the intersection point $X$. $X$ divides $AB$ into two segments $AX$ and $XB$ that sum to 17, so let $AX=x$ and $XB=17-x$.  Let the height of the triangle, $CX$, have length $h$.\n\n[asy]\npair A, B, C, X;\nA=(0,0); B=(17,0); C=(5,12); X=(5,0);\ndraw(A--B--C--cycle); draw(C--X);\nlabel(\"$A$\",A,W); label(\"$B$\",B,E); label(\"$C$\",C,N); label(\"$X$\",X,S);\nlabel(\"$13$\",(A+C)/2,NW); label(\"$12\\sqrt{2}$\",(B+C)/2,NE); label(\"$x$\",(A+X)/2,S); label(\"$17-x$\",(B+X)/2,S);\nlabel(\"$h$\",(C+X)/2,E);\ndraw(rightanglemark(C,X,B,20));\n[/asy]\n\nNow we have two right triangles, so we can use the Pythagorean theorem on both triangles to write two equations in terms of $x$ and $h$.  From $\\triangle AXC$, we have \\[x^2+h^2=13^2,\\] and from $\\triangle CXB$, we have \\[(17-x)^2+h^2=(12\\sqrt{2})^2.\\] Expanding the second equation gives $289-34x+x^2+h^2=144\\cdot 2 = 288$; substituting the first equation into the second gives \\[289-34x+13^2=288.\\] Simplifying and solving for $x$ yields $1+169=34x$, so $x=170/34=5$.  Plugging this value into the first equation gives \\[h^2=13^2-x^2=169-25=144,\\] so $h=\\sqrt{144}=12$.  Finally, we can compute the area of $\\triangle ABC$ to be \\[\\frac{1}{2}(AB)(h)=\\frac{1}{2}(17)(12)=\\boxed{102}.\\]",
+    "is_solved": false,
+    "model_solution": "Step 1: Determine if the triangle is a right triangle using the side lengths 13, 17, and $12\\sqrt{2}$.\nStep 2: Apply the Pythagorean Theorem to check if the triangle is a right triangle.\n\\(a^{2}+b^{2}=c^{2}\\) where a and b are the legs of the triangle, and c is the hypotenuse.\nStep 3: Plug in the values into the Pythagorean Theorem equation to check for a right triangle. \\(a^{2}+b^{2}=c^{2}\\). Let a = 13, b = $12\\sqrt{2}$, and c = 17.\nStep 4: Calculate the values of a^2, b^2, and c^2 to check if the triangle is a right triangle: \na^2 = 13^2 = 169\nb^2 = ($12\\sqrt{2}$)^2 = 288\nc^2 = 17^2 = 289.\nStep 5: Compare the values of a^2, b^2, and c^2 to see if they satisfy the Pythagorean equation.\nStep 6: Check if $169 + 288 = 289$ to see if the triangle is a right triangle.\nStep 7: Since $169 + 288 = 457$, the equation does not equal 289, the triangle is not a right triangle.\nStep 8: Apply Heron's Formula to find the area of a non-right triangle with side lengths a, b, and c, given by the equation A = \u221a[s(s-a)(s-b)(s-c)], where s is the semiperimeter, s = (a+b+c)/2.\nStep 9: Calculate the semiperimeter s = (a+b+c)/2 to use in Heron's Formula.\nStep 10: Plug in the value of s = (a+b+c)/2 into Heron's Formula, with a = 13, b = $12\\sqrt{2}$, and c = 17.",
+    "steps": [
+        "Step 1: Determine if the triangle is a right triangle using the side lengths 13, 17, and $12\\sqrt{2}$.",
+        "Step 2: Apply the Pythagorean Theorem to check if the triangle is a right triangle.\n\\(a^{2}+b^{2}=c^{2}\\) where a and b are the legs of the triangle, and c is the hypotenuse.",
+        "Step 3: Plug in the values into the Pythagorean Theorem equation to check for a right triangle. \\(a^{2}+b^{2}=c^{2}\\). Let a = 13, b = $12\\sqrt{2}$, and c = 17.",
+        "Step 4: Calculate the values of a^2, b^2, and c^2 to check if the triangle is a right triangle: \na^2 = 13^2 = 169\nb^2 = ($12\\sqrt{2}$)^2 = 288\nc^2 = 17^2 = 289.",
+        "Step 5: Compare the values of a^2, b^2, and c^2 to see if they satisfy the Pythagorean equation.",
+        "Step 6: Check if $169 + 288 = 289$ to see if the triangle is a right triangle.",
+        "Step 7: Since $169 + 288 = 457$, the equation does not equal 289, the triangle is not a right triangle.",
+        "Step 8: Apply Heron's Formula to find the area of a non-right triangle with side lengths a, b, and c, given by the equation A = \u221a[s(s-a)(s-b)(s-c)], where s is the semiperimeter, s = (a+b+c)/2.",
+        "Step 9: Calculate the semiperimeter s = (a+b+c)/2 to use in Heron's Formula.",
+        "Step 10: Plug in the value of s = (a+b+c)/2 into Heron's Formula, with a = 13, b = $12\\sqrt{2}$, and c = 17."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Determine if the triangle is a right triangle using the side lengths 13, 17, and $12\\sqrt{2}$.",
+            1
+        ],
+        [
+            "Step 2: Apply the Pythagorean Theorem to check if the triangle is a right triangle.\n\\(a^{2}+b^{2}=c^{2}\\) where a and b are the legs of the triangle, and c is the hypotenuse.",
+            1
+        ],
+        [
+            "Step 3: Plug in the values into the Pythagorean Theorem equation to check for a right triangle. \\(a^{2}+b^{2}=c^{2}\\). Let a = 13, b = $12\\sqrt{2}$, and c = 17.",
+            1
+        ],
+        [
+            "Step 4: Calculate the values of a^2, b^2, and c^2 to check if the triangle is a right triangle: \na^2 = 13^2 = 169\nb^2 = ($12\\sqrt{2}$)^2 = 288\nc^2 = 17^2 = 289.",
+            1
+        ],
+        [
+            "Step 5: Compare the values of a^2, b^2, and c^2 to see if they satisfy the Pythagorean equation.",
+            1
+        ],
+        [
+            "Step 6: Check if $169 + 288 = 289$ to see if the triangle is a right triangle.",
+            1
+        ],
+        [
+            "Step 7: Since $169 + 288 = 457$, the equation does not equal 289, the triangle is not a right triangle.",
+            1
+        ],
+        [
+            "Step 8: Apply Heron's Formula to find the area of a non-right triangle with side lengths a, b, and c, given by the equation A = \u221a[s(s-a)(s-b)(s-c)], where s is the semiperimeter, s = (a+b+c)/2.",
+            1
+        ],
+        [
+            "Step 9: Calculate the semiperimeter s = (a+b+c)/2 to use in Heron's Formula.",
+            1
+        ],
+        [
+            "Step 10: Plug in the value of s = (a+b+c)/2 into Heron's Formula, with a = 13, b = $12\\sqrt{2}$, and c = 17.",
+            1
+        ]
+    ],
+    "time": 139.72963404655457,
+    "total_tokens": 6769,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

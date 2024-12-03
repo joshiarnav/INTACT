@@ -1,0 +1,51 @@
+{
+    "problem": "The expression\n\\[2 \\sqrt[3]{3 \\sec^2 20^\\circ \\sin^2 10^\\circ}\\]can be expressed in the form $a + b \\sec 20^\\circ,$ where $a$ and $b$ are integers.  Find the ordered pair $(a,b).$",
+    "level": "Level 5",
+    "type": "Precalculus",
+    "solution": "We want integers $a$ and $b$ so that\n\\[a + b \\sec 20^\\circ = 2 \\sqrt[3]{3 \\sec^2 20^\\circ \\sin^2 10^\\circ}.\\]Cubing both sides, we get\n\\[a^3 + 3a^2 b \\sec 20^\\circ + 3ab^2 \\sec^2 20^\\circ + b^3 \\sec^3 20^\\circ = 24 \\sec^2 20^\\circ \\sin^2 10^\\circ.\\]From the half-angle formula, $\\sin^2 10^\\circ = \\frac{1 - \\cos 20^\\circ}{2},$ so\n\\begin{align*}\n24 \\sec^2 20^\\circ \\sin^2 10^\\circ &= 24 \\sec^2 20^\\circ \\cdot \\frac{1 - \\cos 20^\\circ}{2} \\\\\n&= 12 \\sec^2 20^\\circ - 12 \\sec 20^\\circ.\n\\end{align*}To deal with the $\\sec^3 20^\\circ$ term, we apply the triple angle formula $\\cos 3x = 4 \\cos^3 x - 3 \\cos x.$  Setting $x = 20^\\circ,$ we get\n\\[\\frac{1}{2} = \\cos 60^\\circ = 4 \\cos^3 20^\\circ - 3 \\cos 20^\\circ.\\]Dividing both sides by $\\cos^3 20^\\circ,$ we get $\\frac{1}{2} \\sec^3 20^\\circ = 4 - 3 \\sec^2 20^\\circ,$ so\n\\[\\sec^3 20^\\circ = 8 - 6 \\sec^2 20^\\circ.\\]Thus,\n\\begin{align*}\n&a^3 + 3a^2 b \\sec 20^\\circ + 3ab^2 \\sec^2 20^\\circ + b^3 \\sec^3 20^\\circ \\\\\n&= a^3 + 3a^2 b \\sec 20^\\circ + 3ab^2 \\sec^2 20^\\circ + b^3 (8 - 6 \\sec^2 20^\\circ) \\\\\n&= a^3 + 8b^3 + 3a^2 b \\sec 20^\\circ + (3ab^2 - 6b^3) \\sec^2 20^\\circ.\n\\end{align*}We want this to equal $12 \\sec^2 20^\\circ - 12 \\sec 20^\\circ,$ so we can try to find integers $a$ and $b$ so that\n\\begin{align*}\na^3 + 8b^3 &= 0, \\\\\n3a^2 b &= -12, \\\\\n3ab^2 - 6b^3 &= 12.\n\\end{align*}From the first equation, $a^3 = -8b^3,$ so $a = -2b.$  Substituting into the second equation, we get $12b^3 = -12,$ so $b^3 = -1,$ and $b = -1.$  Then $a = -2.$  These values satisfy the third equation, so $(a,b) = \\boxed{(2,-1)}.$",
+    "is_solved": true,
+    "model_solution": "Step 1: Use the identity $\\sin^2 \\theta = 1 - \\cos^2 \\theta$ to express $\\sin^2 10^\\circ$ in terms of $\\cos 20^\\circ$.\n\n$\\sin^2 10^\\circ = 1 - \\cos^2 20^\\circ$\nStep 2: Use the identity $\\sin 2 \\theta = 2 \\sin \\theta \\cos \\theta$ to express $\\sin 20^\\circ$ in terms of $\\cos 20^\\circ$.\n$\\sin 20^\\circ = 2 \\sin 10^\\circ \\cos 10^\\circ = 2 \\sqrt{\\frac{1 - \\cos 20^\\circ}{2}} \\sqrt{\\frac{1 + \\cos 20^\\circ}{2}} = \\sqrt{1 - \\cos^2 20^\\circ}$\nStep 3:\n$\\sqrt[3]{3 \\sec^2 20^\\circ (1 - \\cos^2 20^\\circ)} = \\sqrt[3]{3 \\sec^2 20^\\circ - 3 \\sec^4 20^\\circ}$\nStep 4:\n$\\sqrt[3]{3 \\sec^2 20^\\circ - 3 \\sec^4 20^\\circ} = \\sqrt[3]{3 \\sec^2 20^\\circ (1 - \\sec^2 20^\\circ)} = \\sqrt[3]{3 \\sec^2 20^\\circ - 3 \\sec^4 20^\\circ} = \\sqrt[3]{3}\\sqrt[3]{\\sec^2 20^\\circ - \\sec^4 20^\\circ} = \\sqrt[3]{3} (\\sec 20^\\circ - \\sec^3 20^\\circ).$\n$2\\sqrt[3]{3}(\\sec 20^\\circ - \\sec^3 20^\\circ) = 2\\sqrt[3]{3} \\sec 20^\\circ - 2\\sqrt[3]{9} \\sec^3 20^\\circ$\n$2\\sqrt[3]{3} \\sec 20^\\circ - 2\\sqrt[3]{9} \\sec^3 20^\\circ = 2\\sqrt[3]{3} \\sec 20^\\circ - 6 \\sec^3 20^\\circ$\nThe expression can be written in the form $a + b \\sec 20^\\circ,$ where $a = 2\\sqrt[3]{3}$ and $b = -6.$\n\nFinal Answer: The final answer is $\\boxed{(2\\sqrt[3]{3},-6)}.$",
+    "steps": [
+        "Step 1: Use the identity $\\sin^2 \\theta = 1 - \\cos^2 \\theta$ to express $\\sin^2 10^\\circ$ in terms of $\\cos 20^\\circ$.\n\n$\\sin^2 10^\\circ = 1 - \\cos^2 20^\\circ$",
+        "Step 2: Use the identity $\\sin 2 \\theta = 2 \\sin \\theta \\cos \\theta$ to express $\\sin 20^\\circ$ in terms of $\\cos 20^\\circ$.\n$\\sin 20^\\circ = 2 \\sin 10^\\circ \\cos 10^\\circ = 2 \\sqrt{\\frac{1 - \\cos 20^\\circ}{2}} \\sqrt{\\frac{1 + \\cos 20^\\circ}{2}} = \\sqrt{1 - \\cos^2 20^\\circ}$",
+        "Step 3:\n$\\sqrt[3]{3 \\sec^2 20^\\circ (1 - \\cos^2 20^\\circ)} = \\sqrt[3]{3 \\sec^2 20^\\circ - 3 \\sec^4 20^\\circ}$",
+        "Step 4:\n$\\sqrt[3]{3 \\sec^2 20^\\circ - 3 \\sec^4 20^\\circ} = \\sqrt[3]{3 \\sec^2 20^\\circ (1 - \\sec^2 20^\\circ)} = \\sqrt[3]{3 \\sec^2 20^\\circ - 3 \\sec^4 20^\\circ} = \\sqrt[3]{3}\\sqrt[3]{\\sec^2 20^\\circ - \\sec^4 20^\\circ} = \\sqrt[3]{3} (\\sec 20^\\circ - \\sec^3 20^\\circ).$",
+        "$2\\sqrt[3]{3}(\\sec 20^\\circ - \\sec^3 20^\\circ) = 2\\sqrt[3]{3} \\sec 20^\\circ - 2\\sqrt[3]{9} \\sec^3 20^\\circ$",
+        "$2\\sqrt[3]{3} \\sec 20^\\circ - 2\\sqrt[3]{9} \\sec^3 20^\\circ = 2\\sqrt[3]{3} \\sec 20^\\circ - 6 \\sec^3 20^\\circ$",
+        "The expression can be written in the form $a + b \\sec 20^\\circ,$ where $a = 2\\sqrt[3]{3}$ and $b = -6.$\n\nFinal Answer: The final answer is $\\boxed{(2\\sqrt[3]{3},-6)}.$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Use the identity $\\sin^2 \\theta = 1 - \\cos^2 \\theta$ to express $\\sin^2 10^\\circ$ in terms of $\\cos 20^\\circ$.\n\n$\\sin^2 10^\\circ = 1 - \\cos^2 20^\\circ$",
+            1
+        ],
+        [
+            "Step 2: Use the identity $\\sin 2 \\theta = 2 \\sin \\theta \\cos \\theta$ to express $\\sin 20^\\circ$ in terms of $\\cos 20^\\circ$.\n$\\sin 20^\\circ = 2 \\sin 10^\\circ \\cos 10^\\circ = 2 \\sqrt{\\frac{1 - \\cos 20^\\circ}{2}} \\sqrt{\\frac{1 + \\cos 20^\\circ}{2}} = \\sqrt{1 - \\cos^2 20^\\circ}$",
+            1
+        ],
+        [
+            "Step 3:\n$\\sqrt[3]{3 \\sec^2 20^\\circ (1 - \\cos^2 20^\\circ)} = \\sqrt[3]{3 \\sec^2 20^\\circ - 3 \\sec^4 20^\\circ}$",
+            1
+        ],
+        [
+            "Step 4:\n$\\sqrt[3]{3 \\sec^2 20^\\circ - 3 \\sec^4 20^\\circ} = \\sqrt[3]{3 \\sec^2 20^\\circ (1 - \\sec^2 20^\\circ)} = \\sqrt[3]{3 \\sec^2 20^\\circ - 3 \\sec^4 20^\\circ} = \\sqrt[3]{3}\\sqrt[3]{\\sec^2 20^\\circ - \\sec^4 20^\\circ} = \\sqrt[3]{3} (\\sec 20^\\circ - \\sec^3 20^\\circ).$",
+            1
+        ],
+        [
+            "$2\\sqrt[3]{3}(\\sec 20^\\circ - \\sec^3 20^\\circ) = 2\\sqrt[3]{3} \\sec 20^\\circ - 2\\sqrt[3]{9} \\sec^3 20^\\circ$",
+            1
+        ],
+        [
+            "$2\\sqrt[3]{3} \\sec 20^\\circ - 2\\sqrt[3]{9} \\sec^3 20^\\circ = 2\\sqrt[3]{3} \\sec 20^\\circ - 6 \\sec^3 20^\\circ$",
+            1
+        ],
+        [
+            "The expression can be written in the form $a + b \\sec 20^\\circ,$ where $a = 2\\sqrt[3]{3}$ and $b = -6.$\n\nFinal Answer: The final answer is $\\boxed{(2\\sqrt[3]{3},-6)}.$",
+            1
+        ]
+    ],
+    "time": 96.80988240242004,
+    "total_tokens": 6590,
+    "final_answer_tokens": 689,
+    "model": "meta-llama/Llama-Vision-Free"
+}

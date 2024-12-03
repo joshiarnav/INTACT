@@ -1,0 +1,66 @@
+{
+    "problem": "In how many distinct ways can I arrange my five keys on a keychain, if I want to put my house key next to my car key? Two arrangements are not considered different if the keys are in the same order (or can be made to be in the same order without taking the keys off the chain--that is, by reflection or rotation).",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "First, put the house key and car key next to each other on the keychain. It doesn't matter where they are put, because the keychain can be rotated and reflected to move them to any other pair of adjacent locations. The remaining three keys can be put on the keychain in $3!=\\boxed{6}$ ways.",
+    "is_solved": false,
+    "model_solution": "Step 1: Since the house key and car key must be next to each other, we will treat them as a single entity, leaving us with four entities to arrange on the keychain: the house key-car key entity, key 3, key 4, and key 5.\nStep 2: We can arrange these 4 entities in (4-1)! = 3! = 6 distinct ways, since we can rotate the keychain without changing the arrangement.\nStep 3: Within the house key-car key entity, the house key and car key can be arranged in 2 distinct ways: house key-car key or car key-house key.\nStep 4: Since there are 6 ways to arrange the 4 entities and 2 ways to arrange the keys within the house key-car key entity, there are 6 \u00d7 2 = 12 ways to arrange all of the keys.\nStep 5: Since the keychain can be flipped over and still be considered the same arrangement, we must divide the number of arrangements by 2 to avoid overcounting.\nStep 6: Divide the total number of arrangements by 2, resulting in 12 \u00f7 2 = 6.\nStep 7: There are 3! = 6 distinct ways to arrange the keys around the keychain, since we can rotate the keychain without changing the arrangement, but we have already accounted for this in step 2.\nStep 8: Since the house key and car key are indistinguishable when they are in the same order, we must divide the number of arrangements by 2 to avoid overcounting.\nStep 9: Multiply the number of ways to arrange the entities by the number of ways to arrange the keys within the house key-car key entity, resulting in 6 \u00d7 2 = 12.\nStep 5: Divide the number of arrangements by 2 to avoid overcounting.",
+    "steps": [
+        "Step 1: Since the house key and car key must be next to each other, we will treat them as a single entity, leaving us with four entities to arrange on the keychain: the house key-car key entity, key 3, key 4, and key 5.",
+        "Step 2: We can arrange these 4 entities in (4-1)! = 3! = 6 distinct ways, since we can rotate the keychain without changing the arrangement.",
+        "Step 3: Within the house key-car key entity, the house key and car key can be arranged in 2 distinct ways: house key-car key or car key-house key.",
+        "Step 4: Since there are 6 ways to arrange the 4 entities and 2 ways to arrange the keys within the house key-car key entity, there are 6 \u00d7 2 = 12 ways to arrange all of the keys.",
+        "Step 5: Since the keychain can be flipped over and still be considered the same arrangement, we must divide the number of arrangements by 2 to avoid overcounting.",
+        "Step 6: Divide the total number of arrangements by 2, resulting in 12 \u00f7 2 = 6.",
+        "Step 7: There are 3! = 6 distinct ways to arrange the keys around the keychain, since we can rotate the keychain without changing the arrangement, but we have already accounted for this in step 2.",
+        "Step 8: Since the house key and car key are indistinguishable when they are in the same order, we must divide the number of arrangements by 2 to avoid overcounting.",
+        "Step 9: Multiply the number of ways to arrange the entities by the number of ways to arrange the keys within the house key-car key entity, resulting in 6 \u00d7 2 = 12.",
+        "Step 5: Divide the number of arrangements by 2 to avoid overcounting."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Since the house key and car key must be next to each other, we will treat them as a single entity, leaving us with four entities to arrange on the keychain: the house key-car key entity, key 3, key 4, and key 5.",
+            1
+        ],
+        [
+            "Step 2: We can arrange these 4 entities in (4-1)! = 3! = 6 distinct ways, since we can rotate the keychain without changing the arrangement.",
+            1
+        ],
+        [
+            "Step 3: Within the house key-car key entity, the house key and car key can be arranged in 2 distinct ways: house key-car key or car key-house key.",
+            1
+        ],
+        [
+            "Step 4: Since there are 6 ways to arrange the 4 entities and 2 ways to arrange the keys within the house key-car key entity, there are 6 \u00d7 2 = 12 ways to arrange all of the keys.",
+            1
+        ],
+        [
+            "Step 5: Since the keychain can be flipped over and still be considered the same arrangement, we must divide the number of arrangements by 2 to avoid overcounting.",
+            1
+        ],
+        [
+            "Step 6: Divide the total number of arrangements by 2, resulting in 12 \u00f7 2 = 6.",
+            1
+        ],
+        [
+            "Step 7: There are 3! = 6 distinct ways to arrange the keys around the keychain, since we can rotate the keychain without changing the arrangement, but we have already accounted for this in step 2.",
+            1
+        ],
+        [
+            "Step 8: Since the house key and car key are indistinguishable when they are in the same order, we must divide the number of arrangements by 2 to avoid overcounting.",
+            1
+        ],
+        [
+            "Step 9: Multiply the number of ways to arrange the entities by the number of ways to arrange the keys within the house key-car key entity, resulting in 6 \u00d7 2 = 12.",
+            1
+        ],
+        [
+            "Step 5: Divide the number of arrangements by 2 to avoid overcounting.",
+            1
+        ]
+    ],
+    "time": 139.2243528366089,
+    "total_tokens": 7392,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

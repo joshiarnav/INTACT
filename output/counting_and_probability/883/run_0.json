@@ -1,0 +1,51 @@
+{
+    "problem": "Suelyn counts up from 1 to 9, and then immediately counts down again to 1, and then back up to 9, and so on, alternately counting up and down $$(1, 2, 3,4,5,6,7,8,9,8,7,6,5,4,3,2,1,2,3,4,\\ldots ).$$ What is the $1000^{\\text{th}}$ integer in her list?",
+    "level": "Level 2",
+    "type": "Counting & Probability",
+    "solution": "We can treat this list as a sequence with a repetitive pattern. We see the sequence repeats itself every 16 elements (from 1 to 9 then back to 2). Because 1000 divided by 16 is 62 with a remainder of 8, to get 1000 terms in this list, we repeat the block 62 times, and then go 8 more elements.  This means that the $1000^{\\text{th}}$ integer is the same as the $8^{\\text{th}}$ integer, which is $\\boxed{8}$.",
+    "is_solved": true,
+    "model_solution": "Any time Suelyn reaches the number 9 while counting up, she will immediately begin counting down from 9 to 1. Thus, the $9^{\\text{th}}$ integer and the $18^{\\text{th}}$ integer, and the $27^{\\text{th}}$ integer, and so on, are all equal to 9.\nThe $99^{\\text{th}}$ term is 9; therefore, the $100^{\\text{th}}$ term is 1.\nThe 1000th term lies in the 112th cycle of counting up and down (from 1 to 9).\nSince the 1000th term is the 6th term of the 112th cycle, the 1000th term is 6.\nSince the 1000th term is the 6th term of the 112th cycle, and the 6th term of any cycle is 6, the 6th term is 6.\nSince the 1000th term is the 6th term of the 112th cycle, it is 9 - (112 - 1) = 9 - 111 = -102 + 6 = 6.\nSince the 1000th term is the 6th term of the 112th cycle, it is 9 - (112 - 1) = 9 - 111 = -102 + 6 = 6.",
+    "steps": [
+        "Any time Suelyn reaches the number 9 while counting up, she will immediately begin counting down from 9 to 1. Thus, the $9^{\\text{th}}$ integer and the $18^{\\text{th}}$ integer, and the $27^{\\text{th}}$ integer, and so on, are all equal to 9.",
+        "The $99^{\\text{th}}$ term is 9; therefore, the $100^{\\text{th}}$ term is 1.",
+        "The 1000th term lies in the 112th cycle of counting up and down (from 1 to 9).",
+        "Since the 1000th term is the 6th term of the 112th cycle, the 1000th term is 6.",
+        "Since the 1000th term is the 6th term of the 112th cycle, and the 6th term of any cycle is 6, the 6th term is 6.",
+        "Since the 1000th term is the 6th term of the 112th cycle, it is 9 - (112 - 1) = 9 - 111 = -102 + 6 = 6.",
+        "Since the 1000th term is the 6th term of the 112th cycle, it is 9 - (112 - 1) = 9 - 111 = -102 + 6 = 6."
+    ],
+    "full_steps": [
+        [
+            "Any time Suelyn reaches the number 9 while counting up, she will immediately begin counting down from 9 to 1. Thus, the $9^{\\text{th}}$ integer and the $18^{\\text{th}}$ integer, and the $27^{\\text{th}}$ integer, and so on, are all equal to 9.",
+            1
+        ],
+        [
+            "The $99^{\\text{th}}$ term is 9; therefore, the $100^{\\text{th}}$ term is 1.",
+            1
+        ],
+        [
+            "The 1000th term lies in the 112th cycle of counting up and down (from 1 to 9).",
+            1
+        ],
+        [
+            "Since the 1000th term is the 6th term of the 112th cycle, the 1000th term is 6.",
+            1
+        ],
+        [
+            "Since the 1000th term is the 6th term of the 112th cycle, and the 6th term of any cycle is 6, the 6th term is 6.",
+            1
+        ],
+        [
+            "Since the 1000th term is the 6th term of the 112th cycle, it is 9 - (112 - 1) = 9 - 111 = -102 + 6 = 6.",
+            1
+        ],
+        [
+            "Since the 1000th term is the 6th term of the 112th cycle, it is 9 - (112 - 1) = 9 - 111 = -102 + 6 = 6.",
+            1
+        ]
+    ],
+    "time": 95.5405945777893,
+    "total_tokens": 4840,
+    "final_answer_tokens": 463,
+    "model": "meta-llama/Llama-Vision-Free"
+}

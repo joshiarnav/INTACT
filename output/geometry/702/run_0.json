@@ -1,0 +1,51 @@
+{
+    "problem": "Five points $A$, $B$, $C$, $D$, and $O$ lie on a flat field.  $A$ is directly north of $O$, $B$ is directly west of $O$, $C$ is directly south of $O$, and $D$ is directly east of $O$. The  distance between $C$ and $D$ is 140 m.  A hot-air balloon is positioned in the air at $H$ directly above $O$. The balloon is held in place by four ropes $HA$, $HB$, $HC$, and $HD$.  Rope $HC$ has length 150 m and rope $HD$ has length 130 m. [asy]\nsize(250);\npair A, B, C, D, O, H, W, X, Y, Z;\nO=(0,0);\nA=(1,1);\nD=(1.5,-.3);\nB=(-1.5,.3);\nC=(-1,-1);\nH=(0,2.5);\nW=(5/3)*(A+D);\nX=(5/3)*(A+B);\nY=(-1)*(W);\nZ=(-1)*(X);\ndraw(W--X--Y--Z--W);\ndraw(A--C);\ndraw(B--D);\ndraw(O--H, linewidth(1));\ndraw(A--H, dashed);\ndraw(B--H, dashed);\ndraw(C--H, dashed);\ndraw(D--H, dashed);\ndot(A);\ndot(B);\ndot(C);\ndot(D);\ndot(O);\ndot(H);\nlabel(\"A\", A, NE);\nlabel(\"B\", B, SW);\nlabel(\"C\", C, SE);\nlabel(\"D\", D, NE);\nlabel(\"O\", O, SE);\nlabel(\"H\", H, NW);\n[/asy]\n\nTo reduce the total length of rope used, rope $HC$ and rope $HD$ are to be replaced by a single rope $HP$ where $P$ is a point on the straight line between $C$ and $D$. (The balloon remains at the same position $H$ above $O$ as described above.)  Determine the greatest length of rope that can be saved.",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "To save the most rope, we must have $HP$ having minimum length.\nFor $HP$ to have minimum length, $HP$ must be perpendicular to $CD$. [asy]\npair C, D, H, P;\nH=(90,120);\nC=(0,0);\nD=(140,0);\nP=(90,0);\ndraw(H--C--D--H--P);\nlabel(\"H\", H, N);\nlabel(\"C\", C, SW);\nlabel(\"D\", D, SE);\nlabel(\"P\", P, S);\nlabel(\"150\", (C+H)/2, NW);\nlabel(\"130\", (D+H)/2, NE);\n[/asy] (Among other things, we can see from this diagram that sliding $P$ away from the perpendicular position does make $HP$ longer.)\nIn the diagram, $HC=150$, $HD=130$ and $CD=140$.\nLet $HP=x$ and $PD=a$.  Then $CP=140-a$.\nBy the Pythagorean Theorem in $\\triangle HPC$, $x^2 + (140-a)^2 = 150^2$.\nBy the Pythagorean Theorem in $\\triangle HPD$, $x^2+a^2 = 130^2$.\nSubtracting the second equation from the first, we obtain \\begin{align*}\n(140-a)^2 - a^2 & = 150^2 - 130^2 \\\\\n(19600 - 280a+a^2)-a^2 & = 5600 \\\\\n19600 -280a & = 5600 \\\\\n280a & = 14000 \\\\\na & = 50\n\\end{align*} Therefore, $x^2 + 90^2 = 150^2$ or $x^2 = 150^2 - 90^2 = 22500 - 8100 = 14400$ so $x =120$.\nSo the shortest possible rope that we can use is 120 m, which saves $130+150-120 = \\boxed{160}$ m of rope.",
+    "is_solved": true,
+    "model_solution": "Step 1:  Let $c$ be the distance $OC$ and $d$ be the distance $OD$. Let $x$ be the length of rope $HP$.\nStep 2:  To determine the greatest length of rope that can be saved, we need to consider the distances between points $C$ and $D$, and between their respective connecting points $P$ and $H$. \nStep 3:  We will apply the Pythagorean Theorem to the right triangles $OCZ$ and $ODY$ in order to derive equations involving the distances $c$, $d$, and the length of rope $HP$.\nStep 4:  Additionally, we will use the Triangle Inequality to find the possible range of values for the length of rope $HP$.\nStep 5:  By analyzing these inequalities, we will identify the optimal length of rope $HP$ that results in the greatest savings.\nStep 6:  By the Pythagorean Theorem, $(cz)^2 + c^2 = 150^2$ and $(dy)^2 + d^2 = 130^2$. This implies $c^2 - (c - z)^2 = 150^2 - (150^2 - z^2) = z^2$ and $d^2 - (d - y)^2 = 130^2 - (130^2 - y^2) = y^2$.\nStep 7:  Therefore, we have $y^2 = 9800 - z^2.$\nStep 8:  By the Triangle Inequality, we have $c - z + d - y \\le x \\le c - z + d + y.$\nStep 9:  The length of rope saved is $150 + 130 - x$, so we want to maximize $x$.  We want to maximize $x$ subject to the inequality $c - z + d - y \\le x \\le c - z + d + y.$\nStep 10:  Since $x$ is maximized when $x = c - z + d + y$, we can find an expression for $x$ in terms of $z$ by substituting $y^2 = 9800 - z^2$, which yields $x = c - z + \\sqrt{9800 - z^2}$\nStep 11: \n$c^2 - (c - z)^2 = (2cz - z^2)$ and $d^2 - (d - y)^2 = (2dy - y^2) = (2dy - (9800 - z^2))$\n\nFinal Answer",
+    "steps": [
+        "Step 1:  Let $c$ be the distance $OC$ and $d$ be the distance $OD$. Let $x$ be the length of rope $HP$.\nStep 2:  To determine the greatest length of rope that can be saved, we need to consider the distances between points $C$ and $D$, and between their respective connecting points $P$ and $H$. \nStep 3:  We will apply the Pythagorean Theorem to the right triangles $OCZ$ and $ODY$ in order to derive equations involving the distances $c$, $d$, and the length of rope $HP$.\nStep 4:  Additionally, we will use the Triangle Inequality to find the possible range of values for the length of rope $HP$.\nStep 5:  By analyzing these inequalities, we will identify the optimal length of rope $HP$ that results in the greatest savings.",
+        "Step 6:  By the Pythagorean Theorem, $(cz)^2 + c^2 = 150^2$ and $(dy)^2 + d^2 = 130^2$. This implies $c^2 - (c - z)^2 = 150^2 - (150^2 - z^2) = z^2$ and $d^2 - (d - y)^2 = 130^2 - (130^2 - y^2) = y^2$.",
+        "Step 7:  Therefore, we have $y^2 = 9800 - z^2.$",
+        "Step 8:  By the Triangle Inequality, we have $c - z + d - y \\le x \\le c - z + d + y.$",
+        "Step 9:  The length of rope saved is $150 + 130 - x$, so we want to maximize $x$.  We want to maximize $x$ subject to the inequality $c - z + d - y \\le x \\le c - z + d + y.$",
+        "Step 10:  Since $x$ is maximized when $x = c - z + d + y$, we can find an expression for $x$ in terms of $z$ by substituting $y^2 = 9800 - z^2$, which yields $x = c - z + \\sqrt{9800 - z^2}$",
+        "Step 11: \n$c^2 - (c - z)^2 = (2cz - z^2)$ and $d^2 - (d - y)^2 = (2dy - y^2) = (2dy - (9800 - z^2))$\n\nFinal Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Let $c$ be the distance $OC$ and $d$ be the distance $OD$. Let $x$ be the length of rope $HP$.\nStep 2:  To determine the greatest length of rope that can be saved, we need to consider the distances between points $C$ and $D$, and between their respective connecting points $P$ and $H$. \nStep 3:  We will apply the Pythagorean Theorem to the right triangles $OCZ$ and $ODY$ in order to derive equations involving the distances $c$, $d$, and the length of rope $HP$.\nStep 4:  Additionally, we will use the Triangle Inequality to find the possible range of values for the length of rope $HP$.\nStep 5:  By analyzing these inequalities, we will identify the optimal length of rope $HP$ that results in the greatest savings.",
+            1
+        ],
+        [
+            "Step 6:  By the Pythagorean Theorem, $(cz)^2 + c^2 = 150^2$ and $(dy)^2 + d^2 = 130^2$. This implies $c^2 - (c - z)^2 = 150^2 - (150^2 - z^2) = z^2$ and $d^2 - (d - y)^2 = 130^2 - (130^2 - y^2) = y^2$.",
+            1
+        ],
+        [
+            "Step 7:  Therefore, we have $y^2 = 9800 - z^2.$",
+            1
+        ],
+        [
+            "Step 8:  By the Triangle Inequality, we have $c - z + d - y \\le x \\le c - z + d + y.$",
+            1
+        ],
+        [
+            "Step 9:  The length of rope saved is $150 + 130 - x$, so we want to maximize $x$.  We want to maximize $x$ subject to the inequality $c - z + d - y \\le x \\le c - z + d + y.$",
+            1
+        ],
+        [
+            "Step 10:  Since $x$ is maximized when $x = c - z + d + y$, we can find an expression for $x$ in terms of $z$ by substituting $y^2 = 9800 - z^2$, which yields $x = c - z + \\sqrt{9800 - z^2}$",
+            1
+        ],
+        [
+            "Step 11: \n$c^2 - (c - z)^2 = (2cz - z^2)$ and $d^2 - (d - y)^2 = (2dy - y^2) = (2dy - (9800 - z^2))$\n\nFinal Answer",
+            1
+        ]
+    ],
+    "time": 91.81698226928711,
+    "total_tokens": 12475,
+    "final_answer_tokens": 1064,
+    "model": "meta-llama/Llama-Vision-Free"
+}

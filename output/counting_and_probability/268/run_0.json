@@ -1,0 +1,56 @@
+{
+    "problem": "Interior numbers begin in the third row of Pascal's Triangle. The sum of the interior numbers in the fourth row is 6. The sum of the interior numbers of the fifth row is 14. What is the sum of the interior numbers of the seventh row?",
+    "level": "Level 3",
+    "type": "Counting & Probability",
+    "solution": "If Pascal's Triangle begins with row 1, then the sum of the elements in row $n$ is $2^{n-1}$. The interior numbers refer to all numbers in the row except the $1$ at each end, so the sum of the interior elements in row $n$ is $2^{n-1}-1-1=2^{n-1}-2$. For the fourth row, the sum is $2^3-2=6$. For the fifth row, the sum is $2^4-2=14$. So for the seventh row the sum is $2^{7-1}-2=64-2=\\boxed{62}$.",
+    "is_solved": true,
+    "model_solution": "First, list the rows of Pascal's Triangle.\nList the sums of the interior numbers of each row to see if there is a pattern.\n\n3,4,5,6,7,8 (partial list)\n\n6,14,35,72,165,330,?\nNote the pattern of sums and find the next sum in the pattern.\nSince 6, 14, 35, 72, 165, 330, ... are the differences between consecutive sums with a common difference of 8, 21, 37, 93, 165, ..., add 296 to 330.\nAdd 296 to 330.\n332\nDivide 332 by 2 (not a final step).\nAdd 296 to 330.",
+    "steps": [
+        "First, list the rows of Pascal's Triangle.",
+        "List the sums of the interior numbers of each row to see if there is a pattern.\n\n3,4,5,6,7,8 (partial list)\n\n6,14,35,72,165,330,?",
+        "Note the pattern of sums and find the next sum in the pattern.",
+        "Since 6, 14, 35, 72, 165, 330, ... are the differences between consecutive sums with a common difference of 8, 21, 37, 93, 165, ..., add 296 to 330.",
+        "Add 296 to 330.",
+        "332",
+        "Divide 332 by 2 (not a final step).",
+        "Add 296 to 330."
+    ],
+    "full_steps": [
+        [
+            "First, list the rows of Pascal's Triangle.",
+            1
+        ],
+        [
+            "List the sums of the interior numbers of each row to see if there is a pattern.\n\n3,4,5,6,7,8 (partial list)\n\n6,14,35,72,165,330,?",
+            1
+        ],
+        [
+            "Note the pattern of sums and find the next sum in the pattern.",
+            1
+        ],
+        [
+            "Since 6, 14, 35, 72, 165, 330, ... are the differences between consecutive sums with a common difference of 8, 21, 37, 93, 165, ..., add 296 to 330.",
+            1
+        ],
+        [
+            "Add 296 to 330.",
+            1
+        ],
+        [
+            "332",
+            1
+        ],
+        [
+            "Divide 332 by 2 (not a final step).",
+            1
+        ],
+        [
+            "Add 296 to 330.",
+            1
+        ]
+    ],
+    "time": 109.0496551990509,
+    "total_tokens": 3528,
+    "final_answer_tokens": 264,
+    "model": "meta-llama/Llama-Vision-Free"
+}

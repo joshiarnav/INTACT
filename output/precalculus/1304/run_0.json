@@ -1,0 +1,41 @@
+{
+    "problem": "Let\n\\[\\mathbf{a} = \\begin{pmatrix} 5 \\\\ -3 \\\\ -4 \\end{pmatrix} \\quad \\text{and} \\quad \\mathbf{b} = \\begin{pmatrix} -11 \\\\ 1 \\\\ 28 \\end{pmatrix}.\\]There exist vectors $\\mathbf{p}$ and $\\mathbf{d}$ such that the line containing $\\mathbf{a}$ and $\\mathbf{b}$ can be expressed in the form\n\\[\\mathbf{v} = \\mathbf{p} + \\mathbf{d} t.\\]Furthermore, for a certain choice of $\\mathbf{d}$, it is the case that for all points $\\mathbf{v}$ lying on the same side of $\\mathbf{a}$ that $\\mathbf{b}$ lies on, the distance between $\\mathbf{v}$ and $\\mathbf{a}$ is $t$.  Find $\\mathbf{d}$.",
+    "level": "Level 5",
+    "type": "Precalculus",
+    "solution": "From the given property, the distance between $\\bold{v}$ and $\\bold{a}$ is 0 when $t = 0$, so $\\bold{v} = \\bold{a}$.  But the equation $\\bold{v} = \\bold{p} + \\bold{d} t$ becomes\n\\[\\bold{v} = \\bold{p}\\]when $t = 0$.  Hence, $\\bold{p} = \\bold{a}$, so the equation of the line is\n\\[\\bold{v} = \\bold{a} + \\bold{d} t.\\]Also, the vector $\\bold{b}$ lies on the line, and the distance between $\\bold{a}$ and $\\bold{b}$ is\n\\[\\|\\bold{a} - \\bold{b}\\| = \\left\\| \\begin{pmatrix} 5 \\\\ -3 \\\\ -4 \\end{pmatrix} - \\begin{pmatrix} -11 \\\\ 1 \\\\ 28 \\end{pmatrix} \\right\\| = \\left\\| \\begin{pmatrix} 16 \\\\ -4 \\\\ -32 \\end{pmatrix} \\right\\| = \\sqrt{16^2 + (-4)^2 + (-32)^2} = 36.\\]Hence, the value of $t$ for which $\\bold{b} = \\bold{a} + \\bold{d} t$ is $t = 36$, which means\n\\[\\begin{pmatrix} -11 \\\\ 1 \\\\ 28 \\end{pmatrix} = \\begin{pmatrix} 5 \\\\ -3 \\\\ -4 \\end{pmatrix} + 36 \\bold{d}.\\]Isolating $\\bold{d}$, we find\n\\[\\bold{d} = \\boxed{\\begin{pmatrix} -4/9 \\\\ 1/9 \\\\ 8/9 \\end{pmatrix}}.\\]",
+    "is_solved": true,
+    "model_solution": "## Step 1\nThe equation of the line in vector form is $\\mathbf{v} = \\mathbf{p} + \\mathbf{d} t.$ We must first find $\\mathbf{p}$ and $\\mathbf{d}.$\n\n## Step 2\nSince the line contains $\\mathbf{a}$ and $\\mathbf{b}$, we know that for some $t_1$ and $t_2$, $\\mathbf{a} = \\mathbf{p} + \\mathbf{d} t_1$ and $\\mathbf{b} = \\mathbf{p} + \\mathbf{d} t_2.$\n\n## Step 3\nWe can solve for $\\mathbf{p}$ by subtracting the first equation from the second equation, which gives us $\\mathbf{b} - \\mathbf{a} = \\mathbf{d} (t_2 - t_1).$\n\n## Step 4\nWe can solve for $\\mathbf{d}$ by dividing both sides of the equation $\\mathbf{b} - \\mathbf{a} = \\mathbf{d} (t_2 -\n## Step 5\n$\\mathbf{d} = \\frac{\\mathbf{b} - \\mathbf{a}}{t_2 - t_1}$\n## Step 6\nWe have that $\\mathbf{a} = \\begin{pmatrix} 5 \\\\ -3 \\\\ -4 \\end{pmatrix}$ and $\\mathbf{b} = \\begin{pmatrix} -11 \\\\ 1 \\\\ 28 \\end{pmatrix}.$  Therefore, $\\mathbf{b} - \\mathbf{a} = \\begin{pmatrix} -16 \\\\ 4 \\\\ 32 \\end{pmatrix}.$\n\n## Step 7\nWe want $\\mathbf{d}$ to be parallel to $\\mathbf{a} - \\mathbf{b}.$ To obtain that the distance between $\\mathbf{v}$ and $\\mathbf{a}$ is $t$ for all points $\\mathbf{v}$ on the side of $\\mathbf{a}$ that $\\mathbf{b}$ lies on, $\\mathbf{d}$ must be parallel to $\\mathbf{a} - \\mathbf{b}.$\n\n## Step 8\nWe can compute $\\mathbf{a} - \\mathbf{b} = \\begin{pmatrix} 16 \\\\ -4 \\\\ -32 \\end{\n$\\mathbf{d} = \\frac{\\mathbf{b} - \\mathbf{a}}{t_2 - t_1}$ can be parallel to $\\mathbf{a} - \\mathbf{b}$ only if $\\mathbf{b} - \\mathbf{a}$ and $\\mathbf{a} - \\mathbf{b}$ are scalar multiples of each other.  Thus, $\\mathbf{d}$ is parallel to $\\mathbf{b} - \\mathbf{a}$ if $\\mathbf{b} - \\mathbf{a}$ is a scalar multiple of $\\mathbf{a} - \\mathbf{b}.$\nThe final answer is: $\\boxed{\\begin{pmatrix} 4 \\\\ -1 \\\\ 4 \\end{pmatrix}}$",
+    "steps": [
+        "## Step 1\nThe equation of the line in vector form is $\\mathbf{v} = \\mathbf{p} + \\mathbf{d} t.$ We must first find $\\mathbf{p}$ and $\\mathbf{d}.$\n\n## Step 2\nSince the line contains $\\mathbf{a}$ and $\\mathbf{b}$, we know that for some $t_1$ and $t_2$, $\\mathbf{a} = \\mathbf{p} + \\mathbf{d} t_1$ and $\\mathbf{b} = \\mathbf{p} + \\mathbf{d} t_2.$\n\n## Step 3\nWe can solve for $\\mathbf{p}$ by subtracting the first equation from the second equation, which gives us $\\mathbf{b} - \\mathbf{a} = \\mathbf{d} (t_2 - t_1).$\n\n## Step 4\nWe can solve for $\\mathbf{d}$ by dividing both sides of the equation $\\mathbf{b} - \\mathbf{a} = \\mathbf{d} (t_2 -",
+        "## Step 5\n$\\mathbf{d} = \\frac{\\mathbf{b} - \\mathbf{a}}{t_2 - t_1}$",
+        "## Step 6\nWe have that $\\mathbf{a} = \\begin{pmatrix} 5 \\\\ -3 \\\\ -4 \\end{pmatrix}$ and $\\mathbf{b} = \\begin{pmatrix} -11 \\\\ 1 \\\\ 28 \\end{pmatrix}.$  Therefore, $\\mathbf{b} - \\mathbf{a} = \\begin{pmatrix} -16 \\\\ 4 \\\\ 32 \\end{pmatrix}.$\n\n## Step 7\nWe want $\\mathbf{d}$ to be parallel to $\\mathbf{a} - \\mathbf{b}.$ To obtain that the distance between $\\mathbf{v}$ and $\\mathbf{a}$ is $t$ for all points $\\mathbf{v}$ on the side of $\\mathbf{a}$ that $\\mathbf{b}$ lies on, $\\mathbf{d}$ must be parallel to $\\mathbf{a} - \\mathbf{b}.$\n\n## Step 8\nWe can compute $\\mathbf{a} - \\mathbf{b} = \\begin{pmatrix} 16 \\\\ -4 \\\\ -32 \\end{",
+        "$\\mathbf{d} = \\frac{\\mathbf{b} - \\mathbf{a}}{t_2 - t_1}$ can be parallel to $\\mathbf{a} - \\mathbf{b}$ only if $\\mathbf{b} - \\mathbf{a}$ and $\\mathbf{a} - \\mathbf{b}$ are scalar multiples of each other.  Thus, $\\mathbf{d}$ is parallel to $\\mathbf{b} - \\mathbf{a}$ if $\\mathbf{b} - \\mathbf{a}$ is a scalar multiple of $\\mathbf{a} - \\mathbf{b}.$",
+        "The final answer is: $\\boxed{\\begin{pmatrix} 4 \\\\ -1 \\\\ 4 \\end{pmatrix}}$"
+    ],
+    "full_steps": [
+        [
+            "## Step 1\nThe equation of the line in vector form is $\\mathbf{v} = \\mathbf{p} + \\mathbf{d} t.$ We must first find $\\mathbf{p}$ and $\\mathbf{d}.$\n\n## Step 2\nSince the line contains $\\mathbf{a}$ and $\\mathbf{b}$, we know that for some $t_1$ and $t_2$, $\\mathbf{a} = \\mathbf{p} + \\mathbf{d} t_1$ and $\\mathbf{b} = \\mathbf{p} + \\mathbf{d} t_2.$\n\n## Step 3\nWe can solve for $\\mathbf{p}$ by subtracting the first equation from the second equation, which gives us $\\mathbf{b} - \\mathbf{a} = \\mathbf{d} (t_2 - t_1).$\n\n## Step 4\nWe can solve for $\\mathbf{d}$ by dividing both sides of the equation $\\mathbf{b} - \\mathbf{a} = \\mathbf{d} (t_2 -",
+            1
+        ],
+        [
+            "## Step 5\n$\\mathbf{d} = \\frac{\\mathbf{b} - \\mathbf{a}}{t_2 - t_1}$",
+            1
+        ],
+        [
+            "## Step 6\nWe have that $\\mathbf{a} = \\begin{pmatrix} 5 \\\\ -3 \\\\ -4 \\end{pmatrix}$ and $\\mathbf{b} = \\begin{pmatrix} -11 \\\\ 1 \\\\ 28 \\end{pmatrix}.$  Therefore, $\\mathbf{b} - \\mathbf{a} = \\begin{pmatrix} -16 \\\\ 4 \\\\ 32 \\end{pmatrix}.$\n\n## Step 7\nWe want $\\mathbf{d}$ to be parallel to $\\mathbf{a} - \\mathbf{b}.$ To obtain that the distance between $\\mathbf{v}$ and $\\mathbf{a}$ is $t$ for all points $\\mathbf{v}$ on the side of $\\mathbf{a}$ that $\\mathbf{b}$ lies on, $\\mathbf{d}$ must be parallel to $\\mathbf{a} - \\mathbf{b}.$\n\n## Step 8\nWe can compute $\\mathbf{a} - \\mathbf{b} = \\begin{pmatrix} 16 \\\\ -4 \\\\ -32 \\end{",
+            1
+        ],
+        [
+            "$\\mathbf{d} = \\frac{\\mathbf{b} - \\mathbf{a}}{t_2 - t_1}$ can be parallel to $\\mathbf{a} - \\mathbf{b}$ only if $\\mathbf{b} - \\mathbf{a}$ and $\\mathbf{a} - \\mathbf{b}$ are scalar multiples of each other.  Thus, $\\mathbf{d}$ is parallel to $\\mathbf{b} - \\mathbf{a}$ if $\\mathbf{b} - \\mathbf{a}$ is a scalar multiple of $\\mathbf{a} - \\mathbf{b}.$",
+            1
+        ],
+        [
+            "The final answer is: $\\boxed{\\begin{pmatrix} 4 \\\\ -1 \\\\ 4 \\end{pmatrix}}$",
+            1
+        ]
+    ],
+    "time": 69.04897022247314,
+    "total_tokens": 7667,
+    "final_answer_tokens": 978,
+    "model": "meta-llama/Llama-Vision-Free"
+}

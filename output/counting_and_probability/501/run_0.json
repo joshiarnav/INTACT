@@ -1,0 +1,46 @@
+{
+    "problem": "Two of the vertices of a regular octahedron are to be chosen at random. What is the probability that they will be the endpoints of an edge of the octahedron? Express your answer as a common fraction. [asy]\nsize(150);\npair A, B, C, D, E, F;\nA=(1,1);\nB=(-1,-1);\nC=(0,6);\nD=(0,-6);\nE=(6, 0);\nF=(-6,0);\ndraw(C--F--D--E--C--B--F);\ndraw(D--B--E);\ndraw(F--A--C, dashed);\ndraw(D--A--E, dashed);\n[/asy]",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "Because the octahedron is symmetric and all vertices have the same number of edges, we can assume that the first vertex we choose is the top one. If we do not choose this vertex, we can simply rotate the octahedron so that we have. From here, there are 5 other vertices. 4 of them share an edge with the vertex we have already chosen, so the probability that the 2 vertices chosen form an edge is $\\boxed{\\frac{4}{5}}$.",
+    "is_solved": true,
+    "model_solution": "There are $\\binom{6}{2}=15$ ways to choose two vertices from the octahedron.\nThere are 12 edges in the octahedron, each with two endpoints, so there are $12 \\cdot 2 = 24$ ways to choose the endpoints of an edge.\nThe probability that the endpoints of a randomly selected pair of vertices are the endpoints of an edge is $\\frac{24}{15}$.\nThe probability is $\\frac{24}{15}=\\frac{8}{5}$, but this is more than 1, so the numerator must be too small. There are actually $\\frac{12\\cdot6}{2}$ ways to choose the endpoints of an edge.\nThere are 12 edges in the octahedron, and each edge has 6 other vertices at the opposite end, so there are $12 \\cdot 6 = 72$ ways to choose the endpoints of an edge.\nThere are $\\binom{6}{2}=15$ ways to choose two vertices from the octahedron.",
+    "steps": [
+        "There are $\\binom{6}{2}=15$ ways to choose two vertices from the octahedron.",
+        "There are 12 edges in the octahedron, each with two endpoints, so there are $12 \\cdot 2 = 24$ ways to choose the endpoints of an edge.",
+        "The probability that the endpoints of a randomly selected pair of vertices are the endpoints of an edge is $\\frac{24}{15}$.",
+        "The probability is $\\frac{24}{15}=\\frac{8}{5}$, but this is more than 1, so the numerator must be too small. There are actually $\\frac{12\\cdot6}{2}$ ways to choose the endpoints of an edge.",
+        "There are 12 edges in the octahedron, and each edge has 6 other vertices at the opposite end, so there are $12 \\cdot 6 = 72$ ways to choose the endpoints of an edge.",
+        "There are $\\binom{6}{2}=15$ ways to choose two vertices from the octahedron."
+    ],
+    "full_steps": [
+        [
+            "There are $\\binom{6}{2}=15$ ways to choose two vertices from the octahedron.",
+            1
+        ],
+        [
+            "There are 12 edges in the octahedron, each with two endpoints, so there are $12 \\cdot 2 = 24$ ways to choose the endpoints of an edge.",
+            1
+        ],
+        [
+            "The probability that the endpoints of a randomly selected pair of vertices are the endpoints of an edge is $\\frac{24}{15}$.",
+            1
+        ],
+        [
+            "The probability is $\\frac{24}{15}=\\frac{8}{5}$, but this is more than 1, so the numerator must be too small. There are actually $\\frac{12\\cdot6}{2}$ ways to choose the endpoints of an edge.",
+            1
+        ],
+        [
+            "There are 12 edges in the octahedron, and each edge has 6 other vertices at the opposite end, so there are $12 \\cdot 6 = 72$ ways to choose the endpoints of an edge.",
+            1
+        ],
+        [
+            "There are $\\binom{6}{2}=15$ ways to choose two vertices from the octahedron.",
+            1
+        ]
+    ],
+    "time": 82.73788261413574,
+    "total_tokens": 3983,
+    "final_answer_tokens": 421,
+    "model": "meta-llama/Llama-Vision-Free"
+}

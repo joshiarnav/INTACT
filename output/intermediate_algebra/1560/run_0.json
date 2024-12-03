@@ -1,0 +1,66 @@
+{
+    "problem": "Let $P(x)$ be a polynomial with integer coefficients that satisfies $P(17)=10$ and $P(24)=17.$ Given that $P(n)=n+3$ has two distinct integer solutions $n_1$ and $n_2,$ find $n_1$ and $n_2$.\n\n(Give your answer as a comma-separated list, in either order; for example, \"2, 5\" or \"6, -3\".)",
+    "level": "Level 4",
+    "type": "Intermediate Algebra",
+    "solution": "We have $P(n_1) = n_1+3$. Using the property that $a - b \\mid P(a) - P(b)$ whenever $a$ and $b$ are distinct integers, we get \\[n_1 - 17 \\mid P(n_1) - P(17) = (n_1+3) - 10 = n_1 - 7,\\]and \\[n_1 - 24 \\mid P(n_1) - P(24) = (n_1+3)-17=n_1-14.\\]Since $n_1 - 7 = 10 + (n_1-17)$ and $n_1-14 = 10 + (n_1-24)$, we must have \\[n_1 - 17 \\mid 10 \\; \\text{and} \\; n_1-24 \\mid 10.\\]We look for two divisors of $10$ that differ by $7$; we find that $\\{2, -5\\}$ and $\\{5, -2\\}$ satisfies these conditions. Therefore, either $n_1 - 24 = -5$, giving $n_1 = 19$, or $n_1 - 24 = -2$, giving $n_1 = 22$. From this, we conclude that $n_1, n_2 = \\boxed{19, 22}$.",
+    "is_solved": false,
+    "model_solution": "## Step 1: Define the polynomial Q(x)\nQ(x) = P(x) - (x + 3)\n## Step 2: Find the roots of Q(x) using the remainder theorem\nQ(17) = P(17) - (17 + 3) = 10 - 20 = -10\nQ(24) = P(24) - (24 + 3) = 17 - 27 = -10\n## Step 3: Determine the possible factors of Q(x)\nQ(n1) = Q(n2) = 0\nQ(x) can be factored as Q(x) = (x - n1)(x - n2)\n## Step 4: Use the factored form of Q(x) to find its roots\nQ(x) = (x - n1)(x - n2) = x^2 - (n1 + n2)x + n1n2\nQ(17) = -10 = 289 - (n1 + n2)17 + n1n2\nQ(24) = -10 = 576 - (n1 + n2)24 + n1n2\n## Step 5: Solve the system of equations to find n1 and n2\n(289 - n1n2) - 17(n1 + n2) = -10\n(576 - n1n2) - 24(n1 + n2) = -10\n## Step 6: Subtract the first equation from the second equation to eliminate n1n2\n(576 - 289) - 7(n1 + n2) = 0\n287 - 7(n1 + n2) = 0\n## Step 7: Solve for n1 + n2\nn1 + n2 = 287/7\nn1 + n2 = 41\n## Step 8: Substitute n1 + n2 into one of the equations from step 5 to solve for n1n2\n(289 - n1n2) - 17(41) = -10\n289 - n1n2 - 683 = -10\n-394 - n1n2 = -10\n## Step 9: Solve for n1n2\nn1n2 = 384\n## Step 10: Substitute n1 + n2 and n1n2 into the factored form of Q(x) and solve for n1 and n2\nQ(x) = x^2 - 41x + 384\n(x - 16)(x - 25) = 0\nx = 16 or x = 25\nn1 = 16, n2 = 25",
+    "steps": [
+        "## Step 1: Define the polynomial Q(x)\nQ(x) = P(x) - (x + 3)",
+        "## Step 2: Find the roots of Q(x) using the remainder theorem\nQ(17) = P(17) - (17 + 3) = 10 - 20 = -10\nQ(24) = P(24) - (24 + 3) = 17 - 27 = -10",
+        "## Step 3: Determine the possible factors of Q(x)\nQ(n1) = Q(n2) = 0\nQ(x) can be factored as Q(x) = (x - n1)(x - n2)",
+        "## Step 4: Use the factored form of Q(x) to find its roots\nQ(x) = (x - n1)(x - n2) = x^2 - (n1 + n2)x + n1n2\nQ(17) = -10 = 289 - (n1 + n2)17 + n1n2\nQ(24) = -10 = 576 - (n1 + n2)24 + n1n2",
+        "## Step 5: Solve the system of equations to find n1 and n2\n(289 - n1n2) - 17(n1 + n2) = -10\n(576 - n1n2) - 24(n1 + n2) = -10",
+        "## Step 6: Subtract the first equation from the second equation to eliminate n1n2\n(576 - 289) - 7(n1 + n2) = 0\n287 - 7(n1 + n2) = 0",
+        "## Step 7: Solve for n1 + n2\nn1 + n2 = 287/7\nn1 + n2 = 41",
+        "## Step 8: Substitute n1 + n2 into one of the equations from step 5 to solve for n1n2\n(289 - n1n2) - 17(41) = -10\n289 - n1n2 - 683 = -10\n-394 - n1n2 = -10",
+        "## Step 9: Solve for n1n2\nn1n2 = 384",
+        "## Step 10: Substitute n1 + n2 and n1n2 into the factored form of Q(x) and solve for n1 and n2\nQ(x) = x^2 - 41x + 384\n(x - 16)(x - 25) = 0\nx = 16 or x = 25\nn1 = 16, n2 = 25"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Define the polynomial Q(x)\nQ(x) = P(x) - (x + 3)",
+            1
+        ],
+        [
+            "## Step 2: Find the roots of Q(x) using the remainder theorem\nQ(17) = P(17) - (17 + 3) = 10 - 20 = -10\nQ(24) = P(24) - (24 + 3) = 17 - 27 = -10",
+            1
+        ],
+        [
+            "## Step 3: Determine the possible factors of Q(x)\nQ(n1) = Q(n2) = 0\nQ(x) can be factored as Q(x) = (x - n1)(x - n2)",
+            1
+        ],
+        [
+            "## Step 4: Use the factored form of Q(x) to find its roots\nQ(x) = (x - n1)(x - n2) = x^2 - (n1 + n2)x + n1n2\nQ(17) = -10 = 289 - (n1 + n2)17 + n1n2\nQ(24) = -10 = 576 - (n1 + n2)24 + n1n2",
+            1
+        ],
+        [
+            "## Step 5: Solve the system of equations to find n1 and n2\n(289 - n1n2) - 17(n1 + n2) = -10\n(576 - n1n2) - 24(n1 + n2) = -10",
+            1
+        ],
+        [
+            "## Step 6: Subtract the first equation from the second equation to eliminate n1n2\n(576 - 289) - 7(n1 + n2) = 0\n287 - 7(n1 + n2) = 0",
+            1
+        ],
+        [
+            "## Step 7: Solve for n1 + n2\nn1 + n2 = 287/7\nn1 + n2 = 41",
+            1
+        ],
+        [
+            "## Step 8: Substitute n1 + n2 into one of the equations from step 5 to solve for n1n2\n(289 - n1n2) - 17(41) = -10\n289 - n1n2 - 683 = -10\n-394 - n1n2 = -10",
+            1
+        ],
+        [
+            "## Step 9: Solve for n1n2\nn1n2 = 384",
+            1
+        ],
+        [
+            "## Step 10: Substitute n1 + n2 and n1n2 into the factored form of Q(x) and solve for n1 and n2\nQ(x) = x^2 - 41x + 384\n(x - 16)(x - 25) = 0\nx = 16 or x = 25\nn1 = 16, n2 = 25",
+            1
+        ]
+    ],
+    "time": 135.85167479515076,
+    "total_tokens": 9365,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

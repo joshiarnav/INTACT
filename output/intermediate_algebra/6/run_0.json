@@ -1,0 +1,66 @@
+{
+    "problem": "For how many integer values of $k$ do the graphs of $x^2+y^2=k^2$ and $xy = k$ not intersect?",
+    "level": "Level 3",
+    "type": "Intermediate Algebra",
+    "solution": "Suppose the graphs $x^2 + y^2 = k^2$ and $xy = k$ intersect, which means the system\n\\begin{align*}\nx^2 + y^2 &= k^2, \\\\\nxy &= k\n\\end{align*}has a solution.  Then\n\\[(x - y)^2 \\ge 0.\\]Expanding, we get $x^2 - 2xy + y^2 \\ge 0,$ so\n\\[k^2 - 2k \\ge 0.\\]This is satisfied by all integers except $k = 1.$\n\nBy the same token, $(x + y)^2 \\ge 0,$ or $x^2 + 2xy + y^2 \\ge 0.$  Hence,\n\\[k^2 + 2k \\ge 0.\\]This is satisfied by all integers except $k = -1.$  We have found that $k = 1$ and $k = -1$ do not work.\n\nIf $k = 0,$ then $(x,y) = (0,0)$ is a solution.\n\nNow, assume $k \\ge 2.$  The point $(\\sqrt{k},\\sqrt{k})$ lies on the hyperbola $xy = k,$ and its distance from the origin is\n\\[\\sqrt{k + k} = \\sqrt{2k} \\le \\sqrt{k \\cdot k} = k.\\]Since there are points arbitrary far from the origin on the hyperbola $xy = k,$ there must be a point on the hyperbola whose distance from the origin is exactly $k,$ which means it lies on the circle $x^2 + y^2 = k^2.$\n\nFor $k \\le -2,$ the graph of $xy = k$ is the graph of $xy = -k$ rotated $90^\\circ$ about the origin, so the case where $k \\ge 2$ applies, i.e. the hyperbola $xy = k$ and circle $x^2 + y^2 = k^2$ intersect.\n\nHence, the there are $\\boxed{2}$ integer values of $k$ for which the graphs do not intersect, namely 1 and $-1.$",
+    "is_solved": false,
+    "model_solution": "Step 1:  We are given two equations: $x^2+y^2=k^2$ and $xy=k$.\nStep 2:  The first equation represents a circle centered at the origin with radius $k$, while the second equation represents a hyperbola.\nStep 3:  Our goal is to find the number of integer values of $k$ for which the graphs of these two equations do not intersect.\nStep 4:  To solve this, we can start by manipulating the equations to simplify them and make it easier to determine their intersection points.\nStep 5:  By solving the second equation for $y$, we can express $y$ in terms of $x$ and $k$ as $y = \\frac{k}{x}$.\nStep 6:  Substituting this expression for $y$ into the first equation, we get the equation $x^2 + \\frac{k^2}{x^2} = k^2$.\nStep 7:  Further simplifying, we get the equation $x^4 - k^2 x^2 + k^4 = 0$.\nStep 8:  We can treat this equation as a quadratic equation\nStep 9:  Let $u = x^2$, so the equation becomes $u^2 - k^2 u + k^4 = 0$.\nStep 10:  We can use the quadratic formula to solve for $u$, which gives us $u = \\frac{k^2 \\pm \\sqrt{k^4 - 4k^4}}{2} = \\frac{k^2 \\pm \\sqrt{-3k^4}}{2}.$\nStep 11:  Since we cannot have the square root of a negative number, the equation $u^2 - k^2 u + k^4 = 0$ has no real solutions for $u$, and therefore $x^2$ has no real solutions.\nFor $k\\neq 0$, we can divide by $k^4$ to get $\\left(\\frac{x}{k}\\right)^4 - \\frac{x^2}{k^2} + 1 = 0.$ Let $t = \\frac{x}{k}$, so we get $t^4 - \\frac{t^2}{k^2} + 1 = 0$.\nStep 12:\n$t^4 - \\frac{t^2}{k^2} + 1 = 0 \\implies k^4 t^4 - t^2 + k^2 = 0$\n$t^4 - \\frac{t^2}{k^2} + 1 = 0 \\implies k^4 t^4 - t^2 + k^2 = 0 \\implies t^2(k^4 t^2 -1) = -k^2$\nStep 13: $t^2(k^4 t^2 -1) = -k^2 \\implies t^2 = \\frac{k^2}{k^4 t^2 - 1} \\implies (k^4 t^4 - 1)t^2 = k^2 \\implies k^4 t^6 - t^2 - k^2 = 0$\n$t^4 - \\frac{t^2}{k^2} + 1 = 0 \\implies t^2(k^4 t^2 -1) = -k^2 \\implies (k^4 t^4 - 1)t^2 = k^2 \\implies k^4 t^6 - t^2 - k^2 = 0$\nStep 14: $k^4 t^6 - t^2 - k^2 = 0 \\implies k^4 t^6 - k^2 = t^2 \\implies (k^2 t^3 - 1)(k^2 t^3 + 1) = 0 \\implies k^2 t^3 - 1 = 0 \\text{ or } k^2 t^3 + 1 = 0$",
+    "steps": [
+        "Step 1:  We are given two equations: $x^2+y^2=k^2$ and $xy=k$.\nStep 2:  The first equation represents a circle centered at the origin with radius $k$, while the second equation represents a hyperbola.\nStep 3:  Our goal is to find the number of integer values of $k$ for which the graphs of these two equations do not intersect.\nStep 4:  To solve this, we can start by manipulating the equations to simplify them and make it easier to determine their intersection points.\nStep 5:  By solving the second equation for $y$, we can express $y$ in terms of $x$ and $k$ as $y = \\frac{k}{x}$.\nStep 6:  Substituting this expression for $y$ into the first equation, we get the equation $x^2 + \\frac{k^2}{x^2} = k^2$.\nStep 7:  Further simplifying, we get the equation $x^4 - k^2 x^2 + k^4 = 0$.\nStep 8:  We can treat this equation as a quadratic equation",
+        "Step 9:  Let $u = x^2$, so the equation becomes $u^2 - k^2 u + k^4 = 0$.",
+        "Step 10:  We can use the quadratic formula to solve for $u$, which gives us $u = \\frac{k^2 \\pm \\sqrt{k^4 - 4k^4}}{2} = \\frac{k^2 \\pm \\sqrt{-3k^4}}{2}.$",
+        "Step 11:  Since we cannot have the square root of a negative number, the equation $u^2 - k^2 u + k^4 = 0$ has no real solutions for $u$, and therefore $x^2$ has no real solutions.",
+        "For $k\\neq 0$, we can divide by $k^4$ to get $\\left(\\frac{x}{k}\\right)^4 - \\frac{x^2}{k^2} + 1 = 0.$ Let $t = \\frac{x}{k}$, so we get $t^4 - \\frac{t^2}{k^2} + 1 = 0$.",
+        "Step 12:\n$t^4 - \\frac{t^2}{k^2} + 1 = 0 \\implies k^4 t^4 - t^2 + k^2 = 0$",
+        "$t^4 - \\frac{t^2}{k^2} + 1 = 0 \\implies k^4 t^4 - t^2 + k^2 = 0 \\implies t^2(k^4 t^2 -1) = -k^2$",
+        "Step 13: $t^2(k^4 t^2 -1) = -k^2 \\implies t^2 = \\frac{k^2}{k^4 t^2 - 1} \\implies (k^4 t^4 - 1)t^2 = k^2 \\implies k^4 t^6 - t^2 - k^2 = 0$",
+        "$t^4 - \\frac{t^2}{k^2} + 1 = 0 \\implies t^2(k^4 t^2 -1) = -k^2 \\implies (k^4 t^4 - 1)t^2 = k^2 \\implies k^4 t^6 - t^2 - k^2 = 0$",
+        "Step 14: $k^4 t^6 - t^2 - k^2 = 0 \\implies k^4 t^6 - k^2 = t^2 \\implies (k^2 t^3 - 1)(k^2 t^3 + 1) = 0 \\implies k^2 t^3 - 1 = 0 \\text{ or } k^2 t^3 + 1 = 0$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We are given two equations: $x^2+y^2=k^2$ and $xy=k$.\nStep 2:  The first equation represents a circle centered at the origin with radius $k$, while the second equation represents a hyperbola.\nStep 3:  Our goal is to find the number of integer values of $k$ for which the graphs of these two equations do not intersect.\nStep 4:  To solve this, we can start by manipulating the equations to simplify them and make it easier to determine their intersection points.\nStep 5:  By solving the second equation for $y$, we can express $y$ in terms of $x$ and $k$ as $y = \\frac{k}{x}$.\nStep 6:  Substituting this expression for $y$ into the first equation, we get the equation $x^2 + \\frac{k^2}{x^2} = k^2$.\nStep 7:  Further simplifying, we get the equation $x^4 - k^2 x^2 + k^4 = 0$.\nStep 8:  We can treat this equation as a quadratic equation",
+            1
+        ],
+        [
+            "Step 9:  Let $u = x^2$, so the equation becomes $u^2 - k^2 u + k^4 = 0$.",
+            1
+        ],
+        [
+            "Step 10:  We can use the quadratic formula to solve for $u$, which gives us $u = \\frac{k^2 \\pm \\sqrt{k^4 - 4k^4}}{2} = \\frac{k^2 \\pm \\sqrt{-3k^4}}{2}.$",
+            1
+        ],
+        [
+            "Step 11:  Since we cannot have the square root of a negative number, the equation $u^2 - k^2 u + k^4 = 0$ has no real solutions for $u$, and therefore $x^2$ has no real solutions.",
+            1
+        ],
+        [
+            "For $k\\neq 0$, we can divide by $k^4$ to get $\\left(\\frac{x}{k}\\right)^4 - \\frac{x^2}{k^2} + 1 = 0.$ Let $t = \\frac{x}{k}$, so we get $t^4 - \\frac{t^2}{k^2} + 1 = 0$.",
+            1
+        ],
+        [
+            "Step 12:\n$t^4 - \\frac{t^2}{k^2} + 1 = 0 \\implies k^4 t^4 - t^2 + k^2 = 0$",
+            1
+        ],
+        [
+            "$t^4 - \\frac{t^2}{k^2} + 1 = 0 \\implies k^4 t^4 - t^2 + k^2 = 0 \\implies t^2(k^4 t^2 -1) = -k^2$",
+            1
+        ],
+        [
+            "Step 13: $t^2(k^4 t^2 -1) = -k^2 \\implies t^2 = \\frac{k^2}{k^4 t^2 - 1} \\implies (k^4 t^4 - 1)t^2 = k^2 \\implies k^4 t^6 - t^2 - k^2 = 0$",
+            1
+        ],
+        [
+            "$t^4 - \\frac{t^2}{k^2} + 1 = 0 \\implies t^2(k^4 t^2 -1) = -k^2 \\implies (k^4 t^4 - 1)t^2 = k^2 \\implies k^4 t^6 - t^2 - k^2 = 0$",
+            1
+        ],
+        [
+            "Step 14: $k^4 t^6 - t^2 - k^2 = 0 \\implies k^4 t^6 - k^2 = t^2 \\implies (k^2 t^3 - 1)(k^2 t^3 + 1) = 0 \\implies k^2 t^3 - 1 = 0 \\text{ or } k^2 t^3 + 1 = 0$",
+            1
+        ]
+    ],
+    "time": 136.4688684940338,
+    "total_tokens": 12468,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

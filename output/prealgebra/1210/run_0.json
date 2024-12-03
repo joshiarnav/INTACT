@@ -1,0 +1,26 @@
+{
+    "problem": "$AB = 20$ cm, $m \\angle A = 30^\\circ$, and $m \\angle C = 45^\\circ$. Express the number of centimeters in the length of $\\overline{BC}$ in simplest radical form. [asy]\nimport olympiad; size(200); import geometry; import graph; defaultpen(linewidth(0.8));\npair A = origin, B = (10*sqrt(3),10), C = (10*sqrt(3) + 10,0);\ndraw(Label(\"$20$\",align=NW),A--B); draw(B--C); draw(A--C);\nlabel(\"$A$\",A,W); label(\"$B$\",B,N); label(\"$C$\",C,E);\n[/asy]",
+    "level": "Level 5",
+    "type": "Prealgebra",
+    "solution": "Drawing altitude $\\overline{BD}$ splits $\\triangle ABC$ into 30-60-90 triangle $ABD$ and 45-45-90 triangle $BCD$:\n\n[asy]\nimport olympiad; size(200); import geometry; import graph; defaultpen(linewidth(0.8));\npair A = origin, B = (10*sqrt(3),10), C = (10*sqrt(3) + 10,0);\ndraw(Label(\"$20$\",align=NW),A--B); draw(B--C); draw(A--C);\nlabel(\"$A$\",A,W); label(\"$B$\",B,N); label(\"$C$\",C,E);\npair D = (10*sqrt(3),0);\nlabel(\"$D$\",D,S);\ndraw(B--D);\ndraw(rightanglemark(B,D,A,40));\n[/asy]\n\nFrom 30-60-90 triangle $ABD$, we have $BD = AB/2 = 10$.  From 45-45-90 triangle $BCD$, we have $BC = BD\\sqrt{2} = \\boxed{10\\sqrt{2}}$.",
+    "is_solved": false,
+    "model_solution": "Step 1: Draw the altitude from $C$ to $\\overline{AB}$ and label its point of intersection with $\\overline{AB}$ as $D$.\nStep 2: Since $m \\angle A = 30^\\circ$, we know that $m \\angle BAD = 30^\\circ$, so $\\triangle ABD$ is a $30^\\circ$-$60^\\circ$-$90^\\circ$ triangle and we can use properties of these triangles to find the length of $\\overline{BD}$.",
+    "steps": [
+        "Step 1: Draw the altitude from $C$ to $\\overline{AB}$ and label its point of intersection with $\\overline{AB}$ as $D$.",
+        "Step 2: Since $m \\angle A = 30^\\circ$, we know that $m \\angle BAD = 30^\\circ$, so $\\triangle ABD$ is a $30^\\circ$-$60^\\circ$-$90^\\circ$ triangle and we can use properties of these triangles to find the length of $\\overline{BD}$."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Draw the altitude from $C$ to $\\overline{AB}$ and label its point of intersection with $\\overline{AB}$ as $D$.",
+            1
+        ],
+        [
+            "Step 2: Since $m \\angle A = 30^\\circ$, we know that $m \\angle BAD = 30^\\circ$, so $\\triangle ABD$ is a $30^\\circ$-$60^\\circ$-$90^\\circ$ triangle and we can use properties of these triangles to find the length of $\\overline{BD}$.",
+            1
+        ]
+    ],
+    "time": 26.77097511291504,
+    "total_tokens": 1161,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

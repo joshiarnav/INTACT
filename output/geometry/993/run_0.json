@@ -1,0 +1,51 @@
+{
+    "problem": "In triangle $ABC$, $\\angle ABC = 90^\\circ$, and point $D$ lies on segment $\\overline{BC}$ such that $\\overline{AD}$ is an angle bisector.  If $AB = 12$ and $BD = 4$, then find $AC$.",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "By the angle bisector theorem, $AC/CD = AB/BD = 12/4 = 3$.  Let $AC = 3x$ and $CD = x$.\n\n[asy]\nunitsize(0.3 cm);\n\npair A, B, C, D;\n\nA = (0,12);\nB = (0,0);\nC = (9,0);\nD = (4,0);\n\ndraw(A--B--C--cycle);\ndraw(A--D);\n\nlabel(\"$A$\", A, NW);\nlabel(\"$B$\", B, SW);\nlabel(\"$C$\", C, SE);\nlabel(\"$D$\", D, S);\nlabel(\"$4$\", (B + D)/2, S);\nlabel(\"$12$\", (A + B)/2, W);\nlabel(\"$x$\", (C + D)/2, S);\nlabel(\"$3x$\", (A + C)/2, NE);\n[/asy]\n\nThen by Pythagoras, $(x + 4)^2 + 12^2 = (3x)^2$.  This simplifies to $8x^2 - 8x - 160 = 0$, which factors as $8(x - 5)(x + 4) = 0$, so $x = 5$.  Therefore, $AC = 3x = \\boxed{15}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: The Angle Bisector Theorem states that in a triangle, an angle bisector divides the opposite side into two segments that are proportional to the other two sides.\nStep 2: According to the Angle Bisector Theorem, $\\frac{BD}{DC} = \\frac{AB}{AC}$, so $\\frac{4}{DC} = \\frac{12}{AC}$.\nStep 3: Cross-multiplying yields $4 AC = 12 DC$.\nStep 4: Dividing both sides of the equation by 4 gives $AC = \\frac{12 DC}{4}$, so $AC = 3 DC$.\nStep 5: $AB^2 + BD^2 = AD^2$ by the Pythagorean Theorem, so $12^2 + 4^2 = AD^2$, which gives $AD = 12.5$.\n$AC = 3 DC$ implies $AC^2 = 9 DC^2$.\n$AD^2 = AB^2 + BD^2$ and $AD^2 = AC^2 + CD^2$, so $12.5^2 = (12^2 + 4^2) = (AC^2 + DC^2)$.\nSince $AC^2 = 9 DC^2$, we can write $(9 + 1) DC^2 = 12.5^2$, so $10 DC^2 = 156.25$.\nDividing both sides by 10, we get $DC^2 = 15.625$.\nTaking the square root of both sides, we obtain $DC = 3.95$.\nNow, we can find $AC$ by substituting $DC$ into the equation $AC = 3 DC$, giving $AC = 3 (3.95)$.\n$AC\n$AC = 3 (3.95)$\n$AC = 3 (3.95)$",
+    "steps": [
+        "Step 1: The Angle Bisector Theorem states that in a triangle, an angle bisector divides the opposite side into two segments that are proportional to the other two sides.",
+        "Step 2: According to the Angle Bisector Theorem, $\\frac{BD}{DC} = \\frac{AB}{AC}$, so $\\frac{4}{DC} = \\frac{12}{AC}$.",
+        "Step 3: Cross-multiplying yields $4 AC = 12 DC$.",
+        "Step 4: Dividing both sides of the equation by 4 gives $AC = \\frac{12 DC}{4}$, so $AC = 3 DC$.",
+        "Step 5: $AB^2 + BD^2 = AD^2$ by the Pythagorean Theorem, so $12^2 + 4^2 = AD^2$, which gives $AD = 12.5$.\n$AC = 3 DC$ implies $AC^2 = 9 DC^2$.\n$AD^2 = AB^2 + BD^2$ and $AD^2 = AC^2 + CD^2$, so $12.5^2 = (12^2 + 4^2) = (AC^2 + DC^2)$.\nSince $AC^2 = 9 DC^2$, we can write $(9 + 1) DC^2 = 12.5^2$, so $10 DC^2 = 156.25$.\nDividing both sides by 10, we get $DC^2 = 15.625$.\nTaking the square root of both sides, we obtain $DC = 3.95$.\nNow, we can find $AC$ by substituting $DC$ into the equation $AC = 3 DC$, giving $AC = 3 (3.95)$.\n$AC",
+        "$AC = 3 (3.95)$",
+        "$AC = 3 (3.95)$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: The Angle Bisector Theorem states that in a triangle, an angle bisector divides the opposite side into two segments that are proportional to the other two sides.",
+            1
+        ],
+        [
+            "Step 2: According to the Angle Bisector Theorem, $\\frac{BD}{DC} = \\frac{AB}{AC}$, so $\\frac{4}{DC} = \\frac{12}{AC}$.",
+            1
+        ],
+        [
+            "Step 3: Cross-multiplying yields $4 AC = 12 DC$.",
+            1
+        ],
+        [
+            "Step 4: Dividing both sides of the equation by 4 gives $AC = \\frac{12 DC}{4}$, so $AC = 3 DC$.",
+            1
+        ],
+        [
+            "Step 5: $AB^2 + BD^2 = AD^2$ by the Pythagorean Theorem, so $12^2 + 4^2 = AD^2$, which gives $AD = 12.5$.\n$AC = 3 DC$ implies $AC^2 = 9 DC^2$.\n$AD^2 = AB^2 + BD^2$ and $AD^2 = AC^2 + CD^2$, so $12.5^2 = (12^2 + 4^2) = (AC^2 + DC^2)$.\nSince $AC^2 = 9 DC^2$, we can write $(9 + 1) DC^2 = 12.5^2$, so $10 DC^2 = 156.25$.\nDividing both sides by 10, we get $DC^2 = 15.625$.\nTaking the square root of both sides, we obtain $DC = 3.95$.\nNow, we can find $AC$ by substituting $DC$ into the equation $AC = 3 DC$, giving $AC = 3 (3.95)$.\n$AC",
+            1
+        ],
+        [
+            "$AC = 3 (3.95)$",
+            1
+        ],
+        [
+            "$AC = 3 (3.95)$",
+            1
+        ]
+    ],
+    "time": 95.54943060874939,
+    "total_tokens": 4866,
+    "final_answer_tokens": 529,
+    "model": "meta-llama/Llama-Vision-Free"
+}

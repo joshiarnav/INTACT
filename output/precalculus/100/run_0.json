@@ -1,0 +1,26 @@
+{
+    "problem": "A line has slope $\\frac{2}{5}.$  Which of the following vectors are possible direction vectors for the line?\n\n[asy]\nusepackage(\"amsmath\");\n\nunitsize(1 cm);\n\npair x = (3,0), y = (0,2);\n\nlabel(\"(A) $\\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}$\", y);\nlabel(\"(B) $\\begin{pmatrix} 5 \\\\ 2 \\end{pmatrix}$\", x + y);\nlabel(\"(C) $\\begin{pmatrix} 0 \\\\ 0 \\end{pmatrix}$\", 2*x + y);\nlabel(\"(D) $\\begin{pmatrix} -2 \\\\ -5 \\end{pmatrix}$\", 3*x + y);\nlabel(\"(E) $\\begin{pmatrix} -5 \\\\ -2 \\end{pmatrix}$\", (0,0));\nlabel(\"(F) $\\begin{pmatrix} 2/5 \\\\ 1 \\end{pmatrix}$\", x);\nlabel(\"(G) $\\begin{pmatrix} 40 \\\\ 16 \\end{pmatrix}$\", 2*x);\nlabel(\"(H) $\\begin{pmatrix} 4 \\\\ 10 \\end{pmatrix}$\", 3*x);\n[/asy]\n\nEnter the letters of the correct options, separated by commas.",
+    "level": "Level 2",
+    "type": "Precalculus",
+    "solution": "Since the slope of the line is $\\frac{2}{5},$ the line rises 2 units vertically for every 5 horizontal units.  Thus, a possible direction vector is $\\begin{pmatrix} 5 \\\\ 2 \\end{pmatrix}.$\n\n[asy]\nunitsize(1 cm);\n\npair A, B, C;\n\nA = (0,0);\nB = (5,0);\nC = (5,2);\n\ndraw(A--B--C);\ndraw(A--C,red,Arrow(6));\n\nlabel(\"$5$\", (A + B)/2, S);\nlabel(\"$2$\", (B + C)/2, E);\n[/asy]\n\nThis means any nonzero scalar multiple of $\\begin{pmatrix} 5 \\\\ 2 \\end{pmatrix}$ is a possible direction vector.  The possible options are then $\\boxed{\\text{B, E, G}}.$",
+    "is_solved": false,
+    "model_solution": "Step 1: The slope of the line is given as $\\frac{2}{5}.$ A vector $\\vec{v} = \\begin{pmatrix} a \\\\ b \\end{pmatrix}$ is a direction vector for the line if the slope of the line determined by the vector is $\\frac{2}{5}.$ This means that the slope of the line determined by $\\vec{v}$ is $\\frac{b}{a}.$ Therefore, the possible direction vectors are those for which $\\frac{b}{a} = \\frac{2}{5}.$\nStep 2: We can solve the equation $\\frac{b}{a} = \\frac{2}{5}$ for $b$ to obtain $b = \\frac{2}{5}a.$",
+    "steps": [
+        "Step 1: The slope of the line is given as $\\frac{2}{5}.$ A vector $\\vec{v} = \\begin{pmatrix} a \\\\ b \\end{pmatrix}$ is a direction vector for the line if the slope of the line determined by the vector is $\\frac{2}{5}.$ This means that the slope of the line determined by $\\vec{v}$ is $\\frac{b}{a}.$ Therefore, the possible direction vectors are those for which $\\frac{b}{a} = \\frac{2}{5}.$",
+        "Step 2: We can solve the equation $\\frac{b}{a} = \\frac{2}{5}$ for $b$ to obtain $b = \\frac{2}{5}a.$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: The slope of the line is given as $\\frac{2}{5}.$ A vector $\\vec{v} = \\begin{pmatrix} a \\\\ b \\end{pmatrix}$ is a direction vector for the line if the slope of the line determined by the vector is $\\frac{2}{5}.$ This means that the slope of the line determined by $\\vec{v}$ is $\\frac{b}{a}.$ Therefore, the possible direction vectors are those for which $\\frac{b}{a} = \\frac{2}{5}.$",
+            1
+        ],
+        [
+            "Step 2: We can solve the equation $\\frac{b}{a} = \\frac{2}{5}$ for $b$ to obtain $b = \\frac{2}{5}a.$",
+            1
+        ]
+    ],
+    "time": 26.769943237304688,
+    "total_tokens": 1936,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

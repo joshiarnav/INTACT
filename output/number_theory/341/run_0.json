@@ -1,0 +1,31 @@
+{
+    "problem": "What is the sum of the final three digits of the integer representation of $5^{100}$?",
+    "level": "Level 4",
+    "type": "Number Theory",
+    "solution": "Let's find the cycle of the final three digits of $5^n$, starting with $n=3$ : $125, 625, 125, 625,\\ldots$ . The cycle of the final three digits of $5^{n}$ is 2 numbers long: 125, 625. Thus, to find the final three digits of $5^n$ for any positive $n\\ge3$, we must find the remainder, $R$, when $n$ is divided by 2 ($R=1$ corresponds to 125, and $R=0$ corresponds to 625). Since $100\\div2=50$ without remainder, the final three digits of $5^{100}$ are 625. Their sum is $6+2+5=\\boxed{13}$.",
+    "is_solved": false,
+    "model_solution": "Step 1:  To find the sum of the final three digits of the integer representation of $5^{100}$, we can start by expressing $5^{100}$ as $(25)^{50}$, which allows us to apply the binomial theorem.\n$(25)^{50} = \\left(100 + 25\\right)^{50}$\nStep 2:  $\\binom{50}{1} \\cdot 100 \\cdot 25^{49} + \\binom{50}{2} \\cdot 100^2 \\cdot 25^{48} + \\dots + \\binom{50}{50} \\cdot 100^{50}$\nStep 2:  Notice that all terms after the first term are divisible by 1000, so we can focus on finding the remainder when the first term is divided by 1000.\n$\\binom{50}{1} \\cdot 100 \\cdot 25^{49} \\pmod{1000}$",
+    "steps": [
+        "Step 1:  To find the sum of the final three digits of the integer representation of $5^{100}$, we can start by expressing $5^{100}$ as $(25)^{50}$, which allows us to apply the binomial theorem.\n$(25)^{50} = \\left(100 + 25\\right)^{50}$",
+        "Step 2:  $\\binom{50}{1} \\cdot 100 \\cdot 25^{49} + \\binom{50}{2} \\cdot 100^2 \\cdot 25^{48} + \\dots + \\binom{50}{50} \\cdot 100^{50}$",
+        "Step 2:  Notice that all terms after the first term are divisible by 1000, so we can focus on finding the remainder when the first term is divided by 1000.\n$\\binom{50}{1} \\cdot 100 \\cdot 25^{49} \\pmod{1000}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  To find the sum of the final three digits of the integer representation of $5^{100}$, we can start by expressing $5^{100}$ as $(25)^{50}$, which allows us to apply the binomial theorem.\n$(25)^{50} = \\left(100 + 25\\right)^{50}$",
+            1
+        ],
+        [
+            "Step 2:  $\\binom{50}{1} \\cdot 100 \\cdot 25^{49} + \\binom{50}{2} \\cdot 100^2 \\cdot 25^{48} + \\dots + \\binom{50}{50} \\cdot 100^{50}$",
+            1
+        ],
+        [
+            "Step 2:  Notice that all terms after the first term are divisible by 1000, so we can focus on finding the remainder when the first term is divided by 1000.\n$\\binom{50}{1} \\cdot 100 \\cdot 25^{49} \\pmod{1000}$",
+            1
+        ]
+    ],
+    "time": 42.79889369010925,
+    "total_tokens": 1329,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

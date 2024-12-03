@@ -1,0 +1,26 @@
+{
+    "problem": "Let $ABC$ be a triangle with $\\angle A = 45^\\circ$. Let $P$ be a point on side $\\overline{BC}$ with $PB = 3$ and $PC = 5$. Let $O$ be the circumcenter of triangle $ABC$. Determine the length $OP$.",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "Using the extended Sine law, we find the circumradius of $ABC$ to be $R = \\frac{BC}{2\\sin A} = 4\\sqrt 2$.\n\n[asy]\nunitsize(0.8 cm);\n\npair A, B, C, O, P;\n\nA = (0,0);\nB = (2,2);\nC = (5,0);\nP = interp(B,C,3/8);\nO = circumcenter(A,B,C);\n\ndraw(A--B--C--cycle);\ndraw(circumcircle(A,B,C));\ndraw(O--P);\n\nlabel(\"$A$\", A, W);\nlabel(\"$B$\", B, N);\nlabel(\"$C$\", C, E);\ndot(\"$O$\", O, S);\ndot(\"$P$\", P, NE);\n[/asy]\n\nBy considering the power of point $P$, we find that $R^2 - OP^2 = PB \\cdot PC = 15$. So $OP = \\sqrt{R^2 - 15} = \\sqrt{ 16 \\cdot 2 - 15} = \\boxed{\\sqrt{17}}$.",
+    "is_solved": false,
+    "model_solution": "Step 1: Let $M$ be the midpoint of $\\overline{BC}$, the centroid of triangle $ABC$.\nThe point $M$ is the midpoint of $\\overline{BC}$.\nStep 2:\nSince $M$ is the midpoint of $\\overline{BC}$, we have that $\\overline{BM}=\\overline{MC}=4$.\nThe point $M$ is the centroid of triangle $ABC$.",
+    "steps": [
+        "Step 1: Let $M$ be the midpoint of $\\overline{BC}$, the centroid of triangle $ABC$.\nThe point $M$ is the midpoint of $\\overline{BC}$.",
+        "Step 2:\nSince $M$ is the midpoint of $\\overline{BC}$, we have that $\\overline{BM}=\\overline{MC}=4$.\nThe point $M$ is the centroid of triangle $ABC$."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Let $M$ be the midpoint of $\\overline{BC}$, the centroid of triangle $ABC$.\nThe point $M$ is the midpoint of $\\overline{BC}$.",
+            1
+        ],
+        [
+            "Step 2:\nSince $M$ is the midpoint of $\\overline{BC}$, we have that $\\overline{BM}=\\overline{MC}=4$.\nThe point $M$ is the centroid of triangle $ABC$.",
+            1
+        ]
+    ],
+    "time": 28.378869771957397,
+    "total_tokens": 780,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

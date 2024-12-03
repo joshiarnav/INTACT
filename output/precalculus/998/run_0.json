@@ -1,0 +1,66 @@
+{
+    "problem": "Find the smallest positive integer solution to $\\tan{19x^{\\circ}}=\\dfrac{\\cos{96^{\\circ}}+\\sin{96^{\\circ}}}{\\cos{96^{\\circ}}-\\sin{96^{\\circ}}}$.",
+    "level": "Level 5",
+    "type": "Precalculus",
+    "solution": "By the tangent addition formula,\n\\begin{align*}\n\\frac{\\cos 96^\\circ + \\sin 96^\\circ}{\\cos 96^\\circ - \\sin 96^\\circ} &= \\frac{1 + \\tan 96^\\circ}{1 - \\tan 96^\\circ} \\\\\n&= \\frac{\\tan 45^\\circ + \\tan 96^\\circ}{1 - \\tan 45^\\circ \\tan 96^\\circ} \\\\\n&= \\tan (45^\\circ + 96^\\circ) \\\\\n&= \\tan 141^\\circ.\n\\end{align*}Thus, we seek the smallest positive integer solution to\n\\[\\tan 19x^\\circ = \\tan 141^\\circ.\\]This means $19x - 141 = 180n$ for some integer $n,$ or $19x - 180n = 141.$  We can use the Extended Euclidean Algorithm to find the smallest positive integer solution.\n\nRunning the Euclidean Algorithm on 180 and 19, we get\n\\begin{align*}\n180 &= 9 \\cdot 19 + 9, \\\\\n19 &= 2 \\cdot 9 + 1, \\\\\n9 &= 9 \\cdot 1.\n\\end{align*}Then\n\\begin{align*}\n1 &= 19 - 2 \\cdot 9 \\\\\n&= 19 - 2 \\cdot (180 - 9 \\cdot 19) \\\\\n&= 19 \\cdot 19 - 2 \\cdot 180.\n\\end{align*}Multiplying both sides by 141, we get\n\\[2679 \\cdot 19 - 282 \\cdot 180 = 141.\\]Note that if $(x,n)$ is a solution to $19x - 180n = 141,$ then so is $(x - 180,n + 19).$  Thus, we reduce 2679 modulo 180, to get $x = \\boxed{159}.$\n\nAlternatively, we want to solve\n\\[19x \\equiv 141 \\pmod{180}.\\]Multiplying both sides by 19, we get\n\\[361x \\equiv 2679 \\pmod{180},\\]which reduces to $x \\equiv \\boxed{159} \\pmod{180}.$",
+    "is_solved": false,
+    "model_solution": "Step 1: Simplify the given equation by using the identity $\\tan (\\frac{\\pi}{4} + \\theta) = \\frac{1 + \\tan \\theta}{1 - \\tan \\theta}$ to rewrite the equation $\\tan{19x^{\\circ}}=\\dfrac{\\cos{96^{\\circ}}+\\sin{96^{\\circ}}}{\\cos{96^{\\circ}}-\\sin{96^{\\circ}}}$.\nStep 2: $\\tan{19x^{\\circ}} = \\tan (45^{\\circ} - 96^{\\circ}) = \\tan (-51^{\\circ})$\nStep 3:  $\\tan{19x^{\\circ}} = - \\tan{51^{\\circ}}$\nStep 4: $\\tan{19x^{\\circ}}= - \\tan{51^{\\circ}} \\implies 19x^{\\circ}=180^{\\circ}n - 51^{\\circ}$\nStep 5: $19x^{\\circ}=180^{\\circ}n - 51^{\\circ} \\implies x^{\\circ} = 180^{\\circ}n/19 - 51^{\\circ}/19 \\implies x^{\\circ} = 9.4737\\ldots^{\\circ}$\nStep 6: Since $x$ must be a positive integer, we need to find the smallest integer $n$ such that $180^{\\circ}n/19 - 51^{\\circ}/19$ is a positive integer.\nStep 7: Find the smallest integer n such that 180^{\\circ}n/19 - 51^{\\circ}/19 is a positive integer, we can rewrite the equation as $180n/19 - 51/19 = (180n - 51)/19$. Since the fraction must be a positive integer, the numerator must be a positive multiple of 19.\nStep 8: \n$180n - 51 = 19k$\nwhere $k$ is an integer.\nStep 9:\n$180n - 51 = 19k \\implies 180n = 19k+51 \\implies 180n \\equiv 51 \\pmod{19}$\nStep 10:\n$180n \\equiv 51 \\pmod{19} \\implies 0 \\equiv 51 \\pmod{19}$",
+    "steps": [
+        "Step 1: Simplify the given equation by using the identity $\\tan (\\frac{\\pi}{4} + \\theta) = \\frac{1 + \\tan \\theta}{1 - \\tan \\theta}$ to rewrite the equation $\\tan{19x^{\\circ}}=\\dfrac{\\cos{96^{\\circ}}+\\sin{96^{\\circ}}}{\\cos{96^{\\circ}}-\\sin{96^{\\circ}}}$.",
+        "Step 2: $\\tan{19x^{\\circ}} = \\tan (45^{\\circ} - 96^{\\circ}) = \\tan (-51^{\\circ})$",
+        "Step 3:  $\\tan{19x^{\\circ}} = - \\tan{51^{\\circ}}$",
+        "Step 4: $\\tan{19x^{\\circ}}= - \\tan{51^{\\circ}} \\implies 19x^{\\circ}=180^{\\circ}n - 51^{\\circ}$",
+        "Step 5: $19x^{\\circ}=180^{\\circ}n - 51^{\\circ} \\implies x^{\\circ} = 180^{\\circ}n/19 - 51^{\\circ}/19 \\implies x^{\\circ} = 9.4737\\ldots^{\\circ}$",
+        "Step 6: Since $x$ must be a positive integer, we need to find the smallest integer $n$ such that $180^{\\circ}n/19 - 51^{\\circ}/19$ is a positive integer.",
+        "Step 7: Find the smallest integer n such that 180^{\\circ}n/19 - 51^{\\circ}/19 is a positive integer, we can rewrite the equation as $180n/19 - 51/19 = (180n - 51)/19$. Since the fraction must be a positive integer, the numerator must be a positive multiple of 19.",
+        "Step 8: \n$180n - 51 = 19k$\nwhere $k$ is an integer.",
+        "Step 9:\n$180n - 51 = 19k \\implies 180n = 19k+51 \\implies 180n \\equiv 51 \\pmod{19}$",
+        "Step 10:\n$180n \\equiv 51 \\pmod{19} \\implies 0 \\equiv 51 \\pmod{19}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Simplify the given equation by using the identity $\\tan (\\frac{\\pi}{4} + \\theta) = \\frac{1 + \\tan \\theta}{1 - \\tan \\theta}$ to rewrite the equation $\\tan{19x^{\\circ}}=\\dfrac{\\cos{96^{\\circ}}+\\sin{96^{\\circ}}}{\\cos{96^{\\circ}}-\\sin{96^{\\circ}}}$.",
+            1
+        ],
+        [
+            "Step 2: $\\tan{19x^{\\circ}} = \\tan (45^{\\circ} - 96^{\\circ}) = \\tan (-51^{\\circ})$",
+            1
+        ],
+        [
+            "Step 3:  $\\tan{19x^{\\circ}} = - \\tan{51^{\\circ}}$",
+            1
+        ],
+        [
+            "Step 4: $\\tan{19x^{\\circ}}= - \\tan{51^{\\circ}} \\implies 19x^{\\circ}=180^{\\circ}n - 51^{\\circ}$",
+            1
+        ],
+        [
+            "Step 5: $19x^{\\circ}=180^{\\circ}n - 51^{\\circ} \\implies x^{\\circ} = 180^{\\circ}n/19 - 51^{\\circ}/19 \\implies x^{\\circ} = 9.4737\\ldots^{\\circ}$",
+            1
+        ],
+        [
+            "Step 6: Since $x$ must be a positive integer, we need to find the smallest integer $n$ such that $180^{\\circ}n/19 - 51^{\\circ}/19$ is a positive integer.",
+            1
+        ],
+        [
+            "Step 7: Find the smallest integer n such that 180^{\\circ}n/19 - 51^{\\circ}/19 is a positive integer, we can rewrite the equation as $180n/19 - 51/19 = (180n - 51)/19$. Since the fraction must be a positive integer, the numerator must be a positive multiple of 19.",
+            1
+        ],
+        [
+            "Step 8: \n$180n - 51 = 19k$\nwhere $k$ is an integer.",
+            1
+        ],
+        [
+            "Step 9:\n$180n - 51 = 19k \\implies 180n = 19k+51 \\implies 180n \\equiv 51 \\pmod{19}$",
+            1
+        ],
+        [
+            "Step 10:\n$180n \\equiv 51 \\pmod{19} \\implies 0 \\equiv 51 \\pmod{19}$",
+            1
+        ]
+    ],
+    "time": 135.7768590450287,
+    "total_tokens": 8391,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

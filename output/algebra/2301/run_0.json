@@ -1,0 +1,46 @@
+{
+    "problem": "Given the system of equations \\begin{align*}\nxy &= 6 - 2x - 3y,\\\\\nyz &= 6 - 4y - 2z,\\\\\nxz &= 30 - 4x - 3z,\n\\end{align*}find the positive solution of $x$.",
+    "level": "Level 5",
+    "type": "Algebra",
+    "solution": "We can apply Simon's Favorite Factoring Trick to each of the equations. Indeed, re-arranging,  \\begin{align*}\nxy + 2x + 3y &= 6,\\\\\nyz + 4y + 2z &= 6 ,\\\\\nxz + 4x + 3z &= 30 ,\n\\end{align*}Adding $6$, $8$, and $12$ to both sides of each equation, respectively, yields  \\begin{align*}\nxy + 2x + 3y + 6 = (x+3)(y+2) &= 12,\\\\\nyz + 4y + 2z + 8 = (y+2)(z+4) &= 14,\\\\\nxz + 4x + 3z + 12 = (x+3)(z+4) &= 42 ,\n\\end{align*}At this point, we can substitute and solve by elimination. Even simpler, notice that if we take the product of all three equations, we obtain $$[(x+3)(y+2)(z+4)]^2 = 12 \\cdot 14 \\cdot 42 = 2^4 \\cdot 3^2 \\cdot 7^2,$$so $$(x+3)(y+2)(z+4) = \\pm 2^2 \\cdot 3 \\cdot 7.$$We can now substitute that $(y+2)(z+4) = 14$ to find that $$(x+3)(y+2)(z+4) = 14(x+3) = \\pm 2^2 \\cdot 3 \\cdot 7.$$Hence, $x+3 = \\pm 6,$ so $x$ is $3$ or $-9.$ The positive root is thus $x = \\boxed{3}$.",
+    "is_solved": true,
+    "model_solution": "## Step 1: Rearrange the first equation to isolate y\nWe rearrange the first equation as follows: xy + 2x + 3y = 6, which can be rewritten as xy + 2x + 3y + 6 = 6. We then factor the left-hand side as (x + 3)(y + 2) = 12.\n\n## Step 2: Rearrange the second equation to isolate z\nWe rearrange the second equation as follows: yz + 4y + 2z = 6, which can be rewritten as yz + 4y + 2z + 8 = 6 + 8. We then factor the left-hand side as (y + 2)(z + 4) = 14.\n\n## Step 3: Rearrange the third equation to isolate z\nWe rearrange the third equation as follows: xz + 4x + 3z = 30, which can be rewritten as xz + 4x + 3z + 12 = 30 + 12. We then factor the left-hand side as (x + 3)(z + 4) = 42.\n## Step 4: Divide the equations to eliminate variables\nDivide the equation obtained from step 3 by the equation obtained from step 2 to get (x + 3) / (y + 2) = 42 / 14 = 3, which simplifies to (x + 3) / (y + 2) = 3.\n## Step 5: Rearrange the equation from step 1 to find the relationship between x and y\nFrom step 1, we have (x + 3)(y + 2) = 12. Substitute (x + 3) / (y + 2) = 3 into this equation to get 3(y + 2) = 12, which simplifies to 3y + 6 = 12, and further simplifies to 3y = 6, and finally to y = 2.\n## Step 6: Substitute y = 2 into the equation from step 1 to find the value of x\nSubstitute y = 2 into (x + 3)(y + 2) = 12 to get (x + 3)(2 + 2) = 12, which simplifies to (x + 3)(4) = 12, and further simplifies to 4x + 12 = 12.\n## Step 7: Solve for x\n4x = 0, x = 0\n## Step 8: Solve for x\n4x = 0 is not true, so we need to go back to the equation (x + 3)(y + 2) = 12. We know (x + 3) / (y + 2) = 3, so x + 3 = 3(y + 2). Substitute y = 2 into this equation to get x + 3 = 3(2 + 2) = 3(4) = 12. Now x + 3 = 12, so x = 12 - 3 = 9.\n\nFinal Answer: The final answer is 9.",
+    "steps": [
+        "## Step 1: Rearrange the first equation to isolate y\nWe rearrange the first equation as follows: xy + 2x + 3y = 6, which can be rewritten as xy + 2x + 3y + 6 = 6. We then factor the left-hand side as (x + 3)(y + 2) = 12.\n\n## Step 2: Rearrange the second equation to isolate z\nWe rearrange the second equation as follows: yz + 4y + 2z = 6, which can be rewritten as yz + 4y + 2z + 8 = 6 + 8. We then factor the left-hand side as (y + 2)(z + 4) = 14.\n\n## Step 3: Rearrange the third equation to isolate z\nWe rearrange the third equation as follows: xz + 4x + 3z = 30, which can be rewritten as xz + 4x + 3z + 12 = 30 + 12. We then factor the left-hand side as (x + 3)(z + 4) = 42.",
+        "## Step 4: Divide the equations to eliminate variables\nDivide the equation obtained from step 3 by the equation obtained from step 2 to get (x + 3) / (y + 2) = 42 / 14 = 3, which simplifies to (x + 3) / (y + 2) = 3.",
+        "## Step 5: Rearrange the equation from step 1 to find the relationship between x and y\nFrom step 1, we have (x + 3)(y + 2) = 12. Substitute (x + 3) / (y + 2) = 3 into this equation to get 3(y + 2) = 12, which simplifies to 3y + 6 = 12, and further simplifies to 3y = 6, and finally to y = 2.",
+        "## Step 6: Substitute y = 2 into the equation from step 1 to find the value of x\nSubstitute y = 2 into (x + 3)(y + 2) = 12 to get (x + 3)(2 + 2) = 12, which simplifies to (x + 3)(4) = 12, and further simplifies to 4x + 12 = 12.",
+        "## Step 7: Solve for x\n4x = 0, x = 0",
+        "## Step 8: Solve for x\n4x = 0 is not true, so we need to go back to the equation (x + 3)(y + 2) = 12. We know (x + 3) / (y + 2) = 3, so x + 3 = 3(y + 2). Substitute y = 2 into this equation to get x + 3 = 3(2 + 2) = 3(4) = 12. Now x + 3 = 12, so x = 12 - 3 = 9.\n\nFinal Answer: The final answer is 9."
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Rearrange the first equation to isolate y\nWe rearrange the first equation as follows: xy + 2x + 3y = 6, which can be rewritten as xy + 2x + 3y + 6 = 6. We then factor the left-hand side as (x + 3)(y + 2) = 12.\n\n## Step 2: Rearrange the second equation to isolate z\nWe rearrange the second equation as follows: yz + 4y + 2z = 6, which can be rewritten as yz + 4y + 2z + 8 = 6 + 8. We then factor the left-hand side as (y + 2)(z + 4) = 14.\n\n## Step 3: Rearrange the third equation to isolate z\nWe rearrange the third equation as follows: xz + 4x + 3z = 30, which can be rewritten as xz + 4x + 3z + 12 = 30 + 12. We then factor the left-hand side as (x + 3)(z + 4) = 42.",
+            1
+        ],
+        [
+            "## Step 4: Divide the equations to eliminate variables\nDivide the equation obtained from step 3 by the equation obtained from step 2 to get (x + 3) / (y + 2) = 42 / 14 = 3, which simplifies to (x + 3) / (y + 2) = 3.",
+            1
+        ],
+        [
+            "## Step 5: Rearrange the equation from step 1 to find the relationship between x and y\nFrom step 1, we have (x + 3)(y + 2) = 12. Substitute (x + 3) / (y + 2) = 3 into this equation to get 3(y + 2) = 12, which simplifies to 3y + 6 = 12, and further simplifies to 3y = 6, and finally to y = 2.",
+            1
+        ],
+        [
+            "## Step 6: Substitute y = 2 into the equation from step 1 to find the value of x\nSubstitute y = 2 into (x + 3)(y + 2) = 12 to get (x + 3)(2 + 2) = 12, which simplifies to (x + 3)(4) = 12, and further simplifies to 4x + 12 = 12.",
+            1
+        ],
+        [
+            "## Step 7: Solve for x\n4x = 0, x = 0",
+            1
+        ],
+        [
+            "## Step 8: Solve for x\n4x = 0 is not true, so we need to go back to the equation (x + 3)(y + 2) = 12. We know (x + 3) / (y + 2) = 3, so x + 3 = 3(y + 2). Substitute y = 2 into this equation to get x + 3 = 3(2 + 2) = 3(4) = 12. Now x + 3 = 12, so x = 12 - 3 = 9.\n\nFinal Answer: The final answer is 9.",
+            1
+        ]
+    ],
+    "time": 78.64503884315491,
+    "total_tokens": 7146,
+    "final_answer_tokens": 814,
+    "model": "meta-llama/Llama-Vision-Free"
+}

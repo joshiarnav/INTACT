@@ -1,0 +1,66 @@
+{
+    "problem": "Compute $\\tan 240^\\circ$.",
+    "level": "Level 3",
+    "type": "Geometry",
+    "solution": "Let $P$ be the point on the unit circle that is $240^\\circ$ counterclockwise from $(1,0)$, and let $D$ be the foot of the altitude from $P$ to the $x$-axis, as shown below.\n\n[asy]\npair A,C,P,O,D;\ndraw((0,-1.2)--(0,1.2),p=black+1.2bp,Arrows(0.15cm));\ndraw((-1.2,0)--(1.2,0),p=black+1.2bp,Arrows(0.15cm));\nA = (1,0);\nO= (0,0);\nlabel(\"$x$\",(1.2,0),SE);\nlabel(\"$y$\",(0,1.2),NE);\n\nP = rotate(240)*A;\nD = foot(P,A,-A);\ndraw(O--P--D);\ndraw(rightanglemark(O,D,P,2));\ndraw(Circle(O,1));\nlabel(\"$O$\",O,SE);\nlabel(\"$P$\",P,SW);\n//label(\"$A$\",A,SE);\nlabel(\"$D$\",D,N);\n[/asy]\n\nTriangle $POD$ is a 30-60-90 triangle, so $DO = \\frac{1}{2}$ and $DP = \\frac{\\sqrt{3}}{2}$.  Therefore, the coordinates of $P$ are $\\left(-\\frac12,-\\frac{\\sqrt{3}}{2}\\right)$, so $\\tan 240^\\circ = \\frac{\\sin240^\\circ}{\\cos 240^\\circ} = \\frac{-\\sqrt{3}/2}{-1/2} = \\boxed{\\sqrt{3}}$.",
+    "is_solved": false,
+    "model_solution": "Step 1:  Since we're asked to compute $\\tan 240^\\circ$, we can rewrite this as $\\tan (180^\\circ+60^\\circ)$ in order to utilize trigonometric identities and properties.\nStep 2:  Using the angle addition formula, we have $\\tan (180^\\circ+60^\\circ) = \\frac{\\tan 180^\\circ + \\tan 60^\\circ}{1 - (\\tan 180^\\circ)(\\tan 60^\\circ)}$.\nStep 2:  We can simplify the expression using the fact that $\\tan 180^\\circ = 0$ and $\\tan 60^\\circ = \\sqrt{3}$ to obtain $\\frac{0 + \\sqrt{3}}{1 - (0)(\\sqrt{3})} = \\frac{\\sqrt{3}}{1}.$\nStep 3:  Therefore, $\\tan 240^\\circ = \\frac{\\sqrt{3}}{1} = \\sqrt{3}$.\nStep 4: \n$\\tan 240^\\circ = -\\sqrt{3}$\nStep 5:  Since $240^\\circ$ is in the third quadrant, where tangent is negative, we can take the negative of the result from Step 2: $\\tan 240^\\circ = -\\tan (180^\\circ + 60^\\circ) = -\\frac{\\sqrt{3}}{1}.$\nStep 6:  So, $\\tan 240^\\circ = -\\frac{\\sqrt{3}}{1} = -\\sqrt{3}$\nStep 7: Since $240^\\circ$ is in the third quadrant, where tangent is negative, we can take the negative of the result from Step 6.\nStep 8: $\\tan 240^\\circ = -\\sqrt{3}$\nStep 9: $-\\sqrt{3}$",
+    "steps": [
+        "Step 1:  Since we're asked to compute $\\tan 240^\\circ$, we can rewrite this as $\\tan (180^\\circ+60^\\circ)$ in order to utilize trigonometric identities and properties.",
+        "Step 2:  Using the angle addition formula, we have $\\tan (180^\\circ+60^\\circ) = \\frac{\\tan 180^\\circ + \\tan 60^\\circ}{1 - (\\tan 180^\\circ)(\\tan 60^\\circ)}$.",
+        "Step 2:  We can simplify the expression using the fact that $\\tan 180^\\circ = 0$ and $\\tan 60^\\circ = \\sqrt{3}$ to obtain $\\frac{0 + \\sqrt{3}}{1 - (0)(\\sqrt{3})} = \\frac{\\sqrt{3}}{1}.$",
+        "Step 3:  Therefore, $\\tan 240^\\circ = \\frac{\\sqrt{3}}{1} = \\sqrt{3}$.",
+        "Step 4: \n$\\tan 240^\\circ = -\\sqrt{3}$",
+        "Step 5:  Since $240^\\circ$ is in the third quadrant, where tangent is negative, we can take the negative of the result from Step 2: $\\tan 240^\\circ = -\\tan (180^\\circ + 60^\\circ) = -\\frac{\\sqrt{3}}{1}.$",
+        "Step 6:  So, $\\tan 240^\\circ = -\\frac{\\sqrt{3}}{1} = -\\sqrt{3}$",
+        "Step 7: Since $240^\\circ$ is in the third quadrant, where tangent is negative, we can take the negative of the result from Step 6.",
+        "Step 8: $\\tan 240^\\circ = -\\sqrt{3}$",
+        "Step 9: $-\\sqrt{3}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Since we're asked to compute $\\tan 240^\\circ$, we can rewrite this as $\\tan (180^\\circ+60^\\circ)$ in order to utilize trigonometric identities and properties.",
+            1
+        ],
+        [
+            "Step 2:  Using the angle addition formula, we have $\\tan (180^\\circ+60^\\circ) = \\frac{\\tan 180^\\circ + \\tan 60^\\circ}{1 - (\\tan 180^\\circ)(\\tan 60^\\circ)}$.",
+            1
+        ],
+        [
+            "Step 2:  We can simplify the expression using the fact that $\\tan 180^\\circ = 0$ and $\\tan 60^\\circ = \\sqrt{3}$ to obtain $\\frac{0 + \\sqrt{3}}{1 - (0)(\\sqrt{3})} = \\frac{\\sqrt{3}}{1}.$",
+            1
+        ],
+        [
+            "Step 3:  Therefore, $\\tan 240^\\circ = \\frac{\\sqrt{3}}{1} = \\sqrt{3}$.",
+            1
+        ],
+        [
+            "Step 4: \n$\\tan 240^\\circ = -\\sqrt{3}$",
+            1
+        ],
+        [
+            "Step 5:  Since $240^\\circ$ is in the third quadrant, where tangent is negative, we can take the negative of the result from Step 2: $\\tan 240^\\circ = -\\tan (180^\\circ + 60^\\circ) = -\\frac{\\sqrt{3}}{1}.$",
+            1
+        ],
+        [
+            "Step 6:  So, $\\tan 240^\\circ = -\\frac{\\sqrt{3}}{1} = -\\sqrt{3}$",
+            1
+        ],
+        [
+            "Step 7: Since $240^\\circ$ is in the third quadrant, where tangent is negative, we can take the negative of the result from Step 6.",
+            1
+        ],
+        [
+            "Step 8: $\\tan 240^\\circ = -\\sqrt{3}$",
+            1
+        ],
+        [
+            "Step 9: $-\\sqrt{3}$",
+            1
+        ]
+    ],
+    "time": 135.21144795417786,
+    "total_tokens": 6517,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

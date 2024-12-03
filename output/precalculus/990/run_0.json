@@ -1,0 +1,26 @@
+{
+    "problem": "Let $z = 2 + \\sqrt{2} - (3 + 3 \\sqrt{2})i$, and let $c = 2 - 3i$.  Let $w$ be the result when $z$ is rotated around $c$ by $\\frac{\\pi}{4}$ counter-clockwise.\n\n[asy]\nunitsize(0.6 cm);\n\npair C, W, Z;\n\nZ = (2 + sqrt(2), -3 - 3*sqrt(2));\nC = (2,-3);\nW = rotate(45,C)*(Z);\n\ndraw(Z--C--W);\n\ndot(\"$c$\", C, N);\ndot(\"$w$\", W, SE);\ndot(\"$z$\", Z, S);\nlabel(\"$\\frac{\\pi}{4}$\", C + (0.6,-1));\n[/asy]\n\nFind $w.$",
+    "level": "Level 5",
+    "type": "Precalculus",
+    "solution": "Rotating by $\\frac{\\pi}{4}$ counter-clockwise corresponds to the complex number\n\\[e^{\\pi i/4} = \\frac{1}{\\sqrt{2}} + \\frac{i}{\\sqrt{2}}.\\]Hence,\n\\[w - c = \\left( \\frac{1}{\\sqrt{2}} + \\frac{i}{\\sqrt{2}} \\right) (z - c),\\]so\n\\begin{align*}\nw &= \\left( \\frac{1}{\\sqrt{2}} + \\frac{i}{\\sqrt{2}} \\right) (z - c) + c \\\\\n&= \\left( \\frac{1}{\\sqrt{2}} + \\frac{i}{\\sqrt{2}} \\right) (\\sqrt{2} - 3i \\sqrt{2}) + 2 - 3i \\\\\n&= (4 - 2i) + 2 - 3i \\\\\n&= \\boxed{6 - 5i}.\n\\end{align*}",
+    "is_solved": false,
+    "model_solution": "Step 1:  The problem involves rotating a complex number $z$ around another complex number $c$ by a certain angle, resulting in a new complex number $w$.\nStep 2:  First, we need to translate the complex plane so that the rotation point $c$ is at the origin. To do this, we subtract $c$ from $z$ to obtain a new complex number $z - c$.\nStep 2:  To rotate $z - c$ by $\\frac{\\pi}{4}$ counter-clockwise, we multiply it by $e^{\\frac{i \\pi}{4}} = \\frac{1}{\\sqrt{2}} + \\frac{1}{\\sqrt{2}}i.$",
+    "steps": [
+        "Step 1:  The problem involves rotating a complex number $z$ around another complex number $c$ by a certain angle, resulting in a new complex number $w$.\nStep 2:  First, we need to translate the complex plane so that the rotation point $c$ is at the origin. To do this, we subtract $c$ from $z$ to obtain a new complex number $z - c$.",
+        "Step 2:  To rotate $z - c$ by $\\frac{\\pi}{4}$ counter-clockwise, we multiply it by $e^{\\frac{i \\pi}{4}} = \\frac{1}{\\sqrt{2}} + \\frac{1}{\\sqrt{2}}i.$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  The problem involves rotating a complex number $z$ around another complex number $c$ by a certain angle, resulting in a new complex number $w$.\nStep 2:  First, we need to translate the complex plane so that the rotation point $c$ is at the origin. To do this, we subtract $c$ from $z$ to obtain a new complex number $z - c$.",
+            1
+        ],
+        [
+            "Step 2:  To rotate $z - c$ by $\\frac{\\pi}{4}$ counter-clockwise, we multiply it by $e^{\\frac{i \\pi}{4}} = \\frac{1}{\\sqrt{2}} + \\frac{1}{\\sqrt{2}}i.$",
+            1
+        ]
+    ],
+    "time": 26.925304651260376,
+    "total_tokens": 1434,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

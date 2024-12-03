@@ -1,0 +1,41 @@
+{
+    "problem": "The Smith family has 4 sons and 3 daughters.  In how many ways can they be seated in a row of 7 chairs such that all 3 girls sit next to each other?",
+    "level": "Level 3",
+    "type": "Counting & Probability",
+    "solution": "We want to deal with the restriction first.\n\nWithout worrying about which specific boys and girls go in which seats, in how many ways can the girls sit together?\n\nThere are 5 basic configurations of boys and girls:  $$GGGBBBB, BGGGBBB, BBGGGBB,$$ $$BBBGGGB, BBBBGGG$$ where $B$ is a boy and $G$ is a girl.  Then, within each configuration, there are $4!$ ways in which we can assign the 4 sons to seats, and $3!$ ways in which we can assign the 3 daughters to seats.\n\nTherefore the number of possible seatings is $5 \\times 4! \\times 3! = \\boxed{720}$.",
+    "is_solved": true,
+    "model_solution": "1. Arrange the 3 girls together as a single unit, so the total units to be seated are 5 (4 boys + 1 unit of girls).\n2. Calculate the number of ways to arrange the 5 units in 7 chairs, which is the same as arranging 5 units in 5 chairs with 2 remaining chairs, giving 5! ways to arrange them.\n3. Calculate the number of ways to arrange the 3 girls within the unit, which is 3! ways.\nMultiply the number of ways to arrange the 5 units by the number of ways to arrange the 3 girls within the unit.\nCalculate the total number of ways to arrange the 5 units and the girls within the unit: 5! \u00d7 3! = 720 \u00d7 6 = 4320. Final Answer",
+    "steps": [
+        "1. Arrange the 3 girls together as a single unit, so the total units to be seated are 5 (4 boys + 1 unit of girls).",
+        "2. Calculate the number of ways to arrange the 5 units in 7 chairs, which is the same as arranging 5 units in 5 chairs with 2 remaining chairs, giving 5! ways to arrange them.",
+        "3. Calculate the number of ways to arrange the 3 girls within the unit, which is 3! ways.",
+        "Multiply the number of ways to arrange the 5 units by the number of ways to arrange the 3 girls within the unit.",
+        "Calculate the total number of ways to arrange the 5 units and the girls within the unit: 5! \u00d7 3! = 720 \u00d7 6 = 4320. Final Answer"
+    ],
+    "full_steps": [
+        [
+            "1. Arrange the 3 girls together as a single unit, so the total units to be seated are 5 (4 boys + 1 unit of girls).",
+            1
+        ],
+        [
+            "2. Calculate the number of ways to arrange the 5 units in 7 chairs, which is the same as arranging 5 units in 5 chairs with 2 remaining chairs, giving 5! ways to arrange them.",
+            1
+        ],
+        [
+            "3. Calculate the number of ways to arrange the 3 girls within the unit, which is 3! ways.",
+            1
+        ],
+        [
+            "Multiply the number of ways to arrange the 5 units by the number of ways to arrange the 3 girls within the unit.",
+            1
+        ],
+        [
+            "Calculate the total number of ways to arrange the 5 units and the girls within the unit: 5! \u00d7 3! = 720 \u00d7 6 = 4320. Final Answer",
+            1
+        ]
+    ],
+    "time": 67.68757271766663,
+    "total_tokens": 2061,
+    "final_answer_tokens": 266,
+    "model": "meta-llama/Llama-Vision-Free"
+}

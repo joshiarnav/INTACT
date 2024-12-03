@@ -1,0 +1,46 @@
+{
+    "problem": "Octagon $ABCDEFGH$ is equiangular. Given that $AB=1$, $BC=2$, $CD=3$, $DE=4$, and $EF=FG=2$, compute the perimeter of the octagon.",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "Since the measure of each interior angle of the octagon is the same, each measures $(8-2)(180^\\circ)/8 = 135^\\circ$.  We extend sides $\\overline{AB}, \\overline{CD}, \\overline{EF}$, and $\\overline{GH}$ to form a rectangle: let $X$ be the intersection of lines $GH$ and $AB$; $Y$ that of $AB$ and $CD$; $Z$ that of $CD$ and $EF$; and $W$ that of $EF$ and $GH$.\n\n[asy]\npair A,B,C,D,EE,F,G,H,WW,X,Y,Z;\nWW = (0,0);\nG = (0,sqrt(2));\nH = G + (0,2);\nX = H + (0,1+2*sqrt(2));\nA = X + (1+2*sqrt(2),0);\nB = A + (1,0);\nY = B + (sqrt(2), 0);\nC = Y + (0,-sqrt(2));\nD = C - (0,3);\nZ = D - (0,2*sqrt(2));\nEE = Z - (2*sqrt(2),0);\nF = EE - (2,0);\ndraw(F--WW--X--Y--Z--F--G);\ndraw(H--A);\ndraw(B--C);\ndraw(D--EE);\nlabel(\"$W$\",WW,SW);\nlabel(\"$G$\",G,W);\nlabel(\"$H$\",H,W);\nlabel(\"$X$\",X,NW);\nlabel(\"$A$\",A,N);\nlabel(\"$B$\",B,N);\nlabel(\"$Y$\",Y,NE);\nlabel(\"$C$\",C,E);\nlabel(\"$D$\",D,E);\nlabel(\"$Z$\",Z,SE);\nlabel(\"$E$\",EE,S);\nlabel(\"$F$\",F,S);\n[/asy]\n\n\n\n\nAs $BC=2$, we have $BY=YC = \\sqrt{2}$. As $DE=4$, we have $DZ=ZE = 2\\sqrt{2}$. As $FG=2$, we have $FW=WG=\\sqrt{2}$.\n\nWe can compute the dimensions of the rectangle: $WX = YZ = YC+CD+DZ = 3+3\\sqrt{2}$, and $XY = ZW = ZE+EF+FW = 2+3\\sqrt{2}$. Thus, $HX = XA = XY - AB-BY = 1+2\\sqrt{2}$, and so $AH = \\sqrt{2}HX = 4+\\sqrt{2}$, and $GH = WX - WG - HX = 2.$ The perimeter of the octagon can now be computed by adding up all its sides, which turns out to be $\\boxed{20+\\sqrt{2}}$.",
+    "is_solved": true,
+    "model_solution": "Step 1:  To find the perimeter of the octagon, we need to calculate the total distance around its boundary. \nStep 2:  Since the octagon is equiangular, all its interior angles are congruent, which implies that all its exterior angles are also congruent.\nStep 3:  The sum of the exterior angles of any polygon is 360 degrees.\nStep 4:  Since all exterior angles of the octagon are congruent, each exterior angle measures 360/8 = 45 degrees.\nStep 5:  Now, we can introduce point I, the intersection of the diagonals $\\overline{AC}$ and $\\overline{FG}$.\nStep 6:  From this point, we can see that triangle $AFI$ is isosceles, with $AF = FI = 2$.\nStep 7:  Since the exterior angle at vertex $A$ is 45 degrees, we can determine that angle $\\angle FIA = 180 - 45 - 45 = 90$ degrees.\nStep 8:  This means that triangle $AFI$ is a 45-45-90 triangle, and we can use the properties of such\nStep 9:  Find the length of diagonal $\\overline{AC}$ in triangle $AFI$.\nStep 10: Find $AC^2 = AF^2 + FI^2 = 2^2 + 2^2 = 8$, so $AC = \\sqrt{8} = 2\\sqrt{2}$.\nFind the lengths of diagonals $\\overline{AD}$ and $\\overline{CF}$ using the Law of Cosines.\nFind $AD^2 = AF^2 + FD^2 - 2\\cdot AF \\cdot FD \\cdot \\cos 45^\\circ = 2^2 + 4^2 - 2\\cdot 2\\cdot 4 \\cdot \\frac{1}{\\sqrt{2}} = 20 - 8\\sqrt{2}$, and similarly $CF^2 = 20 + 8\\sqrt{2}$.\nFind $AD^2 = AF^2 + FD^2 - 2\\cdot AF \\cdot FD \\cdot \\cos 45^\\circ = 2^2 + 4^2 - 2\\cdot 2\\cdot 4 \\cdot \\frac{1}{\\sqrt{2}} = 20 - 8\\sqrt{2}$, and similarly $CF^2 = 20 + 8\\sqrt{2}$.",
+    "steps": [
+        "Step 1:  To find the perimeter of the octagon, we need to calculate the total distance around its boundary. \nStep 2:  Since the octagon is equiangular, all its interior angles are congruent, which implies that all its exterior angles are also congruent.\nStep 3:  The sum of the exterior angles of any polygon is 360 degrees.\nStep 4:  Since all exterior angles of the octagon are congruent, each exterior angle measures 360/8 = 45 degrees.\nStep 5:  Now, we can introduce point I, the intersection of the diagonals $\\overline{AC}$ and $\\overline{FG}$.\nStep 6:  From this point, we can see that triangle $AFI$ is isosceles, with $AF = FI = 2$.\nStep 7:  Since the exterior angle at vertex $A$ is 45 degrees, we can determine that angle $\\angle FIA = 180 - 45 - 45 = 90$ degrees.\nStep 8:  This means that triangle $AFI$ is a 45-45-90 triangle, and we can use the properties of such",
+        "Step 9:  Find the length of diagonal $\\overline{AC}$ in triangle $AFI$.",
+        "Step 10: Find $AC^2 = AF^2 + FI^2 = 2^2 + 2^2 = 8$, so $AC = \\sqrt{8} = 2\\sqrt{2}$.",
+        "Find the lengths of diagonals $\\overline{AD}$ and $\\overline{CF}$ using the Law of Cosines.",
+        "Find $AD^2 = AF^2 + FD^2 - 2\\cdot AF \\cdot FD \\cdot \\cos 45^\\circ = 2^2 + 4^2 - 2\\cdot 2\\cdot 4 \\cdot \\frac{1}{\\sqrt{2}} = 20 - 8\\sqrt{2}$, and similarly $CF^2 = 20 + 8\\sqrt{2}$.",
+        "Find $AD^2 = AF^2 + FD^2 - 2\\cdot AF \\cdot FD \\cdot \\cos 45^\\circ = 2^2 + 4^2 - 2\\cdot 2\\cdot 4 \\cdot \\frac{1}{\\sqrt{2}} = 20 - 8\\sqrt{2}$, and similarly $CF^2 = 20 + 8\\sqrt{2}$."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  To find the perimeter of the octagon, we need to calculate the total distance around its boundary. \nStep 2:  Since the octagon is equiangular, all its interior angles are congruent, which implies that all its exterior angles are also congruent.\nStep 3:  The sum of the exterior angles of any polygon is 360 degrees.\nStep 4:  Since all exterior angles of the octagon are congruent, each exterior angle measures 360/8 = 45 degrees.\nStep 5:  Now, we can introduce point I, the intersection of the diagonals $\\overline{AC}$ and $\\overline{FG}$.\nStep 6:  From this point, we can see that triangle $AFI$ is isosceles, with $AF = FI = 2$.\nStep 7:  Since the exterior angle at vertex $A$ is 45 degrees, we can determine that angle $\\angle FIA = 180 - 45 - 45 = 90$ degrees.\nStep 8:  This means that triangle $AFI$ is a 45-45-90 triangle, and we can use the properties of such",
+            1
+        ],
+        [
+            "Step 9:  Find the length of diagonal $\\overline{AC}$ in triangle $AFI$.",
+            1
+        ],
+        [
+            "Step 10: Find $AC^2 = AF^2 + FI^2 = 2^2 + 2^2 = 8$, so $AC = \\sqrt{8} = 2\\sqrt{2}$.",
+            1
+        ],
+        [
+            "Find the lengths of diagonals $\\overline{AD}$ and $\\overline{CF}$ using the Law of Cosines.",
+            1
+        ],
+        [
+            "Find $AD^2 = AF^2 + FD^2 - 2\\cdot AF \\cdot FD \\cdot \\cos 45^\\circ = 2^2 + 4^2 - 2\\cdot 2\\cdot 4 \\cdot \\frac{1}{\\sqrt{2}} = 20 - 8\\sqrt{2}$, and similarly $CF^2 = 20 + 8\\sqrt{2}$.",
+            1
+        ],
+        [
+            "Find $AD^2 = AF^2 + FD^2 - 2\\cdot AF \\cdot FD \\cdot \\cos 45^\\circ = 2^2 + 4^2 - 2\\cdot 2\\cdot 4 \\cdot \\frac{1}{\\sqrt{2}} = 20 - 8\\sqrt{2}$, and similarly $CF^2 = 20 + 8\\sqrt{2}$.",
+            1
+        ]
+    ],
+    "time": 80.2621066570282,
+    "total_tokens": 5695,
+    "final_answer_tokens": 642,
+    "model": "meta-llama/Llama-Vision-Free"
+}

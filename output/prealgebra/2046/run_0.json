@@ -1,0 +1,31 @@
+{
+    "problem": "Two shaded quarter-circles, each with a radius of 4 units, are formed in the 4 by 8 rectangular region shown. What is the area of the non-shaded region, in square units? Express the area in the form $a-b\\pi$ where $a$ and $b$ are integers.\n\n[asy]\n\nsize(4cm,4cm);\n\npair A,B,C,D,a,b,X;\n\nA=(0,0);\nB=(8,0);\nC=(8,4);\nD=(0,4);\n\nX=(4,4);\n\ndraw(A--B--C--D--A);\n\na=(3,1.5);\n\nfill((A..a..X--D--A--cycle),gray);\n\ndraw(A..a..X);\n\nb=(5,1.5);\n\nfill((B..b..X--C--B--cycle),gray);\n\ndraw(B..b..X);\n\nlabel(\"$8$\",midpoint(A--B),S);\nlabel(\"$4$\",midpoint(B--C),E);\n\n[/asy]",
+    "level": "Level 4",
+    "type": "Prealgebra",
+    "solution": "The two shaded regions combine to form a semicircle. The area of this semicircle is half the area of a circle with radius 4, or $\\frac{1}{2}\\cdot\\pi\\cdot 4^2=8\\pi$. The area of the non-shaded region is equal to the area of the rectangle minus the area of the shaded region, or $8\\cdot4-8\\pi=\\boxed{32-8\\pi}$ square units.",
+    "is_solved": true,
+    "model_solution": "First step: Calculate the area of the shaded regions. The area of each shaded region is $\\frac{1}{4}\\pi(4)^2$ square units.\nSecond step: Calculate the combined area of the shaded regions. The combined area of the shaded regions is $\\frac{1}{4}\\pi(4)^2+\\frac{1}{4}\\pi(4)^2=2\\pi$ square units.\nThe area of the rectangle is $8 \\times 4 = 32$ square units.\nFinal Answer: The final answer is 32-2\\pi.",
+    "steps": [
+        "First step: Calculate the area of the shaded regions. The area of each shaded region is $\\frac{1}{4}\\pi(4)^2$ square units.",
+        "Second step: Calculate the combined area of the shaded regions. The combined area of the shaded regions is $\\frac{1}{4}\\pi(4)^2+\\frac{1}{4}\\pi(4)^2=2\\pi$ square units.",
+        "The area of the rectangle is $8 \\times 4 = 32$ square units.\nFinal Answer: The final answer is 32-2\\pi."
+    ],
+    "full_steps": [
+        [
+            "First step: Calculate the area of the shaded regions. The area of each shaded region is $\\frac{1}{4}\\pi(4)^2$ square units.",
+            1
+        ],
+        [
+            "Second step: Calculate the combined area of the shaded regions. The combined area of the shaded regions is $\\frac{1}{4}\\pi(4)^2+\\frac{1}{4}\\pi(4)^2=2\\pi$ square units.",
+            1
+        ],
+        [
+            "The area of the rectangle is $8 \\times 4 = 32$ square units.\nFinal Answer: The final answer is 32-2\\pi.",
+            1
+        ]
+    ],
+    "time": 43.43644618988037,
+    "total_tokens": 2140,
+    "final_answer_tokens": 393,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,61 @@
+{
+    "problem": "What is the greatest product obtainable from two integers whose sum is 246?",
+    "level": "Level 3",
+    "type": "Algebra",
+    "solution": "Let the two integers be $x$ and $246-x$. The product which needs to be maximized is $(x)(246-x)=246x-x^2$. Now we complete the square: \\begin{align*}\n-(x^2-246x)&=-(x^2-246x+15129-15129)\\\\\n&=-(x-123)^2+15129\\\\\n\\end{align*}Since the square of a real number is always non-negative, $-(x-123)^2\\le 0$. Therefore, the expression is maximized when $x-123=0$, so $x=123$. Therefore, the greatest product obtainable is $-(123-123)^2+15129=\\boxed{15129}$.",
+    "is_solved": true,
+    "model_solution": "Let x and y be the two integers. \n\nx + y = 246\nx = 246 - y\nxy = (246 - y)y\nxy = 246y - y^2\nxy = 246y - y^2\nxy = -y^2 + 246y \nxy = -(y^2 - 246y)\nxy = -(y^2 - 246y)\nxy = -(y(y - 246))\nSince we want to maximize the product xy, and we have -(y(y - 246)), we will find the vertex of the parabola y(y - 246) which will minimize it, and thus maximize -y(y - 246). The vertex occurs at the midpoint of the roots of y(y - 246).\n\nThe roots are y = 0 and y = 246. The midpoint is (0 + 246)/2 = 123.\n\nThe next step is to evaluate -y(y - 246) at the midpoint y = 123.\nxy = -(123(123 - 246))\nxy = -(123(123 - 246))\nxy = -(123(-123))\nxy = -(-15129)\nxy = 15129\nxy = 15129\nxy = 15129",
+    "steps": [
+        "Let x and y be the two integers. \n\nx + y = 246",
+        "x = 246 - y",
+        "xy = (246 - y)y\nxy = 246y - y^2",
+        "xy = 246y - y^2\nxy = -y^2 + 246y \nxy = -(y^2 - 246y)",
+        "xy = -(y^2 - 246y)\nxy = -(y(y - 246))",
+        "Since we want to maximize the product xy, and we have -(y(y - 246)), we will find the vertex of the parabola y(y - 246) which will minimize it, and thus maximize -y(y - 246). The vertex occurs at the midpoint of the roots of y(y - 246).\n\nThe roots are y = 0 and y = 246. The midpoint is (0 + 246)/2 = 123.\n\nThe next step is to evaluate -y(y - 246) at the midpoint y = 123.\nxy = -(123(123 - 246))",
+        "xy = -(123(123 - 246))\nxy = -(123(-123))\nxy = -(-15129)\nxy = 15129",
+        "xy = 15129",
+        "xy = 15129"
+    ],
+    "full_steps": [
+        [
+            "Let x and y be the two integers. \n\nx + y = 246",
+            1
+        ],
+        [
+            "x = 246 - y",
+            1
+        ],
+        [
+            "xy = (246 - y)y\nxy = 246y - y^2",
+            1
+        ],
+        [
+            "xy = 246y - y^2\nxy = -y^2 + 246y \nxy = -(y^2 - 246y)",
+            1
+        ],
+        [
+            "xy = -(y^2 - 246y)\nxy = -(y(y - 246))",
+            1
+        ],
+        [
+            "Since we want to maximize the product xy, and we have -(y(y - 246)), we will find the vertex of the parabola y(y - 246) which will minimize it, and thus maximize -y(y - 246). The vertex occurs at the midpoint of the roots of y(y - 246).\n\nThe roots are y = 0 and y = 246. The midpoint is (0 + 246)/2 = 123.\n\nThe next step is to evaluate -y(y - 246) at the midpoint y = 123.\nxy = -(123(123 - 246))",
+            1
+        ],
+        [
+            "xy = -(123(123 - 246))\nxy = -(123(-123))\nxy = -(-15129)\nxy = 15129",
+            1
+        ],
+        [
+            "xy = 15129",
+            1
+        ],
+        [
+            "xy = 15129",
+            1
+        ]
+    ],
+    "time": 119.55091857910156,
+    "total_tokens": 3890,
+    "final_answer_tokens": 333,
+    "model": "meta-llama/Llama-Vision-Free"
+}

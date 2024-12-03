@@ -1,0 +1,66 @@
+{
+    "problem": "A particle moves so that it is at $\\left( 3 \\sin \\frac{t}{4}, 3 \\cos \\frac{t}{4} \\right)$ at time $t.$  Find the speed of the particle, measured in unit of distance per unit of time.",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "The parametric curve $(x,y) = \\left( 3 \\sin \\frac{t}{4}, 3 \\cos \\frac{t}{4} \\right)$ describes a circle with radius 3.  Furthermore, it makes a full revolution at time $t = 8 \\pi.$\n\n[asy]\nunitsize(2 cm);\n\npair moo (real t) {\n  return (sin(t/4),cos(t/4));\n}\n\nreal t;\npath foo = moo(0);\n\nfor (t = 0; t <= 8*pi; t = t + 0.01) {\n  foo = foo--moo(t);\n}\n\ndraw((-1.2,0)--(1.2,0));\ndraw((0,-1.2)--(0,1.2));\ndraw(foo,red);\n\ndot(\"$t = 0$\", moo(0), NE);\ndot(\"$t = 2 \\pi$\", moo(2*pi), NE);\ndot(\"$t = 4 \\pi$\", moo(4*pi), SE);\ndot(\"$t = 6 \\pi$\", moo(6*pi), NW);\ndot(\"$t = 8 \\pi$\", moo(8*pi), NW);\n\nlabel(\"$3$\", (1/2,0), S);\n[/asy]\n\nTherefore, the speed of the particle is $\\frac{6 \\pi}{8 \\pi} = \\boxed{\\frac{3}{4}}.$",
+    "is_solved": false,
+    "model_solution": "## Step 1: Differentiate the x-coordinate with respect to time\n$\\frac{dx}{dt} = \\frac{d}{dt} \\left( 3 \\sin \\frac{t}{4} \\right) = \\frac{3}{4} \\cos \\frac{t}{4}$.\n\n## Step 2: Differentiate the y-coordinate with respect to time\n$\\frac{dy}{dt} = \\frac{d}{dt} \\left( 3 \\cos \\frac{t}{4} \\right) = - \\frac{3}{4} \\sin \\frac{t}{4}$.\n\n## Step 3: Compute the velocity of the particle\n$v = \\sqrt{\\left(\\frac{dx}{dt}\\right)^2 + \\left(\\frac{dy}{dt}\\right)^2}$.\n\n## Step 4: Apply the formulas for the derivatives of sine and cosine\n$v = \\sqrt{\\left(\\frac{3}{4} \\cos \\frac{t}{4}\\right)^2 + \\left(-\\frac{3}{4} \\sin \\frac{t}{4}\\right)^2}$.\n\n## Step 5: Simplify the expression using\n## Step 6: Simplify the expression using the identity $\\sin^2 x + \\cos^2 x = 1$\n$v = \\sqrt{\\left(\\frac{3}{4}\\right)^2 \\left(\\cos^2 \\frac{t}{4} + \\sin^2 \\frac{t}{4}\\right)}$\n## Step 7: Evaluate the trigonometric identity\n$v = \\sqrt{\\left(\\frac{3}{4}\\right)^2}$\n## Step 8: Simplify the expression\n$v = \\frac{3}{4}$\n## Step 9: \n$v = \\frac{3}{4}$\n## Step 10: \n$v = \\frac{3}{4}$\n## Step 11: \n$v = \\frac{3}{4}$\n## Step 12: \n$v = \\frac{3}{4}$\n## Step 13: \n$\\frac{3}{4}$\n## Step 14: \nFinal Answer: The final answer is $\\boxed{\\frac{3}{4}}$.",
+    "steps": [
+        "## Step 1: Differentiate the x-coordinate with respect to time\n$\\frac{dx}{dt} = \\frac{d}{dt} \\left( 3 \\sin \\frac{t}{4} \\right) = \\frac{3}{4} \\cos \\frac{t}{4}$.\n\n## Step 2: Differentiate the y-coordinate with respect to time\n$\\frac{dy}{dt} = \\frac{d}{dt} \\left( 3 \\cos \\frac{t}{4} \\right) = - \\frac{3}{4} \\sin \\frac{t}{4}$.\n\n## Step 3: Compute the velocity of the particle\n$v = \\sqrt{\\left(\\frac{dx}{dt}\\right)^2 + \\left(\\frac{dy}{dt}\\right)^2}$.\n\n## Step 4: Apply the formulas for the derivatives of sine and cosine\n$v = \\sqrt{\\left(\\frac{3}{4} \\cos \\frac{t}{4}\\right)^2 + \\left(-\\frac{3}{4} \\sin \\frac{t}{4}\\right)^2}$.\n\n## Step 5: Simplify the expression using",
+        "## Step 6: Simplify the expression using the identity $\\sin^2 x + \\cos^2 x = 1$\n$v = \\sqrt{\\left(\\frac{3}{4}\\right)^2 \\left(\\cos^2 \\frac{t}{4} + \\sin^2 \\frac{t}{4}\\right)}$",
+        "## Step 7: Evaluate the trigonometric identity\n$v = \\sqrt{\\left(\\frac{3}{4}\\right)^2}$",
+        "## Step 8: Simplify the expression\n$v = \\frac{3}{4}$",
+        "## Step 9: \n$v = \\frac{3}{4}$",
+        "## Step 10: \n$v = \\frac{3}{4}$",
+        "## Step 11: \n$v = \\frac{3}{4}$",
+        "## Step 12: \n$v = \\frac{3}{4}$",
+        "## Step 13: \n$\\frac{3}{4}$",
+        "## Step 14: \nFinal Answer: The final answer is $\\boxed{\\frac{3}{4}}$."
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Differentiate the x-coordinate with respect to time\n$\\frac{dx}{dt} = \\frac{d}{dt} \\left( 3 \\sin \\frac{t}{4} \\right) = \\frac{3}{4} \\cos \\frac{t}{4}$.\n\n## Step 2: Differentiate the y-coordinate with respect to time\n$\\frac{dy}{dt} = \\frac{d}{dt} \\left( 3 \\cos \\frac{t}{4} \\right) = - \\frac{3}{4} \\sin \\frac{t}{4}$.\n\n## Step 3: Compute the velocity of the particle\n$v = \\sqrt{\\left(\\frac{dx}{dt}\\right)^2 + \\left(\\frac{dy}{dt}\\right)^2}$.\n\n## Step 4: Apply the formulas for the derivatives of sine and cosine\n$v = \\sqrt{\\left(\\frac{3}{4} \\cos \\frac{t}{4}\\right)^2 + \\left(-\\frac{3}{4} \\sin \\frac{t}{4}\\right)^2}$.\n\n## Step 5: Simplify the expression using",
+            1
+        ],
+        [
+            "## Step 6: Simplify the expression using the identity $\\sin^2 x + \\cos^2 x = 1$\n$v = \\sqrt{\\left(\\frac{3}{4}\\right)^2 \\left(\\cos^2 \\frac{t}{4} + \\sin^2 \\frac{t}{4}\\right)}$",
+            1
+        ],
+        [
+            "## Step 7: Evaluate the trigonometric identity\n$v = \\sqrt{\\left(\\frac{3}{4}\\right)^2}$",
+            1
+        ],
+        [
+            "## Step 8: Simplify the expression\n$v = \\frac{3}{4}$",
+            1
+        ],
+        [
+            "## Step 9: \n$v = \\frac{3}{4}$",
+            1
+        ],
+        [
+            "## Step 10: \n$v = \\frac{3}{4}$",
+            1
+        ],
+        [
+            "## Step 11: \n$v = \\frac{3}{4}$",
+            1
+        ],
+        [
+            "## Step 12: \n$v = \\frac{3}{4}$",
+            1
+        ],
+        [
+            "## Step 13: \n$\\frac{3}{4}$",
+            1
+        ],
+        [
+            "## Step 14: \nFinal Answer: The final answer is $\\boxed{\\frac{3}{4}}$.",
+            1
+        ]
+    ],
+    "time": 131.62866139411926,
+    "total_tokens": 10189,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,46 @@
+{
+    "problem": "My state's lottery has 30 white balls numbered from 1 through 30 and 20 red balls numbered from 1 through 20.  In each lottery drawing, 3 of the white balls and 2 of the red balls are drawn.  To win, you must match all 3 white balls and both red balls, without regard to the order in which they were drawn.  How many possible different combinations may be drawn?",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "There are 30 ways to draw the first white ball, 29 ways to draw the second, and 28 ways to draw the third.  However, since order doesn't matter, we must divide by $3!$ to get $\\dfrac{30 \\times 29 \\times 28}{3!} = 4060$ ways to draw three white balls.  There are 20 ways to draw the first red ball and 19 ways to draw the second, however, since order doesn't matter, we must divide by $2!$ to get $\\dfrac{20 \\times 19}{2!} = 190$ ways to draw two red balls.  So the total number of outcomes for both the red and the white balls is $4060 \\times 190 = \\boxed{771,\\!400}$.",
+    "is_solved": true,
+    "model_solution": "The number of possible combinations of 3 white balls is C(30, 3) = \n30! / (3! (30-3)!) \n= 30! / (3! * 27!)\nThe number of possible combinations of 2 red balls is C(20, 2) = \n20! / (2! (20-2)!) \n= 20! / (2! * 18!)\nThe number of possible combinations of 3 white balls and 2 red balls is the product of the previous two steps: \nC(30, 3) \u00d7 C(20, 2)\nEvaluate the expressions for C(30, 3) and C(20, 2):\nC(30, 3) = 30! / (3! * 27!) = (30 \u00d7 29 \u00d7 28) / (3 \u00d7 2 \u00d7 1) = 4060\nC(20, 2) = 20! / (2! * 18!) = (20 \u00d7 19) / (2 \u00d7 1) = 190\nMultiply C(30, 3) and C(20, 2): 4060 \u00d7 190 = 771,800\nThe final answer is: 771,800",
+    "steps": [
+        "The number of possible combinations of 3 white balls is C(30, 3) = \n30! / (3! (30-3)!) \n= 30! / (3! * 27!)",
+        "The number of possible combinations of 2 red balls is C(20, 2) = \n20! / (2! (20-2)!) \n= 20! / (2! * 18!)",
+        "The number of possible combinations of 3 white balls and 2 red balls is the product of the previous two steps: \nC(30, 3) \u00d7 C(20, 2)",
+        "Evaluate the expressions for C(30, 3) and C(20, 2):\nC(30, 3) = 30! / (3! * 27!) = (30 \u00d7 29 \u00d7 28) / (3 \u00d7 2 \u00d7 1) = 4060\nC(20, 2) = 20! / (2! * 18!) = (20 \u00d7 19) / (2 \u00d7 1) = 190",
+        "Multiply C(30, 3) and C(20, 2): 4060 \u00d7 190 = 771,800",
+        "The final answer is: 771,800"
+    ],
+    "full_steps": [
+        [
+            "The number of possible combinations of 3 white balls is C(30, 3) = \n30! / (3! (30-3)!) \n= 30! / (3! * 27!)",
+            1
+        ],
+        [
+            "The number of possible combinations of 2 red balls is C(20, 2) = \n20! / (2! (20-2)!) \n= 20! / (2! * 18!)",
+            1
+        ],
+        [
+            "The number of possible combinations of 3 white balls and 2 red balls is the product of the previous two steps: \nC(30, 3) \u00d7 C(20, 2)",
+            1
+        ],
+        [
+            "Evaluate the expressions for C(30, 3) and C(20, 2):\nC(30, 3) = 30! / (3! * 27!) = (30 \u00d7 29 \u00d7 28) / (3 \u00d7 2 \u00d7 1) = 4060\nC(20, 2) = 20! / (2! * 18!) = (20 \u00d7 19) / (2 \u00d7 1) = 190",
+            1
+        ],
+        [
+            "Multiply C(30, 3) and C(20, 2): 4060 \u00d7 190 = 771,800",
+            1
+        ],
+        [
+            "The final answer is: 771,800",
+            1
+        ]
+    ],
+    "time": 79.84974026679993,
+    "total_tokens": 3855,
+    "final_answer_tokens": 414,
+    "model": "meta-llama/Llama-Vision-Free"
+}

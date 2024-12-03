@@ -1,0 +1,46 @@
+{
+    "problem": "In octagon $ABCDEFGH$, every side is perpendicular to each of its adjacent sides. What is the perimeter of $ABCDEFGH$?\n\n[asy]\ndraw((0,0)--(10,0)--(10,6)--(6,6)--(6,2)--(2,2)--(2,10)--(0,10)--(0,0)--cycle,linewidth(2));\n\nlabel(\"A\",(0,10),W);\nlabel(\"B\",(0,0),W);\nlabel(\"C\",(10,0),E);\nlabel(\"D\",(10,6),NE);\nlabel(\"E\",(6,6),NW);\nlabel(\"F\",(6,2),SE);\nlabel(\"G\",(2,2),SW);\nlabel(\"H\",(2,10),NE);\n\nlabel(\"10\",(5,0),S);\nlabel(\"6\",(10,3),E);\nlabel(\"4\",(6,4),E);\nlabel(\"8\",(2,6),E);\n[/asy]",
+    "level": "Level 3",
+    "type": "Prealgebra",
+    "solution": "Consider translating segment $GF$ vertically until $G$ coincides with $H$, and then translate $ED$ up until $E$ coincides with $F$.  Then we have that $AH + GF + ED = BC = 10$.  Also, we see that $AB = DC - EF + GH = 10$.  Thus the perimeter of the figure is $(AH+GF+ED) + AB + BC + HG + EF + DC = 10 + 10 + 10 + 8 + 4 + 6 = \\boxed{48}$.",
+    "is_solved": true,
+    "model_solution": "The length of each side is given as $10$, $6$, $4$, or $8$. \n\nLet $\\!\\!\\!\\!\\overline{AB} = 10$, $\\!\\!\\!\\!\\overline{BC} = 6$, $\\!\\!\\!\\!\\overline{CD} = 8$, $\\!\\!\\!\\!\\overline{DE} = 4$, $\\!\\!\\!\\!\\overline{EF} = 10$, $\\!\\!\\!\\!\\overline{FG} = 8$, $\\!\\!\\!\\!\\overline{GH} = 6$, and $\\!\\!\\!\\!\\overline{HA} = 4$.\nThe perimeter of octagon $ABCDEFGH$ is $10+6+8+4+10+8+6+4$.\nAdd the side lengths together: $10+6+8+4+10+8+6+4$\n$10+6+8+4+10+8+6+4=56$\nSince the perimeter is given by $P = AB + BC + CD + DE + EF + FG + GH + HA$, the perimeter of octagon $ABCDEFGH$ is $P = 10+6+8+4+10+8+6+4$.\nAdd the side lengths together: $10+6+8+4+10+8+6+4$",
+    "steps": [
+        "The length of each side is given as $10$, $6$, $4$, or $8$. \n\nLet $\\!\\!\\!\\!\\overline{AB} = 10$, $\\!\\!\\!\\!\\overline{BC} = 6$, $\\!\\!\\!\\!\\overline{CD} = 8$, $\\!\\!\\!\\!\\overline{DE} = 4$, $\\!\\!\\!\\!\\overline{EF} = 10$, $\\!\\!\\!\\!\\overline{FG} = 8$, $\\!\\!\\!\\!\\overline{GH} = 6$, and $\\!\\!\\!\\!\\overline{HA} = 4$.",
+        "The perimeter of octagon $ABCDEFGH$ is $10+6+8+4+10+8+6+4$.",
+        "Add the side lengths together: $10+6+8+4+10+8+6+4$",
+        "$10+6+8+4+10+8+6+4=56$",
+        "Since the perimeter is given by $P = AB + BC + CD + DE + EF + FG + GH + HA$, the perimeter of octagon $ABCDEFGH$ is $P = 10+6+8+4+10+8+6+4$.",
+        "Add the side lengths together: $10+6+8+4+10+8+6+4$"
+    ],
+    "full_steps": [
+        [
+            "The length of each side is given as $10$, $6$, $4$, or $8$. \n\nLet $\\!\\!\\!\\!\\overline{AB} = 10$, $\\!\\!\\!\\!\\overline{BC} = 6$, $\\!\\!\\!\\!\\overline{CD} = 8$, $\\!\\!\\!\\!\\overline{DE} = 4$, $\\!\\!\\!\\!\\overline{EF} = 10$, $\\!\\!\\!\\!\\overline{FG} = 8$, $\\!\\!\\!\\!\\overline{GH} = 6$, and $\\!\\!\\!\\!\\overline{HA} = 4$.",
+            1
+        ],
+        [
+            "The perimeter of octagon $ABCDEFGH$ is $10+6+8+4+10+8+6+4$.",
+            1
+        ],
+        [
+            "Add the side lengths together: $10+6+8+4+10+8+6+4$",
+            1
+        ],
+        [
+            "$10+6+8+4+10+8+6+4=56$",
+            1
+        ],
+        [
+            "Since the perimeter is given by $P = AB + BC + CD + DE + EF + FG + GH + HA$, the perimeter of octagon $ABCDEFGH$ is $P = 10+6+8+4+10+8+6+4$.",
+            1
+        ],
+        [
+            "Add the side lengths together: $10+6+8+4+10+8+6+4$",
+            1
+        ]
+    ],
+    "time": 81.47074222564697,
+    "total_tokens": 5715,
+    "final_answer_tokens": 550,
+    "model": "meta-llama/Llama-Vision-Free"
+}

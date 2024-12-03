@@ -1,0 +1,66 @@
+{
+    "problem": "A regular tetrahedron is a pyramid with four faces, each of which is an equilateral triangle.\n\nLet $V$ be the volume of a regular tetrahedron whose sides each have length $1$. What is the exact value of $V^2$ ?",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "Let $A,B,C,$ and $D$ be the corners of a regular tetrahedron of side length $1$. Let $P$ be the foot of the perpendicular from $D$ to face $ABC$, and let $h$ be the height $DP$: [asy]\nimport three;\ntriple a = (0,0,0);\ntriple b = (1,0,0);\ntriple c = (1/2,sqrt(3)/2,0);\ntriple d = (1/2,sqrt(3)/6,sqrt(6)/3);\ntriple p = (a+b+c)/3;\n\ndraw(surface(a--b--c--cycle),pink,nolight);\ndraw(b--c--d--b);\ndraw(c--a--b,dashed); draw(a--d--p--b,dashed);\ndraw(p+(d-p)*0.08--p+(d-p)*0.08+(b-p)*sqrt(2)*0.08--p+(b-p)*sqrt(2)*0.08);\ndot(a); dot(b); dot(c); dot(d); dot(p);\nlabel(\"$A$\",a,ENE);\nlabel(\"$B$\",b,WSW);\nlabel(\"$C$\",c,ESE);\nlabel(\"$D$\",d,N);\nlabel(\"$P$\",p,E);\nlabel(\"$h$\",0.45*d+0.55*p,W);\n[/asy] Then, by the Pythagorean theorem, we have $$h^2+(PA)^2 = h^2+(PB)^2 = h^2+(PC)^2 = 1,$$so $PA=PB=PC$. The only point on face $ABC$ that is equidistant from $A,B,$ and $C$ is the intersection of the altitudes. If $M$ is the midpoint of $AC$, then $\\triangle CPM$ is a $30^\\circ$-$60^\\circ$-$90^\\circ$ triangle with $CM=\\frac 12$, so $PC=\\frac 2{\\sqrt 3}\\cdot\\frac 12=\\frac 1{\\sqrt 3}$.\n\nTherefore, $$h=\\sqrt{1-(PC)^2} = \\sqrt{1-\\left(\\frac 1{\\sqrt 3}\\right)^2} = \\sqrt{1-\\frac 13} = \\sqrt{\\frac 23} = \\frac{\\sqrt 2}{\\sqrt 3},$$and the volume of tetrahedron $ABCD$ is \\begin{align*}\nV &= \\frac 13\\cdot(\\text{area of }\\triangle ABC)\\cdot h \\\\\n&= \\frac 13\\cdot\\left(\\frac 12\\cdot 1\\cdot \\frac{\\sqrt 3}2\\right)\\cdot \\frac{\\sqrt 2}{\\sqrt 3} \\\\\n&= \\frac{\\sqrt 2}{12};\n\\end{align*}the square of the volume is $$V^2 = \\left(\\frac{\\sqrt 2}{12}\\right)^2 = \\frac{2}{144} = \\boxed{\\frac 1{72}}.$$",
+    "is_solved": false,
+    "model_solution": "Step 1: Recall the formula for the volume of a pyramid, which is \\(\\frac{Bh}{3}\\), where \\(B\\) is the area of the base and \\(h\\) is the height of the pyramid.\nStep 2: For an equilateral triangle with side length 1, the height can be found using the formula $h = \\frac{\\sqrt{3}}{2}a$, where $a$ is the side length of the equilateral triangle.\nStep 3: Let the area of the base be $B$ and the height of the pyramid be $h$. Since the area of an equilateral triangle with side length $1$ is $B = \\frac{\\sqrt{3}}{4}$, the height $h$ of this particular pyramid is $\\frac{\\sqrt{3}}{2}$.\nStep 4: Substitute the values of $B$ and $h$ into the volume formula for a pyramid to find the volume $V$, then square the result to find the value of $V^2$.\nStep 4: Substitute the values of $B = \\frac{\\sqrt{3}}{4}$ and $h = \\frac{\\sqrt{3}}{2}$ into the volume formula for a pyramid, $\\frac{Bh}{3}$, to find the volume $V$, then square the result to find the value of $V^2$.\nSubstitute the values of $B$ and $h$ into the volume formula for a pyramid to find the volume $V$, then square the result to find the value of $V^2$.\n\n$V^2 = \\left( \\frac{\\left(\\frac{\\sqrt{3}}{4}\\right) \\left(\\frac{\\sqrt{3}}{2}\\right)}{3} \\right)^2$\n$V^2 = \\left( \\frac{\\left(\\frac{\\sqrt{3}}{4}\\right) \\left(\\frac{\\sqrt{3}}{2}\\right)}{3} \\right)^2$\n$= \\left( \\frac{\\left(\\frac{3}{4}\\right)}{3} \\right)^2$\n$= \\left( \\frac{3}{12} \\right)^2$\n$= \\left( \\frac{1}{4} \\right)^2$\n$= \\left( \\frac{1}{4} \\right)^2$\n$= \\frac{1}{16}$\n$= \\frac{1}{16}$\n$= \\frac{1}{16}$",
+    "steps": [
+        "Step 1: Recall the formula for the volume of a pyramid, which is \\(\\frac{Bh}{3}\\), where \\(B\\) is the area of the base and \\(h\\) is the height of the pyramid.",
+        "Step 2: For an equilateral triangle with side length 1, the height can be found using the formula $h = \\frac{\\sqrt{3}}{2}a$, where $a$ is the side length of the equilateral triangle.",
+        "Step 3: Let the area of the base be $B$ and the height of the pyramid be $h$. Since the area of an equilateral triangle with side length $1$ is $B = \\frac{\\sqrt{3}}{4}$, the height $h$ of this particular pyramid is $\\frac{\\sqrt{3}}{2}$.",
+        "Step 4: Substitute the values of $B$ and $h$ into the volume formula for a pyramid to find the volume $V$, then square the result to find the value of $V^2$.",
+        "Step 4: Substitute the values of $B = \\frac{\\sqrt{3}}{4}$ and $h = \\frac{\\sqrt{3}}{2}$ into the volume formula for a pyramid, $\\frac{Bh}{3}$, to find the volume $V$, then square the result to find the value of $V^2$.",
+        "Substitute the values of $B$ and $h$ into the volume formula for a pyramid to find the volume $V$, then square the result to find the value of $V^2$.\n\n$V^2 = \\left( \\frac{\\left(\\frac{\\sqrt{3}}{4}\\right) \\left(\\frac{\\sqrt{3}}{2}\\right)}{3} \\right)^2$",
+        "$V^2 = \\left( \\frac{\\left(\\frac{\\sqrt{3}}{4}\\right) \\left(\\frac{\\sqrt{3}}{2}\\right)}{3} \\right)^2$\n$= \\left( \\frac{\\left(\\frac{3}{4}\\right)}{3} \\right)^2$\n$= \\left( \\frac{3}{12} \\right)^2$\n$= \\left( \\frac{1}{4} \\right)^2$",
+        "$= \\left( \\frac{1}{4} \\right)^2$\n$= \\frac{1}{16}$",
+        "$= \\frac{1}{16}$",
+        "$= \\frac{1}{16}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Recall the formula for the volume of a pyramid, which is \\(\\frac{Bh}{3}\\), where \\(B\\) is the area of the base and \\(h\\) is the height of the pyramid.",
+            1
+        ],
+        [
+            "Step 2: For an equilateral triangle with side length 1, the height can be found using the formula $h = \\frac{\\sqrt{3}}{2}a$, where $a$ is the side length of the equilateral triangle.",
+            1
+        ],
+        [
+            "Step 3: Let the area of the base be $B$ and the height of the pyramid be $h$. Since the area of an equilateral triangle with side length $1$ is $B = \\frac{\\sqrt{3}}{4}$, the height $h$ of this particular pyramid is $\\frac{\\sqrt{3}}{2}$.",
+            1
+        ],
+        [
+            "Step 4: Substitute the values of $B$ and $h$ into the volume formula for a pyramid to find the volume $V$, then square the result to find the value of $V^2$.",
+            1
+        ],
+        [
+            "Step 4: Substitute the values of $B = \\frac{\\sqrt{3}}{4}$ and $h = \\frac{\\sqrt{3}}{2}$ into the volume formula for a pyramid, $\\frac{Bh}{3}$, to find the volume $V$, then square the result to find the value of $V^2$.",
+            1
+        ],
+        [
+            "Substitute the values of $B$ and $h$ into the volume formula for a pyramid to find the volume $V$, then square the result to find the value of $V^2$.\n\n$V^2 = \\left( \\frac{\\left(\\frac{\\sqrt{3}}{4}\\right) \\left(\\frac{\\sqrt{3}}{2}\\right)}{3} \\right)^2$",
+            1
+        ],
+        [
+            "$V^2 = \\left( \\frac{\\left(\\frac{\\sqrt{3}}{4}\\right) \\left(\\frac{\\sqrt{3}}{2}\\right)}{3} \\right)^2$\n$= \\left( \\frac{\\left(\\frac{3}{4}\\right)}{3} \\right)^2$\n$= \\left( \\frac{3}{12} \\right)^2$\n$= \\left( \\frac{1}{4} \\right)^2$",
+            1
+        ],
+        [
+            "$= \\left( \\frac{1}{4} \\right)^2$\n$= \\frac{1}{16}$",
+            1
+        ],
+        [
+            "$= \\frac{1}{16}$",
+            1
+        ],
+        [
+            "$= \\frac{1}{16}$",
+            1
+        ]
+    ],
+    "time": 134.43380284309387,
+    "total_tokens": 8898,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

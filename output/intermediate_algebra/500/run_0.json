@@ -1,0 +1,66 @@
+{
+    "problem": "Find the number of ordered triples $(a,b,c)$ of integers with $1 \\le a,$ $b,$ $c \\le 100$ and\n\\[a^2 b + b^2 c + c^2 a = ab^2 + bc^2 + ca^2.\\]",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "The equation $a^2 b + b^2 c + c^2 a - ab^2 - bc^2 - ca^2 = 0$ factors as\n\\[(a - b)(b - c)(c - a) = 0.\\]So, we want at least two of $a,$ $b,$ $c$ to be equal.\n\nThere are $100 \\cdot 99 = 9900$ triples $(a,b,c)$ where $a = b,$ and $c$ is different from both $a$ and $b.$  Similarly, there are 9900 triples where $a = c,$ and $b$ is different from both $a$ and $c,$ and 9900 triples where $b = c,$ and $a$ is different from both $b$ and $c,$  Finally, there are 100 triples of the form $(a,a,a),$ so the total number of such triples is $3 \\cdot 9900 + 100 = \\boxed{29800}.$",
+    "is_solved": false,
+    "model_solution": "Step 1:  We start by examining the given equation $a^2 b + b^2 c + c^2 a = ab^2 + bc^2 + ca^2.$\nStep 2:  Rearranging the terms, we get $a^2 b - ab^2 + b^2 c - bc^2 + c^2 a - ca^2 = 0.$\nStep 3:  Factoring out common terms, we have $ab(a-b) + bc(b-c) + ca(c-a) = 0.$\nStep 4:  This allows us to factor the equation further as $ab(a-b) + bc(b-c) + ca(c-a) = a(b(a-b)) + b(c(b-c)) + c(a(c-a)) = 0.$\nStep 5:  We can then factor the terms $a-b$, $b-c$, and $c-a$, giving us the equation $a(b(a-b)) + b(c(b-c)) + c(a(c-a)) = (a-b)(ab) + (b-c)(bc) + (c-a)(ca) = 0.$\nStep 6:  At this\nNotice that $ab$, $bc$, and $ca$ are all non-negative.\n\nNoting that at least one of $a-b$, $b-c$, or $c-a$ must be non-positive, since their product is zero, from here, we can proceed to analyze the cases where one or more of $a-b$, $b-c$, $c-a$ are non-positive.\nSince at least one of $a-b$, $b-c$, or $c-a$ must be non-positive, we have two cases:\nCase 1: Exactly one of $a-b$, $b-c$, or $c-a$ is non-positive.\nCase 2: Two of $a-b$, $b-c$, or $c-a$ are non-positive.\nStep 2\nLet $x = |a-b|,$ $y = |b-c|,$ $z = |c-a|.$\nSince $a,b,c$ are between $1$ and $100$, the possible values for $x$, $y$, and $z$ are between $0$ and $199$.\n\nWe can rearrange the original equation to $(a-b)(ab) + (b-c)(bc) + (c-a)(ca) = 0.$\nWe know $ab$, $bc$, and $ca$ are non-negative, so $a-b$, $b-c$, $c-a$ are non-positive.\nWe can then consider cases based on whether $a-b$, $b-c$, $c-a$ are non-positive.\n\nCase 1: One of $a-b$, $b-c$, or $c-a$ is non-positive. Then $a-b \\le 0$, $b-c \\ge 0$, $c-a \\ge 0$ or some permutation of this.\n\nCase 2: Two of $a-b$, $b-c$, or $c-a$ are non-positive. Then $a-b \\le 0$, $b-c \\le 0$, $c-a \\ge 0$ or some permutation of this.\nStep 3:\nWLOG, let $a-b \\le 0$, $b-c \\ge 0$, $c-a \\ge 0.$ \nThis means $a \\le b \\le c.$ \n\nWe need to show $a=b=c.$ \n\nSuppose $a < b.$ Then $a-b < 0$ and $b-a > 0.$ \n\nSo, $(b-c)(bc) = -a(b-c) = (a-b)(ab) = -a(b-a) + a^2.$ \n\nThis implies $-a(b-c)=a^2 - a(b-a).$ \n\nExpanding the right-hand side, we have $-a(b-c) = a^2 -ab + a^2.$ \n\nSimplifying, we get $-a(b-c) = 2a^2 - ab.$ \n\nSimplifying further, we have $-a(b-c) = a(2a - b).$ \n\nSince $a$ is a positive integer, it follows that $-a(b-c) \\le 0.$ \n\nSince $a > 0$ and $b-c \\ge 0,$ we have $a(b-c) \\\nStep 4:\nSince $a > 0$ and $b-c \\ge 0,$ we have $a(b-c) \\ge 0.$ \n\nWe can now examine the possible values of $x$, $y$, and $z$ by considering the possible values of $a$, $b$, and $c$.\nLet's consider the range of $x$, $y$, and $z$. We know that $x = |a-b|$, $y = |b-c|$, $z = |c-a|$ are all non-negative integers less than or equal to $199$.\nStep 5:\nWe can generate all possible triples of $(x, y, z)$ such that $x + y + z \\leq 200$.\nLet $x = |a-b|,$ $y = |b-c|,$ $z = |c-a|.$ Since $a,b,c$ are between $1$ and $100$, the possible values for $x$, $y$, and $z$ are between $0$ and $199.$\n\nWe can rearrange the original equation to $(a-b)(ab) + (b-c)(bc) + (c-a)(ca) = 0.$ We know $ab$, $bc$, and $ca$ are non-negative, so $a-b$, $b-c$, $c-a$ are non-positive.\n\nWe can then consider cases based on whether $a-b$, $b-c$, $c-a$ are non-positive.\n\nCase 1: One of $a-b$, $b-c$, or $c-a$ is non-positive. Then $a-b \\le 0$, $b-c \\ge 0$, $c-a \\ge 0$ or some permutation of this.\n\nCase 2: Two of $a-b$, $b-c$, or $c-a$ are non-positive. Then $a-b \\le 0$, $b-c \\le 0$, $c-a\nStep 6:\n$|x - y| \\le z < x + y$",
+    "steps": [
+        "Step 1:  We start by examining the given equation $a^2 b + b^2 c + c^2 a = ab^2 + bc^2 + ca^2.$\nStep 2:  Rearranging the terms, we get $a^2 b - ab^2 + b^2 c - bc^2 + c^2 a - ca^2 = 0.$\nStep 3:  Factoring out common terms, we have $ab(a-b) + bc(b-c) + ca(c-a) = 0.$\nStep 4:  This allows us to factor the equation further as $ab(a-b) + bc(b-c) + ca(c-a) = a(b(a-b)) + b(c(b-c)) + c(a(c-a)) = 0.$\nStep 5:  We can then factor the terms $a-b$, $b-c$, and $c-a$, giving us the equation $a(b(a-b)) + b(c(b-c)) + c(a(c-a)) = (a-b)(ab) + (b-c)(bc) + (c-a)(ca) = 0.$\nStep 6:  At this",
+        "Notice that $ab$, $bc$, and $ca$ are all non-negative.\n\nNoting that at least one of $a-b$, $b-c$, or $c-a$ must be non-positive, since their product is zero, from here, we can proceed to analyze the cases where one or more of $a-b$, $b-c$, $c-a$ are non-positive.",
+        "Since at least one of $a-b$, $b-c$, or $c-a$ must be non-positive, we have two cases:\nCase 1: Exactly one of $a-b$, $b-c$, or $c-a$ is non-positive.\nCase 2: Two of $a-b$, $b-c$, or $c-a$ are non-positive.",
+        "Step 2\nLet $x = |a-b|,$ $y = |b-c|,$ $z = |c-a|.$",
+        "Since $a,b,c$ are between $1$ and $100$, the possible values for $x$, $y$, and $z$ are between $0$ and $199$.\n\nWe can rearrange the original equation to $(a-b)(ab) + (b-c)(bc) + (c-a)(ca) = 0.$\nWe know $ab$, $bc$, and $ca$ are non-negative, so $a-b$, $b-c$, $c-a$ are non-positive.\nWe can then consider cases based on whether $a-b$, $b-c$, $c-a$ are non-positive.\n\nCase 1: One of $a-b$, $b-c$, or $c-a$ is non-positive. Then $a-b \\le 0$, $b-c \\ge 0$, $c-a \\ge 0$ or some permutation of this.\n\nCase 2: Two of $a-b$, $b-c$, or $c-a$ are non-positive. Then $a-b \\le 0$, $b-c \\le 0$, $c-a \\ge 0$ or some permutation of this.",
+        "Step 3:\nWLOG, let $a-b \\le 0$, $b-c \\ge 0$, $c-a \\ge 0.$ \nThis means $a \\le b \\le c.$ \n\nWe need to show $a=b=c.$ \n\nSuppose $a < b.$ Then $a-b < 0$ and $b-a > 0.$ \n\nSo, $(b-c)(bc) = -a(b-c) = (a-b)(ab) = -a(b-a) + a^2.$ \n\nThis implies $-a(b-c)=a^2 - a(b-a).$ \n\nExpanding the right-hand side, we have $-a(b-c) = a^2 -ab + a^2.$ \n\nSimplifying, we get $-a(b-c) = 2a^2 - ab.$ \n\nSimplifying further, we have $-a(b-c) = a(2a - b).$ \n\nSince $a$ is a positive integer, it follows that $-a(b-c) \\le 0.$ \n\nSince $a > 0$ and $b-c \\ge 0,$ we have $a(b-c) \\",
+        "Step 4:\nSince $a > 0$ and $b-c \\ge 0,$ we have $a(b-c) \\ge 0.$ \n\nWe can now examine the possible values of $x$, $y$, and $z$ by considering the possible values of $a$, $b$, and $c$.\nLet's consider the range of $x$, $y$, and $z$. We know that $x = |a-b|$, $y = |b-c|$, $z = |c-a|$ are all non-negative integers less than or equal to $199$.",
+        "Step 5:\nWe can generate all possible triples of $(x, y, z)$ such that $x + y + z \\leq 200$.",
+        "Let $x = |a-b|,$ $y = |b-c|,$ $z = |c-a|.$ Since $a,b,c$ are between $1$ and $100$, the possible values for $x$, $y$, and $z$ are between $0$ and $199.$\n\nWe can rearrange the original equation to $(a-b)(ab) + (b-c)(bc) + (c-a)(ca) = 0.$ We know $ab$, $bc$, and $ca$ are non-negative, so $a-b$, $b-c$, $c-a$ are non-positive.\n\nWe can then consider cases based on whether $a-b$, $b-c$, $c-a$ are non-positive.\n\nCase 1: One of $a-b$, $b-c$, or $c-a$ is non-positive. Then $a-b \\le 0$, $b-c \\ge 0$, $c-a \\ge 0$ or some permutation of this.\n\nCase 2: Two of $a-b$, $b-c$, or $c-a$ are non-positive. Then $a-b \\le 0$, $b-c \\le 0$, $c-a",
+        "Step 6:\n$|x - y| \\le z < x + y$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We start by examining the given equation $a^2 b + b^2 c + c^2 a = ab^2 + bc^2 + ca^2.$\nStep 2:  Rearranging the terms, we get $a^2 b - ab^2 + b^2 c - bc^2 + c^2 a - ca^2 = 0.$\nStep 3:  Factoring out common terms, we have $ab(a-b) + bc(b-c) + ca(c-a) = 0.$\nStep 4:  This allows us to factor the equation further as $ab(a-b) + bc(b-c) + ca(c-a) = a(b(a-b)) + b(c(b-c)) + c(a(c-a)) = 0.$\nStep 5:  We can then factor the terms $a-b$, $b-c$, and $c-a$, giving us the equation $a(b(a-b)) + b(c(b-c)) + c(a(c-a)) = (a-b)(ab) + (b-c)(bc) + (c-a)(ca) = 0.$\nStep 6:  At this",
+            1
+        ],
+        [
+            "Notice that $ab$, $bc$, and $ca$ are all non-negative.\n\nNoting that at least one of $a-b$, $b-c$, or $c-a$ must be non-positive, since their product is zero, from here, we can proceed to analyze the cases where one or more of $a-b$, $b-c$, $c-a$ are non-positive.",
+            1
+        ],
+        [
+            "Since at least one of $a-b$, $b-c$, or $c-a$ must be non-positive, we have two cases:\nCase 1: Exactly one of $a-b$, $b-c$, or $c-a$ is non-positive.\nCase 2: Two of $a-b$, $b-c$, or $c-a$ are non-positive.",
+            1
+        ],
+        [
+            "Step 2\nLet $x = |a-b|,$ $y = |b-c|,$ $z = |c-a|.$",
+            1
+        ],
+        [
+            "Since $a,b,c$ are between $1$ and $100$, the possible values for $x$, $y$, and $z$ are between $0$ and $199$.\n\nWe can rearrange the original equation to $(a-b)(ab) + (b-c)(bc) + (c-a)(ca) = 0.$\nWe know $ab$, $bc$, and $ca$ are non-negative, so $a-b$, $b-c$, $c-a$ are non-positive.\nWe can then consider cases based on whether $a-b$, $b-c$, $c-a$ are non-positive.\n\nCase 1: One of $a-b$, $b-c$, or $c-a$ is non-positive. Then $a-b \\le 0$, $b-c \\ge 0$, $c-a \\ge 0$ or some permutation of this.\n\nCase 2: Two of $a-b$, $b-c$, or $c-a$ are non-positive. Then $a-b \\le 0$, $b-c \\le 0$, $c-a \\ge 0$ or some permutation of this.",
+            1
+        ],
+        [
+            "Step 3:\nWLOG, let $a-b \\le 0$, $b-c \\ge 0$, $c-a \\ge 0.$ \nThis means $a \\le b \\le c.$ \n\nWe need to show $a=b=c.$ \n\nSuppose $a < b.$ Then $a-b < 0$ and $b-a > 0.$ \n\nSo, $(b-c)(bc) = -a(b-c) = (a-b)(ab) = -a(b-a) + a^2.$ \n\nThis implies $-a(b-c)=a^2 - a(b-a).$ \n\nExpanding the right-hand side, we have $-a(b-c) = a^2 -ab + a^2.$ \n\nSimplifying, we get $-a(b-c) = 2a^2 - ab.$ \n\nSimplifying further, we have $-a(b-c) = a(2a - b).$ \n\nSince $a$ is a positive integer, it follows that $-a(b-c) \\le 0.$ \n\nSince $a > 0$ and $b-c \\ge 0,$ we have $a(b-c) \\",
+            1
+        ],
+        [
+            "Step 4:\nSince $a > 0$ and $b-c \\ge 0,$ we have $a(b-c) \\ge 0.$ \n\nWe can now examine the possible values of $x$, $y$, and $z$ by considering the possible values of $a$, $b$, and $c$.\nLet's consider the range of $x$, $y$, and $z$. We know that $x = |a-b|$, $y = |b-c|$, $z = |c-a|$ are all non-negative integers less than or equal to $199$.",
+            1
+        ],
+        [
+            "Step 5:\nWe can generate all possible triples of $(x, y, z)$ such that $x + y + z \\leq 200$.",
+            1
+        ],
+        [
+            "Let $x = |a-b|,$ $y = |b-c|,$ $z = |c-a|.$ Since $a,b,c$ are between $1$ and $100$, the possible values for $x$, $y$, and $z$ are between $0$ and $199.$\n\nWe can rearrange the original equation to $(a-b)(ab) + (b-c)(bc) + (c-a)(ca) = 0.$ We know $ab$, $bc$, and $ca$ are non-negative, so $a-b$, $b-c$, $c-a$ are non-positive.\n\nWe can then consider cases based on whether $a-b$, $b-c$, $c-a$ are non-positive.\n\nCase 1: One of $a-b$, $b-c$, or $c-a$ is non-positive. Then $a-b \\le 0$, $b-c \\ge 0$, $c-a \\ge 0$ or some permutation of this.\n\nCase 2: Two of $a-b$, $b-c$, or $c-a$ are non-positive. Then $a-b \\le 0$, $b-c \\le 0$, $c-a",
+            1
+        ],
+        [
+            "Step 6:\n$|x - y| \\le z < x + y$",
+            1
+        ]
+    ],
+    "time": 134.10923600196838,
+    "total_tokens": 18121,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

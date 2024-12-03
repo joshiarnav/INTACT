@@ -1,0 +1,61 @@
+{
+    "problem": "Each of the first eight prime numbers is placed in a bowl. Two primes are drawn without replacement. What is the probability, expressed as a common fraction, that the sum of the two numbers drawn is a prime number?",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "The sum of two prime numbers is greater than $2$, so if this sum is to be prime, it must be odd.  Therefore, one of the primes in the sum must be $2$, and the other must be odd.  The first eight prime numbers are $2, 3, 5, 7, 11, 13, 17,$ and $19$.  Of the odd ones, only $3, 5, 11$, and $17$ added to $2$ give a prime number.  Therefore, there are $4$ possible pairs whose sum is prime.  The total number of pairs is $\\dbinom{8}{2}=28$.  So the probability is $\\frac{4}{28}=\\boxed{\\frac17}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: List the first eight prime numbers: 2, 3, 5, 7, 11, 13, 17, 19.\nStep 2: Calculate all the possible pairs of prime numbers that can be drawn from the bowl, and identify which pairs have a sum that is also a prime number.\nStep 3:\n2 and 3, 2 and 5, 2 and 11, 2 and 17, 3 and 2, 3 and 5, 3 and 11, 3 and 13, 3 and 17, 3 and 19, 5 and 2, 5 and 3, 5 and 7, 5 and 11, 5 and 13, 5 and 17, 5 and 19, 7 and 2, 7 and 3, 7 and 5, 7 and 11, 7 and 13, 7 and 17, 7 and 19, 11 and 2, 11 and 3, 11 and 5, 11 and 7, 11 and 13, 11 and 17, 11 and 19, 13 and 2, 13 and 3, 13 and 5, 13 and 7, 13 and 11, 13 and 17, 13 and 19, 17 and 2, 17 and 3, 17 and 5,\n17 and 11, 17 and 13, 17 and 19, 19 and 2, 19 and 3, 19 and 5, 19 and 7, 19 and 11, 19 and 13, 19 and 17\nStep 4: \n2 + 3 = 5 (prime), 2 + 5 = 7 (prime), 2 + 11 = 13 (prime), 2 + 17 = 19 (prime); \n3 + 2 = 5 (prime), 3 + 5 = 8 (not prime), 3 + 11 = 14 (not prime), 3 + 13 = 16 (not prime), 3 + 17 = 20 (not prime), 3 + 19 = 22 (not prime); \n5 + 2 = 7 (prime), 5 + 3 = 8 (not prime), 5 + 7 = 12 (not prime), 5 + 11 = 16 (not prime), 5 + 13 = 18 (not prime), 5 + 17 = 22 (not prime), 5 + 19 = 24 (not prime); \n7 + 2 = 9 (not prime), 7 + 3 = 10 (not prime), 7 + 5 = 12 (not prime), 7 + 11 = 18 (not prime),\n7 + 13 = 20 (not prime), 7 + 17 = 24 (not prime), 7 + 19 = 26 (not prime), \n11 + 2 = 13 (prime), 11 + 3 = 14 (not prime), 11 + 5 = 16 (not prime), 11 + 7 = 18 (not prime), 11 + 13 = 24 (not prime), 11 + 17 = 28 (not prime), 11 + 19 = 30 (not prime); \n13 + 2 = 15 (not prime), 13 + 3 = 16 (not prime), 13 + 5 = 18 (not prime), 13 + 7 = 20 (not prime), 13 + 11 = 24 (not prime), 13 + 17 = 30 (not prime), 13 + 19 = 32 (not prime); \n17 + 2 = 19 (prime), 17 + 3 = 20 (not prime), 17 + 5 = 22 (not prime), 17 + 7 = 24 (not prime),\nStep 5: Calculate the probability by dividing the number of pairs with a sum that is a prime number by the total number of possible pairs.\nStep 6: \nIdentify the number of pairs whose sum is a prime number: 2 + 3, 2 + 5, 2 + 11, 2 + 17, 5 + 2, 11 + 2, 17 + 2.\nCalculate the total number of possible pairs: 28.\nCalculate the probability: 5/28.\nStep 5: Calculate the probability by dividing the number of pairs with a sum that is a prime number by the total number of possible pairs.",
+    "steps": [
+        "Step 1: List the first eight prime numbers: 2, 3, 5, 7, 11, 13, 17, 19.",
+        "Step 2: Calculate all the possible pairs of prime numbers that can be drawn from the bowl, and identify which pairs have a sum that is also a prime number.",
+        "Step 3:\n2 and 3, 2 and 5, 2 and 11, 2 and 17, 3 and 2, 3 and 5, 3 and 11, 3 and 13, 3 and 17, 3 and 19, 5 and 2, 5 and 3, 5 and 7, 5 and 11, 5 and 13, 5 and 17, 5 and 19, 7 and 2, 7 and 3, 7 and 5, 7 and 11, 7 and 13, 7 and 17, 7 and 19, 11 and 2, 11 and 3, 11 and 5, 11 and 7, 11 and 13, 11 and 17, 11 and 19, 13 and 2, 13 and 3, 13 and 5, 13 and 7, 13 and 11, 13 and 17, 13 and 19, 17 and 2, 17 and 3, 17 and 5,",
+        "17 and 11, 17 and 13, 17 and 19, 19 and 2, 19 and 3, 19 and 5, 19 and 7, 19 and 11, 19 and 13, 19 and 17",
+        "Step 4: \n2 + 3 = 5 (prime), 2 + 5 = 7 (prime), 2 + 11 = 13 (prime), 2 + 17 = 19 (prime); \n3 + 2 = 5 (prime), 3 + 5 = 8 (not prime), 3 + 11 = 14 (not prime), 3 + 13 = 16 (not prime), 3 + 17 = 20 (not prime), 3 + 19 = 22 (not prime); \n5 + 2 = 7 (prime), 5 + 3 = 8 (not prime), 5 + 7 = 12 (not prime), 5 + 11 = 16 (not prime), 5 + 13 = 18 (not prime), 5 + 17 = 22 (not prime), 5 + 19 = 24 (not prime); \n7 + 2 = 9 (not prime), 7 + 3 = 10 (not prime), 7 + 5 = 12 (not prime), 7 + 11 = 18 (not prime),",
+        "7 + 13 = 20 (not prime), 7 + 17 = 24 (not prime), 7 + 19 = 26 (not prime), \n11 + 2 = 13 (prime), 11 + 3 = 14 (not prime), 11 + 5 = 16 (not prime), 11 + 7 = 18 (not prime), 11 + 13 = 24 (not prime), 11 + 17 = 28 (not prime), 11 + 19 = 30 (not prime); \n13 + 2 = 15 (not prime), 13 + 3 = 16 (not prime), 13 + 5 = 18 (not prime), 13 + 7 = 20 (not prime), 13 + 11 = 24 (not prime), 13 + 17 = 30 (not prime), 13 + 19 = 32 (not prime); \n17 + 2 = 19 (prime), 17 + 3 = 20 (not prime), 17 + 5 = 22 (not prime), 17 + 7 = 24 (not prime),",
+        "Step 5: Calculate the probability by dividing the number of pairs with a sum that is a prime number by the total number of possible pairs.",
+        "Step 6: \nIdentify the number of pairs whose sum is a prime number: 2 + 3, 2 + 5, 2 + 11, 2 + 17, 5 + 2, 11 + 2, 17 + 2.\nCalculate the total number of possible pairs: 28.\nCalculate the probability: 5/28.",
+        "Step 5: Calculate the probability by dividing the number of pairs with a sum that is a prime number by the total number of possible pairs."
+    ],
+    "full_steps": [
+        [
+            "Step 1: List the first eight prime numbers: 2, 3, 5, 7, 11, 13, 17, 19.",
+            1
+        ],
+        [
+            "Step 2: Calculate all the possible pairs of prime numbers that can be drawn from the bowl, and identify which pairs have a sum that is also a prime number.",
+            1
+        ],
+        [
+            "Step 3:\n2 and 3, 2 and 5, 2 and 11, 2 and 17, 3 and 2, 3 and 5, 3 and 11, 3 and 13, 3 and 17, 3 and 19, 5 and 2, 5 and 3, 5 and 7, 5 and 11, 5 and 13, 5 and 17, 5 and 19, 7 and 2, 7 and 3, 7 and 5, 7 and 11, 7 and 13, 7 and 17, 7 and 19, 11 and 2, 11 and 3, 11 and 5, 11 and 7, 11 and 13, 11 and 17, 11 and 19, 13 and 2, 13 and 3, 13 and 5, 13 and 7, 13 and 11, 13 and 17, 13 and 19, 17 and 2, 17 and 3, 17 and 5,",
+            1
+        ],
+        [
+            "17 and 11, 17 and 13, 17 and 19, 19 and 2, 19 and 3, 19 and 5, 19 and 7, 19 and 11, 19 and 13, 19 and 17",
+            1
+        ],
+        [
+            "Step 4: \n2 + 3 = 5 (prime), 2 + 5 = 7 (prime), 2 + 11 = 13 (prime), 2 + 17 = 19 (prime); \n3 + 2 = 5 (prime), 3 + 5 = 8 (not prime), 3 + 11 = 14 (not prime), 3 + 13 = 16 (not prime), 3 + 17 = 20 (not prime), 3 + 19 = 22 (not prime); \n5 + 2 = 7 (prime), 5 + 3 = 8 (not prime), 5 + 7 = 12 (not prime), 5 + 11 = 16 (not prime), 5 + 13 = 18 (not prime), 5 + 17 = 22 (not prime), 5 + 19 = 24 (not prime); \n7 + 2 = 9 (not prime), 7 + 3 = 10 (not prime), 7 + 5 = 12 (not prime), 7 + 11 = 18 (not prime),",
+            1
+        ],
+        [
+            "7 + 13 = 20 (not prime), 7 + 17 = 24 (not prime), 7 + 19 = 26 (not prime), \n11 + 2 = 13 (prime), 11 + 3 = 14 (not prime), 11 + 5 = 16 (not prime), 11 + 7 = 18 (not prime), 11 + 13 = 24 (not prime), 11 + 17 = 28 (not prime), 11 + 19 = 30 (not prime); \n13 + 2 = 15 (not prime), 13 + 3 = 16 (not prime), 13 + 5 = 18 (not prime), 13 + 7 = 20 (not prime), 13 + 11 = 24 (not prime), 13 + 17 = 30 (not prime), 13 + 19 = 32 (not prime); \n17 + 2 = 19 (prime), 17 + 3 = 20 (not prime), 17 + 5 = 22 (not prime), 17 + 7 = 24 (not prime),",
+            1
+        ],
+        [
+            "Step 5: Calculate the probability by dividing the number of pairs with a sum that is a prime number by the total number of possible pairs.",
+            1
+        ],
+        [
+            "Step 6: \nIdentify the number of pairs whose sum is a prime number: 2 + 3, 2 + 5, 2 + 11, 2 + 17, 5 + 2, 11 + 2, 17 + 2.\nCalculate the total number of possible pairs: 28.\nCalculate the probability: 5/28.",
+            1
+        ],
+        [
+            "Step 5: Calculate the probability by dividing the number of pairs with a sum that is a prime number by the total number of possible pairs.",
+            1
+        ]
+    ],
+    "time": 123.05004334449768,
+    "total_tokens": 12351,
+    "final_answer_tokens": 1116,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,31 @@
+{
+    "problem": "Point $P$ is selected at random from the interior of the pentagon with vertices $A=(0,2)$, $B= (4,0)$, $C = (2\\pi +1, 0)$, $D=(2\\pi\n+1,4)$, and $E=(0,4)$. What is the probability that $\\angle APB$ is obtuse? Express your answer as a common fraction.\n\n[asy]\npair A,B,C,D,I;\nA=(0,2);\nB=(4,0);\nC=(7.3,0);\nD=(7.3,4);\nI=(0,4);\ndraw(A--B--C--D--I--cycle);\nlabel(\"$A$\",A,W);\nlabel(\"$B$\",B,S);\nlabel(\"$C$\",C,E);\nlabel(\"$D$\",D,E);\nlabel(\"$E$\",I,W);\n[/asy]",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "Since $\\angle APB = 90^{\\circ}$ if and only if $P$ lies on the semicircle with center $(2,1)$ and radius $\\sqrt{5}$, the angle is obtuse if and only if the point $P$ lies inside this semicircle. The semicircle lies entirely inside the pentagon, since the distance, 3, from $(2,1)$ to $\\overline{DE}$ is greater than the radius of the circle. Thus the probability that the angle is obtuse is the ratio of the area of the semicircle to the area of the pentagon.\n\n[asy]\npair A,B,C,D,I;\nA=(0,2);\nB=(4,0);\nC=(7.3,0);\nD=(7.3,4);\nI=(0,4);\ndraw(A--B--C--D--I--cycle);\nlabel(\"$A$\",A,W);\nlabel(\"$B$\",B,S);\nlabel(\"$C$\",C,E);\nlabel(\"$D$\",D,E);\nlabel(\"$E$\",I,W);\ndraw(A--(0,0)--B,dashed);\ndraw((3,3)..A--B..cycle,dashed);\ndot((2,1));\n[/asy] Let $O=(0,0)$, $A=(0,2)$, $B=(4,0)$, $C=(2\\pi+1,0)$, $D=(2\\pi+1,4)$, and $E=(0,4)$. Then the area of the pentagon is $$[ABCDE]=[OCDE]-[OAB] = 4\\cdot(2\\pi+1)-\\frac{1}{2}(2\\cdot4) = 8\\pi,$$and the area of the semicircle is $$\\frac{1}{2}\\pi(\\sqrt{5})^2 = \\frac{5}{2}\\pi.$$The probability is $$\\frac{\\frac{5}{2}\\pi}{8\\pi} = \\boxed{\\frac{5}{16}}.$$",
+    "is_solved": true,
+    "model_solution": "Step 1:  The problem asks for the probability that angle $APB$ is obtuse when point $P$ is selected at random from the interior of the given pentagon $ABCDE$.\nStep 2:  Since the angle $APB$ is obtuse, it must lie in the semicircle with diameter $\\overline{AB}$. This is because the angle subtended by a diameter is always right.\nStep 3:  So, the condition for $\\angle APB$ to be obtuse is that point $P$ must lie inside the semicircle with diameter $\\overline{AB}$.\nStep 4:  To find the probability, we need to calculate the ratio of the area of the semicircle to the area of the pentagon $ABCDE$.\nStep 5:  The area of the pentagon $ABCDE$ can be found by subtracting the area of $\\triangle OAB$ from the area of $\\triangle OCDE$.\nStep 6:  We can find the area of $\\triangle OAB$ by using the formula for the area of a triangle and the coordinates of points $A$ and $B$.\nStep 7:  The area of $\\\nStep 8:  The area of the pentagon $ABCDE$ is $\\frac{1}{2}(4\\cdot 2) + \\frac{1}{2}(2\\pi+1\\cdot 4) - \\frac{1}{2}(2\\cdot 2) = 4 + \\pi$.\nStep 9:  The semicircle with diameter $\\overline{AB}$ has a radius of 2, so its area is $\\frac{1}{2}\\pi(2)^2 = 2\\pi$.\n\nFinal Answer: The final answer is: $\\boxed{\\frac{\\pi}{4+\\pi}}$",
+    "steps": [
+        "Step 1:  The problem asks for the probability that angle $APB$ is obtuse when point $P$ is selected at random from the interior of the given pentagon $ABCDE$.\nStep 2:  Since the angle $APB$ is obtuse, it must lie in the semicircle with diameter $\\overline{AB}$. This is because the angle subtended by a diameter is always right.\nStep 3:  So, the condition for $\\angle APB$ to be obtuse is that point $P$ must lie inside the semicircle with diameter $\\overline{AB}$.\nStep 4:  To find the probability, we need to calculate the ratio of the area of the semicircle to the area of the pentagon $ABCDE$.\nStep 5:  The area of the pentagon $ABCDE$ can be found by subtracting the area of $\\triangle OAB$ from the area of $\\triangle OCDE$.\nStep 6:  We can find the area of $\\triangle OAB$ by using the formula for the area of a triangle and the coordinates of points $A$ and $B$.\nStep 7:  The area of $\\",
+        "Step 8:  The area of the pentagon $ABCDE$ is $\\frac{1}{2}(4\\cdot 2) + \\frac{1}{2}(2\\pi+1\\cdot 4) - \\frac{1}{2}(2\\cdot 2) = 4 + \\pi$.",
+        "Step 9:  The semicircle with diameter $\\overline{AB}$ has a radius of 2, so its area is $\\frac{1}{2}\\pi(2)^2 = 2\\pi$.\n\nFinal Answer: The final answer is: $\\boxed{\\frac{\\pi}{4+\\pi}}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  The problem asks for the probability that angle $APB$ is obtuse when point $P$ is selected at random from the interior of the given pentagon $ABCDE$.\nStep 2:  Since the angle $APB$ is obtuse, it must lie in the semicircle with diameter $\\overline{AB}$. This is because the angle subtended by a diameter is always right.\nStep 3:  So, the condition for $\\angle APB$ to be obtuse is that point $P$ must lie inside the semicircle with diameter $\\overline{AB}$.\nStep 4:  To find the probability, we need to calculate the ratio of the area of the semicircle to the area of the pentagon $ABCDE$.\nStep 5:  The area of the pentagon $ABCDE$ can be found by subtracting the area of $\\triangle OAB$ from the area of $\\triangle OCDE$.\nStep 6:  We can find the area of $\\triangle OAB$ by using the formula for the area of a triangle and the coordinates of points $A$ and $B$.\nStep 7:  The area of $\\",
+            1
+        ],
+        [
+            "Step 8:  The area of the pentagon $ABCDE$ is $\\frac{1}{2}(4\\cdot 2) + \\frac{1}{2}(2\\pi+1\\cdot 4) - \\frac{1}{2}(2\\cdot 2) = 4 + \\pi$.",
+            1
+        ],
+        [
+            "Step 9:  The semicircle with diameter $\\overline{AB}$ has a radius of 2, so its area is $\\frac{1}{2}\\pi(2)^2 = 2\\pi$.\n\nFinal Answer: The final answer is: $\\boxed{\\frac{\\pi}{4+\\pi}}$",
+            1
+        ]
+    ],
+    "time": 41.78078508377075,
+    "total_tokens": 3397,
+    "final_answer_tokens": 631,
+    "model": "meta-llama/Llama-Vision-Free"
+}

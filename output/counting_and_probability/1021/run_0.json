@@ -1,0 +1,51 @@
+{
+    "problem": "How many ways are there to choose 3 cards from a standard deck of 52 cards, if all three cards must be of different suits?  (Assume that the order of the cards does not matter.)",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "First, we choose the suits. There are $\\binom{4}{3}=4$ ways to do this. Then, we choose one of 13 cards from each of the chosen suits. There are $13^3=2197$ ways to do this. The total number of ways to choose 3 cards of different suits is therefore $4\\cdot 2197=\\boxed{8788}$.",
+    "is_solved": true,
+    "model_solution": "Choose the suits: \nC(4, 3) = 4\nChoose the cards in each of the chosen suits: \nC(13, 1) \u00d7 C(13, 1) \u00d7 C(13, 1) = 13 \u00d7 13 \u00d7 13 = 2197\nMultiply the results of the previous steps: \n4 \u00d7 2197 = 8788\nMultiply the result of the previous step by the number of orders ways to arrange the 3 chosen suits: \n4! = 24\nMultiply the result of the previous step by the number of orders ways to arrange the 3 chosen suits: \n8788 \u00d7 24 = 211072\nMultiply the result of the previous step by the number of orders ways to arrange the 3 chosen suits: \n8788 \u00d7 24\nFinal Answer: 211072",
+    "steps": [
+        "Choose the suits: \nC(4, 3) = 4",
+        "Choose the cards in each of the chosen suits: \nC(13, 1) \u00d7 C(13, 1) \u00d7 C(13, 1) = 13 \u00d7 13 \u00d7 13 = 2197",
+        "Multiply the results of the previous steps: \n4 \u00d7 2197 = 8788",
+        "Multiply the result of the previous step by the number of orders ways to arrange the 3 chosen suits: \n4! = 24",
+        "Multiply the result of the previous step by the number of orders ways to arrange the 3 chosen suits: \n8788 \u00d7 24 = 211072",
+        "Multiply the result of the previous step by the number of orders ways to arrange the 3 chosen suits: \n8788 \u00d7 24",
+        "Final Answer: 211072"
+    ],
+    "full_steps": [
+        [
+            "Choose the suits: \nC(4, 3) = 4",
+            1
+        ],
+        [
+            "Choose the cards in each of the chosen suits: \nC(13, 1) \u00d7 C(13, 1) \u00d7 C(13, 1) = 13 \u00d7 13 \u00d7 13 = 2197",
+            1
+        ],
+        [
+            "Multiply the results of the previous steps: \n4 \u00d7 2197 = 8788",
+            1
+        ],
+        [
+            "Multiply the result of the previous step by the number of orders ways to arrange the 3 chosen suits: \n4! = 24",
+            1
+        ],
+        [
+            "Multiply the result of the previous step by the number of orders ways to arrange the 3 chosen suits: \n8788 \u00d7 24 = 211072",
+            1
+        ],
+        [
+            "Multiply the result of the previous step by the number of orders ways to arrange the 3 chosen suits: \n8788 \u00d7 24",
+            1
+        ],
+        [
+            "Final Answer: 211072",
+            1
+        ]
+    ],
+    "time": 92.65332746505737,
+    "total_tokens": 3030,
+    "final_answer_tokens": 278,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,66 @@
+{
+    "problem": "For a positive integer $n$ and an angle $\\theta,$ $\\cos \\theta$ is irrational, but $\\cos 2 \\theta,$ $\\cos 3 \\theta,$ $\\dots,$ $\\cos n \\theta$ are all rational.  Find the largest possible value of $n.$",
+    "level": "Level 5",
+    "type": "Precalculus",
+    "solution": "By sum-to-product,\n\\[\\cos n \\theta + \\cos ((n - 2) \\theta) = 2 \\cos \\theta \\cos ((n - 1) \\theta),\\]or\n\\[\\cos n \\theta = 2 \\cos \\theta \\cos ((n - 1) \\theta) - \\cos ((n - 2) \\theta)\\]for all $n \\ge 2.$  In particular, for $n = 2,$\n\\[\\cos 2 \\theta = 2 \\cos^2 \\theta - 1,\\]and for $n = 3,$\n\\begin{align*}\n\\cos 3 \\theta &= 2 \\cos \\theta \\cos 2 \\theta - \\cos \\theta \\\\\n&= \\cos \\theta (2 \\cos 2 \\theta - 1).\n\\end{align*}Suppose $\\cos \\theta$ is irrational, and $\\cos 2 \\theta$ and $\\cos 3 \\theta$ are rational.  Then $2 \\cos 2 \\theta - 1$ is also rational, so we have a rational number that is the product of an irrational number and a rational number.  The only way this can occur is if both rational numbers are 0.  Thus, $2 \\cos 2 \\theta - 1 = 0.$  Then\n\\[2 (2 \\cos^2 \\theta - 1) - 1 = 0,\\]so $\\cos^2 \\theta = \\frac{3}{4}.$  Hence, $\\cos \\theta = \\pm \\frac{\\sqrt{3}}{2}.$\n\nIf $\\cos \\theta = \\frac{\\sqrt{3}}{2},$ then\n\\begin{align*}\n\\cos 2 \\theta &= 2 \\cos^2 \\theta - 1 = \\frac{1}{2}, \\\\\n\\cos 3 \\theta &= 2 \\cos \\theta \\cos 2 \\theta - \\cos \\theta = 0, \\\\\n\\cos 4 \\theta &= 2 \\cos \\theta \\cos 3 \\theta - \\cos 2 \\theta = -\\frac{1}{2}, \\\\\n\\cos 5 \\theta &= 2 \\cos \\theta \\cos 4 \\theta - \\cos 3 \\theta = -\\frac{\\sqrt{3}}{2},\n\\end{align*}so the largest possible value of $n$ is 4.\n\nSimilarly, if $\\cos \\theta = -\\frac{\\sqrt{3}}{2},$ then\n\\begin{align*}\n\\cos 2 \\theta &= 2 \\cos^2 \\theta - 1 = \\frac{1}{2}, \\\\\n\\cos 3 \\theta &= 2 \\cos \\theta \\cos 2 \\theta - \\cos \\theta = 0, \\\\\n\\cos 4 \\theta &= 2 \\cos \\theta \\cos 3 \\theta - \\cos 2 \\theta = -\\frac{1}{2}, \\\\\n\\cos 5 \\theta &= 2 \\cos \\theta \\cos 4 \\theta - \\cos 3 \\theta = \\frac{\\sqrt{3}}{2},\n\\end{align*}so again the largest possible value of $n$ is 4.\n\nTherefore, the largest possible value of $n$ is $\\boxed{4}.$",
+    "is_solved": false,
+    "model_solution": "Step 1:  We are given that $\\cos \\theta$ is irrational, and we need to find the largest possible value of $n$ for which $\\cos 2 \\theta,$ $\\cos 3 \\theta,$ $\\dots,$ $\\cos n \\theta$ are all rational.\nStep 2:  To approach this problem, we can start by considering the values of $\\cos 2 \\theta,$ $\\cos 3 \\theta,$ $\\dots,$ $\\cos n \\theta$ and try to relate them to each other using trigonometric identities.\nStep 3:  We can use the given information that $\\cos \\theta$ is irrational and try to derive conditions for $\\cos 2 \\theta$ to be rational.\nStep 4:  $\\cos 2 \\theta = 2 \\cos^2 \\theta - 1.$\nStep 5:  $\\cos 2 \\theta$ is rational if and only if $\\cos \\theta$ is rational, so it is rational.\nStep 6:  $\\cos 3 \\theta = \\cos (2 \\theta + \\theta) = \\cos 2 \\theta \\cos \\theta - \\sin 2 \\theta \\sin \\theta = (2 \\cos^2 \\theta - 1) \\cos \\theta - 2 \\sin^2 \\theta \\cos \\theta.$\n$\\cos 3 \\theta = 2 \\cos^2 \\theta \\cos \\theta - \\cos \\theta - 2 \\sin^2 \\theta \\cos \\theta.$\nStep 7:  $\\cos 3 \\theta$ is rational if and only if $\\sin \\theta$ is rational, so it is rational.\nStep 8:  $\\cos 4 \\theta = 2 \\cos^2 2 \\theta - 1 = 4 \\cos^2 \\theta - 3.$\n$\\cos 4 \\theta$ is rational if and only if $\\cos \\theta$ is rational, so since $\\cos 4 \\theta$ is rational, $\\cos \\theta$ is rational, which contradicts the given information.\nStep 9:  $\\cos 5 \\theta$ is not rational.\nStep 10: $\\cos 5 \\theta = \\cos (4 \\theta + \\theta) = \\cos 4 \\theta \\cos \\theta - \\sin 4 \\theta \\sin \\theta = (4 \\cos^2 \\theta - 3) \\cos \\theta - 4 \\sin^2 2 \\theta \\cos \\theta.$",
+    "steps": [
+        "Step 1:  We are given that $\\cos \\theta$ is irrational, and we need to find the largest possible value of $n$ for which $\\cos 2 \\theta,$ $\\cos 3 \\theta,$ $\\dots,$ $\\cos n \\theta$ are all rational.\nStep 2:  To approach this problem, we can start by considering the values of $\\cos 2 \\theta,$ $\\cos 3 \\theta,$ $\\dots,$ $\\cos n \\theta$ and try to relate them to each other using trigonometric identities.\nStep 3:  We can use the given information that $\\cos \\theta$ is irrational and try to derive conditions for $\\cos 2 \\theta$ to be rational.",
+        "Step 4:  $\\cos 2 \\theta = 2 \\cos^2 \\theta - 1.$",
+        "Step 5:  $\\cos 2 \\theta$ is rational if and only if $\\cos \\theta$ is rational, so it is rational.",
+        "Step 6:  $\\cos 3 \\theta = \\cos (2 \\theta + \\theta) = \\cos 2 \\theta \\cos \\theta - \\sin 2 \\theta \\sin \\theta = (2 \\cos^2 \\theta - 1) \\cos \\theta - 2 \\sin^2 \\theta \\cos \\theta.$",
+        "$\\cos 3 \\theta = 2 \\cos^2 \\theta \\cos \\theta - \\cos \\theta - 2 \\sin^2 \\theta \\cos \\theta.$",
+        "Step 7:  $\\cos 3 \\theta$ is rational if and only if $\\sin \\theta$ is rational, so it is rational.",
+        "Step 8:  $\\cos 4 \\theta = 2 \\cos^2 2 \\theta - 1 = 4 \\cos^2 \\theta - 3.$",
+        "$\\cos 4 \\theta$ is rational if and only if $\\cos \\theta$ is rational, so since $\\cos 4 \\theta$ is rational, $\\cos \\theta$ is rational, which contradicts the given information.",
+        "Step 9:  $\\cos 5 \\theta$ is not rational.",
+        "Step 10: $\\cos 5 \\theta = \\cos (4 \\theta + \\theta) = \\cos 4 \\theta \\cos \\theta - \\sin 4 \\theta \\sin \\theta = (4 \\cos^2 \\theta - 3) \\cos \\theta - 4 \\sin^2 2 \\theta \\cos \\theta.$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We are given that $\\cos \\theta$ is irrational, and we need to find the largest possible value of $n$ for which $\\cos 2 \\theta,$ $\\cos 3 \\theta,$ $\\dots,$ $\\cos n \\theta$ are all rational.\nStep 2:  To approach this problem, we can start by considering the values of $\\cos 2 \\theta,$ $\\cos 3 \\theta,$ $\\dots,$ $\\cos n \\theta$ and try to relate them to each other using trigonometric identities.\nStep 3:  We can use the given information that $\\cos \\theta$ is irrational and try to derive conditions for $\\cos 2 \\theta$ to be rational.",
+            1
+        ],
+        [
+            "Step 4:  $\\cos 2 \\theta = 2 \\cos^2 \\theta - 1.$",
+            1
+        ],
+        [
+            "Step 5:  $\\cos 2 \\theta$ is rational if and only if $\\cos \\theta$ is rational, so it is rational.",
+            1
+        ],
+        [
+            "Step 6:  $\\cos 3 \\theta = \\cos (2 \\theta + \\theta) = \\cos 2 \\theta \\cos \\theta - \\sin 2 \\theta \\sin \\theta = (2 \\cos^2 \\theta - 1) \\cos \\theta - 2 \\sin^2 \\theta \\cos \\theta.$",
+            1
+        ],
+        [
+            "$\\cos 3 \\theta = 2 \\cos^2 \\theta \\cos \\theta - \\cos \\theta - 2 \\sin^2 \\theta \\cos \\theta.$",
+            1
+        ],
+        [
+            "Step 7:  $\\cos 3 \\theta$ is rational if and only if $\\sin \\theta$ is rational, so it is rational.",
+            1
+        ],
+        [
+            "Step 8:  $\\cos 4 \\theta = 2 \\cos^2 2 \\theta - 1 = 4 \\cos^2 \\theta - 3.$",
+            1
+        ],
+        [
+            "$\\cos 4 \\theta$ is rational if and only if $\\cos \\theta$ is rational, so since $\\cos 4 \\theta$ is rational, $\\cos \\theta$ is rational, which contradicts the given information.",
+            1
+        ],
+        [
+            "Step 9:  $\\cos 5 \\theta$ is not rational.",
+            1
+        ],
+        [
+            "Step 10: $\\cos 5 \\theta = \\cos (4 \\theta + \\theta) = \\cos 4 \\theta \\cos \\theta - \\sin 4 \\theta \\sin \\theta = (4 \\cos^2 \\theta - 3) \\cos \\theta - 4 \\sin^2 2 \\theta \\cos \\theta.$",
+            1
+        ]
+    ],
+    "time": 137.77371382713318,
+    "total_tokens": 9079,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

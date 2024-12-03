@@ -1,0 +1,66 @@
+{
+    "problem": "If $0^\\circ < x < 180^\\circ$ and $\\cos x + \\sin x = \\frac{1}{2},$ then $\\tan x$ can be expressed in the form $-\\frac{a + \\sqrt{b}}{c}$ when simplified, where $a,$ $b,$ and $c$ are positive integers.  Find $a + b + c.$",
+    "level": "Level 5",
+    "type": "Precalculus",
+    "solution": "From the given equation, $\\cos x = \\frac{1}{2} - \\sin x.$  Substituting into $\\cos^2 x + \\sin^2 x = 1,$ we get\n\\[\\frac{1}{4} - \\sin x + \\sin^2 x + \\sin^2 x = 1.\\]This simplifies to $8 \\sin^2 x - 4 \\sin x - 3 = 0.$  By the quadratic formula,\n\\[\\sin x = \\frac{1 \\pm \\sqrt{7}}{4}.\\]Since $0^\\circ < x < 180^\\circ,$ $\\sin x$ is positive.  Hence,\n\\[\\sin x = \\frac{1 + \\sqrt{7}}{4}.\\]Then\n\\[\\cos x = \\frac{1}{2} - \\sin x = \\frac{1 - \\sqrt{7}}{4},\\]so\n\\begin{align*}\n\\tan x &= \\frac{\\sin x}{\\cos x} \\\\\n&= \\frac{1 + \\sqrt{7}}{1 - \\sqrt{7}} \\\\\n&= \\frac{(1 + \\sqrt{7})(1 + \\sqrt{7})}{(1 - \\sqrt{7})(1 + \\sqrt{7})} \\\\\n&= \\frac{1 + 2 \\sqrt{7} + 7}{-6} \\\\\n&= -\\frac{8 + 2 \\sqrt{7}}{6} \\\\\n&= -\\frac{4 + \\sqrt{7}}{3}.\n\\end{align*}Thus, $a + b + c = 4 + 7 + 3 = \\boxed{14}.$",
+    "is_solved": false,
+    "model_solution": "Step 1: Square both sides of the given equation $\\cos x + \\sin x = \\frac{1}{2}.$\nStep 2: \n\\[\\left( \\cos x + \\sin x \\right)^2 = \\frac{1}{4} \\Rightarrow \\cos^2 x + 2 \\cos x \\sin x + \\sin^2 x = \\frac{1}{4} \\Rightarrow 2 \\cos x \\sin x = \\frac{1}{4} - \\left( \\cos^2 x + \\sin^2 x \\right) = \\frac{1}{4} - 1 = -\\frac{3}{4}.\\]\nStep 3:\n\\[\\tan x = \\frac{\\sin x}{\\cos x} = \\frac{2 \\cos x \\sin x}{\\cos^2 x - \\sin^2 x} = \\frac{-\\frac{3}{4}}{1 - 2 \\sin^2 x}.\\]\n\\[\\tan x = \\frac{-\\frac{3}{4}}{1 - 2 \\sin^2 x} = \\frac{-\\frac{3}{4}}{2 \\cos^2 x - 1}.\\]\n\\[\\tan x = \\frac{-\\frac{3}{4}}{2 \\cos^2 x - 1} = \\frac{-\\frac{3}{4}}{2 \\left( 1 - \\sin^2 x \\right) - 1} = \\frac{-\\frac{3}{4}}{1 - 2 \\sin^2 x}.\\]\n\\[\\tan x = \\frac{-\\frac{3}{4}}{2 \\cos^2 x - 1} = \\frac{-\\frac{3}{4}}{2 \\left( 1 - \\sin^2 x \\right) - 1} = \\frac{-\\frac{3}{4}}{1 - 2 \\sin^2 x} = \\frac{\\frac{3}{4}}{2 \\sin^2 x - 1}.\\]\n\\[\\tan x = \\frac{\\frac{3}{4}}{2 \\sin^2 x - 1} = \\frac{\\frac{3}{4}}{1 - 2 \\cos^2 x} = - \\frac{3}{4\\cos^2 x - 4} = - \\frac{3}{4\\left( \\frac{1}{2} (\\cos 2x + 1) \\right) - 4} = - \\frac{3}{2\\cos 2x - 3}.\\]\n\\[\\tan x = - \\frac{3}{2\\cos 2x - 3} = - \\frac{3}{2\\left( \\frac{1}{2} (\\cos x + \\cos (-x)) \\right) - 3} = - \\frac{3}{ \\cos x + \\cos (-x) - \\frac{3}{2}} = - \\frac{3}{\\cos x + \\cos x} = - \\frac{3}{2 \\cos x}.\\]\n\\[\\tan x = - \\frac{3}{2 \\cos x} = - \\frac{3}{2 \\cos x} = - \\frac{3}{2 \\left( \\frac{1}{2} (\\sqrt{5} + 1) \\right) \\cos x} = - \\frac{3}{\\sqrt{5} + 1} = - \\frac{3}{\\sqrt{5} + 1} \\cdot \\frac{\\sqrt{5} - 1}{\\sqrt{5} - 1}.\\]\n\\[-\\frac{3}{\\sqrt{5} + 1} \\cdot \\frac{\\sqrt{5} - 1}{\\sqrt{5} - 1} = -\\frac{3\\sqrt{5} - 3}{\\left( \\sqrt{5} \\right)^2 - 1^2} = -\\frac{3\\sqrt{5} - 3}{5 - 1} = -\\frac{3\\sqrt{5} - 3}{4}.\\]",
+    "steps": [
+        "Step 1: Square both sides of the given equation $\\cos x + \\sin x = \\frac{1}{2}.$",
+        "Step 2: \n\\[\\left( \\cos x + \\sin x \\right)^2 = \\frac{1}{4} \\Rightarrow \\cos^2 x + 2 \\cos x \\sin x + \\sin^2 x = \\frac{1}{4} \\Rightarrow 2 \\cos x \\sin x = \\frac{1}{4} - \\left( \\cos^2 x + \\sin^2 x \\right) = \\frac{1}{4} - 1 = -\\frac{3}{4}.\\]",
+        "Step 3:\n\\[\\tan x = \\frac{\\sin x}{\\cos x} = \\frac{2 \\cos x \\sin x}{\\cos^2 x - \\sin^2 x} = \\frac{-\\frac{3}{4}}{1 - 2 \\sin^2 x}.\\]",
+        "\\[\\tan x = \\frac{-\\frac{3}{4}}{1 - 2 \\sin^2 x} = \\frac{-\\frac{3}{4}}{2 \\cos^2 x - 1}.\\]",
+        "\\[\\tan x = \\frac{-\\frac{3}{4}}{2 \\cos^2 x - 1} = \\frac{-\\frac{3}{4}}{2 \\left( 1 - \\sin^2 x \\right) - 1} = \\frac{-\\frac{3}{4}}{1 - 2 \\sin^2 x}.\\]",
+        "\\[\\tan x = \\frac{-\\frac{3}{4}}{2 \\cos^2 x - 1} = \\frac{-\\frac{3}{4}}{2 \\left( 1 - \\sin^2 x \\right) - 1} = \\frac{-\\frac{3}{4}}{1 - 2 \\sin^2 x} = \\frac{\\frac{3}{4}}{2 \\sin^2 x - 1}.\\]",
+        "\\[\\tan x = \\frac{\\frac{3}{4}}{2 \\sin^2 x - 1} = \\frac{\\frac{3}{4}}{1 - 2 \\cos^2 x} = - \\frac{3}{4\\cos^2 x - 4} = - \\frac{3}{4\\left( \\frac{1}{2} (\\cos 2x + 1) \\right) - 4} = - \\frac{3}{2\\cos 2x - 3}.\\]",
+        "\\[\\tan x = - \\frac{3}{2\\cos 2x - 3} = - \\frac{3}{2\\left( \\frac{1}{2} (\\cos x + \\cos (-x)) \\right) - 3} = - \\frac{3}{ \\cos x + \\cos (-x) - \\frac{3}{2}} = - \\frac{3}{\\cos x + \\cos x} = - \\frac{3}{2 \\cos x}.\\]",
+        "\\[\\tan x = - \\frac{3}{2 \\cos x} = - \\frac{3}{2 \\cos x} = - \\frac{3}{2 \\left( \\frac{1}{2} (\\sqrt{5} + 1) \\right) \\cos x} = - \\frac{3}{\\sqrt{5} + 1} = - \\frac{3}{\\sqrt{5} + 1} \\cdot \\frac{\\sqrt{5} - 1}{\\sqrt{5} - 1}.\\]",
+        "\\[-\\frac{3}{\\sqrt{5} + 1} \\cdot \\frac{\\sqrt{5} - 1}{\\sqrt{5} - 1} = -\\frac{3\\sqrt{5} - 3}{\\left( \\sqrt{5} \\right)^2 - 1^2} = -\\frac{3\\sqrt{5} - 3}{5 - 1} = -\\frac{3\\sqrt{5} - 3}{4}.\\]"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Square both sides of the given equation $\\cos x + \\sin x = \\frac{1}{2}.$",
+            1
+        ],
+        [
+            "Step 2: \n\\[\\left( \\cos x + \\sin x \\right)^2 = \\frac{1}{4} \\Rightarrow \\cos^2 x + 2 \\cos x \\sin x + \\sin^2 x = \\frac{1}{4} \\Rightarrow 2 \\cos x \\sin x = \\frac{1}{4} - \\left( \\cos^2 x + \\sin^2 x \\right) = \\frac{1}{4} - 1 = -\\frac{3}{4}.\\]",
+            1
+        ],
+        [
+            "Step 3:\n\\[\\tan x = \\frac{\\sin x}{\\cos x} = \\frac{2 \\cos x \\sin x}{\\cos^2 x - \\sin^2 x} = \\frac{-\\frac{3}{4}}{1 - 2 \\sin^2 x}.\\]",
+            1
+        ],
+        [
+            "\\[\\tan x = \\frac{-\\frac{3}{4}}{1 - 2 \\sin^2 x} = \\frac{-\\frac{3}{4}}{2 \\cos^2 x - 1}.\\]",
+            1
+        ],
+        [
+            "\\[\\tan x = \\frac{-\\frac{3}{4}}{2 \\cos^2 x - 1} = \\frac{-\\frac{3}{4}}{2 \\left( 1 - \\sin^2 x \\right) - 1} = \\frac{-\\frac{3}{4}}{1 - 2 \\sin^2 x}.\\]",
+            1
+        ],
+        [
+            "\\[\\tan x = \\frac{-\\frac{3}{4}}{2 \\cos^2 x - 1} = \\frac{-\\frac{3}{4}}{2 \\left( 1 - \\sin^2 x \\right) - 1} = \\frac{-\\frac{3}{4}}{1 - 2 \\sin^2 x} = \\frac{\\frac{3}{4}}{2 \\sin^2 x - 1}.\\]",
+            1
+        ],
+        [
+            "\\[\\tan x = \\frac{\\frac{3}{4}}{2 \\sin^2 x - 1} = \\frac{\\frac{3}{4}}{1 - 2 \\cos^2 x} = - \\frac{3}{4\\cos^2 x - 4} = - \\frac{3}{4\\left( \\frac{1}{2} (\\cos 2x + 1) \\right) - 4} = - \\frac{3}{2\\cos 2x - 3}.\\]",
+            1
+        ],
+        [
+            "\\[\\tan x = - \\frac{3}{2\\cos 2x - 3} = - \\frac{3}{2\\left( \\frac{1}{2} (\\cos x + \\cos (-x)) \\right) - 3} = - \\frac{3}{ \\cos x + \\cos (-x) - \\frac{3}{2}} = - \\frac{3}{\\cos x + \\cos x} = - \\frac{3}{2 \\cos x}.\\]",
+            1
+        ],
+        [
+            "\\[\\tan x = - \\frac{3}{2 \\cos x} = - \\frac{3}{2 \\cos x} = - \\frac{3}{2 \\left( \\frac{1}{2} (\\sqrt{5} + 1) \\right) \\cos x} = - \\frac{3}{\\sqrt{5} + 1} = - \\frac{3}{\\sqrt{5} + 1} \\cdot \\frac{\\sqrt{5} - 1}{\\sqrt{5} - 1}.\\]",
+            1
+        ],
+        [
+            "\\[-\\frac{3}{\\sqrt{5} + 1} \\cdot \\frac{\\sqrt{5} - 1}{\\sqrt{5} - 1} = -\\frac{3\\sqrt{5} - 3}{\\left( \\sqrt{5} \\right)^2 - 1^2} = -\\frac{3\\sqrt{5} - 3}{5 - 1} = -\\frac{3\\sqrt{5} - 3}{4}.\\]",
+            1
+        ]
+    ],
+    "time": 130.89355659484863,
+    "total_tokens": 11615,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

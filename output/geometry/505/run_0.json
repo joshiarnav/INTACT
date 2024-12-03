@@ -1,0 +1,56 @@
+{
+    "problem": "In triangle $\\triangle ABC,$ we have that $AB = AC = 14$ and $BC = 26.$ What is the length of the shortest angle bisector in $ABC$? Express your answer in simplest radical form.",
+    "level": "Level 4",
+    "type": "Geometry",
+    "solution": "Let's sketch our triangle first. [asy]\npair A, B, C;\nA = (0, 5.196);\nB = (-13, 0);\nC = (13, 0);\ndraw(A--B--C--cycle);\nlabel(\"$A$\", A, N);\nlabel(\"$B$\", B, SW);\nlabel(\"$C$\", C, SE);\n[/asy] We can see that the shortest angle bisector will be from the vertex $A$ (we leave the proof to the reader). We will call that bisector $AD.$ [asy]\npair A, B, C, D;\nA = (0, 5.196);\nB = (-13, 0);\nC = (13, 0);\nD = (0, 0);\ndraw(A--B--C--cycle);\ndraw(A--D);\nlabel(\"$A$\", A, N);\nlabel(\"$B$\", B, SW);\nlabel(\"$C$\", C, SE);\nlabel(\"$D$\", D, S);\n[/asy] Since $\\angle BAD = \\angle CAD$ by definition and $\\angle ABC = \\angle ACB$ since $\\triangle ABC$ is isosceles, we can see that $\\angle ADB = \\angle ADC = 90^\\circ.$ This is useful, since we know that $AC = 14$ and $DC = \\frac{1}{2} \\cdot BC = 13.$ Therefore, we use the Pythagorean theorem to find $AD^2 = AC^2 - CD^2 = 14^2 - 13^2 = 27.$ Therefore, our answer is $AD = \\boxed{3\\sqrt{3}}.$",
+    "is_solved": true,
+    "model_solution": "Step 1: Since it is given that $AB = AC$, $\\triangle ABC$ is an isosceles triangle, and thus the angle bisectors of $\\angle BAC$ will also be the perpendicular bisectors of $BC$. Let the point at which they intersect be $D$; then $BD = DC = \\frac{26}{2} = 13$.\nStep 2: The length of the shortest angle bisector is the length of $AD$, which can be found using the Pythagorean theorem applied to right triangle $\\triangle ABD$ with legs of length $AB = 14$ and $BD = 13$.\nStep 3: $AD = \\sqrt{14^2 - 13^2} = \\sqrt{196-169} = \\sqrt{27} = 3\\sqrt{3}$.\nStep 4: $\\sqrt{27}$ can be simplified to $\\sqrt{9\\cdot 3} = 3\\sqrt{3}$.\nStep 5: $AD = \\sqrt{9\\cdot 3} = \\boxed{3\\sqrt{3}}$\n$AD = \\sqrt{9\\cdot 3} = \\boxed{3\\sqrt{3}}$\nStep 6: $\\boxed{3\\sqrt{3}}$\nStep 4: $\\sqrt{27}$ can be simplified to $\\sqrt{9\\cdot 3} = 3\\sqrt{3}$.",
+    "steps": [
+        "Step 1: Since it is given that $AB = AC$, $\\triangle ABC$ is an isosceles triangle, and thus the angle bisectors of $\\angle BAC$ will also be the perpendicular bisectors of $BC$. Let the point at which they intersect be $D$; then $BD = DC = \\frac{26}{2} = 13$.",
+        "Step 2: The length of the shortest angle bisector is the length of $AD$, which can be found using the Pythagorean theorem applied to right triangle $\\triangle ABD$ with legs of length $AB = 14$ and $BD = 13$.",
+        "Step 3: $AD = \\sqrt{14^2 - 13^2} = \\sqrt{196-169} = \\sqrt{27} = 3\\sqrt{3}$.",
+        "Step 4: $\\sqrt{27}$ can be simplified to $\\sqrt{9\\cdot 3} = 3\\sqrt{3}$.",
+        "Step 5: $AD = \\sqrt{9\\cdot 3} = \\boxed{3\\sqrt{3}}$",
+        "$AD = \\sqrt{9\\cdot 3} = \\boxed{3\\sqrt{3}}$",
+        "Step 6: $\\boxed{3\\sqrt{3}}$",
+        "Step 4: $\\sqrt{27}$ can be simplified to $\\sqrt{9\\cdot 3} = 3\\sqrt{3}$."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Since it is given that $AB = AC$, $\\triangle ABC$ is an isosceles triangle, and thus the angle bisectors of $\\angle BAC$ will also be the perpendicular bisectors of $BC$. Let the point at which they intersect be $D$; then $BD = DC = \\frac{26}{2} = 13$.",
+            1
+        ],
+        [
+            "Step 2: The length of the shortest angle bisector is the length of $AD$, which can be found using the Pythagorean theorem applied to right triangle $\\triangle ABD$ with legs of length $AB = 14$ and $BD = 13$.",
+            1
+        ],
+        [
+            "Step 3: $AD = \\sqrt{14^2 - 13^2} = \\sqrt{196-169} = \\sqrt{27} = 3\\sqrt{3}$.",
+            1
+        ],
+        [
+            "Step 4: $\\sqrt{27}$ can be simplified to $\\sqrt{9\\cdot 3} = 3\\sqrt{3}$.",
+            1
+        ],
+        [
+            "Step 5: $AD = \\sqrt{9\\cdot 3} = \\boxed{3\\sqrt{3}}$",
+            1
+        ],
+        [
+            "$AD = \\sqrt{9\\cdot 3} = \\boxed{3\\sqrt{3}}$",
+            1
+        ],
+        [
+            "Step 6: $\\boxed{3\\sqrt{3}}$",
+            1
+        ],
+        [
+            "Step 4: $\\sqrt{27}$ can be simplified to $\\sqrt{9\\cdot 3} = 3\\sqrt{3}$.",
+            1
+        ]
+    ],
+    "time": 109.12904405593872,
+    "total_tokens": 5096,
+    "final_answer_tokens": 407,
+    "model": "meta-llama/Llama-Vision-Free"
+}

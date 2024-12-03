@@ -1,0 +1,66 @@
+{
+    "problem": "What is the value of $ \\sum_{n=1}^\\infty  (\\tan^{-1}\\sqrt{n}-\\tan^{-1}\\sqrt{n+1})$?\n\nYour answer should be in radians.",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "The $k$th partial sum is\n\\begin{align*}\n\\sum_{n = 1}^k (\\tan^{-1} \\sqrt{n} - \\tan^{-1} \\sqrt{n + 1}) &= (\\tan^{-1} 1 - \\tan^{-1} \\sqrt{2}) + (\\tan^{-1} \\sqrt{2} - \\tan^{-1} \\sqrt{3}) \\\\\n&\\quad + (\\tan^{-1} \\sqrt{3} - \\tan^{-1} \\sqrt{4}) + \\dots + (\\tan^{-1} \\sqrt{k} - \\tan^{-1} \\sqrt{k + 1}) \\\\\n&= \\tan^{-1} 1 - \\tan^{-1} \\sqrt{k + 1} \\\\\n&= \\frac{\\pi}{4} - \\tan^{-1} \\sqrt{k + 1}.\n\\end{align*}As $k$ goes to infinity, $\\tan^{-1} \\sqrt{k + 1}$ approaches $\\frac{\\pi}{2},$ so the limit of the sum as $n$ goes to infinity is $\\frac{\\pi}{4} - \\frac{\\pi}{2} = \\boxed{-\\frac{\\pi}{4}}.$",
+    "is_solved": false,
+    "model_solution": "\\sum_{n=1}^\\infty  (\\tan^{-1}\\sqrt{n}-\\tan^{-1}\\sqrt{n+1})=\\sum_{n=1}^\\infty  (\\tan^{-1}\\sqrt{n}-\\tan^{-1}\\sqrt{n+1})+\\tan^{-1}\\sqrt{1}-\\tan^{-1}\\sqrt{2}\n=\\sum_{n=1}^\\infty  (\\tan^{-1}\\sqrt{n}-\\tan^{-1}\\sqrt{n+1})+\\tan^{-1}0-\\tan^{-1}\\frac{\\sqrt{2}}{1+\\sqrt{2}}\n\\sum_{n=1}^\\infty  (\\tan^{-1}\\sqrt{n}-\\tan^{-1}\\sqrt{n+1})+\\tan^{-1}0-\\tan^{-1}\\frac{\\sqrt{2}}{1+\\sqrt{2}}=\\sum_{n=1}^\\infty  (\\tan^{-1}\\sqrt{n}-\\tan^{-1}\\sqrt{n+1})+0-\\tan^{-1}(\\sqrt{2}-1)\n\\sum_{n=1}^\\infty  (\\tan^{-1}\\sqrt{n}-\\tan^{-1}\\sqrt{n+1})+0-\\tan^{-1}(\\sqrt{2}-1)=\\tan^{-1}1-0-\\tan^{-1}(\\sqrt{2}-1)\n$\\tan^{-1}1-0-\\tan^{-1}(\\sqrt{2}-1)=\\tan^{-1}1-\\tan^{-1}(\\sqrt{2}-1)$\n$\\tan^{-1}1-\\tan^{-1}(\\sqrt{2}-1)=\\tan^{-1}\\left(\\frac{1-(\\sqrt{2}-1)}{1+(\\sqrt{2}-1)}\\right)=\\tan^{-1}\\left(\\frac{\\sqrt{2}}{1+\\sqrt{2}}\\right)$\n$\\tan^{-1}\\left(\\frac{\\sqrt{2}}{1+\\sqrt{2}}\\right)=\\tan^{-1}\\left(\\frac{1}{\\sqrt{2}+1}\\right)$\n$\\tan^{-1}\\left(\\frac{1}{\\sqrt{2}+1}\\right)=\\tan^{-1}\\left(\\frac{\\sqrt{2}-1}{2-1}\\right)$\n$\\tan^{-1}\\left(\\frac{\\sqrt{2}-1}{2-1}\\right)=\\tan^{-1}(\\sqrt{2}-1)$\n$\\tan^{-1}(\\sqrt{2}-1)=\\tan^{-1}(\\sqrt{2}-1)$",
+    "steps": [
+        "\\sum_{n=1}^\\infty  (\\tan^{-1}\\sqrt{n}-\\tan^{-1}\\sqrt{n+1})=\\sum_{n=1}^\\infty  (\\tan^{-1}\\sqrt{n}-\\tan^{-1}\\sqrt{n+1})+\\tan^{-1}\\sqrt{1}-\\tan^{-1}\\sqrt{2}",
+        "=\\sum_{n=1}^\\infty  (\\tan^{-1}\\sqrt{n}-\\tan^{-1}\\sqrt{n+1})+\\tan^{-1}0-\\tan^{-1}\\frac{\\sqrt{2}}{1+\\sqrt{2}}",
+        "\\sum_{n=1}^\\infty  (\\tan^{-1}\\sqrt{n}-\\tan^{-1}\\sqrt{n+1})+\\tan^{-1}0-\\tan^{-1}\\frac{\\sqrt{2}}{1+\\sqrt{2}}=\\sum_{n=1}^\\infty  (\\tan^{-1}\\sqrt{n}-\\tan^{-1}\\sqrt{n+1})+0-\\tan^{-1}(\\sqrt{2}-1)",
+        "\\sum_{n=1}^\\infty  (\\tan^{-1}\\sqrt{n}-\\tan^{-1}\\sqrt{n+1})+0-\\tan^{-1}(\\sqrt{2}-1)=\\tan^{-1}1-0-\\tan^{-1}(\\sqrt{2}-1)",
+        "$\\tan^{-1}1-0-\\tan^{-1}(\\sqrt{2}-1)=\\tan^{-1}1-\\tan^{-1}(\\sqrt{2}-1)$",
+        "$\\tan^{-1}1-\\tan^{-1}(\\sqrt{2}-1)=\\tan^{-1}\\left(\\frac{1-(\\sqrt{2}-1)}{1+(\\sqrt{2}-1)}\\right)=\\tan^{-1}\\left(\\frac{\\sqrt{2}}{1+\\sqrt{2}}\\right)$",
+        "$\\tan^{-1}\\left(\\frac{\\sqrt{2}}{1+\\sqrt{2}}\\right)=\\tan^{-1}\\left(\\frac{1}{\\sqrt{2}+1}\\right)$",
+        "$\\tan^{-1}\\left(\\frac{1}{\\sqrt{2}+1}\\right)=\\tan^{-1}\\left(\\frac{\\sqrt{2}-1}{2-1}\\right)$",
+        "$\\tan^{-1}\\left(\\frac{\\sqrt{2}-1}{2-1}\\right)=\\tan^{-1}(\\sqrt{2}-1)$",
+        "$\\tan^{-1}(\\sqrt{2}-1)=\\tan^{-1}(\\sqrt{2}-1)$"
+    ],
+    "full_steps": [
+        [
+            "\\sum_{n=1}^\\infty  (\\tan^{-1}\\sqrt{n}-\\tan^{-1}\\sqrt{n+1})=\\sum_{n=1}^\\infty  (\\tan^{-1}\\sqrt{n}-\\tan^{-1}\\sqrt{n+1})+\\tan^{-1}\\sqrt{1}-\\tan^{-1}\\sqrt{2}",
+            1
+        ],
+        [
+            "=\\sum_{n=1}^\\infty  (\\tan^{-1}\\sqrt{n}-\\tan^{-1}\\sqrt{n+1})+\\tan^{-1}0-\\tan^{-1}\\frac{\\sqrt{2}}{1+\\sqrt{2}}",
+            1
+        ],
+        [
+            "\\sum_{n=1}^\\infty  (\\tan^{-1}\\sqrt{n}-\\tan^{-1}\\sqrt{n+1})+\\tan^{-1}0-\\tan^{-1}\\frac{\\sqrt{2}}{1+\\sqrt{2}}=\\sum_{n=1}^\\infty  (\\tan^{-1}\\sqrt{n}-\\tan^{-1}\\sqrt{n+1})+0-\\tan^{-1}(\\sqrt{2}-1)",
+            1
+        ],
+        [
+            "\\sum_{n=1}^\\infty  (\\tan^{-1}\\sqrt{n}-\\tan^{-1}\\sqrt{n+1})+0-\\tan^{-1}(\\sqrt{2}-1)=\\tan^{-1}1-0-\\tan^{-1}(\\sqrt{2}-1)",
+            1
+        ],
+        [
+            "$\\tan^{-1}1-0-\\tan^{-1}(\\sqrt{2}-1)=\\tan^{-1}1-\\tan^{-1}(\\sqrt{2}-1)$",
+            1
+        ],
+        [
+            "$\\tan^{-1}1-\\tan^{-1}(\\sqrt{2}-1)=\\tan^{-1}\\left(\\frac{1-(\\sqrt{2}-1)}{1+(\\sqrt{2}-1)}\\right)=\\tan^{-1}\\left(\\frac{\\sqrt{2}}{1+\\sqrt{2}}\\right)$",
+            1
+        ],
+        [
+            "$\\tan^{-1}\\left(\\frac{\\sqrt{2}}{1+\\sqrt{2}}\\right)=\\tan^{-1}\\left(\\frac{1}{\\sqrt{2}+1}\\right)$",
+            1
+        ],
+        [
+            "$\\tan^{-1}\\left(\\frac{1}{\\sqrt{2}+1}\\right)=\\tan^{-1}\\left(\\frac{\\sqrt{2}-1}{2-1}\\right)$",
+            1
+        ],
+        [
+            "$\\tan^{-1}\\left(\\frac{\\sqrt{2}-1}{2-1}\\right)=\\tan^{-1}(\\sqrt{2}-1)$",
+            1
+        ],
+        [
+            "$\\tan^{-1}(\\sqrt{2}-1)=\\tan^{-1}(\\sqrt{2}-1)$",
+            1
+        ]
+    ],
+    "time": 135.29918766021729,
+    "total_tokens": 9027,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

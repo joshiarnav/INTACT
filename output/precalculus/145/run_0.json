@@ -1,0 +1,66 @@
+{
+    "problem": "There are an infinite number of vectors $\\mathbf{v}$ such that\n\\[\\begin{pmatrix} 1 \\\\ 2 \\\\ -5 \\end{pmatrix} \\times \\mathbf{v} = \\begin{pmatrix} 90 \\\\ 30 \\\\ 30 \\end{pmatrix}.\\]Find the vector $\\mathbf{v}$ that has the smallest magnitude.",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "Let $\\mathbf{v} = \\begin{pmatrix} a \\\\ b \\\\ c \\end{pmatrix}.$  Then\n\\[\\begin{pmatrix} 1 \\\\ 2 \\\\ -5 \\end{pmatrix} \\times \\begin{pmatrix} a \\\\ b \\\\ c \\end{pmatrix} = \\begin{pmatrix} 90 \\\\ 30 \\\\ 30 \\end{pmatrix},\\]so\n\\[\\begin{pmatrix} 5b + 2c \\\\ -5a - c \\\\ -2a + b \\end{pmatrix} = \\begin{pmatrix} 90 \\\\ 30 \\\\ 30 \\end{pmatrix}.\\]Comparing the components, we get\n\\begin{align*}\n5b + 2c &= 90, \\\\\n-5a - c &= 30, \\\\\n-2a + b &= 30.\n\\end{align*}From the second equation, $c = -5a - 30.$  From the third equation, $b = 2a + 30.$  We want to minimize the magnitude of $\\mathbf{v},$ which is equivalent to minimizing\n\\[a^2 + b^2 + c^2 = a^2 + (2a + 30)^2 + (-5a - 30)^2 = 30a^2 + 420a + 1800.\\]Completing the square, we get $30 (a + 7)^2 + 330,$ so the magnitude is minimized when $a = -7.$  Then $b = 16$ and $c = 5,$ so the vector $\\mathbf{v}$ we seek is $\\boxed{\\begin{pmatrix} -7 \\\\ 16 \\\\ 5 \\end{pmatrix}}.$",
+    "is_solved": false,
+    "model_solution": "Step 1: The cross product of two vectors $\\mathbf{a} = \\begin{pmatrix} a_1 \\\\ a_2 \\\\ a_3 \\end{pmatrix}$ and $\\mathbf{b} = \\begin{pmatrix} b_1 \\\\ b_2 \\\\ b_3 \\end{pmatrix}$ is given by $\\mathbf{a} \\times \\mathbf{b} = \\begin{pmatrix} a_2b_3 - a_3b_2 \\\\ a_3b_1 - a_1b_3 \\\\ a_1b_2 - a_2b_1 \\end{pmatrix}$.\nWe can use this formula to find the cross product of $\\begin{pmatrix} 1 \\\\ 2 \\\\ -5 \\end{pmatrix}$ and $\\mathbf{v}$.\nLet $\\mathbf{v} = \\begin{pmatrix} v_1 \\\\ v_2 \\\\ v_3 \\end{pmatrix}$.\nThen, $\\begin{pmatrix} 1 \\\\ 2 \\\\ -5 \\end{pmatrix} \\times \\mathbf{v} = \\begin{pmatrix\nStep 2: $\\begin{pmatrix} v_2-10 \\\\ 5v_1+5 \\\\ v_1+2v_2 \\end{pmatrix} = \\begin{pmatrix} 90 \\\\ 30 \\\\ 30 \\end{pmatrix}$\nStep 3: \n\\begin{align*}\nv_2 - 10 &= 90 \\\\\n5v_1 + 5 &= 30 \\\\\nv_1 + 2v_2 &= 30\n\\end{align*}\nStep 4:\n\\begin{align*}\nv_2 &= 100 \\\\\n5v_1 &= 25 \\\\\nv_1 &= 5\n\\end{align*}\nStep 5:\n\\begin{align*}\n5v_1 + 2v_2 &= 30 \\\\\n5(5) + 2v_2 &= 30 \\\\\n25 + 2v_2 &= 30 \\\\\n2v_2 &= 5 \\\\\nv_2 &= \\frac{5}{2}\n\\end{align*}\nStep 6:\n\\begin{align*}\nv_3 &= -\\frac{v_1}{5} - \\frac{v_2}{2} \\\\\n&= -\\frac{5}{5} - \\frac{\\frac{5}{2}}{2} \\\\\n&= -1 - \\frac{5}{4} \\\\\n&= -\\frac{9}{4}\n\\end{align*}\nWe have $v_1 = 5$, $v_2 = \\frac{5}{2}$, and $v_3 = -\\frac{9}{4}$, so $\\mathbf{v} = \\begin{pmatrix} 5 \\\\ \\frac{5}{2} \\\\ -\\frac{9}{4} \\end{pmatrix}$.\n\nThe next step would be to calculate the magnitude of the vector $\\mathbf{v}$.\nThe magnitude of $\\mathbf{v}$ is given by $\\|\\mathbf{v}\\| = \\sqrt{v_1^2 + v_2^2 + v_3^2} = \\sqrt{5^2 + \\left(\\frac{5}{2}\\right)^2 + \\left(-\\frac{9}{4}\\right)^2} = \\sqrt{25 + \\frac{25}{4} + \\frac{81}{16}} = \\sqrt{\\frac{400 + 100 + 81}{16}} = \\sqrt{\\frac{581}{16}} = \\frac{\\sqrt{581}}{4}.$\nThe magnitude of $\\mathbf{v}$ is given by $\\|\\mathbf{v}\\| = \\sqrt{\\frac{581}{16}}.$\nThe magnitude of $\\mathbf{v}$ is given by $\\|\\mathbf{v}\\| = \\sqrt{\\frac{581}{16}}.$",
+    "steps": [
+        "Step 1: The cross product of two vectors $\\mathbf{a} = \\begin{pmatrix} a_1 \\\\ a_2 \\\\ a_3 \\end{pmatrix}$ and $\\mathbf{b} = \\begin{pmatrix} b_1 \\\\ b_2 \\\\ b_3 \\end{pmatrix}$ is given by $\\mathbf{a} \\times \\mathbf{b} = \\begin{pmatrix} a_2b_3 - a_3b_2 \\\\ a_3b_1 - a_1b_3 \\\\ a_1b_2 - a_2b_1 \\end{pmatrix}$.\nWe can use this formula to find the cross product of $\\begin{pmatrix} 1 \\\\ 2 \\\\ -5 \\end{pmatrix}$ and $\\mathbf{v}$.\nLet $\\mathbf{v} = \\begin{pmatrix} v_1 \\\\ v_2 \\\\ v_3 \\end{pmatrix}$.\nThen, $\\begin{pmatrix} 1 \\\\ 2 \\\\ -5 \\end{pmatrix} \\times \\mathbf{v} = \\begin{pmatrix",
+        "Step 2: $\\begin{pmatrix} v_2-10 \\\\ 5v_1+5 \\\\ v_1+2v_2 \\end{pmatrix} = \\begin{pmatrix} 90 \\\\ 30 \\\\ 30 \\end{pmatrix}$",
+        "Step 3: \n\\begin{align*}\nv_2 - 10 &= 90 \\\\\n5v_1 + 5 &= 30 \\\\\nv_1 + 2v_2 &= 30\n\\end{align*}",
+        "Step 4:\n\\begin{align*}\nv_2 &= 100 \\\\\n5v_1 &= 25 \\\\\nv_1 &= 5\n\\end{align*}",
+        "Step 5:\n\\begin{align*}\n5v_1 + 2v_2 &= 30 \\\\\n5(5) + 2v_2 &= 30 \\\\\n25 + 2v_2 &= 30 \\\\\n2v_2 &= 5 \\\\\nv_2 &= \\frac{5}{2}\n\\end{align*}",
+        "Step 6:\n\\begin{align*}\nv_3 &= -\\frac{v_1}{5} - \\frac{v_2}{2} \\\\\n&= -\\frac{5}{5} - \\frac{\\frac{5}{2}}{2} \\\\\n&= -1 - \\frac{5}{4} \\\\\n&= -\\frac{9}{4}\n\\end{align*}",
+        "We have $v_1 = 5$, $v_2 = \\frac{5}{2}$, and $v_3 = -\\frac{9}{4}$, so $\\mathbf{v} = \\begin{pmatrix} 5 \\\\ \\frac{5}{2} \\\\ -\\frac{9}{4} \\end{pmatrix}$.\n\nThe next step would be to calculate the magnitude of the vector $\\mathbf{v}$.",
+        "The magnitude of $\\mathbf{v}$ is given by $\\|\\mathbf{v}\\| = \\sqrt{v_1^2 + v_2^2 + v_3^2} = \\sqrt{5^2 + \\left(\\frac{5}{2}\\right)^2 + \\left(-\\frac{9}{4}\\right)^2} = \\sqrt{25 + \\frac{25}{4} + \\frac{81}{16}} = \\sqrt{\\frac{400 + 100 + 81}{16}} = \\sqrt{\\frac{581}{16}} = \\frac{\\sqrt{581}}{4}.$",
+        "The magnitude of $\\mathbf{v}$ is given by $\\|\\mathbf{v}\\| = \\sqrt{\\frac{581}{16}}.$",
+        "The magnitude of $\\mathbf{v}$ is given by $\\|\\mathbf{v}\\| = \\sqrt{\\frac{581}{16}}.$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: The cross product of two vectors $\\mathbf{a} = \\begin{pmatrix} a_1 \\\\ a_2 \\\\ a_3 \\end{pmatrix}$ and $\\mathbf{b} = \\begin{pmatrix} b_1 \\\\ b_2 \\\\ b_3 \\end{pmatrix}$ is given by $\\mathbf{a} \\times \\mathbf{b} = \\begin{pmatrix} a_2b_3 - a_3b_2 \\\\ a_3b_1 - a_1b_3 \\\\ a_1b_2 - a_2b_1 \\end{pmatrix}$.\nWe can use this formula to find the cross product of $\\begin{pmatrix} 1 \\\\ 2 \\\\ -5 \\end{pmatrix}$ and $\\mathbf{v}$.\nLet $\\mathbf{v} = \\begin{pmatrix} v_1 \\\\ v_2 \\\\ v_3 \\end{pmatrix}$.\nThen, $\\begin{pmatrix} 1 \\\\ 2 \\\\ -5 \\end{pmatrix} \\times \\mathbf{v} = \\begin{pmatrix",
+            1
+        ],
+        [
+            "Step 2: $\\begin{pmatrix} v_2-10 \\\\ 5v_1+5 \\\\ v_1+2v_2 \\end{pmatrix} = \\begin{pmatrix} 90 \\\\ 30 \\\\ 30 \\end{pmatrix}$",
+            1
+        ],
+        [
+            "Step 3: \n\\begin{align*}\nv_2 - 10 &= 90 \\\\\n5v_1 + 5 &= 30 \\\\\nv_1 + 2v_2 &= 30\n\\end{align*}",
+            1
+        ],
+        [
+            "Step 4:\n\\begin{align*}\nv_2 &= 100 \\\\\n5v_1 &= 25 \\\\\nv_1 &= 5\n\\end{align*}",
+            1
+        ],
+        [
+            "Step 5:\n\\begin{align*}\n5v_1 + 2v_2 &= 30 \\\\\n5(5) + 2v_2 &= 30 \\\\\n25 + 2v_2 &= 30 \\\\\n2v_2 &= 5 \\\\\nv_2 &= \\frac{5}{2}\n\\end{align*}",
+            1
+        ],
+        [
+            "Step 6:\n\\begin{align*}\nv_3 &= -\\frac{v_1}{5} - \\frac{v_2}{2} \\\\\n&= -\\frac{5}{5} - \\frac{\\frac{5}{2}}{2} \\\\\n&= -1 - \\frac{5}{4} \\\\\n&= -\\frac{9}{4}\n\\end{align*}",
+            1
+        ],
+        [
+            "We have $v_1 = 5$, $v_2 = \\frac{5}{2}$, and $v_3 = -\\frac{9}{4}$, so $\\mathbf{v} = \\begin{pmatrix} 5 \\\\ \\frac{5}{2} \\\\ -\\frac{9}{4} \\end{pmatrix}$.\n\nThe next step would be to calculate the magnitude of the vector $\\mathbf{v}$.",
+            1
+        ],
+        [
+            "The magnitude of $\\mathbf{v}$ is given by $\\|\\mathbf{v}\\| = \\sqrt{v_1^2 + v_2^2 + v_3^2} = \\sqrt{5^2 + \\left(\\frac{5}{2}\\right)^2 + \\left(-\\frac{9}{4}\\right)^2} = \\sqrt{25 + \\frac{25}{4} + \\frac{81}{16}} = \\sqrt{\\frac{400 + 100 + 81}{16}} = \\sqrt{\\frac{581}{16}} = \\frac{\\sqrt{581}}{4}.$",
+            1
+        ],
+        [
+            "The magnitude of $\\mathbf{v}$ is given by $\\|\\mathbf{v}\\| = \\sqrt{\\frac{581}{16}}.$",
+            1
+        ],
+        [
+            "The magnitude of $\\mathbf{v}$ is given by $\\|\\mathbf{v}\\| = \\sqrt{\\frac{581}{16}}.$",
+            1
+        ]
+    ],
+    "time": 136.19158601760864,
+    "total_tokens": 13935,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

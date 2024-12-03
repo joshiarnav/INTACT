@@ -1,0 +1,56 @@
+{
+    "problem": "A tennis ball dipped in red paint rolls around on the coordinate plane, so that it is at\n\\[(x,y) = (3t^2 - 9t - 5, t^2 - 3t + 2)\\]at time $t,$ where $0 \\le t \\le 4.$  Find the length of the paint trail left by the tennis ball.",
+    "level": "Level 5",
+    "type": "Precalculus",
+    "solution": "If we take $x = 3t^2 - 9t - 5$ and $y = t^2 - 3t + 2,$ then\n\\[y = t^2 - 3t + 2 = \\frac{3t^2 - 9t + 6}{3} = \\frac{x + 11}{3}.\\]Thus, the path of the tennis ball traces a line segment.\n\nFurthermore,\n\\[x = 3t^2 - 9t - 5 = 3 \\left( t - \\frac{3}{2} \\right)^2 - \\frac{47}{4}.\\]Thus, as $t$ varies from 0 to 4, $x$ varies from $-5$ (at $t = 0$), to $-\\frac{47}{4}$ (at $t = \\frac{3}{2}$), to 7 (at $t = 4$).  The plot below shows the position of the tennis ball as a function of time $t,$ with the time indicated.\n\n[asy]\nunitsize(0.4 cm);\n\nreal t;\n\npair parm (real t) {\n  return((3*t^2 - 9*t - 5,t^2 - 3*t + 2));\n}\n\npath trail = parm(0);\n\nfor (t = 0; t <= 4; t = t + 0.1) {\n  trail = trail--parm(t);\n}\n\ntrail = trail--parm(4);\n\ndraw(trail,red);\n\ndot(\"$0$\", parm(0), NW);\ndot(\"$1$\", parm(1), NW);\ndot(\"$\\frac{3}{2}$\", parm(1.5), W);\ndot(\"$2$\", parm(2), SE);\ndot(\"$3$\", parm(3), SE);\ndot(\"$4$\", parm(4), SE);\n[/asy]\n\nThus, the tennis ball traces the line segment with endpoints $\\left( -\\frac{47}{4}, -\\frac{1}{4} \\right)$ and $(7,6),$ and its length is\n\\[\\sqrt{\\left( 7 + \\frac{47}{4} \\right)^2 + \\left( 6 + \\frac{1}{4} \\right)^2} = \\boxed{\\frac{25 \\sqrt{10}}{4}}.\\]",
+    "is_solved": true,
+    "model_solution": "Step 1:  We need to find the length of the path traced by the tennis ball as it rolls around on the coordinate plane.\nThe first step is to find the distance traveled in the $x$ and $y$ directions.\nStep 2: \nFind the distance traveled in the $x$ and $y$ directions.\nThe distance traveled in the $x$ direction is given by \\[x(4) - x(0) = (3t^2 - 9t - 5) \\big|_{0}^{4} = 3 \\cdot 4^2 - 9 \\cdot 4 - 5 = 23,\\]and the distance traveled in the $y$ direction is given by \\[y(4) - y(0) = (t^2 - 3t + 2) \\big|_{0}^{4} = 4^2 - 3 \\cdot 4 + 2 = 6.\\]\nStep 3:\nApply the Pythagorean theorem to find the length of the path.\nThe length of the path is given by\n\\[s = \\sqrt{(x(4) - x(0))^2 + (y(4) - y(0))^2} = \\sqrt{23^2 + 6^2}.\\]\nStep 4: \nEvaluate the square root to find the length of the path.\n\\[s = \\sqrt{23^2 + 6^2} = \\sqrt{529 + 36} = \\sqrt{565}\\]\nStep 5: \nEvaluate the square root to find the length of the path.\n\\[s = \\sqrt{23^2 + 6^2} = \\sqrt{529 + 36} = \\sqrt{565}\\]\nStep 6:\nThe length of the path is \\[s = \\sqrt{23^2 + 6^2} = \\sqrt{529 + 36} = \\sqrt{565}\\]\nStep 7: \nThis is the final step.\nThe length of the path left by the tennis ball is $\\sqrt{565}$.\nStep 8: Final Answer.",
+    "steps": [
+        "Step 1:  We need to find the length of the path traced by the tennis ball as it rolls around on the coordinate plane.\nThe first step is to find the distance traveled in the $x$ and $y$ directions.",
+        "Step 2: \nFind the distance traveled in the $x$ and $y$ directions.\nThe distance traveled in the $x$ direction is given by \\[x(4) - x(0) = (3t^2 - 9t - 5) \\big|_{0}^{4} = 3 \\cdot 4^2 - 9 \\cdot 4 - 5 = 23,\\]and the distance traveled in the $y$ direction is given by \\[y(4) - y(0) = (t^2 - 3t + 2) \\big|_{0}^{4} = 4^2 - 3 \\cdot 4 + 2 = 6.\\]",
+        "Step 3:\nApply the Pythagorean theorem to find the length of the path.\nThe length of the path is given by\n\\[s = \\sqrt{(x(4) - x(0))^2 + (y(4) - y(0))^2} = \\sqrt{23^2 + 6^2}.\\]",
+        "Step 4: \nEvaluate the square root to find the length of the path.\n\\[s = \\sqrt{23^2 + 6^2} = \\sqrt{529 + 36} = \\sqrt{565}\\]",
+        "Step 5: \nEvaluate the square root to find the length of the path.\n\\[s = \\sqrt{23^2 + 6^2} = \\sqrt{529 + 36} = \\sqrt{565}\\]",
+        "Step 6:\nThe length of the path is \\[s = \\sqrt{23^2 + 6^2} = \\sqrt{529 + 36} = \\sqrt{565}\\]",
+        "Step 7: \nThis is the final step.\nThe length of the path left by the tennis ball is $\\sqrt{565}$.",
+        "Step 8: Final Answer."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We need to find the length of the path traced by the tennis ball as it rolls around on the coordinate plane.\nThe first step is to find the distance traveled in the $x$ and $y$ directions.",
+            1
+        ],
+        [
+            "Step 2: \nFind the distance traveled in the $x$ and $y$ directions.\nThe distance traveled in the $x$ direction is given by \\[x(4) - x(0) = (3t^2 - 9t - 5) \\big|_{0}^{4} = 3 \\cdot 4^2 - 9 \\cdot 4 - 5 = 23,\\]and the distance traveled in the $y$ direction is given by \\[y(4) - y(0) = (t^2 - 3t + 2) \\big|_{0}^{4} = 4^2 - 3 \\cdot 4 + 2 = 6.\\]",
+            1
+        ],
+        [
+            "Step 3:\nApply the Pythagorean theorem to find the length of the path.\nThe length of the path is given by\n\\[s = \\sqrt{(x(4) - x(0))^2 + (y(4) - y(0))^2} = \\sqrt{23^2 + 6^2}.\\]",
+            1
+        ],
+        [
+            "Step 4: \nEvaluate the square root to find the length of the path.\n\\[s = \\sqrt{23^2 + 6^2} = \\sqrt{529 + 36} = \\sqrt{565}\\]",
+            1
+        ],
+        [
+            "Step 5: \nEvaluate the square root to find the length of the path.\n\\[s = \\sqrt{23^2 + 6^2} = \\sqrt{529 + 36} = \\sqrt{565}\\]",
+            1
+        ],
+        [
+            "Step 6:\nThe length of the path is \\[s = \\sqrt{23^2 + 6^2} = \\sqrt{529 + 36} = \\sqrt{565}\\]",
+            1
+        ],
+        [
+            "Step 7: \nThis is the final step.\nThe length of the path left by the tennis ball is $\\sqrt{565}$.",
+            1
+        ],
+        [
+            "Step 8: Final Answer.",
+            1
+        ]
+    ],
+    "time": 111.87822461128235,
+    "total_tokens": 7363,
+    "final_answer_tokens": 587,
+    "model": "meta-llama/Llama-Vision-Free"
+}

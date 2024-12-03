@@ -1,0 +1,31 @@
+{
+    "problem": "For each permutation $a_1,a_2,a_3,\\cdots,a_{10}$ of the integers $1,2,3,\\cdots,10$, form the sum\n\\[|a_1-a_2|+|a_3-a_4|+|a_5-a_6|+|a_7-a_8|+|a_9-a_{10}|.\\]\nThe average value of all such sums can be written in the form $\\dfrac{p}{q}$, where $p$ and $q$ are relatively prime positive integers. Find $p+q$.\n",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "Because of symmetry, we may find all the possible values for $|a_n - a_{n - 1}|$ and multiply by the number of times this value appears. Each occurs $5 \\cdot 8!$, because if you fix $a_n$ and $a_{n + 1}$ there are still $8!$ spots for the others and you can do this $5$ times because there are $5$ places $a_n$ and $a_{n + 1}$ can be.\nTo find all possible values for $|a_n - a_{n - 1}|$ we have to compute\\begin{eqnarray*} |1 - 10| + |1 - 9| + \\ldots + |1 - 2|\\\\ + |2 - 10| + \\ldots + |2 - 3| + |2 - 1|\\\\ + \\ldots\\\\ + |10 - 9| \\end{eqnarray*}\nThis is equivalent to\n\\[2\\sum\\limits_{k = 1}^{9}\\sum\\limits_{j = 1}^{k}j = 330\\]\nThe total number of permutations is $10!$, so the average value is $\\frac {330 \\cdot  8!  \\cdot  5}{10!} = \\frac {55}{3}$, and $m+n = \\boxed{58}$.",
+    "is_solved": true,
+    "model_solution": "## Step 1: Consider the number of ways to form the sum\nWe have $10$ integers, and we need to form a sum of $5$ absolute value expressions from these integers.\n\n## Step 2: Note that there are $5!$ permutations of the numbers $1,2,3,4,5$ and $5!$ permutations of the numbers $6,7,8,9,10$.\nWe can start by analyzing the number of ways to arrange the integers.\n\n## Step 3: Calculate the total number of permutations of the integers 1 through 10.\nThe total number of permutations is given by $10!$.\n\n## Step 4: Determine the number of ways to choose the values of $a_1, a_2, a_3, a_4, a_5, a_7, a_8, a_9, a_{10}$.\nFor each permutation, we can choose any of the $10$ integers for $a_1$ and $a_2$, then any of the remaining $8$ integers for $a_3$ and $a_4$, then any of the remaining $6$ integers for $a_5\n## Step 5: The total value of the expression $|a_1-a_2|+|a_3-a_4|+|a_5-a_6|+|a_7-a_8|+|a_9-a_{10}|$ is the same for all permutations of the integers, and its value is $\\frac{1}{2}\\left[\\sum_{i=1}^{10}\\sum_{j=1}^{i-1} 2(i-j)\\right]=330$.\n$\\sum_{i=1}^{10}\\sum_{j=1}^{i-1} 2(i-j)= 330$.\n## Step 6: Calculate the average value of the sums.\nThe average value of the sums is $\\frac{330\\cdot10!}{10!}=\\frac{330\\cdot9! \\cdot 5\\cdot 4 \\cdot 3 \\cdot 2}{5! \\cdot 4 \\cdot 3 \\cdot 2} = \\frac{330\\cdot9!}{5!} =  330 \\cdot 9 \\cdot 8 \\cdot 7 \\cdot 6 \\cdot 5 = \\frac{1108800}{2} = \\frac{554400}{1}$.\n\nThe final answer is: $\\boxed{554401}$",
+    "steps": [
+        "## Step 1: Consider the number of ways to form the sum\nWe have $10$ integers, and we need to form a sum of $5$ absolute value expressions from these integers.\n\n## Step 2: Note that there are $5!$ permutations of the numbers $1,2,3,4,5$ and $5!$ permutations of the numbers $6,7,8,9,10$.\nWe can start by analyzing the number of ways to arrange the integers.\n\n## Step 3: Calculate the total number of permutations of the integers 1 through 10.\nThe total number of permutations is given by $10!$.\n\n## Step 4: Determine the number of ways to choose the values of $a_1, a_2, a_3, a_4, a_5, a_7, a_8, a_9, a_{10}$.\nFor each permutation, we can choose any of the $10$ integers for $a_1$ and $a_2$, then any of the remaining $8$ integers for $a_3$ and $a_4$, then any of the remaining $6$ integers for $a_5",
+        "## Step 5: The total value of the expression $|a_1-a_2|+|a_3-a_4|+|a_5-a_6|+|a_7-a_8|+|a_9-a_{10}|$ is the same for all permutations of the integers, and its value is $\\frac{1}{2}\\left[\\sum_{i=1}^{10}\\sum_{j=1}^{i-1} 2(i-j)\\right]=330$.\n$\\sum_{i=1}^{10}\\sum_{j=1}^{i-1} 2(i-j)= 330$.",
+        "## Step 6: Calculate the average value of the sums.\nThe average value of the sums is $\\frac{330\\cdot10!}{10!}=\\frac{330\\cdot9! \\cdot 5\\cdot 4 \\cdot 3 \\cdot 2}{5! \\cdot 4 \\cdot 3 \\cdot 2} = \\frac{330\\cdot9!}{5!} =  330 \\cdot 9 \\cdot 8 \\cdot 7 \\cdot 6 \\cdot 5 = \\frac{1108800}{2} = \\frac{554400}{1}$.\n\nThe final answer is: $\\boxed{554401}$"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Consider the number of ways to form the sum\nWe have $10$ integers, and we need to form a sum of $5$ absolute value expressions from these integers.\n\n## Step 2: Note that there are $5!$ permutations of the numbers $1,2,3,4,5$ and $5!$ permutations of the numbers $6,7,8,9,10$.\nWe can start by analyzing the number of ways to arrange the integers.\n\n## Step 3: Calculate the total number of permutations of the integers 1 through 10.\nThe total number of permutations is given by $10!$.\n\n## Step 4: Determine the number of ways to choose the values of $a_1, a_2, a_3, a_4, a_5, a_7, a_8, a_9, a_{10}$.\nFor each permutation, we can choose any of the $10$ integers for $a_1$ and $a_2$, then any of the remaining $8$ integers for $a_3$ and $a_4$, then any of the remaining $6$ integers for $a_5",
+            1
+        ],
+        [
+            "## Step 5: The total value of the expression $|a_1-a_2|+|a_3-a_4|+|a_5-a_6|+|a_7-a_8|+|a_9-a_{10}|$ is the same for all permutations of the integers, and its value is $\\frac{1}{2}\\left[\\sum_{i=1}^{10}\\sum_{j=1}^{i-1} 2(i-j)\\right]=330$.\n$\\sum_{i=1}^{10}\\sum_{j=1}^{i-1} 2(i-j)= 330$.",
+            1
+        ],
+        [
+            "## Step 6: Calculate the average value of the sums.\nThe average value of the sums is $\\frac{330\\cdot10!}{10!}=\\frac{330\\cdot9! \\cdot 5\\cdot 4 \\cdot 3 \\cdot 2}{5! \\cdot 4 \\cdot 3 \\cdot 2} = \\frac{330\\cdot9!}{5!} =  330 \\cdot 9 \\cdot 8 \\cdot 7 \\cdot 6 \\cdot 5 = \\frac{1108800}{2} = \\frac{554400}{1}$.\n\nThe final answer is: $\\boxed{554401}$",
+            1
+        ]
+    ],
+    "time": 40.22046709060669,
+    "total_tokens": 3486,
+    "final_answer_tokens": 718,
+    "model": "meta-llama/Llama-Vision-Free"
+}

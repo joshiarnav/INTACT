@@ -1,0 +1,21 @@
+{
+    "problem": "Compute\n\\[\\sum_{n = 1}^\\infty \\frac{F_{n + 1}}{F_n F_{n + 2}},\\]where $F_n$ denotes the $n$th Fibonacci number, so $F_0 = 0$ and $F_1 = 1.$",
+    "level": "Level 4",
+    "type": "Intermediate Algebra",
+    "solution": "Since $F_{n + 1} = F_{n + 2} - F_n,$\n\\[\\frac{F_{n + 1}}{F_n F_{n + 2}} = \\frac{F_{n + 2} - F_n}{F_n F_{n + 2}} = \\frac{1}{F_n} - \\frac{1}{F_{n + 2}}.\\]Then\n\\begin{align*}\n\\sum_{n = 1}^\\infty \\frac{1}{F_n F_{n + 2}} &= \\left( \\frac{1}{F_1} - \\frac{1}{F_3} \\right) + \\left( \\frac{1}{F_2} - \\frac{1}{F_4} \\right) + \\left( \\frac{1}{F_3} - \\frac{1}{F_5} \\right) + \\dotsb \\\\\n&= \\frac{1}{F_1} + \\frac{1}{F_2} \\\\\n&= \\boxed{2}.\n\\end{align*}",
+    "is_solved": false,
+    "model_solution": "## Step 1: We begin by expressing the terms of the series in a different form using the definition of the Fibonacci sequence.\nWe will use the definition $F_{n + 2} = F_{n + 1} + F_n$ to simplify the expression $\\frac{F_{n + 1}}{F_n F_{n + 2}}.$\n\n## Step 2: We will substitute the definition of $F_{n + 2}$ into the expression $\\frac{F_{n + 1}}{F_n F_{n + 2}}$ to get $\\frac{F_{n + 1}}{F_n (F_{n + 1} + F_n)}.$\n\n## Step 3: We will then further simplify the expression $\\frac{F_{n + 1}}{F_n (F_{n + 1} + F_n)}$ by expressing it as $\\frac{1}{F_n} - \\frac{1}{F_{n + 1} + F_n}.$",
+    "steps": [
+        "## Step 1: We begin by expressing the terms of the series in a different form using the definition of the Fibonacci sequence.\nWe will use the definition $F_{n + 2} = F_{n + 1} + F_n$ to simplify the expression $\\frac{F_{n + 1}}{F_n F_{n + 2}}.$\n\n## Step 2: We will substitute the definition of $F_{n + 2}$ into the expression $\\frac{F_{n + 1}}{F_n F_{n + 2}}$ to get $\\frac{F_{n + 1}}{F_n (F_{n + 1} + F_n)}.$\n\n## Step 3: We will then further simplify the expression $\\frac{F_{n + 1}}{F_n (F_{n + 1} + F_n)}$ by expressing it as $\\frac{1}{F_n} - \\frac{1}{F_{n + 1} + F_n}.$"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: We begin by expressing the terms of the series in a different form using the definition of the Fibonacci sequence.\nWe will use the definition $F_{n + 2} = F_{n + 1} + F_n$ to simplify the expression $\\frac{F_{n + 1}}{F_n F_{n + 2}}.$\n\n## Step 2: We will substitute the definition of $F_{n + 2}$ into the expression $\\frac{F_{n + 1}}{F_n F_{n + 2}}$ to get $\\frac{F_{n + 1}}{F_n (F_{n + 1} + F_n)}.$\n\n## Step 3: We will then further simplify the expression $\\frac{F_{n + 1}}{F_n (F_{n + 1} + F_n)}$ by expressing it as $\\frac{1}{F_n} - \\frac{1}{F_{n + 1} + F_n}.$",
+            1
+        ]
+    ],
+    "time": 12.611018180847168,
+    "total_tokens": 684,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

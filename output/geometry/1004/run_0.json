@@ -1,0 +1,66 @@
+{
+    "problem": "A regular tetrahedron is a triangular pyramid in which each face is an equilateral triangle.  If the height of a regular tetrahedron is 20 inches then what is the length of each edge of the tetrahedron? Express your answer in simplest radical form.",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "Recall that a median of a triangle is a line segment drawn from a vertex of the triangle to the midpoint of the opposite side.  The three medians of a triangle intersect in a common point called the centroid of the triangle.  The centroid divides each median into two segments whose lengths have ratio 2:1.\n\nCall the four vertices of the tetrahedron $A$, $B$, $C$, and $D$.  Also, define $E$ to be the midpoint of $AB$ and $M$ to be the centroid of triangle $ABC$.  Let $s$ be the side length of the tetrahedron.  From the Pythagorean theorem applied to right triangle $AEC$, we find that $CE=\\sqrt{s^2-(s/2)^2}=s\\sqrt{3}/2$.  Since $M$ is the centroid of triangle $ABC$, $AM=\\frac{2}{3}(CE)=\\frac{2}{3}\\left(\\frac{s\\sqrt{3}}{2}\\right)=\\frac{s\\sqrt{3}}{3}$.  Finally, applying the Pythagorean theorem to $AMD$, we find $\\left(\\frac{s\\sqrt{3}}{3}\\right)^2+DM^2=s^2$.  Substituting $20$ inches for $DM$, we solve to find $s=\\boxed{10\\sqrt{6}}$ inches.\n\n[asy]\n\nimport three;\n\nsize(2.5inch);\n\ncurrentprojection = orthographic(1/3,-1,1/4);\n\ntriple A = (0,0,0);\n\ntriple B = (1,0,0);\n\ntriple C = (0.5,sqrt(3)/2,0);\n\ntriple D = (0.5,sqrt(3)/4,sqrt(6)/3);\n\ntriple E = (1/2,0,0);\n\ntriple M = (0.5,sqrt(3)/6,0);\n\ndot(A); dot(B); dot(C); dot(D); dot(M); dot(E);\n\nlabel(\"$A$\",A,SW); label(\"$B$\",B,SE); label(\"$C$\",C,S); label(\"$D$\",D,N);\n\nlabel(\"$M$\",M,SE); label(\"$E$\",E,S);\n\ndraw(A--B--C--D--A--C);\n\ndraw(B--D);\n\ndraw(D--M);\n\ndraw(M--A);\n\ndraw(C--E,dashed);\n\n[/asy]",
+    "is_solved": false,
+    "model_solution": "Given: a regular tetrahedron with height 20 inches.\nFind: the length of each edge of the tetrahedron.\n\nStep 1:  Draw a right triangle that is formed by dropping a perpendicular from one vertex of the tetrahedron to the midpoint of the opposite edge.\nStep 2:  Label the midpoint of the edge as M. The perpendicular line segment from the vertex to M forms the height of the tetrahedron, which is 20 inches, and creates two congruent right triangles with base $\\frac{\\sqrt{3}}{2} a$, where a is the length of each edge of the tetrahedron.\nStep 3:  Applying the Pythagorean Theorem to one of the congruent right triangles gives $20^2 + \\left(\\frac{\\sqrt{3}}{2}a\\right)^2 = a^2$.\nStep 4:  Expanding the equation yields $400 + \\frac{3}{4}a^2 = a^2$.\nStep 5: Subtract $\\frac{3}{4}a^2$ from both sides of the equation to get $400 = \\frac{1}{4}a^2$.\nStep 6: Multiply both sides by 4 to get $1600 = a^2$.\nStep 7:  Taking the square root of both sides of the equation gives $a = \\sqrt{1600} = 40\\sqrt{1}$.\nStep 8:  Since a is the length of each edge of the tetrahedron, the length of each edge is $40\\sqrt{1} = 40$.\nStep 9: \n$20^2 + \\left(\\frac{\\sqrt{3}}{2}a\\right)^2 = a^2$\n$400 + \\frac{3}{4}a^2 = a^2$",
+    "steps": [
+        "Given: a regular tetrahedron with height 20 inches.\nFind: the length of each edge of the tetrahedron.\n\nStep 1:  Draw a right triangle that is formed by dropping a perpendicular from one vertex of the tetrahedron to the midpoint of the opposite edge.",
+        "Step 2:  Label the midpoint of the edge as M. The perpendicular line segment from the vertex to M forms the height of the tetrahedron, which is 20 inches, and creates two congruent right triangles with base $\\frac{\\sqrt{3}}{2} a$, where a is the length of each edge of the tetrahedron.",
+        "Step 3:  Applying the Pythagorean Theorem to one of the congruent right triangles gives $20^2 + \\left(\\frac{\\sqrt{3}}{2}a\\right)^2 = a^2$.",
+        "Step 4:  Expanding the equation yields $400 + \\frac{3}{4}a^2 = a^2$.",
+        "Step 5: Subtract $\\frac{3}{4}a^2$ from both sides of the equation to get $400 = \\frac{1}{4}a^2$.",
+        "Step 6: Multiply both sides by 4 to get $1600 = a^2$.",
+        "Step 7:  Taking the square root of both sides of the equation gives $a = \\sqrt{1600} = 40\\sqrt{1}$.",
+        "Step 8:  Since a is the length of each edge of the tetrahedron, the length of each edge is $40\\sqrt{1} = 40$.",
+        "Step 9: \n$20^2 + \\left(\\frac{\\sqrt{3}}{2}a\\right)^2 = a^2$",
+        "$400 + \\frac{3}{4}a^2 = a^2$"
+    ],
+    "full_steps": [
+        [
+            "Given: a regular tetrahedron with height 20 inches.\nFind: the length of each edge of the tetrahedron.\n\nStep 1:  Draw a right triangle that is formed by dropping a perpendicular from one vertex of the tetrahedron to the midpoint of the opposite edge.",
+            1
+        ],
+        [
+            "Step 2:  Label the midpoint of the edge as M. The perpendicular line segment from the vertex to M forms the height of the tetrahedron, which is 20 inches, and creates two congruent right triangles with base $\\frac{\\sqrt{3}}{2} a$, where a is the length of each edge of the tetrahedron.",
+            1
+        ],
+        [
+            "Step 3:  Applying the Pythagorean Theorem to one of the congruent right triangles gives $20^2 + \\left(\\frac{\\sqrt{3}}{2}a\\right)^2 = a^2$.",
+            1
+        ],
+        [
+            "Step 4:  Expanding the equation yields $400 + \\frac{3}{4}a^2 = a^2$.",
+            1
+        ],
+        [
+            "Step 5: Subtract $\\frac{3}{4}a^2$ from both sides of the equation to get $400 = \\frac{1}{4}a^2$.",
+            1
+        ],
+        [
+            "Step 6: Multiply both sides by 4 to get $1600 = a^2$.",
+            1
+        ],
+        [
+            "Step 7:  Taking the square root of both sides of the equation gives $a = \\sqrt{1600} = 40\\sqrt{1}$.",
+            1
+        ],
+        [
+            "Step 8:  Since a is the length of each edge of the tetrahedron, the length of each edge is $40\\sqrt{1} = 40$.",
+            1
+        ],
+        [
+            "Step 9: \n$20^2 + \\left(\\frac{\\sqrt{3}}{2}a\\right)^2 = a^2$",
+            1
+        ],
+        [
+            "$400 + \\frac{3}{4}a^2 = a^2$",
+            1
+        ]
+    ],
+    "time": 136.96446895599365,
+    "total_tokens": 7536,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

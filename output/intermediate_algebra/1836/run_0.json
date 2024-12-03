@@ -1,0 +1,66 @@
+{
+    "problem": "Let $z_1,$ $z_2,$ $z_3$ be complex numbers such that $|z_1| = 1,$ $|z_2| = 2,$ $|z_3| = 3,$ and\n\\[|9z_1 z_2 + 4z_1 z_3 + z_2 z_3| = 12.\\]Find $|z_1 + z_2 + z_3|.$",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "Since a complex number and its conjugate always have the same magnitude,\n\\[|\\overline{9z_1 z_2 + 4z_1 z_3 + z_2 z_3}| = |9 \\overline{z}_1 \\overline{z}_2 + 4 \\overline{z}_1 \\overline{z}_3 + \\overline{z}_2 \\overline{z}_3| = 12.\\]From the given information, $z_1 \\overline{z}_1 = |z_1|^2 = 1,$ so $\\overline{z}_1 = \\frac{1}{z_1}.$  Similarly,\n\\[\\overline{z}_2 = \\frac{4}{z_2} \\quad \\text{and} \\quad \\overline{z}_3 = \\frac{9}{z_3},\\]so\n\\begin{align*}\n|9 \\overline{z}_1 \\overline{z}_2 + 4 \\overline{z}_1 \\overline{z}_3 + \\overline{z}_2 \\overline{z}_3| &= \\left| 9 \\cdot \\frac{1}{z_1} \\cdot \\frac{4}{z_2} + 4 \\cdot \\frac{1}{z_1} \\cdot \\frac{9}{z_3} + \\frac{4}{z_2} \\cdot \\frac{9}{z_3} \\right| \\\\\n&= \\left| \\frac{36}{z_1 z_2} + \\frac{36}{z_1 z_3} + \\frac{36}{z_2 z_3} \\right| \\\\\n&= \\frac{36}{|z_1 z_2 z_3|} |z_1 + z_2 + z_3| \\\\\n&= \\frac{36}{1 \\cdot 2 \\cdot 3} |z_1 + z_2 + z_3| \\\\\n&= 6 |z_1 + z_2 + z_3|.\n\\end{align*}But this quantity is also 12, so $|z_1 + z_2 + z_3| = \\boxed{2}.$",
+    "is_solved": false,
+    "model_solution": "Step 1:  By the Triangle Inequality, $|z_1 + z_2 + z_3| \\le |z_1| + |z_2| + |z_3|.$\nStep 2:  We have that $|z_1| = 1, |z_2| = 2, |z_3| = 3,$ and $|9z_1 z_2 + 4z_1 z_3 + z_2 z_3| = 12.$ By the Triangle Inequality, $|9z_1 z_2 + 4z_1 z_3 + z_2 z_3| \\le |9z_1 z_2| + |4z_1 z_3| + |z_2 z_3|.$\nStep 3: $|9z_1 z_2 + 4z_1 z_3 + z_2 z_3| \\le |9z_1 z_2| + |4z_1 z_3| + |z_2 z_3| \\le (9|z_1||z_2|) + (4|z_1||z_3|) + (|z_2||z_3|) = (9\\cdot1\\cdot2) + (4\\cdot1\\cdot3) + (2\\cdot3) = 18 + 12 + 6 = 36.$\nSince $|9z_1 z_2 + 4z_1 z_3 + z_2 z_3| \\le 36,$ it must be that $|9z_1 z_2 + 4z_1 z_3 + z_2 z_3| = 12,$ and therefore $|9z_1 z_2 + 4z_1 z_3 + z_2 z_3| \\le 12.$\nStep 4:\n$|9z_1 z_2 + 4z_1 z_3 + z_2 z_3|^2 = (9z_1 z_2 + 4z_1 z_3 + z_2 z_3)(9\\overline{z_1 z_2} + 4\\overline{z_1 z_3} + \\overline{z_2 z_3}) = 81|z_1|^2|z_2|^2 + 36|z_1|^2|z_3|^2 + 9|z_1|^2|z_2|^2 + 24|z_1||z_2||z_3| + 4|z_1|^2|z_3|^2 + 4|z_2||z_3|^2$\n$= 81|z_1|^2|z_2|^2 + 36|z_1|^2|z_3|^2 + 9|z_1|^2|z_2|^2 + 72|z_1||z_2||z_3| + 4\n$|9z_1 z_2 + 4z_1 z_3 + z_2 z_3|^2 = 81|z_1|^2|z_2|^2 + 36|z_1|^2|z_3|^2 + 9|z_1|^2|z_2|^2 + 72|z_1||z_2||z_3| + 4|z_1|^2|z_3|^2 + 4|z_1||z_2||z_3| = 81|z_1|^2|z_2|^2 + 36|z_1|^2|z_3|^2 + 9|z_1|^2|z_2|^2 + 24|z_1||z_2||z_3| + 4|z_1||z_2||z_3| + 48|z_1||z_2||z_3| = 90|z_1|^2|z_2|^2 + 36|z_1|^2|z_3|^2 + 76|z_1||\n$|9z_1 z_2 + 4z_1 z_3 + z_2 z_3|^2 = 90|z_1|^2|z_2|^2 + 36|z_1|^2|z_3|^2 + 76|z_1||z_2||z_3| = 90|z_1|^2|z_2|^2 + 36|z_1|^2|z_3|^2 + 76|z_1||z_2||z_3| = 90(1)^2(2)^2 + 36(1)^2(3)^2 + 76(1)(2)(3) = 360 + 324 + 456 = 1140.$\n\nSince $|9z_1 z_2 + 4z_1 z_3 + z_2 z_3|^2 = 1140,$ $|9z_1 z_2 + 4z_1 z_3 + z_2 z_3| = \\sqrt{1140}.$\n$|9z_1 z_2 + 4z_1 z\n$(z_1 + z_2 + z_3)(\\overline{z_1} + \\overline{z_2} + \\overline{z_3}) = |z_1|^2 + |z_2|^2 + |z_3|^2 + z_1\\overline{z_2} + z_1\\overline{z_3} + z_2\\overline{z_1} + z_2\\overline{z_3} + z_3\\overline{z_1} + z_3\\overline{z_2}.$\n\n$|z_1 + z_2 + z_3|^2 = (z_1 + z_2 + z_3)(\\overline{z_1} + \\overline{z_2} + \\overline{z_3}) = |z_1|^2 + |z_2|^2 + |z_3|^2 + z_1\\overline{z_2} + z_1\\overline{z_3} + z_2\\overline{z_1} + z_2\n$|z_1 + z_2 + z_3|^2 = |z_1|^2 + |z_2|^2 + |z_3|^2 + z_1\\overline{z_2} + z_1\\overline{z_3} + z_2\\overline{z_1} + z_2\\overline{z_3} + z_3\\overline{z_1} + z_3\\overline{z_2}$\n\nWe have that $(z_1 + z_2 + z_3)(\\overline{z_1} + \\overline{z_2} + \\overline{z_3}) = |z_1|^2 + |z_2|^2 + |z_3|^2 + z_1\\overline{z_2} + z_1\\overline{z_3} + z_2\\overline{z_1} + z_2\\overline{z_3} + z_3\\overline{z_1} + z_3\\overline{z_2}.$\n\nUsing the fact that\n$|9z_1 z_2 + 4z_1 z_3 + z_2 z_3| = 12.$\n$|9z_1 z_2 + 4z_1 z_3 + z_2 z_3|^2 = 90|z_1|^2|z_2|^2 + 36|z_1|^2|z_3|^2 + 76|z_1||z_2||z_3| = 1140$\n$(z_1 + z_2 + z_3)(\\overline{z_1} + \\overline{z_2} + \\overline{z_3}) = |z_1|^2 + |z_2|^2 + |z_3|^2 + z_1\\overline{z_2} + z_1\\overline{z_3} + z_2\\overline{z_1} + z_2\\overline{z_3} + z_3\\overline{z_1} + z_3\\overline{z_2} = |z_1 + z_2",
+    "steps": [
+        "Step 1:  By the Triangle Inequality, $|z_1 + z_2 + z_3| \\le |z_1| + |z_2| + |z_3|.$",
+        "Step 2:  We have that $|z_1| = 1, |z_2| = 2, |z_3| = 3,$ and $|9z_1 z_2 + 4z_1 z_3 + z_2 z_3| = 12.$ By the Triangle Inequality, $|9z_1 z_2 + 4z_1 z_3 + z_2 z_3| \\le |9z_1 z_2| + |4z_1 z_3| + |z_2 z_3|.$",
+        "Step 3: $|9z_1 z_2 + 4z_1 z_3 + z_2 z_3| \\le |9z_1 z_2| + |4z_1 z_3| + |z_2 z_3| \\le (9|z_1||z_2|) + (4|z_1||z_3|) + (|z_2||z_3|) = (9\\cdot1\\cdot2) + (4\\cdot1\\cdot3) + (2\\cdot3) = 18 + 12 + 6 = 36.$",
+        "Since $|9z_1 z_2 + 4z_1 z_3 + z_2 z_3| \\le 36,$ it must be that $|9z_1 z_2 + 4z_1 z_3 + z_2 z_3| = 12,$ and therefore $|9z_1 z_2 + 4z_1 z_3 + z_2 z_3| \\le 12.$",
+        "Step 4:\n$|9z_1 z_2 + 4z_1 z_3 + z_2 z_3|^2 = (9z_1 z_2 + 4z_1 z_3 + z_2 z_3)(9\\overline{z_1 z_2} + 4\\overline{z_1 z_3} + \\overline{z_2 z_3}) = 81|z_1|^2|z_2|^2 + 36|z_1|^2|z_3|^2 + 9|z_1|^2|z_2|^2 + 24|z_1||z_2||z_3| + 4|z_1|^2|z_3|^2 + 4|z_2||z_3|^2$\n$= 81|z_1|^2|z_2|^2 + 36|z_1|^2|z_3|^2 + 9|z_1|^2|z_2|^2 + 72|z_1||z_2||z_3| + 4",
+        "$|9z_1 z_2 + 4z_1 z_3 + z_2 z_3|^2 = 81|z_1|^2|z_2|^2 + 36|z_1|^2|z_3|^2 + 9|z_1|^2|z_2|^2 + 72|z_1||z_2||z_3| + 4|z_1|^2|z_3|^2 + 4|z_1||z_2||z_3| = 81|z_1|^2|z_2|^2 + 36|z_1|^2|z_3|^2 + 9|z_1|^2|z_2|^2 + 24|z_1||z_2||z_3| + 4|z_1||z_2||z_3| + 48|z_1||z_2||z_3| = 90|z_1|^2|z_2|^2 + 36|z_1|^2|z_3|^2 + 76|z_1||",
+        "$|9z_1 z_2 + 4z_1 z_3 + z_2 z_3|^2 = 90|z_1|^2|z_2|^2 + 36|z_1|^2|z_3|^2 + 76|z_1||z_2||z_3| = 90|z_1|^2|z_2|^2 + 36|z_1|^2|z_3|^2 + 76|z_1||z_2||z_3| = 90(1)^2(2)^2 + 36(1)^2(3)^2 + 76(1)(2)(3) = 360 + 324 + 456 = 1140.$\n\nSince $|9z_1 z_2 + 4z_1 z_3 + z_2 z_3|^2 = 1140,$ $|9z_1 z_2 + 4z_1 z_3 + z_2 z_3| = \\sqrt{1140}.$\n$|9z_1 z_2 + 4z_1 z",
+        "$(z_1 + z_2 + z_3)(\\overline{z_1} + \\overline{z_2} + \\overline{z_3}) = |z_1|^2 + |z_2|^2 + |z_3|^2 + z_1\\overline{z_2} + z_1\\overline{z_3} + z_2\\overline{z_1} + z_2\\overline{z_3} + z_3\\overline{z_1} + z_3\\overline{z_2}.$\n\n$|z_1 + z_2 + z_3|^2 = (z_1 + z_2 + z_3)(\\overline{z_1} + \\overline{z_2} + \\overline{z_3}) = |z_1|^2 + |z_2|^2 + |z_3|^2 + z_1\\overline{z_2} + z_1\\overline{z_3} + z_2\\overline{z_1} + z_2",
+        "$|z_1 + z_2 + z_3|^2 = |z_1|^2 + |z_2|^2 + |z_3|^2 + z_1\\overline{z_2} + z_1\\overline{z_3} + z_2\\overline{z_1} + z_2\\overline{z_3} + z_3\\overline{z_1} + z_3\\overline{z_2}$\n\nWe have that $(z_1 + z_2 + z_3)(\\overline{z_1} + \\overline{z_2} + \\overline{z_3}) = |z_1|^2 + |z_2|^2 + |z_3|^2 + z_1\\overline{z_2} + z_1\\overline{z_3} + z_2\\overline{z_1} + z_2\\overline{z_3} + z_3\\overline{z_1} + z_3\\overline{z_2}.$\n\nUsing the fact that",
+        "$|9z_1 z_2 + 4z_1 z_3 + z_2 z_3| = 12.$\n$|9z_1 z_2 + 4z_1 z_3 + z_2 z_3|^2 = 90|z_1|^2|z_2|^2 + 36|z_1|^2|z_3|^2 + 76|z_1||z_2||z_3| = 1140$\n$(z_1 + z_2 + z_3)(\\overline{z_1} + \\overline{z_2} + \\overline{z_3}) = |z_1|^2 + |z_2|^2 + |z_3|^2 + z_1\\overline{z_2} + z_1\\overline{z_3} + z_2\\overline{z_1} + z_2\\overline{z_3} + z_3\\overline{z_1} + z_3\\overline{z_2} = |z_1 + z_2"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  By the Triangle Inequality, $|z_1 + z_2 + z_3| \\le |z_1| + |z_2| + |z_3|.$",
+            1
+        ],
+        [
+            "Step 2:  We have that $|z_1| = 1, |z_2| = 2, |z_3| = 3,$ and $|9z_1 z_2 + 4z_1 z_3 + z_2 z_3| = 12.$ By the Triangle Inequality, $|9z_1 z_2 + 4z_1 z_3 + z_2 z_3| \\le |9z_1 z_2| + |4z_1 z_3| + |z_2 z_3|.$",
+            1
+        ],
+        [
+            "Step 3: $|9z_1 z_2 + 4z_1 z_3 + z_2 z_3| \\le |9z_1 z_2| + |4z_1 z_3| + |z_2 z_3| \\le (9|z_1||z_2|) + (4|z_1||z_3|) + (|z_2||z_3|) = (9\\cdot1\\cdot2) + (4\\cdot1\\cdot3) + (2\\cdot3) = 18 + 12 + 6 = 36.$",
+            1
+        ],
+        [
+            "Since $|9z_1 z_2 + 4z_1 z_3 + z_2 z_3| \\le 36,$ it must be that $|9z_1 z_2 + 4z_1 z_3 + z_2 z_3| = 12,$ and therefore $|9z_1 z_2 + 4z_1 z_3 + z_2 z_3| \\le 12.$",
+            1
+        ],
+        [
+            "Step 4:\n$|9z_1 z_2 + 4z_1 z_3 + z_2 z_3|^2 = (9z_1 z_2 + 4z_1 z_3 + z_2 z_3)(9\\overline{z_1 z_2} + 4\\overline{z_1 z_3} + \\overline{z_2 z_3}) = 81|z_1|^2|z_2|^2 + 36|z_1|^2|z_3|^2 + 9|z_1|^2|z_2|^2 + 24|z_1||z_2||z_3| + 4|z_1|^2|z_3|^2 + 4|z_2||z_3|^2$\n$= 81|z_1|^2|z_2|^2 + 36|z_1|^2|z_3|^2 + 9|z_1|^2|z_2|^2 + 72|z_1||z_2||z_3| + 4",
+            1
+        ],
+        [
+            "$|9z_1 z_2 + 4z_1 z_3 + z_2 z_3|^2 = 81|z_1|^2|z_2|^2 + 36|z_1|^2|z_3|^2 + 9|z_1|^2|z_2|^2 + 72|z_1||z_2||z_3| + 4|z_1|^2|z_3|^2 + 4|z_1||z_2||z_3| = 81|z_1|^2|z_2|^2 + 36|z_1|^2|z_3|^2 + 9|z_1|^2|z_2|^2 + 24|z_1||z_2||z_3| + 4|z_1||z_2||z_3| + 48|z_1||z_2||z_3| = 90|z_1|^2|z_2|^2 + 36|z_1|^2|z_3|^2 + 76|z_1||",
+            1
+        ],
+        [
+            "$|9z_1 z_2 + 4z_1 z_3 + z_2 z_3|^2 = 90|z_1|^2|z_2|^2 + 36|z_1|^2|z_3|^2 + 76|z_1||z_2||z_3| = 90|z_1|^2|z_2|^2 + 36|z_1|^2|z_3|^2 + 76|z_1||z_2||z_3| = 90(1)^2(2)^2 + 36(1)^2(3)^2 + 76(1)(2)(3) = 360 + 324 + 456 = 1140.$\n\nSince $|9z_1 z_2 + 4z_1 z_3 + z_2 z_3|^2 = 1140,$ $|9z_1 z_2 + 4z_1 z_3 + z_2 z_3| = \\sqrt{1140}.$\n$|9z_1 z_2 + 4z_1 z",
+            1
+        ],
+        [
+            "$(z_1 + z_2 + z_3)(\\overline{z_1} + \\overline{z_2} + \\overline{z_3}) = |z_1|^2 + |z_2|^2 + |z_3|^2 + z_1\\overline{z_2} + z_1\\overline{z_3} + z_2\\overline{z_1} + z_2\\overline{z_3} + z_3\\overline{z_1} + z_3\\overline{z_2}.$\n\n$|z_1 + z_2 + z_3|^2 = (z_1 + z_2 + z_3)(\\overline{z_1} + \\overline{z_2} + \\overline{z_3}) = |z_1|^2 + |z_2|^2 + |z_3|^2 + z_1\\overline{z_2} + z_1\\overline{z_3} + z_2\\overline{z_1} + z_2",
+            1
+        ],
+        [
+            "$|z_1 + z_2 + z_3|^2 = |z_1|^2 + |z_2|^2 + |z_3|^2 + z_1\\overline{z_2} + z_1\\overline{z_3} + z_2\\overline{z_1} + z_2\\overline{z_3} + z_3\\overline{z_1} + z_3\\overline{z_2}$\n\nWe have that $(z_1 + z_2 + z_3)(\\overline{z_1} + \\overline{z_2} + \\overline{z_3}) = |z_1|^2 + |z_2|^2 + |z_3|^2 + z_1\\overline{z_2} + z_1\\overline{z_3} + z_2\\overline{z_1} + z_2\\overline{z_3} + z_3\\overline{z_1} + z_3\\overline{z_2}.$\n\nUsing the fact that",
+            1
+        ],
+        [
+            "$|9z_1 z_2 + 4z_1 z_3 + z_2 z_3| = 12.$\n$|9z_1 z_2 + 4z_1 z_3 + z_2 z_3|^2 = 90|z_1|^2|z_2|^2 + 36|z_1|^2|z_3|^2 + 76|z_1||z_2||z_3| = 1140$\n$(z_1 + z_2 + z_3)(\\overline{z_1} + \\overline{z_2} + \\overline{z_3}) = |z_1|^2 + |z_2|^2 + |z_3|^2 + z_1\\overline{z_2} + z_1\\overline{z_3} + z_2\\overline{z_1} + z_2\\overline{z_3} + z_3\\overline{z_1} + z_3\\overline{z_2} = |z_1 + z_2",
+            1
+        ]
+    ],
+    "time": 133.55649042129517,
+    "total_tokens": 20730,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

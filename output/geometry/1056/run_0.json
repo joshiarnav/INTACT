@@ -1,0 +1,66 @@
+{
+    "problem": "The lengths, in order, of four consecutive sides of an equiangular hexagon are 1, 7, 2 and 4 units, respectively. What is the sum of the lengths of the two remaining sides?",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "Name the vertices of the hexagon so that hexagon $ABCDEF$ has $AB=1$, $BC=7$, $CD=2$, and $DE=4$.  The hexagon is equiangular, so each interior angle measures $180(6-2)/6=120$ degrees.  Extend sides $AB$, $CD$, and $EF$ and call their intersection points $G$, $H$, and $J$ as shown.  The exterior angles of the hexagon each measure $180-120=60$ degrees, so triangles $JDE$, $CBH$, $FGA$, and $JHG$ are all equilateral.  It follows that $JD=DE=4$ units and $CH=CB=7$ units.  Therefore the side length $JH$ of triangle $JGH$ is $4+2+7=13$ units.  Turning to side $HG$, we find that $AF=AG=13-(7+1)=5$ units.  Finally, we solve $JG=JE+EF+FG$ for $EF$ to get $EF=13-(4+5)=4$ units.  The sum of the missing sides is $5+4=\\boxed{9}$ units.\n\n[asy]\nsize(6cm);\ndefaultpen(linewidth(.7pt)+fontsize(8pt));\ndotfactor=4;\n\npair A=(8,0), B=(7,0), C=7*dir(60), D=9*dir(60), Ep=(13,0)+9*dir(120), F=(13,0)+5*dir(120), G=(13,0), H=(0,0), J=13*dir(60);\n\npair[] dots = {A, B, C, D, Ep, F};\n\ndot(dots);\n\ndraw(A--B--C--D--Ep--F--cycle);\n\ndraw(B--H--C,dashed);\ndraw(D--J--Ep,dashed);\ndraw(F--G--A,dashed);\n\nlabel(\"$A$\",A,S);\nlabel(\"$B$\",B,S);\nlabel(\"$C$\",C,NW);\nlabel(\"$D$\",D,NW);\nlabel(\"$E$\",Ep,NE);\nlabel(\"$F$\",F,NE);\nlabel(\"$G$\",G,SE);\nlabel(\"$H$\",H,SW);\nlabel(\"$J$\",J,N);\n\nlabel(\"$1$\",(A+B)/2,N);\nlabel(\"$7$\",(B+C)/2,NE);\nlabel(\"$2$\",(C+D)/2,SE);\nlabel(\"$4$\",(D+Ep)/2,S);\n[/asy]",
+    "is_solved": false,
+    "model_solution": "## Step 1: Understand that an equiangular hexagon has interior angles of equal size.\nAn equiangular hexagon has 6 sides and its interior angles are all equal, with each angle measuring 120 degrees.\n## Step 2: Recognize that since the hexagon is equiangular, opposite sides are equal in length and the sum of the interior angles of a triangle formed by two adjacent sides and the remaining side is 180 degrees.\n## Step 3: Use the Law of Cosines to find the length of the remaining sides.\nThe Law of Cosines states that for a triangle with sides a, b, and c, and the angle opposite side c being C, c^2 = a^2 + b^2 - 2ab * cos(C).\n## Step 4: For the first remaining side, let's denote it as x and the known sides as a = 1, b = 7 and c = 2. The angle C is 120 degrees. x^2 = 1^2 + 7^2 - 2 * 1 * 7 * cos(120 degrees) and solve for x.\n## Step 5: x^2 = 1 + 49 - 2 * 1 * 7 * (-0.5) = 50 + 7 = 57, x = sqrt(57).\n## Step 6: For the second remaining side, let's denote it as y and the known sides as a = 1, b = 4 and c = 7. The angle C is 120 degrees. y^2 = 1^2 + 4^2 - 2 * 1 * 4 * cos(120 degrees) and solve for y.\ny^2 = 1 + 16 - 2 * 1 * 4 * (-0.5) = 17 + 4 = 21, y = sqrt(21).\n## Step 7: The sum of the lengths of the two remaining sides is x + y = sqrt(57) + sqrt(21).\n## Step 8: Calculate the numerical value of sqrt(57) + sqrt(21).\n## Step 9: Evaluate sqrt(57) and sqrt(21) to get the numerical values 7.55 and 4.58 respectively, then add them together.",
+    "steps": [
+        "## Step 1: Understand that an equiangular hexagon has interior angles of equal size.\nAn equiangular hexagon has 6 sides and its interior angles are all equal, with each angle measuring 120 degrees.",
+        "## Step 2: Recognize that since the hexagon is equiangular, opposite sides are equal in length and the sum of the interior angles of a triangle formed by two adjacent sides and the remaining side is 180 degrees.",
+        "## Step 3: Use the Law of Cosines to find the length of the remaining sides.\nThe Law of Cosines states that for a triangle with sides a, b, and c, and the angle opposite side c being C, c^2 = a^2 + b^2 - 2ab * cos(C).",
+        "## Step 4: For the first remaining side, let's denote it as x and the known sides as a = 1, b = 7 and c = 2. The angle C is 120 degrees. x^2 = 1^2 + 7^2 - 2 * 1 * 7 * cos(120 degrees) and solve for x.",
+        "## Step 5: x^2 = 1 + 49 - 2 * 1 * 7 * (-0.5) = 50 + 7 = 57, x = sqrt(57).",
+        "## Step 6: For the second remaining side, let's denote it as y and the known sides as a = 1, b = 4 and c = 7. The angle C is 120 degrees. y^2 = 1^2 + 4^2 - 2 * 1 * 4 * cos(120 degrees) and solve for y.",
+        "y^2 = 1 + 16 - 2 * 1 * 4 * (-0.5) = 17 + 4 = 21, y = sqrt(21).",
+        "## Step 7: The sum of the lengths of the two remaining sides is x + y = sqrt(57) + sqrt(21).",
+        "## Step 8: Calculate the numerical value of sqrt(57) + sqrt(21).",
+        "## Step 9: Evaluate sqrt(57) and sqrt(21) to get the numerical values 7.55 and 4.58 respectively, then add them together."
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Understand that an equiangular hexagon has interior angles of equal size.\nAn equiangular hexagon has 6 sides and its interior angles are all equal, with each angle measuring 120 degrees.",
+            1
+        ],
+        [
+            "## Step 2: Recognize that since the hexagon is equiangular, opposite sides are equal in length and the sum of the interior angles of a triangle formed by two adjacent sides and the remaining side is 180 degrees.",
+            1
+        ],
+        [
+            "## Step 3: Use the Law of Cosines to find the length of the remaining sides.\nThe Law of Cosines states that for a triangle with sides a, b, and c, and the angle opposite side c being C, c^2 = a^2 + b^2 - 2ab * cos(C).",
+            1
+        ],
+        [
+            "## Step 4: For the first remaining side, let's denote it as x and the known sides as a = 1, b = 7 and c = 2. The angle C is 120 degrees. x^2 = 1^2 + 7^2 - 2 * 1 * 7 * cos(120 degrees) and solve for x.",
+            1
+        ],
+        [
+            "## Step 5: x^2 = 1 + 49 - 2 * 1 * 7 * (-0.5) = 50 + 7 = 57, x = sqrt(57).",
+            1
+        ],
+        [
+            "## Step 6: For the second remaining side, let's denote it as y and the known sides as a = 1, b = 4 and c = 7. The angle C is 120 degrees. y^2 = 1^2 + 4^2 - 2 * 1 * 4 * cos(120 degrees) and solve for y.",
+            1
+        ],
+        [
+            "y^2 = 1 + 16 - 2 * 1 * 4 * (-0.5) = 17 + 4 = 21, y = sqrt(21).",
+            1
+        ],
+        [
+            "## Step 7: The sum of the lengths of the two remaining sides is x + y = sqrt(57) + sqrt(21).",
+            1
+        ],
+        [
+            "## Step 8: Calculate the numerical value of sqrt(57) + sqrt(21).",
+            1
+        ],
+        [
+            "## Step 9: Evaluate sqrt(57) and sqrt(21) to get the numerical values 7.55 and 4.58 respectively, then add them together.",
+            1
+        ]
+    ],
+    "time": 138.12645053863525,
+    "total_tokens": 8111,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,66 @@
+{
+    "problem": "In how many ways can 8 people sit around a round table if Pierre and Thomas want to sit together, but Rosa doesn't want to sit next to either of them? (Treat rotations as not distinct but reflections as distinct.)",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "Solution 1: We choose any seat for Pierre, and then seat everyone else relative to Pierre.  There are 2 choices for Thomas; to the right or left of Pierre.  Then, there are 4 possible seats for Rosa that aren't adjacent to Pierre or Thomas. The five remaining people can be arranged in any of $5!$ ways, so there are a total of $2\\cdot 4\\cdot 5!=960$ valid ways to arrange the people around the table.\n\nSolution 2: The total number of ways in which Pierre and Thomas sit together is $6! \\cdot 2 = 1440$. The number of ways in which Pierre and Thomas sit together and Rosa sits next to one of them is $5! \\cdot 2 \\cdot 2 = 480$. So the answer is the difference $1440 - 480 = \\boxed{960}$.",
+    "is_solved": false,
+    "model_solution": "## Step 1:  Consider the constraint that Pierre and Thomas want to sit together.\nPierre and Thomas can be treated as a single entity when sitting together.\n## Step 2:  If we treat Pierre and Thomas as one entity, then we effectively have 7 entities to arrange around the round table.\n## Step 3:  The number of ways to arrange 7 entities around a round table can be calculated using the formula (n-1)!, where n represents the number of entities. Therefore, we have (7-1)! = 6! ways to arrange these entities.\n\n## Step 4:  Next, we need to account for the restriction that Rosa cannot sit next to either Pierre or Thomas. This means that Rosa cannot sit at either of the two positions adjacent to the \"Pierre-Thomas\" entity.\n## Step 5:  Once Rosa's position is fixed, we can treat Pierre and Thomas as one entity again. This leaves us with 6 entities to arrange around a round table, with 6! ways to do so.\n\n## Step 6:  However, we need to consider the fact that within the \"Pierre-Thomas\" entity, there are 2 possible arrangements for Pierre and Thomas, namely Pierre on the left and Thomas on the right, or vice versa.\n## Step 7:  Therefore, we must multiply the number of arrangements by 2 to account for these possibilities.\n\n## Step 8:  After fixing Rosa's position, we have 6 entities to arrange around a\n## Step 9: The number of ways to arrange the remaining 6 entities around the round table after fixing Rosa's position is 6! = 720.\n## Step 10:  720 * 2 = 1440\n## Step 11:  \n1440\n## Step 12:  There are 5 remaining spots to place Rosa, so we have 5 choices for Rosa's position.\n5\n## Step 13:  1440 * 5 = 7200\n## Step 14:  7200\n## Step 15:  7200",
+    "steps": [
+        "## Step 1:  Consider the constraint that Pierre and Thomas want to sit together.\nPierre and Thomas can be treated as a single entity when sitting together.",
+        "## Step 2:  If we treat Pierre and Thomas as one entity, then we effectively have 7 entities to arrange around the round table.",
+        "## Step 3:  The number of ways to arrange 7 entities around a round table can be calculated using the formula (n-1)!, where n represents the number of entities. Therefore, we have (7-1)! = 6! ways to arrange these entities.\n\n## Step 4:  Next, we need to account for the restriction that Rosa cannot sit next to either Pierre or Thomas. This means that Rosa cannot sit at either of the two positions adjacent to the \"Pierre-Thomas\" entity.\n## Step 5:  Once Rosa's position is fixed, we can treat Pierre and Thomas as one entity again. This leaves us with 6 entities to arrange around a round table, with 6! ways to do so.\n\n## Step 6:  However, we need to consider the fact that within the \"Pierre-Thomas\" entity, there are 2 possible arrangements for Pierre and Thomas, namely Pierre on the left and Thomas on the right, or vice versa.\n## Step 7:  Therefore, we must multiply the number of arrangements by 2 to account for these possibilities.\n\n## Step 8:  After fixing Rosa's position, we have 6 entities to arrange around a",
+        "## Step 9: The number of ways to arrange the remaining 6 entities around the round table after fixing Rosa's position is 6! = 720.",
+        "## Step 10:  720 * 2 = 1440",
+        "## Step 11:  \n1440",
+        "## Step 12:  There are 5 remaining spots to place Rosa, so we have 5 choices for Rosa's position.\n5",
+        "## Step 13:  1440 * 5 = 7200",
+        "## Step 14:  7200",
+        "## Step 15:  7200"
+    ],
+    "full_steps": [
+        [
+            "## Step 1:  Consider the constraint that Pierre and Thomas want to sit together.\nPierre and Thomas can be treated as a single entity when sitting together.",
+            1
+        ],
+        [
+            "## Step 2:  If we treat Pierre and Thomas as one entity, then we effectively have 7 entities to arrange around the round table.",
+            1
+        ],
+        [
+            "## Step 3:  The number of ways to arrange 7 entities around a round table can be calculated using the formula (n-1)!, where n represents the number of entities. Therefore, we have (7-1)! = 6! ways to arrange these entities.\n\n## Step 4:  Next, we need to account for the restriction that Rosa cannot sit next to either Pierre or Thomas. This means that Rosa cannot sit at either of the two positions adjacent to the \"Pierre-Thomas\" entity.\n## Step 5:  Once Rosa's position is fixed, we can treat Pierre and Thomas as one entity again. This leaves us with 6 entities to arrange around a round table, with 6! ways to do so.\n\n## Step 6:  However, we need to consider the fact that within the \"Pierre-Thomas\" entity, there are 2 possible arrangements for Pierre and Thomas, namely Pierre on the left and Thomas on the right, or vice versa.\n## Step 7:  Therefore, we must multiply the number of arrangements by 2 to account for these possibilities.\n\n## Step 8:  After fixing Rosa's position, we have 6 entities to arrange around a",
+            1
+        ],
+        [
+            "## Step 9: The number of ways to arrange the remaining 6 entities around the round table after fixing Rosa's position is 6! = 720.",
+            1
+        ],
+        [
+            "## Step 10:  720 * 2 = 1440",
+            1
+        ],
+        [
+            "## Step 11:  \n1440",
+            1
+        ],
+        [
+            "## Step 12:  There are 5 remaining spots to place Rosa, so we have 5 choices for Rosa's position.\n5",
+            1
+        ],
+        [
+            "## Step 13:  1440 * 5 = 7200",
+            1
+        ],
+        [
+            "## Step 14:  7200",
+            1
+        ],
+        [
+            "## Step 15:  7200",
+            1
+        ]
+    ],
+    "time": 133.48124647140503,
+    "total_tokens": 8576,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,36 @@
+{
+    "problem": "How many four-digit numbers greater than 2999 can be formed such that the product of the middle two digits exceeds 5?",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "For the first digit, there are seven choices (3, 4, 5, 6, 7, 8, or 9). For the last digit, there are ten choices (0 through 9).\n\nWe know that if either of the middle digits is 0, their product will not exceed 5. So, only consider pairs of middle digits formed from choosing two numbers between 1 and 9, inclusive. There are $9 \\cdot 9$ such pairs possible. The only pairs whose product will not exceed 5 are 11, 12, 13, 14, 15, 21, 22, 31, 41, and 51. Thus, there are $9 \\cdot 9 - 10 = 71$ ways in which we can choose the middle two digits.\n\nThus, there are $ 7 \\cdot 71 \\cdot 10 = \\boxed{4970}$ such numbers.",
+    "is_solved": true,
+    "model_solution": "Step 1:  The first digit can be 3, 4, 5, 6, 7, 8, or 9, which gives us 7 choices.\nStep 2: \nThe second digit can be any number from 0 to 9 except for the first digit, so there are 10 - 1 = 9 choices.\nThe product of the middle two digits exceeds 5 if the second digit is either 6, 7, 8, or 9, or if the second digit is 1, 2, 3, or 4 and the third digit is 6, 7, 8, or 9.\nStep 3:\nThe third digit can be any number from 0 to 9 except for the second digit, so there are 10 - 1 = 9 choices.\nThe fourth digit can be any number from 0 to 9, so there are 10 choices.\nTherefore, the total number of four-digit numbers is 7 * 9 * 9 * 10 = 5670.\nStep 2: \nThe second digit can be any number from 0 to 9 except for the first digit, so there are 10 - 1 = 9 choices.\nThe product of the middle two digits exceeds 5 if the second digit is either 6, 7, 8, or 9, or if the second digit is 1, 2, 3, or 4 and the third digit is 6, 7, 8, or 9.",
+    "steps": [
+        "Step 1:  The first digit can be 3, 4, 5, 6, 7, 8, or 9, which gives us 7 choices.",
+        "Step 2: \nThe second digit can be any number from 0 to 9 except for the first digit, so there are 10 - 1 = 9 choices.\nThe product of the middle two digits exceeds 5 if the second digit is either 6, 7, 8, or 9, or if the second digit is 1, 2, 3, or 4 and the third digit is 6, 7, 8, or 9.",
+        "Step 3:\nThe third digit can be any number from 0 to 9 except for the second digit, so there are 10 - 1 = 9 choices.\nThe fourth digit can be any number from 0 to 9, so there are 10 choices.\nTherefore, the total number of four-digit numbers is 7 * 9 * 9 * 10 = 5670.",
+        "Step 2: \nThe second digit can be any number from 0 to 9 except for the first digit, so there are 10 - 1 = 9 choices.\nThe product of the middle two digits exceeds 5 if the second digit is either 6, 7, 8, or 9, or if the second digit is 1, 2, 3, or 4 and the third digit is 6, 7, 8, or 9."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  The first digit can be 3, 4, 5, 6, 7, 8, or 9, which gives us 7 choices.",
+            1
+        ],
+        [
+            "Step 2: \nThe second digit can be any number from 0 to 9 except for the first digit, so there are 10 - 1 = 9 choices.\nThe product of the middle two digits exceeds 5 if the second digit is either 6, 7, 8, or 9, or if the second digit is 1, 2, 3, or 4 and the third digit is 6, 7, 8, or 9.",
+            1
+        ],
+        [
+            "Step 3:\nThe third digit can be any number from 0 to 9 except for the second digit, so there are 10 - 1 = 9 choices.\nThe fourth digit can be any number from 0 to 9, so there are 10 choices.\nTherefore, the total number of four-digit numbers is 7 * 9 * 9 * 10 = 5670.",
+            1
+        ],
+        [
+            "Step 2: \nThe second digit can be any number from 0 to 9 except for the first digit, so there are 10 - 1 = 9 choices.\nThe product of the middle two digits exceeds 5 if the second digit is either 6, 7, 8, or 9, or if the second digit is 1, 2, 3, or 4 and the third digit is 6, 7, 8, or 9.",
+            1
+        ]
+    ],
+    "time": 52.154390811920166,
+    "total_tokens": 2172,
+    "final_answer_tokens": 410,
+    "model": "meta-llama/Llama-Vision-Free"
+}

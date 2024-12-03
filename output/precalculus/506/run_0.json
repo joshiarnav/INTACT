@@ -1,0 +1,66 @@
+{
+    "problem": "In a three-dimensional coordinate system with origin $O,$ points $A,$ $B,$ and $C$ are on the $x$-, $y$-, and $z$-axes, respectively.   If the areas of triangles $OAB,$ $OAC,$ and $OBC$ are 4, 6, and 12, respectively, compute the area of triangle $ABC.$",
+    "level": "Level 3",
+    "type": "Precalculus",
+    "solution": "Let $A = (a,0,0),$ $B = (0,b,0),$ and $C = (0,0,c).$  Without loss of generality, we can assume that $a,$ $b,$ and $c$ are positive.\n\n[asy]\nimport three;\n\nsize(250);\ncurrentprojection = perspective(6,3,2);\n\ntriple A, B, C, O;\n\nA = (1,0,0);\nB = (0,2,0);\nC = (0,0,3);\nO = (0,0,0);\n\ndraw(O--(4,0,0));\ndraw(O--(0,4,0));\ndraw(O--(0,0,4));\ndraw(A--B--C--cycle);\n\nlabel(\"$A$\", A, S);\nlabel(\"$B$\", B, S);\nlabel(\"$C$\", C, NW);\nlabel(\"$O$\", O,  NE);\n[/asy]\n\nThen $\\frac{ab}{2} = 4,$ $\\frac{ac}{2} = 6,$ and $\\frac{bc}{2} = 12,$ so\n\\begin{align*}\nab &= 8, \\\\\nac &= 12, \\\\\nbc &= 24.\n\\end{align*}Multiplying all these equations, we get $a^2 b^2 c^2 = 2304,$ so $abc = 48.$  Hence, $a = \\frac{48}{24} = 2,$ $b = \\frac{48}{12} = 4,$ and $c = \\frac{48}{8} = 6.$\n\nThen\n\\begin{align*}\nAB &= \\sqrt{a^2 + b^2} = 2 \\sqrt{5}, \\\\\nAC &= \\sqrt{a^2 + c^2} = 2 \\sqrt{10}, \\\\\nBC &= \\sqrt{b^2 + c^2} = 2 \\sqrt{13}.\n\\end{align*}By Heron's Formula,\n\\begin{align*}\n[ABC]^2 &= (\\sqrt{5} + \\sqrt{10} + \\sqrt{13})(-\\sqrt{5} + \\sqrt{10} + \\sqrt{13})(\\sqrt{5} - \\sqrt{10} + \\sqrt{13})(\\sqrt{5} + \\sqrt{10} - \\sqrt{13}) \\\\\n&= ((\\sqrt{10} + \\sqrt{13})^2 - 5)(5 - (\\sqrt{10} - \\sqrt{13})^2) \\\\\n&= (2 \\sqrt{130} + 18)(2 \\sqrt{130} - 18) \\\\\n&= 196,\n\\end{align*}so $[ABC] = \\boxed{14}.$",
+    "is_solved": false,
+    "model_solution": "Step 1:  We are given points $A,$ $B,$ and $C$ in a three-dimensional coordinate system with origin $O,$ such that $A$ lies on the $x$-axis, $B$ lies on the $y$-axis, and $C$ lies on the $z$-axis. We are asked to find the area of triangle $ABC.$\nStep 2:  The areas of triangles $OAB,$ $OAC,$ and $OBC$ are given as 4, 6, and 12, respectively. We need to use this information to find the area of triangle $ABC.$\nStep 3:  Since the points lie on the axes, we can assume that the coordinates of $A,$ $B,$ and $C$ are $(a,0,0),$ $(0,b,0),$ and $(0,0,c)$ respectively, for some $a,$ $b,$ and $c.$\nStep 4:  Using the formula for the area of a triangle, we can set up the equations for the areas of triangles $OAB,$ $OAC,$ and $OBC$ using the coordinates of the points.\nStep 5\nStep 6:  The given areas of triangles $OAB,$ $OAC,$ and $OBC$ can be expressed as $\\frac{1}{2}ab,$ $\\frac{1}{2}ac,$ and $\\frac{1}{2}bc$ respectively. This gives us the equations $ab = 8,$ $ac = 12,$ and $bc = 24.$ We can use these equations to find the area of triangle $ABC.$\nStep 7:  We can multiply the equations $ab = 8,$ $ac = 12,$ and $bc = 24$ to obtain $(abc)^2 = 8 \\cdot 12 \\cdot 24.$\nStep 8:  Taking the square root of both sides gives $abc = \\sqrt{8 \\cdot 12 \\cdot 24} = 48.$\nStep 9:  The area of triangle $ABC$ is given by the magnitude of the cross product of vectors $\\overrightarrow{OA}$ and $\\overrightarrow{OB},$ which is $\\frac{1}{2} \\|\\overrightarrow{OA} \\times \\overrightarrow{OB}\\|.$\nThe magnitude of the cross product of vectors $\\overrightarrow{OA}$ and $\\overrightarrow{OB}$ is $\\sqrt{a^2b^2}.$\nStep 10: $\\sqrt{a^2b^2} = \\sqrt{(48)^2} =$\n$\\sqrt{(48)^2} = 48$\n$\\frac{1}{2} \\cdot 48$\n$\\frac{1}{2} \\cdot 48$",
+    "steps": [
+        "Step 1:  We are given points $A,$ $B,$ and $C$ in a three-dimensional coordinate system with origin $O,$ such that $A$ lies on the $x$-axis, $B$ lies on the $y$-axis, and $C$ lies on the $z$-axis. We are asked to find the area of triangle $ABC.$\nStep 2:  The areas of triangles $OAB,$ $OAC,$ and $OBC$ are given as 4, 6, and 12, respectively. We need to use this information to find the area of triangle $ABC.$\nStep 3:  Since the points lie on the axes, we can assume that the coordinates of $A,$ $B,$ and $C$ are $(a,0,0),$ $(0,b,0),$ and $(0,0,c)$ respectively, for some $a,$ $b,$ and $c.$\nStep 4:  Using the formula for the area of a triangle, we can set up the equations for the areas of triangles $OAB,$ $OAC,$ and $OBC$ using the coordinates of the points.\nStep 5",
+        "Step 6:  The given areas of triangles $OAB,$ $OAC,$ and $OBC$ can be expressed as $\\frac{1}{2}ab,$ $\\frac{1}{2}ac,$ and $\\frac{1}{2}bc$ respectively. This gives us the equations $ab = 8,$ $ac = 12,$ and $bc = 24.$ We can use these equations to find the area of triangle $ABC.$",
+        "Step 7:  We can multiply the equations $ab = 8,$ $ac = 12,$ and $bc = 24$ to obtain $(abc)^2 = 8 \\cdot 12 \\cdot 24.$",
+        "Step 8:  Taking the square root of both sides gives $abc = \\sqrt{8 \\cdot 12 \\cdot 24} = 48.$",
+        "Step 9:  The area of triangle $ABC$ is given by the magnitude of the cross product of vectors $\\overrightarrow{OA}$ and $\\overrightarrow{OB},$ which is $\\frac{1}{2} \\|\\overrightarrow{OA} \\times \\overrightarrow{OB}\\|.$",
+        "The magnitude of the cross product of vectors $\\overrightarrow{OA}$ and $\\overrightarrow{OB}$ is $\\sqrt{a^2b^2}.$",
+        "Step 10: $\\sqrt{a^2b^2} = \\sqrt{(48)^2} =$",
+        "$\\sqrt{(48)^2} = 48$",
+        "$\\frac{1}{2} \\cdot 48$",
+        "$\\frac{1}{2} \\cdot 48$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We are given points $A,$ $B,$ and $C$ in a three-dimensional coordinate system with origin $O,$ such that $A$ lies on the $x$-axis, $B$ lies on the $y$-axis, and $C$ lies on the $z$-axis. We are asked to find the area of triangle $ABC.$\nStep 2:  The areas of triangles $OAB,$ $OAC,$ and $OBC$ are given as 4, 6, and 12, respectively. We need to use this information to find the area of triangle $ABC.$\nStep 3:  Since the points lie on the axes, we can assume that the coordinates of $A,$ $B,$ and $C$ are $(a,0,0),$ $(0,b,0),$ and $(0,0,c)$ respectively, for some $a,$ $b,$ and $c.$\nStep 4:  Using the formula for the area of a triangle, we can set up the equations for the areas of triangles $OAB,$ $OAC,$ and $OBC$ using the coordinates of the points.\nStep 5",
+            1
+        ],
+        [
+            "Step 6:  The given areas of triangles $OAB,$ $OAC,$ and $OBC$ can be expressed as $\\frac{1}{2}ab,$ $\\frac{1}{2}ac,$ and $\\frac{1}{2}bc$ respectively. This gives us the equations $ab = 8,$ $ac = 12,$ and $bc = 24.$ We can use these equations to find the area of triangle $ABC.$",
+            1
+        ],
+        [
+            "Step 7:  We can multiply the equations $ab = 8,$ $ac = 12,$ and $bc = 24$ to obtain $(abc)^2 = 8 \\cdot 12 \\cdot 24.$",
+            1
+        ],
+        [
+            "Step 8:  Taking the square root of both sides gives $abc = \\sqrt{8 \\cdot 12 \\cdot 24} = 48.$",
+            1
+        ],
+        [
+            "Step 9:  The area of triangle $ABC$ is given by the magnitude of the cross product of vectors $\\overrightarrow{OA}$ and $\\overrightarrow{OB},$ which is $\\frac{1}{2} \\|\\overrightarrow{OA} \\times \\overrightarrow{OB}\\|.$",
+            1
+        ],
+        [
+            "The magnitude of the cross product of vectors $\\overrightarrow{OA}$ and $\\overrightarrow{OB}$ is $\\sqrt{a^2b^2}.$",
+            1
+        ],
+        [
+            "Step 10: $\\sqrt{a^2b^2} = \\sqrt{(48)^2} =$",
+            1
+        ],
+        [
+            "$\\sqrt{(48)^2} = 48$",
+            1
+        ],
+        [
+            "$\\frac{1}{2} \\cdot 48$",
+            1
+        ],
+        [
+            "$\\frac{1}{2} \\cdot 48$",
+            1
+        ]
+    ],
+    "time": 133.362872838974,
+    "total_tokens": 12354,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

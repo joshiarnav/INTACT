@@ -1,0 +1,66 @@
+{
+    "problem": "Find the maximum value of\n\\[f(x) = \\sqrt{8x - x^2} - \\sqrt{14x - x^2 - 48}.\\]",
+    "level": "Level 4",
+    "type": "Intermediate Algebra",
+    "solution": "We can write\n\\[f(x) = \\sqrt{x(8 - x)} - \\sqrt{(x - 6)(8 - x)}.\\]Thus, $x$ is defined only for $6 \\le x \\le 8.$  Then\n\\begin{align*}\nf(x) &= \\sqrt{8 - x} (\\sqrt{x} - \\sqrt{x - 6}) \\\\\n&= \\sqrt{8 - x} \\cdot \\frac{(\\sqrt{x} - \\sqrt{x - 6})(\\sqrt{x} + \\sqrt{x - 6})}{\\sqrt{x} + \\sqrt{x - 6}} \\\\\n&= \\sqrt{8 - x} \\cdot \\frac{x - (x - 6)}{\\sqrt{x} + \\sqrt{x - 6}} \\\\\n&= \\sqrt{8 - x} \\cdot \\frac{6}{\\sqrt{x} + \\sqrt{x - 6}}.\n\\end{align*}On the interval $6 \\le x \\le 8,$ $\\sqrt{8 - x}$ is decreasing, and $\\sqrt{x} + \\sqrt{x - 6}$ is increasing, which means $\\frac{6}{\\sqrt{x} + \\sqrt{x - 6}}$ is decreasing.  Therefore, the maximum value of $f(x)$ is\n\\[f(6) = \\sqrt{2} \\cdot \\frac{6}{\\sqrt{6}} = \\boxed{2 \\sqrt{3}}.\\]",
+    "is_solved": false,
+    "model_solution": "Step 1:  We are given the function $f(x) = \\sqrt{8x - x^2} - \\sqrt{14x - x^2 - 48}$ and we need to find its maximum value.\nThe first step is to consider the domain of the function, which consists of the interval where both square roots are non-negative.\n\n$\\sqrt{8x - x^2} \\ge 0$ implies $x \\le 8$\n$\\sqrt{14x - x^2 - 48} \\ge 0$ implies $x \\ge 6$\nTherefore, the domain of the function is $6 \\le x \\le 8$.\nStep 2:  To find the maximum value of $f(x)$, let's consider completing the square for the expressions inside the square roots. This will allow us to rewrite the function in a more convenient form and analyze its behavior.\n\nWe can complete the square for the expression $8x - x^2$ as follows:\n\\[8x - x^2 = - (x^2 - 8x) = - (x^2 - 8x + 16) + 16 = -(x - 4)^2 + 16.\\]\nSimilarly, for $14x - x^2 - 48$, we have:\n\\[14x - x^2 - 48 = - (x^2 - 14x + 48) = - (x^2 - 14x + 49) + 49 + 1 = -(x - 7)^2 + 50.\\]\nUsing these expressions, we can rewrite $f(x)$ as:\n\\begin{align*}\nf(x) &= \\sqrt{8x - x^2} - \\sqrt{14x - x^2 - 48}\\\\\n&= \\sqrt{-(x - 4)^2 +\nStep 3: \n\\begin{align*}\nf(x) &= \\sqrt{-(x - 4)^2 + 16} - \\sqrt{-(x - 7)^2 + 50}\\\\\n&= \\sqrt{16 - (x - 4)^2} - \\sqrt{50 - (x - 7)^2}.\n\\end{align*}\nLet $u = x - 4$ and $v = x - 7$. We can then rewrite $f(x)$ as\n\\begin{align*}\nf(x) &= \\sqrt{16 - u^2} - \\sqrt{50 - v^2}.\n\\end{align*}\nStep 4:\n\\begin{align*}\nf(x) &= \\sqrt{16 - u^2} - \\sqrt{50 - v^2}\\\\\n&=  \\sqrt{4^2 - u^2} - \\sqrt{5^2 - v^2}\\\\\n&=  4\\cos\\theta - 5\\cos\\phi\n\\end{align*}\nStep 5:\n\\begin{align*}\nf(x) &= 4\\cos\\theta - 5\\cos\\phi\\\\\n&= 4\\cos\\theta - 5(4\\cos\\theta\\cos\\phi)\\\\\n&= 4\\cos\\theta(1 - 5\\cos\\phi)\n\\end{align*}\nStep 6:\n\\begin{align*}\nf(x) &= 4\\cos\\theta(1 - 5\\cos\\phi)\\\\\n&\\le 4|1 - 5\\cos\\phi|\\\\\n&\\le 4(1 + 5)\\\\\n&= 24\n\\end{align*}\nTo find the maximum value of $f(x)$, we need to consider the values of $\\theta$ and $\\phi$ that maximize $4\\cos\\theta(1 - 5\\cos\\phi)$.\nWe have $|\\cos\\theta| \\le 1$ and $|\\cos\\phi| \\le 1$, and we need to find the maximum value of $4\\cos\\theta(1 - 5\\cos\\phi)$ subject to these constraints.\nStep 7:\nTo maximize $4\\cos\\theta(1 - 5\\cos\\phi)$, we can choose $\\theta$ and $\\phi$ such that $\\cos\\theta = 1$ and $\\cos\\phi = -1$. This gives us\n\\[4\\cos\\theta(1 - 5\\cos\\phi) = 4(1)(1 - 5(-1)) = 24.\\]\nStep 8:\n\\begin{align*}\nf(x) &= 4\\cos\\theta(1 - 5\\cos\\phi)\\\\\n&= 4\\cos\\theta(1 + 5\\cos\\phi)\\\\\n&= \\boxed{24}\n\\end{align*}\nFinal Answer",
+    "steps": [
+        "Step 1:  We are given the function $f(x) = \\sqrt{8x - x^2} - \\sqrt{14x - x^2 - 48}$ and we need to find its maximum value.\nThe first step is to consider the domain of the function, which consists of the interval where both square roots are non-negative.\n\n$\\sqrt{8x - x^2} \\ge 0$ implies $x \\le 8$\n$\\sqrt{14x - x^2 - 48} \\ge 0$ implies $x \\ge 6$\nTherefore, the domain of the function is $6 \\le x \\le 8$.",
+        "Step 2:  To find the maximum value of $f(x)$, let's consider completing the square for the expressions inside the square roots. This will allow us to rewrite the function in a more convenient form and analyze its behavior.\n\nWe can complete the square for the expression $8x - x^2$ as follows:\n\\[8x - x^2 = - (x^2 - 8x) = - (x^2 - 8x + 16) + 16 = -(x - 4)^2 + 16.\\]\nSimilarly, for $14x - x^2 - 48$, we have:\n\\[14x - x^2 - 48 = - (x^2 - 14x + 48) = - (x^2 - 14x + 49) + 49 + 1 = -(x - 7)^2 + 50.\\]\nUsing these expressions, we can rewrite $f(x)$ as:\n\\begin{align*}\nf(x) &= \\sqrt{8x - x^2} - \\sqrt{14x - x^2 - 48}\\\\\n&= \\sqrt{-(x - 4)^2 +",
+        "Step 3: \n\\begin{align*}\nf(x) &= \\sqrt{-(x - 4)^2 + 16} - \\sqrt{-(x - 7)^2 + 50}\\\\\n&= \\sqrt{16 - (x - 4)^2} - \\sqrt{50 - (x - 7)^2}.\n\\end{align*}",
+        "Let $u = x - 4$ and $v = x - 7$. We can then rewrite $f(x)$ as\n\\begin{align*}\nf(x) &= \\sqrt{16 - u^2} - \\sqrt{50 - v^2}.\n\\end{align*}",
+        "Step 4:\n\\begin{align*}\nf(x) &= \\sqrt{16 - u^2} - \\sqrt{50 - v^2}\\\\\n&=  \\sqrt{4^2 - u^2} - \\sqrt{5^2 - v^2}\\\\\n&=  4\\cos\\theta - 5\\cos\\phi\n\\end{align*}",
+        "Step 5:\n\\begin{align*}\nf(x) &= 4\\cos\\theta - 5\\cos\\phi\\\\\n&= 4\\cos\\theta - 5(4\\cos\\theta\\cos\\phi)\\\\\n&= 4\\cos\\theta(1 - 5\\cos\\phi)\n\\end{align*}",
+        "Step 6:\n\\begin{align*}\nf(x) &= 4\\cos\\theta(1 - 5\\cos\\phi)\\\\\n&\\le 4|1 - 5\\cos\\phi|\\\\\n&\\le 4(1 + 5)\\\\\n&= 24\n\\end{align*}",
+        "To find the maximum value of $f(x)$, we need to consider the values of $\\theta$ and $\\phi$ that maximize $4\\cos\\theta(1 - 5\\cos\\phi)$.\nWe have $|\\cos\\theta| \\le 1$ and $|\\cos\\phi| \\le 1$, and we need to find the maximum value of $4\\cos\\theta(1 - 5\\cos\\phi)$ subject to these constraints.",
+        "Step 7:\nTo maximize $4\\cos\\theta(1 - 5\\cos\\phi)$, we can choose $\\theta$ and $\\phi$ such that $\\cos\\theta = 1$ and $\\cos\\phi = -1$. This gives us\n\\[4\\cos\\theta(1 - 5\\cos\\phi) = 4(1)(1 - 5(-1)) = 24.\\]",
+        "Step 8:\n\\begin{align*}\nf(x) &= 4\\cos\\theta(1 - 5\\cos\\phi)\\\\\n&= 4\\cos\\theta(1 + 5\\cos\\phi)\\\\\n&= \\boxed{24}\n\\end{align*}\nFinal Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We are given the function $f(x) = \\sqrt{8x - x^2} - \\sqrt{14x - x^2 - 48}$ and we need to find its maximum value.\nThe first step is to consider the domain of the function, which consists of the interval where both square roots are non-negative.\n\n$\\sqrt{8x - x^2} \\ge 0$ implies $x \\le 8$\n$\\sqrt{14x - x^2 - 48} \\ge 0$ implies $x \\ge 6$\nTherefore, the domain of the function is $6 \\le x \\le 8$.",
+            1
+        ],
+        [
+            "Step 2:  To find the maximum value of $f(x)$, let's consider completing the square for the expressions inside the square roots. This will allow us to rewrite the function in a more convenient form and analyze its behavior.\n\nWe can complete the square for the expression $8x - x^2$ as follows:\n\\[8x - x^2 = - (x^2 - 8x) = - (x^2 - 8x + 16) + 16 = -(x - 4)^2 + 16.\\]\nSimilarly, for $14x - x^2 - 48$, we have:\n\\[14x - x^2 - 48 = - (x^2 - 14x + 48) = - (x^2 - 14x + 49) + 49 + 1 = -(x - 7)^2 + 50.\\]\nUsing these expressions, we can rewrite $f(x)$ as:\n\\begin{align*}\nf(x) &= \\sqrt{8x - x^2} - \\sqrt{14x - x^2 - 48}\\\\\n&= \\sqrt{-(x - 4)^2 +",
+            1
+        ],
+        [
+            "Step 3: \n\\begin{align*}\nf(x) &= \\sqrt{-(x - 4)^2 + 16} - \\sqrt{-(x - 7)^2 + 50}\\\\\n&= \\sqrt{16 - (x - 4)^2} - \\sqrt{50 - (x - 7)^2}.\n\\end{align*}",
+            1
+        ],
+        [
+            "Let $u = x - 4$ and $v = x - 7$. We can then rewrite $f(x)$ as\n\\begin{align*}\nf(x) &= \\sqrt{16 - u^2} - \\sqrt{50 - v^2}.\n\\end{align*}",
+            1
+        ],
+        [
+            "Step 4:\n\\begin{align*}\nf(x) &= \\sqrt{16 - u^2} - \\sqrt{50 - v^2}\\\\\n&=  \\sqrt{4^2 - u^2} - \\sqrt{5^2 - v^2}\\\\\n&=  4\\cos\\theta - 5\\cos\\phi\n\\end{align*}",
+            1
+        ],
+        [
+            "Step 5:\n\\begin{align*}\nf(x) &= 4\\cos\\theta - 5\\cos\\phi\\\\\n&= 4\\cos\\theta - 5(4\\cos\\theta\\cos\\phi)\\\\\n&= 4\\cos\\theta(1 - 5\\cos\\phi)\n\\end{align*}",
+            1
+        ],
+        [
+            "Step 6:\n\\begin{align*}\nf(x) &= 4\\cos\\theta(1 - 5\\cos\\phi)\\\\\n&\\le 4|1 - 5\\cos\\phi|\\\\\n&\\le 4(1 + 5)\\\\\n&= 24\n\\end{align*}",
+            1
+        ],
+        [
+            "To find the maximum value of $f(x)$, we need to consider the values of $\\theta$ and $\\phi$ that maximize $4\\cos\\theta(1 - 5\\cos\\phi)$.\nWe have $|\\cos\\theta| \\le 1$ and $|\\cos\\phi| \\le 1$, and we need to find the maximum value of $4\\cos\\theta(1 - 5\\cos\\phi)$ subject to these constraints.",
+            1
+        ],
+        [
+            "Step 7:\nTo maximize $4\\cos\\theta(1 - 5\\cos\\phi)$, we can choose $\\theta$ and $\\phi$ such that $\\cos\\theta = 1$ and $\\cos\\phi = -1$. This gives us\n\\[4\\cos\\theta(1 - 5\\cos\\phi) = 4(1)(1 - 5(-1)) = 24.\\]",
+            1
+        ],
+        [
+            "Step 8:\n\\begin{align*}\nf(x) &= 4\\cos\\theta(1 - 5\\cos\\phi)\\\\\n&= 4\\cos\\theta(1 + 5\\cos\\phi)\\\\\n&= \\boxed{24}\n\\end{align*}\nFinal Answer",
+            1
+        ]
+    ],
+    "time": 128.89729499816895,
+    "total_tokens": 14943,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

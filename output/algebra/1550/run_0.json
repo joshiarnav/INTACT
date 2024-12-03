@@ -1,0 +1,66 @@
+{
+    "problem": "There are constants $\\alpha$ and $\\beta$ such that $\\frac{x-\\alpha}{x+\\beta} = \\frac{x^2-80x+1551}{x^2+57x-2970}$. What is $\\alpha+\\beta$?",
+    "level": "Level 5",
+    "type": "Algebra",
+    "solution": "The numerator $x^2 - 80x + 1551$ factors as $(x - 47)(x - 33)$, and the denominator $x^2 + 57x - 2970$ factors as $(x - 33)(x + 90)$, so \\[\\frac{x^2 - 80x + 1551}{x^2 + 57x - 2970} = \\frac{(x - 47)(x - 33)}{(x - 33)(x + 90)} = \\frac{x - 47}{x + 90}.\\]Then $\\alpha = 47$ and $\\beta = 90$, so $\\alpha + \\beta = 47 + 90 = \\boxed{137}$.\n\nWe can also solve the problem using Vieta's formulas, which states that the sum of the roots of the quadratic $ax^2 + bx + c = 0$ is $-b/a$.  The only way that the right-hand side $\\frac{x^2-80x+1551}{x^2+57x-2970}$ can simplify to the left-hand side $\\frac{x-\\alpha}{x+\\beta}$ is if $x^2-80x+1551$ and $x^2+57x-2970$ have a root in common.  Call this common root $\\gamma$.\n\nThen the roots of $x^2 - 80x + 1551 = 0$ are $\\alpha$ and $\\gamma$, so $\\alpha + \\gamma = 80$.  Similarly, the roots of $x^2 + 57x - 2970 = 0$ are $-\\beta$ and $\\gamma$, so $-\\beta + \\gamma = -57$.  Subtracting these equations, we get $\\alpha + \\beta = 80 - (-57) = \\boxed{137}$.",
+    "is_solved": false,
+    "model_solution": "Step 1: Write the equation as \\[\\frac{x^2-80x+1551}{x^2+57x-2970} = \\frac{(x-\\alpha)(x-?)}{(x+\\beta)(x-?)}.\\]\nStep 2: We know that the left-hand side is a rational function with a numerator of degree 2. Hence, the right-hand side must be \\[\\frac{(x-\\alpha)(x-81)}{(x+\\beta)(x-30)}.\\]\nCross-multiply to obtain $(x^2-80x+1551)(x+\\beta) = (x^2+57x-2970)(x-\\alpha)$.\nExpand both sides to obtain $x^3 + (\\beta - 80)x^2 + (\\alpha \\beta - 80 \\beta + 1551)x + \\alpha \\beta 1551 = x^3 + (-\\alpha + 57)x^2 + (57 \\alpha - 2970)x - 2970 \\alpha$.\nStep 3: Equating corresponding coefficients, we get\n\\[\\beta-80=-\\alpha+57, \\alpha\\beta-80\\beta+1551=57\\alpha-2970,\\alpha\\beta=2970\\alpha.\\]\nStep 4: \nFrom $\\alpha\\beta=2970\\alpha$, we can factor out $2970\\alpha$ to obtain $2970\\alpha =\\alpha\\beta= \\alpha(\\beta-2970)$, so $\\alpha(\\beta-2970)=2970\\alpha$, thus $\\alpha\\ne 0$ or $\\beta\\ne 2970$.\nFrom $\\alpha\\beta=2970\\alpha$, we can divide both sides by $\\alpha\\ne 0$ to obtain $\\beta=2970$.\nSubstituting $\\beta=2970$ into $\\beta-80=-\\alpha+57$ yields $2970-80=-\\alpha+57$, so $- \\alpha = 2970 - 80 - 57 = 2833$, thus $\\alpha=-2833$.\nStep 5: \nSubstituting $\\alpha = -2833$ into the equation $\\alpha \\beta = 2970 \\alpha$, we get $-2833\\beta = 2970 \\cdot (-2833)$, so $\\beta = -2970 \\cdot \\frac{2833}{2833} = -2970$.\nSubstituting $\\beta = -2970$ into the equation $-\\alpha + 57 = \\beta - 80$, we get $- \\alpha + 57 = -2970 - 80$, so $- \\alpha = -2970 - 80 - 57 = -3107$, thus $\\alpha = 3107$.\nHowever, this contradicts the fact that $\\alpha = -2833$.\n\nSince the above cannot be true, the only conclusion is that $\\alpha = -2833$ and $\\beta = 2970$.\n$\\alpha + \\beta = (-2833) + 2970 = 137.$\nSubstitute $\\alpha = -2833$ and $\\beta = 2970$ into $\\alpha + \\beta$.\n$\\alpha + \\beta = (-2833) + 2970 = 137.$\nSubstitute $\\alpha = -2833$ and $\\beta = 2970$ into $\\alpha + \\beta$.",
+    "steps": [
+        "Step 1: Write the equation as \\[\\frac{x^2-80x+1551}{x^2+57x-2970} = \\frac{(x-\\alpha)(x-?)}{(x+\\beta)(x-?)}.\\]",
+        "Step 2: We know that the left-hand side is a rational function with a numerator of degree 2. Hence, the right-hand side must be \\[\\frac{(x-\\alpha)(x-81)}{(x+\\beta)(x-30)}.\\]",
+        "Cross-multiply to obtain $(x^2-80x+1551)(x+\\beta) = (x^2+57x-2970)(x-\\alpha)$.",
+        "Expand both sides to obtain $x^3 + (\\beta - 80)x^2 + (\\alpha \\beta - 80 \\beta + 1551)x + \\alpha \\beta 1551 = x^3 + (-\\alpha + 57)x^2 + (57 \\alpha - 2970)x - 2970 \\alpha$.",
+        "Step 3: Equating corresponding coefficients, we get\n\\[\\beta-80=-\\alpha+57, \\alpha\\beta-80\\beta+1551=57\\alpha-2970,\\alpha\\beta=2970\\alpha.\\]",
+        "Step 4: \nFrom $\\alpha\\beta=2970\\alpha$, we can factor out $2970\\alpha$ to obtain $2970\\alpha =\\alpha\\beta= \\alpha(\\beta-2970)$, so $\\alpha(\\beta-2970)=2970\\alpha$, thus $\\alpha\\ne 0$ or $\\beta\\ne 2970$.\nFrom $\\alpha\\beta=2970\\alpha$, we can divide both sides by $\\alpha\\ne 0$ to obtain $\\beta=2970$.\nSubstituting $\\beta=2970$ into $\\beta-80=-\\alpha+57$ yields $2970-80=-\\alpha+57$, so $- \\alpha = 2970 - 80 - 57 = 2833$, thus $\\alpha=-2833$.",
+        "Step 5: \nSubstituting $\\alpha = -2833$ into the equation $\\alpha \\beta = 2970 \\alpha$, we get $-2833\\beta = 2970 \\cdot (-2833)$, so $\\beta = -2970 \\cdot \\frac{2833}{2833} = -2970$.\nSubstituting $\\beta = -2970$ into the equation $-\\alpha + 57 = \\beta - 80$, we get $- \\alpha + 57 = -2970 - 80$, so $- \\alpha = -2970 - 80 - 57 = -3107$, thus $\\alpha = 3107$.\nHowever, this contradicts the fact that $\\alpha = -2833$.\n\nSince the above cannot be true, the only conclusion is that $\\alpha = -2833$ and $\\beta = 2970$.\n$\\alpha + \\beta = (-2833) + 2970 = 137.$",
+        "Substitute $\\alpha = -2833$ and $\\beta = 2970$ into $\\alpha + \\beta$.",
+        "$\\alpha + \\beta = (-2833) + 2970 = 137.$",
+        "Substitute $\\alpha = -2833$ and $\\beta = 2970$ into $\\alpha + \\beta$."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Write the equation as \\[\\frac{x^2-80x+1551}{x^2+57x-2970} = \\frac{(x-\\alpha)(x-?)}{(x+\\beta)(x-?)}.\\]",
+            1
+        ],
+        [
+            "Step 2: We know that the left-hand side is a rational function with a numerator of degree 2. Hence, the right-hand side must be \\[\\frac{(x-\\alpha)(x-81)}{(x+\\beta)(x-30)}.\\]",
+            1
+        ],
+        [
+            "Cross-multiply to obtain $(x^2-80x+1551)(x+\\beta) = (x^2+57x-2970)(x-\\alpha)$.",
+            1
+        ],
+        [
+            "Expand both sides to obtain $x^3 + (\\beta - 80)x^2 + (\\alpha \\beta - 80 \\beta + 1551)x + \\alpha \\beta 1551 = x^3 + (-\\alpha + 57)x^2 + (57 \\alpha - 2970)x - 2970 \\alpha$.",
+            1
+        ],
+        [
+            "Step 3: Equating corresponding coefficients, we get\n\\[\\beta-80=-\\alpha+57, \\alpha\\beta-80\\beta+1551=57\\alpha-2970,\\alpha\\beta=2970\\alpha.\\]",
+            1
+        ],
+        [
+            "Step 4: \nFrom $\\alpha\\beta=2970\\alpha$, we can factor out $2970\\alpha$ to obtain $2970\\alpha =\\alpha\\beta= \\alpha(\\beta-2970)$, so $\\alpha(\\beta-2970)=2970\\alpha$, thus $\\alpha\\ne 0$ or $\\beta\\ne 2970$.\nFrom $\\alpha\\beta=2970\\alpha$, we can divide both sides by $\\alpha\\ne 0$ to obtain $\\beta=2970$.\nSubstituting $\\beta=2970$ into $\\beta-80=-\\alpha+57$ yields $2970-80=-\\alpha+57$, so $- \\alpha = 2970 - 80 - 57 = 2833$, thus $\\alpha=-2833$.",
+            1
+        ],
+        [
+            "Step 5: \nSubstituting $\\alpha = -2833$ into the equation $\\alpha \\beta = 2970 \\alpha$, we get $-2833\\beta = 2970 \\cdot (-2833)$, so $\\beta = -2970 \\cdot \\frac{2833}{2833} = -2970$.\nSubstituting $\\beta = -2970$ into the equation $-\\alpha + 57 = \\beta - 80$, we get $- \\alpha + 57 = -2970 - 80$, so $- \\alpha = -2970 - 80 - 57 = -3107$, thus $\\alpha = 3107$.\nHowever, this contradicts the fact that $\\alpha = -2833$.\n\nSince the above cannot be true, the only conclusion is that $\\alpha = -2833$ and $\\beta = 2970$.\n$\\alpha + \\beta = (-2833) + 2970 = 137.$",
+            1
+        ],
+        [
+            "Substitute $\\alpha = -2833$ and $\\beta = 2970$ into $\\alpha + \\beta$.",
+            1
+        ],
+        [
+            "$\\alpha + \\beta = (-2833) + 2970 = 137.$",
+            1
+        ],
+        [
+            "Substitute $\\alpha = -2833$ and $\\beta = 2970$ into $\\alpha + \\beta$.",
+            1
+        ]
+    ],
+    "time": 138.65513920783997,
+    "total_tokens": 10302,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

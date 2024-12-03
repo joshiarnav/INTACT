@@ -1,0 +1,46 @@
+{
+    "problem": "As $n$ ranges over the positive integers, what is the maximum possible value that the greatest common divisor of $13n + 8$ and $5n+3$ can take?",
+    "level": "Level 4",
+    "type": "Number Theory",
+    "solution": "We can apply the Euclidean algorithm here. \\begin{align*}\n\\gcd(13n+8, 5n+3) &= \\gcd(5n+3, (13n+8)-2(5n+3)) \\\\\n&= \\gcd(5n+3, 3n + 2) \\\\\n&= \\gcd(3n+2, (5n+3)-(3n+2)) \\\\\n&= \\gcd(3n+2, 2n + 1) \\\\\n&= \\gcd(2n+1, (3n+2)-(2n+1)) \\\\\n&= \\gcd(2n+1, n+1) \\\\\n&= \\gcd(n+1, (2n+1)-(n+1)) \\\\\n&= \\gcd(n+1, n) \\\\\n&= \\gcd(n, (n+1)-n) \\\\\n&= \\gcd(n, 1) \\\\\n&= \\boxed{1}.\n\\end{align*}",
+    "is_solved": true,
+    "model_solution": "Step 1: Apply the Euclidean Algorithm to find a pattern in the greatest common divisor of $13n + 8$ and $5n+3$.\n$\\gcd(13n+8,5n+3) = \\gcd(5n+3, (13n+8) - (5n+3))$\nStep 2:\n$\\gcd(5n+3, 8n+5)$\nStep 3: \n$\\gcd(5n+3, 8n+5) = \\gcd(5n+3, 8n+5 - 3(5n+3))$\n$= \\gcd(5n+3, n - 9)$\nStep 4: \n$\\gcd(5n+3, n-9) = \\gcd(5n+3 - 5(n-9), n-9)$\n$= \\gcd(53, n-9)$\nSince $\\gcd(53,n-9)$ will be at most 53, the greatest common divisor of $13n+8$ and $5n+3$ will be at most 53. The greatest common divisor of $13n+8$ and $5n+3$ can be equal to 53 when $n=9k+8$ for some integer $k$.\nStep 5:\n$53 = 1 \\cdot 53 + 0$\nFinal Answer",
+    "steps": [
+        "Step 1: Apply the Euclidean Algorithm to find a pattern in the greatest common divisor of $13n + 8$ and $5n+3$.\n$\\gcd(13n+8,5n+3) = \\gcd(5n+3, (13n+8) - (5n+3))$",
+        "Step 2:\n$\\gcd(5n+3, 8n+5)$",
+        "Step 3: \n$\\gcd(5n+3, 8n+5) = \\gcd(5n+3, 8n+5 - 3(5n+3))$\n$= \\gcd(5n+3, n - 9)$",
+        "Step 4: \n$\\gcd(5n+3, n-9) = \\gcd(5n+3 - 5(n-9), n-9)$\n$= \\gcd(53, n-9)$",
+        "Since $\\gcd(53,n-9)$ will be at most 53, the greatest common divisor of $13n+8$ and $5n+3$ will be at most 53. The greatest common divisor of $13n+8$ and $5n+3$ can be equal to 53 when $n=9k+8$ for some integer $k$.",
+        "Step 5:\n$53 = 1 \\cdot 53 + 0$\nFinal Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Apply the Euclidean Algorithm to find a pattern in the greatest common divisor of $13n + 8$ and $5n+3$.\n$\\gcd(13n+8,5n+3) = \\gcd(5n+3, (13n+8) - (5n+3))$",
+            1
+        ],
+        [
+            "Step 2:\n$\\gcd(5n+3, 8n+5)$",
+            1
+        ],
+        [
+            "Step 3: \n$\\gcd(5n+3, 8n+5) = \\gcd(5n+3, 8n+5 - 3(5n+3))$\n$= \\gcd(5n+3, n - 9)$",
+            1
+        ],
+        [
+            "Step 4: \n$\\gcd(5n+3, n-9) = \\gcd(5n+3 - 5(n-9), n-9)$\n$= \\gcd(53, n-9)$",
+            1
+        ],
+        [
+            "Since $\\gcd(53,n-9)$ will be at most 53, the greatest common divisor of $13n+8$ and $5n+3$ will be at most 53. The greatest common divisor of $13n+8$ and $5n+3$ can be equal to 53 when $n=9k+8$ for some integer $k$.",
+            1
+        ],
+        [
+            "Step 5:\n$53 = 1 \\cdot 53 + 0$\nFinal Answer",
+            1
+        ]
+    ],
+    "time": 81.41197490692139,
+    "total_tokens": 3377,
+    "final_answer_tokens": 394,
+    "model": "meta-llama/Llama-Vision-Free"
+}

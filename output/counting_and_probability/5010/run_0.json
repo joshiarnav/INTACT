@@ -1,0 +1,66 @@
+{
+    "problem": "In a tournament each player played exactly one game against each of the other players. In each game the winner was awarded $1$ point, the loser got $0$ points, and each of the two players earned $\\frac{1}{2}$ point if the game was a tie. After the completion of the tournament, it was found that exactly half of the points earned by each player were earned against the ten players with the least number of points. (In particular, each of the ten lowest scoring players earned half of her/his points against the other nine of the ten). What was the total number of players in the tournament?\n",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "Let us suppose for convenience that there were $n + 10$ players overall. Among the $n$ players not in the weakest 10 there were $n \\choose 2$ games played and thus $n \\choose 2$ points earned. By the givens, this means that these $n$ players also earned $n \\choose 2$ points against our weakest 10. Now, the 10 weakest players playing amongst themselves played ${10 \\choose 2} = 45$ games and so earned 45 points playing each other. Then they also earned 45 points playing against the stronger $n$ players. Since every point earned falls into one of these categories, It follows that the total number of points earned was $2{n \\choose 2} + 90 = n^2 - n + 90$. However, there was one point earned per game, and there were a total of ${n + 10 \\choose 2} = \\frac{(n + 10)(n + 9)}{2}$ games played and thus $\\frac{(n + 10)(n + 9)}{2}$ points earned. So we have $n^2 -n + 90 = \\frac{(n + 10)(n + 9)}{2}$ so $2n^2 - 2n + 180 = n^2 + 19n + 90$ and $n^2 -21n + 90 = 0$ and $n = 6$ or $n = 15$. Now, note that the top $n$ players got $n(n - 1)$ points in total (by our previous calculation) for an average of $n - 1$, while the bottom 10 got 90 points total, for an average of 9. Thus we must have $n > 10$, so $n = 15$ and the answer is $15 + 10 = \\boxed{25}$.",
+    "is_solved": false,
+    "model_solution": "Let $n$ be the total number of players in the tournament.\nThe least number of points earned by the ten lowest-scoring players is $0$.\nLet $x$ be the total number of points earned by the ten lowest-scoring players in their games against each other. Then $x$ is a multiple of $10$, and we have $x\\geq 45$, as each of the ten players earned at least $4.5$ points in these games.\nSince $x\\geq 45$, the total number of points earned by the ten lowest-scoring players against the other $n-10$ players is at least $(x)(\\frac{n-10}{2})$, as each of these games earned half a point, and this is at most $\\frac{(n-10)}{2}$, as the other $n-10$ players only played the ten lowest-scoring players.\nSince $x\\geq 45$, we have $(x)(\\frac{n-10}{2})\\geq \\frac{45(n-10)}{2}$, and since $(x)(\\frac{n-10}{2})\\leq \\frac{n-10}{2}$, we have $\\frac{45(n-10)}{2}\\leq \\frac{n-10}{2}$.\nSince $\\frac{45(n-10)}{2}\\leq \\frac{n-10}{2}$, we have $45(n-10)\\leq n-10$. Canceling $n-10$ from both sides, we get $45 \\leq 1$.\nSince $\\frac{45(n-10)}{2}\\leq \\frac{n-10}{2}$, we have $45(n-10)\\leq n-10$. This inequality cannot be true, so we consider the case $x<45$.\nThe inequality $(x)(\\frac{n-10}{2})\\leq \\frac{n-10}{2}$ implies that $x\\leq 1$.\nSince $x$ is a multiple of $10$, we have $x=0$ or $x=10$, and since $x\\leq 1$, we have $x=0$.\nThus, the ten lowest-scoring players earned a total of $0$ points against each other, and so they earned a total of $\\frac{0(n-10)}{2}=\\frac{(n-10)}{2}$ points against the other $n-10$ players.\nSince the ten lowest-scoring players earned a total of $\\frac{(n-10)}{2}$ points against the other $n-10$ players, and each of these games earned half a point, the ten lowest-scoring players earned a total of $(n-10)$ points against the other $n-10$ players.",
+    "steps": [
+        "Let $n$ be the total number of players in the tournament.",
+        "The least number of points earned by the ten lowest-scoring players is $0$.",
+        "Let $x$ be the total number of points earned by the ten lowest-scoring players in their games against each other. Then $x$ is a multiple of $10$, and we have $x\\geq 45$, as each of the ten players earned at least $4.5$ points in these games.",
+        "Since $x\\geq 45$, the total number of points earned by the ten lowest-scoring players against the other $n-10$ players is at least $(x)(\\frac{n-10}{2})$, as each of these games earned half a point, and this is at most $\\frac{(n-10)}{2}$, as the other $n-10$ players only played the ten lowest-scoring players.",
+        "Since $x\\geq 45$, we have $(x)(\\frac{n-10}{2})\\geq \\frac{45(n-10)}{2}$, and since $(x)(\\frac{n-10}{2})\\leq \\frac{n-10}{2}$, we have $\\frac{45(n-10)}{2}\\leq \\frac{n-10}{2}$.",
+        "Since $\\frac{45(n-10)}{2}\\leq \\frac{n-10}{2}$, we have $45(n-10)\\leq n-10$. Canceling $n-10$ from both sides, we get $45 \\leq 1$.",
+        "Since $\\frac{45(n-10)}{2}\\leq \\frac{n-10}{2}$, we have $45(n-10)\\leq n-10$. This inequality cannot be true, so we consider the case $x<45$.",
+        "The inequality $(x)(\\frac{n-10}{2})\\leq \\frac{n-10}{2}$ implies that $x\\leq 1$.",
+        "Since $x$ is a multiple of $10$, we have $x=0$ or $x=10$, and since $x\\leq 1$, we have $x=0$.\nThus, the ten lowest-scoring players earned a total of $0$ points against each other, and so they earned a total of $\\frac{0(n-10)}{2}=\\frac{(n-10)}{2}$ points against the other $n-10$ players.",
+        "Since the ten lowest-scoring players earned a total of $\\frac{(n-10)}{2}$ points against the other $n-10$ players, and each of these games earned half a point, the ten lowest-scoring players earned a total of $(n-10)$ points against the other $n-10$ players."
+    ],
+    "full_steps": [
+        [
+            "Let $n$ be the total number of players in the tournament.",
+            1
+        ],
+        [
+            "The least number of points earned by the ten lowest-scoring players is $0$.",
+            1
+        ],
+        [
+            "Let $x$ be the total number of points earned by the ten lowest-scoring players in their games against each other. Then $x$ is a multiple of $10$, and we have $x\\geq 45$, as each of the ten players earned at least $4.5$ points in these games.",
+            1
+        ],
+        [
+            "Since $x\\geq 45$, the total number of points earned by the ten lowest-scoring players against the other $n-10$ players is at least $(x)(\\frac{n-10}{2})$, as each of these games earned half a point, and this is at most $\\frac{(n-10)}{2}$, as the other $n-10$ players only played the ten lowest-scoring players.",
+            1
+        ],
+        [
+            "Since $x\\geq 45$, we have $(x)(\\frac{n-10}{2})\\geq \\frac{45(n-10)}{2}$, and since $(x)(\\frac{n-10}{2})\\leq \\frac{n-10}{2}$, we have $\\frac{45(n-10)}{2}\\leq \\frac{n-10}{2}$.",
+            1
+        ],
+        [
+            "Since $\\frac{45(n-10)}{2}\\leq \\frac{n-10}{2}$, we have $45(n-10)\\leq n-10$. Canceling $n-10$ from both sides, we get $45 \\leq 1$.",
+            1
+        ],
+        [
+            "Since $\\frac{45(n-10)}{2}\\leq \\frac{n-10}{2}$, we have $45(n-10)\\leq n-10$. This inequality cannot be true, so we consider the case $x<45$.",
+            1
+        ],
+        [
+            "The inequality $(x)(\\frac{n-10}{2})\\leq \\frac{n-10}{2}$ implies that $x\\leq 1$.",
+            1
+        ],
+        [
+            "Since $x$ is a multiple of $10$, we have $x=0$ or $x=10$, and since $x\\leq 1$, we have $x=0$.\nThus, the ten lowest-scoring players earned a total of $0$ points against each other, and so they earned a total of $\\frac{0(n-10)}{2}=\\frac{(n-10)}{2}$ points against the other $n-10$ players.",
+            1
+        ],
+        [
+            "Since the ten lowest-scoring players earned a total of $\\frac{(n-10)}{2}$ points against the other $n-10$ players, and each of these games earned half a point, the ten lowest-scoring players earned a total of $(n-10)$ points against the other $n-10$ players.",
+            1
+        ]
+    ],
+    "time": 132.91540265083313,
+    "total_tokens": 9559,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

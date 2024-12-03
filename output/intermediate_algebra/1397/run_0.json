@@ -1,0 +1,36 @@
+{
+    "problem": "Let $Q$ be a polynomial \\[Q(x)=a_0+a_1x+\\cdots+a_nx^n,\\]where $a_0,\\ldots,a_n$ are nonnegative integers.  Given that $Q(1)=4$ and $Q(5)=152$, find $Q(6)$.",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "If $n \\ge 4,$ then $Q(5) \\ge 5^4 = 625,$ so $n \\le 3,$ and we can write\n\\[Q(x) = a_3 x^3 + a_2 x^2 + a_1 x + a_0.\\]We have that $Q(1) = a_3 + a_2 + a_1 + a_0 = 4,$ so $a_i \\le 4$ for all $i.$  Also,\n\\[Q(5) = 125a_3 + 25a_2 + 5a_1 + a_0 = 152.\\]Clearly, $a_3 \\le 1.$  If $a_3 = 0,$ then $25a_2 + 5a_1 + a_0 = 152.$  But $25a_2 + 5a_1 + a_0 \\le 25 \\cdot 4 + 5 \\cdot 4 + 4 = 125,$ so $a_3 = 1.$\n\nThen\n\\[25a_2 + 5a_1 + a_0 = 27.\\]Clearly, $a_2 \\le 1.$  If $a_2 = 0,$ then $5a_1 + a_0 = 27.$  But $5a_1 + a_0 \\le 5 \\cdot 4 + 4 = 24,$ so $a_2 = 1.$\n\nThen\n\\[5a_1 + a_0 = 2.\\]It follows that $a_1 = 0$ and $a_0 = 2,$ so\n\\[Q(x) = x^3 + x^2 + 2.\\]In particular, $Q(6) = 6^3 + 6^2 + 2 = \\boxed{254}.$",
+    "is_solved": true,
+    "model_solution": "## Step 1: Write down the given information\n$Q(1) = 4$ and $Q(5) = 152$.\n\n## Step 2: Express $Q(1)$ and $Q(5)$ in terms of the coefficients\n$Q(1) = a_0 + a_1 + \\cdots + a_n = 4$\n$Q(5) = 5^0a_0 + 5^1a_1 + \\cdots + 5^na_n = 152$\n## Step 3: Use the given information to set up a system of equations\n\\[a_0 + a_1 + \\cdots + a_n = 4\\]\n\\[a_0 + 5a_1 + \\cdots + 5^na_n = 152\\]\n## Step 4: Subtract the first equation from the second equation to eliminate $a_0$\n\\[(a_0 + 5a_1 + \\cdots + 5^na_n) - (a_0 + a_1 + \\cdots + a_n) = 152 - 4\\]\n\\[4a_1 + 20a_2 + 80a_3 + \\cdots + 5^{n-1}(5a_n) = 148\\]\n## Step 5: Recognize that $148 = 4 \\cdot 37$, which is the same form as $4a_1 + 20a_2 + 80a_3 + \\cdots + 5^{n-1}(5a_n)$, and realize that the coefficients are multiples of powers of $4$, so all coefficients must be multiples of $4$.\nThe final answer is: $\\boxed{180}$",
+    "steps": [
+        "## Step 1: Write down the given information\n$Q(1) = 4$ and $Q(5) = 152$.\n\n## Step 2: Express $Q(1)$ and $Q(5)$ in terms of the coefficients\n$Q(1) = a_0 + a_1 + \\cdots + a_n = 4$\n$Q(5) = 5^0a_0 + 5^1a_1 + \\cdots + 5^na_n = 152$",
+        "## Step 3: Use the given information to set up a system of equations\n\\[a_0 + a_1 + \\cdots + a_n = 4\\]\n\\[a_0 + 5a_1 + \\cdots + 5^na_n = 152\\]",
+        "## Step 4: Subtract the first equation from the second equation to eliminate $a_0$\n\\[(a_0 + 5a_1 + \\cdots + 5^na_n) - (a_0 + a_1 + \\cdots + a_n) = 152 - 4\\]\n\\[4a_1 + 20a_2 + 80a_3 + \\cdots + 5^{n-1}(5a_n) = 148\\]",
+        "## Step 5: Recognize that $148 = 4 \\cdot 37$, which is the same form as $4a_1 + 20a_2 + 80a_3 + \\cdots + 5^{n-1}(5a_n)$, and realize that the coefficients are multiples of powers of $4$, so all coefficients must be multiples of $4$.\nThe final answer is: $\\boxed{180}$"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Write down the given information\n$Q(1) = 4$ and $Q(5) = 152$.\n\n## Step 2: Express $Q(1)$ and $Q(5)$ in terms of the coefficients\n$Q(1) = a_0 + a_1 + \\cdots + a_n = 4$\n$Q(5) = 5^0a_0 + 5^1a_1 + \\cdots + 5^na_n = 152$",
+            1
+        ],
+        [
+            "## Step 3: Use the given information to set up a system of equations\n\\[a_0 + a_1 + \\cdots + a_n = 4\\]\n\\[a_0 + 5a_1 + \\cdots + 5^na_n = 152\\]",
+            1
+        ],
+        [
+            "## Step 4: Subtract the first equation from the second equation to eliminate $a_0$\n\\[(a_0 + 5a_1 + \\cdots + 5^na_n) - (a_0 + a_1 + \\cdots + a_n) = 152 - 4\\]\n\\[4a_1 + 20a_2 + 80a_3 + \\cdots + 5^{n-1}(5a_n) = 148\\]",
+            1
+        ],
+        [
+            "## Step 5: Recognize that $148 = 4 \\cdot 37$, which is the same form as $4a_1 + 20a_2 + 80a_3 + \\cdots + 5^{n-1}(5a_n)$, and realize that the coefficients are multiples of powers of $4$, so all coefficients must be multiples of $4$.\nThe final answer is: $\\boxed{180}$",
+            1
+        ]
+    ],
+    "time": 52.30668640136719,
+    "total_tokens": 2931,
+    "final_answer_tokens": 499,
+    "model": "meta-llama/Llama-Vision-Free"
+}

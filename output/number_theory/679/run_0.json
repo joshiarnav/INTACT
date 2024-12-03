@@ -1,0 +1,66 @@
+{
+    "problem": "Linda, Sherry, June, and Connie walked around their neighborhoods selling girl scout cookies. Linda earned $\\$27.47$, Sherry earned $\\$35.23$, June earned $\\$37.37$, and Connie earned $\\$26.52$. After the sale, they pooled their money together and went to the bank to convert the coins into dollars. How much money, in cents, was left after they converted as many of the coins into bills as they could?",
+    "level": "Level 2",
+    "type": "Number Theory",
+    "solution": "Instead of adding large numbers together, we can find the residue for each person for easier computation. We convert the amount they earned to cents and find the modulo $100$ for each.  \\begin{align*}\n2747 &\\equiv 47 \\pmod{100},\\\\\n3523 &\\equiv 23 \\pmod{100},\\\\\n3737 &\\equiv 37 \\pmod{100},\\\\\n2652 &\\equiv 52 \\pmod{100}\n\\end{align*}We want to find the modulo $100$ of the total number of cents. We can add the separate residues to get $$47+23+37+52 \\equiv 159 \\equiv 59 \\pmod{100}$$Therefore, they have $\\boxed{59}$ cents left after converting as much of the money into bills as possible.",
+    "is_solved": false,
+    "model_solution": "Step 1: Determine the total amount of money each girl scout earned in cents. \nLinda: 2747 cents\nSherry: 3523 cents\nJune: 3737 cents\nConnie: 2652 cents\nStep 2: Add up the total amount of money all the girls earned in cents.\n$2747+3523+3737+2652=$\\$12659$\nStep 3: Determine the number of $10 bills that can be made from the total amount of money earned by all the girls.\n$12659 \\div 10 = 1265$ with remainder $9$, so the girls can make $1265$ $10$-dollar bills, which is a total of $12650$ dollars.\nStep 4: Subtract the value of the bills from the total amount of money in cents.\n$12,659 - 12,650 = 9$\nStep 5: \n$9 \\div 1 = 9$ with remainder $0$, so the girls can make $9$ $1$-dollar bills.\nStep 6: \n$9 \\div 1 = 9$ with remainder $0$, so the girls can make $9$ $1$-dollar bills.\n No answer.\nStep 5: \n$\\$9$ in bills is equivalent to 9 cents.\nStep 6: 9 cents.\nStep 7: $9$ cents.\nStep 7: No answer.",
+    "steps": [
+        "Step 1: Determine the total amount of money each girl scout earned in cents. \nLinda: 2747 cents\nSherry: 3523 cents\nJune: 3737 cents\nConnie: 2652 cents",
+        "Step 2: Add up the total amount of money all the girls earned in cents.\n$2747+3523+3737+2652=$\\$12659$",
+        "Step 3: Determine the number of $10 bills that can be made from the total amount of money earned by all the girls.\n$12659 \\div 10 = 1265$ with remainder $9$, so the girls can make $1265$ $10$-dollar bills, which is a total of $12650$ dollars.",
+        "Step 4: Subtract the value of the bills from the total amount of money in cents.\n$12,659 - 12,650 = 9$",
+        "Step 5: \n$9 \\div 1 = 9$ with remainder $0$, so the girls can make $9$ $1$-dollar bills.",
+        "Step 6: \n$9 \\div 1 = 9$ with remainder $0$, so the girls can make $9$ $1$-dollar bills.\n No answer.",
+        "Step 5: \n$\\$9$ in bills is equivalent to 9 cents.",
+        "Step 6: 9 cents.",
+        "Step 7: $9$ cents.",
+        "Step 7: No answer."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Determine the total amount of money each girl scout earned in cents. \nLinda: 2747 cents\nSherry: 3523 cents\nJune: 3737 cents\nConnie: 2652 cents",
+            1
+        ],
+        [
+            "Step 2: Add up the total amount of money all the girls earned in cents.\n$2747+3523+3737+2652=$\\$12659$",
+            1
+        ],
+        [
+            "Step 3: Determine the number of $10 bills that can be made from the total amount of money earned by all the girls.\n$12659 \\div 10 = 1265$ with remainder $9$, so the girls can make $1265$ $10$-dollar bills, which is a total of $12650$ dollars.",
+            1
+        ],
+        [
+            "Step 4: Subtract the value of the bills from the total amount of money in cents.\n$12,659 - 12,650 = 9$",
+            1
+        ],
+        [
+            "Step 5: \n$9 \\div 1 = 9$ with remainder $0$, so the girls can make $9$ $1$-dollar bills.",
+            1
+        ],
+        [
+            "Step 6: \n$9 \\div 1 = 9$ with remainder $0$, so the girls can make $9$ $1$-dollar bills.\n No answer.",
+            1
+        ],
+        [
+            "Step 5: \n$\\$9$ in bills is equivalent to 9 cents.",
+            1
+        ],
+        [
+            "Step 6: 9 cents.",
+            1
+        ],
+        [
+            "Step 7: $9$ cents.",
+            1
+        ],
+        [
+            "Step 7: No answer.",
+            1
+        ]
+    ],
+    "time": 134.71606159210205,
+    "total_tokens": 7477,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

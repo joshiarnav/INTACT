@@ -1,0 +1,66 @@
+{
+    "problem": "What is the smallest positive integer $n$ such that $n$ has remainder 1 when divided by 3, $n$ has remainder 1 when divided by 4, and $n$ has remainder 4 when divided by 5?",
+    "level": "Level 2",
+    "type": "Number Theory",
+    "solution": "Since $\\text{gcd}(3,4) = 1$, the first two requirements imply that $n\\equiv 1\\pmod{12}$. We list the first few numbers that are $1\\pmod{12}$, $$13,25,37,49,...$$We see that $\\boxed{49}$ is the first value with remainder $4$ when divided by $5$.",
+    "is_solved": false,
+    "model_solution": "Step 1:  Let $n$ be the positive integer that satisfies the given conditions. We know that $n$ leaves a remainder of 1 when divided by 3, a remainder of 1 when divided by 4, and a remainder of 4 when divided by 5.\nThe Chinese Remainder Theorem states that there exists a unique solution modulo $3\\cdot 4 \\cdot 5 = 60.$\nStep 2:  By the Chinese Remainder Theorem, we can find a unique solution modulo $60$, which means that the smallest positive integer $n$ satisfying the given conditions is of the form $n = 60k + r$ for some integer $k$. To find the smallest $n$, we need to find the smallest possible value of $n$ by determining the remainder $r$.\n\nNote: I will provide the next steps if needed.\nStep 3:  We are looking for the smallest positive integer $n$ that leaves a remainder of 1 when divided by 3, a remainder of 1 when divided by 4, and a remainder of 4 when divided by 5. We can start by listing numbers that leave a remainder of 1 when divided by 3 and 4, and then check which of these numbers also leaves a remainder of 4 when divided by 5.\nStep 4:  We can start by listing numbers that leave a remainder of 1 when divided by 3 and 4. The numbers that satisfy this condition are of the form $3a+1$ and $4b+1$, where $a$ and $b$ are integers. To find the numbers that also leave a remainder of 4 when divided by 5, we need to check which of these numbers can be expressed in the form $5c+4$, where $c$ is an integer.\nStep 5:  We can systematically check the numbers that satisfy the first two conditions. The numbers that leave a remainder of 1 when divided by both 3 and 4 are in the form $12c + 1$ for some integer $c$.\nStep 6:  We need to check which numbers in the form $12c+1$ leave a remainder of 4 when divided by 5. To do this, we can substitute values of $c$ into the expression $12c+1$ and check whether the resulting numbers are of the form $5d+4$ for some integer $d$.\nStep 7:  We will start checking the values of $12c+1$ for $c = 0, 1, 2, ...$ until we find the first value that leaves a remainder of 4 when divided by 5.\nStep 8:  Let's start checking the values of $12c+1$ for $c = 0, 1, 2, ...$. For $c = 0$, $12c+1 = 1$. For $c = 1$, $12c+1 = 13$. For $c = 2$, $12c+1 = 25$. For $c = 3$, $12c+1 = 37$. For $c = 4$, $12c+1 = 49$. For $c = 5$, $12c+1 = 61$.\nStep 9:\nCheck if $12c+1$ leaves a remainder of 4 when divided by 5 for $c = 6, 7, 8, ...$\nStep 10:\nFor $c = 6$, $12c+1 = 73$. $73 \\div 5 = 14$ with a remainder of 3. \nFor $c = 7$, $12c+1 = 85$. $85 \\div 5 = 17$ with a remainder of 0.\nFor $c = 8$, $12c+1 = 97$. $97 \\div 5 = 19$ with a remainder of 2.\nFor $c = 9$, $12c+1 = 109$. $109 \\div 5 = 21$ with a remainder of 4.",
+    "steps": [
+        "Step 1:  Let $n$ be the positive integer that satisfies the given conditions. We know that $n$ leaves a remainder of 1 when divided by 3, a remainder of 1 when divided by 4, and a remainder of 4 when divided by 5.\nThe Chinese Remainder Theorem states that there exists a unique solution modulo $3\\cdot 4 \\cdot 5 = 60.$",
+        "Step 2:  By the Chinese Remainder Theorem, we can find a unique solution modulo $60$, which means that the smallest positive integer $n$ satisfying the given conditions is of the form $n = 60k + r$ for some integer $k$. To find the smallest $n$, we need to find the smallest possible value of $n$ by determining the remainder $r$.\n\nNote: I will provide the next steps if needed.",
+        "Step 3:  We are looking for the smallest positive integer $n$ that leaves a remainder of 1 when divided by 3, a remainder of 1 when divided by 4, and a remainder of 4 when divided by 5. We can start by listing numbers that leave a remainder of 1 when divided by 3 and 4, and then check which of these numbers also leaves a remainder of 4 when divided by 5.",
+        "Step 4:  We can start by listing numbers that leave a remainder of 1 when divided by 3 and 4. The numbers that satisfy this condition are of the form $3a+1$ and $4b+1$, where $a$ and $b$ are integers. To find the numbers that also leave a remainder of 4 when divided by 5, we need to check which of these numbers can be expressed in the form $5c+4$, where $c$ is an integer.",
+        "Step 5:  We can systematically check the numbers that satisfy the first two conditions. The numbers that leave a remainder of 1 when divided by both 3 and 4 are in the form $12c + 1$ for some integer $c$.",
+        "Step 6:  We need to check which numbers in the form $12c+1$ leave a remainder of 4 when divided by 5. To do this, we can substitute values of $c$ into the expression $12c+1$ and check whether the resulting numbers are of the form $5d+4$ for some integer $d$.",
+        "Step 7:  We will start checking the values of $12c+1$ for $c = 0, 1, 2, ...$ until we find the first value that leaves a remainder of 4 when divided by 5.",
+        "Step 8:  Let's start checking the values of $12c+1$ for $c = 0, 1, 2, ...$. For $c = 0$, $12c+1 = 1$. For $c = 1$, $12c+1 = 13$. For $c = 2$, $12c+1 = 25$. For $c = 3$, $12c+1 = 37$. For $c = 4$, $12c+1 = 49$. For $c = 5$, $12c+1 = 61$.",
+        "Step 9:\nCheck if $12c+1$ leaves a remainder of 4 when divided by 5 for $c = 6, 7, 8, ...$",
+        "Step 10:\nFor $c = 6$, $12c+1 = 73$. $73 \\div 5 = 14$ with a remainder of 3. \nFor $c = 7$, $12c+1 = 85$. $85 \\div 5 = 17$ with a remainder of 0.\nFor $c = 8$, $12c+1 = 97$. $97 \\div 5 = 19$ with a remainder of 2.\nFor $c = 9$, $12c+1 = 109$. $109 \\div 5 = 21$ with a remainder of 4."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Let $n$ be the positive integer that satisfies the given conditions. We know that $n$ leaves a remainder of 1 when divided by 3, a remainder of 1 when divided by 4, and a remainder of 4 when divided by 5.\nThe Chinese Remainder Theorem states that there exists a unique solution modulo $3\\cdot 4 \\cdot 5 = 60.$",
+            1
+        ],
+        [
+            "Step 2:  By the Chinese Remainder Theorem, we can find a unique solution modulo $60$, which means that the smallest positive integer $n$ satisfying the given conditions is of the form $n = 60k + r$ for some integer $k$. To find the smallest $n$, we need to find the smallest possible value of $n$ by determining the remainder $r$.\n\nNote: I will provide the next steps if needed.",
+            1
+        ],
+        [
+            "Step 3:  We are looking for the smallest positive integer $n$ that leaves a remainder of 1 when divided by 3, a remainder of 1 when divided by 4, and a remainder of 4 when divided by 5. We can start by listing numbers that leave a remainder of 1 when divided by 3 and 4, and then check which of these numbers also leaves a remainder of 4 when divided by 5.",
+            1
+        ],
+        [
+            "Step 4:  We can start by listing numbers that leave a remainder of 1 when divided by 3 and 4. The numbers that satisfy this condition are of the form $3a+1$ and $4b+1$, where $a$ and $b$ are integers. To find the numbers that also leave a remainder of 4 when divided by 5, we need to check which of these numbers can be expressed in the form $5c+4$, where $c$ is an integer.",
+            1
+        ],
+        [
+            "Step 5:  We can systematically check the numbers that satisfy the first two conditions. The numbers that leave a remainder of 1 when divided by both 3 and 4 are in the form $12c + 1$ for some integer $c$.",
+            1
+        ],
+        [
+            "Step 6:  We need to check which numbers in the form $12c+1$ leave a remainder of 4 when divided by 5. To do this, we can substitute values of $c$ into the expression $12c+1$ and check whether the resulting numbers are of the form $5d+4$ for some integer $d$.",
+            1
+        ],
+        [
+            "Step 7:  We will start checking the values of $12c+1$ for $c = 0, 1, 2, ...$ until we find the first value that leaves a remainder of 4 when divided by 5.",
+            1
+        ],
+        [
+            "Step 8:  Let's start checking the values of $12c+1$ for $c = 0, 1, 2, ...$. For $c = 0$, $12c+1 = 1$. For $c = 1$, $12c+1 = 13$. For $c = 2$, $12c+1 = 25$. For $c = 3$, $12c+1 = 37$. For $c = 4$, $12c+1 = 49$. For $c = 5$, $12c+1 = 61$.",
+            1
+        ],
+        [
+            "Step 9:\nCheck if $12c+1$ leaves a remainder of 4 when divided by 5 for $c = 6, 7, 8, ...$",
+            1
+        ],
+        [
+            "Step 10:\nFor $c = 6$, $12c+1 = 73$. $73 \\div 5 = 14$ with a remainder of 3. \nFor $c = 7$, $12c+1 = 85$. $85 \\div 5 = 17$ with a remainder of 0.\nFor $c = 8$, $12c+1 = 97$. $97 \\div 5 = 19$ with a remainder of 2.\nFor $c = 9$, $12c+1 = 109$. $109 \\div 5 = 21$ with a remainder of 4.",
+            1
+        ]
+    ],
+    "time": 132.86279392242432,
+    "total_tokens": 11789,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

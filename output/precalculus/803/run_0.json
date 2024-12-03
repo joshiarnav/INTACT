@@ -1,0 +1,66 @@
+{
+    "problem": "Find the number of solutions to\n\\[\\frac{1}{\\sin^2 \\theta} - \\frac{1}{\\cos^2 \\theta} - \\frac{1}{\\tan^2 \\theta} - \\frac{1}{\\cot^2 \\theta} - \\frac{1}{\\sec^2 \\theta} - \\frac{1}{\\csc^2 \\theta} = -3\\]in the interval $0 \\le \\theta \\le 2 \\pi.$",
+    "level": "Level 3",
+    "type": "Precalculus",
+    "solution": "We can write\n\\begin{align*}\n&\\frac{1}{\\sin^2 \\theta} - \\frac{1}{\\cos^2 \\theta} - \\frac{1}{\\tan^2 \\theta} - \\frac{1}{\\cot^2 \\theta} - \\frac{1}{\\sec^2 \\theta} - \\frac{1}{\\csc^2 \\theta} \\\\\n&= \\frac{1}{\\sin^2 \\theta} - \\frac{1}{\\cos^2 \\theta} - \\frac{\\cos^2 \\theta}{\\sin^2 \\theta} - \\tan^2 \\theta - \\cos^2 \\theta - \\sin^2 \\theta \\\\\n&= \\frac{1 - \\cos^2 \\theta}{\\sin^2 \\theta} - \\frac{1}{\\cos^2 \\theta} - \\tan^2 \\theta - 1 \\\\\n&= \\frac{\\sin^2 \\theta}{\\sin^2 \\theta} - \\frac{1}{\\cos^2 \\theta} - \\tan^2 \\theta - 1 \\\\\n&= -\\frac{1}{\\cos^2 \\theta} - \\tan^2 \\theta = -3.\n\\end{align*}Hence,\n\\[\\frac{1}{\\cos^2 \\theta} + \\tan^2 \\theta = 3.\\]We can write this as\n\\[\\frac{\\sin^2 \\theta + \\cos^2 \\theta}{\\cos^2 \\theta} + \\tan^2 \\theta = 3,\\]so $\\tan^2 \\theta + 1 + \\tan^2 \\theta = 3,$ which simplifies to $\\tan^2 \\theta = 1.$  Note that up to this point, all our steps have been reversible.\n\nThen $\\tan \\theta = \\pm 1,$ so the solutions are $\\frac{\\pi}{4},$ $\\frac{3 \\pi}{4},$ $\\frac{5 \\pi}{4},$ and $\\frac{7 \\pi}{4},$ for a total of $\\boxed{4}$ solutions.",
+    "is_solved": false,
+    "model_solution": "Step 1: To begin, rewrite the equation in terms of $\\sin \\theta$ and $\\cos \\theta$:\n\\begin{align*}\n\\frac{1}{\\sin^2 \\theta} - \\frac{1}{\\cos^2 \\theta} - \\frac{1}{\\tan^2 \\theta} - \\frac{1}{\\cot^2 \\theta} - \\frac{1}{\\sec^2 \\theta} - \\frac{1}{\\csc^2 \\theta} & = -3 \\\\\n\\frac{\\cos^2 \\theta - \\sin^2 \\theta}{\\sin^2 \\theta \\cos^2 \\theta} - \\frac{\\cos^2 \\theta + \\sin^2 \\theta}{\\sin^2 \\theta \\cos^2 \\theta} - \\frac{\\cos^2 \\theta}{\\sin^2 \\theta \\cos^2 \\theta} - \\frac{\\sin^2 \\theta}{\\cos^2 \\theta \\sin^2 \\theta} - \\frac{1}{\\sin^2 \\theta} - \\frac{1}{\\cos^2 \\theta} & = -3 \\\\\n\\begin{align*}\n\\frac{\\cos^2 \\theta - \\sin^2 \\theta}{\\sin^2 \\theta \\cos^2 \\theta} - \\frac{\\cos^2 \\theta + \\sin^2 \\theta}{\\sin^2 \\theta \\cos^2 \\theta} - \\frac{\\cos^2 \\theta}{\\sin^2 \\theta \\cos^2 \\theta} - \\frac{\\sin^2 \\theta}{\\cos^2 \\theta \\sin^2 \\theta} - \\frac{1}{\\sin^2 \\theta} - \\frac{1}{\\cos^2 \\theta} & = -3 \\\\\n\\frac{-1}{\\sin^2 \\theta \\cos^2 \\theta} - \\frac{1}{\\sin^2 \\theta \\cos^2 \\theta} - \\frac{1}{\\sin^2 \\theta \\cos^2 \\theta} - \\frac{1}{\\sin^2 \\theta \\cos^2 \\theta} - \\frac{1}{\\sin^2 \\theta} - \\frac{1}{\\cos^2 \\theta} & = -3 \\\\\n-4\nStep 2:\n\\begin{align*}\n-4\\left(\\frac{1}{\\sin^2 \\theta \\cos^2 \\theta}\\right) - \\frac{1}{\\sin^2 \\theta} - \\frac{1}{\\cos^2 \\theta} & = -3 \\\\\n\\frac{4}{\\sin^2 \\theta \\cos^2 \\theta} + \\frac{1}{\\sin^2 \\theta} + \\frac{1}{\\cos^2 \\theta} & = 3 \\\\\n\\frac{4\\cos^2 \\theta + \\sin^4 \\theta + \\cos^4 \\theta}{\\sin^2 \\theta \\cos^2 \\theta} & = 3 \\\\\n\\frac{\\sin^4 \\theta + \\cos^4 \\theta + 4\\cos^2 \\theta}{\\sin^2 \\theta \\cos^2 \\theta} & = 3 \\\\\n\\frac{(\\sin^2 \\theta + \\cos^2 \\theta)^2 - 2\\sin^2 \\theta \\cos^2 \\theta + 4\\cos^2 \\theta}{\\sin^2 \\theta \\\n\\begin{align*}\n\\frac{1 - 2\\sin^2 \\theta \\cos^2 \\theta + 4\\cos^2 \\theta}{\\sin^2 \\theta \\cos^2 \\theta} & = 3 \\\\\n1 - 2\\sin^2 \\theta \\cos^2 \\theta + 4\\cos^2 \\theta & = 3\\sin^2 \\theta \\cos^2 \\theta \\\\\n1 - 3\\sin^2 \\theta \\cos^2 \\theta + 4\\cos^2 \\theta & = 0 \\\\\n1 - 4\\cos^2 \\theta + 3\\sin^2 \\theta \\cos^2 \\theta & = 0 \\\\\n1 - 4\\cos^2 \\theta + 3(1-\\cos^2 \\theta)\\cos^2 \\theta & = 0 \\\\\n1 - 4\\cos^2 \\theta + 3\\cos^2 \\theta - 3\\cos^4 \\theta & = 0 \\\\\n3\\cos^4 \\theta - 1\\cos^2 \\theta - 1 & = 0 \\\\\n\\cos^2 \\theta\nLet $x = \\cos^2 \\theta$ and rewrite the equation:\n\\begin{align*}\n3x^2 - x - 1 & = 0 \\\\\n(3x + 2)(x - 1) & = 0 \\\\\nx & = -\\frac{2}{3}, 1\n\\end{align*}Since $\\cos^2 \\theta \\le 1,$ we have $x = \\cos^2 \\theta \\le 1,$ so $x = -\\frac{2}{3}$ is not a valid solution.\nSince $\\cos^2 \\theta \\le 1,$ we have $x = \\cos^2 \\theta \\le 1,$ so $x = -\\frac{2}{3}$ is not a valid solution.\n\\begin{align*}\nx & = 1 \\\\\n\\cos^2 \\theta & = 1 \\\\\n\\cos \\theta & = \\pm 1 \\\\\n\\theta & = 0, \\pi\n\\end{align*}\n\\begin{align*}\n\\cos \\theta & = 1 \\\\\n\\theta & = 0, 2\\pi\n\\end{align*}\n\\begin{align*}\n\\cos \\theta & = -1 \\\\\n\\theta & = \\pi\n\\end{align*}\nSince $\\cos \\theta = -1$ has only one solution in the interval $0 \\le \\theta \\le 2 \\pi,$ the equation has $\\boxed{2}$ solutions.\nStep 3:\n\\begin{align*}\n\\cos^2 \\theta & = 1 \\\\\n\\cos \\theta & = \\pm 1 \\\\\n\\cos \\theta & = 1 \\\\\n\\theta & = 0, 2\\pi\n\\end{align*}",
+    "steps": [
+        "Step 1: To begin, rewrite the equation in terms of $\\sin \\theta$ and $\\cos \\theta$:\n\\begin{align*}\n\\frac{1}{\\sin^2 \\theta} - \\frac{1}{\\cos^2 \\theta} - \\frac{1}{\\tan^2 \\theta} - \\frac{1}{\\cot^2 \\theta} - \\frac{1}{\\sec^2 \\theta} - \\frac{1}{\\csc^2 \\theta} & = -3 \\\\\n\\frac{\\cos^2 \\theta - \\sin^2 \\theta}{\\sin^2 \\theta \\cos^2 \\theta} - \\frac{\\cos^2 \\theta + \\sin^2 \\theta}{\\sin^2 \\theta \\cos^2 \\theta} - \\frac{\\cos^2 \\theta}{\\sin^2 \\theta \\cos^2 \\theta} - \\frac{\\sin^2 \\theta}{\\cos^2 \\theta \\sin^2 \\theta} - \\frac{1}{\\sin^2 \\theta} - \\frac{1}{\\cos^2 \\theta} & = -3 \\\\",
+        "\\begin{align*}\n\\frac{\\cos^2 \\theta - \\sin^2 \\theta}{\\sin^2 \\theta \\cos^2 \\theta} - \\frac{\\cos^2 \\theta + \\sin^2 \\theta}{\\sin^2 \\theta \\cos^2 \\theta} - \\frac{\\cos^2 \\theta}{\\sin^2 \\theta \\cos^2 \\theta} - \\frac{\\sin^2 \\theta}{\\cos^2 \\theta \\sin^2 \\theta} - \\frac{1}{\\sin^2 \\theta} - \\frac{1}{\\cos^2 \\theta} & = -3 \\\\\n\\frac{-1}{\\sin^2 \\theta \\cos^2 \\theta} - \\frac{1}{\\sin^2 \\theta \\cos^2 \\theta} - \\frac{1}{\\sin^2 \\theta \\cos^2 \\theta} - \\frac{1}{\\sin^2 \\theta \\cos^2 \\theta} - \\frac{1}{\\sin^2 \\theta} - \\frac{1}{\\cos^2 \\theta} & = -3 \\\\\n-4",
+        "Step 2:\n\\begin{align*}\n-4\\left(\\frac{1}{\\sin^2 \\theta \\cos^2 \\theta}\\right) - \\frac{1}{\\sin^2 \\theta} - \\frac{1}{\\cos^2 \\theta} & = -3 \\\\\n\\frac{4}{\\sin^2 \\theta \\cos^2 \\theta} + \\frac{1}{\\sin^2 \\theta} + \\frac{1}{\\cos^2 \\theta} & = 3 \\\\\n\\frac{4\\cos^2 \\theta + \\sin^4 \\theta + \\cos^4 \\theta}{\\sin^2 \\theta \\cos^2 \\theta} & = 3 \\\\\n\\frac{\\sin^4 \\theta + \\cos^4 \\theta + 4\\cos^2 \\theta}{\\sin^2 \\theta \\cos^2 \\theta} & = 3 \\\\\n\\frac{(\\sin^2 \\theta + \\cos^2 \\theta)^2 - 2\\sin^2 \\theta \\cos^2 \\theta + 4\\cos^2 \\theta}{\\sin^2 \\theta \\",
+        "\\begin{align*}\n\\frac{1 - 2\\sin^2 \\theta \\cos^2 \\theta + 4\\cos^2 \\theta}{\\sin^2 \\theta \\cos^2 \\theta} & = 3 \\\\\n1 - 2\\sin^2 \\theta \\cos^2 \\theta + 4\\cos^2 \\theta & = 3\\sin^2 \\theta \\cos^2 \\theta \\\\\n1 - 3\\sin^2 \\theta \\cos^2 \\theta + 4\\cos^2 \\theta & = 0 \\\\\n1 - 4\\cos^2 \\theta + 3\\sin^2 \\theta \\cos^2 \\theta & = 0 \\\\\n1 - 4\\cos^2 \\theta + 3(1-\\cos^2 \\theta)\\cos^2 \\theta & = 0 \\\\\n1 - 4\\cos^2 \\theta + 3\\cos^2 \\theta - 3\\cos^4 \\theta & = 0 \\\\\n3\\cos^4 \\theta - 1\\cos^2 \\theta - 1 & = 0 \\\\\n\\cos^2 \\theta",
+        "Let $x = \\cos^2 \\theta$ and rewrite the equation:\n\\begin{align*}\n3x^2 - x - 1 & = 0 \\\\\n(3x + 2)(x - 1) & = 0 \\\\\nx & = -\\frac{2}{3}, 1\n\\end{align*}Since $\\cos^2 \\theta \\le 1,$ we have $x = \\cos^2 \\theta \\le 1,$ so $x = -\\frac{2}{3}$ is not a valid solution.",
+        "Since $\\cos^2 \\theta \\le 1,$ we have $x = \\cos^2 \\theta \\le 1,$ so $x = -\\frac{2}{3}$ is not a valid solution.\n\\begin{align*}\nx & = 1 \\\\\n\\cos^2 \\theta & = 1 \\\\\n\\cos \\theta & = \\pm 1 \\\\\n\\theta & = 0, \\pi\n\\end{align*}",
+        "\\begin{align*}\n\\cos \\theta & = 1 \\\\\n\\theta & = 0, 2\\pi\n\\end{align*}",
+        "\\begin{align*}\n\\cos \\theta & = -1 \\\\\n\\theta & = \\pi\n\\end{align*}",
+        "Since $\\cos \\theta = -1$ has only one solution in the interval $0 \\le \\theta \\le 2 \\pi,$ the equation has $\\boxed{2}$ solutions.",
+        "Step 3:\n\\begin{align*}\n\\cos^2 \\theta & = 1 \\\\\n\\cos \\theta & = \\pm 1 \\\\\n\\cos \\theta & = 1 \\\\\n\\theta & = 0, 2\\pi\n\\end{align*}"
+    ],
+    "full_steps": [
+        [
+            "Step 1: To begin, rewrite the equation in terms of $\\sin \\theta$ and $\\cos \\theta$:\n\\begin{align*}\n\\frac{1}{\\sin^2 \\theta} - \\frac{1}{\\cos^2 \\theta} - \\frac{1}{\\tan^2 \\theta} - \\frac{1}{\\cot^2 \\theta} - \\frac{1}{\\sec^2 \\theta} - \\frac{1}{\\csc^2 \\theta} & = -3 \\\\\n\\frac{\\cos^2 \\theta - \\sin^2 \\theta}{\\sin^2 \\theta \\cos^2 \\theta} - \\frac{\\cos^2 \\theta + \\sin^2 \\theta}{\\sin^2 \\theta \\cos^2 \\theta} - \\frac{\\cos^2 \\theta}{\\sin^2 \\theta \\cos^2 \\theta} - \\frac{\\sin^2 \\theta}{\\cos^2 \\theta \\sin^2 \\theta} - \\frac{1}{\\sin^2 \\theta} - \\frac{1}{\\cos^2 \\theta} & = -3 \\\\",
+            1
+        ],
+        [
+            "\\begin{align*}\n\\frac{\\cos^2 \\theta - \\sin^2 \\theta}{\\sin^2 \\theta \\cos^2 \\theta} - \\frac{\\cos^2 \\theta + \\sin^2 \\theta}{\\sin^2 \\theta \\cos^2 \\theta} - \\frac{\\cos^2 \\theta}{\\sin^2 \\theta \\cos^2 \\theta} - \\frac{\\sin^2 \\theta}{\\cos^2 \\theta \\sin^2 \\theta} - \\frac{1}{\\sin^2 \\theta} - \\frac{1}{\\cos^2 \\theta} & = -3 \\\\\n\\frac{-1}{\\sin^2 \\theta \\cos^2 \\theta} - \\frac{1}{\\sin^2 \\theta \\cos^2 \\theta} - \\frac{1}{\\sin^2 \\theta \\cos^2 \\theta} - \\frac{1}{\\sin^2 \\theta \\cos^2 \\theta} - \\frac{1}{\\sin^2 \\theta} - \\frac{1}{\\cos^2 \\theta} & = -3 \\\\\n-4",
+            1
+        ],
+        [
+            "Step 2:\n\\begin{align*}\n-4\\left(\\frac{1}{\\sin^2 \\theta \\cos^2 \\theta}\\right) - \\frac{1}{\\sin^2 \\theta} - \\frac{1}{\\cos^2 \\theta} & = -3 \\\\\n\\frac{4}{\\sin^2 \\theta \\cos^2 \\theta} + \\frac{1}{\\sin^2 \\theta} + \\frac{1}{\\cos^2 \\theta} & = 3 \\\\\n\\frac{4\\cos^2 \\theta + \\sin^4 \\theta + \\cos^4 \\theta}{\\sin^2 \\theta \\cos^2 \\theta} & = 3 \\\\\n\\frac{\\sin^4 \\theta + \\cos^4 \\theta + 4\\cos^2 \\theta}{\\sin^2 \\theta \\cos^2 \\theta} & = 3 \\\\\n\\frac{(\\sin^2 \\theta + \\cos^2 \\theta)^2 - 2\\sin^2 \\theta \\cos^2 \\theta + 4\\cos^2 \\theta}{\\sin^2 \\theta \\",
+            1
+        ],
+        [
+            "\\begin{align*}\n\\frac{1 - 2\\sin^2 \\theta \\cos^2 \\theta + 4\\cos^2 \\theta}{\\sin^2 \\theta \\cos^2 \\theta} & = 3 \\\\\n1 - 2\\sin^2 \\theta \\cos^2 \\theta + 4\\cos^2 \\theta & = 3\\sin^2 \\theta \\cos^2 \\theta \\\\\n1 - 3\\sin^2 \\theta \\cos^2 \\theta + 4\\cos^2 \\theta & = 0 \\\\\n1 - 4\\cos^2 \\theta + 3\\sin^2 \\theta \\cos^2 \\theta & = 0 \\\\\n1 - 4\\cos^2 \\theta + 3(1-\\cos^2 \\theta)\\cos^2 \\theta & = 0 \\\\\n1 - 4\\cos^2 \\theta + 3\\cos^2 \\theta - 3\\cos^4 \\theta & = 0 \\\\\n3\\cos^4 \\theta - 1\\cos^2 \\theta - 1 & = 0 \\\\\n\\cos^2 \\theta",
+            1
+        ],
+        [
+            "Let $x = \\cos^2 \\theta$ and rewrite the equation:\n\\begin{align*}\n3x^2 - x - 1 & = 0 \\\\\n(3x + 2)(x - 1) & = 0 \\\\\nx & = -\\frac{2}{3}, 1\n\\end{align*}Since $\\cos^2 \\theta \\le 1,$ we have $x = \\cos^2 \\theta \\le 1,$ so $x = -\\frac{2}{3}$ is not a valid solution.",
+            1
+        ],
+        [
+            "Since $\\cos^2 \\theta \\le 1,$ we have $x = \\cos^2 \\theta \\le 1,$ so $x = -\\frac{2}{3}$ is not a valid solution.\n\\begin{align*}\nx & = 1 \\\\\n\\cos^2 \\theta & = 1 \\\\\n\\cos \\theta & = \\pm 1 \\\\\n\\theta & = 0, \\pi\n\\end{align*}",
+            1
+        ],
+        [
+            "\\begin{align*}\n\\cos \\theta & = 1 \\\\\n\\theta & = 0, 2\\pi\n\\end{align*}",
+            1
+        ],
+        [
+            "\\begin{align*}\n\\cos \\theta & = -1 \\\\\n\\theta & = \\pi\n\\end{align*}",
+            1
+        ],
+        [
+            "Since $\\cos \\theta = -1$ has only one solution in the interval $0 \\le \\theta \\le 2 \\pi,$ the equation has $\\boxed{2}$ solutions.",
+            1
+        ],
+        [
+            "Step 3:\n\\begin{align*}\n\\cos^2 \\theta & = 1 \\\\\n\\cos \\theta & = \\pm 1 \\\\\n\\cos \\theta & = 1 \\\\\n\\theta & = 0, 2\\pi\n\\end{align*}",
+            1
+        ]
+    ],
+    "time": 135.2269263267517,
+    "total_tokens": 23558,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,66 @@
+{
+    "problem": "Find the sum of the primes between 100 and 200, inclusive, that are 1 or 2 more than a perfect square.",
+    "level": "Level 5",
+    "type": "Prealgebra",
+    "solution": "The perfect squares from 100 and 200 (inclusive) are 100, 121, 144, 169, and 196.  The numbers that are 1 or 2 larger than those perfect squares are as follows:\n\n101, 102, 122, 123, 145, 146, 170, 171, 197, and 198.\n\nClearly, no even number greater than 2 can be a prime number, so we narrow our field down to 101, 123, 145, 171, and 197.\n\nTesting, we see that 101 is prime, 123 is not (3 times 41), 145 is not (5 times 29), 171 is not (9 times 19), and 197 is prime.  Hence, the sum of the primes that fit the problem is $101+197= \\boxed{298}$.",
+    "is_solved": false,
+    "model_solution": "List all the perfect squares between 100 and 200: \n\n121, 144, 169, 196\nCheck if the numbers one more than each perfect square are prime: \n122 (no), 145 (no), 170 (no), 197 (yes)\nCheck if the numbers two more than each perfect square are prime: \n123 (no), 146 (no), 171 (no), 198 (no), 199 (yes)\nSum the primes 197 and 199.\nCheck if the numbers one more than each perfect square are prime: \n100 is not a perfect square, so check 101 and 102; \n101 (yes), 102 (no), 103 (yes), 104 (no), 105 (no), 106 (no), 107 (yes), 108 (no), 109 (yes), 110 (no), 111 (no), 112 (no), 113 (yes), 114 (no), 115 (no), 116 (no), 117 (no), 118 (no), 119 (no), 120 (no), 121 is a perfect square; \nCheck if the numbers one more than each perfect square are prime: \n122 (no), 123 (no), 124 (no), 125 (no), 126 (no), 127 (yes), 128 (no), 129 (no), 130 (no), 131 (yes), 132 (no), 133 (no), 134 (no), 135 (no), 136 (no), 137 (yes), 138 (no), 139 (yes), 140 (no), 141 (no),\nCheck if the numbers two more than each perfect square are prime: \n129 (no), 130 (no), 131 is a prime from previous check, \n132 (no), 133 (no), 134 (no), 135 (no), 136 (no), 137 is a prime from previous check, \n138 (no), 139 is a prime from previous check, \n140 (no), 141 (no), 142 (no), 143 (no), 148 (no), 149 (yes)\nCheck if the numbers one more than each perfect square are prime: \n144 is a perfect square, so check 145; \n145 (no), 146 (no), 147 (no), 148 (no), 149 is a prime from previous check, \n150 (no), 151 (yes), 152 (no), 153 (no), 154 (no), 155 (no), 156 (no), 157 (yes), 158 (no), 159 (no), 160 (no), 161 (no), 162 (no), 163 (yes), 164 (no), 165 (no), 166 (no), 167 (yes), 168 (no), 169 is a perfect square; \nSum the primes 151, 157, 163, 167, and 197 and 199 from previous steps.\nCheck if the numbers one more than each perfect square are prime: \n169 is a perfect square, so check 170; \n170 (no), 171 (no), 172 (no), 173 (yes), 174 (no), 175 (no), 176 (no), 177 (no), 178 (no), 179 (yes), 180 (no), 181 (yes), 182 (no), 183 (no), 184 (no), 185 (no), 186 (no), 187 (no), 188 (no), 189 (no), 190 (no), 191 (yes), 192 (no), 193 (yes), 194 (no), 195 (no), 196 is a perfect square.\nCheck if the numbers one more than each perfect square are prime: \n197 is a prime from previous steps, \n198 (no), 199 is a prime from previous steps, \n200 (no)\nCheck if the numbers two more than each perfect square are prime: 193 is a prime from previous check, 194 (no), 195 (no), 196 is a perfect square.",
+    "steps": [
+        "List all the perfect squares between 100 and 200: \n\n121, 144, 169, 196",
+        "Check if the numbers one more than each perfect square are prime: \n122 (no), 145 (no), 170 (no), 197 (yes)",
+        "Check if the numbers two more than each perfect square are prime: \n123 (no), 146 (no), 171 (no), 198 (no), 199 (yes)",
+        "Sum the primes 197 and 199.",
+        "Check if the numbers one more than each perfect square are prime: \n100 is not a perfect square, so check 101 and 102; \n101 (yes), 102 (no), 103 (yes), 104 (no), 105 (no), 106 (no), 107 (yes), 108 (no), 109 (yes), 110 (no), 111 (no), 112 (no), 113 (yes), 114 (no), 115 (no), 116 (no), 117 (no), 118 (no), 119 (no), 120 (no), 121 is a perfect square; \nCheck if the numbers one more than each perfect square are prime: \n122 (no), 123 (no), 124 (no), 125 (no), 126 (no), 127 (yes), 128 (no), 129 (no), 130 (no), 131 (yes), 132 (no), 133 (no), 134 (no), 135 (no), 136 (no), 137 (yes), 138 (no), 139 (yes), 140 (no), 141 (no),",
+        "Check if the numbers two more than each perfect square are prime: \n129 (no), 130 (no), 131 is a prime from previous check, \n132 (no), 133 (no), 134 (no), 135 (no), 136 (no), 137 is a prime from previous check, \n138 (no), 139 is a prime from previous check, \n140 (no), 141 (no), 142 (no), 143 (no), 148 (no), 149 (yes)",
+        "Check if the numbers one more than each perfect square are prime: \n144 is a perfect square, so check 145; \n145 (no), 146 (no), 147 (no), 148 (no), 149 is a prime from previous check, \n150 (no), 151 (yes), 152 (no), 153 (no), 154 (no), 155 (no), 156 (no), 157 (yes), 158 (no), 159 (no), 160 (no), 161 (no), 162 (no), 163 (yes), 164 (no), 165 (no), 166 (no), 167 (yes), 168 (no), 169 is a perfect square; \nSum the primes 151, 157, 163, 167, and 197 and 199 from previous steps.",
+        "Check if the numbers one more than each perfect square are prime: \n169 is a perfect square, so check 170; \n170 (no), 171 (no), 172 (no), 173 (yes), 174 (no), 175 (no), 176 (no), 177 (no), 178 (no), 179 (yes), 180 (no), 181 (yes), 182 (no), 183 (no), 184 (no), 185 (no), 186 (no), 187 (no), 188 (no), 189 (no), 190 (no), 191 (yes), 192 (no), 193 (yes), 194 (no), 195 (no), 196 is a perfect square.",
+        "Check if the numbers one more than each perfect square are prime: \n197 is a prime from previous steps, \n198 (no), 199 is a prime from previous steps, \n200 (no)",
+        "Check if the numbers two more than each perfect square are prime: 193 is a prime from previous check, 194 (no), 195 (no), 196 is a perfect square."
+    ],
+    "full_steps": [
+        [
+            "List all the perfect squares between 100 and 200: \n\n121, 144, 169, 196",
+            1
+        ],
+        [
+            "Check if the numbers one more than each perfect square are prime: \n122 (no), 145 (no), 170 (no), 197 (yes)",
+            1
+        ],
+        [
+            "Check if the numbers two more than each perfect square are prime: \n123 (no), 146 (no), 171 (no), 198 (no), 199 (yes)",
+            1
+        ],
+        [
+            "Sum the primes 197 and 199.",
+            1
+        ],
+        [
+            "Check if the numbers one more than each perfect square are prime: \n100 is not a perfect square, so check 101 and 102; \n101 (yes), 102 (no), 103 (yes), 104 (no), 105 (no), 106 (no), 107 (yes), 108 (no), 109 (yes), 110 (no), 111 (no), 112 (no), 113 (yes), 114 (no), 115 (no), 116 (no), 117 (no), 118 (no), 119 (no), 120 (no), 121 is a perfect square; \nCheck if the numbers one more than each perfect square are prime: \n122 (no), 123 (no), 124 (no), 125 (no), 126 (no), 127 (yes), 128 (no), 129 (no), 130 (no), 131 (yes), 132 (no), 133 (no), 134 (no), 135 (no), 136 (no), 137 (yes), 138 (no), 139 (yes), 140 (no), 141 (no),",
+            1
+        ],
+        [
+            "Check if the numbers two more than each perfect square are prime: \n129 (no), 130 (no), 131 is a prime from previous check, \n132 (no), 133 (no), 134 (no), 135 (no), 136 (no), 137 is a prime from previous check, \n138 (no), 139 is a prime from previous check, \n140 (no), 141 (no), 142 (no), 143 (no), 148 (no), 149 (yes)",
+            1
+        ],
+        [
+            "Check if the numbers one more than each perfect square are prime: \n144 is a perfect square, so check 145; \n145 (no), 146 (no), 147 (no), 148 (no), 149 is a prime from previous check, \n150 (no), 151 (yes), 152 (no), 153 (no), 154 (no), 155 (no), 156 (no), 157 (yes), 158 (no), 159 (no), 160 (no), 161 (no), 162 (no), 163 (yes), 164 (no), 165 (no), 166 (no), 167 (yes), 168 (no), 169 is a perfect square; \nSum the primes 151, 157, 163, 167, and 197 and 199 from previous steps.",
+            1
+        ],
+        [
+            "Check if the numbers one more than each perfect square are prime: \n169 is a perfect square, so check 170; \n170 (no), 171 (no), 172 (no), 173 (yes), 174 (no), 175 (no), 176 (no), 177 (no), 178 (no), 179 (yes), 180 (no), 181 (yes), 182 (no), 183 (no), 184 (no), 185 (no), 186 (no), 187 (no), 188 (no), 189 (no), 190 (no), 191 (yes), 192 (no), 193 (yes), 194 (no), 195 (no), 196 is a perfect square.",
+            1
+        ],
+        [
+            "Check if the numbers one more than each perfect square are prime: \n197 is a prime from previous steps, \n198 (no), 199 is a prime from previous steps, \n200 (no)",
+            1
+        ],
+        [
+            "Check if the numbers two more than each perfect square are prime: 193 is a prime from previous check, 194 (no), 195 (no), 196 is a perfect square.",
+            1
+        ]
+    ],
+    "time": 137.17395496368408,
+    "total_tokens": 10423,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,61 @@
+{
+    "problem": "Let $S$ be the set of points whose coordinates $x,$ $y,$ and $z$ are integers that satisfy $0\\le x\\le2,$ $0\\le y\\le3,$ and $0\\le z\\le4.$ Two distinct points are randomly chosen from $S.$ The probability that the midpoint of the segment they determine also belongs to $S$ is $m/n,$ where $m$ and $n$ are relatively prime positive integers. Find $m + n.$\n",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "The distance between the $x$, $y$, and $z$ coordinates must be even so that the midpoint can have integer coordinates. Therefore,\nFor $x$, we have the possibilities $(0,0)$, $(1,1)$, $(2,2)$, $(0,2)$, and $(2,0)$, $5$ possibilities.\nFor $y$, we have the possibilities $(0,0)$, $(1,1)$, $(2,2)$, $(3,3)$, $(0,2)$, $(2,0)$, $(1,3)$, and $(3,1)$, $8$ possibilities.\nFor $z$, we have the possibilities $(0,0)$, $(1,1)$, $(2,2)$, $(3,3)$, $(4,4)$, $(0,2)$, $(0,4)$, $(2,0)$, $(4,0)$, $(2,4)$, $(4,2)$, $(1,3)$, and $(3,1)$, $13$ possibilities.\nHowever, we have $3\\cdot 4\\cdot 5 = 60$ cases where we have simply taken the same point twice, so we subtract those. Therefore, our answer is $\\frac {5\\cdot 8\\cdot 13 - 60}{60\\cdot 59} = \\frac {23}{177}\\Longrightarrow m+n = \\boxed{200}$.",
+    "is_solved": true,
+    "model_solution": "The first step is to consider the constraints for the coordinates of the points in set $S$.\nSince the coordinates of the midpoint of a segment must be an integer, then for a segment with endpoints $(x_{1}, y_{1}, z_{1})$ and $(x_{2}, y_{2}, z_{2}),$ we must have that $\\frac{x_{1}+x_{2}}{2}, \\frac{y_{1}+y_{2}}{2}, \\frac{z_{1}+z_{2}}{2}$ are all integers, i.e., $x_{1}+x_{2}, y_{1}+y_{2},$ and $z_{1}+z_{2}$ are even.\nThis means that exactly one of $x_{1}$ and $x_{2}$ is odd, exactly one of $y_{1}$ and $y_{2}$ is odd, and exactly one of $z_{1}$ and $z_{2}$ is odd.\nThere are $2\\cdot3\\cdot5=30$ odd choices for the first coordinate and $2\\cdot4\\cdot5=40$ odd choices for the second coordinate for each of the three coordinates. Therefore, the total number of ways to choose two distinct points from $S$ such that the midpoint of the segment they determine also belongs to $S$ is $30\\cdot40\\cdot20=24000$.\nThe total number of ways to choose two distinct points from $S$ is $\\binom{2\\cdot3\\cdot5}{2}$, which is equal to $\\frac{(2\\cdot3\\cdot5)(2\\cdot3\\cdot5-1)}{2} = \\frac{300\\cdot299}{2} = 45000.$\nThe probability that the midpoint of the segment they determine also belongs to $S$ is $\\frac{24000}{45000}=\\frac{8}{15}$, so $m = 8$ and $n = 15.$ Therefore, $m + n = 23.$\nThere are $2\\cdot3\\cdot5=30$ odd choices for the first coordinate and $2\\cdot4\\cdot5=40$ odd choices for the second coordinate for each of the three coordinates.\nThere are $\\binom{2\\cdot3\\cdot5}{2}$ ways to choose two distinct points from $S$.\nThere are $30\\cdot40\\cdot20=24000$ ways to choose two distinct points from $S$ such that the midpoint of the segment they determine also belongs to $S$.\nThe total number of ways to choose two distinct points from $S$ is $\\binom{2\\cdot3\\cdot5}{2}$, which is equal to $\\frac{(2\\cdot3\\cdot5)(2\\cdot3\\cdot5-1)}{2} = \\frac{300\\cdot299}{2} = 45000.$",
+    "steps": [
+        "The first step is to consider the constraints for the coordinates of the points in set $S$.",
+        "Since the coordinates of the midpoint of a segment must be an integer, then for a segment with endpoints $(x_{1}, y_{1}, z_{1})$ and $(x_{2}, y_{2}, z_{2}),$ we must have that $\\frac{x_{1}+x_{2}}{2}, \\frac{y_{1}+y_{2}}{2}, \\frac{z_{1}+z_{2}}{2}$ are all integers, i.e., $x_{1}+x_{2}, y_{1}+y_{2},$ and $z_{1}+z_{2}$ are even.\nThis means that exactly one of $x_{1}$ and $x_{2}$ is odd, exactly one of $y_{1}$ and $y_{2}$ is odd, and exactly one of $z_{1}$ and $z_{2}$ is odd.",
+        "There are $2\\cdot3\\cdot5=30$ odd choices for the first coordinate and $2\\cdot4\\cdot5=40$ odd choices for the second coordinate for each of the three coordinates. Therefore, the total number of ways to choose two distinct points from $S$ such that the midpoint of the segment they determine also belongs to $S$ is $30\\cdot40\\cdot20=24000$.",
+        "The total number of ways to choose two distinct points from $S$ is $\\binom{2\\cdot3\\cdot5}{2}$, which is equal to $\\frac{(2\\cdot3\\cdot5)(2\\cdot3\\cdot5-1)}{2} = \\frac{300\\cdot299}{2} = 45000.$",
+        "The probability that the midpoint of the segment they determine also belongs to $S$ is $\\frac{24000}{45000}=\\frac{8}{15}$, so $m = 8$ and $n = 15.$ Therefore, $m + n = 23.$",
+        "There are $2\\cdot3\\cdot5=30$ odd choices for the first coordinate and $2\\cdot4\\cdot5=40$ odd choices for the second coordinate for each of the three coordinates.",
+        "There are $\\binom{2\\cdot3\\cdot5}{2}$ ways to choose two distinct points from $S$.",
+        "There are $30\\cdot40\\cdot20=24000$ ways to choose two distinct points from $S$ such that the midpoint of the segment they determine also belongs to $S$.",
+        "The total number of ways to choose two distinct points from $S$ is $\\binom{2\\cdot3\\cdot5}{2}$, which is equal to $\\frac{(2\\cdot3\\cdot5)(2\\cdot3\\cdot5-1)}{2} = \\frac{300\\cdot299}{2} = 45000.$"
+    ],
+    "full_steps": [
+        [
+            "The first step is to consider the constraints for the coordinates of the points in set $S$.",
+            1
+        ],
+        [
+            "Since the coordinates of the midpoint of a segment must be an integer, then for a segment with endpoints $(x_{1}, y_{1}, z_{1})$ and $(x_{2}, y_{2}, z_{2}),$ we must have that $\\frac{x_{1}+x_{2}}{2}, \\frac{y_{1}+y_{2}}{2}, \\frac{z_{1}+z_{2}}{2}$ are all integers, i.e., $x_{1}+x_{2}, y_{1}+y_{2},$ and $z_{1}+z_{2}$ are even.\nThis means that exactly one of $x_{1}$ and $x_{2}$ is odd, exactly one of $y_{1}$ and $y_{2}$ is odd, and exactly one of $z_{1}$ and $z_{2}$ is odd.",
+            1
+        ],
+        [
+            "There are $2\\cdot3\\cdot5=30$ odd choices for the first coordinate and $2\\cdot4\\cdot5=40$ odd choices for the second coordinate for each of the three coordinates. Therefore, the total number of ways to choose two distinct points from $S$ such that the midpoint of the segment they determine also belongs to $S$ is $30\\cdot40\\cdot20=24000$.",
+            1
+        ],
+        [
+            "The total number of ways to choose two distinct points from $S$ is $\\binom{2\\cdot3\\cdot5}{2}$, which is equal to $\\frac{(2\\cdot3\\cdot5)(2\\cdot3\\cdot5-1)}{2} = \\frac{300\\cdot299}{2} = 45000.$",
+            1
+        ],
+        [
+            "The probability that the midpoint of the segment they determine also belongs to $S$ is $\\frac{24000}{45000}=\\frac{8}{15}$, so $m = 8$ and $n = 15.$ Therefore, $m + n = 23.$",
+            1
+        ],
+        [
+            "There are $2\\cdot3\\cdot5=30$ odd choices for the first coordinate and $2\\cdot4\\cdot5=40$ odd choices for the second coordinate for each of the three coordinates.",
+            1
+        ],
+        [
+            "There are $\\binom{2\\cdot3\\cdot5}{2}$ ways to choose two distinct points from $S$.",
+            1
+        ],
+        [
+            "There are $30\\cdot40\\cdot20=24000$ ways to choose two distinct points from $S$ such that the midpoint of the segment they determine also belongs to $S$.",
+            1
+        ],
+        [
+            "The total number of ways to choose two distinct points from $S$ is $\\binom{2\\cdot3\\cdot5}{2}$, which is equal to $\\frac{(2\\cdot3\\cdot5)(2\\cdot3\\cdot5-1)}{2} = \\frac{300\\cdot299}{2} = 45000.$",
+            1
+        ]
+    ],
+    "time": 119.52272963523865,
+    "total_tokens": 10032,
+    "final_answer_tokens": 784,
+    "model": "meta-llama/Llama-Vision-Free"
+}

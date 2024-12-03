@@ -1,0 +1,66 @@
+{
+    "problem": "Four circles with radii 1, 2, 3, and $r$ are externally tangent to one another, where $r$ is the smallest radius.  Compute $r$.",
+    "level": "Level 5",
+    "type": "Precalculus",
+    "solution": "Let $A,B,C,P$ be the centers of the circles with radii 1, 2, 3, and $r$, respectively.\n\n[asy]\nunitsize(1 cm);\n\npair A, B, C, P;\n\nA = (0,0);\nB = (0,3);\nC = (4,0);\nP = (20/23,21/23);\n\ndraw(Circle(A,1));\ndraw(Circle(B,2));\ndraw(Circle(C,3));\ndraw(Circle(P,6/23));\ndraw(A--B--C--cycle);\ndraw(A--P);\ndraw(B--P);\ndraw(C--P);\n\nlabel(\"$P$\", P, NE, UnFill);\n\ndot(\"$A$\", A, SW);\ndot(\"$B$\", B, NW);\ndot(\"$C$\", C, SE);\ndot(P);\n[/asy]\n\nThen $ABC$ is a 3-4-5 right triangle.  By the Law of Cosines on triangle $PAB,$ \\[\n\\cos\\angle PAB=\\frac{3^2+(1+r)^2-(2+r)^2}{2\\cdot 3\\cdot(1+r)} =\n\\frac{3-r}{3(1+r)}.\n\\]Similarly, \\[\n\\cos\\angle PAC= \\frac{4^2+(1+r)^2-(3+r)^2}{2\\cdot 4\\cdot(1+r)} = \\frac{2-r}{2(1+r)}.\n\\]Since $\\angle PAB + \\angle PAC = 90^\\circ,$\n\\[\\cos^2 \\angle PAB  + \\cos^2 \\angle PAC = \\cos^2 \\angle PAB + \\sin^2 \\angle PAB = 1.\\]Hence,\n\\[\\left( \\frac{3 - r}{3(1 + r)} \\right)^2 + \\left( \\frac{2 - r}{2(1 + r)} \\right)^2 = 1.\\]This simplifies to $23r^2 + 132r - 36 = 0,$ which factors as $(23r-6)(r+6) = 0$.  Therefore, $r=\\boxed{\\frac{6}{23}}.$",
+    "is_solved": false,
+    "model_solution": "Step 1: Draw a diagram showing the circles and their tangent points, and label the centers and radii of the circles.\nStep 2: Draw lines connecting the centers of the circles and find the midpoint of one of these lines. Let the center of the circle with the smallest radius be O, the center of the circle with radius 2 be A, the center of the circle with radius 3 be B, and the center of the circle with radius $r$ be C.\nStep 3: The line segment joining the centers of the circles with radii 2 and $r$ has length $2+r$ and the line segment joining the centers of the circles with radii 1 and 2 has length $1+2=3$.\nStep 4: Since the circles are externally tangent, the distance between the centers of the circles with radii 1 and 2 is the sum of their radii, and the distance between the centers of the circles with radii 2 and $r$ is the sum of their radii. This means that the lengths $OA=3$ and $AC=2+r$ are radii of two circles.\nStep 5: Because $OAC$ is a triangle, by the triangle inequality, $OA+AC>OC$ and $OC+OA>AC$. Substituting $OA=3$ and $AC=2+r$ into these inequalities, they become $3+2+r>OC$ and $OC+3>2+r$.\nStep 6:  Since the circles with radii 1 and 2 are externally tangent to the circle with radius $r$, the length $AC$ is equal to the sum of the radii of the circles with radii $r$ and 2.  So $AC=2+r$.\n $2+r>OC$ and $OC>2+r-3$.\nStep 7: $2+r>OC$ and $OC>2+r-3 \\Rightarrow 2+r>OC>2+r-3 \\Rightarrow 3>r-3 \\Rightarrow r<6.$\nStep 8:\nSince $OA=3$ and $OC>2+r-3$, we have that $OC>2+r-3 \\Rightarrow OC>2+r-3=2+r-3+1-1=3+r-1=2+r.$\nTherefore, $2+r>OC>2+r.$\nSince $r$ is the radius of the circle, $r>0$. Therefore, $2+r>2+r$.\nThis implies that $OC=2+r$, and $OC=OA+AC-2=3+2+r-2=3+r$.\nTherefore, $2+r=3+r \\Rightarrow 1=0.$\nStep 9: Since $OC=3+r$, we have $OC=OA+AC-2=3+2+r-2=5+r.$ Therefore, $5+r=3+r \\Rightarrow 2=0.$\nStep 10:\nSince $2+r>OC>2+r-3$, we have that $2+r>OC>2+r-3 \\Rightarrow 2+r>OC>2+r-3$. Since $OC=3+r$, we have that $2+r>3+r>2+r-3$. Therefore, we must have equality in the first inequality, so that $OA+AC=OC$, and $OA$ and $AC$ are radii. Since $OA=3$ and $AC=2+r$, we have $3+2+r=3+r$. Therefore, $2=0.$",
+    "steps": [
+        "Step 1: Draw a diagram showing the circles and their tangent points, and label the centers and radii of the circles.",
+        "Step 2: Draw lines connecting the centers of the circles and find the midpoint of one of these lines. Let the center of the circle with the smallest radius be O, the center of the circle with radius 2 be A, the center of the circle with radius 3 be B, and the center of the circle with radius $r$ be C.",
+        "Step 3: The line segment joining the centers of the circles with radii 2 and $r$ has length $2+r$ and the line segment joining the centers of the circles with radii 1 and 2 has length $1+2=3$.",
+        "Step 4: Since the circles are externally tangent, the distance between the centers of the circles with radii 1 and 2 is the sum of their radii, and the distance between the centers of the circles with radii 2 and $r$ is the sum of their radii. This means that the lengths $OA=3$ and $AC=2+r$ are radii of two circles.",
+        "Step 5: Because $OAC$ is a triangle, by the triangle inequality, $OA+AC>OC$ and $OC+OA>AC$. Substituting $OA=3$ and $AC=2+r$ into these inequalities, they become $3+2+r>OC$ and $OC+3>2+r$.",
+        "Step 6:  Since the circles with radii 1 and 2 are externally tangent to the circle with radius $r$, the length $AC$ is equal to the sum of the radii of the circles with radii $r$ and 2.  So $AC=2+r$.\n $2+r>OC$ and $OC>2+r-3$.",
+        "Step 7: $2+r>OC$ and $OC>2+r-3 \\Rightarrow 2+r>OC>2+r-3 \\Rightarrow 3>r-3 \\Rightarrow r<6.$",
+        "Step 8:\nSince $OA=3$ and $OC>2+r-3$, we have that $OC>2+r-3 \\Rightarrow OC>2+r-3=2+r-3+1-1=3+r-1=2+r.$\nTherefore, $2+r>OC>2+r.$\nSince $r$ is the radius of the circle, $r>0$. Therefore, $2+r>2+r$.\nThis implies that $OC=2+r$, and $OC=OA+AC-2=3+2+r-2=3+r$.\nTherefore, $2+r=3+r \\Rightarrow 1=0.$",
+        "Step 9: Since $OC=3+r$, we have $OC=OA+AC-2=3+2+r-2=5+r.$ Therefore, $5+r=3+r \\Rightarrow 2=0.$",
+        "Step 10:\nSince $2+r>OC>2+r-3$, we have that $2+r>OC>2+r-3 \\Rightarrow 2+r>OC>2+r-3$. Since $OC=3+r$, we have that $2+r>3+r>2+r-3$. Therefore, we must have equality in the first inequality, so that $OA+AC=OC$, and $OA$ and $AC$ are radii. Since $OA=3$ and $AC=2+r$, we have $3+2+r=3+r$. Therefore, $2=0.$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Draw a diagram showing the circles and their tangent points, and label the centers and radii of the circles.",
+            1
+        ],
+        [
+            "Step 2: Draw lines connecting the centers of the circles and find the midpoint of one of these lines. Let the center of the circle with the smallest radius be O, the center of the circle with radius 2 be A, the center of the circle with radius 3 be B, and the center of the circle with radius $r$ be C.",
+            1
+        ],
+        [
+            "Step 3: The line segment joining the centers of the circles with radii 2 and $r$ has length $2+r$ and the line segment joining the centers of the circles with radii 1 and 2 has length $1+2=3$.",
+            1
+        ],
+        [
+            "Step 4: Since the circles are externally tangent, the distance between the centers of the circles with radii 1 and 2 is the sum of their radii, and the distance between the centers of the circles with radii 2 and $r$ is the sum of their radii. This means that the lengths $OA=3$ and $AC=2+r$ are radii of two circles.",
+            1
+        ],
+        [
+            "Step 5: Because $OAC$ is a triangle, by the triangle inequality, $OA+AC>OC$ and $OC+OA>AC$. Substituting $OA=3$ and $AC=2+r$ into these inequalities, they become $3+2+r>OC$ and $OC+3>2+r$.",
+            1
+        ],
+        [
+            "Step 6:  Since the circles with radii 1 and 2 are externally tangent to the circle with radius $r$, the length $AC$ is equal to the sum of the radii of the circles with radii $r$ and 2.  So $AC=2+r$.\n $2+r>OC$ and $OC>2+r-3$.",
+            1
+        ],
+        [
+            "Step 7: $2+r>OC$ and $OC>2+r-3 \\Rightarrow 2+r>OC>2+r-3 \\Rightarrow 3>r-3 \\Rightarrow r<6.$",
+            1
+        ],
+        [
+            "Step 8:\nSince $OA=3$ and $OC>2+r-3$, we have that $OC>2+r-3 \\Rightarrow OC>2+r-3=2+r-3+1-1=3+r-1=2+r.$\nTherefore, $2+r>OC>2+r.$\nSince $r$ is the radius of the circle, $r>0$. Therefore, $2+r>2+r$.\nThis implies that $OC=2+r$, and $OC=OA+AC-2=3+2+r-2=3+r$.\nTherefore, $2+r=3+r \\Rightarrow 1=0.$",
+            1
+        ],
+        [
+            "Step 9: Since $OC=3+r$, we have $OC=OA+AC-2=3+2+r-2=5+r.$ Therefore, $5+r=3+r \\Rightarrow 2=0.$",
+            1
+        ],
+        [
+            "Step 10:\nSince $2+r>OC>2+r-3$, we have that $2+r>OC>2+r-3 \\Rightarrow 2+r>OC>2+r-3$. Since $OC=3+r$, we have that $2+r>3+r>2+r-3$. Therefore, we must have equality in the first inequality, so that $OA+AC=OC$, and $OA$ and $AC$ are radii. Since $OA=3$ and $AC=2+r$, we have $3+2+r=3+r$. Therefore, $2=0.$",
+            1
+        ]
+    ],
+    "time": 135.14982199668884,
+    "total_tokens": 9294,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

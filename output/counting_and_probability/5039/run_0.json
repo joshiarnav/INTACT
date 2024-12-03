@@ -1,0 +1,46 @@
+{
+    "problem": "Given eight distinguishable rings, let $n$ be the number of possible five-ring arrangements on the four fingers (not the thumb) of one hand. The order of rings on each finger is significant, but it is not required that each finger have a ring. Find the leftmost three nonzero digits of $n$.\n",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "There are $\\binom{8}{5}$ ways to choose the rings, and there are $5!$ distinct arrangements to order the rings [we order them so that the first ring is the bottom-most on the first finger that actually has a ring, and so forth]. The number of ways to distribute the rings among the fingers is equivalent the number of ways we can drop five balls into 4 urns, or similarly dropping five balls into four compartments split by three dividers. The number of ways to arrange those dividers and balls is just $\\binom {8}{3}$.\nMultiplying gives the answer: $\\binom{8}{5}\\binom{8}{3}5! = 376320$, and the three leftmost digits are $\\boxed{376}$.",
+    "is_solved": true,
+    "model_solution": "Step 1:  Distribution of Rings\nThere are $\\dbinom{8}{5}$ ways to choose the five rings from the eight distinguishable rings.\n\n$\\dbinom{8}{5} = 56$\nStep 2:  Distribution of Rings to Fingers\nEach of the $\\dbinom{8}{5}$ combinations of 5 rings can be distributed to the 4 fingers in $4^5$ ways, as each finger can have any of the 4 possible positions: the left pinky, left ring, left middle, right middle, right ring, or right pinky.\nStep 3:\nThe arrangements of the 5 chosen rings can be ordered in $5!$ ways, accounting for the order of the rings on each finger as well as how the rings are distributed among the fingers.\n\n$\\frac{4^5\\cdot 5!}{56}$\nStep 4:  Calculate the final result\n$\\frac{4^5\\cdot 5!}{56} = \\frac{1024\\cdot 120}{56} = \\frac{122880}{56} = 2196$\nStep 5:  The leftmost three nonzero digits of $n$ are $\\boxed{122}$.\nStep 6:\nThe leftmost three nonzero digits of $n$ are $\\boxed{122}$.\nFinal Answer",
+    "steps": [
+        "Step 1:  Distribution of Rings\nThere are $\\dbinom{8}{5}$ ways to choose the five rings from the eight distinguishable rings.\n\n$\\dbinom{8}{5} = 56$",
+        "Step 2:  Distribution of Rings to Fingers\nEach of the $\\dbinom{8}{5}$ combinations of 5 rings can be distributed to the 4 fingers in $4^5$ ways, as each finger can have any of the 4 possible positions: the left pinky, left ring, left middle, right middle, right ring, or right pinky.",
+        "Step 3:\nThe arrangements of the 5 chosen rings can be ordered in $5!$ ways, accounting for the order of the rings on each finger as well as how the rings are distributed among the fingers.\n\n$\\frac{4^5\\cdot 5!}{56}$",
+        "Step 4:  Calculate the final result\n$\\frac{4^5\\cdot 5!}{56} = \\frac{1024\\cdot 120}{56} = \\frac{122880}{56} = 2196$",
+        "Step 5:  The leftmost three nonzero digits of $n$ are $\\boxed{122}$.",
+        "Step 6:\nThe leftmost three nonzero digits of $n$ are $\\boxed{122}$.\nFinal Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Distribution of Rings\nThere are $\\dbinom{8}{5}$ ways to choose the five rings from the eight distinguishable rings.\n\n$\\dbinom{8}{5} = 56$",
+            1
+        ],
+        [
+            "Step 2:  Distribution of Rings to Fingers\nEach of the $\\dbinom{8}{5}$ combinations of 5 rings can be distributed to the 4 fingers in $4^5$ ways, as each finger can have any of the 4 possible positions: the left pinky, left ring, left middle, right middle, right ring, or right pinky.",
+            1
+        ],
+        [
+            "Step 3:\nThe arrangements of the 5 chosen rings can be ordered in $5!$ ways, accounting for the order of the rings on each finger as well as how the rings are distributed among the fingers.\n\n$\\frac{4^5\\cdot 5!}{56}$",
+            1
+        ],
+        [
+            "Step 4:  Calculate the final result\n$\\frac{4^5\\cdot 5!}{56} = \\frac{1024\\cdot 120}{56} = \\frac{122880}{56} = 2196$",
+            1
+        ],
+        [
+            "Step 5:  The leftmost three nonzero digits of $n$ are $\\boxed{122}$.",
+            1
+        ],
+        [
+            "Step 6:\nThe leftmost three nonzero digits of $n$ are $\\boxed{122}$.\nFinal Answer",
+            1
+        ]
+    ],
+    "time": 80.89046883583069,
+    "total_tokens": 3797,
+    "final_answer_tokens": 404,
+    "model": "meta-llama/Llama-Vision-Free"
+}

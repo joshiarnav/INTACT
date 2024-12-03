@@ -1,0 +1,46 @@
+{
+    "problem": "The sum of the proper divisors of 18 is 21. What is the sum of the proper divisors of 198?",
+    "level": "Level 5",
+    "type": "Number Theory",
+    "solution": "There are many ways to solve this problem, the most obvious being to list all of the proper divisors and add them up. There is, however, a creative solution that uses the fact that the sum of the proper divisors of 18 is 21. Note that we can factor 198 into $11\\cdot 18=11\\cdot 2\\cdot 3\\cdot 3$. Each proper divisor will be composed of three or fewer of these factors. Those divisors that do not contain the factor 11 will be either the proper divisors of 18 or 18 itself, contributing 21 and 18, respectively, to the sum. Those divisors that do contain the factor 11 will again by the proper divisors of 18, only multiplied by 11. The sum of these divisors, therefore, is $11\\cdot 21=231$. Since these are all possible divisors, the sum of the proper divisors of 198 is $21+18+231=\\boxed{270}$.",
+    "is_solved": true,
+    "model_solution": "Factor 198 into a product of prime factors.\n\n198 = 2 \u00d7 3^2 \u00d7 11\nUse the sum of divisors formula: (2^0 + 2^1) \u00d7 (3^0 + 3^1 + 3^2) \u00d7 (11^0 + 11^1)\n(1 + 2) \u00d7 (1 + 3 + 9) \u00d7 (1 + 11) = 3 \u00d7 13 \u00d7 12 = 468\nSubtract 198 to find the sum of the proper divisors: 468 - 198 = 270.\n198 = 2 \u00d7 3^2 \u00d7 11\n(1 + 2) \u00d7 (1 + 3 + 9) \u00d7 (1 + 11) = 3 \u00d7 13 \u00d7 12 = 468",
+    "steps": [
+        "Factor 198 into a product of prime factors.\n\n198 = 2 \u00d7 3^2 \u00d7 11",
+        "Use the sum of divisors formula: (2^0 + 2^1) \u00d7 (3^0 + 3^1 + 3^2) \u00d7 (11^0 + 11^1)",
+        "(1 + 2) \u00d7 (1 + 3 + 9) \u00d7 (1 + 11) = 3 \u00d7 13 \u00d7 12 = 468",
+        "Subtract 198 to find the sum of the proper divisors: 468 - 198 = 270.",
+        "198 = 2 \u00d7 3^2 \u00d7 11",
+        "(1 + 2) \u00d7 (1 + 3 + 9) \u00d7 (1 + 11) = 3 \u00d7 13 \u00d7 12 = 468"
+    ],
+    "full_steps": [
+        [
+            "Factor 198 into a product of prime factors.\n\n198 = 2 \u00d7 3^2 \u00d7 11",
+            1
+        ],
+        [
+            "Use the sum of divisors formula: (2^0 + 2^1) \u00d7 (3^0 + 3^1 + 3^2) \u00d7 (11^0 + 11^1)",
+            1
+        ],
+        [
+            "(1 + 2) \u00d7 (1 + 3 + 9) \u00d7 (1 + 11) = 3 \u00d7 13 \u00d7 12 = 468",
+            1
+        ],
+        [
+            "Subtract 198 to find the sum of the proper divisors: 468 - 198 = 270.",
+            1
+        ],
+        [
+            "198 = 2 \u00d7 3^2 \u00d7 11",
+            1
+        ],
+        [
+            "(1 + 2) \u00d7 (1 + 3 + 9) \u00d7 (1 + 11) = 3 \u00d7 13 \u00d7 12 = 468",
+            1
+        ]
+    ],
+    "time": 80.73798561096191,
+    "total_tokens": 2361,
+    "final_answer_tokens": 260,
+    "model": "meta-llama/Llama-Vision-Free"
+}

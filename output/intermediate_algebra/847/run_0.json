@@ -1,0 +1,66 @@
+{
+    "problem": "Find the solutions to\n\\[\\frac{x(x^2 - 56)}{4 - 7x} - \\frac{21x + 22}{x^3 + 2} = 4.\\]Enter all the solutions, separated by commas.",
+    "level": "Level 4",
+    "type": "Intermediate Algebra",
+    "solution": "Multiplying both sides by $(4 - 7x)(x^3 + 2),$ we get\n\\[x(x^2 - 56)(x^3 + 2) - (4 - 7x)(21x + 22) = 4(4 - 7x)(x^3 + 2).\\]This simplifies to\n\\[x^6 - 28x^4 - 14x^3 + 147x^2 + 14x - 120 = 0.\\]First, we try looking for nice roots.  Noting that both $x = 1$ and $x = -1$ are roots, we can factor out $x - 1$ and $x + 1,$ to get\n\\[(x - 1)(x + 1)(x^4 - 27x^2 - 14x + 120) = 0.\\]By the Integer Root Theorem, any integer roots must be factors of 120 (including negative factors).  Trying several factors, we notice that 2, 5, $-3,$ and $-4$ work, so the solutions are $\\boxed{-4, -3, -1, 1, 2, 5}.$",
+    "is_solved": false,
+    "model_solution": "Step 1: Multiply both sides of the equation by $(4 - 7x)(x^3 + 2)$ to eliminate the denominators.\n\nThe equation becomes $x(x^2 - 56)(x^3 + 2) - (21x + 22)(4 - 7x) = 4(4 - 7x)(x^3 + 2).$\nStep 2: Expand both sides of the equation and collect like terms to simplify the equation.\n\n$x(x^2 - 56)(x^3 + 2) - (21x + 22)(4 - 7x) = 4(4 - 7x)(x^3 + 2)$\nStep 3:\n\\[(x^5 - 56x^3)(x) - (4 - 7x)(21x + 22) = 4(4 - 7x^3 + 2x^3)\\]\n\\[(x^6 - 56x^4) - (84x^2 + 88 - 147x^2 - 154x) = 16 - 28x^3 + 8x^3\\]\n\\[x^6 - 56x^4 - 231x^2 - 154x + 88 - 20x^3 = -20x^3 + 16\\]\n\\[x^6 - 56x^4 - 231x^2 - 154x + 68 = 0\\]\nNote that $x = 2$ is a solution of this polynomial equation.\n\nThe next step is to check if $x - 2$ is a factor of the polynomial $P(x) = x^6 - 56x^4 - 231x^2 - 154x + 68$ and to use polynomial long division to divide $P(x)$ by $x - 2$.\nPerform polynomial long division to divide $P(x)$ by $x - 2$ and determine if $x - 2$ is a factor of $P(x)$.\nPerform the division $\\dfrac{x^6 - 56x^4 - 231x^2 - 154x + 68}{x-2}$ using polynomial long division.\nPerform polynomial long division to divide $P(x)$ by $x - 2$.\n\\begin{align*}\nx - 2 \\enclose{longdiv}{x^6 - 56x^4 - 231x^2 - 154x + 68} \\\\[-3pt]\n\\underline{ - (x^6 - 2x^5)} \\\\[-3pt]\n2x^5 - 56x^4 - 231x^2 - 154x + 68 \\\\[-3pt]\n\\underline{ - (28x^5 - 56x^4)} \\\\[-3pt]\n0x^5 - 56x^4 - 231x^2 - 154x + 68 \\\\[-3pt]\n\\underline{ - (231x^4 - 462x^3)} \\\\[-3pt]\n0x^4 - 462x^3 - 231x^2 - 154x + 68 \\\\[-3pt]\n\\underline{ - (462x^3 - 924x^2)} \\\\[-3pt]\n0x^3 - 924x^2 - 231x^2\n$\\underline{ - (231x^2 - 462x)}$\n$-924x^2 - 231x^2 -154x$\n$\\underline{- (-924x - 1848)}$\n$154x + 68 = 154x + 68$\nPerform polynomial long division to divide the result, $154x + 68$, by $x - 2$ and determine if $x - 2$ is a factor of $P(x)$.\nSince $154x + 68$ is already a constant, $x - 2$ is a factor of $P(x)$.",
+    "steps": [
+        "Step 1: Multiply both sides of the equation by $(4 - 7x)(x^3 + 2)$ to eliminate the denominators.\n\nThe equation becomes $x(x^2 - 56)(x^3 + 2) - (21x + 22)(4 - 7x) = 4(4 - 7x)(x^3 + 2).$",
+        "Step 2: Expand both sides of the equation and collect like terms to simplify the equation.\n\n$x(x^2 - 56)(x^3 + 2) - (21x + 22)(4 - 7x) = 4(4 - 7x)(x^3 + 2)$",
+        "Step 3:\n\\[(x^5 - 56x^3)(x) - (4 - 7x)(21x + 22) = 4(4 - 7x^3 + 2x^3)\\]\n\\[(x^6 - 56x^4) - (84x^2 + 88 - 147x^2 - 154x) = 16 - 28x^3 + 8x^3\\]\n\\[x^6 - 56x^4 - 231x^2 - 154x + 88 - 20x^3 = -20x^3 + 16\\]\n\\[x^6 - 56x^4 - 231x^2 - 154x + 68 = 0\\]",
+        "Note that $x = 2$ is a solution of this polynomial equation.\n\nThe next step is to check if $x - 2$ is a factor of the polynomial $P(x) = x^6 - 56x^4 - 231x^2 - 154x + 68$ and to use polynomial long division to divide $P(x)$ by $x - 2$.",
+        "Perform polynomial long division to divide $P(x)$ by $x - 2$ and determine if $x - 2$ is a factor of $P(x)$.",
+        "Perform the division $\\dfrac{x^6 - 56x^4 - 231x^2 - 154x + 68}{x-2}$ using polynomial long division.",
+        "Perform polynomial long division to divide $P(x)$ by $x - 2$.\n\\begin{align*}\nx - 2 \\enclose{longdiv}{x^6 - 56x^4 - 231x^2 - 154x + 68} \\\\[-3pt]\n\\underline{ - (x^6 - 2x^5)} \\\\[-3pt]\n2x^5 - 56x^4 - 231x^2 - 154x + 68 \\\\[-3pt]\n\\underline{ - (28x^5 - 56x^4)} \\\\[-3pt]\n0x^5 - 56x^4 - 231x^2 - 154x + 68 \\\\[-3pt]\n\\underline{ - (231x^4 - 462x^3)} \\\\[-3pt]\n0x^4 - 462x^3 - 231x^2 - 154x + 68 \\\\[-3pt]\n\\underline{ - (462x^3 - 924x^2)} \\\\[-3pt]\n0x^3 - 924x^2 - 231x^2",
+        "$\\underline{ - (231x^2 - 462x)}$\n$-924x^2 - 231x^2 -154x$\n$\\underline{- (-924x - 1848)}$\n$154x + 68 = 154x + 68$",
+        "Perform polynomial long division to divide the result, $154x + 68$, by $x - 2$ and determine if $x - 2$ is a factor of $P(x)$.",
+        "Since $154x + 68$ is already a constant, $x - 2$ is a factor of $P(x)$."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Multiply both sides of the equation by $(4 - 7x)(x^3 + 2)$ to eliminate the denominators.\n\nThe equation becomes $x(x^2 - 56)(x^3 + 2) - (21x + 22)(4 - 7x) = 4(4 - 7x)(x^3 + 2).$",
+            1
+        ],
+        [
+            "Step 2: Expand both sides of the equation and collect like terms to simplify the equation.\n\n$x(x^2 - 56)(x^3 + 2) - (21x + 22)(4 - 7x) = 4(4 - 7x)(x^3 + 2)$",
+            1
+        ],
+        [
+            "Step 3:\n\\[(x^5 - 56x^3)(x) - (4 - 7x)(21x + 22) = 4(4 - 7x^3 + 2x^3)\\]\n\\[(x^6 - 56x^4) - (84x^2 + 88 - 147x^2 - 154x) = 16 - 28x^3 + 8x^3\\]\n\\[x^6 - 56x^4 - 231x^2 - 154x + 88 - 20x^3 = -20x^3 + 16\\]\n\\[x^6 - 56x^4 - 231x^2 - 154x + 68 = 0\\]",
+            1
+        ],
+        [
+            "Note that $x = 2$ is a solution of this polynomial equation.\n\nThe next step is to check if $x - 2$ is a factor of the polynomial $P(x) = x^6 - 56x^4 - 231x^2 - 154x + 68$ and to use polynomial long division to divide $P(x)$ by $x - 2$.",
+            1
+        ],
+        [
+            "Perform polynomial long division to divide $P(x)$ by $x - 2$ and determine if $x - 2$ is a factor of $P(x)$.",
+            1
+        ],
+        [
+            "Perform the division $\\dfrac{x^6 - 56x^4 - 231x^2 - 154x + 68}{x-2}$ using polynomial long division.",
+            1
+        ],
+        [
+            "Perform polynomial long division to divide $P(x)$ by $x - 2$.\n\\begin{align*}\nx - 2 \\enclose{longdiv}{x^6 - 56x^4 - 231x^2 - 154x + 68} \\\\[-3pt]\n\\underline{ - (x^6 - 2x^5)} \\\\[-3pt]\n2x^5 - 56x^4 - 231x^2 - 154x + 68 \\\\[-3pt]\n\\underline{ - (28x^5 - 56x^4)} \\\\[-3pt]\n0x^5 - 56x^4 - 231x^2 - 154x + 68 \\\\[-3pt]\n\\underline{ - (231x^4 - 462x^3)} \\\\[-3pt]\n0x^4 - 462x^3 - 231x^2 - 154x + 68 \\\\[-3pt]\n\\underline{ - (462x^3 - 924x^2)} \\\\[-3pt]\n0x^3 - 924x^2 - 231x^2",
+            1
+        ],
+        [
+            "$\\underline{ - (231x^2 - 462x)}$\n$-924x^2 - 231x^2 -154x$\n$\\underline{- (-924x - 1848)}$\n$154x + 68 = 154x + 68$",
+            1
+        ],
+        [
+            "Perform polynomial long division to divide the result, $154x + 68$, by $x - 2$ and determine if $x - 2$ is a factor of $P(x)$.",
+            1
+        ],
+        [
+            "Since $154x + 68$ is already a constant, $x - 2$ is a factor of $P(x)$.",
+            1
+        ]
+    ],
+    "time": 133.0907654762268,
+    "total_tokens": 12393,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

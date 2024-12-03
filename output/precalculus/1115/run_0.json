@@ -1,0 +1,66 @@
+{
+    "problem": "In a 3-dimensional coordinate system with $x$-, $y$-, and $z$-axes, $P$ is a point on the line $y = -x + 1$ in the $xy$-plane and $Q$ is a point on the line $z = -2x + 1$ in the $xz$-plane.  Compute the smallest possible value for $PQ.$",
+    "level": "Level 5",
+    "type": "Precalculus",
+    "solution": "Let $P = (a, -a + 1, 0)$ be a point on the first line, and let $Q = (b, 0, -2b + 1)$ be a point on the second line.\n\n[asy]\nimport three;\n\nsize(250);\ncurrentprojection = perspective(6,3,2);\n\ndraw((-1,2,0)--(2,-1,0),red);\ndraw((3/2,0,-2)--(-1/2,0,2),blue);\ndraw((-2,0,0)--(2,0,0));\ndraw((0,-2,0)--(0,2,0));\ndraw((0,0,-2)--(0,0,2));\n\nlabel(\"$x$\", (2.2,0,0));\nlabel(\"$y$\", (0,2.2,0));\nlabel(\"$z$\", (0,0,2.2));\nlabel(\"$y = -x + 1$\", (-1,2,0), E, red);\nlabel(\"$z = -2x + 1$\", (3/2,0,-2), S, blue);\n[/asy]\n\nThen\n\\begin{align*}\nPQ^2 &= (a - b)^2 + (-a + 1)^2 + (-2b + 1)^2 \\\\\n&= 2a^2 - 2ab + 5b^2 - 2a - 4b + 2 \\\\\n&= 2a^2 - (2b + 2) a + 5b^2 - 4b + 2.\n\\end{align*}If $b$ is fixed, then this quadratic in $a$ is minimized when $a = \\frac{2b + 2}{4} = \\frac{b + 1}{2}.$  Then\n\\begin{align*}\nPQ^2 &= 2 \\left( \\frac{b + 1}{2} \\right)^2 - (2b + 2) \\cdot \\frac{b + 1}{2} + 5b^2 - 4b + 2 \\\\\n&= \\frac{9}{2} b^2 - 5b + \\frac{3}{2}.\n\\end{align*}This is minimized when $b = \\frac{5}{9}.$  When $b = \\frac{5}{9},$\n\\[PQ^2 = \\frac{9}{2} \\left( \\frac{5}{9} \\right)^2 - 5 \\cdot \\frac{5}{9} + \\frac{3}{2} = \\frac{1}{9},\\]so the minimum value of $PQ$ is $\\boxed{\\frac{1}{3}}.$",
+    "is_solved": false,
+    "model_solution": "Step 1:  We're given two equations for lines in the $xy$-plane and $xz$-plane, and we're asked to find the smallest possible distance between a point $P$ on the line $y = -x + 1$ and a point $Q$ on the line $z = -2x + 1$.\nStep 2:  To find the distance between $P$ and $Q$, we'll use the distance formula in three dimensions: $\\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}$.\nStep 3:  Let's consider the point $P$ on the line $y = -x + 1$ to be at coordinates $(a, -a + 1, 0)$, and the point $Q$ on the line $z = -2x + 1$ to be at coordinates $(b, 0, -2b + 1)$.\nStep 4:  We'll then define a new point $R$ by taking the $x$-coordinate of $P$ and $z$-coordinate of\nStep 5:  $R = (a, 0, -2a + 1)$, so that $P$ and $R$ have the same $x$-coordinate, and $R$ and $Q$ have the same $z$-coordinate.\nStep 6:\nLet $d(P,Q)$ be the distance between $P$ and $Q$, and let $d(P,R)$ and $d(R,Q)$ be the distances between $P$ and $R$ and between $R$ and $Q$, respectively.\nLet $d(P,Q)$ be the distance between $P$ and $Q$, and let $d(P,R)$ and $d(R,Q)$ be the distances between $P$ and $R$ and between $R$ and $Q$, respectively.\n\n$\nd(P,Q) \\geq d(R,Q) = \\sqrt{(b-a)^2 + (-2b+1)^2}\n$\n$\nd(P,Q) \\geq \\sqrt{(b-a)^2 + (-2b+1)^2} = \\sqrt{(b-a)^2 + 4b^2 - 4b + 1}\n$\nTo minimize $d(P,Q)$, we need to minimize $\\sqrt{(b-a)^2 + 4b^2 - 4b + 1}$.\nStep 2: \n\\sqrt{(b-a)^2 + 4b^2 - 4b + 1} = \\sqrt{(b-a)^2 + (2b-2)^2}\n$\\sqrt{(b-a)^2 + (2b-2)^2} = \\sqrt{5b^2 - 4b + 4}$\nThe next step is:\n\\sqrt{5b^2 - 4b + 4} \\geq \\sqrt{4}\n\\sqrt{5b^2 - 4b + 4} \\geq \\sqrt{4} = 2",
+    "steps": [
+        "Step 1:  We're given two equations for lines in the $xy$-plane and $xz$-plane, and we're asked to find the smallest possible distance between a point $P$ on the line $y = -x + 1$ and a point $Q$ on the line $z = -2x + 1$.\nStep 2:  To find the distance between $P$ and $Q$, we'll use the distance formula in three dimensions: $\\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}$.\nStep 3:  Let's consider the point $P$ on the line $y = -x + 1$ to be at coordinates $(a, -a + 1, 0)$, and the point $Q$ on the line $z = -2x + 1$ to be at coordinates $(b, 0, -2b + 1)$.\nStep 4:  We'll then define a new point $R$ by taking the $x$-coordinate of $P$ and $z$-coordinate of",
+        "Step 5:  $R = (a, 0, -2a + 1)$, so that $P$ and $R$ have the same $x$-coordinate, and $R$ and $Q$ have the same $z$-coordinate.",
+        "Step 6:\nLet $d(P,Q)$ be the distance between $P$ and $Q$, and let $d(P,R)$ and $d(R,Q)$ be the distances between $P$ and $R$ and between $R$ and $Q$, respectively.",
+        "Let $d(P,Q)$ be the distance between $P$ and $Q$, and let $d(P,R)$ and $d(R,Q)$ be the distances between $P$ and $R$ and between $R$ and $Q$, respectively.\n\n$\nd(P,Q) \\geq d(R,Q) = \\sqrt{(b-a)^2 + (-2b+1)^2}\n$",
+        "$\nd(P,Q) \\geq \\sqrt{(b-a)^2 + (-2b+1)^2} = \\sqrt{(b-a)^2 + 4b^2 - 4b + 1}\n$",
+        "To minimize $d(P,Q)$, we need to minimize $\\sqrt{(b-a)^2 + 4b^2 - 4b + 1}$.",
+        "Step 2: \n\\sqrt{(b-a)^2 + 4b^2 - 4b + 1} = \\sqrt{(b-a)^2 + (2b-2)^2}",
+        "$\\sqrt{(b-a)^2 + (2b-2)^2} = \\sqrt{5b^2 - 4b + 4}$",
+        "The next step is:\n\\sqrt{5b^2 - 4b + 4} \\geq \\sqrt{4}",
+        "\\sqrt{5b^2 - 4b + 4} \\geq \\sqrt{4} = 2"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We're given two equations for lines in the $xy$-plane and $xz$-plane, and we're asked to find the smallest possible distance between a point $P$ on the line $y = -x + 1$ and a point $Q$ on the line $z = -2x + 1$.\nStep 2:  To find the distance between $P$ and $Q$, we'll use the distance formula in three dimensions: $\\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}$.\nStep 3:  Let's consider the point $P$ on the line $y = -x + 1$ to be at coordinates $(a, -a + 1, 0)$, and the point $Q$ on the line $z = -2x + 1$ to be at coordinates $(b, 0, -2b + 1)$.\nStep 4:  We'll then define a new point $R$ by taking the $x$-coordinate of $P$ and $z$-coordinate of",
+            1
+        ],
+        [
+            "Step 5:  $R = (a, 0, -2a + 1)$, so that $P$ and $R$ have the same $x$-coordinate, and $R$ and $Q$ have the same $z$-coordinate.",
+            1
+        ],
+        [
+            "Step 6:\nLet $d(P,Q)$ be the distance between $P$ and $Q$, and let $d(P,R)$ and $d(R,Q)$ be the distances between $P$ and $R$ and between $R$ and $Q$, respectively.",
+            1
+        ],
+        [
+            "Let $d(P,Q)$ be the distance between $P$ and $Q$, and let $d(P,R)$ and $d(R,Q)$ be the distances between $P$ and $R$ and between $R$ and $Q$, respectively.\n\n$\nd(P,Q) \\geq d(R,Q) = \\sqrt{(b-a)^2 + (-2b+1)^2}\n$",
+            1
+        ],
+        [
+            "$\nd(P,Q) \\geq \\sqrt{(b-a)^2 + (-2b+1)^2} = \\sqrt{(b-a)^2 + 4b^2 - 4b + 1}\n$",
+            1
+        ],
+        [
+            "To minimize $d(P,Q)$, we need to minimize $\\sqrt{(b-a)^2 + 4b^2 - 4b + 1}$.",
+            1
+        ],
+        [
+            "Step 2: \n\\sqrt{(b-a)^2 + 4b^2 - 4b + 1} = \\sqrt{(b-a)^2 + (2b-2)^2}",
+            1
+        ],
+        [
+            "$\\sqrt{(b-a)^2 + (2b-2)^2} = \\sqrt{5b^2 - 4b + 4}$",
+            1
+        ],
+        [
+            "The next step is:\n\\sqrt{5b^2 - 4b + 4} \\geq \\sqrt{4}",
+            1
+        ],
+        [
+            "\\sqrt{5b^2 - 4b + 4} \\geq \\sqrt{4} = 2",
+            1
+        ]
+    ],
+    "time": 136.41577076911926,
+    "total_tokens": 12727,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

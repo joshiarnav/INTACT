@@ -1,0 +1,66 @@
+{
+    "problem": "How many different $4\\times 4$ arrays whose entries are all 1's and -1's have the property that the sum of the entries in each row is 0 and the sum of the entries in each column is 0?\n",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "The problem is asking us for all configurations of $4\\times 4$ grids with 2 1's and 2 -1's in each row and column. We do casework upon the first two columns:\nThe first two columns share no two numbers in the same row. There are ${4\\choose2} = 6$ ways to pick two 1's in the first column, and the second column is determined. For the third and fourth columns, no two numbers can be in the same row (to make the sum of each row 0), so again there are ${4\\choose 2}$ ways. This gives $6^2 = 36$.\nThe first two columns share one number in the same row. There are ${4\\choose 1} = 4$ ways to pick the position of the shared 1, then ${3\\choose 2} = 3$ ways to pick the locations for the next two 1s, and then $2$ ways to orient the 1s. For the third and fourth columns, the two rows with shared 1s or -1s are fixed, so the only things that can be changed is the orientation of the mixed rows, in $2$ ways. This gives $4 \\cdot 3 \\cdot 2 \\cdot 2 = 48$.\nThe first two columns share two numbers in the same row. There are ${4\\choose 2} = 6$ ways to pick the position of the shared 1s. Everything is then fixed.\nAdding these cases up, we get $36 + 48 + 6 = \\boxed{90}$.",
+    "is_solved": false,
+    "model_solution": "Step 1: Consider the constraints that each row must sum to 0. Since the entries are all 1's and -1's, each row can have at most two 1's and two -1's.\nStep 2: Consider the constraints that each column must sum to 0. Since the entries are all 1's and -1's, each column can have at most two 1's and two -1's.\nStep 3: Let's consider how to construct the $4\\times 4$ array. We'll start by choosing the positions of the 1's and -1's in the first row, then move to the next row, then the next column, and so on.\nStep 4: Since each row can have at most two 1's and two -1's, and we are constructing a 4x4 array, the first row can have one of the following forms: $\\begin{pmatrix}1 & 1 & -1 & -1 \\\\ 1 & -1 & 1 & -1 \\\\ 1 & -1 & -1 & 1 \\\\ -1 & 1 & 1 & -1\\end{pmatrix}, \\begin{pmatrix}1 & -1 & 1 & -1 \\\\ 1 & -1 & -1 & 1 \\\\ 1 & 1 & -1 & -1 \\\\ -1 & 1 & -1 & 1\\end{pmatrix}, \\begin{pmatrix}-1 & 1 & -1 & 1 \\\\ 1 & -1 & 1 & -1 \\\\ -1 & 1 & -1 & -1 \\\\ 1 & -1 & 1 & 1\\end{pmatrix}, \\begin{pmatrix}-1 & -1 & 1 & 1 \\\\ 1 & -1 & -1 & 1 \\\\ -1 &\nStep 5: \nEach of the $4$ possible forms of the first row can be constructed in $\\binom{4}{2} = 6$ ways. There are then $3$ possible forms for the second row, which can also be constructed in $6$ ways. Each of the $2$ possible forms for the third row can be constructed in $3$ ways, and there is $1$ possible form for the fourth row. Therefore, there are $4\\cdot 6 \\cdot 3 \\cdot 6 \\cdot 2 \\cdot 3 \\cdot 1 = 864$ $4\\times 4$ arrays with the desired property.\nStep 6:\nEach of the 4 possible forms of the first row can be constructed in $\\binom{4}{2} = 6$ ways.\nThere are then $3$ possible forms for the second row, which can also be constructed in $6$ ways.\nEach of the 3 possible forms for the third row can be constructed in 3 ways, and there is 1 possible form for the fourth row.\nThere are then $3$ possible forms for the third row, which can also be constructed in $3$ ways.\nEach of the 3 possible forms for the third row can be constructed in 3 ways, and there is 1 possible form for the fourth row.",
+    "steps": [
+        "Step 1: Consider the constraints that each row must sum to 0. Since the entries are all 1's and -1's, each row can have at most two 1's and two -1's.",
+        "Step 2: Consider the constraints that each column must sum to 0. Since the entries are all 1's and -1's, each column can have at most two 1's and two -1's.",
+        "Step 3: Let's consider how to construct the $4\\times 4$ array. We'll start by choosing the positions of the 1's and -1's in the first row, then move to the next row, then the next column, and so on.",
+        "Step 4: Since each row can have at most two 1's and two -1's, and we are constructing a 4x4 array, the first row can have one of the following forms: $\\begin{pmatrix}1 & 1 & -1 & -1 \\\\ 1 & -1 & 1 & -1 \\\\ 1 & -1 & -1 & 1 \\\\ -1 & 1 & 1 & -1\\end{pmatrix}, \\begin{pmatrix}1 & -1 & 1 & -1 \\\\ 1 & -1 & -1 & 1 \\\\ 1 & 1 & -1 & -1 \\\\ -1 & 1 & -1 & 1\\end{pmatrix}, \\begin{pmatrix}-1 & 1 & -1 & 1 \\\\ 1 & -1 & 1 & -1 \\\\ -1 & 1 & -1 & -1 \\\\ 1 & -1 & 1 & 1\\end{pmatrix}, \\begin{pmatrix}-1 & -1 & 1 & 1 \\\\ 1 & -1 & -1 & 1 \\\\ -1 &",
+        "Step 5: \nEach of the $4$ possible forms of the first row can be constructed in $\\binom{4}{2} = 6$ ways. There are then $3$ possible forms for the second row, which can also be constructed in $6$ ways. Each of the $2$ possible forms for the third row can be constructed in $3$ ways, and there is $1$ possible form for the fourth row. Therefore, there are $4\\cdot 6 \\cdot 3 \\cdot 6 \\cdot 2 \\cdot 3 \\cdot 1 = 864$ $4\\times 4$ arrays with the desired property.",
+        "Step 6:\nEach of the 4 possible forms of the first row can be constructed in $\\binom{4}{2} = 6$ ways.",
+        "There are then $3$ possible forms for the second row, which can also be constructed in $6$ ways.",
+        "Each of the 3 possible forms for the third row can be constructed in 3 ways, and there is 1 possible form for the fourth row.",
+        "There are then $3$ possible forms for the third row, which can also be constructed in $3$ ways.",
+        "Each of the 3 possible forms for the third row can be constructed in 3 ways, and there is 1 possible form for the fourth row."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Consider the constraints that each row must sum to 0. Since the entries are all 1's and -1's, each row can have at most two 1's and two -1's.",
+            1
+        ],
+        [
+            "Step 2: Consider the constraints that each column must sum to 0. Since the entries are all 1's and -1's, each column can have at most two 1's and two -1's.",
+            1
+        ],
+        [
+            "Step 3: Let's consider how to construct the $4\\times 4$ array. We'll start by choosing the positions of the 1's and -1's in the first row, then move to the next row, then the next column, and so on.",
+            1
+        ],
+        [
+            "Step 4: Since each row can have at most two 1's and two -1's, and we are constructing a 4x4 array, the first row can have one of the following forms: $\\begin{pmatrix}1 & 1 & -1 & -1 \\\\ 1 & -1 & 1 & -1 \\\\ 1 & -1 & -1 & 1 \\\\ -1 & 1 & 1 & -1\\end{pmatrix}, \\begin{pmatrix}1 & -1 & 1 & -1 \\\\ 1 & -1 & -1 & 1 \\\\ 1 & 1 & -1 & -1 \\\\ -1 & 1 & -1 & 1\\end{pmatrix}, \\begin{pmatrix}-1 & 1 & -1 & 1 \\\\ 1 & -1 & 1 & -1 \\\\ -1 & 1 & -1 & -1 \\\\ 1 & -1 & 1 & 1\\end{pmatrix}, \\begin{pmatrix}-1 & -1 & 1 & 1 \\\\ 1 & -1 & -1 & 1 \\\\ -1 &",
+            1
+        ],
+        [
+            "Step 5: \nEach of the $4$ possible forms of the first row can be constructed in $\\binom{4}{2} = 6$ ways. There are then $3$ possible forms for the second row, which can also be constructed in $6$ ways. Each of the $2$ possible forms for the third row can be constructed in $3$ ways, and there is $1$ possible form for the fourth row. Therefore, there are $4\\cdot 6 \\cdot 3 \\cdot 6 \\cdot 2 \\cdot 3 \\cdot 1 = 864$ $4\\times 4$ arrays with the desired property.",
+            1
+        ],
+        [
+            "Step 6:\nEach of the 4 possible forms of the first row can be constructed in $\\binom{4}{2} = 6$ ways.",
+            1
+        ],
+        [
+            "There are then $3$ possible forms for the second row, which can also be constructed in $6$ ways.",
+            1
+        ],
+        [
+            "Each of the 3 possible forms for the third row can be constructed in 3 ways, and there is 1 possible form for the fourth row.",
+            1
+        ],
+        [
+            "There are then $3$ possible forms for the third row, which can also be constructed in $3$ ways.",
+            1
+        ],
+        [
+            "Each of the 3 possible forms for the third row can be constructed in 3 ways, and there is 1 possible form for the fourth row.",
+            1
+        ]
+    ],
+    "time": 139.52195620536804,
+    "total_tokens": 10935,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

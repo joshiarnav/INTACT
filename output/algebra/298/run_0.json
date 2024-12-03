@@ -1,0 +1,46 @@
+{
+    "problem": "If $a$ and $b$ are positive integers for which $ab - 3a + 4b = 137$, what is the minimal possible value of $|a - b|$?",
+    "level": "Level 5",
+    "type": "Algebra",
+    "solution": "We apply Simon's Favorite Factoring Trick and note that if we subtract 12 from both sides, then the left side can be factored. Thus, $$ab - 3a + 4b -12 = 125 \\rightarrow (a+4)(b-3) = 125$$Since $a,b$ are positive integers, then $a+4, b-3$ must be a pair of factors of $125= 5^3$, so $(a+4,b-3)$ must be among  $$(1,125), (5,25), (25,5),(125,1).$$Thus, $(a,b)$ must be among  $$(-3,128), (1,28), (21,8), (121,4).$$Ruling out the first solution on account of the negative value for $a$, we find that the minimal value of $|a-b|$ among the remaining three is $|21-8|=\\boxed{13}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: Use Simon's Favorite Factoring Trick to rewrite the equation as $(a + 4)(b - 3) = 125$\nStep 2:\nThe pairs of factors of $125$ are $\\{1,125\\},\\{5,25\\},\\{25,5\\},\\{125,1\\}$.\nStep 3: \n$(a + 4)(b - 3) = 125$ gives $a + 4 = 1, b - 3 = 125$ or $a + 4 = 5, b - 3 = 25$ or $a + 4 = 25, b - 3 = 5$ or $a + 4 = 125, b - 3 = 1$, which correspond to the pairs $(a,b) = (-3,128), (1,28), (21,8), (121,4)$.\n\nNote: This step is not the final step.\nCalculate the absolute differences $|a-b|$ for the pairs $(a,b)$ obtained in Step 3.\nStep 4:\n$|a-b|=|(-3)-128|=|121-4|=|21-8|=3$.\nStep 5:\nThe minimal possible value of $|a - b|$ is $\\boxed{3}$. Final Answer",
+    "steps": [
+        "Step 1: Use Simon's Favorite Factoring Trick to rewrite the equation as $(a + 4)(b - 3) = 125$",
+        "Step 2:\nThe pairs of factors of $125$ are $\\{1,125\\},\\{5,25\\},\\{25,5\\},\\{125,1\\}$.",
+        "Step 3: \n$(a + 4)(b - 3) = 125$ gives $a + 4 = 1, b - 3 = 125$ or $a + 4 = 5, b - 3 = 25$ or $a + 4 = 25, b - 3 = 5$ or $a + 4 = 125, b - 3 = 1$, which correspond to the pairs $(a,b) = (-3,128), (1,28), (21,8), (121,4)$.\n\nNote: This step is not the final step.",
+        "Calculate the absolute differences $|a-b|$ for the pairs $(a,b)$ obtained in Step 3.",
+        "Step 4:\n$|a-b|=|(-3)-128|=|121-4|=|21-8|=3$.",
+        "Step 5:\nThe minimal possible value of $|a - b|$ is $\\boxed{3}$. Final Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Use Simon's Favorite Factoring Trick to rewrite the equation as $(a + 4)(b - 3) = 125$",
+            1
+        ],
+        [
+            "Step 2:\nThe pairs of factors of $125$ are $\\{1,125\\},\\{5,25\\},\\{25,5\\},\\{125,1\\}$.",
+            1
+        ],
+        [
+            "Step 3: \n$(a + 4)(b - 3) = 125$ gives $a + 4 = 1, b - 3 = 125$ or $a + 4 = 5, b - 3 = 25$ or $a + 4 = 25, b - 3 = 5$ or $a + 4 = 125, b - 3 = 1$, which correspond to the pairs $(a,b) = (-3,128), (1,28), (21,8), (121,4)$.\n\nNote: This step is not the final step.",
+            1
+        ],
+        [
+            "Calculate the absolute differences $|a-b|$ for the pairs $(a,b)$ obtained in Step 3.",
+            1
+        ],
+        [
+            "Step 4:\n$|a-b|=|(-3)-128|=|121-4|=|21-8|=3$.",
+            1
+        ],
+        [
+            "Step 5:\nThe minimal possible value of $|a - b|$ is $\\boxed{3}$. Final Answer",
+            1
+        ]
+    ],
+    "time": 81.76532244682312,
+    "total_tokens": 3396,
+    "final_answer_tokens": 379,
+    "model": "meta-llama/Llama-Vision-Free"
+}

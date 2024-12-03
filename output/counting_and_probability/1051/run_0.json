@@ -1,0 +1,66 @@
+{
+    "problem": "Suppose that I have an unlimited supply of identical math books, history books, and physics books.  All are the same size, and I have room on a shelf for 8 books.  In how many ways can I arrange eight books on the shelf if no two books of the same type can be adjacent?",
+    "level": "Level 3",
+    "type": "Counting & Probability",
+    "solution": "We can choose any book for the first position on the shelf.  This is $3$ possibilities.  After placing this book, we can choose either of the other two types of books to place directly after it.  Similarly, there will be two choices for the third book once the second has been chosen.  There will be two choices for each book after the first.  So, the total number of ways to arrange the books on the shelf will be: $$3\\times2\\times2\\times2\\times2\\times2\\times2\\times2=3\\cdot2^7=\\boxed{384}.$$",
+    "is_solved": false,
+    "model_solution": "1.  First, we consider the different arrangements of the three types of books on the shelf: all three types, two types, or one type.\n2.  To solve this, we will use the stars and bars method in combination with the permutation formula.  Let x be the number of math books, y be the number of history books, and z be the number of physics books.\n2.  We consider each arrangement separately.  If there are all three types of books, then by stars and bars, there are $\\binom{6}{2}$ arrangements, which equals 15 arrangements.\n   If there are two types of books, then there are $\\binom{2}{1} \\cdot \\binom{5}{1}$ arrangements of the two types, and for each type, there are 2! ways to arrange the books of that type, so we have $2 \\cdot \\binom{2}{1} \\cdot \\binom{5}{1} \\cdot 2!$ arrangements, which equals 40 arrangements.\n   If there is only one type of book, there is only one way to arrange the books, since all 8 books are the same.\nWe add the arrangements for the three scenarios together: $\\binom{6}{2} + 2 \\cdot \\binom{2}{1} \\cdot \\binom{5}{1} \\cdot 2! + 8$\n$\\binom{6}{2} + 2 \\cdot \\binom{2}{1} \\cdot \\binom{5}{1} \\cdot 2! + 8 = 15 + 40 + 8$\n$\\binom{6}{2} + 2 \\cdot \\binom{2}{1} \\cdot \\binom{5}{1} \\cdot 2! + 8 = 15 + 40 + 8 = 63.$\n$\\binom{6}{2} + 2 \\cdot \\binom{2}{1} \\cdot \\binom{5}{1} \\cdot 2! + 8 = 15 + 40 + 8 = 63$\nThe total number of arrangements is $\\binom{6}{2} + 2 \\cdot \\binom{2}{1} \\cdot \\binom{5}{1} \\cdot 2! + 8 = 15 + 40 + 8 = 63.$\nThe number of arrangements is 63.\nThe final answer is: $\\boxed{63}$",
+    "steps": [
+        "1.  First, we consider the different arrangements of the three types of books on the shelf: all three types, two types, or one type.",
+        "2.  To solve this, we will use the stars and bars method in combination with the permutation formula.  Let x be the number of math books, y be the number of history books, and z be the number of physics books.",
+        "2.  We consider each arrangement separately.  If there are all three types of books, then by stars and bars, there are $\\binom{6}{2}$ arrangements, which equals 15 arrangements.\n   If there are two types of books, then there are $\\binom{2}{1} \\cdot \\binom{5}{1}$ arrangements of the two types, and for each type, there are 2! ways to arrange the books of that type, so we have $2 \\cdot \\binom{2}{1} \\cdot \\binom{5}{1} \\cdot 2!$ arrangements, which equals 40 arrangements.\n   If there is only one type of book, there is only one way to arrange the books, since all 8 books are the same.",
+        "We add the arrangements for the three scenarios together: $\\binom{6}{2} + 2 \\cdot \\binom{2}{1} \\cdot \\binom{5}{1} \\cdot 2! + 8$",
+        "$\\binom{6}{2} + 2 \\cdot \\binom{2}{1} \\cdot \\binom{5}{1} \\cdot 2! + 8 = 15 + 40 + 8$",
+        "$\\binom{6}{2} + 2 \\cdot \\binom{2}{1} \\cdot \\binom{5}{1} \\cdot 2! + 8 = 15 + 40 + 8 = 63.$",
+        "$\\binom{6}{2} + 2 \\cdot \\binom{2}{1} \\cdot \\binom{5}{1} \\cdot 2! + 8 = 15 + 40 + 8 = 63$",
+        "The total number of arrangements is $\\binom{6}{2} + 2 \\cdot \\binom{2}{1} \\cdot \\binom{5}{1} \\cdot 2! + 8 = 15 + 40 + 8 = 63.$",
+        "The number of arrangements is 63.",
+        "The final answer is: $\\boxed{63}$"
+    ],
+    "full_steps": [
+        [
+            "1.  First, we consider the different arrangements of the three types of books on the shelf: all three types, two types, or one type.",
+            1
+        ],
+        [
+            "2.  To solve this, we will use the stars and bars method in combination with the permutation formula.  Let x be the number of math books, y be the number of history books, and z be the number of physics books.",
+            1
+        ],
+        [
+            "2.  We consider each arrangement separately.  If there are all three types of books, then by stars and bars, there are $\\binom{6}{2}$ arrangements, which equals 15 arrangements.\n   If there are two types of books, then there are $\\binom{2}{1} \\cdot \\binom{5}{1}$ arrangements of the two types, and for each type, there are 2! ways to arrange the books of that type, so we have $2 \\cdot \\binom{2}{1} \\cdot \\binom{5}{1} \\cdot 2!$ arrangements, which equals 40 arrangements.\n   If there is only one type of book, there is only one way to arrange the books, since all 8 books are the same.",
+            1
+        ],
+        [
+            "We add the arrangements for the three scenarios together: $\\binom{6}{2} + 2 \\cdot \\binom{2}{1} \\cdot \\binom{5}{1} \\cdot 2! + 8$",
+            1
+        ],
+        [
+            "$\\binom{6}{2} + 2 \\cdot \\binom{2}{1} \\cdot \\binom{5}{1} \\cdot 2! + 8 = 15 + 40 + 8$",
+            1
+        ],
+        [
+            "$\\binom{6}{2} + 2 \\cdot \\binom{2}{1} \\cdot \\binom{5}{1} \\cdot 2! + 8 = 15 + 40 + 8 = 63.$",
+            1
+        ],
+        [
+            "$\\binom{6}{2} + 2 \\cdot \\binom{2}{1} \\cdot \\binom{5}{1} \\cdot 2! + 8 = 15 + 40 + 8 = 63$",
+            1
+        ],
+        [
+            "The total number of arrangements is $\\binom{6}{2} + 2 \\cdot \\binom{2}{1} \\cdot \\binom{5}{1} \\cdot 2! + 8 = 15 + 40 + 8 = 63.$",
+            1
+        ],
+        [
+            "The number of arrangements is 63.",
+            1
+        ],
+        [
+            "The final answer is: $\\boxed{63}$",
+            1
+        ]
+    ],
+    "time": 138.70696377754211,
+    "total_tokens": 9350,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

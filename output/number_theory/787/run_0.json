@@ -1,0 +1,56 @@
+{
+    "problem": "At the beginning of a program, the 105 members of a marching band stand in a rectangular formation named Formation $A$. All of the band members then move into Formation $B$, which is a different rectangular formation with six more rows, but with two fewer band members per row. How many rows are in Formation $A$?",
+    "level": "Level 3",
+    "type": "Number Theory",
+    "solution": "Let there be $x$ rows with $y$ band members per row in Formation $A$. Then we have $xy=105$. From the information about Formation $B$, we have $(x+6)(y-2)=105$. Multiplying and substituting $xy=105$, we get $xy-2x+6y-12=105-2x+6y-12=105\\Leftrightarrow -2x+6y=12\\Leftrightarrow x=3y-6$. We now substitute $3y-6$ for $x$ in $xy=105$ and use the quadratic formula to solve the resulting quadratic equation, $3y^2-6y-105=0$. The positive solution, $y=7$, gives $x=15$. Thus, there are $\\boxed{15}$ rows in Formation $A$.",
+    "is_solved": true,
+    "model_solution": "Step 1: Let $x$ be the number of columns in Formation $A$, and let $y$ be the number of rows in Formation $A$. The total number of band members in Formation $A$ is $xy$.\nStep 2: In Formation $B$, the number of rows is $y+6$ and the number of columns is $x-2$, and the total number of band members is $(x-2)(y+6)$. Since the number of band members in both formations is the same, we have the equation $xy=(x-2)(y+6)$.\nStep 3: Expand and simplify the equation to get $xy=xy+6x-2y-12\\implies 6x-2y-12=0$.\nStep 4:\n$6x-2y-12=0\\implies 3x-y-6=0\\implies y=3x-6$.\nStep 5: Since $xy=105$, substitute $y=3x-6$ to get $x(3x-6)=105$, which simplifies to $3x^2-6x-105=0$.\nStep 6:\n$3x^2-6x-105=0\\implies x^2-2x-35=0\\implies (x-7)(x+5)=0$\nStep 7:\nSolve the equation $(x-7)(x+5)=0$ to get $x=7$ or $x=-5$. Since the number of columns must be positive, $x=7$ is the only valid solution.\nStep 8: Since $x=7$, substitute $x$ into $y=3x-6$ to get $y=3(7)-6$.\nFinal Answer",
+    "steps": [
+        "Step 1: Let $x$ be the number of columns in Formation $A$, and let $y$ be the number of rows in Formation $A$. The total number of band members in Formation $A$ is $xy$.",
+        "Step 2: In Formation $B$, the number of rows is $y+6$ and the number of columns is $x-2$, and the total number of band members is $(x-2)(y+6)$. Since the number of band members in both formations is the same, we have the equation $xy=(x-2)(y+6)$.",
+        "Step 3: Expand and simplify the equation to get $xy=xy+6x-2y-12\\implies 6x-2y-12=0$.",
+        "Step 4:\n$6x-2y-12=0\\implies 3x-y-6=0\\implies y=3x-6$.",
+        "Step 5: Since $xy=105$, substitute $y=3x-6$ to get $x(3x-6)=105$, which simplifies to $3x^2-6x-105=0$.",
+        "Step 6:\n$3x^2-6x-105=0\\implies x^2-2x-35=0\\implies (x-7)(x+5)=0$",
+        "Step 7:\nSolve the equation $(x-7)(x+5)=0$ to get $x=7$ or $x=-5$. Since the number of columns must be positive, $x=7$ is the only valid solution.",
+        "Step 8: Since $x=7$, substitute $x$ into $y=3x-6$ to get $y=3(7)-6$.\nFinal Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Let $x$ be the number of columns in Formation $A$, and let $y$ be the number of rows in Formation $A$. The total number of band members in Formation $A$ is $xy$.",
+            1
+        ],
+        [
+            "Step 2: In Formation $B$, the number of rows is $y+6$ and the number of columns is $x-2$, and the total number of band members is $(x-2)(y+6)$. Since the number of band members in both formations is the same, we have the equation $xy=(x-2)(y+6)$.",
+            1
+        ],
+        [
+            "Step 3: Expand and simplify the equation to get $xy=xy+6x-2y-12\\implies 6x-2y-12=0$.",
+            1
+        ],
+        [
+            "Step 4:\n$6x-2y-12=0\\implies 3x-y-6=0\\implies y=3x-6$.",
+            1
+        ],
+        [
+            "Step 5: Since $xy=105$, substitute $y=3x-6$ to get $x(3x-6)=105$, which simplifies to $3x^2-6x-105=0$.",
+            1
+        ],
+        [
+            "Step 6:\n$3x^2-6x-105=0\\implies x^2-2x-35=0\\implies (x-7)(x+5)=0$",
+            1
+        ],
+        [
+            "Step 7:\nSolve the equation $(x-7)(x+5)=0$ to get $x=7$ or $x=-5$. Since the number of columns must be positive, $x=7$ is the only valid solution.",
+            1
+        ],
+        [
+            "Step 8: Since $x=7$, substitute $x$ into $y=3x-6$ to get $y=3(7)-6$.\nFinal Answer",
+            1
+        ]
+    ],
+    "time": 110.8209981918335,
+    "total_tokens": 5694,
+    "final_answer_tokens": 506,
+    "model": "meta-llama/Llama-Vision-Free"
+}

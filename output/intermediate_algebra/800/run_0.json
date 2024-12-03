@@ -1,0 +1,66 @@
+{
+    "problem": "Consider the sequence defined by $a_k=\\frac 1{k^2+k}$ for $k\\ge 1$. Given that $a_m+a_{m+1}+\\cdots+a_{n-1}=\\frac{1}{29}$, for positive integers $m$ and $n$ with $m<n$, find $m+n$.",
+    "level": "Level 4",
+    "type": "Intermediate Algebra",
+    "solution": "Note that \\[a_k = \\frac{1}{k^2+k} = \\frac{1}{k} - \\frac{1}{k+1}\\]for each $k.$ Thus, the sum telescopes: \\[\\begin{aligned} a_m + a_{m+1} + \\dots + a_{n-1} & = \\left(\\frac{1}{m} - \\frac{1}{m+1}\\right) + \\left(\\frac{1}{m+1} - \\frac{1}{m+2}\\right) + \\dots + \\left(\\frac{1}{n-1} - \\frac{1}{n}\\right) \\\\ &= \\frac{1}{m} - \\frac{1}{n}. \\end{aligned}\\]Therefore, we have the equation $1/m - 1/n = 1/29.$ Multiplying by $29mn$ on both sides, we have $29n - 29m = mn,$ or $mn + 29m - 29n = 0.$ Subtracting $29^2$ from both sides, we get \\[(m-29)(n+29) = -29^2.\\]Since $29$ is prime and $0 < m < n,$ the only possibility is $m-29 = -1$ and $n+29 = 841,$ which gives $m = 28$ and $n = 812.$ Thus, $m+n=28+812=\\boxed{840}.$",
+    "is_solved": false,
+    "model_solution": "Step 1: Rewrite the given sequence as partial fractions, so we can simplify the sum $a_m+a_{m+1}+\\cdots+a_{n-1}$.\n$a_k = \\frac{1}{k^2+k} = \\frac{1}{k(k+1)} = \\frac{1}{k}-\\frac{1}{k+1}$\nStep 2:\n$\\left(\\frac{1}{m}-\\frac{1}{m+1}\\right)+\\left(\\frac{1}{m+1}-\\frac{1}{m+2}\\right)+\\cdots+\\left(\\frac{1}{n-1}-\\frac{1}{n}\\right)=\\frac{1}{29}$\nStep 3:\n$\\frac{1}{m}-\\frac{1}{n} = \\frac{1}{29}$\nStep 4:\n$\\frac{1}{m}-\\frac{1}{n} = \\frac{1}{29} \\Rightarrow \\frac{n-m}{mn} = \\frac{1}{29} \\Rightarrow 29 = mn \\Rightarrow n = \\frac{29}{m}$\nSince $n$ is an integer, $m$ must be a divisor of $29$. The divisors of $29$ are $1$ and $29$.\n\nThe next step is:\nIf $m=1$, then $n=29$; thus, $m+n=30$.\nIf $m=29$, then $n=\\frac{29}{29}=1$; thus, $m+n=30$.\nIf $m=1$, then $n=29$; thus, $m+n=30$.\nIf $m=29$, then $n=\\frac{29}{29}=1$; thus, $m+n=30$.\nIf $m$ = 1, then $n$ = 29; thus, $m + n$ = 30.\nIf $m$ = 29, then $n$ = 1; thus, $m + n$ = 30.\nIf $m=1$, then $n=29$; thus, $m+n=30$.\nIf $m=29$, then $n=1$; thus, $m+n=30$.\nThe next step is:\nSince $m$ and $n$ are interchangeable, we may assume that $m < n$. Therefore, $m=1$ and $n=29$.\nFinal Answer: The final answer is 30. I hope it is correct.",
+    "steps": [
+        "Step 1: Rewrite the given sequence as partial fractions, so we can simplify the sum $a_m+a_{m+1}+\\cdots+a_{n-1}$.\n$a_k = \\frac{1}{k^2+k} = \\frac{1}{k(k+1)} = \\frac{1}{k}-\\frac{1}{k+1}$",
+        "Step 2:\n$\\left(\\frac{1}{m}-\\frac{1}{m+1}\\right)+\\left(\\frac{1}{m+1}-\\frac{1}{m+2}\\right)+\\cdots+\\left(\\frac{1}{n-1}-\\frac{1}{n}\\right)=\\frac{1}{29}$",
+        "Step 3:\n$\\frac{1}{m}-\\frac{1}{n} = \\frac{1}{29}$",
+        "Step 4:\n$\\frac{1}{m}-\\frac{1}{n} = \\frac{1}{29} \\Rightarrow \\frac{n-m}{mn} = \\frac{1}{29} \\Rightarrow 29 = mn \\Rightarrow n = \\frac{29}{m}$",
+        "Since $n$ is an integer, $m$ must be a divisor of $29$. The divisors of $29$ are $1$ and $29$.\n\nThe next step is:\nIf $m=1$, then $n=29$; thus, $m+n=30$.",
+        "If $m=29$, then $n=\\frac{29}{29}=1$; thus, $m+n=30$.",
+        "If $m=1$, then $n=29$; thus, $m+n=30$.\nIf $m=29$, then $n=\\frac{29}{29}=1$; thus, $m+n=30$.",
+        "If $m$ = 1, then $n$ = 29; thus, $m + n$ = 30.\nIf $m$ = 29, then $n$ = 1; thus, $m + n$ = 30.",
+        "If $m=1$, then $n=29$; thus, $m+n=30$.\nIf $m=29$, then $n=1$; thus, $m+n=30$.",
+        "The next step is:\nSince $m$ and $n$ are interchangeable, we may assume that $m < n$. Therefore, $m=1$ and $n=29$.\nFinal Answer: The final answer is 30. I hope it is correct."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Rewrite the given sequence as partial fractions, so we can simplify the sum $a_m+a_{m+1}+\\cdots+a_{n-1}$.\n$a_k = \\frac{1}{k^2+k} = \\frac{1}{k(k+1)} = \\frac{1}{k}-\\frac{1}{k+1}$",
+            1
+        ],
+        [
+            "Step 2:\n$\\left(\\frac{1}{m}-\\frac{1}{m+1}\\right)+\\left(\\frac{1}{m+1}-\\frac{1}{m+2}\\right)+\\cdots+\\left(\\frac{1}{n-1}-\\frac{1}{n}\\right)=\\frac{1}{29}$",
+            1
+        ],
+        [
+            "Step 3:\n$\\frac{1}{m}-\\frac{1}{n} = \\frac{1}{29}$",
+            1
+        ],
+        [
+            "Step 4:\n$\\frac{1}{m}-\\frac{1}{n} = \\frac{1}{29} \\Rightarrow \\frac{n-m}{mn} = \\frac{1}{29} \\Rightarrow 29 = mn \\Rightarrow n = \\frac{29}{m}$",
+            1
+        ],
+        [
+            "Since $n$ is an integer, $m$ must be a divisor of $29$. The divisors of $29$ are $1$ and $29$.\n\nThe next step is:\nIf $m=1$, then $n=29$; thus, $m+n=30$.",
+            1
+        ],
+        [
+            "If $m=29$, then $n=\\frac{29}{29}=1$; thus, $m+n=30$.",
+            1
+        ],
+        [
+            "If $m=1$, then $n=29$; thus, $m+n=30$.\nIf $m=29$, then $n=\\frac{29}{29}=1$; thus, $m+n=30$.",
+            1
+        ],
+        [
+            "If $m$ = 1, then $n$ = 29; thus, $m + n$ = 30.\nIf $m$ = 29, then $n$ = 1; thus, $m + n$ = 30.",
+            1
+        ],
+        [
+            "If $m=1$, then $n=29$; thus, $m+n=30$.\nIf $m=29$, then $n=1$; thus, $m+n=30$.",
+            1
+        ],
+        [
+            "The next step is:\nSince $m$ and $n$ are interchangeable, we may assume that $m < n$. Therefore, $m=1$ and $n=29$.\nFinal Answer: The final answer is 30. I hope it is correct.",
+            1
+        ]
+    ],
+    "time": 134.34253215789795,
+    "total_tokens": 9040,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

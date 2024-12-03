@@ -1,0 +1,66 @@
+{
+    "problem": "In right triangle $ABC$, we have $\\angle BAC = 90^\\circ$ and $D$ is on $\\overline{AC}$ such that $\\overline{BD}$ bisects $\\angle ABC$. If $AB = 12$ and $BC = 15$, then what is $\\cos \\angle BDC$?",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "[asy]\n\npair A,B,C,D;\n\nA = (0,0);\n\nB = (0,12);\n\nC = (9,0);\n\nD = (4,0);\n\ndraw(D--B--C--A--B);\n\ndraw(rightanglemark(D,A,B,20));\n\nlabel(\"$A$\",A,SW);\n\nlabel(\"$B$\",B,N);\n\nlabel(\"$D$\",D,S);\n\nlabel(\"$C$\",C,SE);\n\n[/asy]\n\nSince  $\\cos (180^\\circ - x) = -\\cos x$ for any angle, we have $\\cos\\angle BDC = -\\cos\\angle BDA$.\n\nFrom the Pythagorean Theorem, we have $AC = \\sqrt{BC^2 - BA^2} = 9$.  Applying the Angle Bisector Theorem to $\\overline{BD}$, we have $\\frac{AD}{DC} = \\frac{AB}{BC} = \\frac{4}{5}$.  Since $AD+DC =AC = 9$ and $\\frac{AD}{DC} = \\frac45$, we have $AD = 4$ and $DC = 5$.\n\nApplying the Pythagorean Theorem to $\\triangle ABD$ gives $BD = \\sqrt{AB^2 + AD^2} = \\sqrt{144+16} = 4\\sqrt{10}$, so $$\\cos BDC = -\\cos BDA = -\\frac{AD}{BD} = - \\frac{4}{4\\sqrt{10}} =-\\frac{1}{\\sqrt{10}} = \\boxed{-\\frac{\\sqrt{10}}{10}}.$$",
+    "is_solved": false,
+    "model_solution": "Step 1: Draw and label a diagram of right triangle $ABC$, indicating that $\\angle BAC = 90^\\circ$, $AB = 12$, $BC = 15$, and $D$ is a point on $\\overline{AC}$ such that $\\overline{BD}$ bisects $\\angle ABC$.\nStep 2: Since $\\overline{BD}$ bisects $\\angle ABC$, then $\\angle ABD = \\angle CBD$, and by the Angle Bisector Theorem, $\\frac{BD}{CD} = \\frac{AB}{BC} = \\frac{12}{15} = \\frac{4}{5}$, so $BD = \\frac{4}{9}AC$ and $CD = \\frac{5}{9}AC$.\nStep 3: Applying the Law of Cosines to triangle $ABC$, we find that $AC^2 = AB^2 + BC^2 = 12^2 + 15^2 = 144 + 225 = 369$, so $AC = \\sqrt{369} = 3\\sqrt{41}.$\nStep 4: Using the Law of Cosines on triangle BDC, we find that $\\cos \\angle BDC = \\frac{BD^2 + CD^2 - BC^2}{2\\left(BD\\right)\\left(CD\\right)}.$\nStep 5: Since $\\frac{BD}{CD} = \\frac{4}{5}$, $BD = \\frac{4}{9}AC$ and $CD = \\frac{5}{9}AC$, so $\\cos \\angle BDC = \\frac{\\left(\\frac{4}{9}AC\\right)^2 + \\left(\\frac{5}{9}AC\\right)^2 - 15^2}{2\\left(\\frac{4}{9}AC\\right)\\left(\\frac{5}{9}AC\\right)}.$\nStep 6: $\\cos \\angle BDC = \\frac{\\frac{16}{81}AC^2 + \\frac{25}{81}AC^2 - 225}{\\frac{40}{81}AC^2}.$\n$\\cos \\angle BDC = \\frac{\\frac{16}{81} + \\frac{25}{81} - 225}{\\frac{40}{81}}$\n$\\cos \\angle BDC = \\frac{\\frac{16}{81} + \\frac{25}{81} - 225}{\\frac{40}{81}} = \\frac{\\frac{41}{81} - 225}{\\frac{40}{81}} = \\frac{\\frac{41}{81} - \\frac{18225}{81}}{\\frac{40}{81}} = \\frac{\\frac{41 - 18225}{81}}{\\frac{40}{81}} = \\frac{\\frac{-18284}{81}}{\\frac{40}{81}} = \\frac{-18284}{81} \\div \\frac{40}{81} = \\frac{-18284}{81} \\times \\frac{81}{40} = \\frac{-18284}{40} = -457.1$\n$\\cos \\angle BDC = \\frac{-18284}{40} = \\frac{-4571}{10}$\nStep 7: $\\cos \\angle BDC = \\frac{-18284}{40} = -457.1$",
+    "steps": [
+        "Step 1: Draw and label a diagram of right triangle $ABC$, indicating that $\\angle BAC = 90^\\circ$, $AB = 12$, $BC = 15$, and $D$ is a point on $\\overline{AC}$ such that $\\overline{BD}$ bisects $\\angle ABC$.",
+        "Step 2: Since $\\overline{BD}$ bisects $\\angle ABC$, then $\\angle ABD = \\angle CBD$, and by the Angle Bisector Theorem, $\\frac{BD}{CD} = \\frac{AB}{BC} = \\frac{12}{15} = \\frac{4}{5}$, so $BD = \\frac{4}{9}AC$ and $CD = \\frac{5}{9}AC$.",
+        "Step 3: Applying the Law of Cosines to triangle $ABC$, we find that $AC^2 = AB^2 + BC^2 = 12^2 + 15^2 = 144 + 225 = 369$, so $AC = \\sqrt{369} = 3\\sqrt{41}.$",
+        "Step 4: Using the Law of Cosines on triangle BDC, we find that $\\cos \\angle BDC = \\frac{BD^2 + CD^2 - BC^2}{2\\left(BD\\right)\\left(CD\\right)}.$",
+        "Step 5: Since $\\frac{BD}{CD} = \\frac{4}{5}$, $BD = \\frac{4}{9}AC$ and $CD = \\frac{5}{9}AC$, so $\\cos \\angle BDC = \\frac{\\left(\\frac{4}{9}AC\\right)^2 + \\left(\\frac{5}{9}AC\\right)^2 - 15^2}{2\\left(\\frac{4}{9}AC\\right)\\left(\\frac{5}{9}AC\\right)}.$",
+        "Step 6: $\\cos \\angle BDC = \\frac{\\frac{16}{81}AC^2 + \\frac{25}{81}AC^2 - 225}{\\frac{40}{81}AC^2}.$",
+        "$\\cos \\angle BDC = \\frac{\\frac{16}{81} + \\frac{25}{81} - 225}{\\frac{40}{81}}$",
+        "$\\cos \\angle BDC = \\frac{\\frac{16}{81} + \\frac{25}{81} - 225}{\\frac{40}{81}} = \\frac{\\frac{41}{81} - 225}{\\frac{40}{81}} = \\frac{\\frac{41}{81} - \\frac{18225}{81}}{\\frac{40}{81}} = \\frac{\\frac{41 - 18225}{81}}{\\frac{40}{81}} = \\frac{\\frac{-18284}{81}}{\\frac{40}{81}} = \\frac{-18284}{81} \\div \\frac{40}{81} = \\frac{-18284}{81} \\times \\frac{81}{40} = \\frac{-18284}{40} = -457.1$",
+        "$\\cos \\angle BDC = \\frac{-18284}{40} = \\frac{-4571}{10}$",
+        "Step 7: $\\cos \\angle BDC = \\frac{-18284}{40} = -457.1$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Draw and label a diagram of right triangle $ABC$, indicating that $\\angle BAC = 90^\\circ$, $AB = 12$, $BC = 15$, and $D$ is a point on $\\overline{AC}$ such that $\\overline{BD}$ bisects $\\angle ABC$.",
+            1
+        ],
+        [
+            "Step 2: Since $\\overline{BD}$ bisects $\\angle ABC$, then $\\angle ABD = \\angle CBD$, and by the Angle Bisector Theorem, $\\frac{BD}{CD} = \\frac{AB}{BC} = \\frac{12}{15} = \\frac{4}{5}$, so $BD = \\frac{4}{9}AC$ and $CD = \\frac{5}{9}AC$.",
+            1
+        ],
+        [
+            "Step 3: Applying the Law of Cosines to triangle $ABC$, we find that $AC^2 = AB^2 + BC^2 = 12^2 + 15^2 = 144 + 225 = 369$, so $AC = \\sqrt{369} = 3\\sqrt{41}.$",
+            1
+        ],
+        [
+            "Step 4: Using the Law of Cosines on triangle BDC, we find that $\\cos \\angle BDC = \\frac{BD^2 + CD^2 - BC^2}{2\\left(BD\\right)\\left(CD\\right)}.$",
+            1
+        ],
+        [
+            "Step 5: Since $\\frac{BD}{CD} = \\frac{4}{5}$, $BD = \\frac{4}{9}AC$ and $CD = \\frac{5}{9}AC$, so $\\cos \\angle BDC = \\frac{\\left(\\frac{4}{9}AC\\right)^2 + \\left(\\frac{5}{9}AC\\right)^2 - 15^2}{2\\left(\\frac{4}{9}AC\\right)\\left(\\frac{5}{9}AC\\right)}.$",
+            1
+        ],
+        [
+            "Step 6: $\\cos \\angle BDC = \\frac{\\frac{16}{81}AC^2 + \\frac{25}{81}AC^2 - 225}{\\frac{40}{81}AC^2}.$",
+            1
+        ],
+        [
+            "$\\cos \\angle BDC = \\frac{\\frac{16}{81} + \\frac{25}{81} - 225}{\\frac{40}{81}}$",
+            1
+        ],
+        [
+            "$\\cos \\angle BDC = \\frac{\\frac{16}{81} + \\frac{25}{81} - 225}{\\frac{40}{81}} = \\frac{\\frac{41}{81} - 225}{\\frac{40}{81}} = \\frac{\\frac{41}{81} - \\frac{18225}{81}}{\\frac{40}{81}} = \\frac{\\frac{41 - 18225}{81}}{\\frac{40}{81}} = \\frac{\\frac{-18284}{81}}{\\frac{40}{81}} = \\frac{-18284}{81} \\div \\frac{40}{81} = \\frac{-18284}{81} \\times \\frac{81}{40} = \\frac{-18284}{40} = -457.1$",
+            1
+        ],
+        [
+            "$\\cos \\angle BDC = \\frac{-18284}{40} = \\frac{-4571}{10}$",
+            1
+        ],
+        [
+            "Step 7: $\\cos \\angle BDC = \\frac{-18284}{40} = -457.1$",
+            1
+        ]
+    ],
+    "time": 135.3424141407013,
+    "total_tokens": 11011,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

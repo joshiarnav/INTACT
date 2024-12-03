@@ -1,0 +1,56 @@
+{
+    "problem": "Congruent segments are used to form equilateral triangles in this sequence so that each figure contains one more triangle than the preceding figure. Figure 3 of the sequence is made with seven congruent segments. How many congruent segments must be used to make Figure 25 of the sequence?\n\n[asy]\ndraw((0,0)--(10,0)--(5,8.7)--cycle);\ndraw((15,0)--(25,0)--(30,8.7)--(20,8.7)--cycle);\ndraw((20,8.7)--(25,0));\ndraw((35,0)--(55,0)--(50,8.7)--(40,8.7)--cycle);\ndraw((40,8.7)--(45,0)--(50,8.7));\ndraw((60,0)--(80,0)--(85,8.7)--(65,8.7)--cycle);\ndraw((65,8.7)--(70,0)--(75,8.7)--(80,0));\nlabel(\"Figure 1\",(2,0),S);\nlabel(\"Figure 2\",(20,-10),S);\nlabel(\"Figure 3\",(45,0),S);\nlabel(\"Figure 4\",(76,-10),S);\n[/asy]",
+    "level": "Level 2",
+    "type": "Counting & Probability",
+    "solution": "It takes 2 additional segments to create an additional triangle after the first. Since Figure $n$ has $n$ triangles, Figure 25 has 25 triangles. It takes 3 segments to create the first triangle and $2\\cdot24=48$ segments to create the 24 additional triangles, for a total of $3+48=\\boxed{51}$ segments.",
+    "is_solved": true,
+    "model_solution": "The number of segments in each figure of the sequence is given by the formula $n(n+1)/2$ where $n$ is the number of the figure.\nFor Figure 25, let $x$ be the number of segments used. Then $x = \\frac{25(25+1)}{2}$.\nThe next step is: $\\frac{25(25+1)}{2}=x= \\frac{25 \\times 26}{2}$\n$\\frac{25 \\times 26}{2}=x= \\frac{650}{2}$\n$\\frac{650}{2}=x=325$\n$\\frac{650}{2}$\n$\\frac{25 \\times 26}{2}$\n$\\frac{25 \\times 26}{2}$",
+    "steps": [
+        "The number of segments in each figure of the sequence is given by the formula $n(n+1)/2$ where $n$ is the number of the figure.",
+        "For Figure 25, let $x$ be the number of segments used. Then $x = \\frac{25(25+1)}{2}$.",
+        "The next step is: $\\frac{25(25+1)}{2}=x= \\frac{25 \\times 26}{2}$",
+        "$\\frac{25 \\times 26}{2}=x= \\frac{650}{2}$",
+        "$\\frac{650}{2}=x=325$",
+        "$\\frac{650}{2}$",
+        "$\\frac{25 \\times 26}{2}$",
+        "$\\frac{25 \\times 26}{2}$"
+    ],
+    "full_steps": [
+        [
+            "The number of segments in each figure of the sequence is given by the formula $n(n+1)/2$ where $n$ is the number of the figure.",
+            1
+        ],
+        [
+            "For Figure 25, let $x$ be the number of segments used. Then $x = \\frac{25(25+1)}{2}$.",
+            1
+        ],
+        [
+            "The next step is: $\\frac{25(25+1)}{2}=x= \\frac{25 \\times 26}{2}$",
+            1
+        ],
+        [
+            "$\\frac{25 \\times 26}{2}=x= \\frac{650}{2}$",
+            1
+        ],
+        [
+            "$\\frac{650}{2}=x=325$",
+            1
+        ],
+        [
+            "$\\frac{650}{2}$",
+            1
+        ],
+        [
+            "$\\frac{25 \\times 26}{2}$",
+            1
+        ],
+        [
+            "$\\frac{25 \\times 26}{2}$",
+            1
+        ]
+    ],
+    "time": 106.51539492607117,
+    "total_tokens": 7140,
+    "final_answer_tokens": 490,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,26 @@
+{
+    "problem": "A palindrome is a number that is the same when read forwards and backwards, such as $43234$. What is the smallest five-digit palindrome that is divisible by $11$?",
+    "level": "Level 5",
+    "type": "Number Theory",
+    "solution": "For an integer $abcde$ to be divisible by $11$ then $a-b+c-d+e$ is divisible by $11.$\n\nWe start with the case where $(a+c+e)-(b+d) = 0.$ Then, $a+c+e=b+d.$ Since we have a palindrome, we must have $a = e$ and $b = d,$ meaning that $2a+c=2b.$ We must have that $a$ and $e$ must be at least $1,$ so then we can let $b$ and $d$ also be 1 and $c$ be zero. So the smallest such five-digit palindrome is $11011.$\n\nThen, we investigate the case where $(a+c+e)-(b+d) = 11.$ Then, $a+c+e=b+d+11,$ and $a = e$ and $b = d,$ so  $2a + c = 11 + 2b.$ We see that we can let $a$ be 1 and $c$ be 9, then $b = 0,$ and we have the palindrome $10901.$\n\nFinally, $(a+c+e)-(b+d) = -11.$ Then, $2a + c = 2b - 11.$ We check if $a = 1$ has any solutions. We get $2 + c = 2b - 11,$ so $c - 2b = -9.$ Then, we can see that there are no solutions for $b = 0$, since then we would have $c = -9.$ Since we already found $10901,$ we do not need to check for any $b$ greater than $0$, so we see that our solution is $\\boxed{10901}.$",
+    "is_solved": true,
+    "model_solution": "Step 1: Let $x$ be the smallest five-digit palindrome divisible by $11$. Then $x$ is a five-digit palindrome of the form $ABCCBA$, where $A$, $B$, and $C$ are digits, $A \\neq 0$, and $A = B$ to minimize $x$.\nStep 2: Since $x$ is divisible by $11$, the alternating sum of the digits of $x$ is divisible by $11$. We have $x = 10001A + 1000B + 100C + 10B + A = 10002A + 1001B + 100C$.\n\nThe final answer is: $\\boxed{0}$",
+    "steps": [
+        "Step 1: Let $x$ be the smallest five-digit palindrome divisible by $11$. Then $x$ is a five-digit palindrome of the form $ABCCBA$, where $A$, $B$, and $C$ are digits, $A \\neq 0$, and $A = B$ to minimize $x$.",
+        "Step 2: Since $x$ is divisible by $11$, the alternating sum of the digits of $x$ is divisible by $11$. We have $x = 10001A + 1000B + 100C + 10B + A = 10002A + 1001B + 100C$.\n\nThe final answer is: $\\boxed{0}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Let $x$ be the smallest five-digit palindrome divisible by $11$. Then $x$ is a five-digit palindrome of the form $ABCCBA$, where $A$, $B$, and $C$ are digits, $A \\neq 0$, and $A = B$ to minimize $x$.",
+            1
+        ],
+        [
+            "Step 2: Since $x$ is divisible by $11$, the alternating sum of the digits of $x$ is divisible by $11$. We have $x = 10001A + 1000B + 100C + 10B + A = 10002A + 1001B + 100C$.\n\nThe final answer is: $\\boxed{0}$",
+            1
+        ]
+    ],
+    "time": 28.27111554145813,
+    "total_tokens": 821,
+    "final_answer_tokens": 244,
+    "model": "meta-llama/Llama-Vision-Free"
+}

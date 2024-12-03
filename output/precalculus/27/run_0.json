@@ -1,0 +1,41 @@
+{
+    "problem": "Let $0, a, b, c$ be the vertices of a square in counterclockwise order.  Compute\n\\[\\frac{ac + b^2}{ab}.\\]Enter your answer in rectangular form.",
+    "level": "Level 5",
+    "type": "Precalculus",
+    "solution": "Here's a labelled picture of our square, with the vertices connected to the origin:\n[asy]\nimport TrigMacros; \nsize(180); \n\npair O, A, B, C;\n\nrr_cartesian_axes(-2, 8, -5, 7, complexplane = true, usegrid = false); \nO = (0,0); \nA = (3, -1); \nB = scale(sqrt(2))*rotate(45)*A; \nC = rotate(90)*A; \n\ndraw(A--B--C--O--cycle); \ndraw(O--B); \n\ndot(\"$a$\", A, S); \ndot(\"$b$\", B, E); \ndot(\"$c$\", C, N); \ndot(\"$0$\", O, SW); \n[/asy]\n\nWe know $b$ is a rotation of $a$ by $\\pi/4$ around the origin, scaled by a factor of $\\sqrt{2}$. That means that $b = \\sqrt{2}e^{\\pi i/4} a$, which becomes\n\\begin{align*} \nb &= \\sqrt{2}(\\cos (\\pi/4) + i \\sin(\\pi/4))a \\\\\n    &= \\sqrt{2}\\left( \\dfrac{\\sqrt{2}}{2} + \\dfrac{\\sqrt{2}}{2} i\\right)a \\\\\n    &= (1+i)a.\n\\end{align*}Therefore, $\\frac{b}{a} = 1+i.$\n\nSimilarly, $c$ is a rotation of $b$ by $\\pi/4$ around the origin, scaled by a factor of $\\frac{1}{\\sqrt{2}},$  That means $c = \\frac{e^{\\pi i/4}}{\\sqrt{2}} b,$ which becomes\n\\[c = \\frac{\\sqrt{2}/2 + \\sqrt{2}/2 \\cdot i}{\\sqrt{2}} b = \\frac{1 + i}{2} b.\\]Therefore, $\\frac{c}{b} = \\frac{1 + i}{2}.$\n\nThen\n\\[\\frac{ac + b^2}{ab} = \\frac{c}{b} + \\frac{b}{a} = \\frac{1 + i}{2} + 1 + i = \\boxed{\\frac{3}{2} + \\frac{3}{2} i}.\\]",
+    "is_solved": true,
+    "model_solution": "## Step 1:  We are given the vertices of a square in counterclockwise order as $0, a, b, c$ and are asked to compute the expression $\\frac{ac + b^2}{ab}$.\n## Step 2:  To approach this problem, let's first understand the geometric properties of a square and how the given vertices relate to each other.\n## Step 3:  Using the given vertices, we can express the sides of the square in terms of the complex numbers associated with each vertex.\n## Step 4:  We have $a = 1$, $b = i$, and $c = 1 + i$, as these are the standard complex number representations for the vertices of a square with side length 1, centered at the origin.\n## Step 5:  Now, we can use these expressions to calculate the values of $ab$, $ac$, and $b^2$.\n## Step 6:  We find that $ab = i$, $ac = 1 + i$, and $b^2 = -1$.\n## Step 7:  We can then substitute these values into the given expression to simplify and solve for $\\frac{\n## Step 2:  We can now substitute the calculated values into the expression $\\frac{ac + b^2}{ab}$ to simplify and solve for its value.\n$ac + b^2 = (1 + i) + (-1) = 1 + i - 1 = i$\n$ab = i$\n$\\frac{ac + b^2}{ab} = \\frac{i}{i}$\n$\\frac{i}{i} = 1$\n$1$\nThe final answer is: $\\boxed{1}$",
+    "steps": [
+        "## Step 1:  We are given the vertices of a square in counterclockwise order as $0, a, b, c$ and are asked to compute the expression $\\frac{ac + b^2}{ab}$.\n## Step 2:  To approach this problem, let's first understand the geometric properties of a square and how the given vertices relate to each other.\n## Step 3:  Using the given vertices, we can express the sides of the square in terms of the complex numbers associated with each vertex.\n## Step 4:  We have $a = 1$, $b = i$, and $c = 1 + i$, as these are the standard complex number representations for the vertices of a square with side length 1, centered at the origin.\n## Step 5:  Now, we can use these expressions to calculate the values of $ab$, $ac$, and $b^2$.\n## Step 6:  We find that $ab = i$, $ac = 1 + i$, and $b^2 = -1$.\n## Step 7:  We can then substitute these values into the given expression to simplify and solve for $\\frac{",
+        "## Step 2:  We can now substitute the calculated values into the expression $\\frac{ac + b^2}{ab}$ to simplify and solve for its value.\n$ac + b^2 = (1 + i) + (-1) = 1 + i - 1 = i$\n$ab = i$\n$\\frac{ac + b^2}{ab} = \\frac{i}{i}$",
+        "$\\frac{i}{i} = 1$",
+        "$1$",
+        "The final answer is: $\\boxed{1}$"
+    ],
+    "full_steps": [
+        [
+            "## Step 1:  We are given the vertices of a square in counterclockwise order as $0, a, b, c$ and are asked to compute the expression $\\frac{ac + b^2}{ab}$.\n## Step 2:  To approach this problem, let's first understand the geometric properties of a square and how the given vertices relate to each other.\n## Step 3:  Using the given vertices, we can express the sides of the square in terms of the complex numbers associated with each vertex.\n## Step 4:  We have $a = 1$, $b = i$, and $c = 1 + i$, as these are the standard complex number representations for the vertices of a square with side length 1, centered at the origin.\n## Step 5:  Now, we can use these expressions to calculate the values of $ab$, $ac$, and $b^2$.\n## Step 6:  We find that $ab = i$, $ac = 1 + i$, and $b^2 = -1$.\n## Step 7:  We can then substitute these values into the given expression to simplify and solve for $\\frac{",
+            1
+        ],
+        [
+            "## Step 2:  We can now substitute the calculated values into the expression $\\frac{ac + b^2}{ab}$ to simplify and solve for its value.\n$ac + b^2 = (1 + i) + (-1) = 1 + i - 1 = i$\n$ab = i$\n$\\frac{ac + b^2}{ab} = \\frac{i}{i}$",
+            1
+        ],
+        [
+            "$\\frac{i}{i} = 1$",
+            1
+        ],
+        [
+            "$1$",
+            1
+        ],
+        [
+            "The final answer is: $\\boxed{1}$",
+            1
+        ]
+    ],
+    "time": 64.04138207435608,
+    "total_tokens": 4373,
+    "final_answer_tokens": 464,
+    "model": "meta-llama/Llama-Vision-Free"
+}

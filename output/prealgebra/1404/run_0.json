@@ -1,0 +1,56 @@
+{
+    "problem": "How many integers between 100 and 500 have at least two 3s as digits?",
+    "level": "Level 5",
+    "type": "Prealgebra",
+    "solution": "First consider the two $3$s to appear in the units and tens places. Between $100$ and $500$, there are four such numbers: $133$, $233$, $333$, and $433$. Now consider the two $3$s to appear in the units and hundreds places. The numbers will be in the $300$s, so we don't need to worry about if they are between $100$ and $500$. There are $10$ choices for the tens digit, but we have already counted $333$, so such a scenario will add nine numbers. Finally, consider the two $3$s to appear in the tens and hundreds places. Again, these numbers are automatically between $100$ and $500$. There are $10$ choices for the units digit, but we again discard $333$ for a final count of nine such numbers. Thus, our answer is $4+9+9 = \\boxed{22}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: Identify the constraints of the problem. \n- The integers must be between 100 and 500.\n- At least two 3s must be present as digits.\nStep 2: Determine the possible units and tens digits that can have a 3.\n- The units and tens digits can be 3, 33, or 13, 23, 43.\nStep 3: Determine the hundreds digits that can have a 3.\n- The hundreds digit can be 3, 4.\nStep 4: Since the numbers must be between 100 and 500, we must exclude the cases where the hundreds digit is 3 and the units and tens digits are 3. Calculate the total number of valid numbers by multiplying the number of valid hundreds digits, the number of valid units and tens digits, and then subtract the invalid case.\nStep 5: Calculate the total number of valid numbers.\n- Valid hundreds digits: 2 (3, 4)\n- Valid units and tens digits: 5 (3, 33, 13, 23, 43)\n- Total valid numbers: 2 * 5 = 10\n- Subtract the invalid case: 10 - 1 = 9 \n\nThere is a mistake in the calculation, there is one more invalid case (333 is the only number between 100 and 500 that has three 3s so it is counted as valid but should be ignored)\nStep 6: Subtract 1 to account for the invalid case 333.\n- Total valid numbers: 9 - 1 = 8\nStep 7: \n- Total valid numbers: 8\nThere is no step 7, so I will add it.\n\nStep 7:\n- Final Answer: The final answer is $\\boxed{8}$.",
+    "steps": [
+        "Step 1: Identify the constraints of the problem. \n- The integers must be between 100 and 500.\n- At least two 3s must be present as digits.",
+        "Step 2: Determine the possible units and tens digits that can have a 3.\n- The units and tens digits can be 3, 33, or 13, 23, 43.",
+        "Step 3: Determine the hundreds digits that can have a 3.\n- The hundreds digit can be 3, 4.",
+        "Step 4: Since the numbers must be between 100 and 500, we must exclude the cases where the hundreds digit is 3 and the units and tens digits are 3. Calculate the total number of valid numbers by multiplying the number of valid hundreds digits, the number of valid units and tens digits, and then subtract the invalid case.",
+        "Step 5: Calculate the total number of valid numbers.\n- Valid hundreds digits: 2 (3, 4)\n- Valid units and tens digits: 5 (3, 33, 13, 23, 43)\n- Total valid numbers: 2 * 5 = 10\n- Subtract the invalid case: 10 - 1 = 9 \n\nThere is a mistake in the calculation, there is one more invalid case (333 is the only number between 100 and 500 that has three 3s so it is counted as valid but should be ignored)",
+        "Step 6: Subtract 1 to account for the invalid case 333.\n- Total valid numbers: 9 - 1 = 8",
+        "Step 7: \n- Total valid numbers: 8",
+        "There is no step 7, so I will add it.\n\nStep 7:\n- Final Answer: The final answer is $\\boxed{8}$."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Identify the constraints of the problem. \n- The integers must be between 100 and 500.\n- At least two 3s must be present as digits.",
+            1
+        ],
+        [
+            "Step 2: Determine the possible units and tens digits that can have a 3.\n- The units and tens digits can be 3, 33, or 13, 23, 43.",
+            1
+        ],
+        [
+            "Step 3: Determine the hundreds digits that can have a 3.\n- The hundreds digit can be 3, 4.",
+            1
+        ],
+        [
+            "Step 4: Since the numbers must be between 100 and 500, we must exclude the cases where the hundreds digit is 3 and the units and tens digits are 3. Calculate the total number of valid numbers by multiplying the number of valid hundreds digits, the number of valid units and tens digits, and then subtract the invalid case.",
+            1
+        ],
+        [
+            "Step 5: Calculate the total number of valid numbers.\n- Valid hundreds digits: 2 (3, 4)\n- Valid units and tens digits: 5 (3, 33, 13, 23, 43)\n- Total valid numbers: 2 * 5 = 10\n- Subtract the invalid case: 10 - 1 = 9 \n\nThere is a mistake in the calculation, there is one more invalid case (333 is the only number between 100 and 500 that has three 3s so it is counted as valid but should be ignored)",
+            1
+        ],
+        [
+            "Step 6: Subtract 1 to account for the invalid case 333.\n- Total valid numbers: 9 - 1 = 8",
+            1
+        ],
+        [
+            "Step 7: \n- Total valid numbers: 8",
+            1
+        ],
+        [
+            "There is no step 7, so I will add it.\n\nStep 7:\n- Final Answer: The final answer is $\\boxed{8}$.",
+            1
+        ]
+    ],
+    "time": 108.6902425289154,
+    "total_tokens": 4800,
+    "final_answer_tokens": 448,
+    "model": "meta-llama/Llama-Vision-Free"
+}

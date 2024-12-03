@@ -1,0 +1,46 @@
+{
+    "problem": "Let $\\mathbf{P}$ be the matrix for projecting onto a vector $\\mathbf{v},$ and let $\\mathbf{R}$ be the matrix for reflecting over the vector $\\mathbf{v}.$  Then\n\\[\\mathbf{R} = a \\mathbf{P} + b \\mathbf{I}\\]for some real numbers $a$ and $b.$  Enter the ordered pair $(a,b).$",
+    "level": "Level 5",
+    "type": "Precalculus",
+    "solution": "Let $\\mathbf{a}$ be an arbitrary vector.  Let $\\mathbf{p}$ be the projection of $\\mathbf{a}$ onto $\\mathbf{v},$ so $\\mathbf{v} = \\mathbf{P} \\mathbf{a},$ and let $\\mathbf{r}$ be the reflection of $\\mathbf{a}$ over $\\mathbf{v},$ to $\\mathbf{r} = \\mathbf{R} \\mathbf{a}.$\n\nNote that $\\mathbf{p}$ is the midpoint of $\\mathbf{a}$ and $\\mathbf{r}.$  We can use this to find the relationship between $\\mathbf{R}$ and $\\mathbf{P}.$\n\n[asy]\nunitsize(1 cm);\n\npair D, P, R, V;\n\nD = (3,2);\nV = (1.5,2);\nR = reflect((0,0),D)*(V);\nP = (V + R)/2;\n\ndraw((-1,0)--(4,0));\ndraw((0,-1)--(0,3));\ndraw((0,0)--D,Arrow(6));\ndraw((0,0)--V,red,Arrow(6));\ndraw((0,0)--R,blue,Arrow(6));\ndraw((0,0)--P,green,Arrow(6));\ndraw(V--R,dashed);\n\nlabel(\"$\\mathbf{v}$\", D, NE);\nlabel(\"$\\mathbf{p}$\", P, S);\nlabel(\"$\\mathbf{a}$\", V, N);\nlabel(\"$\\mathbf{r}$\", R, SE);\n[/asy]\n\nSince $\\mathbf{p}$ is the midpoint of $\\mathbf{a}$ and $\\mathbf{r},$ $\\mathbf{p} = \\frac{\\mathbf{a} + \\mathbf{r}}{2},$ so\n\\[\\mathbf{r} = 2 \\mathbf{p} - \\mathbf{a}.\\]In other words,\n\\[\\mathbf{R} \\mathbf{a} = 2 \\mathbf{P} \\mathbf{a} - \\mathbf{I} \\mathbf{a}.\\]Since this holds for all vectors $\\mathbf{a},$\n\\[\\mathbf{R} = 2 \\mathbf{P} - \\mathbf{I}.\\]Thus, $(a,b) = \\boxed{(2,-1)}.$",
+    "is_solved": true,
+    "model_solution": "## Step 1: Recall the formula for the projection matrix $\\mathbf{P}$ and the reflection matrix $\\mathbf{R}$.\n$\\mathbf{P} = \\frac{\\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}}$ and $\\mathbf{R} = 2 \\frac{\\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}} - \\mathbf{I}$.\n\n## Step 2: Substitute the formula for $\\mathbf{R}$ into the equation $\\mathbf{R} = a \\mathbf{P} + b \\mathbf{I}$.\n$2 \\frac{\\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}} - \\mathbf{I} = a \\frac{\\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}} + b \\mathbf{I}$.\n\n## Step 3: Factor out $\\frac{\\\n## Step 4: Simplify the equation\n$2 \\frac{\\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}} - \\mathbf{I} = \\frac{a}{\\mathbf{v}^T \\mathbf{v}} \\mathbf{v} \\mathbf{v}^T + b \\mathbf{I}$\n## Step 5: Equate the coefficients of $\\mathbf{v} \\mathbf{v}^T$ and $\\mathbf{I}$ on both sides of the equation.\nWe have that\n$\\frac{2 \\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}} = \\frac{a \\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}}$ and $-\\mathbf{I} = b \\mathbf{I}$.\n\n## Step 6: Solve the equation $\\frac{2 \\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}} = \\frac{a \\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}}$ for $a$.\nSolving the equation $\\frac{2 \\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}} = \\frac{\n## Step 7: Solve the equation $-\\mathbf{I} = b \\mathbf{I}$ for $b$.\n$-\\mathbf{I} = b \\mathbf{I} \\Rightarrow -1 = b \\Rightarrow b = -1$.\n\n## Step 8: Substitute the solution $b=-1$ into the equation $-\\mathbf{I} = b \\mathbf{I}$ to check consistency.\nWe have that $-1 = b$. Therefore, $-1 = -1$, which is consistent with our answer.\n\n## Step 9: Substitute the solution $b=-1$ into the equation $\\frac{2 \\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}} = \\frac{a \\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}}$ to solve for $a$.\n$-\\mathbf{I} = b \\mathbf{I} \\Rightarrow -1 = b \\Rightarrow b = -1$ implies $\\frac{2 \\mathbf{v} \\mathbf\n## Step 10: Solve the equation $2 = a$ for $a$.\n$2 = a$.\n## Step 11: The equation $(a,b) = \\left(2,-1\\right)$ has been derived.\nFinal Answer.",
+    "steps": [
+        "## Step 1: Recall the formula for the projection matrix $\\mathbf{P}$ and the reflection matrix $\\mathbf{R}$.\n$\\mathbf{P} = \\frac{\\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}}$ and $\\mathbf{R} = 2 \\frac{\\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}} - \\mathbf{I}$.\n\n## Step 2: Substitute the formula for $\\mathbf{R}$ into the equation $\\mathbf{R} = a \\mathbf{P} + b \\mathbf{I}$.\n$2 \\frac{\\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}} - \\mathbf{I} = a \\frac{\\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}} + b \\mathbf{I}$.\n\n## Step 3: Factor out $\\frac{\\",
+        "## Step 4: Simplify the equation\n$2 \\frac{\\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}} - \\mathbf{I} = \\frac{a}{\\mathbf{v}^T \\mathbf{v}} \\mathbf{v} \\mathbf{v}^T + b \\mathbf{I}$",
+        "## Step 5: Equate the coefficients of $\\mathbf{v} \\mathbf{v}^T$ and $\\mathbf{I}$ on both sides of the equation.\nWe have that\n$\\frac{2 \\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}} = \\frac{a \\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}}$ and $-\\mathbf{I} = b \\mathbf{I}$.\n\n## Step 6: Solve the equation $\\frac{2 \\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}} = \\frac{a \\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}}$ for $a$.\nSolving the equation $\\frac{2 \\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}} = \\frac{",
+        "## Step 7: Solve the equation $-\\mathbf{I} = b \\mathbf{I}$ for $b$.\n$-\\mathbf{I} = b \\mathbf{I} \\Rightarrow -1 = b \\Rightarrow b = -1$.\n\n## Step 8: Substitute the solution $b=-1$ into the equation $-\\mathbf{I} = b \\mathbf{I}$ to check consistency.\nWe have that $-1 = b$. Therefore, $-1 = -1$, which is consistent with our answer.\n\n## Step 9: Substitute the solution $b=-1$ into the equation $\\frac{2 \\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}} = \\frac{a \\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}}$ to solve for $a$.\n$-\\mathbf{I} = b \\mathbf{I} \\Rightarrow -1 = b \\Rightarrow b = -1$ implies $\\frac{2 \\mathbf{v} \\mathbf",
+        "## Step 10: Solve the equation $2 = a$ for $a$.\n$2 = a$.",
+        "## Step 11: The equation $(a,b) = \\left(2,-1\\right)$ has been derived.\nFinal Answer."
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Recall the formula for the projection matrix $\\mathbf{P}$ and the reflection matrix $\\mathbf{R}$.\n$\\mathbf{P} = \\frac{\\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}}$ and $\\mathbf{R} = 2 \\frac{\\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}} - \\mathbf{I}$.\n\n## Step 2: Substitute the formula for $\\mathbf{R}$ into the equation $\\mathbf{R} = a \\mathbf{P} + b \\mathbf{I}$.\n$2 \\frac{\\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}} - \\mathbf{I} = a \\frac{\\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}} + b \\mathbf{I}$.\n\n## Step 3: Factor out $\\frac{\\",
+            1
+        ],
+        [
+            "## Step 4: Simplify the equation\n$2 \\frac{\\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}} - \\mathbf{I} = \\frac{a}{\\mathbf{v}^T \\mathbf{v}} \\mathbf{v} \\mathbf{v}^T + b \\mathbf{I}$",
+            1
+        ],
+        [
+            "## Step 5: Equate the coefficients of $\\mathbf{v} \\mathbf{v}^T$ and $\\mathbf{I}$ on both sides of the equation.\nWe have that\n$\\frac{2 \\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}} = \\frac{a \\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}}$ and $-\\mathbf{I} = b \\mathbf{I}$.\n\n## Step 6: Solve the equation $\\frac{2 \\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}} = \\frac{a \\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}}$ for $a$.\nSolving the equation $\\frac{2 \\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}} = \\frac{",
+            1
+        ],
+        [
+            "## Step 7: Solve the equation $-\\mathbf{I} = b \\mathbf{I}$ for $b$.\n$-\\mathbf{I} = b \\mathbf{I} \\Rightarrow -1 = b \\Rightarrow b = -1$.\n\n## Step 8: Substitute the solution $b=-1$ into the equation $-\\mathbf{I} = b \\mathbf{I}$ to check consistency.\nWe have that $-1 = b$. Therefore, $-1 = -1$, which is consistent with our answer.\n\n## Step 9: Substitute the solution $b=-1$ into the equation $\\frac{2 \\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}} = \\frac{a \\mathbf{v} \\mathbf{v}^T}{\\mathbf{v}^T \\mathbf{v}}$ to solve for $a$.\n$-\\mathbf{I} = b \\mathbf{I} \\Rightarrow -1 = b \\Rightarrow b = -1$ implies $\\frac{2 \\mathbf{v} \\mathbf",
+            1
+        ],
+        [
+            "## Step 10: Solve the equation $2 = a$ for $a$.\n$2 = a$.",
+            1
+        ],
+        [
+            "## Step 11: The equation $(a,b) = \\left(2,-1\\right)$ has been derived.\nFinal Answer.",
+            1
+        ]
+    ],
+    "time": 80.73908758163452,
+    "total_tokens": 9463,
+    "final_answer_tokens": 1048,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,41 @@
+{
+    "problem": "Find the matrix $\\mathbf{P}$ such that for any vector $\\mathbf{v},$ $\\mathbf{P} \\mathbf{v}$ is the projection of $\\mathbf{v}$ onto the $y$-axis.",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "The projection $\\mathbf{P}$ takes $\\begin{pmatrix} x \\\\ y \\\\ z \\end{pmatrix}$ to $\\begin{pmatrix} 0 \\\\ y \\\\ 0 \\end{pmatrix}.$\n\n[asy]\nimport three;\n\nsize(180);\ncurrentprojection = perspective(6,3,2);\n\ntriple I = (1,0,0), J = (0,1,0), K = (0,0,1), O = (0,0,0);\ntriple V = (2.2,2.5,1.5), W = (0,2.5,0);\n\ndraw(V--W,dashed);\ndraw(O--V, red, Arrow3(6));\ndraw(O--W,blue, Arrow3(6));\ndraw(O--3*I, Arrow3(6));\ndraw(2.5*J--3*J, Arrow3(6));\ndraw(O--3*K, Arrow3(6));\n\nlabel(\"$x$\", 3.2*I);\nlabel(\"$y$\", 3.2*J);\nlabel(\"$z$\", 3.2*K);\nlabel(\"$\\mathbf{v}$\", V, NE);\nlabel(\"$\\mathbf{w}$\", W, S);\n[/asy]\n\nThus,\n\\[\\mathbf{P} \\mathbf{i} = \\begin{pmatrix} 0 \\\\ 0 \\\\ 0 \\end{pmatrix}, \\quad \\mathbf{P} \\mathbf{j} = \\begin{pmatrix} 0 \\\\ 1 \\\\ 0 \\end{pmatrix}, \\quad \\mathbf{P} \\mathbf{k} = \\begin{pmatrix} 0 \\\\ 0 \\\\ 0 \\end{pmatrix},\\]so\n\\[\\mathbf{P} = \\boxed{\\begin{pmatrix} 0 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 0 \\end{pmatrix}}.\\]",
+    "is_solved": true,
+    "model_solution": "Step 1: The projection matrix onto the $y$-axis is of the form $\\begin{pmatrix} 0 & 0 \\\\ 0 & 1 \\end{pmatrix}$ because only the $y$-component of $\\mathbf{v}$ is preserved in the projection.\n\nThis is the first step in solving the problem.\nStep 2: Therefore, $\\mathbf{P} = \\begin{pmatrix} 0 & 0 \\\\ 0 & 1 \\end{pmatrix}$.\nStep 3: \n\n$\\mathbf{P} = \\begin{pmatrix} 0 & 0 \\\\ 0 & 1 \\end{pmatrix}$\nStep 4: \n$\\mathbf{P} = \\begin{pmatrix} 0 & 0 \\\\ 0 & 1 \\end{pmatrix}$\nStep 4: This is the final answer.",
+    "steps": [
+        "Step 1: The projection matrix onto the $y$-axis is of the form $\\begin{pmatrix} 0 & 0 \\\\ 0 & 1 \\end{pmatrix}$ because only the $y$-component of $\\mathbf{v}$ is preserved in the projection.\n\nThis is the first step in solving the problem.",
+        "Step 2: Therefore, $\\mathbf{P} = \\begin{pmatrix} 0 & 0 \\\\ 0 & 1 \\end{pmatrix}$.",
+        "Step 3: \n\n$\\mathbf{P} = \\begin{pmatrix} 0 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
+        "Step 4: \n$\\mathbf{P} = \\begin{pmatrix} 0 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
+        "Step 4: This is the final answer."
+    ],
+    "full_steps": [
+        [
+            "Step 1: The projection matrix onto the $y$-axis is of the form $\\begin{pmatrix} 0 & 0 \\\\ 0 & 1 \\end{pmatrix}$ because only the $y$-component of $\\mathbf{v}$ is preserved in the projection.\n\nThis is the first step in solving the problem.",
+            1
+        ],
+        [
+            "Step 2: Therefore, $\\mathbf{P} = \\begin{pmatrix} 0 & 0 \\\\ 0 & 1 \\end{pmatrix}$.",
+            1
+        ],
+        [
+            "Step 3: \n\n$\\mathbf{P} = \\begin{pmatrix} 0 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
+            1
+        ],
+        [
+            "Step 4: \n$\\mathbf{P} = \\begin{pmatrix} 0 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
+            1
+        ],
+        [
+            "Step 4: This is the final answer.",
+            1
+        ]
+    ],
+    "time": 68.13197827339172,
+    "total_tokens": 2540,
+    "final_answer_tokens": 300,
+    "model": "meta-llama/Llama-Vision-Free"
+}

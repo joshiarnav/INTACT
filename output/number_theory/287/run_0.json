@@ -1,0 +1,31 @@
+{
+    "problem": "Let $S$ be the set of all integers $k$ such that, if $k$ is in $S$, then $\\frac{17k}{66}$ and $\\frac{13k}{105}$ are terminating decimals. What is the smallest integer in $S$ that is greater than 2010?",
+    "level": "Level 5",
+    "type": "Number Theory",
+    "solution": "Let us first analyze the fraction $\\frac{17k}{66}$. We can rewrite this fraction as $\\frac{17k}{2 \\cdot 3 \\cdot 11}$. Since the denominator can only contain powers of 2 and 5, we have that $k$ must be a multiple of 33. We now continue to analyze the fraction $\\frac{13k}{105}$. We rewrite this fraction as $\\frac{13k}{3 \\cdot 5 \\cdot 7}$, and therefore deduce using similar logic that $k$ must be a multiple of 21. From here, we proceed to find the least common multiple of 21 and 33. Since $21 = 3 \\cdot 7$ and $33 = 3 \\cdot 11$, we conclude that the least common multiple of 21 and 33 is $3 \\cdot 7 \\cdot 11 = 231$.\n\nWe now know that $S$ contains exactly the multiples of 231. The smallest multiple of 231 that is greater than 2010 is $231 \\cdot 9 = \\boxed{2079}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: For $\\frac{17k}{66}$ to be a terminating decimal, $17k$ must be divisible by $11$, and for $\\frac{13k}{105}$ to be a terminating decimal, $13k$ must be divisible by $7$.\nStep 2: For $\\frac{17k}{66}$ to be a terminating decimal, we must have that $17k$ is divisible by $11$.  Thus, $k$ must be divisible by $11$.  For $\\frac{13k}{105}$ to be a terminating decimal, we must have that $13k$ is divisible by $7$.  Thus, $k$ must be divisible by $7$.\nStep 3: Since $k$ must be divisible by both $11$ and $7$, the smallest possible value of $k$ is $11\\cdot7=77$.\n\nFinal Answer: The final answer is: $\\boxed{77}$",
+    "steps": [
+        "Step 1: For $\\frac{17k}{66}$ to be a terminating decimal, $17k$ must be divisible by $11$, and for $\\frac{13k}{105}$ to be a terminating decimal, $13k$ must be divisible by $7$.",
+        "Step 2: For $\\frac{17k}{66}$ to be a terminating decimal, we must have that $17k$ is divisible by $11$.  Thus, $k$ must be divisible by $11$.  For $\\frac{13k}{105}$ to be a terminating decimal, we must have that $13k$ is divisible by $7$.  Thus, $k$ must be divisible by $7$.",
+        "Step 3: Since $k$ must be divisible by both $11$ and $7$, the smallest possible value of $k$ is $11\\cdot7=77$.\n\nFinal Answer: The final answer is: $\\boxed{77}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: For $\\frac{17k}{66}$ to be a terminating decimal, $17k$ must be divisible by $11$, and for $\\frac{13k}{105}$ to be a terminating decimal, $13k$ must be divisible by $7$.",
+            1
+        ],
+        [
+            "Step 2: For $\\frac{17k}{66}$ to be a terminating decimal, we must have that $17k$ is divisible by $11$.  Thus, $k$ must be divisible by $11$.  For $\\frac{13k}{105}$ to be a terminating decimal, we must have that $13k$ is divisible by $7$.  Thus, $k$ must be divisible by $7$.",
+            1
+        ],
+        [
+            "Step 3: Since $k$ must be divisible by both $11$ and $7$, the smallest possible value of $k$ is $11\\cdot7=77$.\n\nFinal Answer: The final answer is: $\\boxed{77}$",
+            1
+        ]
+    ],
+    "time": 39.02787709236145,
+    "total_tokens": 1562,
+    "final_answer_tokens": 321,
+    "model": "meta-llama/Llama-Vision-Free"
+}

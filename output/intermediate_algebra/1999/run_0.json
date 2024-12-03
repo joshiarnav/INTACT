@@ -1,0 +1,31 @@
+{
+    "problem": "Let $a,$ $b,$ $c$ be complex numbers satisfying\n\\begin{align*}\n(a + 1)(b + 1)(c + 1) &= 1, \\\\\n(a + 2)(b + 2)(c + 2) &= 2, \\\\\n(a + 3)(b + 3)(c + 3) &= 3.\n\\end{align*}Find $(a + 4)(b + 4)(c + 4).$",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "Let $p(x) = (a + x)(b + x)(c + x),$ which is a monic, third-degree polynomial in $x.$  Let $q(x) = p(x) - x,$ so $q(1) = q(2) = q(3) = 0.$  Also, $q(x)$ is cubic and monic, so\n\\[q(x) = (x - 1)(x - 2)(x - 3).\\]Hence, $p(x) = (x - 1)(x - 2)(x - 3) + x.$  In particular, $p(4) = (3)(2)(1) + 4 = \\boxed{10}.$",
+    "is_solved": false,
+    "model_solution": "## Step 1: Let $x = a + 1,$ $y = b + 1,$ and $z = c + 1.$\nThen the given equations become\n\\begin{align*}\nxyz &= 1, \\\\\nxy(x + 1) &= 2, \\\\\nxyz (x + 2) &= 3.\n\\end{align*}\n## Step 2: From the second equation, we have $xy(x + 1) = 2,$ so $xy = \\frac{2}{x + 1}.$\nSubstituting this into the first equation gives $(\\frac{2}{x + 1})z = 1,$ so $z = \\frac{2}{x + 1}.$\n## Step 3: From the third equation, we have $xyz(x + 2) = 3.$ Since we know $xy = \\frac{2}{x + 1}$ and $z = \\frac{2}{x + 1},$ we can substitute these into this equation to obtain $xyz(x + 2) = 2(x + 2) = 3.$",
+    "steps": [
+        "## Step 1: Let $x = a + 1,$ $y = b + 1,$ and $z = c + 1.$\nThen the given equations become\n\\begin{align*}\nxyz &= 1, \\\\\nxy(x + 1) &= 2, \\\\\nxyz (x + 2) &= 3.\n\\end{align*}",
+        "## Step 2: From the second equation, we have $xy(x + 1) = 2,$ so $xy = \\frac{2}{x + 1}.$\nSubstituting this into the first equation gives $(\\frac{2}{x + 1})z = 1,$ so $z = \\frac{2}{x + 1}.$",
+        "## Step 3: From the third equation, we have $xyz(x + 2) = 3.$ Since we know $xy = \\frac{2}{x + 1}$ and $z = \\frac{2}{x + 1},$ we can substitute these into this equation to obtain $xyz(x + 2) = 2(x + 2) = 3.$"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Let $x = a + 1,$ $y = b + 1,$ and $z = c + 1.$\nThen the given equations become\n\\begin{align*}\nxyz &= 1, \\\\\nxy(x + 1) &= 2, \\\\\nxyz (x + 2) &= 3.\n\\end{align*}",
+            1
+        ],
+        [
+            "## Step 2: From the second equation, we have $xy(x + 1) = 2,$ so $xy = \\frac{2}{x + 1}.$\nSubstituting this into the first equation gives $(\\frac{2}{x + 1})z = 1,$ so $z = \\frac{2}{x + 1}.$",
+            1
+        ],
+        [
+            "## Step 3: From the third equation, we have $xyz(x + 2) = 3.$ Since we know $xy = \\frac{2}{x + 1}$ and $z = \\frac{2}{x + 1},$ we can substitute these into this equation to obtain $xyz(x + 2) = 2(x + 2) = 3.$",
+            1
+        ]
+    ],
+    "time": 39.36975812911987,
+    "total_tokens": 1948,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

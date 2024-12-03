@@ -1,0 +1,41 @@
+{
+    "problem": "Mr. Jones has 6 children. Assuming that the gender of each child is determined independently and with equal likelihood of male and female, what is the probability that Mr. Jones has more sons than daughters or more daughters than sons?",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "We could do this with a bit of casework, but that gets boring after a while. Instead, we can use complementary probability. Since each child can be male or female with equal likelihood, there are $2^6=64$ possible ways in which the genders of the children can be determined. The only way in which Mr. Jones won't have more sons than daughters or more daughters than sons is if he has exactly 3 of each, which can occur in $\\binom{6}{3}=20$ ways. Using the concept of complementary counting gives us that there are $64-20=44$ ways in which he can have more children of one gender than the other out of a total of 64 possible ways, for a final probability of $\\dfrac{44}{64}=\\boxed{\\dfrac{11}{16}}$.",
+    "is_solved": true,
+    "model_solution": "Step 1:  Let's calculate the total number of possible gender combinations for Mr. Jones's 6 children, as each child can be either male (M) or female (F), and there are 6 children.\n   \n   Total possible combinations = 2^6 = 64\nStep 2:\nThe only scenario in which Mr. Jones won't have more sons than daughters or more daughters than sons is if he has exactly 3 of each, which can occur in $\\binom{6}{3}=20$ ways.\n\n(continued)\nStep 3:  Calculate the probability that Mr. Jones has more sons than daughters or more daughters than sons by subtracting the probability that he has exactly 3 of each from 1.\n\n$P(\\text{more sons than daughters or more daughters than sons}) = 1 - \\frac{20}{64} = \\frac{44}{64} = \\frac{11}{16}$\nStep 4:\n$P(\\text{more sons than daughters or more daughters than sons}) = \\frac{44}{64} = \\frac{11}{16}$\nFinal Answer: $\\boxed{\\frac{11}{16}}$",
+    "steps": [
+        "Step 1:  Let's calculate the total number of possible gender combinations for Mr. Jones's 6 children, as each child can be either male (M) or female (F), and there are 6 children.\n   \n   Total possible combinations = 2^6 = 64",
+        "Step 2:\nThe only scenario in which Mr. Jones won't have more sons than daughters or more daughters than sons is if he has exactly 3 of each, which can occur in $\\binom{6}{3}=20$ ways.\n\n(continued)",
+        "Step 3:  Calculate the probability that Mr. Jones has more sons than daughters or more daughters than sons by subtracting the probability that he has exactly 3 of each from 1.\n\n$P(\\text{more sons than daughters or more daughters than sons}) = 1 - \\frac{20}{64} = \\frac{44}{64} = \\frac{11}{16}$",
+        "Step 4:\n$P(\\text{more sons than daughters or more daughters than sons}) = \\frac{44}{64} = \\frac{11}{16}$",
+        "Final Answer: $\\boxed{\\frac{11}{16}}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Let's calculate the total number of possible gender combinations for Mr. Jones's 6 children, as each child can be either male (M) or female (F), and there are 6 children.\n   \n   Total possible combinations = 2^6 = 64",
+            1
+        ],
+        [
+            "Step 2:\nThe only scenario in which Mr. Jones won't have more sons than daughters or more daughters than sons is if he has exactly 3 of each, which can occur in $\\binom{6}{3}=20$ ways.\n\n(continued)",
+            1
+        ],
+        [
+            "Step 3:  Calculate the probability that Mr. Jones has more sons than daughters or more daughters than sons by subtracting the probability that he has exactly 3 of each from 1.\n\n$P(\\text{more sons than daughters or more daughters than sons}) = 1 - \\frac{20}{64} = \\frac{44}{64} = \\frac{11}{16}$",
+            1
+        ],
+        [
+            "Step 4:\n$P(\\text{more sons than daughters or more daughters than sons}) = \\frac{44}{64} = \\frac{11}{16}$",
+            1
+        ],
+        [
+            "Final Answer: $\\boxed{\\frac{11}{16}}$",
+            1
+        ]
+    ],
+    "time": 66.22929191589355,
+    "total_tokens": 2779,
+    "final_answer_tokens": 348,
+    "model": "meta-llama/Llama-Vision-Free"
+}

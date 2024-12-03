@@ -1,0 +1,46 @@
+{
+    "problem": "A large, regular hexagon is drawn on the ground, and a man stands at one of the vertices.  The man flips a coin.  If the coin lands heads, he walks counterclockwise along the edge of the hexagon until reaching the next nearest vertex.  If the coin lands tails, he walks clockwise around the hexagon until reaching another vertex.  Once there, he repeats the process.  The man flips the coin a total of six times.  What is the probability that the man is standing where he started when he is finished?",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "There are a total of $2^6=64$ equally likely sequences of heads and tails coin flips.  Each toss corresponds to a movement clockwise or counterclockwise, so each sequence of coin tosses corresponds to a sequence of six movements, $L$ or $R$.  If the man gets six consecutive heads or tails, corresponding to $RRRRRR$ or $LLLLLL$, then he will return to the starting point.  But, the man could also flip three heads and three tails in some order, corresponding to a sequence like $RRLRLL$.  There are a total of $\\binom{6}{3}=20$ sequences of moves that include three moves counterclockwise, and three clockwise.  The probability that the man ends up where he started is: $$\\frac{20+1+1}{64}=\\boxed{\\frac{11}{32}}$$",
+    "is_solved": true,
+    "model_solution": "Let H represent a heads and T represent a tails.  We need to calculate the probability of a sequence of 6 flips, HH...H or TT...T, that ends up with the man back at the starting vertex.\nIdentify the sequences of flips that end with the man back at the starting vertex.\nFor each sequence of 6 flips, we want to count the number of clockwise and counterclockwise turns the man makes.\nCount the number of sequences that result in the man being back at the starting vertex after 6 flips, and calculate the probability based on these counts.\nIdentify the sequences of flips that end with the man back at the starting vertex. These sequences are TTHHTT, TTHHHH, HTTHTT, HTTTHH, HHTTHT, HHTTTH, HTHHTT, HTHHHH, HHHHHT, and HHHHTH.\nCount the number of sequences that result in the man being back at the starting vertex after 6 flips, and calculate the probability based on these counts.",
+    "steps": [
+        "Let H represent a heads and T represent a tails.  We need to calculate the probability of a sequence of 6 flips, HH...H or TT...T, that ends up with the man back at the starting vertex.",
+        "Identify the sequences of flips that end with the man back at the starting vertex.",
+        "For each sequence of 6 flips, we want to count the number of clockwise and counterclockwise turns the man makes.",
+        "Count the number of sequences that result in the man being back at the starting vertex after 6 flips, and calculate the probability based on these counts.",
+        "Identify the sequences of flips that end with the man back at the starting vertex. These sequences are TTHHTT, TTHHHH, HTTHTT, HTTTHH, HHTTHT, HHTTTH, HTHHTT, HTHHHH, HHHHHT, and HHHHTH.",
+        "Count the number of sequences that result in the man being back at the starting vertex after 6 flips, and calculate the probability based on these counts."
+    ],
+    "full_steps": [
+        [
+            "Let H represent a heads and T represent a tails.  We need to calculate the probability of a sequence of 6 flips, HH...H or TT...T, that ends up with the man back at the starting vertex.",
+            1
+        ],
+        [
+            "Identify the sequences of flips that end with the man back at the starting vertex.",
+            1
+        ],
+        [
+            "For each sequence of 6 flips, we want to count the number of clockwise and counterclockwise turns the man makes.",
+            1
+        ],
+        [
+            "Count the number of sequences that result in the man being back at the starting vertex after 6 flips, and calculate the probability based on these counts.",
+            1
+        ],
+        [
+            "Identify the sequences of flips that end with the man back at the starting vertex. These sequences are TTHHTT, TTHHHH, HTTHTT, HTTTHH, HHTTHT, HHTTTH, HTHHTT, HTHHHH, HHHHHT, and HHHHTH.",
+            1
+        ],
+        [
+            "Count the number of sequences that result in the man being back at the starting vertex after 6 flips, and calculate the probability based on these counts.",
+            1
+        ]
+    ],
+    "time": 80.28060746192932,
+    "total_tokens": 3587,
+    "final_answer_tokens": 392,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,61 @@
+{
+    "problem": "I have 7 books I want to arrange on a shelf. Two of them are math books, and one is a physics book. How many ways are there for me to arrange the books if I want to put the math books next to each other, and put both of them to the left of the physics book? (Note that all the books are distinguishable.)",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "We can arrange the books on the shelf, pretending that the two math books are actually one book because they must be next to each other. In exactly half of these arrangements, the math books will be to the left of the physics book, giving $6!/2=360$ arrangements. However, in each of these arrangements there are two ways to arrange the math books, so the total number of arrangements is $360\\cdot2=\\boxed{720}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: Identify the number of places to put the pair of math books.\nStep 2: Since the pair of math books must be together and to the left of the physics book, we can think of them as a single unit. We now have 5 units in total (the pair of math books, the physics book, and the 3 remaining books), which can be arranged in 5! = 120 ways.\nStep 3: Since the pair of math books must be together, there are 2! = 2 ways to arrange the two math books within the pair.\nStep 4: Multiply the number of ways to arrange the units (from step 2) by the number of ways to arrange the math books within the pair (from step 3).\nStep 5: Multiply the number of ways to arrange the units (from step 2) by the number of ways to arrange the math books within the pair (from step 3) by the number of ways to arrange the remaining 3 books, which is 3! = 6.\nStep 6: 120 \u00d7 2 \u00d7 6\nStep 7: 120 \u00d7 2 \u00d7 6 = 1440\nStep 6: 120 \u00d7 2 \u00d7 6 = 1440\nStep 7: The final answer is 1440.",
+    "steps": [
+        "Step 1: Identify the number of places to put the pair of math books.",
+        "Step 2: Since the pair of math books must be together and to the left of the physics book, we can think of them as a single unit. We now have 5 units in total (the pair of math books, the physics book, and the 3 remaining books), which can be arranged in 5! = 120 ways.",
+        "Step 3: Since the pair of math books must be together, there are 2! = 2 ways to arrange the two math books within the pair.",
+        "Step 4: Multiply the number of ways to arrange the units (from step 2) by the number of ways to arrange the math books within the pair (from step 3).",
+        "Step 5: Multiply the number of ways to arrange the units (from step 2) by the number of ways to arrange the math books within the pair (from step 3) by the number of ways to arrange the remaining 3 books, which is 3! = 6.",
+        "Step 6: 120 \u00d7 2 \u00d7 6",
+        "Step 7: 120 \u00d7 2 \u00d7 6 = 1440",
+        "Step 6: 120 \u00d7 2 \u00d7 6 = 1440",
+        "Step 7: The final answer is 1440."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Identify the number of places to put the pair of math books.",
+            1
+        ],
+        [
+            "Step 2: Since the pair of math books must be together and to the left of the physics book, we can think of them as a single unit. We now have 5 units in total (the pair of math books, the physics book, and the 3 remaining books), which can be arranged in 5! = 120 ways.",
+            1
+        ],
+        [
+            "Step 3: Since the pair of math books must be together, there are 2! = 2 ways to arrange the two math books within the pair.",
+            1
+        ],
+        [
+            "Step 4: Multiply the number of ways to arrange the units (from step 2) by the number of ways to arrange the math books within the pair (from step 3).",
+            1
+        ],
+        [
+            "Step 5: Multiply the number of ways to arrange the units (from step 2) by the number of ways to arrange the math books within the pair (from step 3) by the number of ways to arrange the remaining 3 books, which is 3! = 6.",
+            1
+        ],
+        [
+            "Step 6: 120 \u00d7 2 \u00d7 6",
+            1
+        ],
+        [
+            "Step 7: 120 \u00d7 2 \u00d7 6 = 1440",
+            1
+        ],
+        [
+            "Step 6: 120 \u00d7 2 \u00d7 6 = 1440",
+            1
+        ],
+        [
+            "Step 7: The final answer is 1440.",
+            1
+        ]
+    ],
+    "time": 120.28699922561646,
+    "total_tokens": 5751,
+    "final_answer_tokens": 410,
+    "model": "meta-llama/Llama-Vision-Free"
+}

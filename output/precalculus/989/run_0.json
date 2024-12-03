@@ -1,0 +1,66 @@
+{
+    "problem": "Compute\n\\[\\frac{1}{\\cos^2 10^\\circ} + \\frac{1}{\\sin^2 20^\\circ} + \\frac{1}{\\sin^2 40^\\circ}.\\]",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "We can write\n\\begin{align*}\n\\frac{1}{\\cos^2 10^\\circ} &= \\frac{2}{1 + \\cos 20^\\circ} \\\\\n&= \\frac{2 (1 - \\cos 20^\\circ)}{(1 + \\cos 20^\\circ)(1 - \\cos 20^\\circ)} \\\\\n&= \\frac{2 (1 - \\cos 20^\\circ)}{1 - \\cos^2 20^\\circ} \\\\\n&= \\frac{2 - 2 \\cos 20^\\circ}{\\sin^2 20^\\circ},\n\\end{align*}so\n\\begin{align*}\n\\frac{1}{\\cos^2 10^\\circ} + \\frac{1}{\\sin^2 20^\\circ} + \\frac{1}{\\sin^2 40^\\circ} &= \\frac{2 - 2 \\cos 20^\\circ}{\\sin^2 20^\\circ} + \\frac{1}{\\sin^2 20^\\circ} + \\frac{1}{\\sin^2 40^\\circ} \\\\\n&= \\frac{3 - 2 \\cos 20^\\circ}{\\sin^2 20^\\circ} + \\frac{1}{\\sin^2 40^\\circ} \\\\\n&= \\frac{4 \\cos^2 20^\\circ (3 - 2 \\cos 20^\\circ)}{4 \\sin^2 20^\\circ \\cos^2 20^\\circ} + \\frac{1}{\\sin^2 40^\\circ} \\\\\n&= \\frac{12 \\cos^2 20^\\circ - 8 \\cos^3 20^\\circ}{\\sin^2 40^\\circ} + \\frac{1}{\\sin^2 40^\\circ} \\\\\n&= \\frac{12 \\cos^2 20^\\circ - 8 \\cos^3 20^\\circ + 1}{\\sin^2 40^\\circ}.\n\\end{align*}By the triple angle formula,\n\\begin{align*}\n\\frac{1}{2} &= \\cos 60^\\circ \\\\\n&= \\cos (3 \\cdot 20^\\circ) \\\\\n&= 4 \\cos^3 20^\\circ - 3 \\cos 20^\\circ,\n\\end{align*}which means $8 \\cos^3 20^\\circ = 6 \\cos 20^\\circ + 1.$  Hence,\n\\begin{align*}\n\\frac{12 \\cos^2 20^\\circ - 8 \\cos^3 20^\\circ + 1}{\\sin^2 40^\\circ} &= \\frac{12 \\cos^2 20^\\circ - 6 \\cos 20^\\circ}{\\sin^2 40^\\circ} \\\\\n&= \\frac{12 \\cos^2 20^\\circ - 6 \\cos 20^\\circ}{4 \\sin^2 20^\\circ \\cos^2 20^\\circ} \\\\\n&= \\frac{12 \\cos 20^\\circ - 6}{4 \\sin^2 20^\\circ \\cos 20^\\circ} \\\\\n&= \\frac{12 \\cos 20^\\circ - 6}{4 (1 - \\cos^2 20^\\circ) \\cos 20^\\circ} \\\\\n&= \\frac{12 \\cos 20^\\circ - 6}{4 \\cos 20^\\circ - 4 \\cos^3 20^\\circ} \\\\\n&= \\frac{12 \\cos 20^\\circ - 6}{4 \\cos 20^\\circ - 3 \\cos 20^\\circ - \\frac{1}{2}} \\\\\n&= \\frac{12 \\cos 20^\\circ - 6}{\\cos 20^\\circ - \\frac{1}{2}} \\\\\n&= \\boxed{12}.\n\\end{align*}",
+    "is_solved": false,
+    "model_solution": "Step 1: Apply the Pythagorean identities to rewrite the expression in terms of trigonometric functions of 10\u00b0, 20\u00b0, and 40\u00b0:\n\\[\\frac{1}{\\cos^2 10^\\circ} + \\frac{1}{\\sin^2 20^\\circ} + \\frac{1}{\\sin^2 40^\\circ} = \\frac{1}{(1 - \\sin^2 10^\\circ)} + \\frac{1}{(1 - \\cos^2 20^\\circ)} + \\frac{1}{(1 - \\cos^2 40^\\circ)}.\\]\nStep 2: Use the identity \\(\\sin (90^\\circ - \\theta) = \\cos \\theta\\) to simplify the denominators of the expression: \n\\[\\frac{1}{(1 - \\sin^2 10^\\circ)} + \\frac{1}{(1 - \\cos^2 20^\\circ)} + \\frac{1}{(1 - \\cos^2 40^\\circ)} = \\frac{1}{\\cos^2 80^\\circ} + \\frac{1}{\\sin^2 70^\\circ} + \\frac{1}{\\sin^2 50^\\circ}.\\]\nStep 3: Apply the Pythagorean identities to rewrite each of the denominators in the first two terms and the third term:\n\\[\\frac{1}{\\cos^2 80^\\circ} + \\frac{1}{\\sin^2 70^\\circ} + \\frac{1}{\\sin^2 50^\\circ} = \\frac{1}{1 - \\sin^2 80^\\circ} + \\frac{1}{\\sin^2 70^\\circ} + \\frac{1}{1 - \\cos^2 50^\\circ}.\\]\nStep 4:\n\\[\\frac{1}{1 - \\sin^2 80^\\circ} + \\frac{1}{\\sin^2 70^\\circ} + \\frac{1}{1 - \\cos^2 50^\\circ} = \\frac{1}{\\cos^2 10^\\circ} + \\frac{1}{\\sin^2 70^\\circ} + \\frac{1}{\\cos^2 40^\\circ}.\\]\n\\[\\frac{1}{\\cos^2 10^\\circ} + \\frac{1}{\\sin^2 70^\\circ} + \\frac{1}{\\cos^2 40^\\circ} = \\frac{1}{\\cos^2 10^\\circ} + \\frac{1}{\\sin (90^\\circ - 20^\\circ)^2} + \\frac{1}{\\cos^2 40^\\circ}.\\]\n\\[\\frac{1}{\\cos^2 10^\\circ} + \\frac{1}{\\sin (90^\\circ - 20^\\circ)^2} + \\frac{1}{\\cos^2 40^\\circ} = \\frac{1}{\\cos^2 10^\\circ} + \\frac{1}{\\cos^2 20^\\circ} + \\frac{1}{\\cos^2 40^\\circ}.\\]\n\\[\\frac{1}{\\cos^2 10^\\circ} + \\frac{1}{\\cos^2 20^\\circ} + \\frac{1}{\\cos^2 40^\\circ} = \\frac{1}{\\cos^2 10^\\circ} + \\frac{\\cos^2 20^\\circ}{\\cos^2 20^\\circ} + \\frac{\\cos^2 40^\\circ}{\\cos^2 40^\\circ}.\\]\n\\[\\frac{1}{\\cos^2 10^\\circ} + \\frac{\\cos^2 20^\\circ}{\\cos^2 20^\\circ} + \\frac{\\cos^2 40^\\circ}{\\cos^2 40^\\circ} = \\frac{1}{\\cos^2 10^\\circ} + 1 + 1.\\]\n\\[\\frac{1}{\\cos^2 10^\\circ} + 1 + 1 = \\frac{1}{\\cos^2 10^\\circ} + 2\\]\n\\[\\frac{1}{\\cos^2 10^\\circ} + 2 = \\frac{1}{\\cos^2 10^\\circ} + \\frac{\\cos^2 10^\\circ}{\\cos^2 10^\\circ}.\\]",
+    "steps": [
+        "Step 1: Apply the Pythagorean identities to rewrite the expression in terms of trigonometric functions of 10\u00b0, 20\u00b0, and 40\u00b0:\n\\[\\frac{1}{\\cos^2 10^\\circ} + \\frac{1}{\\sin^2 20^\\circ} + \\frac{1}{\\sin^2 40^\\circ} = \\frac{1}{(1 - \\sin^2 10^\\circ)} + \\frac{1}{(1 - \\cos^2 20^\\circ)} + \\frac{1}{(1 - \\cos^2 40^\\circ)}.\\]",
+        "Step 2: Use the identity \\(\\sin (90^\\circ - \\theta) = \\cos \\theta\\) to simplify the denominators of the expression: \n\\[\\frac{1}{(1 - \\sin^2 10^\\circ)} + \\frac{1}{(1 - \\cos^2 20^\\circ)} + \\frac{1}{(1 - \\cos^2 40^\\circ)} = \\frac{1}{\\cos^2 80^\\circ} + \\frac{1}{\\sin^2 70^\\circ} + \\frac{1}{\\sin^2 50^\\circ}.\\]",
+        "Step 3: Apply the Pythagorean identities to rewrite each of the denominators in the first two terms and the third term:\n\\[\\frac{1}{\\cos^2 80^\\circ} + \\frac{1}{\\sin^2 70^\\circ} + \\frac{1}{\\sin^2 50^\\circ} = \\frac{1}{1 - \\sin^2 80^\\circ} + \\frac{1}{\\sin^2 70^\\circ} + \\frac{1}{1 - \\cos^2 50^\\circ}.\\]",
+        "Step 4:\n\\[\\frac{1}{1 - \\sin^2 80^\\circ} + \\frac{1}{\\sin^2 70^\\circ} + \\frac{1}{1 - \\cos^2 50^\\circ} = \\frac{1}{\\cos^2 10^\\circ} + \\frac{1}{\\sin^2 70^\\circ} + \\frac{1}{\\cos^2 40^\\circ}.\\]",
+        "\\[\\frac{1}{\\cos^2 10^\\circ} + \\frac{1}{\\sin^2 70^\\circ} + \\frac{1}{\\cos^2 40^\\circ} = \\frac{1}{\\cos^2 10^\\circ} + \\frac{1}{\\sin (90^\\circ - 20^\\circ)^2} + \\frac{1}{\\cos^2 40^\\circ}.\\]",
+        "\\[\\frac{1}{\\cos^2 10^\\circ} + \\frac{1}{\\sin (90^\\circ - 20^\\circ)^2} + \\frac{1}{\\cos^2 40^\\circ} = \\frac{1}{\\cos^2 10^\\circ} + \\frac{1}{\\cos^2 20^\\circ} + \\frac{1}{\\cos^2 40^\\circ}.\\]",
+        "\\[\\frac{1}{\\cos^2 10^\\circ} + \\frac{1}{\\cos^2 20^\\circ} + \\frac{1}{\\cos^2 40^\\circ} = \\frac{1}{\\cos^2 10^\\circ} + \\frac{\\cos^2 20^\\circ}{\\cos^2 20^\\circ} + \\frac{\\cos^2 40^\\circ}{\\cos^2 40^\\circ}.\\]",
+        "\\[\\frac{1}{\\cos^2 10^\\circ} + \\frac{\\cos^2 20^\\circ}{\\cos^2 20^\\circ} + \\frac{\\cos^2 40^\\circ}{\\cos^2 40^\\circ} = \\frac{1}{\\cos^2 10^\\circ} + 1 + 1.\\]",
+        "\\[\\frac{1}{\\cos^2 10^\\circ} + 1 + 1 = \\frac{1}{\\cos^2 10^\\circ} + 2\\]",
+        "\\[\\frac{1}{\\cos^2 10^\\circ} + 2 = \\frac{1}{\\cos^2 10^\\circ} + \\frac{\\cos^2 10^\\circ}{\\cos^2 10^\\circ}.\\]"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Apply the Pythagorean identities to rewrite the expression in terms of trigonometric functions of 10\u00b0, 20\u00b0, and 40\u00b0:\n\\[\\frac{1}{\\cos^2 10^\\circ} + \\frac{1}{\\sin^2 20^\\circ} + \\frac{1}{\\sin^2 40^\\circ} = \\frac{1}{(1 - \\sin^2 10^\\circ)} + \\frac{1}{(1 - \\cos^2 20^\\circ)} + \\frac{1}{(1 - \\cos^2 40^\\circ)}.\\]",
+            1
+        ],
+        [
+            "Step 2: Use the identity \\(\\sin (90^\\circ - \\theta) = \\cos \\theta\\) to simplify the denominators of the expression: \n\\[\\frac{1}{(1 - \\sin^2 10^\\circ)} + \\frac{1}{(1 - \\cos^2 20^\\circ)} + \\frac{1}{(1 - \\cos^2 40^\\circ)} = \\frac{1}{\\cos^2 80^\\circ} + \\frac{1}{\\sin^2 70^\\circ} + \\frac{1}{\\sin^2 50^\\circ}.\\]",
+            1
+        ],
+        [
+            "Step 3: Apply the Pythagorean identities to rewrite each of the denominators in the first two terms and the third term:\n\\[\\frac{1}{\\cos^2 80^\\circ} + \\frac{1}{\\sin^2 70^\\circ} + \\frac{1}{\\sin^2 50^\\circ} = \\frac{1}{1 - \\sin^2 80^\\circ} + \\frac{1}{\\sin^2 70^\\circ} + \\frac{1}{1 - \\cos^2 50^\\circ}.\\]",
+            1
+        ],
+        [
+            "Step 4:\n\\[\\frac{1}{1 - \\sin^2 80^\\circ} + \\frac{1}{\\sin^2 70^\\circ} + \\frac{1}{1 - \\cos^2 50^\\circ} = \\frac{1}{\\cos^2 10^\\circ} + \\frac{1}{\\sin^2 70^\\circ} + \\frac{1}{\\cos^2 40^\\circ}.\\]",
+            1
+        ],
+        [
+            "\\[\\frac{1}{\\cos^2 10^\\circ} + \\frac{1}{\\sin^2 70^\\circ} + \\frac{1}{\\cos^2 40^\\circ} = \\frac{1}{\\cos^2 10^\\circ} + \\frac{1}{\\sin (90^\\circ - 20^\\circ)^2} + \\frac{1}{\\cos^2 40^\\circ}.\\]",
+            1
+        ],
+        [
+            "\\[\\frac{1}{\\cos^2 10^\\circ} + \\frac{1}{\\sin (90^\\circ - 20^\\circ)^2} + \\frac{1}{\\cos^2 40^\\circ} = \\frac{1}{\\cos^2 10^\\circ} + \\frac{1}{\\cos^2 20^\\circ} + \\frac{1}{\\cos^2 40^\\circ}.\\]",
+            1
+        ],
+        [
+            "\\[\\frac{1}{\\cos^2 10^\\circ} + \\frac{1}{\\cos^2 20^\\circ} + \\frac{1}{\\cos^2 40^\\circ} = \\frac{1}{\\cos^2 10^\\circ} + \\frac{\\cos^2 20^\\circ}{\\cos^2 20^\\circ} + \\frac{\\cos^2 40^\\circ}{\\cos^2 40^\\circ}.\\]",
+            1
+        ],
+        [
+            "\\[\\frac{1}{\\cos^2 10^\\circ} + \\frac{\\cos^2 20^\\circ}{\\cos^2 20^\\circ} + \\frac{\\cos^2 40^\\circ}{\\cos^2 40^\\circ} = \\frac{1}{\\cos^2 10^\\circ} + 1 + 1.\\]",
+            1
+        ],
+        [
+            "\\[\\frac{1}{\\cos^2 10^\\circ} + 1 + 1 = \\frac{1}{\\cos^2 10^\\circ} + 2\\]",
+            1
+        ],
+        [
+            "\\[\\frac{1}{\\cos^2 10^\\circ} + 2 = \\frac{1}{\\cos^2 10^\\circ} + \\frac{\\cos^2 10^\\circ}{\\cos^2 10^\\circ}.\\]",
+            1
+        ]
+    ],
+    "time": 130.40584254264832,
+    "total_tokens": 14505,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

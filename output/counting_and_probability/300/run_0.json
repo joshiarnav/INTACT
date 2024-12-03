@@ -1,0 +1,31 @@
+{
+    "problem": "How many distinct arrangements are there of PAPA?",
+    "level": "Level 2",
+    "type": "Counting & Probability",
+    "solution": "We pretend that the letters are all different, and we have P$_1$A$_1$P$_2$A$_2$.  We have $4!$ permutations (since all the letters are different).\n\nBut how many arrangements of P$_1$A$_1$P$_2$A$_2$ (where the P's and A's are considered different) correspond to a single arrangement of PAPA (where the P's and A's are identical)?  PAPA is counted in 4 different ways: as P$_1$A$_1$P$_2$A$_2$, P$_1$A$_2$P$_2$A$_1$, P$_2$A$_1$P$_1$A$_2$, and P$_2$A$_2$P$_1$A$_1$.  Rather than list out the possibilities, we could have reasoned as follows: For the 2 P's, each possibility is counted $2! = 2$ times, and for the 2 A's, each of these 2 possibilities is counted $2! = 2$ times, for a total of $2 \\times 2 = 4$ ways. (Make sure you see why it isn't $2+2 = 4$ ways.) Therefore, there are 4! ways to arrange the 4 letters P$_1$A$_1$P$_2$A$_2$; this counts each arrangement of PAPA $2! \\times 2! = 4$ times, so we have $4!/(2! \\times 2!) = \\boxed{6}$ ways to arrange PAPA.",
+    "is_solved": true,
+    "model_solution": "Step 1: Count the total number of letters and repeat letters in the word PAPA.\nStep 2: Use the formula for permutations with repetition to calculate the number of distinct arrangements: n! / (n1! * n2! * ...), where n is the total number of letters and n1, n2, etc. are the repeat counts. In this case, n = 4, n1 = 2 (for the P's), and n2 = 2 (for the A's).\nStep 3: Plug the values into the formula: 4! / (2! * 2!) = 24 / (2 * 2) = 24 / 4 = 6. Final Answer.",
+    "steps": [
+        "Step 1: Count the total number of letters and repeat letters in the word PAPA.",
+        "Step 2: Use the formula for permutations with repetition to calculate the number of distinct arrangements: n! / (n1! * n2! * ...), where n is the total number of letters and n1, n2, etc. are the repeat counts. In this case, n = 4, n1 = 2 (for the P's), and n2 = 2 (for the A's).",
+        "Step 3: Plug the values into the formula: 4! / (2! * 2!) = 24 / (2 * 2) = 24 / 4 = 6. Final Answer."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Count the total number of letters and repeat letters in the word PAPA.",
+            1
+        ],
+        [
+            "Step 2: Use the formula for permutations with repetition to calculate the number of distinct arrangements: n! / (n1! * n2! * ...), where n is the total number of letters and n1, n2, etc. are the repeat counts. In this case, n = 4, n1 = 2 (for the P's), and n2 = 2 (for the A's).",
+            1
+        ],
+        [
+            "Step 3: Plug the values into the formula: 4! / (2! * 2!) = 24 / (2 * 2) = 24 / 4 = 6. Final Answer.",
+            1
+        ]
+    ],
+    "time": 39.346383810043335,
+    "total_tokens": 981,
+    "final_answer_tokens": 219,
+    "model": "meta-llama/Llama-Vision-Free"
+}

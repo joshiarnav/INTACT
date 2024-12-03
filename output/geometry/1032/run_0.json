@@ -1,0 +1,31 @@
+{
+    "problem": "A regular hexagon is truncated to form a regular dodecagon (12-gon) by removing identical isosceles triangles from its six corners. What percent of the area of the original hexagon was removed? Express your answer to the nearest tenth.",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "Without loss of generality, let the side length of the hexagon be 1 unit. Also let $u$ be the length of each of the equal sides in the removed isosceles triangles.  Define points $A$, $B$, $C$, $D$, $E$, and $F$ as shown in the diagram.  Triangle $CDB$ is a 30-60-90 triangle, so $CD=u/2$ and $DB=u\\sqrt{3}/2$.  Also, $AB=1-2u$ because $CF=1$ and $CB=AF=u$.  For the resulting dodecagon to be regular, we must have $AB=2\\cdot BD$.  We find \\begin{align*}\n1-2u&=u\\sqrt{3} \\implies \\\\\n1&=2u+u\\sqrt{3} \\implies \\\\\n1&=u(2+\\sqrt{3}) \\implies \\\\\n\\frac{1}{2+\\sqrt{3}}&=u.\n\\end{align*} Multiplying numerator and denominator by $2-\\sqrt{3}$ to rationalize the denominator, we get $u=2-\\sqrt{3}$.  The area of a regular hexagon with side length $s$ is $3s^2\\sqrt{3}/2$ so the area of the hexagon is $3\\sqrt{3}/2$.  The removed area is $6\\times \\frac{1}{2}(CD)(2\\cdot BD)=3u^2\\sqrt{3}/2$.  Therefore, the fraction of area removed is $u^2$, which to the nearest tenth of a percent is $0.072=\\boxed{7.2\\%}$. [asy]\nsize(250);\nreal r = sqrt(6-3*sqrt(3));\npair A=r*dir(15), B=r*dir(45), C=dir(60), D=sqrt(3)/2*dir(60), Ep=(0,0), F=dir(0);\npair[] dots = {A,B,C,D,Ep,F};\ndot(dots);\nlabel(\"$A$\",A,A);\nlabel(\"$B$\",B,B);\nlabel(\"$C$\",C,C);\nlabel(\"$D$\",D,1.6*(W+0.3*SW));\nlabel(\"$E$\",Ep,SW);\nlabel(\"$F$\",F,E);\nint i;\nfor(i=0;i<=5;++i)\n\n{\n\ndraw(dir(60*i)--dir(60*(i+1)));\n\n}\nfor(i=0;i<=11;++i)\n\n{\n\ndraw(r*dir(15+30*i)--r*dir(15+30*(i+1)));\n\n}\n\ndraw((0,0)--dir(60));\nlabel(\"$u$\",dir(60)+0.12*SE);\nlabel(\"$1-2u$\",dir(30));[/asy]",
+    "is_solved": false,
+    "model_solution": "Step 1:  To solve this problem, we need to find the area of the original hexagon and the area of the six removed isosceles triangles.\nStep 2:  First, let's calculate the area of the original hexagon. We can split the hexagon into 6 equilateral triangles, each with side length 1. The area of each equilateral triangle is $\\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2} \\times 1 \\times \\frac{\\sqrt{3}}{2} = \\frac{\\sqrt{3}}{4}$. Since there are 6 such triangles, the total area of the hexagon is $6 \\times \\frac{\\sqrt{3}}{4} = \\frac{3\\sqrt{3}}{2}$.\n\nNote: Figures 1 and 2 are not provided.\nStep 2: The area of each isosceles triangle removed is $\\frac{1}{2} \\times 1 \\times \\frac{2 - \\sqrt{3}}{2} = \\frac{1 - \\sqrt{3}}{4}$. The total area removed is $6 \\times \\frac{1 - \\sqrt{3}}{4} = \\frac{3 - 3\\sqrt{3}}{2}$.",
+    "steps": [
+        "Step 1:  To solve this problem, we need to find the area of the original hexagon and the area of the six removed isosceles triangles.",
+        "Step 2:  First, let's calculate the area of the original hexagon. We can split the hexagon into 6 equilateral triangles, each with side length 1. The area of each equilateral triangle is $\\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2} \\times 1 \\times \\frac{\\sqrt{3}}{2} = \\frac{\\sqrt{3}}{4}$. Since there are 6 such triangles, the total area of the hexagon is $6 \\times \\frac{\\sqrt{3}}{4} = \\frac{3\\sqrt{3}}{2}$.\n\nNote: Figures 1 and 2 are not provided.",
+        "Step 2: The area of each isosceles triangle removed is $\\frac{1}{2} \\times 1 \\times \\frac{2 - \\sqrt{3}}{2} = \\frac{1 - \\sqrt{3}}{4}$. The total area removed is $6 \\times \\frac{1 - \\sqrt{3}}{4} = \\frac{3 - 3\\sqrt{3}}{2}$."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  To solve this problem, we need to find the area of the original hexagon and the area of the six removed isosceles triangles.",
+            1
+        ],
+        [
+            "Step 2:  First, let's calculate the area of the original hexagon. We can split the hexagon into 6 equilateral triangles, each with side length 1. The area of each equilateral triangle is $\\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2} \\times 1 \\times \\frac{\\sqrt{3}}{2} = \\frac{\\sqrt{3}}{4}$. Since there are 6 such triangles, the total area of the hexagon is $6 \\times \\frac{\\sqrt{3}}{4} = \\frac{3\\sqrt{3}}{2}$.\n\nNote: Figures 1 and 2 are not provided.",
+            1
+        ],
+        [
+            "Step 2: The area of each isosceles triangle removed is $\\frac{1}{2} \\times 1 \\times \\frac{2 - \\sqrt{3}}{2} = \\frac{1 - \\sqrt{3}}{4}$. The total area removed is $6 \\times \\frac{1 - \\sqrt{3}}{4} = \\frac{3 - 3\\sqrt{3}}{2}$.",
+            1
+        ]
+    ],
+    "time": 41.67881631851196,
+    "total_tokens": 1717,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

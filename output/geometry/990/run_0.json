@@ -1,0 +1,66 @@
+{
+    "problem": "Point $P$ is inside equilateral triangle $ABC$ such that the altitudes from $P$ to $\\overline{AB}$, $\\overline{BC}$, and $\\overline{CA}$ have lengths 5, 6, and 7 respectively.  What is the area of triangle $ABC$?",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "We begin by drawing a diagram:\n\n[asy]\npair A,B,C,P,X,Y,Z;\nreal s=12*sqrt(3);\nA=(0,0); C=(s,0); B=(s/2,s/2*sqrt(3)); P=(9.5,7); X= foot(P,B,C); Y=foot(P,A,B); Z=foot(P,A,C);\ndraw(A--B--C--cycle); draw(P--Z); draw(P--Y); draw(P--X);\ndraw(rightanglemark(P,X,B,25)); draw(rightanglemark(P,Z,C,25)); draw(rightanglemark(P,Y,A,25));\n\nlabel(\"$A$\",A,SW); label(\"$B$\",B,N); label(\"$C$\",C,SE); label(\"$P$\",P,SE);\nlabel(\"$7$\",P--Z,W); label(\"$6$\",P--X,S); label(\"$5$\",P--Y,NE);\n[/asy]\n\nLet the side length of triangle $ABC$ be $s$; since it is equilateral, its area is $\\frac{s^2\\sqrt{3}}{4}$.\n\nNow, we draw segments from $P$ to the three vertices of triangle $ABC$, which divides the triangle into three smaller triangles: $\\triangle APB$, $\\triangle BPC$, and $\\triangle CPA$.\n\n[asy]\npair A,B,C,P,X,Y,Z;\nreal s=12*sqrt(3);\nA=(0,0); C=(s,0); B=(s/2,s/2*sqrt(3)); P=(9.5,7); X= foot(P,B,C); Y=foot(P,A,B); Z=foot(P,A,C);\n\nlabel(\"$A$\",A,SW); label(\"$B$\",B,N); label(\"$C$\",C,SE); label(\"$P$\",P,SE);\nlabel(\"$7$\",P--Z,W); label(\"$6$\",P--X,S); label(\"$5$\",P--Y,NE);\n\nfill(P--A--B--cycle,rgb(135,206,250));\n\nfill(P--A--C--cycle,yellow);\nfill(P--B--C--cycle,rgb(107,142,35));\n\ndraw(P--A,dashed); draw(P--B,dashed); draw(P--C,dashed);\ndraw(A--B--C--cycle); draw(P--Z); draw(P--Y); draw(P--X);\n\n[/asy]\n\nWe can compute the area of these three small triangles, and sum their areas to get the area of equilateral $\\triangle ABC$.  We compute the area of triangle $APB$ by using $AB$ as the base and 5 as the height.  $AB$ has length $s$, so \\[[\\triangle APB] = \\frac{1}{2}(s)(5).\\]Similarly, $[\\triangle BPC] = \\frac{1}{2}(s)(6)$ and $[\\triangle APC] = \\frac{1}{2}(s)(7)$.\n\nWe have \\[[\\triangle ABC] = [\\triangle APB] + [\\triangle BPC] + [\\triangle CPA],\\]or  \\begin{align*}\n\\frac{s^2\\sqrt{3}}{4} &= \\frac{1}{2}(s)(5)+\\frac{1}{2}(s)(6)+\\frac{1}{2}(s)(7)\\\\\n&=\\frac{1}{2}(s)(5+6+7)\\\\\n&=9s.\n\\end{align*}We can divide both sides of the above simplified equation by $s$, since side lengths are positive and not zero, to get $\\frac{s\\sqrt{3}}{4}=9$.  Solving for $s$ gives \\[s=9\\cdot \\frac{4}{\\sqrt{3}}=12\\sqrt{3}.\\]Finally, the area of triangle $ABC$ is \\[[\\triangle ABC] = \\frac{s^2\\sqrt{3}}{4}=\\left(\\frac{s\\sqrt{3}}{4}\\right)(s) = (9)(12\\sqrt{3})=\\boxed{108\\sqrt{3}}.\\]",
+    "is_solved": false,
+    "model_solution": "Step 1:  Let $h_a$, $h_b$, and $h_c$ be the lengths of the altitudes from $P$ to $\\overline{AB}$, $\\overline{BC}$, and $\\overline{CA}$, respectively.\nStep 2:  Let $h$ be the height of $\\triangle ABC$.\nStep 3:  Let $s$ be the side length of $\\triangle ABC$.\nStep 4:  We can relate $h_a$, $h_b$, and $h_c$ to the height $h$ using the formula for the area of a triangle.\nStep 5:  Use the given values of $h_a$, $h_b$, and $h_c$ to express the area of $\\triangle ABC$ in terms of $h$ and $s$.\nStep 6:  Note that the area of $\\triangle ABC$ is equal to the sum of the areas of the three smaller triangles $ABP$, $BCP$, and $CAP$, each of which is $\\frac{1}{2} \\cdot s \\cdot h_a$, $\\frac{1}{2} \\cdot s \\cdot h_b$, and $\\frac{1}{2} \\cdot s \\cdot h_c$, respectively. Thus, we obtain the equation $\\frac{1}{2}sh = \\frac{1}{2}s \\cdot h_a + \\frac{1}{2}s \\cdot h_b + \\frac{1}{2}s \\cdot h_c.$\nSubstitute the values of $h_a$, $h_b$, and $h_c$ into the equation from step 6 and solve for $h$ in terms of $s$.\n$\\frac{1}{2}sh = \\frac{1}{2}s(5+6+7) \\Rightarrow \\frac{1}{2}s = \\frac{18}{h} \\Rightarrow s = \\frac{36}{h}$\nThe area of triangle $ABC$ is $\\frac{1}{2}sh$. Substitute the value of $s$ in terms of $h$ into this expression and simplify to find the area in terms of $h$.\n$\\frac{1}{2}sh = \\frac{1}{2} \\cdot \\frac{36}{h} \\cdot h = 18$\nStep 8: \n$\\frac{1}{2}sh = \\frac{1}{2}s \\cdot h_a + \\frac{1}{2}s \\cdot h_b + \\frac{1}{2}s \\cdot h_c = 2s$\nSubstitute the values of $h_a$, $h_b$, and $h_c$ into the equation from step 8 and solve for $s$ in terms of $h$.\n$2s = \\frac{1}{2}s(5+6+7) \\Rightarrow s = \\frac{18}{6} \\Rightarrow s = 3$\nThe area of triangle $ABC$ is $\\frac{1}{2}sh$. Substitute the value of $s$ in terms of $h$ into this expression and simplify to find the area in terms of $h$.\n$[ABC] = \\frac{1}{2}sh = \\frac{1}{2} \\cdot 3 \\cdot h = \\frac{3h}{2}$\nStep 9:\n$\\frac{1}{2}sh = \\frac{1}{2}s \\cdot h_a + \\frac{1}{2}s \\cdot h_b + \\frac{1}{2}s \\cdot h_c = 2s$\nSubstitute the values of $h_a$, $h_b$, and $h_c$ into the equation and solve for $s$.\n$2s = \\frac{1}{2}s(5+6+7) \\Rightarrow 2s = \\frac{1}{2}s \\cdot 18 \\Rightarrow s = 3$\nThe area of triangle ABC is $\\frac{1}{2}sh$. Substitute the value of s in terms of h into this expression and simplify to find the area in terms of h.\n$[ABC] = \\frac{1}{2}sh = \\frac{1}{2} \\cdot 3 \\cdot h = \\frac{3h}{2}$\nUse the side length $s=3$ to calculate the height $h$ of $\\triangle ABC$ using the formula $h=\\frac{2}{3}s$.\n $h = \\frac{2}{3}s = \\frac{2}{3} \\cdot 3 = 2$\nSubstitute the value of $h$ into the expression for the area of $\\triangle ABC$ to find the area in terms of $s$.\n$[ABC] = \\frac{3h}{2} = \\frac{3(2)}{2} = 3$",
+    "steps": [
+        "Step 1:  Let $h_a$, $h_b$, and $h_c$ be the lengths of the altitudes from $P$ to $\\overline{AB}$, $\\overline{BC}$, and $\\overline{CA}$, respectively.\nStep 2:  Let $h$ be the height of $\\triangle ABC$.\nStep 3:  Let $s$ be the side length of $\\triangle ABC$.\nStep 4:  We can relate $h_a$, $h_b$, and $h_c$ to the height $h$ using the formula for the area of a triangle.\nStep 5:  Use the given values of $h_a$, $h_b$, and $h_c$ to express the area of $\\triangle ABC$ in terms of $h$ and $s$.",
+        "Step 6:  Note that the area of $\\triangle ABC$ is equal to the sum of the areas of the three smaller triangles $ABP$, $BCP$, and $CAP$, each of which is $\\frac{1}{2} \\cdot s \\cdot h_a$, $\\frac{1}{2} \\cdot s \\cdot h_b$, and $\\frac{1}{2} \\cdot s \\cdot h_c$, respectively. Thus, we obtain the equation $\\frac{1}{2}sh = \\frac{1}{2}s \\cdot h_a + \\frac{1}{2}s \\cdot h_b + \\frac{1}{2}s \\cdot h_c.$",
+        "Substitute the values of $h_a$, $h_b$, and $h_c$ into the equation from step 6 and solve for $h$ in terms of $s$.",
+        "$\\frac{1}{2}sh = \\frac{1}{2}s(5+6+7) \\Rightarrow \\frac{1}{2}s = \\frac{18}{h} \\Rightarrow s = \\frac{36}{h}$",
+        "The area of triangle $ABC$ is $\\frac{1}{2}sh$. Substitute the value of $s$ in terms of $h$ into this expression and simplify to find the area in terms of $h$.\n$\\frac{1}{2}sh = \\frac{1}{2} \\cdot \\frac{36}{h} \\cdot h = 18$",
+        "Step 8: \n$\\frac{1}{2}sh = \\frac{1}{2}s \\cdot h_a + \\frac{1}{2}s \\cdot h_b + \\frac{1}{2}s \\cdot h_c = 2s$\nSubstitute the values of $h_a$, $h_b$, and $h_c$ into the equation from step 8 and solve for $s$ in terms of $h$.\n$2s = \\frac{1}{2}s(5+6+7) \\Rightarrow s = \\frac{18}{6} \\Rightarrow s = 3$\nThe area of triangle $ABC$ is $\\frac{1}{2}sh$. Substitute the value of $s$ in terms of $h$ into this expression and simplify to find the area in terms of $h$.\n$[ABC] = \\frac{1}{2}sh = \\frac{1}{2} \\cdot 3 \\cdot h = \\frac{3h}{2}$",
+        "Step 9:\n$\\frac{1}{2}sh = \\frac{1}{2}s \\cdot h_a + \\frac{1}{2}s \\cdot h_b + \\frac{1}{2}s \\cdot h_c = 2s$\nSubstitute the values of $h_a$, $h_b$, and $h_c$ into the equation and solve for $s$.\n$2s = \\frac{1}{2}s(5+6+7) \\Rightarrow 2s = \\frac{1}{2}s \\cdot 18 \\Rightarrow s = 3$",
+        "The area of triangle ABC is $\\frac{1}{2}sh$. Substitute the value of s in terms of h into this expression and simplify to find the area in terms of h.\n$[ABC] = \\frac{1}{2}sh = \\frac{1}{2} \\cdot 3 \\cdot h = \\frac{3h}{2}$",
+        "Use the side length $s=3$ to calculate the height $h$ of $\\triangle ABC$ using the formula $h=\\frac{2}{3}s$.\n $h = \\frac{2}{3}s = \\frac{2}{3} \\cdot 3 = 2$",
+        "Substitute the value of $h$ into the expression for the area of $\\triangle ABC$ to find the area in terms of $s$.\n$[ABC] = \\frac{3h}{2} = \\frac{3(2)}{2} = 3$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Let $h_a$, $h_b$, and $h_c$ be the lengths of the altitudes from $P$ to $\\overline{AB}$, $\\overline{BC}$, and $\\overline{CA}$, respectively.\nStep 2:  Let $h$ be the height of $\\triangle ABC$.\nStep 3:  Let $s$ be the side length of $\\triangle ABC$.\nStep 4:  We can relate $h_a$, $h_b$, and $h_c$ to the height $h$ using the formula for the area of a triangle.\nStep 5:  Use the given values of $h_a$, $h_b$, and $h_c$ to express the area of $\\triangle ABC$ in terms of $h$ and $s$.",
+            1
+        ],
+        [
+            "Step 6:  Note that the area of $\\triangle ABC$ is equal to the sum of the areas of the three smaller triangles $ABP$, $BCP$, and $CAP$, each of which is $\\frac{1}{2} \\cdot s \\cdot h_a$, $\\frac{1}{2} \\cdot s \\cdot h_b$, and $\\frac{1}{2} \\cdot s \\cdot h_c$, respectively. Thus, we obtain the equation $\\frac{1}{2}sh = \\frac{1}{2}s \\cdot h_a + \\frac{1}{2}s \\cdot h_b + \\frac{1}{2}s \\cdot h_c.$",
+            1
+        ],
+        [
+            "Substitute the values of $h_a$, $h_b$, and $h_c$ into the equation from step 6 and solve for $h$ in terms of $s$.",
+            1
+        ],
+        [
+            "$\\frac{1}{2}sh = \\frac{1}{2}s(5+6+7) \\Rightarrow \\frac{1}{2}s = \\frac{18}{h} \\Rightarrow s = \\frac{36}{h}$",
+            1
+        ],
+        [
+            "The area of triangle $ABC$ is $\\frac{1}{2}sh$. Substitute the value of $s$ in terms of $h$ into this expression and simplify to find the area in terms of $h$.\n$\\frac{1}{2}sh = \\frac{1}{2} \\cdot \\frac{36}{h} \\cdot h = 18$",
+            1
+        ],
+        [
+            "Step 8: \n$\\frac{1}{2}sh = \\frac{1}{2}s \\cdot h_a + \\frac{1}{2}s \\cdot h_b + \\frac{1}{2}s \\cdot h_c = 2s$\nSubstitute the values of $h_a$, $h_b$, and $h_c$ into the equation from step 8 and solve for $s$ in terms of $h$.\n$2s = \\frac{1}{2}s(5+6+7) \\Rightarrow s = \\frac{18}{6} \\Rightarrow s = 3$\nThe area of triangle $ABC$ is $\\frac{1}{2}sh$. Substitute the value of $s$ in terms of $h$ into this expression and simplify to find the area in terms of $h$.\n$[ABC] = \\frac{1}{2}sh = \\frac{1}{2} \\cdot 3 \\cdot h = \\frac{3h}{2}$",
+            1
+        ],
+        [
+            "Step 9:\n$\\frac{1}{2}sh = \\frac{1}{2}s \\cdot h_a + \\frac{1}{2}s \\cdot h_b + \\frac{1}{2}s \\cdot h_c = 2s$\nSubstitute the values of $h_a$, $h_b$, and $h_c$ into the equation and solve for $s$.\n$2s = \\frac{1}{2}s(5+6+7) \\Rightarrow 2s = \\frac{1}{2}s \\cdot 18 \\Rightarrow s = 3$",
+            1
+        ],
+        [
+            "The area of triangle ABC is $\\frac{1}{2}sh$. Substitute the value of s in terms of h into this expression and simplify to find the area in terms of h.\n$[ABC] = \\frac{1}{2}sh = \\frac{1}{2} \\cdot 3 \\cdot h = \\frac{3h}{2}$",
+            1
+        ],
+        [
+            "Use the side length $s=3$ to calculate the height $h$ of $\\triangle ABC$ using the formula $h=\\frac{2}{3}s$.\n $h = \\frac{2}{3}s = \\frac{2}{3} \\cdot 3 = 2$",
+            1
+        ],
+        [
+            "Substitute the value of $h$ into the expression for the area of $\\triangle ABC$ to find the area in terms of $s$.\n$[ABC] = \\frac{3h}{2} = \\frac{3(2)}{2} = 3$",
+            1
+        ]
+    ],
+    "time": 132.56063199043274,
+    "total_tokens": 14819,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

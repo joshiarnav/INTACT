@@ -1,0 +1,31 @@
+{
+    "problem": "We have a triangle $\\triangle ABC$ such that $AB = 6,$ $BC = 8,$ and $CA = 10.$ If $AD$ is an angle bisector such that $D$ is on $BC,$ then find the value of $AD^2.$",
+    "level": "Level 4",
+    "type": "Geometry",
+    "solution": "First of all, a sketch might be useful: [asy]\npair pA, pB, pC, pD, pE;\npA = (0, 6);\npB = (0, 0);\npC = (-8, 0);\npD = (pB * 10 + pC * 6) / (14);\ndraw(pA--pB--pC--pA);\ndraw(pA--pD);\nlabel(\"$A$\", pA, N);\nlabel(\"$B$\", pB, SE);\nlabel(\"$C$\", pC, SW);\nlabel(\"$D$\", pD, S);\n[/asy] It is clear that we have a $3:4:5$ right triangle on our hands, so we have a right angle at $B.$ That means if we can find $DB,$ we can use the Pythagorean Theorem on $\\triangle ABD$ to find $AD^2.$\n\nTo find $DB,$ we see that $DB:DC = AB:AC = 6:10$ thanks to the Angle Bisector Theorem. That means $DB:DC:BC = 6:10:16,$ since $BC = DB + DC.$ So $DB = \\frac{6}{16} \\cdot BC = 3.$\n\nFinally, we have that $AD^2 = AB^2 + BD^2 = 6^2 + 3^2 = 36 + 9 = \\boxed{45}.$",
+    "is_solved": true,
+    "model_solution": "Step 1: Apply the Angle Bisector Theorem to find the ratio of BD to DC.\n\\[\\frac{BD}{DC} = \\frac{AB}{AC} = \\frac{6}{10}\\]\nStep 2: Use the Angle Bisector Theorem to set up an equation for the length of BD and DC in terms of x, where BD = 4x and DC = 5x.\nStep 3:\n\\[\\frac{4x}{5x} = \\frac{6}{10}\\]\nSimplify the expression to get\n\\[\\frac{4}{5} = \\frac{3}{5}\\]\nThis expression is not true, so we need to reconsider the application of the Angle Bisector Theorem.\n\nFinal Answer:",
+    "steps": [
+        "Step 1: Apply the Angle Bisector Theorem to find the ratio of BD to DC.\n\\[\\frac{BD}{DC} = \\frac{AB}{AC} = \\frac{6}{10}\\]",
+        "Step 2: Use the Angle Bisector Theorem to set up an equation for the length of BD and DC in terms of x, where BD = 4x and DC = 5x.",
+        "Step 3:\n\\[\\frac{4x}{5x} = \\frac{6}{10}\\]\nSimplify the expression to get\n\\[\\frac{4}{5} = \\frac{3}{5}\\]\nThis expression is not true, so we need to reconsider the application of the Angle Bisector Theorem.\n\nFinal Answer:"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Apply the Angle Bisector Theorem to find the ratio of BD to DC.\n\\[\\frac{BD}{DC} = \\frac{AB}{AC} = \\frac{6}{10}\\]",
+            1
+        ],
+        [
+            "Step 2: Use the Angle Bisector Theorem to set up an equation for the length of BD and DC in terms of x, where BD = 4x and DC = 5x.",
+            1
+        ],
+        [
+            "Step 3:\n\\[\\frac{4x}{5x} = \\frac{6}{10}\\]\nSimplify the expression to get\n\\[\\frac{4}{5} = \\frac{3}{5}\\]\nThis expression is not true, so we need to reconsider the application of the Angle Bisector Theorem.\n\nFinal Answer:",
+            1
+        ]
+    ],
+    "time": 41.05009841918945,
+    "total_tokens": 1302,
+    "final_answer_tokens": 274,
+    "model": "meta-llama/Llama-Vision-Free"
+}

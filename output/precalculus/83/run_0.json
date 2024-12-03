@@ -1,0 +1,21 @@
+{
+    "problem": "The points $(0,0,0),$ $(a,1,1),$ $(1,b,1),$ and $(1,1,c)$ are coplanar, where $a \\neq 1,$ $b \\neq 1,$ and $c \\neq 1.$  Compute\n\\[\\frac{1}{1 - a} + \\frac{1}{1 - b} + \\frac{1}{1 - c}.\\]",
+    "level": "Level 2",
+    "type": "Precalculus",
+    "solution": "The normal vector to the plane will be orthogonal to both\n\\[\\begin{pmatrix} a \\\\ 1 \\\\ 1 \\end{pmatrix} - \\begin{pmatrix} 1 \\\\ b \\\\ 1 \\end{pmatrix} = \\begin{pmatrix} a - 1 \\\\ 1 - b \\\\ 0 \\end{pmatrix}\\]and\n\\[\\begin{pmatrix} a \\\\ 1 \\\\ 1 \\end{pmatrix} - \\begin{pmatrix} 1 \\\\ 1 \\\\ c \\end{pmatrix} = \\begin{pmatrix} a - 1 \\\\ 0 \\\\ 1 - c \\end{pmatrix}.\\]Their cross product is\n\\[\\begin{pmatrix} a - 1 \\\\ 1 - b \\\\ 0 \\end{pmatrix} \\times \\begin{pmatrix} a - 1 \\\\ 0 \\\\ 1 - c \\end{pmatrix} = \\begin{pmatrix} (b - 1)(c - 1) \\\\ (a - 1)(c - 1) \\\\ (a - 1)(b - 1) \\end{pmatrix}.\\]By scaling, we can take $\\begin{pmatrix} 1/(1 - a) \\\\ 1/(1 - b) \\\\ 1/(1 - c) \\end{pmatrix}$ as the normal vector.  Since the plane passes through $(0,0,0),$ the equation of the plane is\n\\[\\frac{x}{1 - a} + \\frac{y}{1 - b} + \\frac{z}{1 - c} = 0.\\]Since the plane passes through $(a,1,1),$\n\\[\\frac{a}{1 - a} + \\frac{1}{1 - b} + \\frac{1}{1 - c} = 0.\\]Adding 1 to both sides, we get\n\\[\\frac{a}{1 - a} + 1 + \\frac{1}{1 - b} + \\frac{1}{1 - c} = 1,\\]so\n\\[\\frac{1}{1 - a} + \\frac{1}{1 - b} + \\frac{1}{1 - c} = \\boxed{1}.\\]",
+    "is_solved": false,
+    "model_solution": "## Step 1\nSince the points are coplanar, the vectors $\\overrightarrow{OA}, \\overrightarrow{OB}, \\overrightarrow{OC}$ lie in the same plane, where $A, B, C$ are the points and $O$ is the origin $(0,0,0).$\n\n## Step 2\nWe can write the vectors as:\n\\begin{align*}\n\\overrightarrow{OA} &= \\langle a, 1, 1 \\rangle \\\\\n\\overrightarrow{OB} &= \\langle 1, b, 1 \\rangle \\\\\n\\overrightarrow{OC} &= \\langle 1, 1, c \\rangle\n\\end{align*}\n\n## Step 3\nSince the points are coplanar, the determinant of the matrix with rows formed by the vectors $\\overrightarrow{OA}, \\overrightarrow{OB}, \\overrightarrow{OC}$ is zero.\n\n## Step 4\nWe can set up the determinant as follows:\n\n## Step 5\n\\begin{align*}\n\\begin{vmatrix}\na & 1 & 1\\\\\n1 & b & 1\\\\\n1 & 1 & c\n\\end{vm",
+    "steps": [
+        "## Step 1\nSince the points are coplanar, the vectors $\\overrightarrow{OA}, \\overrightarrow{OB}, \\overrightarrow{OC}$ lie in the same plane, where $A, B, C$ are the points and $O$ is the origin $(0,0,0).$\n\n## Step 2\nWe can write the vectors as:\n\\begin{align*}\n\\overrightarrow{OA} &= \\langle a, 1, 1 \\rangle \\\\\n\\overrightarrow{OB} &= \\langle 1, b, 1 \\rangle \\\\\n\\overrightarrow{OC} &= \\langle 1, 1, c \\rangle\n\\end{align*}\n\n## Step 3\nSince the points are coplanar, the determinant of the matrix with rows formed by the vectors $\\overrightarrow{OA}, \\overrightarrow{OB}, \\overrightarrow{OC}$ is zero.\n\n## Step 4\nWe can set up the determinant as follows:\n\n## Step 5\n\\begin{align*}\n\\begin{vmatrix}\na & 1 & 1\\\\\n1 & b & 1\\\\\n1 & 1 & c\n\\end{vm"
+    ],
+    "full_steps": [
+        [
+            "## Step 1\nSince the points are coplanar, the vectors $\\overrightarrow{OA}, \\overrightarrow{OB}, \\overrightarrow{OC}$ lie in the same plane, where $A, B, C$ are the points and $O$ is the origin $(0,0,0).$\n\n## Step 2\nWe can write the vectors as:\n\\begin{align*}\n\\overrightarrow{OA} &= \\langle a, 1, 1 \\rangle \\\\\n\\overrightarrow{OB} &= \\langle 1, b, 1 \\rangle \\\\\n\\overrightarrow{OC} &= \\langle 1, 1, c \\rangle\n\\end{align*}\n\n## Step 3\nSince the points are coplanar, the determinant of the matrix with rows formed by the vectors $\\overrightarrow{OA}, \\overrightarrow{OB}, \\overrightarrow{OC}$ is zero.\n\n## Step 4\nWe can set up the determinant as follows:\n\n## Step 5\n\\begin{align*}\n\\begin{vmatrix}\na & 1 & 1\\\\\n1 & b & 1\\\\\n1 & 1 & c\n\\end{vm",
+            1
+        ]
+    ],
+    "time": 12.738731861114502,
+    "total_tokens": 801,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

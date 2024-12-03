@@ -1,0 +1,66 @@
+{
+    "problem": "In triangle $ABC$, angle $C$ is a right angle and $CB > CA$. Point $D$ is located on $\\overline{BC}$ so that angle $CAD$ is twice angle $DAB$. If $\\frac{AC}{AD} = \\frac{2}{3}$, then find $\\frac{CD}{BD}.$",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "Let $a = \\angle DAB = \\frac{1}{2} \\angle CAD.$  Since $\\frac{AC}{AD} = \\frac{2}{3},$ without loss of generality, we can assume $AC = 2$ and $AD = 3.$  Then by Pythagoras on right triangle $ACD,$ $CD = \\sqrt{5}.$\n\n[asy]\nunitsize(2 cm);\n\nreal u = 5/9;\npair A, B, C, D, E;\n\nA = (0,0);\nC = (2*u,0);\nD = (2*u,sqrt(5)*u);\nE = interp(C,D,2/5);\nB = extension(A, reflect(A,D)*(E), C, D);\n\ndraw(A--B--C--cycle);\ndraw(A--D);\n\nlabel(\"$A$\", A, SW);\nlabel(\"$B$\", B, NE);\nlabel(\"$C$\", C, SE);\nlabel(\"$D$\", D, dir(0));\nlabel(\"$2$\", (A + C)/2, S);\nlabel(\"$3$\", (A + D)/2, NW);\nlabel(\"$\\sqrt{5}$\", (C + D)/2, dir(0));\n[/asy]\n\nFrom right triangle $ACD,$ $\\cos 2a = \\frac{2}{3}.$  Then from the half-angle formula,\n\\begin{align*}\n\\sin a &= \\sqrt{\\frac{1 - \\cos 2a}{2}} = \\frac{1}{\\sqrt{6}}, \\\\\n\\cos a &= \\sqrt{\\frac{1 + \\cos 2a}{2}} = \\sqrt{\\frac{5}{6}}.\n\\end{align*}By the Law of Sines on triangle $ABD,$\n\\[\\frac{BD}{\\sin a} = \\frac{3}{\\sin (90^\\circ - 3a)},\\]so\n\\[BD = \\frac{3 \\sin a}{\\cos 3a} = \\frac{3 \\sin a}{4 \\cos^3 a - 3 \\cos a} = \\frac{3 \\cdot \\frac{1}{\\sqrt{6}}}{\\frac{4 \\cdot 5 \\cdot \\sqrt{5}}{6 \\sqrt{6}} - \\frac{3 \\sqrt{5}}{\\sqrt{6}}} = \\frac{9}{\\sqrt{5}}.\\]Hence,\n\\[\\frac{CD}{BD} = \\frac{\\sqrt{5}}{9/\\sqrt{5}} = \\boxed{\\frac{5}{9}}.\\]",
+    "is_solved": false,
+    "model_solution": "Step 1: Draw a diagram of triangle $ABC$ with right angle at $C$ and point $D$ on $\\overline{BC}$, and label the given information.\nStep 2: Since $CA^2 + CB^2 = AB^2$, let $CA = 2x$ and $CB = 3x$ and drop a perpendicular from $A$ to $CB$ at $E$.\nStep 3: Let $AE = y$, then by the Pythagorean Theorem, we have $CE = \\sqrt{9x^2 - y^2}$.\nStep 4:\nLet $DE = z$. Then, \n$\\frac{CE}{CD} = \\frac{CE + DE}{CD} = \\frac{\\sqrt{9x^2 - y^2}}{3x - z}.$\nStep 5:\nLet $BD = 3x - z$. Then, $\\frac{CD}{BD} = \\frac{\\sqrt{9x^2 - y^2}}{z}$\nStep 6:\nUsing the Angle Bisector Theorem on triangle $ADC$, we have $\\frac{AD}{CD} = \\frac{AC}{AB} = \\frac{2}{\\sqrt{13}}.$\nStep 7:\nLet $\\frac{AD}{CD} = \\frac{2}{\\sqrt{13}}.$ Then, $\\frac{AD}{\\sqrt{AD^2+CD^2}} = \\frac{2}{\\sqrt{13}}.$ Plugging in the value of $AD = \\frac{2}{3}\\sqrt{AD^2+CD^2}$ and simplifying, we obtain $\\frac{3}{\\sqrt{13}} = \\frac{10}{3\\sqrt{AD^2+CD^2}}.$\nStep 8: $\\sqrt{AD^2+CD^2} = \\frac{45}{9} = 5,$ so $AD = \\frac{10}{3}$ and $CD = \\frac{15}{3} = 5.$\nStep 9:\n$\\frac{CD}{BD} = \\frac{\\sqrt{9x^2 - y^2}}{z} = \\frac{5}{3x - z} = \\frac{5}{2x}.$\nSince $CA^2 + CB^2 = AB^2$, we have $4x^2 + 9x^2 = (AC + CB)^2 = AB^2 = (AD + BD)^2 = (AD + 3x - z)^2 = (AD)^2 + (3x - z)^2 + 2AD(3x - z)$",
+    "steps": [
+        "Step 1: Draw a diagram of triangle $ABC$ with right angle at $C$ and point $D$ on $\\overline{BC}$, and label the given information.",
+        "Step 2: Since $CA^2 + CB^2 = AB^2$, let $CA = 2x$ and $CB = 3x$ and drop a perpendicular from $A$ to $CB$ at $E$.",
+        "Step 3: Let $AE = y$, then by the Pythagorean Theorem, we have $CE = \\sqrt{9x^2 - y^2}$.",
+        "Step 4:\nLet $DE = z$. Then, \n$\\frac{CE}{CD} = \\frac{CE + DE}{CD} = \\frac{\\sqrt{9x^2 - y^2}}{3x - z}.$",
+        "Step 5:\nLet $BD = 3x - z$. Then, $\\frac{CD}{BD} = \\frac{\\sqrt{9x^2 - y^2}}{z}$",
+        "Step 6:\nUsing the Angle Bisector Theorem on triangle $ADC$, we have $\\frac{AD}{CD} = \\frac{AC}{AB} = \\frac{2}{\\sqrt{13}}.$",
+        "Step 7:\nLet $\\frac{AD}{CD} = \\frac{2}{\\sqrt{13}}.$ Then, $\\frac{AD}{\\sqrt{AD^2+CD^2}} = \\frac{2}{\\sqrt{13}}.$ Plugging in the value of $AD = \\frac{2}{3}\\sqrt{AD^2+CD^2}$ and simplifying, we obtain $\\frac{3}{\\sqrt{13}} = \\frac{10}{3\\sqrt{AD^2+CD^2}}.$",
+        "Step 8: $\\sqrt{AD^2+CD^2} = \\frac{45}{9} = 5,$ so $AD = \\frac{10}{3}$ and $CD = \\frac{15}{3} = 5.$",
+        "Step 9:\n$\\frac{CD}{BD} = \\frac{\\sqrt{9x^2 - y^2}}{z} = \\frac{5}{3x - z} = \\frac{5}{2x}.$",
+        "Since $CA^2 + CB^2 = AB^2$, we have $4x^2 + 9x^2 = (AC + CB)^2 = AB^2 = (AD + BD)^2 = (AD + 3x - z)^2 = (AD)^2 + (3x - z)^2 + 2AD(3x - z)$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Draw a diagram of triangle $ABC$ with right angle at $C$ and point $D$ on $\\overline{BC}$, and label the given information.",
+            1
+        ],
+        [
+            "Step 2: Since $CA^2 + CB^2 = AB^2$, let $CA = 2x$ and $CB = 3x$ and drop a perpendicular from $A$ to $CB$ at $E$.",
+            1
+        ],
+        [
+            "Step 3: Let $AE = y$, then by the Pythagorean Theorem, we have $CE = \\sqrt{9x^2 - y^2}$.",
+            1
+        ],
+        [
+            "Step 4:\nLet $DE = z$. Then, \n$\\frac{CE}{CD} = \\frac{CE + DE}{CD} = \\frac{\\sqrt{9x^2 - y^2}}{3x - z}.$",
+            1
+        ],
+        [
+            "Step 5:\nLet $BD = 3x - z$. Then, $\\frac{CD}{BD} = \\frac{\\sqrt{9x^2 - y^2}}{z}$",
+            1
+        ],
+        [
+            "Step 6:\nUsing the Angle Bisector Theorem on triangle $ADC$, we have $\\frac{AD}{CD} = \\frac{AC}{AB} = \\frac{2}{\\sqrt{13}}.$",
+            1
+        ],
+        [
+            "Step 7:\nLet $\\frac{AD}{CD} = \\frac{2}{\\sqrt{13}}.$ Then, $\\frac{AD}{\\sqrt{AD^2+CD^2}} = \\frac{2}{\\sqrt{13}}.$ Plugging in the value of $AD = \\frac{2}{3}\\sqrt{AD^2+CD^2}$ and simplifying, we obtain $\\frac{3}{\\sqrt{13}} = \\frac{10}{3\\sqrt{AD^2+CD^2}}.$",
+            1
+        ],
+        [
+            "Step 8: $\\sqrt{AD^2+CD^2} = \\frac{45}{9} = 5,$ so $AD = \\frac{10}{3}$ and $CD = \\frac{15}{3} = 5.$",
+            1
+        ],
+        [
+            "Step 9:\n$\\frac{CD}{BD} = \\frac{\\sqrt{9x^2 - y^2}}{z} = \\frac{5}{3x - z} = \\frac{5}{2x}.$",
+            1
+        ],
+        [
+            "Since $CA^2 + CB^2 = AB^2$, we have $4x^2 + 9x^2 = (AC + CB)^2 = AB^2 = (AD + BD)^2 = (AD + 3x - z)^2 = (AD)^2 + (3x - z)^2 + 2AD(3x - z)$",
+            1
+        ]
+    ],
+    "time": 138.04639863967896,
+    "total_tokens": 8332,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

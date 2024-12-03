@@ -1,0 +1,66 @@
+{
+    "problem": "Let $x$ and $y$ be real numbers satisfying $x^4y^5+y^4x^5=810$ and $x^3y^6+y^3x^6=945$. Evaluate $2x^3+(xy)^3+2y^3$.",
+    "level": "Level 3",
+    "type": "Intermediate Algebra",
+    "solution": "Factoring $x^4y^4$ and $x^3y^3$ from the left-hand sides of the two equations, respectively, we get \\[\\begin{aligned} x^4y^4(x+y) &= 810, \\\\ x^3y^3(x^3+y^3) &= 945. \\end{aligned}\\]Let $s = x+y$ and $p = xy.$ Then we can rewrite the given equations as \\[\\begin{aligned} p^4s &= 810, \\\\ p^3(s^3-3ps) &= 945,\\end{aligned}\\]using $x^3+y^3 = (x+y)^3 - 3xy(x+y) = s^3 - 3ps$. Substituting $s = 810/p^4$ into the second equation, we get \\[\\begin{aligned} p^3\\left(\\frac{810^3}{p^{12}} - 3p \\cdot \\frac{810}{p^4}\\right) &= 945 \\\\ \\frac{810^3}{p^9} - 3 \\cdot 810 &= 945 \\\\ p^9 &= \\frac{810^3}{3 \\cdot 810 + 945} = \\frac{810^3}{15^3} = 54^3. \\end{aligned}\\]Thus $p = \\sqrt[3]{54},$ and $s = 810/p^4 = 810/(54\\sqrt[3]{54}) = 15/\\sqrt[3]{54}.$ The quantity we want to compute is then \\[\\begin{aligned} 2x^3 + (xy)^3 + 2y^3 &= 2(s^3 - 3ps) + p^3 \\\\ &= 2s^3 - 6ps + p^3 \\\\ &= 2 \\cdot \\frac{15^3}{54} - 6 \\cdot \\sqrt[3]{54} \\cdot \\frac{15}{\\sqrt[3]{54}} + 54 \\\\ &= 125 - 90 + 54 \\\\ &= \\boxed{89}. \\end{aligned}\\]",
+    "is_solved": false,
+    "model_solution": "Step 1: Let $a=x^3y^6$ and $b=y^3x^6$.\nThen $x^3y^6+y^3x^6=a+b$ and $x^4y^5+y^4x^5=\\frac{a}{xy}+\\frac{b}{xy}=\\frac{a+b}{xy}$.\nSince we are given that $a+b=945$ and $\\frac{a+b}{xy}=810$, we have $\\frac{a+b}{xy}=810$\nStep 2: $810xy=945$\n$\\Rightarrow xy=\\frac{945}{810}$\n$\\Rightarrow xy=\\frac{7}{6}$\nStep 3: $\\frac{a+b}{xy}=810$\n$\\Rightarrow \\frac{945}{\\frac{7}{6}}=810$\n$\\Rightarrow 5=5$\nStep 4: Factor $x^3y^6+y^3x^6$ as $(xy)^3(x+y)$ and $x^4y^5+y^4x^5$ as $(xy)^3(x^3y^2+y^3x^2)$.\nThen $(xy)^3(x+y)=945$ and $(xy)^3(x^3y^2+y^2x^2)=810(xy)^3$.\n$(xy)^3(x^3y^2+y^2x^2)=810(xy)^3$\n$\\Rightarrow (x^3y^2+y^2x^2)=810$\n$(xy)^3(x+y)=945$\n$\\Rightarrow (xy)^3\\left(\\frac{2x^3+2y^3+3xy(x^2+y^2)}{2}\\right)=945$\n$(xy)^3\\left(\\frac{2x^3+2y^3+3xy(x^2+y^2)}{2}\\right)=945$\n$\\Rightarrow (xy)^3\\left(\\frac{2x^3+2y^3+3xy(x^2+y^2)}{2}\\right)=945$\n$\\Rightarrow (xy)^3(2x^3+2y^3+3xy(x^2+y^2))=1890$\n$\\Rightarrow 2x^3+2y^3+3xy(x^2+y^2)=\\frac{1890}{(xy)^3}$\n$\\Rightarrow 2x^3+2y^3+3xy(x^2+y^2)=2\\cdot 2x^3+2\\cdot 2y^3+3xy(x^2+y^2)$\n$2x^3+2y^3+3xy(x^2+y^2)=2(2x^3+2y^3+3xy(x^2+y^2))-(2x^3+2y^3+3xy(x^2+y^2))$\n$2(2x^3+2y^3+3xy(x^2+y^2))-(2x^3+2y^3+3xy(x^2+y^2))=2\\left(2x^3+2y^3+3xy(x^2+y^2)\\right)-\\left(2x^3+2y^3+3xy(x^2+y^2)\\right)$",
+    "steps": [
+        "Step 1: Let $a=x^3y^6$ and $b=y^3x^6$.\nThen $x^3y^6+y^3x^6=a+b$ and $x^4y^5+y^4x^5=\\frac{a}{xy}+\\frac{b}{xy}=\\frac{a+b}{xy}$.\nSince we are given that $a+b=945$ and $\\frac{a+b}{xy}=810$, we have $\\frac{a+b}{xy}=810$",
+        "Step 2: $810xy=945$\n$\\Rightarrow xy=\\frac{945}{810}$\n$\\Rightarrow xy=\\frac{7}{6}$",
+        "Step 3: $\\frac{a+b}{xy}=810$\n$\\Rightarrow \\frac{945}{\\frac{7}{6}}=810$\n$\\Rightarrow 5=5$",
+        "Step 4: Factor $x^3y^6+y^3x^6$ as $(xy)^3(x+y)$ and $x^4y^5+y^4x^5$ as $(xy)^3(x^3y^2+y^3x^2)$.\nThen $(xy)^3(x+y)=945$ and $(xy)^3(x^3y^2+y^2x^2)=810(xy)^3$.",
+        "$(xy)^3(x^3y^2+y^2x^2)=810(xy)^3$\n$\\Rightarrow (x^3y^2+y^2x^2)=810$",
+        "$(xy)^3(x+y)=945$\n$\\Rightarrow (xy)^3\\left(\\frac{2x^3+2y^3+3xy(x^2+y^2)}{2}\\right)=945$",
+        "$(xy)^3\\left(\\frac{2x^3+2y^3+3xy(x^2+y^2)}{2}\\right)=945$\n$\\Rightarrow (xy)^3\\left(\\frac{2x^3+2y^3+3xy(x^2+y^2)}{2}\\right)=945$\n$\\Rightarrow (xy)^3(2x^3+2y^3+3xy(x^2+y^2))=1890$",
+        "$\\Rightarrow 2x^3+2y^3+3xy(x^2+y^2)=\\frac{1890}{(xy)^3}$\n$\\Rightarrow 2x^3+2y^3+3xy(x^2+y^2)=2\\cdot 2x^3+2\\cdot 2y^3+3xy(x^2+y^2)$",
+        "$2x^3+2y^3+3xy(x^2+y^2)=2(2x^3+2y^3+3xy(x^2+y^2))-(2x^3+2y^3+3xy(x^2+y^2))$",
+        "$2(2x^3+2y^3+3xy(x^2+y^2))-(2x^3+2y^3+3xy(x^2+y^2))=2\\left(2x^3+2y^3+3xy(x^2+y^2)\\right)-\\left(2x^3+2y^3+3xy(x^2+y^2)\\right)$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Let $a=x^3y^6$ and $b=y^3x^6$.\nThen $x^3y^6+y^3x^6=a+b$ and $x^4y^5+y^4x^5=\\frac{a}{xy}+\\frac{b}{xy}=\\frac{a+b}{xy}$.\nSince we are given that $a+b=945$ and $\\frac{a+b}{xy}=810$, we have $\\frac{a+b}{xy}=810$",
+            1
+        ],
+        [
+            "Step 2: $810xy=945$\n$\\Rightarrow xy=\\frac{945}{810}$\n$\\Rightarrow xy=\\frac{7}{6}$",
+            1
+        ],
+        [
+            "Step 3: $\\frac{a+b}{xy}=810$\n$\\Rightarrow \\frac{945}{\\frac{7}{6}}=810$\n$\\Rightarrow 5=5$",
+            1
+        ],
+        [
+            "Step 4: Factor $x^3y^6+y^3x^6$ as $(xy)^3(x+y)$ and $x^4y^5+y^4x^5$ as $(xy)^3(x^3y^2+y^3x^2)$.\nThen $(xy)^3(x+y)=945$ and $(xy)^3(x^3y^2+y^2x^2)=810(xy)^3$.",
+            1
+        ],
+        [
+            "$(xy)^3(x^3y^2+y^2x^2)=810(xy)^3$\n$\\Rightarrow (x^3y^2+y^2x^2)=810$",
+            1
+        ],
+        [
+            "$(xy)^3(x+y)=945$\n$\\Rightarrow (xy)^3\\left(\\frac{2x^3+2y^3+3xy(x^2+y^2)}{2}\\right)=945$",
+            1
+        ],
+        [
+            "$(xy)^3\\left(\\frac{2x^3+2y^3+3xy(x^2+y^2)}{2}\\right)=945$\n$\\Rightarrow (xy)^3\\left(\\frac{2x^3+2y^3+3xy(x^2+y^2)}{2}\\right)=945$\n$\\Rightarrow (xy)^3(2x^3+2y^3+3xy(x^2+y^2))=1890$",
+            1
+        ],
+        [
+            "$\\Rightarrow 2x^3+2y^3+3xy(x^2+y^2)=\\frac{1890}{(xy)^3}$\n$\\Rightarrow 2x^3+2y^3+3xy(x^2+y^2)=2\\cdot 2x^3+2\\cdot 2y^3+3xy(x^2+y^2)$",
+            1
+        ],
+        [
+            "$2x^3+2y^3+3xy(x^2+y^2)=2(2x^3+2y^3+3xy(x^2+y^2))-(2x^3+2y^3+3xy(x^2+y^2))$",
+            1
+        ],
+        [
+            "$2(2x^3+2y^3+3xy(x^2+y^2))-(2x^3+2y^3+3xy(x^2+y^2))=2\\left(2x^3+2y^3+3xy(x^2+y^2)\\right)-\\left(2x^3+2y^3+3xy(x^2+y^2)\\right)$",
+            1
+        ]
+    ],
+    "time": 134.108820438385,
+    "total_tokens": 9988,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

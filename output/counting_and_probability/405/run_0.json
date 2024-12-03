@@ -1,0 +1,66 @@
+{
+    "problem": "In the game of Twister, a spinner randomly selects either an arm or a leg, and also selects one of four colors, one of which is red, each with equal probability, and players have to move the appropriate body part to the appropriately colored spot on the ground. There are four players. Each player spins once, and makes the move the spinner selects. What is the probability that in these four spins, there will be exactly two moves to a red spot, and the body part selected to move will be an arm exactly $3$ times?",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "There are  $\\binom{4}{2}=6$ ways to pick which $2$ of the $4$ spins will come up red. Each spin has a $1/4$ chance of coming up red, and $3/4$ chance of not coming up red, so once we pick which $2$ spins we want to come up red, there is a $\\left(\\frac{1}{4}\\right)^{\\!2}\\left(\\frac{3}{4}\\right)^{\\!2}$ chance that the two spins we pick come up red and the other two do not. So, there is a $$6\\left(\\frac{1}{4}\\right)^{\\!2}\\left(\\frac{3}{4}\\right)^{\\!2}=\\frac{27}{128}$$chance that exactly $2$ come up red.\n\nThere are  $\\binom{4}{3}=4$ ways to pick which 3 of the 4 spins will point to an arm. Each spin has a $1/2$ chance of pointing to an arm, and $1/2$ chance of not pointing to an arm, so once we pick which $3$ spins we want to point to an arm, there is a $\\left(\\frac{1}{2}\\right)^{\\!3}\\left(\\frac{1}{2}\\right)^{\\!1}$ chance that the three spins we pick come up arm and the other one does not. So, there is a $$4\\left(\\frac{1}{2}\\right)^{\\!3}\\left(\\frac{1}{2}\\right)^{\\!1} = \\frac{1}{4}$$chance that exactly $3$ spins point to an arm.\n\nThe color selection and limb selection are independent events, so the probability that they both happen is the product of their individual probabilities; $\\frac{27}{128} \\cdot \\frac{1}{4} = \\boxed{\\frac{27}{512}}$.",
+    "is_solved": false,
+    "model_solution": "Step 1: Determine the probability of an individual move to a red spot.\nAmy has to move an arm to a red spot $\\frac{1}{8}$ of the time.\nShe has to move a leg to a red spot $\\frac{1}{8}$ of the time.\nStep 2: Determine the probability of two specific moves to a red spot and two specific moves to a non-red spot, with specific body parts selected exactly 3 times.\nThere are four ways to choose two of these three moves to be to a red spot, so the probability is\n\\[\\binom{3}{2}\\left(\\frac{1}{8}\\right)^{2}\\left(\\frac{7}{8}\\right)\\left(\\frac{1}{8}\\right)^{1}\\left(\\frac{7}{8}\\right)\\left(\\frac{1}{8}\\right)^{1}\\left(\\frac{7}{8}\\right)\\]\n\\[=\\frac{21}{2^{12}}.\\]\nStep 3: Calculate the total probability of exactly two moves to a red spot, and the body part selected to move will be an arm exactly $3$ times.\n\\[\\binom{4}{2}\\left(\\frac{21}{2^{12}}\\right)\\]\nStep 4: Simplify the expression\n\\[\\binom{4}{2}\\left(\\frac{21}{2^{12}}\\right)=\\frac{84}{2^{12}}.\\]\nStep 4: Simplify the expression\n\\[\\binom{4}{2}\\left(\\frac{21}{2^{12}}\\right)=\\frac{84}{2^{12}}=\\frac{21}{2^{10}}.\\]\nStep 5:\n$\\frac{21}{2^{10}}$\nStep 6: \n\\[\\frac{21}{2^{10}}\\]\nStep 7:\n\\[\\frac{21}{2^{10}}\\]\nStep 8:\n\\[\\frac{21}{2^{10}}\\]\nStep 9:\n\\[\\frac{21}{2^{10}}\\]",
+    "steps": [
+        "Step 1: Determine the probability of an individual move to a red spot.\nAmy has to move an arm to a red spot $\\frac{1}{8}$ of the time.\nShe has to move a leg to a red spot $\\frac{1}{8}$ of the time.",
+        "Step 2: Determine the probability of two specific moves to a red spot and two specific moves to a non-red spot, with specific body parts selected exactly 3 times.\nThere are four ways to choose two of these three moves to be to a red spot, so the probability is\n\\[\\binom{3}{2}\\left(\\frac{1}{8}\\right)^{2}\\left(\\frac{7}{8}\\right)\\left(\\frac{1}{8}\\right)^{1}\\left(\\frac{7}{8}\\right)\\left(\\frac{1}{8}\\right)^{1}\\left(\\frac{7}{8}\\right)\\]\n\\[=\\frac{21}{2^{12}}.\\]",
+        "Step 3: Calculate the total probability of exactly two moves to a red spot, and the body part selected to move will be an arm exactly $3$ times.\n\\[\\binom{4}{2}\\left(\\frac{21}{2^{12}}\\right)\\]",
+        "Step 4: Simplify the expression\n\\[\\binom{4}{2}\\left(\\frac{21}{2^{12}}\\right)=\\frac{84}{2^{12}}.\\]",
+        "Step 4: Simplify the expression\n\\[\\binom{4}{2}\\left(\\frac{21}{2^{12}}\\right)=\\frac{84}{2^{12}}=\\frac{21}{2^{10}}.\\]",
+        "Step 5:\n$\\frac{21}{2^{10}}$",
+        "Step 6: \n\\[\\frac{21}{2^{10}}\\]",
+        "Step 7:\n\\[\\frac{21}{2^{10}}\\]",
+        "Step 8:\n\\[\\frac{21}{2^{10}}\\]",
+        "Step 9:\n\\[\\frac{21}{2^{10}}\\]"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Determine the probability of an individual move to a red spot.\nAmy has to move an arm to a red spot $\\frac{1}{8}$ of the time.\nShe has to move a leg to a red spot $\\frac{1}{8}$ of the time.",
+            1
+        ],
+        [
+            "Step 2: Determine the probability of two specific moves to a red spot and two specific moves to a non-red spot, with specific body parts selected exactly 3 times.\nThere are four ways to choose two of these three moves to be to a red spot, so the probability is\n\\[\\binom{3}{2}\\left(\\frac{1}{8}\\right)^{2}\\left(\\frac{7}{8}\\right)\\left(\\frac{1}{8}\\right)^{1}\\left(\\frac{7}{8}\\right)\\left(\\frac{1}{8}\\right)^{1}\\left(\\frac{7}{8}\\right)\\]\n\\[=\\frac{21}{2^{12}}.\\]",
+            1
+        ],
+        [
+            "Step 3: Calculate the total probability of exactly two moves to a red spot, and the body part selected to move will be an arm exactly $3$ times.\n\\[\\binom{4}{2}\\left(\\frac{21}{2^{12}}\\right)\\]",
+            1
+        ],
+        [
+            "Step 4: Simplify the expression\n\\[\\binom{4}{2}\\left(\\frac{21}{2^{12}}\\right)=\\frac{84}{2^{12}}.\\]",
+            1
+        ],
+        [
+            "Step 4: Simplify the expression\n\\[\\binom{4}{2}\\left(\\frac{21}{2^{12}}\\right)=\\frac{84}{2^{12}}=\\frac{21}{2^{10}}.\\]",
+            1
+        ],
+        [
+            "Step 5:\n$\\frac{21}{2^{10}}$",
+            1
+        ],
+        [
+            "Step 6: \n\\[\\frac{21}{2^{10}}\\]",
+            1
+        ],
+        [
+            "Step 7:\n\\[\\frac{21}{2^{10}}\\]",
+            1
+        ],
+        [
+            "Step 8:\n\\[\\frac{21}{2^{10}}\\]",
+            1
+        ],
+        [
+            "Step 9:\n\\[\\frac{21}{2^{10}}\\]",
+            1
+        ]
+    ],
+    "time": 133.73737573623657,
+    "total_tokens": 9930,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

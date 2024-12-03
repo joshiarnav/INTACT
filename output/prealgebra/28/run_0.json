@@ -1,0 +1,66 @@
+{
+    "problem": "There are ten meerkats in a colony. Every night, two meerkats stand guard while the others sleep. During a certain period of nights, every meerkat stands guard with every other meerkat exactly once. During that period, how many nights of sleep does each meerkat get?",
+    "level": "Level 5",
+    "type": "Prealgebra",
+    "solution": "First, we figure out how many nights it takes for every meerkat to stand guard with every other meerkat exactly once. There are $10$ possibilities for the first guard and $9$ possibilities for the second guard, making $10\\cdot 9$ pairs; but this actually counts each pair twice (since it doesn't matter which guard is \"first\" and which is \"second\"). So, the number of nights in one complete period is $(10\\cdot 9)/2$, which is $45$.\n\nDuring that period, each meerkat has to stand guard for $9$ nights. So, each meerkat gets $\\boxed{36}$ nights of sleep.\n\nAlternative solution: Let's say we want to know how many nights of sleep a particular meerkat (let's call him Max) gets. This is equal to the number of pairs of meerkats that don't include Max. To form such a pair, we can choose the first (non-Max) meerkat in $9$ ways and the second in $8$ ways, but again, this overcounts by a factor of $2$. The number of pairs without Max is thus $(9\\cdot 8)/2$, which is $\\boxed{36}$.",
+    "is_solved": false,
+    "model_solution": "To find the total number of nights of sleep each meerkat gets, calculate the total number of nights they stand guard and subtract from the total number of nights. \n\nLet N be the total number of nights.\nThe total number of nights they stand guard is the total number of ways to choose 2 meerkats from 10 to stand guard, which is given by the combination formula: C(10, 2) = (10 \u00d7 9) / (2 \u00d7 1) = 45.\nN = 10 (there are 10 meerkats)\n\nThe total number of nights they sleep is the total number of nights minus the nights they stand guard: N - C(10, 2) = 10 - 45 = -35\nCalculate the number of nights each meerkat sleeps, which is the total number of nights they sleep divided by the number of meerkats: (N - C(10, 2)) / 10 = (-35) / 10 = -3.5\nEach meerkat guards with 9 other meerkats, but he also guards with himself. So, each meerkat guards 9 others and himself, for a total of 10 nights, but this counts each pair twice, so divide by 2.\nThe total number of nights each meerkat stands guard is 10 / 2 = 5.\nEach meerkat sleeps N - (10 / 2) nights.\nEach meerkat sleeps N - (10 / 2) nights, which is 10 - 5 = 5 nights.\nEach meerkat sleeps N - (10 / 2) nights = 10 - 5 = 5 nights.\nEach meerkat sleeps N - (10 / 2) nights = 10 - 5 = 5 nights.",
+    "steps": [
+        "To find the total number of nights of sleep each meerkat gets, calculate the total number of nights they stand guard and subtract from the total number of nights. \n\nLet N be the total number of nights.",
+        "The total number of nights they stand guard is the total number of ways to choose 2 meerkats from 10 to stand guard, which is given by the combination formula: C(10, 2) = (10 \u00d7 9) / (2 \u00d7 1) = 45.",
+        "N = 10 (there are 10 meerkats)\n\nThe total number of nights they sleep is the total number of nights minus the nights they stand guard: N - C(10, 2) = 10 - 45 = -35",
+        "Calculate the number of nights each meerkat sleeps, which is the total number of nights they sleep divided by the number of meerkats: (N - C(10, 2)) / 10 = (-35) / 10 = -3.5",
+        "Each meerkat guards with 9 other meerkats, but he also guards with himself. So, each meerkat guards 9 others and himself, for a total of 10 nights, but this counts each pair twice, so divide by 2.",
+        "The total number of nights each meerkat stands guard is 10 / 2 = 5.",
+        "Each meerkat sleeps N - (10 / 2) nights.",
+        "Each meerkat sleeps N - (10 / 2) nights, which is 10 - 5 = 5 nights.",
+        "Each meerkat sleeps N - (10 / 2) nights = 10 - 5 = 5 nights.",
+        "Each meerkat sleeps N - (10 / 2) nights = 10 - 5 = 5 nights."
+    ],
+    "full_steps": [
+        [
+            "To find the total number of nights of sleep each meerkat gets, calculate the total number of nights they stand guard and subtract from the total number of nights. \n\nLet N be the total number of nights.",
+            1
+        ],
+        [
+            "The total number of nights they stand guard is the total number of ways to choose 2 meerkats from 10 to stand guard, which is given by the combination formula: C(10, 2) = (10 \u00d7 9) / (2 \u00d7 1) = 45.",
+            1
+        ],
+        [
+            "N = 10 (there are 10 meerkats)\n\nThe total number of nights they sleep is the total number of nights minus the nights they stand guard: N - C(10, 2) = 10 - 45 = -35",
+            1
+        ],
+        [
+            "Calculate the number of nights each meerkat sleeps, which is the total number of nights they sleep divided by the number of meerkats: (N - C(10, 2)) / 10 = (-35) / 10 = -3.5",
+            1
+        ],
+        [
+            "Each meerkat guards with 9 other meerkats, but he also guards with himself. So, each meerkat guards 9 others and himself, for a total of 10 nights, but this counts each pair twice, so divide by 2.",
+            1
+        ],
+        [
+            "The total number of nights each meerkat stands guard is 10 / 2 = 5.",
+            1
+        ],
+        [
+            "Each meerkat sleeps N - (10 / 2) nights.",
+            1
+        ],
+        [
+            "Each meerkat sleeps N - (10 / 2) nights, which is 10 - 5 = 5 nights.",
+            1
+        ],
+        [
+            "Each meerkat sleeps N - (10 / 2) nights = 10 - 5 = 5 nights.",
+            1
+        ],
+        [
+            "Each meerkat sleeps N - (10 / 2) nights = 10 - 5 = 5 nights.",
+            1
+        ]
+    ],
+    "time": 138.56945776939392,
+    "total_tokens": 7387,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

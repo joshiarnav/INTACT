@@ -1,0 +1,51 @@
+{
+    "problem": "A solid $5\\times 5\\times 5$ cube is composed of unit cubes. Each face of the large, solid cube is partially painted with gray paint, as shown. [asy]\n\nfill((0,0)--(0,1)--(1,1)--(1,0)--cycle,gray);\n\nfill((0,4)--(0,5)--(1,5)--(1,4)--cycle,gray);\n\nfill((4,1)--(5,1)--(5,0)--(4,0)--cycle,gray);\n\nfill((1,2)--(2,2)--(2,1)--(1,1)--cycle,gray);\n\nfill((2,2)--(3,2)--(3,1)--(2,1)--cycle,gray);\n\nfill((3,2)--(4,2)--(4,1)--(3,1)--cycle,gray);\n\nfill((1,3)--(2,3)--(2,2)--(1,2)--cycle,gray);\n\nfill((3,3)--(4,3)--(4,2)--(3,2)--cycle,gray);\n\nfill((1,4)--(2,4)--(2,3)--(1,3)--cycle,gray);\n\nfill((2,4)--(3,4)--(3,3)--(2,3)--cycle,gray);\n\nfill((3,4)--(4,4)--(4,3)--(3,3)--cycle,gray);\n\nfill((4,5)--(5,5)--(5,4)--(4,4)--cycle,gray);\n\ndraw((0,0)--(0,1)--(1,1)--(1,0)--(0,0),rgb(0,0,0));\n\ndraw((0,1)--(0,2)--(1,2)--(1,1),rgb(0,0,0));\n\ndraw((0,2)--(0,3)--(1,3)--(1,2),rgb(0,0,0));\n\ndraw((0,3)--(0,4)--(1,4)--(1,3),rgb(0,0,0));\n\ndraw((0,4)--(0,5)--(1,5)--(1,4),rgb(0,0,0));\n\ndraw((1,0)--(1,1)--(2,1)--(2,0)--(1,0),rgb(0,0,0));\n\ndraw((2,1)--(3,1)--(3,0)--(2,0),rgb(0,0,0));\n\ndraw((3,1)--(4,1)--(4,0)--(3,0),rgb(0,0,0));\n\ndraw((4,1)--(5,1)--(5,0)--(4,0),rgb(0,0,0));\n\ndraw((1,2)--(2,2)--(2,1)--(1,1),rgb(0,0,0));\n\ndraw((2,2)--(3,2)--(3,1)--(2,1)--(2,2),rgb(0,0,0));\n\ndraw((3,2)--(4,2)--(4,1),rgb(0,0,0));\n\ndraw((4,2)--(5,2)--(5,1)--(4,1),rgb(0,0,0));\n\ndraw((1,3)--(2,3)--(2,2)--(1,2)--(1,3),rgb(0,0,0));\n\ndraw((2,3)--(3,3)--(3,2),rgb(0,0,0));\n\ndraw((3,3)--(4,3)--(4,2),rgb(0,0,0));\n\ndraw((4,3)--(5,3)--(5,2),rgb(0,0,0));\n\ndraw((1,4)--(2,4)--(2,3),rgb(0,0,0));\n\ndraw((2,4)--(3,4)--(3,3),rgb(0,0,0));\n\ndraw((3,4)--(4,4)--(4,3),rgb(0,0,0));\n\ndraw((4,4)--(5,4)--(5,3),rgb(0,0,0));\n\ndraw((1,5)--(2,5)--(2,4),rgb(0,0,0));\n\ndraw((2,5)--(3,5)--(3,4),rgb(0,0,0));\n\ndraw((3,5)--(4,5)--(4,4),rgb(0,0,0));\n\ndraw((4,5)--(5,5)--(5,4),rgb(0,0,0));\n\n[/asy] \t \tWhat fraction of the entire solid cube's unit cubes have no paint on them? Express your answer as a common fraction.",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "We know that each of the unit cubes in the $3\\times3\\times3$ cube in the center of the $5\\times5\\times5$ cube has no paint on it. On the surface of the cube, three of the unit cubes on each edge of the big cube have no paint on them, and the center unit cube of each face of the big cube has no paint on it. Since a cube has $12$ edges and $6$ faces, this makes a total of $3\\cdot3\\cdot3 + 12\\cdot3 + 6\\cdot1 = 69$ unit cubes with no paint on them. There are $125$ unit cubes altogether. The fraction with no paint is $\\boxed{\\frac{69}{125}}.$",
+    "is_solved": true,
+    "model_solution": "There are $5^3 = 125$ unit cubes in the solid cube.\nWe see that the cubes on the corners of the large cube will each be painted on 3 sides, the cubes on the edges will each be painted on two sides, the cubes on the faces will be painted on one side, and the cubes in the center will be painted on no sides. There are $8$ corner cubes, $12$ edge cubes, and $6$ face cubes, and the rest are center cubes.\nThere are $6 \\times 5 \\times 5 = 150$ cubes on the faces of the large cube (including both the painted and unpainted faces), and $8$ of these face cubes have been counted twice as edge cubes.\nThere are $6 \\times 5 \\times 5 - 8 = 142$ face cubes.\nThere are $125 - 142 = -17$ cubes in the interior of the large cube, and since we cannot have a negative number of cubes, we realize that some of the cubes in the interior have been double-counted as face cubes. There are $150 - 12 - 8 = 130$ cubes in the interior of the large cube, and so there are $130 - 17 = 113$ such cubes that are actually in the interior of the large cube.\nLet $n$ be the number of cubes completely unpainted in the solid cube. Then $n = 125 - 8 \\times 3 - 12 \\times 2 - 6 \\times 1 = 125 - 72 - 24 - 6 = 23$.\nThe final answer is: $\\boxed{\\frac{23}{125}}$",
+    "steps": [
+        "There are $5^3 = 125$ unit cubes in the solid cube.",
+        "We see that the cubes on the corners of the large cube will each be painted on 3 sides, the cubes on the edges will each be painted on two sides, the cubes on the faces will be painted on one side, and the cubes in the center will be painted on no sides. There are $8$ corner cubes, $12$ edge cubes, and $6$ face cubes, and the rest are center cubes.",
+        "There are $6 \\times 5 \\times 5 = 150$ cubes on the faces of the large cube (including both the painted and unpainted faces), and $8$ of these face cubes have been counted twice as edge cubes.",
+        "There are $6 \\times 5 \\times 5 - 8 = 142$ face cubes.",
+        "There are $125 - 142 = -17$ cubes in the interior of the large cube, and since we cannot have a negative number of cubes, we realize that some of the cubes in the interior have been double-counted as face cubes. There are $150 - 12 - 8 = 130$ cubes in the interior of the large cube, and so there are $130 - 17 = 113$ such cubes that are actually in the interior of the large cube.",
+        "Let $n$ be the number of cubes completely unpainted in the solid cube. Then $n = 125 - 8 \\times 3 - 12 \\times 2 - 6 \\times 1 = 125 - 72 - 24 - 6 = 23$.",
+        "The final answer is: $\\boxed{\\frac{23}{125}}$"
+    ],
+    "full_steps": [
+        [
+            "There are $5^3 = 125$ unit cubes in the solid cube.",
+            1
+        ],
+        [
+            "We see that the cubes on the corners of the large cube will each be painted on 3 sides, the cubes on the edges will each be painted on two sides, the cubes on the faces will be painted on one side, and the cubes in the center will be painted on no sides. There are $8$ corner cubes, $12$ edge cubes, and $6$ face cubes, and the rest are center cubes.",
+            1
+        ],
+        [
+            "There are $6 \\times 5 \\times 5 = 150$ cubes on the faces of the large cube (including both the painted and unpainted faces), and $8$ of these face cubes have been counted twice as edge cubes.",
+            1
+        ],
+        [
+            "There are $6 \\times 5 \\times 5 - 8 = 142$ face cubes.",
+            1
+        ],
+        [
+            "There are $125 - 142 = -17$ cubes in the interior of the large cube, and since we cannot have a negative number of cubes, we realize that some of the cubes in the interior have been double-counted as face cubes. There are $150 - 12 - 8 = 130$ cubes in the interior of the large cube, and so there are $130 - 17 = 113$ such cubes that are actually in the interior of the large cube.",
+            1
+        ],
+        [
+            "Let $n$ be the number of cubes completely unpainted in the solid cube. Then $n = 125 - 8 \\times 3 - 12 \\times 2 - 6 \\times 1 = 125 - 72 - 24 - 6 = 23$.",
+            1
+        ],
+        [
+            "The final answer is: $\\boxed{\\frac{23}{125}}$",
+            1
+        ]
+    ],
+    "time": 91.21686267852783,
+    "total_tokens": 18486,
+    "final_answer_tokens": 1464,
+    "model": "meta-llama/Llama-Vision-Free"
+}

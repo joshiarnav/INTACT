@@ -1,0 +1,56 @@
+{
+    "problem": "Suppose that $ABCD$ is a trapezoid in which $\\overline{AD}|| \\overline{BC}$.  Given $\\overline{AC}\\perp\\overline{CD}$, $\\overline{AC}$ bisects angle $\\angle BAD$, and $[ABCD]=42$, then compute $[\\triangle ACD]$.",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "There are many ways to draw the diagram; one possibility is shown below.  We know that $\\angle BAC \\cong \\angle CAD\\cong \\angle BCA$ since $\\overline{AC}$ bisects $\\angle BAD$ and $\\overline{AD} || \\overline{BC}$.  Therefore $\\triangle BAC$ is isosceles.  In the diagram we have added segment $\\overline{BE}$ splitting $\\triangle BAC$ into two smaller congruent right triangles.  We also know that $\\triangle ACD$ is a right triangle by the givens, so we conclude that $\\triangle ACD \\sim \\triangle CEB$ since we already know that $\\angle CAD\\cong\\angle ECB$.  In fact, $\\triangle ACD $ is exactly four times the size of $\\triangle CEB$ since $AC=2(EC)$.  If we let $[\\triangle CEB]=K$, then $[\\triangle AEB]=K$ while $[\\triangle ACD]=4K$.  Thus $6K=42$, so $K=7$ and $[\\triangle ACD]=4K=\\boxed{28}$.\n\n[asy]\nimport olympiad; import graph; size(150); defaultpen(linewidth(0.8)); dotfactor=4;\nint randangle = 50;\ndraw((-5,0)--(5*dir(randangle))--(5,0)--cycle);\npath x1 = (5*Cos(randangle),5*Sin(randangle))--(-10,5*Sin(randangle));\npath x2 = (-5,0)--(5dir(2*randangle));\npair X = intersectionpoint(x1,x2);\ndraw((-5,0)--X--(5*dir(randangle)));\ndraw(rightanglemark((5,0),(5*dir(50)),(-5,0),s=14));\ndraw(anglemark((5,0),(-5,0),X,18));\ndraw(anglemark(X,5*dir(50),(-5,0),18));\nlabel(\"$A$\",(-5,0),W); label(\"$D$\",(5,0),E); label(\"$C$\",(5*dir(50)),E);\nlabel(\"$B$\",(X),N);\n\npair L = foot(X,(-5,0),5*dir(50));\ndraw(X--L);\ndraw(rightanglemark(X,L,(-5,0),14)); draw(rightanglemark(X,L,(5*dir(50)),14));\nlabel(\"$E$\",L,SE);\n[/asy]",
+    "is_solved": true,
+    "model_solution": "Step 1:  Let $D'$ be the intersection of $\\overline{AC}$ and $\\overline{BD}$, and let $s=\\frac{1}{2}AD'$.\nStep 2:  Since $\\overline{AC}$ bisects angle $\\angle BAD$, by the Angle Bisector Theorem, it follows that $\\frac{AD'}{BD'}=\\frac{AB}{BC}$.\nStep 3:  Since $\\overline{AD}||\\overline{BC}$, triangles $ABD'$ and $BCD'$ are similar right triangles, so the ratio of the altitudes of these triangles, which are $AC$ and $AD'$, respectively, is the same as the ratio of their bases, $AB$ and $BC$.\nStep 4:\n$\\frac{AD'}{BD'}=\\frac{AB}{BC}=\\frac{AD}{BD}$\nStep 5:  Since $[\\triangle ACD]=\\frac{1}{2}AD'\\cdot AC$ and $[ABCD]=42=[\\triangle ABD']+[D'BDA]=[D'BDA]+[\\triangle ABD']$, by substituting the results of earlier steps, we can solve for $AD'$ and find the value of $[\\triangle ACD]$.\n$\\frac{1}{2}AC\\cdot AD'=[D'BDA]=\\frac{1}{2}AC\\cdot AD\\cdot\\frac{AD}{BD'}=\\frac{1}{2}AC\\cdot AD\\cdot\\frac{AD}{AD+AB}.$\n$\\frac{AD'}{AD+AB}=\\frac{2}{3}$\n$\\frac{AD'}{AD'}+AB=\\frac{2}{3}\\cdot\\left(AD'+AB\\right)$\n$\\frac{AD'}{AD'}+AB=\\frac{2}{3}\\cdot\\left(AD'+AB\\right)$\n$\\Rightarrow\\qquad 1+AB=\\frac{2}{3}\\cdot\\left(AD'+AB\\right)\\Rightarrow\\frac{AB}{AD'+AB}=\\frac{1}{2}$\n$\\frac{AD'}{AD'+AB}=\\frac{1}{2}$\nFinal Answer",
+    "steps": [
+        "Step 1:  Let $D'$ be the intersection of $\\overline{AC}$ and $\\overline{BD}$, and let $s=\\frac{1}{2}AD'$.\nStep 2:  Since $\\overline{AC}$ bisects angle $\\angle BAD$, by the Angle Bisector Theorem, it follows that $\\frac{AD'}{BD'}=\\frac{AB}{BC}$.\nStep 3:  Since $\\overline{AD}||\\overline{BC}$, triangles $ABD'$ and $BCD'$ are similar right triangles, so the ratio of the altitudes of these triangles, which are $AC$ and $AD'$, respectively, is the same as the ratio of their bases, $AB$ and $BC$.",
+        "Step 4:\n$\\frac{AD'}{BD'}=\\frac{AB}{BC}=\\frac{AD}{BD}$",
+        "Step 5:  Since $[\\triangle ACD]=\\frac{1}{2}AD'\\cdot AC$ and $[ABCD]=42=[\\triangle ABD']+[D'BDA]=[D'BDA]+[\\triangle ABD']$, by substituting the results of earlier steps, we can solve for $AD'$ and find the value of $[\\triangle ACD]$.",
+        "$\\frac{1}{2}AC\\cdot AD'=[D'BDA]=\\frac{1}{2}AC\\cdot AD\\cdot\\frac{AD}{BD'}=\\frac{1}{2}AC\\cdot AD\\cdot\\frac{AD}{AD+AB}.$",
+        "$\\frac{AD'}{AD+AB}=\\frac{2}{3}$",
+        "$\\frac{AD'}{AD'}+AB=\\frac{2}{3}\\cdot\\left(AD'+AB\\right)$",
+        "$\\frac{AD'}{AD'}+AB=\\frac{2}{3}\\cdot\\left(AD'+AB\\right)$\n$\\Rightarrow\\qquad 1+AB=\\frac{2}{3}\\cdot\\left(AD'+AB\\right)\\Rightarrow\\frac{AB}{AD'+AB}=\\frac{1}{2}$",
+        "$\\frac{AD'}{AD'+AB}=\\frac{1}{2}$\nFinal Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Let $D'$ be the intersection of $\\overline{AC}$ and $\\overline{BD}$, and let $s=\\frac{1}{2}AD'$.\nStep 2:  Since $\\overline{AC}$ bisects angle $\\angle BAD$, by the Angle Bisector Theorem, it follows that $\\frac{AD'}{BD'}=\\frac{AB}{BC}$.\nStep 3:  Since $\\overline{AD}||\\overline{BC}$, triangles $ABD'$ and $BCD'$ are similar right triangles, so the ratio of the altitudes of these triangles, which are $AC$ and $AD'$, respectively, is the same as the ratio of their bases, $AB$ and $BC$.",
+            1
+        ],
+        [
+            "Step 4:\n$\\frac{AD'}{BD'}=\\frac{AB}{BC}=\\frac{AD}{BD}$",
+            1
+        ],
+        [
+            "Step 5:  Since $[\\triangle ACD]=\\frac{1}{2}AD'\\cdot AC$ and $[ABCD]=42=[\\triangle ABD']+[D'BDA]=[D'BDA]+[\\triangle ABD']$, by substituting the results of earlier steps, we can solve for $AD'$ and find the value of $[\\triangle ACD]$.",
+            1
+        ],
+        [
+            "$\\frac{1}{2}AC\\cdot AD'=[D'BDA]=\\frac{1}{2}AC\\cdot AD\\cdot\\frac{AD}{BD'}=\\frac{1}{2}AC\\cdot AD\\cdot\\frac{AD}{AD+AB}.$",
+            1
+        ],
+        [
+            "$\\frac{AD'}{AD+AB}=\\frac{2}{3}$",
+            1
+        ],
+        [
+            "$\\frac{AD'}{AD'}+AB=\\frac{2}{3}\\cdot\\left(AD'+AB\\right)$",
+            1
+        ],
+        [
+            "$\\frac{AD'}{AD'}+AB=\\frac{2}{3}\\cdot\\left(AD'+AB\\right)$\n$\\Rightarrow\\qquad 1+AB=\\frac{2}{3}\\cdot\\left(AD'+AB\\right)\\Rightarrow\\frac{AB}{AD'+AB}=\\frac{1}{2}$",
+            1
+        ],
+        [
+            "$\\frac{AD'}{AD'+AB}=\\frac{1}{2}$\nFinal Answer",
+            1
+        ]
+    ],
+    "time": 106.87843751907349,
+    "total_tokens": 7382,
+    "final_answer_tokens": 600,
+    "model": "meta-llama/Llama-Vision-Free"
+}

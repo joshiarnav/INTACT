@@ -1,0 +1,66 @@
+{
+    "problem": "Each face of a cube is assigned a different integer. Then each vertex is assigned the sum of the integer values on the faces that meet at the vertex. Finally, the vertex numbers are added. What is the largest number that must divide the final sum for every possible numbering of the faces?",
+    "level": "Level 5",
+    "type": "Number Theory",
+    "solution": "Let the total sum be $S$. The number on each face is added to $S$ four separate times, since each face borders on $4$ vertices. There are $8$ vertices, and each is the sum of $3$ face numbers since each vertex borders $3$ faces. Thus $S$ is the sum of $8\\cdot 3=24$ face numbers. Since each face is added $4$ times, and there are $6$ faces, we know none of the faces are repeated or left out and each is added exactly $4$ times,  so $S=4(\\text{sum of numbers on faces})$. Thus no matter what the sum of the numbers on the faces is, the total sum $S$ is always divisible by $\\boxed{4}$.",
+    "is_solved": false,
+    "model_solution": "Step 1: Let the six face values be $a,$ $b,$ $c,$ $d,$ $e,$, and $f$. The sum of the vertex values is $a + b + c + d + e + f + (a + b + f + e) + (a + c + e + d) + (a + c + f + b) + (a + d + f + e) + (b + c + e + d) + (b + d + f + a)$.\nStep 2: Simplify the sum of the vertex values to $3a+3b+3c+3d+3e+3f$.\nStep 3: The sum of the vertex values is $3(a+b+c+d+e+f)$. Since each vertex is assigned the sum of the integer values on the faces that meet at the vertex, $a+b+c+d+e+f$ is divisible by 3.\nStep 4: Since the sum of the vertex values is $3(a+b+c+d+e+f)$, it must be divisible by 3.\nStep 5: $a+b+c+d+e+f$ is the sum of six different integers, and it must be divisible by 3, so it must be divisible by 6.\nStep 6: Since $a+b+c+d+e+f$ is the sum of six different integers and is divisible by 6, it must be divisible by both 3 and 2, so it must be divisible by 6.\nThe sum $3(a+b+c+d+e+f)$ is also divisible by 9, since it is the sum of three consecutive multiples of 3.\nStep 7: Since $3(a+b+c+d+e+f)$ is also divisible by 9, it must be divisible by both 3 and 9, so it must be divisible by 9.\nStep 8: Therefore, the sum $3(a+b+c+d+e+f)$ is divisible by $3\\cdot 3\\cdot 2=18$.\nStep 9: Therefore, the largest number that must divide the final sum for every possible numbering of the faces is 18.",
+    "steps": [
+        "Step 1: Let the six face values be $a,$ $b,$ $c,$ $d,$ $e,$, and $f$. The sum of the vertex values is $a + b + c + d + e + f + (a + b + f + e) + (a + c + e + d) + (a + c + f + b) + (a + d + f + e) + (b + c + e + d) + (b + d + f + a)$.",
+        "Step 2: Simplify the sum of the vertex values to $3a+3b+3c+3d+3e+3f$.",
+        "Step 3: The sum of the vertex values is $3(a+b+c+d+e+f)$. Since each vertex is assigned the sum of the integer values on the faces that meet at the vertex, $a+b+c+d+e+f$ is divisible by 3.",
+        "Step 4: Since the sum of the vertex values is $3(a+b+c+d+e+f)$, it must be divisible by 3.",
+        "Step 5: $a+b+c+d+e+f$ is the sum of six different integers, and it must be divisible by 3, so it must be divisible by 6.",
+        "Step 6: Since $a+b+c+d+e+f$ is the sum of six different integers and is divisible by 6, it must be divisible by both 3 and 2, so it must be divisible by 6.",
+        "The sum $3(a+b+c+d+e+f)$ is also divisible by 9, since it is the sum of three consecutive multiples of 3.",
+        "Step 7: Since $3(a+b+c+d+e+f)$ is also divisible by 9, it must be divisible by both 3 and 9, so it must be divisible by 9.",
+        "Step 8: Therefore, the sum $3(a+b+c+d+e+f)$ is divisible by $3\\cdot 3\\cdot 2=18$.",
+        "Step 9: Therefore, the largest number that must divide the final sum for every possible numbering of the faces is 18."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Let the six face values be $a,$ $b,$ $c,$ $d,$ $e,$, and $f$. The sum of the vertex values is $a + b + c + d + e + f + (a + b + f + e) + (a + c + e + d) + (a + c + f + b) + (a + d + f + e) + (b + c + e + d) + (b + d + f + a)$.",
+            1
+        ],
+        [
+            "Step 2: Simplify the sum of the vertex values to $3a+3b+3c+3d+3e+3f$.",
+            1
+        ],
+        [
+            "Step 3: The sum of the vertex values is $3(a+b+c+d+e+f)$. Since each vertex is assigned the sum of the integer values on the faces that meet at the vertex, $a+b+c+d+e+f$ is divisible by 3.",
+            1
+        ],
+        [
+            "Step 4: Since the sum of the vertex values is $3(a+b+c+d+e+f)$, it must be divisible by 3.",
+            1
+        ],
+        [
+            "Step 5: $a+b+c+d+e+f$ is the sum of six different integers, and it must be divisible by 3, so it must be divisible by 6.",
+            1
+        ],
+        [
+            "Step 6: Since $a+b+c+d+e+f$ is the sum of six different integers and is divisible by 6, it must be divisible by both 3 and 2, so it must be divisible by 6.",
+            1
+        ],
+        [
+            "The sum $3(a+b+c+d+e+f)$ is also divisible by 9, since it is the sum of three consecutive multiples of 3.",
+            1
+        ],
+        [
+            "Step 7: Since $3(a+b+c+d+e+f)$ is also divisible by 9, it must be divisible by both 3 and 9, so it must be divisible by 9.",
+            1
+        ],
+        [
+            "Step 8: Therefore, the sum $3(a+b+c+d+e+f)$ is divisible by $3\\cdot 3\\cdot 2=18$.",
+            1
+        ],
+        [
+            "Step 9: Therefore, the largest number that must divide the final sum for every possible numbering of the faces is 18.",
+            1
+        ]
+    ],
+    "time": 140.75950598716736,
+    "total_tokens": 8236,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

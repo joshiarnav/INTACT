@@ -1,0 +1,46 @@
+{
+    "problem": "A line passing through the point $(1,1,1)$ intersects the line defined by\n\\[\\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\end{pmatrix} + t \\begin{pmatrix} 2 \\\\ 3 \\\\ 4 \\end{pmatrix}\\]at $P,$ and intersects the line defined by\n\\[\\begin{pmatrix} -2 \\\\ 3 \\\\ -1 \\end{pmatrix} + s \\begin{pmatrix} 1 \\\\ 2 \\\\ 4 \\end{pmatrix}\\]at $Q.$  Find point $Q.$",
+    "level": "Level 5",
+    "type": "Precalculus",
+    "solution": "For the first line, $P = (2t + 1, 3t + 2, 4t + 3).$  For the second line, $Q = (s - 2, 2s + 3, 4s - 1).$\n\nSince $(1,1,1),$ $P,$ and $Q$ are collinear, the vectors\n\\[\\begin{pmatrix} 2t + 1 \\\\ 3t + 2 \\\\ 4t + 3 \\end{pmatrix} - \\begin{pmatrix} 1 \\\\ 1 \\\\ 1 \\end{pmatrix} = \\begin{pmatrix} 2t \\\\ 3t + 1 \\\\ 4t + 2 \\end{pmatrix}\\]and\n\\[\\begin{pmatrix} s - 2 \\\\ 2s + 3 \\\\ 4s - 1 \\end{pmatrix} - \\begin{pmatrix} 1 \\\\ 1 \\\\ 1 \\end{pmatrix} = \\begin{pmatrix} s - 3 \\\\ 2s + 2 \\\\ 4s - 2 \\end{pmatrix}\\]will be proportional.  Thus,\n\\[\\frac{2t}{s - 3} = \\frac{3t + 1}{2s + 2} = \\frac{4t + 2}{4s - 2}.\\]Let\n\\[k = \\frac{2t}{s - 3} = \\frac{3t + 1}{2s + 2} = \\frac{4t + 2}{4s - 2}.\\]Then\n\\begin{align*}\n2t &= k(s - 3), \\\\\n3t + 1 &= k(2s + 2), \\\\\n4t + 2 &= k(4s - 2).\n\\end{align*}From the first equation, $4t = k(2s - 6).$  Subtracting from the equation $4t + 2 = k(4s - 2),$ we get\n\\[2 = k(2s + 4).\\]From the second equation, $6t + 2 = k(4s + 4).$  Subtracting the equation $4t + 2 = k(4s - 2),$ we get\n\\[2t = 6k,\\]so $t = 3k.$  Substituting into the first equation, we get $6k = k(s - 3).$\n\nIf $k = 0,$ then from the equations above,\n\\[2t = 3t + 1 = 4t + 2 = 0,\\]which is not possible.  So $k \\neq 0,$ which gives us $6 = s - 3,$ and $s = 9.$  Then $Q = \\boxed{(7,21,35)}.$",
+    "is_solved": false,
+    "model_solution": "Step 1:  To find the intersection point $P$ on the line defined by $\\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\end{pmatrix} + t \\begin{pmatrix} 2 \\\\ 3 \\\\ 4 \\end{pmatrix}$, we can express point $P$ as $\\begin{pmatrix} 1+2t_1 \\\\ 2+3t_1 \\\\ 3+4t_1 \\end{pmatrix}$.\nThe equation of this line can be expressed as $\\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\end{pmatrix} + t \\begin{pmatrix} 2 \\\\ 3 \\\\ 4 \\end{pmatrix} = \\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\end{pmatrix} + \\frac{t}{2} \\cdot 2 \\begin{pmatrix} 2 \\\\ 3 \\\\ 4 \\end{pmatrix}.$\nStep 2: $\\begin{pmatrix} 1+2t_1 \\\\ 2+3t_1 \\\\ 3+4t_1 \\end{pmatrix} = \\begin{pmatrix} 1+2t \\\\ 2+3t \\\\ 3+4t \\end{pmatrix}$\nBy equating the components of the two expressions for $P,$ we find $t_1 = t.$\nStep 3: \n\\begin{align*}\n(1,1,1) &= (1+2t_1,(2+3t_1),(3+4t_1))\\\\\n&= (1+2t,(2+3t),(3+4t))\n\\end{align*}\n\\begin{align*}\n1&=1+2t\\\\\n1&=2+3t\\\\\n1&=3+4t\n\\end{align*}\n\\begin{align*}\n2t&=-1\\\\\n3t&=-1\\\\\n4t&=-2\n\\end{align*}\n## Step 4\n\\begin{align*}\nt&=-\\frac{1}{2}\\\\\nt&=-\\frac{1}{3}\\\\\nt&=-\\frac{1}{2}\n\\end{align*}",
+    "steps": [
+        "Step 1:  To find the intersection point $P$ on the line defined by $\\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\end{pmatrix} + t \\begin{pmatrix} 2 \\\\ 3 \\\\ 4 \\end{pmatrix}$, we can express point $P$ as $\\begin{pmatrix} 1+2t_1 \\\\ 2+3t_1 \\\\ 3+4t_1 \\end{pmatrix}$.\nThe equation of this line can be expressed as $\\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\end{pmatrix} + t \\begin{pmatrix} 2 \\\\ 3 \\\\ 4 \\end{pmatrix} = \\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\end{pmatrix} + \\frac{t}{2} \\cdot 2 \\begin{pmatrix} 2 \\\\ 3 \\\\ 4 \\end{pmatrix}.$",
+        "Step 2: $\\begin{pmatrix} 1+2t_1 \\\\ 2+3t_1 \\\\ 3+4t_1 \\end{pmatrix} = \\begin{pmatrix} 1+2t \\\\ 2+3t \\\\ 3+4t \\end{pmatrix}$",
+        "By equating the components of the two expressions for $P,$ we find $t_1 = t.$",
+        "Step 3: \n\\begin{align*}\n(1,1,1) &= (1+2t_1,(2+3t_1),(3+4t_1))\\\\\n&= (1+2t,(2+3t),(3+4t))\n\\end{align*}\n\\begin{align*}\n1&=1+2t\\\\\n1&=2+3t\\\\\n1&=3+4t\n\\end{align*}",
+        "\\begin{align*}\n2t&=-1\\\\\n3t&=-1\\\\\n4t&=-2\n\\end{align*}",
+        "## Step 4\n\\begin{align*}\nt&=-\\frac{1}{2}\\\\\nt&=-\\frac{1}{3}\\\\\nt&=-\\frac{1}{2}\n\\end{align*}"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  To find the intersection point $P$ on the line defined by $\\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\end{pmatrix} + t \\begin{pmatrix} 2 \\\\ 3 \\\\ 4 \\end{pmatrix}$, we can express point $P$ as $\\begin{pmatrix} 1+2t_1 \\\\ 2+3t_1 \\\\ 3+4t_1 \\end{pmatrix}$.\nThe equation of this line can be expressed as $\\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\end{pmatrix} + t \\begin{pmatrix} 2 \\\\ 3 \\\\ 4 \\end{pmatrix} = \\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\end{pmatrix} + \\frac{t}{2} \\cdot 2 \\begin{pmatrix} 2 \\\\ 3 \\\\ 4 \\end{pmatrix}.$",
+            1
+        ],
+        [
+            "Step 2: $\\begin{pmatrix} 1+2t_1 \\\\ 2+3t_1 \\\\ 3+4t_1 \\end{pmatrix} = \\begin{pmatrix} 1+2t \\\\ 2+3t \\\\ 3+4t \\end{pmatrix}$",
+            1
+        ],
+        [
+            "By equating the components of the two expressions for $P,$ we find $t_1 = t.$",
+            1
+        ],
+        [
+            "Step 3: \n\\begin{align*}\n(1,1,1) &= (1+2t_1,(2+3t_1),(3+4t_1))\\\\\n&= (1+2t,(2+3t),(3+4t))\n\\end{align*}\n\\begin{align*}\n1&=1+2t\\\\\n1&=2+3t\\\\\n1&=3+4t\n\\end{align*}",
+            1
+        ],
+        [
+            "\\begin{align*}\n2t&=-1\\\\\n3t&=-1\\\\\n4t&=-2\n\\end{align*}",
+            1
+        ],
+        [
+            "## Step 4\n\\begin{align*}\nt&=-\\frac{1}{2}\\\\\nt&=-\\frac{1}{3}\\\\\nt&=-\\frac{1}{2}\n\\end{align*}",
+            1
+        ]
+    ],
+    "time": 79.8224573135376,
+    "total_tokens": 6586,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

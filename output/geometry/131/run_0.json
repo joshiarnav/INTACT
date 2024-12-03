@@ -1,0 +1,41 @@
+{
+    "problem": "We have a triangle $\\triangle ABC$ and a point $K$ on $BC$ such that $AK$ is an altitude to $\\triangle ABC$. If $AC = 9,$ $BK = \\sqrt{5}$, and $CK = 4,$ then what is $AB$?",
+    "level": "Level 4",
+    "type": "Geometry",
+    "solution": "We must draw first! [asy]\npair A, B, C, K;\nA = (0, 4.472);\nB = (-2.236, 0);\nC = (4, 0);\nK = (0, 0);\ndraw(A--B--C--cycle);\ndraw(A--K);\nlabel(\"$A$\", A, N);\nlabel(\"$B$\", B, SW);\nlabel(\"$C$\", C, SE);\nlabel(\"$K$\", K, S);\nlabel(\"9\", C--A, NE);\nlabel(\"$\\sqrt{5}$\", B--K, S);\nlabel(\"4\", C--K, S);\ndraw(rightanglemark(A,K,B,10));\n[/asy] We first apply the Pythagorean Theorem to $\\triangle AKC$ to find that $AK^2 = AC^2 - KC^2 = 9^2 - 4^2 = 65.$ Now, we apply the Pythagorean Theorem to $\\triangle AKB$ to find that $AB^2 = AK^2 + BK^2 = 65 + (\\sqrt{5})^2 = 70.$ Therefore, $AB = \\boxed{\\sqrt{70}}.$",
+    "is_solved": true,
+    "model_solution": "Step 1: Apply the Pythagorean theorem to triangle AKC to find AK.\n$AK=\\sqrt{AC^2-CK^2}$\n Plug in the given values: $AK=\\sqrt{9^2-4^2}$\nStep 2: $AK = \\sqrt{81 - 16} = \\sqrt{65}$\nStep 3: Apply the Pythagorean theorem to triangle ABK to find AB.\n$AB = \\sqrt{AK^2+BK^2}$\n Plug in the given values: $AB = \\sqrt{(\\sqrt{65})^2+(\\sqrt{5})^2}$\n$AB = \\sqrt{65 + 5} = \\sqrt{70}$\n$AB = \\sqrt{65 + 5} = \\sqrt{70}$",
+    "steps": [
+        "Step 1: Apply the Pythagorean theorem to triangle AKC to find AK.\n$AK=\\sqrt{AC^2-CK^2}$\n Plug in the given values: $AK=\\sqrt{9^2-4^2}$",
+        "Step 2: $AK = \\sqrt{81 - 16} = \\sqrt{65}$",
+        "Step 3: Apply the Pythagorean theorem to triangle ABK to find AB.\n$AB = \\sqrt{AK^2+BK^2}$\n Plug in the given values: $AB = \\sqrt{(\\sqrt{65})^2+(\\sqrt{5})^2}$",
+        "$AB = \\sqrt{65 + 5} = \\sqrt{70}$",
+        "$AB = \\sqrt{65 + 5} = \\sqrt{70}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Apply the Pythagorean theorem to triangle AKC to find AK.\n$AK=\\sqrt{AC^2-CK^2}$\n Plug in the given values: $AK=\\sqrt{9^2-4^2}$",
+            1
+        ],
+        [
+            "Step 2: $AK = \\sqrt{81 - 16} = \\sqrt{65}$",
+            1
+        ],
+        [
+            "Step 3: Apply the Pythagorean theorem to triangle ABK to find AB.\n$AB = \\sqrt{AK^2+BK^2}$\n Plug in the given values: $AB = \\sqrt{(\\sqrt{65})^2+(\\sqrt{5})^2}$",
+            1
+        ],
+        [
+            "$AB = \\sqrt{65 + 5} = \\sqrt{70}$",
+            1
+        ],
+        [
+            "$AB = \\sqrt{65 + 5} = \\sqrt{70}$",
+            1
+        ]
+    ],
+    "time": 67.93149137496948,
+    "total_tokens": 2402,
+    "final_answer_tokens": 289,
+    "model": "meta-llama/Llama-Vision-Free"
+}

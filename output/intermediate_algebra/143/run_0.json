@@ -1,0 +1,21 @@
+{
+    "problem": "For what value of $n$ is $i + 2i^2 + 3i^3 + \\cdots + ni^n = 48 + 49i$?\n\nNote: $i^2 = -1$",
+    "level": "Level 3",
+    "type": "Intermediate Algebra",
+    "solution": "The real numbers in the sum follow the pattern\n\\[-2 + 4 - 6 + 8 - 10 + 12 + \\dotsb.\\]Placing the numbers in pairs, we get\n\\[(-2 + 4) + (-6 + 8) + (-10 + 12) + \\dotsb = 2 + 2 + 2 + \\dotsb.\\]Thus, we want 24 pairs.  The second number in the $n$th pair is $4n,$ which means the last real term is $96 = 96i^{96}.$  Thus, $n$ is either 96 or 97.\n\nUp to $96i^{96},$ the sum of the imaginary numbers is\n\\[i - 3i + 5i - 7i + 9i - 11i + \\dots + 93i - 95i.\\]Similarly, if we pair these numbers, we get\n\\[(i - 3i) + (5i - 7i) + (9i - 11i) + \\dots + (93i - 95i) = -2i - 2i - 2i - \\dots - 2i = -48i.\\]Adding $97i^{97} = 97i,$ we get $97i - 48i = 49i.$  Hence, $n = \\boxed{97}.$",
+    "is_solved": false,
+    "model_solution": "## Step 1: Distribute $i$ into the summation\nThe equation can be rewritten as $i\\sum_{k=1}^{n} k i^{k-1} = 48 + 49i$.\n\n## Step 2: Simplify the summation using properties of exponents\nThe equation can be rewritten as $i\\sum_{k=1}^{n} k i^{k-1} = i\\sum_{k=1}^{n} k (i)^{k-1}$.\n\n## Step 3: Use the fact that $i^4 = 1$\nWe can reduce the powers of $i$ by taking the modulus of the exponent with $4$, since $i^4 = 1$.\n\n## Step 4: Separate the summation into cases\nWe separate the summation into cases where $k-1$ is a multiple of $4$, $k-1 \\equiv 1 \\pmod{4}$, $k-1 \\equiv 2 \\pmod{4}$, $k-1 \\equiv 3 \\pmod{4}$.\n\n## Step 5: Calculate the number of terms in each case",
+    "steps": [
+        "## Step 1: Distribute $i$ into the summation\nThe equation can be rewritten as $i\\sum_{k=1}^{n} k i^{k-1} = 48 + 49i$.\n\n## Step 2: Simplify the summation using properties of exponents\nThe equation can be rewritten as $i\\sum_{k=1}^{n} k i^{k-1} = i\\sum_{k=1}^{n} k (i)^{k-1}$.\n\n## Step 3: Use the fact that $i^4 = 1$\nWe can reduce the powers of $i$ by taking the modulus of the exponent with $4$, since $i^4 = 1$.\n\n## Step 4: Separate the summation into cases\nWe separate the summation into cases where $k-1$ is a multiple of $4$, $k-1 \\equiv 1 \\pmod{4}$, $k-1 \\equiv 2 \\pmod{4}$, $k-1 \\equiv 3 \\pmod{4}$.\n\n## Step 5: Calculate the number of terms in each case"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Distribute $i$ into the summation\nThe equation can be rewritten as $i\\sum_{k=1}^{n} k i^{k-1} = 48 + 49i$.\n\n## Step 2: Simplify the summation using properties of exponents\nThe equation can be rewritten as $i\\sum_{k=1}^{n} k i^{k-1} = i\\sum_{k=1}^{n} k (i)^{k-1}$.\n\n## Step 3: Use the fact that $i^4 = 1$\nWe can reduce the powers of $i$ by taking the modulus of the exponent with $4$, since $i^4 = 1$.\n\n## Step 4: Separate the summation into cases\nWe separate the summation into cases where $k-1$ is a multiple of $4$, $k-1 \\equiv 1 \\pmod{4}$, $k-1 \\equiv 2 \\pmod{4}$, $k-1 \\equiv 3 \\pmod{4}$.\n\n## Step 5: Calculate the number of terms in each case",
+            1
+        ]
+    ],
+    "time": 14.329081535339355,
+    "total_tokens": 706,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

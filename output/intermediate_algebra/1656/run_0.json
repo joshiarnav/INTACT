@@ -1,0 +1,66 @@
+{
+    "problem": "A hyperbola centered at the origin has foci at $(\\pm 7, 0),$ and passes through the point $(2, 12).$ If the equation of the hyperbola is \\[\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1,\\]where $a$ and $b$ are positive constants, compute the ordered pair $(a, b).$",
+    "level": "Level 4",
+    "type": "Intermediate Algebra",
+    "solution": "Let $F_1=(7,0)$ and $F_2=(-7,0)$ be the two foci. We know that if the hyperbola has equation \\[\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1,\\]then for any point $P$ on the hyperbola, we have $|PF_1 - PF_2| = 2a.$ We are given that the point $P=(2,12)$ lies on the hyperbola. We have $PF_1 = \\sqrt{(7-2)^2 + (12-0)^2} = 13$ and $PF_2 = \\sqrt{(-7-2)^2 + (12-0)^2} = 15,$ so $|PF_1 - PF_2| = |13-15| = 2.$ Thus, $2 = 2a,$ so $a = 1.$\n\nNow, the distance from the center of the hyperbola (the origin) to each focus is $7,$ so we have $a^2 + b^2 = 7^2 = 49.$ Substituting $a=1,$ we get $1 + b^2 = 49,$ so $b = \\sqrt{48} = 4\\sqrt{3}.$ Thus, $(a, b) = \\boxed{(1, 4\\sqrt3)}.$\n[asy]\nvoid axes(real x0, real x1, real y0, real y1, real ys=1)\n{\n\tdraw((x0,0)--(x1,0),EndArrow);\n    draw((0,y0*ys)--(0,y1*ys),EndArrow);\n    label(\"$x$\",(x1,0),E);\n    label(\"$y$\",(0,y1*ys),N);\n    for (int i=floor(x0)+1; i<x1; ++i)\n    \tdraw((i,.1)--(i,-.1));\n    for (int i=floor(y0)+1; i<y1; ++i)\n    \tdraw((.1,i*ys)--(-.1,i*ys));\n}\npath[] yh(real a, real b, real h, real k, real x0, real x1, bool upper=true, bool lower=true, pen color=black , real ys=1)\n{\n\treal f(real x) { return k + a / b * sqrt(b^2 + (x-h)^2); }\n    real g(real x) { return k - a / b * sqrt(b^2 + (x-h)^2); }\n    if (upper) { draw(xscale(ys)*graph(f, x0, x1),color,  Arrows); }\n    if (lower) { draw(xscale(ys)*graph(g, x0, x1),color,  Arrows); }\n    path [] arr = {xscale(ys)*graph(f, x0, x1), xscale(ys)*graph(g, x0, x1)};\n    return arr;\n}\nvoid xh(real a, real b, real h, real k, real y0, real y1, bool right=true, bool left=true, pen color=black , real ys=1)\n{\n\tpath [] arr = yh(a, b, k, h, y0, y1, false, false, ys);\n    if (right) draw(reflect((0,0),(1,1))*arr[0],color,  Arrows);\n    if (left) draw(reflect((0,0),(1,1))*arr[1],color,  Arrows);\n}\nvoid e(real a, real b, real h, real k)\n{\n\tdraw(shift((h,k))*scale(a,b)*unitcircle);\n}\nsize(8cm);\naxes(-8,8,-6, 16, 0.5);\nxh(1,sqrt(48),0,0,-5,14, ys=.5);\ndot((7,0)^^(-7,0)^^(2,6));\ndot((0,0));\n[/asy]",
+    "is_solved": false,
+    "model_solution": "Step 1: Calculate c, where c is the distance between the center of the hyperbola and either of its foci.\n\\[\\left| c \\right| = \\sqrt{7^2 + 0^2} = 7\\]\nStep 2: Substitute the point (2, 12) into the equation of the hyperbola to obtain \\[\\frac{2^2}{a^2} - \\frac{12^2}{b^2} = 1,\\]which simplifies to \\[\\frac{4}{a^2} - \\frac{144}{b^2} = 1.\\]\nStep 3: \n\\[\\frac{4}{a^2} - \\frac{144}{b^2} = 1\\]\n\\[\\frac{144}{b^2} - \\frac{4}{a^2} = - 1\\]\n\n\\[b^{2} = \\frac{144 a^{2}}{4 a^{2} - 144}\\]\n\\[b = \\frac{12 a}{\\sqrt{4 a^{2} - 144}}\\]\n\\[\\frac{12 a}{\\sqrt{4 a^{2} - 144}} = \\frac{12}{7}\\]\n\\[a = \\frac{12 \\cdot 7}{\\sqrt{4 a^{2} - 144}}\\]\n\\[a^{2} = \\frac{12^{2} \\cdot 7^{2}}{4 a^{2} - 144}\\]\n\\[a^{2} = \\frac{12^{2} \\cdot 7^{2}}{4 a^{2} - 144}\\]\n\\[4 a^{2} = \\frac{12^{2} \\cdot 7^{2}}{a^{2}} + 144\\]\n\\[4 a^{4} = 12^{2} \\cdot 7^{2} + 144 a^{2}\\]\n\\[4 a^{4} - 144 a^{2} - 12^{2} \\cdot 7^{2} = 0\\]\n\\[a^{2} = \\frac{144 + \\sqrt{144^2 + 4 \\cdot 4 \\cdot 12^2 \\cdot 7^2}}{8}\\]\n\\[a^{2} = \\frac{144 + \\sqrt{ 262144 + 331776}}{8}\\]\n\\[a^{2} = \\frac{144 + 1060.27}{8}\\]\n\\[a^{2} = \\frac{1204.27}{8}\\]\n\\[a^{2} = 150.5325\\]\n\\[a = \\sqrt{150.5325}\\]\n\\[\n\\[4 a^{4} - 144 a^{2} - 12^{2} \\cdot 7^{2} = 0\\]\n\\[a^{4} - 36a^{2} - 1008 = 0\\]\n\\[(a^{2} - 48)(a^{2} + 21) = 0\\]\n\\[a^{2} = 48\\]\nSince $c^2=a^2+b^2$, we have $49=48+b^2$, which implies $b^2=1$.\nSince $c^2=a^2+b^2$, we have $49=48+b^2$, which implies $b^2=1$\nWe find that $b^{2} = 1$, so $b = 1$. We can check whether this $b$ is correct by plugging it back into the equation \\[\\frac{4}{a^2} - \\frac{144}{b^2} = 1.\\]Then we have \\[\\frac{4}{a^2} - 144 = 1,\\]which simplifies to \\[\\frac{4}{a^2} = 145.\\]Therefore, we have $a^2 = \\frac{4}{145}$, $a = \\sqrt{\\frac{4}{145}}$, $a \\approx 0.267$ which is not equal to $\\sqrt{48} = 4\\sqrt{3}$, so our assumption is not correct. We try another value of $b^2$.\nSince $c^2=a^2+b^2$, we have $49=48+b^2$, which implies $b^2=1$.",
+    "steps": [
+        "Step 1: Calculate c, where c is the distance between the center of the hyperbola and either of its foci.\n\\[\\left| c \\right| = \\sqrt{7^2 + 0^2} = 7\\]",
+        "Step 2: Substitute the point (2, 12) into the equation of the hyperbola to obtain \\[\\frac{2^2}{a^2} - \\frac{12^2}{b^2} = 1,\\]which simplifies to \\[\\frac{4}{a^2} - \\frac{144}{b^2} = 1.\\]",
+        "Step 3: \n\\[\\frac{4}{a^2} - \\frac{144}{b^2} = 1\\]\n\\[\\frac{144}{b^2} - \\frac{4}{a^2} = - 1\\]\n\n\\[b^{2} = \\frac{144 a^{2}}{4 a^{2} - 144}\\]\n\\[b = \\frac{12 a}{\\sqrt{4 a^{2} - 144}}\\]",
+        "\\[\\frac{12 a}{\\sqrt{4 a^{2} - 144}} = \\frac{12}{7}\\]\n\\[a = \\frac{12 \\cdot 7}{\\sqrt{4 a^{2} - 144}}\\]\n\\[a^{2} = \\frac{12^{2} \\cdot 7^{2}}{4 a^{2} - 144}\\]",
+        "\\[a^{2} = \\frac{12^{2} \\cdot 7^{2}}{4 a^{2} - 144}\\]\n\\[4 a^{2} = \\frac{12^{2} \\cdot 7^{2}}{a^{2}} + 144\\]\n\\[4 a^{4} = 12^{2} \\cdot 7^{2} + 144 a^{2}\\]\n\\[4 a^{4} - 144 a^{2} - 12^{2} \\cdot 7^{2} = 0\\]\n\\[a^{2} = \\frac{144 + \\sqrt{144^2 + 4 \\cdot 4 \\cdot 12^2 \\cdot 7^2}}{8}\\]\n\\[a^{2} = \\frac{144 + \\sqrt{ 262144 + 331776}}{8}\\]\n\\[a^{2} = \\frac{144 + 1060.27}{8}\\]\n\\[a^{2} = \\frac{1204.27}{8}\\]\n\\[a^{2} = 150.5325\\]\n\\[a = \\sqrt{150.5325}\\]\n\\[",
+        "\\[4 a^{4} - 144 a^{2} - 12^{2} \\cdot 7^{2} = 0\\]\n\\[a^{4} - 36a^{2} - 1008 = 0\\]\n\\[(a^{2} - 48)(a^{2} + 21) = 0\\]\n\\[a^{2} = 48\\]",
+        "Since $c^2=a^2+b^2$, we have $49=48+b^2$, which implies $b^2=1$.",
+        "Since $c^2=a^2+b^2$, we have $49=48+b^2$, which implies $b^2=1$",
+        "We find that $b^{2} = 1$, so $b = 1$. We can check whether this $b$ is correct by plugging it back into the equation \\[\\frac{4}{a^2} - \\frac{144}{b^2} = 1.\\]Then we have \\[\\frac{4}{a^2} - 144 = 1,\\]which simplifies to \\[\\frac{4}{a^2} = 145.\\]Therefore, we have $a^2 = \\frac{4}{145}$, $a = \\sqrt{\\frac{4}{145}}$, $a \\approx 0.267$ which is not equal to $\\sqrt{48} = 4\\sqrt{3}$, so our assumption is not correct. We try another value of $b^2$.",
+        "Since $c^2=a^2+b^2$, we have $49=48+b^2$, which implies $b^2=1$."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Calculate c, where c is the distance between the center of the hyperbola and either of its foci.\n\\[\\left| c \\right| = \\sqrt{7^2 + 0^2} = 7\\]",
+            1
+        ],
+        [
+            "Step 2: Substitute the point (2, 12) into the equation of the hyperbola to obtain \\[\\frac{2^2}{a^2} - \\frac{12^2}{b^2} = 1,\\]which simplifies to \\[\\frac{4}{a^2} - \\frac{144}{b^2} = 1.\\]",
+            1
+        ],
+        [
+            "Step 3: \n\\[\\frac{4}{a^2} - \\frac{144}{b^2} = 1\\]\n\\[\\frac{144}{b^2} - \\frac{4}{a^2} = - 1\\]\n\n\\[b^{2} = \\frac{144 a^{2}}{4 a^{2} - 144}\\]\n\\[b = \\frac{12 a}{\\sqrt{4 a^{2} - 144}}\\]",
+            1
+        ],
+        [
+            "\\[\\frac{12 a}{\\sqrt{4 a^{2} - 144}} = \\frac{12}{7}\\]\n\\[a = \\frac{12 \\cdot 7}{\\sqrt{4 a^{2} - 144}}\\]\n\\[a^{2} = \\frac{12^{2} \\cdot 7^{2}}{4 a^{2} - 144}\\]",
+            1
+        ],
+        [
+            "\\[a^{2} = \\frac{12^{2} \\cdot 7^{2}}{4 a^{2} - 144}\\]\n\\[4 a^{2} = \\frac{12^{2} \\cdot 7^{2}}{a^{2}} + 144\\]\n\\[4 a^{4} = 12^{2} \\cdot 7^{2} + 144 a^{2}\\]\n\\[4 a^{4} - 144 a^{2} - 12^{2} \\cdot 7^{2} = 0\\]\n\\[a^{2} = \\frac{144 + \\sqrt{144^2 + 4 \\cdot 4 \\cdot 12^2 \\cdot 7^2}}{8}\\]\n\\[a^{2} = \\frac{144 + \\sqrt{ 262144 + 331776}}{8}\\]\n\\[a^{2} = \\frac{144 + 1060.27}{8}\\]\n\\[a^{2} = \\frac{1204.27}{8}\\]\n\\[a^{2} = 150.5325\\]\n\\[a = \\sqrt{150.5325}\\]\n\\[",
+            1
+        ],
+        [
+            "\\[4 a^{4} - 144 a^{2} - 12^{2} \\cdot 7^{2} = 0\\]\n\\[a^{4} - 36a^{2} - 1008 = 0\\]\n\\[(a^{2} - 48)(a^{2} + 21) = 0\\]\n\\[a^{2} = 48\\]",
+            1
+        ],
+        [
+            "Since $c^2=a^2+b^2$, we have $49=48+b^2$, which implies $b^2=1$.",
+            1
+        ],
+        [
+            "Since $c^2=a^2+b^2$, we have $49=48+b^2$, which implies $b^2=1$",
+            1
+        ],
+        [
+            "We find that $b^{2} = 1$, so $b = 1$. We can check whether this $b$ is correct by plugging it back into the equation \\[\\frac{4}{a^2} - \\frac{144}{b^2} = 1.\\]Then we have \\[\\frac{4}{a^2} - 144 = 1,\\]which simplifies to \\[\\frac{4}{a^2} = 145.\\]Therefore, we have $a^2 = \\frac{4}{145}$, $a = \\sqrt{\\frac{4}{145}}$, $a \\approx 0.267$ which is not equal to $\\sqrt{48} = 4\\sqrt{3}$, so our assumption is not correct. We try another value of $b^2$.",
+            1
+        ],
+        [
+            "Since $c^2=a^2+b^2$, we have $49=48+b^2$, which implies $b^2=1$.",
+            1
+        ]
+    ],
+    "time": 131.74567866325378,
+    "total_tokens": 13562,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

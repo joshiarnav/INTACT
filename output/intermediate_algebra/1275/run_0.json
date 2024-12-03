@@ -1,0 +1,66 @@
+{
+    "problem": "Suppose that $a,$ $b,$ $c,$ $d,$ $e,$ $f$ are real numbers such that\n\\begin{align*}\na + b + c + d + e + f &= 0, \\\\\na + 2b + 3c + 4d + 2e + 2f &= 0, \\\\\na + 3b + 6c + 9d + 4e + 6f &= 0, \\\\\na + 4b + 10c + 16d + 8e + 24f &= 0, \\\\\na + 5b + 15c + 25d + 16e + 120f &= 42.\n\\end{align*}Compute $a + 6b + 21c + 36d + 32e + 720f$.",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "Let\n\\[g(n) = a + nb + \\frac{n(n - 1)}{2} c + n^2 d + 2^{n - 1} e + n! \\cdot f.\\]It can be shown that\n\\[p(n) - 3p(n - 1) + 3p(n - 2) - p(n - 3) = 0\\]for any polynomial $p(n)$ of degree at most 2.  Thus, when we compute\n\\[g(n) - 3g(n - 1) + 3g(n - 2) - g(n - 3),\\]since the coefficients of $a,$ $b,$ $c,$ and $d$ are all polynomials in $n$ of degree at most 2, all the terms of $a,$ $b,$ $c,$ and $d$ will cancel.  Thus,\n\\begin{align*}\ng(4) - 3g(3) + 3g(2) - g(1) &= 0 = e + 11f, \\\\\ng(5) - 3g(4) + 3g(3) - g(2) &= 42 = 2e + 64f, \\\\\ng(6) - 3g(5) + 3g(4) - g(3) &= g(6) - 126 = 4e + 426f.\n\\end{align*}Solving, we find $e = -11$ and $f = 1.$  Then $g(6) = 4e + 426f + 126 = \\boxed{508}.$",
+    "is_solved": false,
+    "model_solution": "## Step 1: Subtract the first equation from the second equation\nSubtracting the first equation from the second equation yields\n$$(a + 2b + 3c + 4d + 2e + 2f) - (a + b + c + d + e + f) = 0 - 0$$\nwhich simplifies to\n$$b + 2c + 3d + e + f = 0.$$\n\n## Step 2: Subtract the second equation from the third equation\nSubtracting the second equation from the third equation yields\n$$(a + 3b + 6c + 9d + 4e + 6f) - (a + 2b + 3c + 4d + 2e + 2f) = 0 - 0$$\nwhich simplifies to\n$$b + 3c + 5d + 2e + 4f = 0.$$\n\n## Step 3: Subtract the third equation from the fourth equation\nSubtracting the third equation from the fourth equation yields\n$$(a + 4b + 10c + 16d + 8\n## Step 4: Subtract the fourth equation from the fifth equation\n$$(a + 5b + 15c + 25d + 16e + 120f) - (a + 4b + 10c + 16d + 8e + 24f) = 42 - 0$$\nwhich simplifies to\n$$b + 5c + 9d + 8e + 96f = 42.$$\n## Step 5: Subtract the fifth equation from the equation we want to compute\nSubtracting the fifth equation from the equation we want to compute yields\n$$(a + 6b + 21c + 36d + 32e + 720f) - (a + 5b + 15c + 25d + 16e + 120f) = ? - 42.$$\n## Step 6: \n$$b + 6c + 11d + 16e + 600f = ?.$$\n## Step 7: \n$$b + 6c + 11d + 16e + 600f = (b + 2c + 3d + e + f) + 4c + 8d + 15e + 599f$$\nwhich simplifies to\n$$b + 6c + 11d + 16e + 600f = 0 + 4c + 8d + 15e + 599f.$$\n\n## Step 8: \n$$4c + 8d + 15e + 599f = (b + 3c + 5d + 2e + 4f) + c + 3d + 13e + 595f$$\nwhich simplifies to\n$$4c + 8d + 15e + 599f = 0 + c + 3d + 13e + 595f.$$\n\n## Step 9: \n$$c + 3d + 13e + 595f = (b + 5c + 9d + 8e + 96f) - 4c - 6d - 5e\n## Step 10: \n$$c + 3d + 13e + 595f = 42 - 4c - 6d - 5e - 4f$$\n## Step 11: \n$$c + 3d + 13e + 595f = 42 - 4c - 6d - 5e - 4f$$\nwhich simplifies to\n$$9c + 9d + 18e + 599f = 42.$$\n\n## Step 12: \n$$9c + 9d + 18e + 599f = 42$$\nwhich simplifies to\n$$c + d + 2e + 67f = \\frac{42}{9}.$$\n\n## Step 13: \n$$c + d + 2e + 67f = \\frac{42}{9}$$\nwhich simplifies to\n$$c + d + 2e + 67f = \\frac{14}{3}.$$\n\n## Step 14: \n$$c + d + 2e + 67f = \\frac{14}{3}$$\nwhich simplifies to\n$$21c + 21d + 42e + 2019f = 98.$$\n\n## Step 15: \n$$21c + 21d + 42e + 2019f\n$21c + 21d + 42e + 2019f = 98$\n\n$21c + 21d + 42e + 2019f - (a + 2b + 3c + 4d + 2e + 2f) = 98 - 0$\n\n$-a + 19b + 18c + 17d + 40e + 2017f = 98$\n## Step 16: \n$-a + 19b + 18c + 17d + 40e + 2017f = 98$\n\n$-a + 19b + 18c + 17d + 40e + 2017f - (a + b + c + d + e + f) = 98 - 0$\n\n$18b + 17c + 16d + 39e + 2016f = 98$\n\n$18b + 17c + 16d + 39e + 2016f - (b + 2c + 3d + e + f) = 98 - 0$\n\n$17b + 15c + 13d + 38e + 2015f = 98$\n## Step 17: \n$17b + 15c + 13d + 38e + 2015f - (b + 3c + 5d + 2e + 4f) = 98 - 0$\n\n$16b + 12c + 8d + 36e + 2011f = 98$",
+    "steps": [
+        "## Step 1: Subtract the first equation from the second equation\nSubtracting the first equation from the second equation yields\n$$(a + 2b + 3c + 4d + 2e + 2f) - (a + b + c + d + e + f) = 0 - 0$$\nwhich simplifies to\n$$b + 2c + 3d + e + f = 0.$$\n\n## Step 2: Subtract the second equation from the third equation\nSubtracting the second equation from the third equation yields\n$$(a + 3b + 6c + 9d + 4e + 6f) - (a + 2b + 3c + 4d + 2e + 2f) = 0 - 0$$\nwhich simplifies to\n$$b + 3c + 5d + 2e + 4f = 0.$$\n\n## Step 3: Subtract the third equation from the fourth equation\nSubtracting the third equation from the fourth equation yields\n$$(a + 4b + 10c + 16d + 8",
+        "## Step 4: Subtract the fourth equation from the fifth equation\n$$(a + 5b + 15c + 25d + 16e + 120f) - (a + 4b + 10c + 16d + 8e + 24f) = 42 - 0$$\nwhich simplifies to\n$$b + 5c + 9d + 8e + 96f = 42.$$",
+        "## Step 5: Subtract the fifth equation from the equation we want to compute\nSubtracting the fifth equation from the equation we want to compute yields\n$$(a + 6b + 21c + 36d + 32e + 720f) - (a + 5b + 15c + 25d + 16e + 120f) = ? - 42.$$",
+        "## Step 6: \n$$b + 6c + 11d + 16e + 600f = ?.$$",
+        "## Step 7: \n$$b + 6c + 11d + 16e + 600f = (b + 2c + 3d + e + f) + 4c + 8d + 15e + 599f$$\nwhich simplifies to\n$$b + 6c + 11d + 16e + 600f = 0 + 4c + 8d + 15e + 599f.$$\n\n## Step 8: \n$$4c + 8d + 15e + 599f = (b + 3c + 5d + 2e + 4f) + c + 3d + 13e + 595f$$\nwhich simplifies to\n$$4c + 8d + 15e + 599f = 0 + c + 3d + 13e + 595f.$$\n\n## Step 9: \n$$c + 3d + 13e + 595f = (b + 5c + 9d + 8e + 96f) - 4c - 6d - 5e",
+        "## Step 10: \n$$c + 3d + 13e + 595f = 42 - 4c - 6d - 5e - 4f$$",
+        "## Step 11: \n$$c + 3d + 13e + 595f = 42 - 4c - 6d - 5e - 4f$$\nwhich simplifies to\n$$9c + 9d + 18e + 599f = 42.$$\n\n## Step 12: \n$$9c + 9d + 18e + 599f = 42$$\nwhich simplifies to\n$$c + d + 2e + 67f = \\frac{42}{9}.$$\n\n## Step 13: \n$$c + d + 2e + 67f = \\frac{42}{9}$$\nwhich simplifies to\n$$c + d + 2e + 67f = \\frac{14}{3}.$$\n\n## Step 14: \n$$c + d + 2e + 67f = \\frac{14}{3}$$\nwhich simplifies to\n$$21c + 21d + 42e + 2019f = 98.$$\n\n## Step 15: \n$$21c + 21d + 42e + 2019f",
+        "$21c + 21d + 42e + 2019f = 98$\n\n$21c + 21d + 42e + 2019f - (a + 2b + 3c + 4d + 2e + 2f) = 98 - 0$\n\n$-a + 19b + 18c + 17d + 40e + 2017f = 98$",
+        "## Step 16: \n$-a + 19b + 18c + 17d + 40e + 2017f = 98$\n\n$-a + 19b + 18c + 17d + 40e + 2017f - (a + b + c + d + e + f) = 98 - 0$\n\n$18b + 17c + 16d + 39e + 2016f = 98$\n\n$18b + 17c + 16d + 39e + 2016f - (b + 2c + 3d + e + f) = 98 - 0$\n\n$17b + 15c + 13d + 38e + 2015f = 98$",
+        "## Step 17: \n$17b + 15c + 13d + 38e + 2015f - (b + 3c + 5d + 2e + 4f) = 98 - 0$\n\n$16b + 12c + 8d + 36e + 2011f = 98$"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Subtract the first equation from the second equation\nSubtracting the first equation from the second equation yields\n$$(a + 2b + 3c + 4d + 2e + 2f) - (a + b + c + d + e + f) = 0 - 0$$\nwhich simplifies to\n$$b + 2c + 3d + e + f = 0.$$\n\n## Step 2: Subtract the second equation from the third equation\nSubtracting the second equation from the third equation yields\n$$(a + 3b + 6c + 9d + 4e + 6f) - (a + 2b + 3c + 4d + 2e + 2f) = 0 - 0$$\nwhich simplifies to\n$$b + 3c + 5d + 2e + 4f = 0.$$\n\n## Step 3: Subtract the third equation from the fourth equation\nSubtracting the third equation from the fourth equation yields\n$$(a + 4b + 10c + 16d + 8",
+            1
+        ],
+        [
+            "## Step 4: Subtract the fourth equation from the fifth equation\n$$(a + 5b + 15c + 25d + 16e + 120f) - (a + 4b + 10c + 16d + 8e + 24f) = 42 - 0$$\nwhich simplifies to\n$$b + 5c + 9d + 8e + 96f = 42.$$",
+            1
+        ],
+        [
+            "## Step 5: Subtract the fifth equation from the equation we want to compute\nSubtracting the fifth equation from the equation we want to compute yields\n$$(a + 6b + 21c + 36d + 32e + 720f) - (a + 5b + 15c + 25d + 16e + 120f) = ? - 42.$$",
+            1
+        ],
+        [
+            "## Step 6: \n$$b + 6c + 11d + 16e + 600f = ?.$$",
+            1
+        ],
+        [
+            "## Step 7: \n$$b + 6c + 11d + 16e + 600f = (b + 2c + 3d + e + f) + 4c + 8d + 15e + 599f$$\nwhich simplifies to\n$$b + 6c + 11d + 16e + 600f = 0 + 4c + 8d + 15e + 599f.$$\n\n## Step 8: \n$$4c + 8d + 15e + 599f = (b + 3c + 5d + 2e + 4f) + c + 3d + 13e + 595f$$\nwhich simplifies to\n$$4c + 8d + 15e + 599f = 0 + c + 3d + 13e + 595f.$$\n\n## Step 9: \n$$c + 3d + 13e + 595f = (b + 5c + 9d + 8e + 96f) - 4c - 6d - 5e",
+            1
+        ],
+        [
+            "## Step 10: \n$$c + 3d + 13e + 595f = 42 - 4c - 6d - 5e - 4f$$",
+            1
+        ],
+        [
+            "## Step 11: \n$$c + 3d + 13e + 595f = 42 - 4c - 6d - 5e - 4f$$\nwhich simplifies to\n$$9c + 9d + 18e + 599f = 42.$$\n\n## Step 12: \n$$9c + 9d + 18e + 599f = 42$$\nwhich simplifies to\n$$c + d + 2e + 67f = \\frac{42}{9}.$$\n\n## Step 13: \n$$c + d + 2e + 67f = \\frac{42}{9}$$\nwhich simplifies to\n$$c + d + 2e + 67f = \\frac{14}{3}.$$\n\n## Step 14: \n$$c + d + 2e + 67f = \\frac{14}{3}$$\nwhich simplifies to\n$$21c + 21d + 42e + 2019f = 98.$$\n\n## Step 15: \n$$21c + 21d + 42e + 2019f",
+            1
+        ],
+        [
+            "$21c + 21d + 42e + 2019f = 98$\n\n$21c + 21d + 42e + 2019f - (a + 2b + 3c + 4d + 2e + 2f) = 98 - 0$\n\n$-a + 19b + 18c + 17d + 40e + 2017f = 98$",
+            1
+        ],
+        [
+            "## Step 16: \n$-a + 19b + 18c + 17d + 40e + 2017f = 98$\n\n$-a + 19b + 18c + 17d + 40e + 2017f - (a + b + c + d + e + f) = 98 - 0$\n\n$18b + 17c + 16d + 39e + 2016f = 98$\n\n$18b + 17c + 16d + 39e + 2016f - (b + 2c + 3d + e + f) = 98 - 0$\n\n$17b + 15c + 13d + 38e + 2015f = 98$",
+            1
+        ],
+        [
+            "## Step 17: \n$17b + 15c + 13d + 38e + 2015f - (b + 3c + 5d + 2e + 4f) = 98 - 0$\n\n$16b + 12c + 8d + 36e + 2011f = 98$",
+            1
+        ]
+    ],
+    "time": 135.586594581604,
+    "total_tokens": 20304,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

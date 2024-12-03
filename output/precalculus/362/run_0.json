@@ -1,0 +1,36 @@
+{
+    "problem": "Let points $A = (0 ,0 ,0)$, $B = (1, 0, 0)$, $C = (0, 2, 0)$, and $D = (0, 0, 3)$. Points $E$, $F$, $G$, and $H$ are midpoints of line segments $\\overline{BD},$ $\\overline{AB},$ $\\overline {AC},$ and $\\overline{DC}$ respectively.  Find the area of quadrilateral $EFGH$.",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "Since $E$ is the midpoint of $\\overline{BD},$ and $F$ is the midpoint of $\\overline{AB},$ $\\overline{EF}$ is parallel to $\\overline{AD},$ and $EF = \\frac{AD}{2}.$  Similarly, $\\overline{GH}$ is parallel to $\\overline{AD},$ and $GH = \\frac{AD}{2}.$  Since $AD = 3,$ $EF = GH = \\frac{3}{2}.$\n\n[asy]\nunitsize(1 cm);\n\npair A, B, C, D, E, F, G, H;\n\nA = (0,0);\nB = (3,0);\nC = 2*dir(220);\nD = (0,3);\nE = (B + D)/2;\nF = (A + B)/2;\nG = (A + C)/2;\nH = (C + D)/2;\n\ndraw(A--B,dashed);\ndraw(A--C,dashed);\ndraw(A--D,dashed);\ndraw(B--C--D--cycle);\ndraw(E--F--G--H--cycle);\n\nlabel(\"$A$\", A, NE);\nlabel(\"$B$\", B, dir(0));\nlabel(\"$C$\", C, SW);\nlabel(\"$D$\", D, N);\nlabel(\"$E$\", E, NE);\nlabel(\"$F$\", F, NE);\nlabel(\"$G$\", G, W);\nlabel(\"$H$\", H, W);\n[/asy]\n\nLikewise, $\\overline{FG}$ and $\\overline{EH}$ are parallel to $\\overline{BC},$ and $FG = EH = \\frac{BC}{2} = \\frac{\\sqrt{5}}{2}.$  Since $\\overline{AD}$ and $\\overline{BC}$ are perpendicular, $EFGH$ is a rectangle.  Therefore,\n\\[[EFGH] = \\frac{3}{2} \\cdot \\frac{\\sqrt{5}}{2} = \\boxed{\\frac{3 \\sqrt{5}}{4}}.\\]",
+    "is_solved": true,
+    "model_solution": "Step 1: Determine the coordinates of the midpoints $E$, $F$, $G$, and $H$ of the line segments $\\overline{BD},$ $\\overline{AB},$ $\\overline {AC},$ and $\\overline{DC}$, respectively.\n$E=\\left(\\frac{1}{2},0,3\\right)$\n$F=\\left(\\frac{1}{2},0,0\\right)$\n$G=\\left(0,1,0\\right)$\n$H=\\left(0,1,3/2\\right)$\nStep 2:\nThe triangle formed by lines $EF$ and $GH$ on the bottom is a right triangle with legs of length 1/2 and 1.\nThe triangle formed by lines $EF$ and $GH$ on the top is a right triangle with legs of length 1 and 3/4.\nStep 3:\nThe areas of the two triangles are $\\frac{1}{4}$ and $\\frac{3}{8}$, respectively.\nStep 4: \nSince the two triangles are on opposite sides of line $EF$ and $GH$, the area of quadrilateral $EFGH$ equals the difference between the areas of the two triangles.\n\nFinal Answer: The final answer is $\\frac{7}{16}$.",
+    "steps": [
+        "Step 1: Determine the coordinates of the midpoints $E$, $F$, $G$, and $H$ of the line segments $\\overline{BD},$ $\\overline{AB},$ $\\overline {AC},$ and $\\overline{DC}$, respectively.\n$E=\\left(\\frac{1}{2},0,3\\right)$\n$F=\\left(\\frac{1}{2},0,0\\right)$\n$G=\\left(0,1,0\\right)$\n$H=\\left(0,1,3/2\\right)$",
+        "Step 2:\nThe triangle formed by lines $EF$ and $GH$ on the bottom is a right triangle with legs of length 1/2 and 1.\nThe triangle formed by lines $EF$ and $GH$ on the top is a right triangle with legs of length 1 and 3/4.",
+        "Step 3:\nThe areas of the two triangles are $\\frac{1}{4}$ and $\\frac{3}{8}$, respectively.",
+        "Step 4: \nSince the two triangles are on opposite sides of line $EF$ and $GH$, the area of quadrilateral $EFGH$ equals the difference between the areas of the two triangles.\n\nFinal Answer: The final answer is $\\frac{7}{16}$."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Determine the coordinates of the midpoints $E$, $F$, $G$, and $H$ of the line segments $\\overline{BD},$ $\\overline{AB},$ $\\overline {AC},$ and $\\overline{DC}$, respectively.\n$E=\\left(\\frac{1}{2},0,3\\right)$\n$F=\\left(\\frac{1}{2},0,0\\right)$\n$G=\\left(0,1,0\\right)$\n$H=\\left(0,1,3/2\\right)$",
+            1
+        ],
+        [
+            "Step 2:\nThe triangle formed by lines $EF$ and $GH$ on the bottom is a right triangle with legs of length 1/2 and 1.\nThe triangle formed by lines $EF$ and $GH$ on the top is a right triangle with legs of length 1 and 3/4.",
+            1
+        ],
+        [
+            "Step 3:\nThe areas of the two triangles are $\\frac{1}{4}$ and $\\frac{3}{8}$, respectively.",
+            1
+        ],
+        [
+            "Step 4: \nSince the two triangles are on opposite sides of line $EF$ and $GH$, the area of quadrilateral $EFGH$ equals the difference between the areas of the two triangles.\n\nFinal Answer: The final answer is $\\frac{7}{16}$.",
+            1
+        ]
+    ],
+    "time": 55.35642075538635,
+    "total_tokens": 3053,
+    "final_answer_tokens": 452,
+    "model": "meta-llama/Llama-Vision-Free"
+}

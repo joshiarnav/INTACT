@@ -1,0 +1,66 @@
+{
+    "problem": "In triangle $ABC,$ it is given that angles $B$ and $C$ are congruent. Points $P$ and $Q$ lie on $\\overline{AC}$ and $\\overline{AB},$ respectively, so that $AP = PQ = QB = BC.$  Find the ratio of $\\angle ACB$ to $\\angle APQ.$  Enter your answer as a fraction.",
+    "level": "Level 5",
+    "type": "Precalculus",
+    "solution": "Let $x = \\angle QBP = \\angle QPB.$\n\n[asy]\nunitsize(6 cm);\n\npair A, B, C, P, Q;\n\nA = (0,0);\nB = dir(260);\nC = dir(280);\nP = extension(B, B + dir(70), A, C);\nQ = extension(C, C + dir(130), A, B);\n\ndraw(A--B--C--cycle);\ndraw(Q--P--B);\n\nlabel(\"$A$\", A, N);\nlabel(\"$B$\", B, SW);\nlabel(\"$C$\", C, SE);\nlabel(\"$P$\", P, NE);\nlabel(\"$Q$\", Q, W);\n[/asy]\n\nThen $\\angle BQP = 180^\\circ - 2x,$ and $\\angle PQA = 2x.$  Since triangle $APQ$ is isosceles, $\\angle QAP = 2x.$  Then $\\angle APQ = 180^\\circ - 4x,$ so $\\angle QPC = 4x.$  Since $\\angle QPB = x,$ $\\angle BPC = 3x.$\n\nAlso, since triangle $ABC$ is isosceles,\n\\[\\angle ABC = \\angle ACB = \\frac{180^\\circ - \\angle BAC}{2} = 90^\\circ - x.\\]By the Law of Sines on triangle $BCP,$\n\\[\\frac{BC}{BP} = \\frac{\\sin 3x}{\\sin (90^\\circ - x)} = \\frac{\\sin 3x}{\\cos x}.\\]By the Law of Sines on triangle $PQB,$\n\\[\\frac{PQ}{BP} = \\frac{\\sin x}{\\sin 2x} = \\frac{\\sin x}{2 \\sin x \\cos x} = \\frac{1}{2 \\cos x}.\\]Since $BC = PQ,$ $\\frac{\\sin 3x}{\\cos x} = \\frac{1}{2 \\cos x},$ so\n\\[\\sin 3x = \\frac{1}{2}.\\]Since $\\angle APQ = 180^\\circ - 4x,$ $x < \\frac{180^\\circ}{4} = 45^\\circ,$ so $3x < 135^\\circ.$  Therefore, $3x = 30^\\circ,$ so $x = 10^\\circ.$\n\nThen $\\angle ACB = 90^\\circ - x = 80^\\circ$ and $\\angle APQ = 140^\\circ,$ and the ratio we seek is $\\frac{80}{140} = \\boxed{\\frac{4}{7}}.$",
+    "is_solved": false,
+    "model_solution": "Step 1: Let $AC = BC = x$ and $AB = 2x.$\nStep 2: Since $\\triangle ABC \\cong \\triangle PQB,$ it follows that $\\angle PQA = \\angle BAC.$\nStep 3: From the congruence of triangle ABC and triangle PQB, it follows that angle BAC = angle PAC.\nStep 4: Since $\\angle ACB$ is congruent to $\\angle ACB$ and $\\angle APQ$ is congruent to $\\angle PAC$, it follows that $\\angle ACB = 2\\angle PAC.$\nStep 5: Since $AP = PQ = QB$, it follows that $AQ = QP = PC$.\nSince $AQ = QP = PC$, it follows that $\\triangle AQP$ and $\\triangle PCQ$ are isosceles.\nStep 6: Since $\\triangle AQP$ is isosceles, $\\angle PAQ = \\angle QAP.$  Also, since $\\angle QAP = \\angle BAC = \\angle PAC,$ it follows that $\\angle PAQ = \\angle PAC.$\nStep 7: Since $\\triangle PCQ$ is isosceles, $\\angle QPC = \\angle PQC.$  Also, since $\\angle PQC = \\angle PAC$ and $\\angle QPC = \\angle PAQ,$ it follows that $\\angle PQC = \\angle PAQ.$\nStep 8: Since the sum of the interior angles of a triangle is $180^\\circ$ and $\\angle APC = \\angle APQ + \\angle QPC + \\angle PAC,$ it follows that $\\angle APC = 3\\angle PAC.$\nSince $\\angle APC$ is congruent to $\\angle ACB$ and $\\angle APC = 3\\angle PAC,$ it follows that $\\angle ACB = 3\\angle PAC.$",
+    "steps": [
+        "Step 1: Let $AC = BC = x$ and $AB = 2x.$",
+        "Step 2: Since $\\triangle ABC \\cong \\triangle PQB,$ it follows that $\\angle PQA = \\angle BAC.$",
+        "Step 3: From the congruence of triangle ABC and triangle PQB, it follows that angle BAC = angle PAC.",
+        "Step 4: Since $\\angle ACB$ is congruent to $\\angle ACB$ and $\\angle APQ$ is congruent to $\\angle PAC$, it follows that $\\angle ACB = 2\\angle PAC.$",
+        "Step 5: Since $AP = PQ = QB$, it follows that $AQ = QP = PC$.",
+        "Since $AQ = QP = PC$, it follows that $\\triangle AQP$ and $\\triangle PCQ$ are isosceles.",
+        "Step 6: Since $\\triangle AQP$ is isosceles, $\\angle PAQ = \\angle QAP.$  Also, since $\\angle QAP = \\angle BAC = \\angle PAC,$ it follows that $\\angle PAQ = \\angle PAC.$",
+        "Step 7: Since $\\triangle PCQ$ is isosceles, $\\angle QPC = \\angle PQC.$  Also, since $\\angle PQC = \\angle PAC$ and $\\angle QPC = \\angle PAQ,$ it follows that $\\angle PQC = \\angle PAQ.$",
+        "Step 8: Since the sum of the interior angles of a triangle is $180^\\circ$ and $\\angle APC = \\angle APQ + \\angle QPC + \\angle PAC,$ it follows that $\\angle APC = 3\\angle PAC.$",
+        "Since $\\angle APC$ is congruent to $\\angle ACB$ and $\\angle APC = 3\\angle PAC,$ it follows that $\\angle ACB = 3\\angle PAC.$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Let $AC = BC = x$ and $AB = 2x.$",
+            1
+        ],
+        [
+            "Step 2: Since $\\triangle ABC \\cong \\triangle PQB,$ it follows that $\\angle PQA = \\angle BAC.$",
+            1
+        ],
+        [
+            "Step 3: From the congruence of triangle ABC and triangle PQB, it follows that angle BAC = angle PAC.",
+            1
+        ],
+        [
+            "Step 4: Since $\\angle ACB$ is congruent to $\\angle ACB$ and $\\angle APQ$ is congruent to $\\angle PAC$, it follows that $\\angle ACB = 2\\angle PAC.$",
+            1
+        ],
+        [
+            "Step 5: Since $AP = PQ = QB$, it follows that $AQ = QP = PC$.",
+            1
+        ],
+        [
+            "Since $AQ = QP = PC$, it follows that $\\triangle AQP$ and $\\triangle PCQ$ are isosceles.",
+            1
+        ],
+        [
+            "Step 6: Since $\\triangle AQP$ is isosceles, $\\angle PAQ = \\angle QAP.$  Also, since $\\angle QAP = \\angle BAC = \\angle PAC,$ it follows that $\\angle PAQ = \\angle PAC.$",
+            1
+        ],
+        [
+            "Step 7: Since $\\triangle PCQ$ is isosceles, $\\angle QPC = \\angle PQC.$  Also, since $\\angle PQC = \\angle PAC$ and $\\angle QPC = \\angle PAQ,$ it follows that $\\angle PQC = \\angle PAQ.$",
+            1
+        ],
+        [
+            "Step 8: Since the sum of the interior angles of a triangle is $180^\\circ$ and $\\angle APC = \\angle APQ + \\angle QPC + \\angle PAC,$ it follows that $\\angle APC = 3\\angle PAC.$",
+            1
+        ],
+        [
+            "Since $\\angle APC$ is congruent to $\\angle ACB$ and $\\angle APC = 3\\angle PAC,$ it follows that $\\angle ACB = 3\\angle PAC.$",
+            1
+        ]
+    ],
+    "time": 136.2701015472412,
+    "total_tokens": 6691,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

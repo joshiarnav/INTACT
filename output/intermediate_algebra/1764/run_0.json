@@ -1,0 +1,41 @@
+{
+    "problem": "The quadratic $f(x) = x^2 + bx + c$ satisfies $f(2 + t) = f(2 - t)$ for all real numbers $t.$  Enter $f(1),$ $f(2),$ and $f(4)$ in increasing order.  For example, if you think $f(4) < f(2) < f(1),$ then enter \"f(4), f(2), f(1)\".",
+    "level": "Level 3",
+    "type": "Intermediate Algebra",
+    "solution": "The graph of $f(x) = x^2 + bx + c$ is an upward-facing parabola, and the condition\n\\[f(2 + t) = f(2 - t)\\]tells us that the axis of symmetry of the parabola is the line $x = 2.$  Thus, $f(x)$ is an increasing function of $|x - 2|.$  In other words, the farther $x$ is from 2, the greater $f(x)$ is.\n\n[asy]\nunitsize(1.5 cm);\n\nreal parab (real x) {\n  return (x^2/4);\n}\n\ndraw(graph(parab,-2,2),red);\ndraw((0,-0.5)--(0,2),dashed);\n\nlabel(\"$x = 2$\", (0,2), N);\ndot(\"$(2,f(2))$\", (0,0), SE);\ndot(\"$(1,f(1))$\", (-0.8,parab(-0.8)), SW);\ndot(\"$(4,f(4))$\", (1.6,parab(1.6)), SE);\n[/asy]\n\nHence, $\\boxed{f(2) < f(1) < f(4)}.$",
+    "is_solved": true,
+    "model_solution": "Step 1:  To solve the problem, we start by using the given condition $f(2 + t) = f(2 - t)$ for all real numbers $t.$\n$f(2 + t) = (2 + t)^2 + b(2 + t) + c$\n$f(2 - t) = (2 - t)^2 + b(2 - t) + c$\n\nSubtracting these two equations gives\n$(2 + t)^2 - (2 - t)^2 + b((2 + t) - (2 - t)) = 0.$\nStep 2: $4t + 4t^2 + bt + bt = 0.$\nStep 3: Expand and simplify to obtain \n$8t + 4t^2 + 2bt = 0.$\nStep 4: \n$8t + 4t^2 + 2bt = 0$\n$2t(4 + 2b + 2t) = 0$\nTherefore, $t = 0$ or $4 + 2b + 2t = 0.$\nSince $t=0$ gives $f(2)=4+b+c$, we cannot use this equation to determine $f(1)$ or $f(4)$.  So, we must consider the case $4+2b+2t=0$.\n\nThe final answer is: $\\boxed{0}$",
+    "steps": [
+        "Step 1:  To solve the problem, we start by using the given condition $f(2 + t) = f(2 - t)$ for all real numbers $t.$\n$f(2 + t) = (2 + t)^2 + b(2 + t) + c$\n$f(2 - t) = (2 - t)^2 + b(2 - t) + c$\n\nSubtracting these two equations gives\n$(2 + t)^2 - (2 - t)^2 + b((2 + t) - (2 - t)) = 0.$",
+        "Step 2: $4t + 4t^2 + bt + bt = 0.$",
+        "Step 3: Expand and simplify to obtain \n$8t + 4t^2 + 2bt = 0.$",
+        "Step 4: \n$8t + 4t^2 + 2bt = 0$\n$2t(4 + 2b + 2t) = 0$\nTherefore, $t = 0$ or $4 + 2b + 2t = 0.$",
+        "Since $t=0$ gives $f(2)=4+b+c$, we cannot use this equation to determine $f(1)$ or $f(4)$.  So, we must consider the case $4+2b+2t=0$.\n\nThe final answer is: $\\boxed{0}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  To solve the problem, we start by using the given condition $f(2 + t) = f(2 - t)$ for all real numbers $t.$\n$f(2 + t) = (2 + t)^2 + b(2 + t) + c$\n$f(2 - t) = (2 - t)^2 + b(2 - t) + c$\n\nSubtracting these two equations gives\n$(2 + t)^2 - (2 - t)^2 + b((2 + t) - (2 - t)) = 0.$",
+            1
+        ],
+        [
+            "Step 2: $4t + 4t^2 + bt + bt = 0.$",
+            1
+        ],
+        [
+            "Step 3: Expand and simplify to obtain \n$8t + 4t^2 + 2bt = 0.$",
+            1
+        ],
+        [
+            "Step 4: \n$8t + 4t^2 + 2bt = 0$\n$2t(4 + 2b + 2t) = 0$\nTherefore, $t = 0$ or $4 + 2b + 2t = 0.$",
+            1
+        ],
+        [
+            "Since $t=0$ gives $f(2)=4+b+c$, we cannot use this equation to determine $f(1)$ or $f(4)$.  So, we must consider the case $4+2b+2t=0$.\n\nThe final answer is: $\\boxed{0}$",
+            1
+        ]
+    ],
+    "time": 66.75461626052856,
+    "total_tokens": 3561,
+    "final_answer_tokens": 458,
+    "model": "meta-llama/Llama-Vision-Free"
+}

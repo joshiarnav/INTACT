@@ -1,0 +1,66 @@
+{
+    "problem": "Find all values of $k,$ for which there exists a nonzero vector $\\mathbf{v}$ such that\n\\[\\begin{pmatrix} 2 & -2 & 1 \\\\ 2 & -3 & 2 \\\\ -1 & 2 & 0 \\end{pmatrix} \\mathbf{v} = k \\mathbf{v}.\\]",
+    "level": "Level 5",
+    "type": "Precalculus",
+    "solution": "We can write the equation as\n\\[\\begin{pmatrix} 2 & -2 & 1 \\\\ 2 & -3 & 2 \\\\ -1 & 2 & 0 \\end{pmatrix} \\mathbf{v} = k \\mathbf{I} \\mathbf{v} = \\begin{pmatrix} k & 0 & 0 \\\\ 0 & k & 0 \\\\ 0 & 0 & k \\end{pmatrix} \\mathbf{v}.\\]Then\n\\[\\begin{pmatrix} 2 - k & -2 & 1 \\\\ 2 & -3 - k & 2 \\\\ -1 & 2 & -k \\end{pmatrix} \\mathbf{v} = \\mathbf{0}.\\]This equation has a nonzero vector $\\mathbf{v}$ as a solution if and only if\n\\[\\begin{vmatrix} 2 - k & -2 & 1 \\\\ 2 & -3 - k & 2 \\\\ -1 & 2 & -k \\end{vmatrix} = 0.\\]Expanding this determinant, we get\n\\begin{align*}\n\\begin{vmatrix} 2 - k & -2 & 1 \\\\ 2 & -3 - k & 2 \\\\ -1 & 2 & -k \\end{vmatrix} &= (2 - k) \\begin{vmatrix} -3 - k & 2 \\\\ 2 & -k \\end{vmatrix} - (-2) \\begin{vmatrix} 2 & 2 \\\\ -1 & -k \\end{vmatrix} + \\begin{vmatrix} 2 & -3 - k \\\\ -1 & 2 \\end{vmatrix} \\\\\n&= (2 - k)((-3 - k)(-k) - (2)(2)) -(-2) ((2)(-k) - (2)(-1)) + ((2)(2) - (-3 - k)(-1)) \\\\\n&= -k^3 - k^2 + 5k - 3.\n\\end{align*}Thus, $k^3 + k^2 - 5k + 3 = 0.$  This equation factors as $(k - 1)^2 (k + 3) = 0,$ so the possible values of $k$ are $\\boxed{1, -3}.$\n\nNote that for $k = 1,$ we can take $\\mathbf{v} = \\begin{pmatrix} -1 \\\\ 0 \\\\ 1 \\end{pmatrix},$ and for $k = -3,$ we can take $\\mathbf{v} = \\begin{pmatrix} -1 \\\\ -2 \\\\ 1 \\end{pmatrix}.$",
+    "is_solved": false,
+    "model_solution": "## Step 1: Recall the definition of an eigenvalue\nAn eigenvalue is a scalar that represents how much change occurs in a linear transformation. To find the eigenvalues of a matrix, we need to find the values of $k$ that satisfy the equation $A \\mathbf{v} = k \\mathbf{v}$ for some nonzero vector $\\mathbf{v}$.\n\n## Step 2: Write the equation in matrix form\n\\[\\begin{pmatrix} 2 & -2 & 1 \\\\ 2 & -3 & 2 \\\\ -1 & 2 & 0 \\end{pmatrix} \\mathbf{v} = k \\mathbf{v}\\]\n\n## Step 3: Subtract $k \\mathbf{v}$ from both sides\nSubtracting $k \\mathbf{v}$ from both sides of the equation gives: \n\\[\\begin{pmatrix} 2 & -2 & 1 \\\\ 2 & -3 & 2 \\\\ -1 & 2 & 0 \\end{pmatrix} \\mathbf{v} - k \\mathbf{v} = 0\\]\n\n## Step 4: Factor out $\\\n## Step 5: Write the equation as a matrix equation\n$\\begin{pmatrix} 2-k & -2 & 1 \\\\ 2 & -3-k & 2 \\\\ -1 & 2 & -k \\end{pmatrix} \\mathbf{v} = 0$\n## Step 6: Find the determinant of the matrix\nTo find the values of $k$ for which there exists a nonzero vector $\\mathbf{v}$, we need to find the determinant of the matrix $\\begin{pmatrix} 2-k & -2 & 1 \\\\ 2 & -3-k & 2 \\\\ -1 & 2 & -k \\end{pmatrix}$ and set it equal to zero: $\\begin{vmatrix} 2-k & -2 & 1 \\\\ 2 & -3-k & 2 \\\\ -1 & 2 & -k \\end{vmatrix} = 0$\n## Step 7: Expand the determinant\n$\\begin{vmatrix} 2-k & -2 & 1 \\\\ 2 & -3-k & 2 \\\\ -1 & 2 & -k \\end{vmatrix} = (2-k)(-k(-3-k)-2\\cdot2) - (-2)(2(-k)-2\\cdot(-1)) + 1(2\\cdot2-(-3-k)(-1)) = 0$\n## Step 8: Simplify the expression\n$(2-k)(k^2+3k+4) + 2(2k+2) + 2(2-3-k)$\n## Step 9: Expand and simplify the expression\n$(2-k)(k^2+3k+4) + 4k + 4 + 2 - 6 - k$\n\nSimplify to\n$2k^2 + 6k + 8 - k^3 - 3k^2 - 4k + 4k + 4 + 2 - 6 - k$\n\nCombine like terms\n$-k^3 - k^2 + 3k + 10$\n\nFactor\n$-(k^3 + k^2 - 3k - 10)$\n## Step 10: Factor the expression\n$-(k+2)(k-1)(k+5)$\n## Step 11: Set the expression equal to zero\n$-(k+2)(k-1)(k+5) = 0$\n## Step 12: Solve for k\n$(k+2)(k-1)(k+5) = 0$\n$k+2 = 0$ or $k-1 = 0$ or $k+5 = 0$\n$k = -2$ or $k = 1$ or $k = -5$\n## Step 13: Final Answer\nThe final answer is: $\\boxed{-2, 1, -5}$",
+    "steps": [
+        "## Step 1: Recall the definition of an eigenvalue\nAn eigenvalue is a scalar that represents how much change occurs in a linear transformation. To find the eigenvalues of a matrix, we need to find the values of $k$ that satisfy the equation $A \\mathbf{v} = k \\mathbf{v}$ for some nonzero vector $\\mathbf{v}$.\n\n## Step 2: Write the equation in matrix form\n\\[\\begin{pmatrix} 2 & -2 & 1 \\\\ 2 & -3 & 2 \\\\ -1 & 2 & 0 \\end{pmatrix} \\mathbf{v} = k \\mathbf{v}\\]\n\n## Step 3: Subtract $k \\mathbf{v}$ from both sides\nSubtracting $k \\mathbf{v}$ from both sides of the equation gives: \n\\[\\begin{pmatrix} 2 & -2 & 1 \\\\ 2 & -3 & 2 \\\\ -1 & 2 & 0 \\end{pmatrix} \\mathbf{v} - k \\mathbf{v} = 0\\]\n\n## Step 4: Factor out $\\",
+        "## Step 5: Write the equation as a matrix equation\n$\\begin{pmatrix} 2-k & -2 & 1 \\\\ 2 & -3-k & 2 \\\\ -1 & 2 & -k \\end{pmatrix} \\mathbf{v} = 0$",
+        "## Step 6: Find the determinant of the matrix\nTo find the values of $k$ for which there exists a nonzero vector $\\mathbf{v}$, we need to find the determinant of the matrix $\\begin{pmatrix} 2-k & -2 & 1 \\\\ 2 & -3-k & 2 \\\\ -1 & 2 & -k \\end{pmatrix}$ and set it equal to zero: $\\begin{vmatrix} 2-k & -2 & 1 \\\\ 2 & -3-k & 2 \\\\ -1 & 2 & -k \\end{vmatrix} = 0$",
+        "## Step 7: Expand the determinant\n$\\begin{vmatrix} 2-k & -2 & 1 \\\\ 2 & -3-k & 2 \\\\ -1 & 2 & -k \\end{vmatrix} = (2-k)(-k(-3-k)-2\\cdot2) - (-2)(2(-k)-2\\cdot(-1)) + 1(2\\cdot2-(-3-k)(-1)) = 0$",
+        "## Step 8: Simplify the expression\n$(2-k)(k^2+3k+4) + 2(2k+2) + 2(2-3-k)$",
+        "## Step 9: Expand and simplify the expression\n$(2-k)(k^2+3k+4) + 4k + 4 + 2 - 6 - k$\n\nSimplify to\n$2k^2 + 6k + 8 - k^3 - 3k^2 - 4k + 4k + 4 + 2 - 6 - k$\n\nCombine like terms\n$-k^3 - k^2 + 3k + 10$\n\nFactor\n$-(k^3 + k^2 - 3k - 10)$",
+        "## Step 10: Factor the expression\n$-(k+2)(k-1)(k+5)$",
+        "## Step 11: Set the expression equal to zero\n$-(k+2)(k-1)(k+5) = 0$",
+        "## Step 12: Solve for k\n$(k+2)(k-1)(k+5) = 0$\n$k+2 = 0$ or $k-1 = 0$ or $k+5 = 0$\n$k = -2$ or $k = 1$ or $k = -5$",
+        "## Step 13: Final Answer\nThe final answer is: $\\boxed{-2, 1, -5}$"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Recall the definition of an eigenvalue\nAn eigenvalue is a scalar that represents how much change occurs in a linear transformation. To find the eigenvalues of a matrix, we need to find the values of $k$ that satisfy the equation $A \\mathbf{v} = k \\mathbf{v}$ for some nonzero vector $\\mathbf{v}$.\n\n## Step 2: Write the equation in matrix form\n\\[\\begin{pmatrix} 2 & -2 & 1 \\\\ 2 & -3 & 2 \\\\ -1 & 2 & 0 \\end{pmatrix} \\mathbf{v} = k \\mathbf{v}\\]\n\n## Step 3: Subtract $k \\mathbf{v}$ from both sides\nSubtracting $k \\mathbf{v}$ from both sides of the equation gives: \n\\[\\begin{pmatrix} 2 & -2 & 1 \\\\ 2 & -3 & 2 \\\\ -1 & 2 & 0 \\end{pmatrix} \\mathbf{v} - k \\mathbf{v} = 0\\]\n\n## Step 4: Factor out $\\",
+            1
+        ],
+        [
+            "## Step 5: Write the equation as a matrix equation\n$\\begin{pmatrix} 2-k & -2 & 1 \\\\ 2 & -3-k & 2 \\\\ -1 & 2 & -k \\end{pmatrix} \\mathbf{v} = 0$",
+            1
+        ],
+        [
+            "## Step 6: Find the determinant of the matrix\nTo find the values of $k$ for which there exists a nonzero vector $\\mathbf{v}$, we need to find the determinant of the matrix $\\begin{pmatrix} 2-k & -2 & 1 \\\\ 2 & -3-k & 2 \\\\ -1 & 2 & -k \\end{pmatrix}$ and set it equal to zero: $\\begin{vmatrix} 2-k & -2 & 1 \\\\ 2 & -3-k & 2 \\\\ -1 & 2 & -k \\end{vmatrix} = 0$",
+            1
+        ],
+        [
+            "## Step 7: Expand the determinant\n$\\begin{vmatrix} 2-k & -2 & 1 \\\\ 2 & -3-k & 2 \\\\ -1 & 2 & -k \\end{vmatrix} = (2-k)(-k(-3-k)-2\\cdot2) - (-2)(2(-k)-2\\cdot(-1)) + 1(2\\cdot2-(-3-k)(-1)) = 0$",
+            1
+        ],
+        [
+            "## Step 8: Simplify the expression\n$(2-k)(k^2+3k+4) + 2(2k+2) + 2(2-3-k)$",
+            1
+        ],
+        [
+            "## Step 9: Expand and simplify the expression\n$(2-k)(k^2+3k+4) + 4k + 4 + 2 - 6 - k$\n\nSimplify to\n$2k^2 + 6k + 8 - k^3 - 3k^2 - 4k + 4k + 4 + 2 - 6 - k$\n\nCombine like terms\n$-k^3 - k^2 + 3k + 10$\n\nFactor\n$-(k^3 + k^2 - 3k - 10)$",
+            1
+        ],
+        [
+            "## Step 10: Factor the expression\n$-(k+2)(k-1)(k+5)$",
+            1
+        ],
+        [
+            "## Step 11: Set the expression equal to zero\n$-(k+2)(k-1)(k+5) = 0$",
+            1
+        ],
+        [
+            "## Step 12: Solve for k\n$(k+2)(k-1)(k+5) = 0$\n$k+2 = 0$ or $k-1 = 0$ or $k+5 = 0$\n$k = -2$ or $k = 1$ or $k = -5$",
+            1
+        ],
+        [
+            "## Step 13: Final Answer\nThe final answer is: $\\boxed{-2, 1, -5}$",
+            1
+        ]
+    ],
+    "time": 137.30496072769165,
+    "total_tokens": 14986,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,61 @@
+{
+    "problem": "Suppose two distinct integers are chosen from between 5 and 17, inclusive.  What is the probability that their product is odd?",
+    "level": "Level 3",
+    "type": "Counting & Probability",
+    "solution": "There are 13 integers between 5 and 17 inclusive, so there are $\\binom{13}{2} = 78$ ways to choose two of them without regard to order.  In order for the product of two integers to be odd, both of the integers themselves must be odd. There are 7 odd integers between 5 and 17 inclusive, so there are $\\binom72 = 21$ ways to choose two of them without regard to order.  Therefore, the desired probability is $\\dfrac{21}{78} = \\boxed{\\dfrac{7}{26}}$.",
+    "is_solved": true,
+    "model_solution": "There are 13 integers between 5 and 17, inclusive.\nThere are $\\binom{13}{2}$ ways to choose two distinct integers from 13 integers.\nThe number of ways to choose two distinct integers from 13 integers, where both integers are odd, is $\\binom{7}{2}$.\nThe number of ways to choose two distinct integers from 13 integers, where one integer is odd and the other is even, is $\\binom{7}{1}\\binom{6}{1}$\nThe number of ways to choose two distinct integers from 13 integers, where both integers are even, is $\\binom{6}{2}$.\nThere are $\\binom{7}{2}$ ways to choose two distinct integers from 13 integers, where both integers are odd, is $\\binom{7}{2}$.\nThe probability that their product is odd is the number of ways to choose two distinct integers from 13 integers, where both integers are odd, divided by the number of ways to choose two distinct integers from 13 integers. \n$\\frac{\\binom{7}{2}}{\\binom{13}{2}}$\n$\\frac{\\binom{7}{2}}{\\binom{13}{2}}=\\frac{21}{78}=\\frac{7}{26}$\n$\\frac{\\binom{7}{2}}{\\binom{13}{2}}=\\frac{21}{78}=\\frac{7}{26}$",
+    "steps": [
+        "There are 13 integers between 5 and 17, inclusive.",
+        "There are $\\binom{13}{2}$ ways to choose two distinct integers from 13 integers.",
+        "The number of ways to choose two distinct integers from 13 integers, where both integers are odd, is $\\binom{7}{2}$.",
+        "The number of ways to choose two distinct integers from 13 integers, where one integer is odd and the other is even, is $\\binom{7}{1}\\binom{6}{1}$",
+        "The number of ways to choose two distinct integers from 13 integers, where both integers are even, is $\\binom{6}{2}$.",
+        "There are $\\binom{7}{2}$ ways to choose two distinct integers from 13 integers, where both integers are odd, is $\\binom{7}{2}$.",
+        "The probability that their product is odd is the number of ways to choose two distinct integers from 13 integers, where both integers are odd, divided by the number of ways to choose two distinct integers from 13 integers. \n$\\frac{\\binom{7}{2}}{\\binom{13}{2}}$",
+        "$\\frac{\\binom{7}{2}}{\\binom{13}{2}}=\\frac{21}{78}=\\frac{7}{26}$",
+        "$\\frac{\\binom{7}{2}}{\\binom{13}{2}}=\\frac{21}{78}=\\frac{7}{26}$"
+    ],
+    "full_steps": [
+        [
+            "There are 13 integers between 5 and 17, inclusive.",
+            1
+        ],
+        [
+            "There are $\\binom{13}{2}$ ways to choose two distinct integers from 13 integers.",
+            1
+        ],
+        [
+            "The number of ways to choose two distinct integers from 13 integers, where both integers are odd, is $\\binom{7}{2}$.",
+            1
+        ],
+        [
+            "The number of ways to choose two distinct integers from 13 integers, where one integer is odd and the other is even, is $\\binom{7}{1}\\binom{6}{1}$",
+            1
+        ],
+        [
+            "The number of ways to choose two distinct integers from 13 integers, where both integers are even, is $\\binom{6}{2}$.",
+            1
+        ],
+        [
+            "There are $\\binom{7}{2}$ ways to choose two distinct integers from 13 integers, where both integers are odd, is $\\binom{7}{2}$.",
+            1
+        ],
+        [
+            "The probability that their product is odd is the number of ways to choose two distinct integers from 13 integers, where both integers are odd, divided by the number of ways to choose two distinct integers from 13 integers. \n$\\frac{\\binom{7}{2}}{\\binom{13}{2}}$",
+            1
+        ],
+        [
+            "$\\frac{\\binom{7}{2}}{\\binom{13}{2}}=\\frac{21}{78}=\\frac{7}{26}$",
+            1
+        ],
+        [
+            "$\\frac{\\binom{7}{2}}{\\binom{13}{2}}=\\frac{21}{78}=\\frac{7}{26}$",
+            1
+        ]
+    ],
+    "time": 125.24730896949768,
+    "total_tokens": 4322,
+    "final_answer_tokens": 388,
+    "model": "meta-llama/Llama-Vision-Free"
+}

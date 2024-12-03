@@ -1,0 +1,36 @@
+{
+    "problem": "A circle has the same center as an ellipse and passes through the foci $F_1$ and $F_2$ of the ellipse.  The two curves intersect in 4 points.  Let $P$ be any point of intersection.  If the major axis of the ellipse is 15 and the area of triangle $PF_1 F_2$ is 26, compute the distance between the foci.",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "Let $x = PF_1$ and $y = PF_2.$  Then $x + y = 15$ and $\\frac{1}{2} xy = 26,$ so $xy = 52.$\n\n[asy]\nunitsize(0.5 cm);\n\npath ell = xscale(5)*yscale(3)*Circle((0,0),1);\npair P = intersectionpoints(ell,Circle((0,0),4))[1];\npair[] F;\n\nF[1] = (-4,0);\nF[2] = (4,0);\n\ndraw(ell);\ndraw(Circle((0,0),4));\ndraw((-5,0)--(5,0),dashed);\ndraw(F[1]--P--F[2]);\ndraw(rightanglemark(F[1],P,F[2],15));\n \ndot(\"$F_1$\", F[1], SW);\ndot(\"$F_2$\", F[2], SE);\ndot(\"$P$\", P, NW);\n[/asy]\n\nSince $P$ lies on the circle with diameter $\\overline{F_1 F_2},$ $\\angle F_1 PF_2 = 90^\\circ.$  Then by Pythagoras,\n\\[(F_1 F_2)^2 = x^2 + y^2.\\]Squaring the equation $x + y = 15,$ we get $x^2 + 2xy + y^2 = 225.$  Then $x^2 + y^2 = 225 - 2xy = 225 - 2 \\cdot 52 = 121,$ so $F_1 F_2 = \\boxed{11}.$",
+    "is_solved": true,
+    "model_solution": "Step 1:  Let $P$ be any point of intersection of the circle and the ellipse, and let $2a$ and $2c$ be the lengths of the major and minor axes of the ellipse, respectively. Draw the perpendicular from $P$ to the major axis of the ellipse, and let the foot of the altitude be $M$.\nStep 2:  Since the circle passes through the foci $F_1$ and $F_2$, the center $O$ of the circle is also the center of the ellipse, and the circle passes through the foci of the ellipse.\nStep 3:  We can see that the major axis of the ellipse is $15$, so $2a=15$ and $a=7.5$.\nStep 4:  The area of triangle $PF_1F_2$ is given as $26$, so we can express this using the formula for the area of a triangle.\nStep 5:  We have $\\frac{1}{2}PF_1 \\cdot PF_2 = 26$.\nStep 6:  The distance between the foci $F_1$ and $F_2$ is given\nSince $PF_1 \\cdot PF_2 = PM^2 + a^2$, then $PM^2 = PF_1 \\cdot PF_2 - a^2$.\nWe can substitute the given area of the triangle to calculate $PM^2$.\nWe can substitute the value of $a$ and the given area to calculate $PM^2$. \n$PM^2 = PF_1 \\cdot PF_2 - a^2$\n$PM^2 = 2(26) - 7.5^2$\n$PM^2 = 52 - 56.25$\n$PM^2 = -4.25$\nThen, $PM = i\\sqrt{4.25}$\nStep 8:\nSince $PM^2$ is negative, this is a contradiction because $PM^2$ must be nonnegative.\nThe intersection points $P$ must be on the minor axis of the ellipse.\nWe know that the distance between the foci is $2c$, and we have an equation for $c$ in terms of $a$ and $b$, where $b$ is half the length of the minor axis.\nWe know that $b = \\sqrt{a^2 - c^2}$.\nWe can substitute the given length of the major axis to calculate $c$.\nSince $PF_1 \\cdot PF_2 = b^2 + a^2$, we can substitute the given area to calculate $b^2$.\nThen, we can use the equation $b = \\sqrt{a^2 - c^2}$ to solve for $c$.\n\nFinal Answer: The final answer is $\\boxed{10}$.",
+    "steps": [
+        "Step 1:  Let $P$ be any point of intersection of the circle and the ellipse, and let $2a$ and $2c$ be the lengths of the major and minor axes of the ellipse, respectively. Draw the perpendicular from $P$ to the major axis of the ellipse, and let the foot of the altitude be $M$.\nStep 2:  Since the circle passes through the foci $F_1$ and $F_2$, the center $O$ of the circle is also the center of the ellipse, and the circle passes through the foci of the ellipse.\nStep 3:  We can see that the major axis of the ellipse is $15$, so $2a=15$ and $a=7.5$.\nStep 4:  The area of triangle $PF_1F_2$ is given as $26$, so we can express this using the formula for the area of a triangle.\nStep 5:  We have $\\frac{1}{2}PF_1 \\cdot PF_2 = 26$.\nStep 6:  The distance between the foci $F_1$ and $F_2$ is given",
+        "Since $PF_1 \\cdot PF_2 = PM^2 + a^2$, then $PM^2 = PF_1 \\cdot PF_2 - a^2$.\nWe can substitute the given area of the triangle to calculate $PM^2$.",
+        "We can substitute the value of $a$ and the given area to calculate $PM^2$. \n$PM^2 = PF_1 \\cdot PF_2 - a^2$\n$PM^2 = 2(26) - 7.5^2$\n$PM^2 = 52 - 56.25$\n$PM^2 = -4.25$\nThen, $PM = i\\sqrt{4.25}$",
+        "Step 8:\nSince $PM^2$ is negative, this is a contradiction because $PM^2$ must be nonnegative.\nThe intersection points $P$ must be on the minor axis of the ellipse.\nWe know that the distance between the foci is $2c$, and we have an equation for $c$ in terms of $a$ and $b$, where $b$ is half the length of the minor axis.\nWe know that $b = \\sqrt{a^2 - c^2}$.\nWe can substitute the given length of the major axis to calculate $c$.\nSince $PF_1 \\cdot PF_2 = b^2 + a^2$, we can substitute the given area to calculate $b^2$.\nThen, we can use the equation $b = \\sqrt{a^2 - c^2}$ to solve for $c$.\n\nFinal Answer: The final answer is $\\boxed{10}$."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Let $P$ be any point of intersection of the circle and the ellipse, and let $2a$ and $2c$ be the lengths of the major and minor axes of the ellipse, respectively. Draw the perpendicular from $P$ to the major axis of the ellipse, and let the foot of the altitude be $M$.\nStep 2:  Since the circle passes through the foci $F_1$ and $F_2$, the center $O$ of the circle is also the center of the ellipse, and the circle passes through the foci of the ellipse.\nStep 3:  We can see that the major axis of the ellipse is $15$, so $2a=15$ and $a=7.5$.\nStep 4:  The area of triangle $PF_1F_2$ is given as $26$, so we can express this using the formula for the area of a triangle.\nStep 5:  We have $\\frac{1}{2}PF_1 \\cdot PF_2 = 26$.\nStep 6:  The distance between the foci $F_1$ and $F_2$ is given",
+            1
+        ],
+        [
+            "Since $PF_1 \\cdot PF_2 = PM^2 + a^2$, then $PM^2 = PF_1 \\cdot PF_2 - a^2$.\nWe can substitute the given area of the triangle to calculate $PM^2$.",
+            1
+        ],
+        [
+            "We can substitute the value of $a$ and the given area to calculate $PM^2$. \n$PM^2 = PF_1 \\cdot PF_2 - a^2$\n$PM^2 = 2(26) - 7.5^2$\n$PM^2 = 52 - 56.25$\n$PM^2 = -4.25$\nThen, $PM = i\\sqrt{4.25}$",
+            1
+        ],
+        [
+            "Step 8:\nSince $PM^2$ is negative, this is a contradiction because $PM^2$ must be nonnegative.\nThe intersection points $P$ must be on the minor axis of the ellipse.\nWe know that the distance between the foci is $2c$, and we have an equation for $c$ in terms of $a$ and $b$, where $b$ is half the length of the minor axis.\nWe know that $b = \\sqrt{a^2 - c^2}$.\nWe can substitute the given length of the major axis to calculate $c$.\nSince $PF_1 \\cdot PF_2 = b^2 + a^2$, we can substitute the given area to calculate $b^2$.\nThen, we can use the equation $b = \\sqrt{a^2 - c^2}$ to solve for $c$.\n\nFinal Answer: The final answer is $\\boxed{10}$.",
+            1
+        ]
+    ],
+    "time": 50.45888638496399,
+    "total_tokens": 4306,
+    "final_answer_tokens": 744,
+    "model": "meta-llama/Llama-Vision-Free"
+}

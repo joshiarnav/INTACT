@@ -1,0 +1,51 @@
+{
+    "problem": "In right triangle $ABC$, we have $AB = 10$, $BC = 24$, and $\\angle ABC = 90^\\circ$. If $M$ is on $\\overline{AC}$ such that $\\overline{BM}$ is an altitude of $\\triangle ABC$, then what is $\\cos \\angle ABM$?",
+    "level": "Level 2",
+    "type": "Precalculus",
+    "solution": "[asy]\n\npair A,B,C,M;\n\nB = (0,0);\n\nA = (0,10);\n\nC = (24,0);\n\nM = foot(B,A,C);\n\ndraw(M--B--A--C--B);\n\nlabel(\"$B$\",B,SW);\n\nlabel(\"$A$\",A,N);\n\nlabel(\"$C$\",C,SE);\n\nlabel(\"$M$\",M,NE);\n\ndraw(rightanglemark(C,B,A,30));\n\ndraw(rightanglemark(A,M,B,30));\n\n[/asy]\n\nThe Pythagorean Theorem gives us $AC = \\sqrt{AB^2 + BC^2} = \\sqrt{100+576} = \\sqrt{676}=26$.\n\nFrom right triangle $ABM$, we have $\\angle ABM = 90^\\circ - \\angle BAM = 90^\\circ - \\angle BAC$.  But right triangle $ABC$ gives us $90^\\circ -\\angle BAC = \\angle BCA$, so $\\angle ABM = \\angle BCA$, which means $\\cos \\angle ABM = \\cos\\angle BCA = \\frac{BC}{AC} = \\frac{24}{26} = \\boxed{\\frac{12}{13}}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: Draw a diagram of right triangle $ABC$.\n\nLabel points $A$, $B$, $C$, and $M$.\nLabel side lengths $AB = 10$, $BC = 24$, and $\\angle ABC = 90^\\circ$.\nLabel altitude $\\overline{BM}$.\nDraw $\\overline{AB}$, $\\overline{BC}$, $\\overline{AC}$, and $\\overline{BM}$.\nStep 2: \nUse the Pythagorean Theorem to find the length of $AC$.\nStep 3:\nFind the length of $AC$ using the Pythagorean Theorem: $AC^2 = AB^2 + BC^2$, so $AC^2 = 10^2 + 24^2$, so $AC^2 = 100 + 576$, so $AC^2 = 676$, so $AC = \\sqrt{676} = 26$.\nStep 4: Since $\\overline{BM}$ is an altitude of $\\triangle ABC$, we know that $BM$ is perpendicular to $AC$, and $\\triangle ABM$ is a right triangle. Therefore, $\\cos \\angle ABM = \\frac{AB}{AM}$, where $AM = \\frac{AC}{2}$, since $M$ is the midpoint of $AC$.\nFind the length of $AM$: $AM = \\frac{AC}{2} = \\frac{26}{2} = 13$.\nFind $\\cos \\angle ABM = \\frac{AB}{AM} = \\frac{10}{13}$.\nFind $\\cos \\angle ABM = \\frac{AB}{AM} = \\frac{10}{13}$.",
+    "steps": [
+        "Step 1: Draw a diagram of right triangle $ABC$.\n\nLabel points $A$, $B$, $C$, and $M$.\nLabel side lengths $AB = 10$, $BC = 24$, and $\\angle ABC = 90^\\circ$.\nLabel altitude $\\overline{BM}$.\nDraw $\\overline{AB}$, $\\overline{BC}$, $\\overline{AC}$, and $\\overline{BM}$.",
+        "Step 2: \nUse the Pythagorean Theorem to find the length of $AC$.",
+        "Step 3:\nFind the length of $AC$ using the Pythagorean Theorem: $AC^2 = AB^2 + BC^2$, so $AC^2 = 10^2 + 24^2$, so $AC^2 = 100 + 576$, so $AC^2 = 676$, so $AC = \\sqrt{676} = 26$.",
+        "Step 4: Since $\\overline{BM}$ is an altitude of $\\triangle ABC$, we know that $BM$ is perpendicular to $AC$, and $\\triangle ABM$ is a right triangle. Therefore, $\\cos \\angle ABM = \\frac{AB}{AM}$, where $AM = \\frac{AC}{2}$, since $M$ is the midpoint of $AC$.",
+        "Find the length of $AM$: $AM = \\frac{AC}{2} = \\frac{26}{2} = 13$.",
+        "Find $\\cos \\angle ABM = \\frac{AB}{AM} = \\frac{10}{13}$.",
+        "Find $\\cos \\angle ABM = \\frac{AB}{AM} = \\frac{10}{13}$."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Draw a diagram of right triangle $ABC$.\n\nLabel points $A$, $B$, $C$, and $M$.\nLabel side lengths $AB = 10$, $BC = 24$, and $\\angle ABC = 90^\\circ$.\nLabel altitude $\\overline{BM}$.\nDraw $\\overline{AB}$, $\\overline{BC}$, $\\overline{AC}$, and $\\overline{BM}$.",
+            1
+        ],
+        [
+            "Step 2: \nUse the Pythagorean Theorem to find the length of $AC$.",
+            1
+        ],
+        [
+            "Step 3:\nFind the length of $AC$ using the Pythagorean Theorem: $AC^2 = AB^2 + BC^2$, so $AC^2 = 10^2 + 24^2$, so $AC^2 = 100 + 576$, so $AC^2 = 676$, so $AC = \\sqrt{676} = 26$.",
+            1
+        ],
+        [
+            "Step 4: Since $\\overline{BM}$ is an altitude of $\\triangle ABC$, we know that $BM$ is perpendicular to $AC$, and $\\triangle ABM$ is a right triangle. Therefore, $\\cos \\angle ABM = \\frac{AB}{AM}$, where $AM = \\frac{AC}{2}$, since $M$ is the midpoint of $AC$.",
+            1
+        ],
+        [
+            "Find the length of $AM$: $AM = \\frac{AC}{2} = \\frac{26}{2} = 13$.",
+            1
+        ],
+        [
+            "Find $\\cos \\angle ABM = \\frac{AB}{AM} = \\frac{10}{13}$.",
+            1
+        ],
+        [
+            "Find $\\cos \\angle ABM = \\frac{AB}{AM} = \\frac{10}{13}$.",
+            1
+        ]
+    ],
+    "time": 92.07957816123962,
+    "total_tokens": 5253,
+    "final_answer_tokens": 487,
+    "model": "meta-llama/Llama-Vision-Free"
+}

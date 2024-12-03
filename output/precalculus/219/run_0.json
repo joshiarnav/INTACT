@@ -1,0 +1,41 @@
+{
+    "problem": "If $w=\\cos40^\\circ+i\\sin40^\\circ $, then\n\\[|w+2w^2+3w^3+ \\dots +9w^9|^{-1}\\]can be expressed in the form $\\frac{a}{b} \\sin n^\\circ,$ where $a$ and $b$ are relatively prime positive integers, and $n$ is a positive integer smaller than 90.  Find $a + b + n.$",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "Let $S = w + 2w^2 + 3w^3 + \\dots + 9w^9.$  Then\n\\[wS = w^2 + 2w^3 + 3w^4 + \\dots + 9w^{10}.\\]Subtracting these equations, we get\n\\[(1 - w) S = w + w^2 + w^3 + \\dots + w^9 - 9w^{10}.\\]Note that $w^9 = \\cos 360^\\circ + i \\sin 360^\\circ = 1,$ so $w^9 - 1 = 0.$  This factors as\n\\[(w - 1)(w^8 + w^7 + \\dots + w + 1) = 0.\\]Since $w \\neq 1,$\n\\[w^8 + w^7 + \\dots + w + 1 = 0.\\]Hence,\n\\begin{align*}\n(1 - w) S &= w + w^2 + w^3 + \\dots + w^9 - 9w^{10} \\\\\n&= w(1 + w + w^2 + \\dots + w^8) - 9w \\\\\n&= -9w,\n\\end{align*}so\n\\[S = -\\frac{9w}{1 - w}.\\]Now,\n\\begin{align*}\n\\frac{1}{1 - w} &= \\frac{1}{1 - \\cos 40^\\circ - i \\sin 40^\\circ} \\\\\n&= \\frac{1 - \\cos 40^\\circ + i \\sin 40^\\circ}{(1 - \\cos 40^\\circ)^2 + \\sin^2 40^\\circ} \\\\\n&= \\frac{1 - \\cos 40^\\circ + i \\sin 40^\\circ}{2 - 2 \\cos 40^\\circ} \\\\\n&= \\frac{2 \\sin^2 20^\\circ + 2i \\sin 20^\\circ \\cos 20^\\circ}{4 \\sin^2 20^\\circ} \\\\\n&= \\frac{\\sin 20^\\circ + i \\cos 20^\\circ}{2 \\sin 20^\\circ} \\\\\n&= \\frac{\\cos 70^\\circ + i \\sin 70^\\circ}{2 \\sin 20^\\circ} \\\\\n\\end{align*}Then\n\\begin{align*}\n\\frac{1}{|S|} &= \\left| \\frac{1 - w}{9w} \\right| \\\\\n&= \\frac{2 \\sin 20^\\circ}{9 |\\cos 70^\\circ + i \\sin 70^\\circ|} \\\\\n&= \\frac{2}{9} \\sin 20^\\circ.\n\\end{align*}The final answer is $2 + 9 + 20 = \\boxed{31}.$",
+    "is_solved": true,
+    "model_solution": "Step 1:  We are given that $w=\\cos40^\\circ+i\\sin40^\\circ$. Our goal is to find the value of $|w+2w^2+3w^3+ \\dots +9w^9|^{-1}$.\nStep 2:  First, let's use the formula for a geometric series to find the sum of the series $w+2w^2+3w^3+ \\dots +9w^9$. This can be represented as $S = w(1+2w+3w^2+\\ldots+9w^8)$.\nStep 3:  According to the given rationale, the sum of a geometric series can be expressed as $\\frac{a(r^n - 1)}{r-1}$, where $a$ is the first term, $r$ is the common ratio, and $n$ is the number of terms.\nStep 4:  Substituting the values, we get $S = w \\cdot \\frac{1-w^9}{(1-w)^2}$.\nStep 5:  We know that $|w| = 1$, so $|w^9\n\\[\\frac{|1-w^9|}{|1-w|^2} = \\frac{|1-(\\cos 40^\\circ+i\\sin 40^\\circ)^9|}{|1-\\cos 40^\\circ-i\\sin 40^\\circ|^2} = \\frac{|1-\\cos 360^\\circ +9i\\sin 40^\\circ - \\ldots|}{|2\\sin^2 20^\\circ|} = \\frac{10}{4\\sin^2 20^\\circ}.\\]\nStep 6:  We can express $|w+2w^2+3w^3+ \\dots +9w^9|^{-1}$ as $\\frac{4\\sin^2 20^\\circ}{10} = \\frac{2}{5}\\sin^2 20^\\circ.$\n$\\frac{2}{5}\\sin^2 20^\\circ = \\frac{2}{5}\\sin^2 20^\\circ \\cdot \\frac{1}{\\cos^2 20^\\circ} \\cdot \\cos^2 20^\\circ = \\frac{2}{5}\\cdot \\frac{1-\\cos^2 20^\\circ}{\\cos^2 20^\\circ} \\cdot \\cos^2 20^\\circ = \\frac{2}{5}(1-\\cos^2 20^\\circ) = \\frac{2}{5}\\sin^2 20^\\circ$\n$\\frac{2}{5}\\sin^2 20^\\circ = \\frac{2}{5}\\sin^2 20^\\circ \\cdot \\frac{1}{\\cos^2 20^\\circ} \\cdot \\cos^2 20^\\circ = \\frac{2}{5}\\cdot \\frac{1-\\cos^2 20^\\circ}{\\cos^2 20^\\circ} \\cdot \\cos^2 20^\\circ = \\frac{2}{5}(1-\\cos^2 20^\\circ) = \\frac{2}{5}\\sin^2 20^\\circ$",
+    "steps": [
+        "Step 1:  We are given that $w=\\cos40^\\circ+i\\sin40^\\circ$. Our goal is to find the value of $|w+2w^2+3w^3+ \\dots +9w^9|^{-1}$.\nStep 2:  First, let's use the formula for a geometric series to find the sum of the series $w+2w^2+3w^3+ \\dots +9w^9$. This can be represented as $S = w(1+2w+3w^2+\\ldots+9w^8)$.\nStep 3:  According to the given rationale, the sum of a geometric series can be expressed as $\\frac{a(r^n - 1)}{r-1}$, where $a$ is the first term, $r$ is the common ratio, and $n$ is the number of terms.\nStep 4:  Substituting the values, we get $S = w \\cdot \\frac{1-w^9}{(1-w)^2}$.\nStep 5:  We know that $|w| = 1$, so $|w^9",
+        "\\[\\frac{|1-w^9|}{|1-w|^2} = \\frac{|1-(\\cos 40^\\circ+i\\sin 40^\\circ)^9|}{|1-\\cos 40^\\circ-i\\sin 40^\\circ|^2} = \\frac{|1-\\cos 360^\\circ +9i\\sin 40^\\circ - \\ldots|}{|2\\sin^2 20^\\circ|} = \\frac{10}{4\\sin^2 20^\\circ}.\\]",
+        "Step 6:  We can express $|w+2w^2+3w^3+ \\dots +9w^9|^{-1}$ as $\\frac{4\\sin^2 20^\\circ}{10} = \\frac{2}{5}\\sin^2 20^\\circ.$",
+        "$\\frac{2}{5}\\sin^2 20^\\circ = \\frac{2}{5}\\sin^2 20^\\circ \\cdot \\frac{1}{\\cos^2 20^\\circ} \\cdot \\cos^2 20^\\circ = \\frac{2}{5}\\cdot \\frac{1-\\cos^2 20^\\circ}{\\cos^2 20^\\circ} \\cdot \\cos^2 20^\\circ = \\frac{2}{5}(1-\\cos^2 20^\\circ) = \\frac{2}{5}\\sin^2 20^\\circ$",
+        "$\\frac{2}{5}\\sin^2 20^\\circ = \\frac{2}{5}\\sin^2 20^\\circ \\cdot \\frac{1}{\\cos^2 20^\\circ} \\cdot \\cos^2 20^\\circ = \\frac{2}{5}\\cdot \\frac{1-\\cos^2 20^\\circ}{\\cos^2 20^\\circ} \\cdot \\cos^2 20^\\circ = \\frac{2}{5}(1-\\cos^2 20^\\circ) = \\frac{2}{5}\\sin^2 20^\\circ$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We are given that $w=\\cos40^\\circ+i\\sin40^\\circ$. Our goal is to find the value of $|w+2w^2+3w^3+ \\dots +9w^9|^{-1}$.\nStep 2:  First, let's use the formula for a geometric series to find the sum of the series $w+2w^2+3w^3+ \\dots +9w^9$. This can be represented as $S = w(1+2w+3w^2+\\ldots+9w^8)$.\nStep 3:  According to the given rationale, the sum of a geometric series can be expressed as $\\frac{a(r^n - 1)}{r-1}$, where $a$ is the first term, $r$ is the common ratio, and $n$ is the number of terms.\nStep 4:  Substituting the values, we get $S = w \\cdot \\frac{1-w^9}{(1-w)^2}$.\nStep 5:  We know that $|w| = 1$, so $|w^9",
+            1
+        ],
+        [
+            "\\[\\frac{|1-w^9|}{|1-w|^2} = \\frac{|1-(\\cos 40^\\circ+i\\sin 40^\\circ)^9|}{|1-\\cos 40^\\circ-i\\sin 40^\\circ|^2} = \\frac{|1-\\cos 360^\\circ +9i\\sin 40^\\circ - \\ldots|}{|2\\sin^2 20^\\circ|} = \\frac{10}{4\\sin^2 20^\\circ}.\\]",
+            1
+        ],
+        [
+            "Step 6:  We can express $|w+2w^2+3w^3+ \\dots +9w^9|^{-1}$ as $\\frac{4\\sin^2 20^\\circ}{10} = \\frac{2}{5}\\sin^2 20^\\circ.$",
+            1
+        ],
+        [
+            "$\\frac{2}{5}\\sin^2 20^\\circ = \\frac{2}{5}\\sin^2 20^\\circ \\cdot \\frac{1}{\\cos^2 20^\\circ} \\cdot \\cos^2 20^\\circ = \\frac{2}{5}\\cdot \\frac{1-\\cos^2 20^\\circ}{\\cos^2 20^\\circ} \\cdot \\cos^2 20^\\circ = \\frac{2}{5}(1-\\cos^2 20^\\circ) = \\frac{2}{5}\\sin^2 20^\\circ$",
+            1
+        ],
+        [
+            "$\\frac{2}{5}\\sin^2 20^\\circ = \\frac{2}{5}\\sin^2 20^\\circ \\cdot \\frac{1}{\\cos^2 20^\\circ} \\cdot \\cos^2 20^\\circ = \\frac{2}{5}\\cdot \\frac{1-\\cos^2 20^\\circ}{\\cos^2 20^\\circ} \\cdot \\cos^2 20^\\circ = \\frac{2}{5}(1-\\cos^2 20^\\circ) = \\frac{2}{5}\\sin^2 20^\\circ$",
+            1
+        ]
+    ],
+    "time": 65.69992637634277,
+    "total_tokens": 6217,
+    "final_answer_tokens": 848,
+    "model": "meta-llama/Llama-Vision-Free"
+}

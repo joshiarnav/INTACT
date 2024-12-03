@@ -1,0 +1,51 @@
+{
+    "problem": "A square region $ABCD$ is externally tangent to the circle with equation $x^2+y^2=1$ at the point $(0,1)$ on the side $CD$.  Vertices $A$ and $B$ are on the circle with equation $x^2+y^2=4$.  The side length of this square can be expressed in the form $\\frac{a\\sqrt{b}-c}{d}$, where $b$ is not divisible by the square of any prime, and $a$, $c$, and $d$ share no common factors. Find $a+b+c+d$.",
+    "level": "Level 4",
+    "type": "Intermediate Algebra",
+    "solution": "[asy]\nunitsize(15mm);\ndefaultpen(linewidth(.8pt)+fontsize(10pt));\ndotfactor=4;\n\nreal a=1; real b=2;\npair O=(0,0);\npair A=(-(sqrt(19)-2)/5,1);\npair B=((sqrt(19)-2)/5,1);\npair C=((sqrt(19)-2)/5,1+2(sqrt(19)-2)/5);\npair D=(-(sqrt(19)-2)/5,1+2(sqrt(19)-2)/5);\npair E=(-(sqrt(19)-2)/5,0);\npath inner=Circle(O,a);\npath outer=Circle(O,b);\ndraw(outer); draw(inner);\ndraw(A--B--C--D--cycle);\n\ndraw(O--D--E--cycle);\n\nlabel(\"$A$\",D,NW);\nlabel(\"$E$\",E,SW);\nlabel(\"$O$\",O,SE);\nlabel(\"$s+1$\",(D--E),W);\nlabel(\"$\\frac{s}{2}$\",(E--O),S);\n\npair[] ps={A,B,C,D,E,O};\ndot(ps);\n[/asy] Let $s$ be the length of the side of the square. The circles have radii of $1$ and $2$. We can then draw the triangle shown in the figure above and write expressions for the sides of the triangle in terms of $s$. Because $AO$ is the radius of the larger circle, which is equal to $2$, we can use the Pythagorean Theorem: \\begin{align*} \\left( \\frac{s}{2} \\right) ^2 + (s+1)^2 &= 2^2\\\\\n\\frac14 s^2 + s^2 + 2s + 1 &= 4\\\\\n\\frac54 s^2 +2s - 3 &= 0\\\\\n5s^2 + 8s - 12 &=0.\n\\end{align*}Finally, we can use the quadratic formula to solve for $s$: $$s = \\frac{-8+\\sqrt{8^2-4(5)(-12)}}{10} = \\frac{-8+\\sqrt{304}}{10} = \\frac{-8+4\\sqrt{19}}{10} = \\frac{2\\sqrt{19}-4}{5}.$$Thus, our answer is $2+19+4+5=\\boxed{30}$.",
+    "is_solved": true,
+    "model_solution": "Step 1:  To find the side length of the square $ABCD$, we start by considering the center and radius of the circles.\nStep 2:  Let $O$ denote the center of the circle with equation $x^2+y^2=1$, and let $O'$ denote the center of the circle with equation $x^2+y^2=4$.\nStep 3:  The circle with equation $x^2+y^2=1$ has a radius of $1$, while the circle with equation $x^2+y^2=4$ has a radius of $2$.\nStep 4:  We also consider the centers and points of tangency for both circles.\nStep 5:  The square is externally tangent to the circle with equation $x^2+y^2=1$ at the point $(0,1)$, and its side length is given by the distance between the centers of the circles.\nStep 6:  Since the square is tangent to the circle with equation $x^2+y^2=4$, we can use this information to also find the side length of the square.\nStep 7:  We can express the side length of\nStep 8:  \\[\\frac{5\\sqrt{2}-3}{2}\\]\nthe side length of the square $ABCD$ is $\\frac{5\\sqrt{2}-3}{2}$.\nSubstitute $a=5$, $b=2$, $c=3$, and $d=2$ into $a+b+c+d$.\n$5+2+3+2$\n$5+2+3+2=12$\n$5+2+3+2$",
+    "steps": [
+        "Step 1:  To find the side length of the square $ABCD$, we start by considering the center and radius of the circles.\nStep 2:  Let $O$ denote the center of the circle with equation $x^2+y^2=1$, and let $O'$ denote the center of the circle with equation $x^2+y^2=4$.\nStep 3:  The circle with equation $x^2+y^2=1$ has a radius of $1$, while the circle with equation $x^2+y^2=4$ has a radius of $2$.\nStep 4:  We also consider the centers and points of tangency for both circles.\nStep 5:  The square is externally tangent to the circle with equation $x^2+y^2=1$ at the point $(0,1)$, and its side length is given by the distance between the centers of the circles.\nStep 6:  Since the square is tangent to the circle with equation $x^2+y^2=4$, we can use this information to also find the side length of the square.\nStep 7:  We can express the side length of",
+        "Step 8:  \\[\\frac{5\\sqrt{2}-3}{2}\\]",
+        "the side length of the square $ABCD$ is $\\frac{5\\sqrt{2}-3}{2}$.",
+        "Substitute $a=5$, $b=2$, $c=3$, and $d=2$ into $a+b+c+d$.",
+        "$5+2+3+2$",
+        "$5+2+3+2=12$",
+        "$5+2+3+2$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  To find the side length of the square $ABCD$, we start by considering the center and radius of the circles.\nStep 2:  Let $O$ denote the center of the circle with equation $x^2+y^2=1$, and let $O'$ denote the center of the circle with equation $x^2+y^2=4$.\nStep 3:  The circle with equation $x^2+y^2=1$ has a radius of $1$, while the circle with equation $x^2+y^2=4$ has a radius of $2$.\nStep 4:  We also consider the centers and points of tangency for both circles.\nStep 5:  The square is externally tangent to the circle with equation $x^2+y^2=1$ at the point $(0,1)$, and its side length is given by the distance between the centers of the circles.\nStep 6:  Since the square is tangent to the circle with equation $x^2+y^2=4$, we can use this information to also find the side length of the square.\nStep 7:  We can express the side length of",
+            1
+        ],
+        [
+            "Step 8:  \\[\\frac{5\\sqrt{2}-3}{2}\\]",
+            1
+        ],
+        [
+            "the side length of the square $ABCD$ is $\\frac{5\\sqrt{2}-3}{2}$.",
+            1
+        ],
+        [
+            "Substitute $a=5$, $b=2$, $c=3$, and $d=2$ into $a+b+c+d$.",
+            1
+        ],
+        [
+            "$5+2+3+2$",
+            1
+        ],
+        [
+            "$5+2+3+2=12$",
+            1
+        ],
+        [
+            "$5+2+3+2$",
+            1
+        ]
+    ],
+    "time": 92.4602439403534,
+    "total_tokens": 7070,
+    "final_answer_tokens": 544,
+    "model": "meta-llama/Llama-Vision-Free"
+}

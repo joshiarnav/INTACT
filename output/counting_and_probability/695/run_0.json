@@ -1,0 +1,66 @@
+{
+    "problem": "Maria has three identical apples and three identical oranges. How many ways are there for her to distribute the fruits among her four friends if she doesn't give Jacky any oranges?  (Note: Maria takes none of the fruit herself, and some of her friends might not receive any fruit at all.)",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "First, just consider the apples. Imagine putting three dividers among the apples, so that Maria's first friend gets the apples to the left of the first divider, Maria's second friend gets the apples between the first and second dividers, Maria's third friend gets the apples between the second and third dividers, and Maria's last friend gets the apples after the third divider. With three dividers and three apples, there are $\\binom{6}{3}=20$ ways to arrange the dividers. Now, consider the oranges. Since Maria won't give Jacky any oranges, Maria has to distribute the oranges among her other three friends. With three oranges and two dividers, there are $\\binom{5}{2}=10$ ways for Maria to distribute the oranges. The total number of ways for Maria to distribute the fruit is $20\\cdot 10=\\boxed{200}$.",
+    "is_solved": false,
+    "model_solution": "First, consider the 3 oranges:\nConsider the 3 oranges: There are 4 ways to give the oranges to her three friends: \n- one friend gets all 3 oranges. \n- two friends get one orange each, and the third friend gets none, \n- one friend gets two oranges and the other two friends get one orange each.\nFor each of the four ways of distributing the oranges, consider the ways to distribute the 3 apples: \n- one friend gets all 3 apples. \n- two friends get one apple each, and the third friend gets none, \n- one friend gets two apples and the other two friends get one apple each.\nFor each of the four ways of distributing the oranges, there are 4 ways to distribute the 3 apples among the friends: \n- one friend gets all 3 apples. \n- two friends get one apple each, and the third friend gets none, \n- one friend gets two apples and the other two friends get one apple each.\nFor each of the 16 ways to distribute the oranges and apples, there are 4 choices of which friend does not receive any oranges, for a total of 16 \u00d7 4 = 64 ways.\nFor each of the 64 ways to distribute the oranges and apples, there are 3 ways to give the 3 oranges to the remaining 3 friends (since Jacky can't receive any oranges), so multiply 64 by 3.\n4 \u00d7 3 \u00d7 3 \u00d7 3\n4 \u00d7 3 \u00d7 4\n3 \u00d7 4\n3 \u00d7 4",
+    "steps": [
+        "First, consider the 3 oranges:",
+        "Consider the 3 oranges: There are 4 ways to give the oranges to her three friends: \n- one friend gets all 3 oranges. \n- two friends get one orange each, and the third friend gets none, \n- one friend gets two oranges and the other two friends get one orange each.",
+        "For each of the four ways of distributing the oranges, consider the ways to distribute the 3 apples: \n- one friend gets all 3 apples. \n- two friends get one apple each, and the third friend gets none, \n- one friend gets two apples and the other two friends get one apple each.",
+        "For each of the four ways of distributing the oranges, there are 4 ways to distribute the 3 apples among the friends: \n- one friend gets all 3 apples. \n- two friends get one apple each, and the third friend gets none, \n- one friend gets two apples and the other two friends get one apple each.",
+        "For each of the 16 ways to distribute the oranges and apples, there are 4 choices of which friend does not receive any oranges, for a total of 16 \u00d7 4 = 64 ways.",
+        "For each of the 64 ways to distribute the oranges and apples, there are 3 ways to give the 3 oranges to the remaining 3 friends (since Jacky can't receive any oranges), so multiply 64 by 3.",
+        "4 \u00d7 3 \u00d7 3 \u00d7 3",
+        "4 \u00d7 3 \u00d7 4",
+        "3 \u00d7 4",
+        "3 \u00d7 4"
+    ],
+    "full_steps": [
+        [
+            "First, consider the 3 oranges:",
+            1
+        ],
+        [
+            "Consider the 3 oranges: There are 4 ways to give the oranges to her three friends: \n- one friend gets all 3 oranges. \n- two friends get one orange each, and the third friend gets none, \n- one friend gets two oranges and the other two friends get one orange each.",
+            1
+        ],
+        [
+            "For each of the four ways of distributing the oranges, consider the ways to distribute the 3 apples: \n- one friend gets all 3 apples. \n- two friends get one apple each, and the third friend gets none, \n- one friend gets two apples and the other two friends get one apple each.",
+            1
+        ],
+        [
+            "For each of the four ways of distributing the oranges, there are 4 ways to distribute the 3 apples among the friends: \n- one friend gets all 3 apples. \n- two friends get one apple each, and the third friend gets none, \n- one friend gets two apples and the other two friends get one apple each.",
+            1
+        ],
+        [
+            "For each of the 16 ways to distribute the oranges and apples, there are 4 choices of which friend does not receive any oranges, for a total of 16 \u00d7 4 = 64 ways.",
+            1
+        ],
+        [
+            "For each of the 64 ways to distribute the oranges and apples, there are 3 ways to give the 3 oranges to the remaining 3 friends (since Jacky can't receive any oranges), so multiply 64 by 3.",
+            1
+        ],
+        [
+            "4 \u00d7 3 \u00d7 3 \u00d7 3",
+            1
+        ],
+        [
+            "4 \u00d7 3 \u00d7 4",
+            1
+        ],
+        [
+            "3 \u00d7 4",
+            1
+        ],
+        [
+            "3 \u00d7 4",
+            1
+        ]
+    ],
+    "time": 135.6879584789276,
+    "total_tokens": 6936,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,41 @@
+{
+    "problem": "Bob placed three regular pentagons together at a vertex, thinking he might be able to form a tessellation. However, they left a gap. What is the number of degrees in the measure indicated? [asy]size(100);\npath A = dir(0) -- dir(72) -- dir (144) -- dir(216) -- dir (288) -- cycle;\npath B = reflect ( dir(72), dir(144)) * A;\npath C = reflect( dir(72), dir(0))* A;\ndraw(rotate(18) *A);\ndraw(rotate(18) *B);\ndraw(rotate(18) *C);\nlabel(\"?\", (0,1.5), N);\n[/asy]",
+    "level": "Level 4",
+    "type": "Prealgebra",
+    "solution": "The angles of a pentagon sum to $180(5-2) = 540$ degrees, so each angle of a regular pentagon is $540^\\circ/5 = 108^\\circ$.  Therefore, three of these angles sum to $3\\cdot 108^\\circ = 324^\\circ$, which means the indicated angle measures $360^\\circ - 324^\\circ = \\boxed{36^\\circ}$.",
+    "is_solved": false,
+    "model_solution": "The sum of the angles of a regular pentagon is $540^{\\circ}$.\nThe measure of each interior angle of a regular pentagon is $\\frac{540^{\\circ}}{5}=108^{\\circ}$.\nThe angle in question is the interior angle formed by the intersection of one of the pentagons and its two adjacent pentagons. Since the pentagons are regular, all three interior angles formed by a vertex are equal. Let $x$ denote the measure of the angle in question. The sum of all the interior angles at the vertex is $108^{\\circ}+108^{\\circ}+108^{\\circ}+x=324^{\\circ}+x$. Since the three pentagons form a straight line, the sum of the measures of their interior angles at the vertex is $180^{\\circ}$. Therefore, we have $324^{\\circ}+x=180^{\\circ}$.\nSubtract $324^{\\circ}$ from both sides of the equation.\n$x=-144^{\\circ}$",
+    "steps": [
+        "The sum of the angles of a regular pentagon is $540^{\\circ}$.",
+        "The measure of each interior angle of a regular pentagon is $\\frac{540^{\\circ}}{5}=108^{\\circ}$.",
+        "The angle in question is the interior angle formed by the intersection of one of the pentagons and its two adjacent pentagons. Since the pentagons are regular, all three interior angles formed by a vertex are equal. Let $x$ denote the measure of the angle in question. The sum of all the interior angles at the vertex is $108^{\\circ}+108^{\\circ}+108^{\\circ}+x=324^{\\circ}+x$. Since the three pentagons form a straight line, the sum of the measures of their interior angles at the vertex is $180^{\\circ}$. Therefore, we have $324^{\\circ}+x=180^{\\circ}$.",
+        "Subtract $324^{\\circ}$ from both sides of the equation.",
+        "$x=-144^{\\circ}$"
+    ],
+    "full_steps": [
+        [
+            "The sum of the angles of a regular pentagon is $540^{\\circ}$.",
+            1
+        ],
+        [
+            "The measure of each interior angle of a regular pentagon is $\\frac{540^{\\circ}}{5}=108^{\\circ}$.",
+            1
+        ],
+        [
+            "The angle in question is the interior angle formed by the intersection of one of the pentagons and its two adjacent pentagons. Since the pentagons are regular, all three interior angles formed by a vertex are equal. Let $x$ denote the measure of the angle in question. The sum of all the interior angles at the vertex is $108^{\\circ}+108^{\\circ}+108^{\\circ}+x=324^{\\circ}+x$. Since the three pentagons form a straight line, the sum of the measures of their interior angles at the vertex is $180^{\\circ}$. Therefore, we have $324^{\\circ}+x=180^{\\circ}$.",
+            1
+        ],
+        [
+            "Subtract $324^{\\circ}$ from both sides of the equation.",
+            1
+        ],
+        [
+            "$x=-144^{\\circ}$",
+            1
+        ]
+    ],
+    "time": 65.22912955284119,
+    "total_tokens": 3514,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

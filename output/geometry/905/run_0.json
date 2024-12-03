@@ -1,0 +1,46 @@
+{
+    "problem": "If $A(-3, 5)$, $B(7, 12)$, $C(5, 3)$ and $D$ are the four vertices of parallelogram $ABCD$, what are the coordinates of point $D$?",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "We know where points $A$, $B$, and $C$ are, and we know that the shape is a parallelogram, so we know that the differences in the x-values and y-values between $B$ and $A$ must be the same as the differences in x-values and y-values between $C$ and $D$.\n\nThe solution is $\\boxed{(-5, -4)}$, which keeps the vertices in alphabetical order, as shown in the first figure. Two other parallelograms are shown in figures 2 and 3 (where we number them from left to right), but they are not solutions because the points aren't in the correct order. They would be parallelograms $ACBD$ and $ABDC$, respectively. [asy]\nimport olympiad; import geometry; size(250); defaultpen(linewidth(0.8));\npicture a,b,c;\nxaxis(a,YZero(),-6,6,Ticks(beginlabel=false,Step=20,step=2));\nyaxis(a,XZero(),-5,13,Ticks(beginlabel=false,Step=20,step=2));\nxaxis(b,YZero(),-6,6,Ticks(beginlabel=false,Step=20,step=2));\nyaxis(b,XZero(),-5,13,Ticks(beginlabel=false,Step=20,step=2));\nxaxis(c,YZero(),-6,17,Ticks(beginlabel=false,Step=10,step=2));\nyaxis(c,XZero(),-5,15,Ticks(beginlabel=false,Step=10,step=2));\npair A = (-3,5),B=(7,12),C=(5,3);\ndraw(a,A--B--C--(-5,-4)--cycle);\nlabel(a,\"$A$\",A,NW); label(a,\"$B$\",B,NE); label(a,\"$C$\",C,SE); label(a,\"$D$\",(-5,-4),SW);\ndraw(b,A--C--B--(-1,14)--cycle);\nlabel(b,\"$A$\",A,SW); label(b,\"$B$\",B,NE); label(b,\"$C$\",C,SE); label(b,\"$D$\",(-1,14),NW);\ndraw(c,A--C--(15,10)--B--cycle);\nlabel(c,\"$A$\",A,W); label(c,\"$B$\",B,N); label(c,\"$C$\",C,S); label(c,\"$D$\",(15,10),E);\nadd(currentpicture,a);\nadd(currentpicture, shift(20,0)*b);\nadd(currentpicture, shift(40,0)*c);\n[/asy]",
+    "is_solved": true,
+    "model_solution": "Step 1: Since ABCD is a parallelogram, the diagonals bisect each other and have the same midpoint. The midpoint of diagonal AC is ((-3 + 5)/2, (5 + 3)/2) = (1, 4).\nStep 2: The midpoint of diagonal BD is ((7 + x)/2, (12 + y)/2) = (1, 4), since the diagonals bisect each other.\nStep 3: Set up the system of equations (7 + x)/2 = 1 and (12 + y)/2 = 4, and solve for x and y.\nStep 4: Solve the system of equations:\n(7 + x)/2 = 1 => 7 + x = 2 => x = -5\n(12 + y)/2 = 4 => 12 + y = 8 => y = -4\nStep 5: Therefore, the coordinates of point D are (-5, -4).\nStep 6: The coordinates of point D are (-5, -4). Final Answer",
+    "steps": [
+        "Step 1: Since ABCD is a parallelogram, the diagonals bisect each other and have the same midpoint. The midpoint of diagonal AC is ((-3 + 5)/2, (5 + 3)/2) = (1, 4).",
+        "Step 2: The midpoint of diagonal BD is ((7 + x)/2, (12 + y)/2) = (1, 4), since the diagonals bisect each other.",
+        "Step 3: Set up the system of equations (7 + x)/2 = 1 and (12 + y)/2 = 4, and solve for x and y.",
+        "Step 4: Solve the system of equations:\n(7 + x)/2 = 1 => 7 + x = 2 => x = -5\n(12 + y)/2 = 4 => 12 + y = 8 => y = -4",
+        "Step 5: Therefore, the coordinates of point D are (-5, -4).",
+        "Step 6: The coordinates of point D are (-5, -4). Final Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Since ABCD is a parallelogram, the diagonals bisect each other and have the same midpoint. The midpoint of diagonal AC is ((-3 + 5)/2, (5 + 3)/2) = (1, 4).",
+            1
+        ],
+        [
+            "Step 2: The midpoint of diagonal BD is ((7 + x)/2, (12 + y)/2) = (1, 4), since the diagonals bisect each other.",
+            1
+        ],
+        [
+            "Step 3: Set up the system of equations (7 + x)/2 = 1 and (12 + y)/2 = 4, and solve for x and y.",
+            1
+        ],
+        [
+            "Step 4: Solve the system of equations:\n(7 + x)/2 = 1 => 7 + x = 2 => x = -5\n(12 + y)/2 = 4 => 12 + y = 8 => y = -4",
+            1
+        ],
+        [
+            "Step 5: Therefore, the coordinates of point D are (-5, -4).",
+            1
+        ],
+        [
+            "Step 6: The coordinates of point D are (-5, -4). Final Answer",
+            1
+        ]
+    ],
+    "time": 83.02333641052246,
+    "total_tokens": 3216,
+    "final_answer_tokens": 336,
+    "model": "meta-llama/Llama-Vision-Free"
+}

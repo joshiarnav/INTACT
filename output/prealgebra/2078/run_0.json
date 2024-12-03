@@ -1,0 +1,66 @@
+{
+    "problem": "In a certain isosceles right triangle, the altitude to the hypotenuse has length $6$.  What is the area of the triangle?",
+    "level": "Level 5",
+    "type": "Prealgebra",
+    "solution": "In isosceles right triangle $\\triangle ABC$ below, $\\overline{AD}$ is the altitude to the hypotenuse.\n\n[asy]\nimport olympiad;\nunitsize(0.8inch);\npair A,B,C,D;\nA = (0,1);\nB= (1,0);\nC = -B;\nD = (0,0);\ndraw(A--B--C--A,linewidth(1));\ndraw(A--D,linewidth(0.8));\ndraw(rightanglemark(C,A,B,s=5));\ndraw(rightanglemark(C,D,A,s=5));\nlabel(\"$A$\",A,N);\nlabel(\"$B$\",B,S);\nlabel(\"$C$\",C,S);\nlabel(\"$D$\",D,S);\n[/asy]\n\nBecause $\\triangle ABC$ is an isosceles right triangle, $\\angle ABC = 45^\\circ$.  Since $\\angle ADB = 90^\\circ$, we know that $\\angle DAB = 45^\\circ$, so $\\triangle ABD$ is also a 45-45-90 triangle.  Similarly, $\\triangle ACD$ is a 45-45-90 triangle.  Therefore, $DB=DC = DA = 6$, so $BC = BD+DC = 12$, and  \\[[ABC] = \\frac{(AD)(BC)}{2} = \\frac{(6)({12})}{2} = \\boxed{36}.\\]",
+    "is_solved": false,
+    "model_solution": "Step 1:  Draw the altitude to the hypotenuse, let the points where it intersects the two legs be $C$ and $D$, and let the endpoints of the hypotenuse be $A$ and $B$.\nStep 2:  The altitude to the hypotenuse of a right triangle has the property that it creates two smaller triangles that are similar to the original triangle and to each other.  Using this property, we can write two similarity equations: $\\frac{BD}{CD}=\\frac{AB}{AD}$ and $\\frac{AD}{CD}=\\frac{AD}{AC}$\nStep 3:  From the first similarity equation, we have $\\frac{BD}{CD} = \\frac{AB}{AD}$. We can simplify this to $\\frac{BD}{CD} = \\frac{2}{1}$ because in an isosceles right triangle, the hypotenuse is $\\sqrt{2}$ times the length of each leg.\nStep 4:  Since $\\frac{BD}{CD} = \\frac{2}{1}$, $BD$ is twice $CD$, and $CD$ is one-fourth of $BD$. Because $CD$ is half of $AC$, $AC$ is twice $CD$. This means $AC = 2CD$ and $BD = 2CD$.\nStep 5:  Since the altitude has length $6$ and $CD$ is half of $AC$, we have $AC = 6$.\nStep 6:  Using the Pythagorean theorem, $3^2 + 3^2 = x^2 \\Rightarrow x^2 = 18 \\Rightarrow x = \\sqrt{18}$.\nStep 7:  Now that we have the lengths of the legs, we can find the area of the triangle using the formula for the area of a triangle, $A = \\frac{1}{2} \\times \\text{base} \\times \\text{height}$.\nStep 8:  The area of the triangle is $\\frac{1}{2} \\times 6 \\times 6 = 18$.\nStep 9:  The area of the triangle is $\\frac{1}{2} \\times 6 \\times 6 = 18$.\nStep 10: \n$\\frac{1}{2} \\times 6 \\times 6 = 18$",
+    "steps": [
+        "Step 1:  Draw the altitude to the hypotenuse, let the points where it intersects the two legs be $C$ and $D$, and let the endpoints of the hypotenuse be $A$ and $B$.",
+        "Step 2:  The altitude to the hypotenuse of a right triangle has the property that it creates two smaller triangles that are similar to the original triangle and to each other.  Using this property, we can write two similarity equations: $\\frac{BD}{CD}=\\frac{AB}{AD}$ and $\\frac{AD}{CD}=\\frac{AD}{AC}$",
+        "Step 3:  From the first similarity equation, we have $\\frac{BD}{CD} = \\frac{AB}{AD}$. We can simplify this to $\\frac{BD}{CD} = \\frac{2}{1}$ because in an isosceles right triangle, the hypotenuse is $\\sqrt{2}$ times the length of each leg.",
+        "Step 4:  Since $\\frac{BD}{CD} = \\frac{2}{1}$, $BD$ is twice $CD$, and $CD$ is one-fourth of $BD$. Because $CD$ is half of $AC$, $AC$ is twice $CD$. This means $AC = 2CD$ and $BD = 2CD$.",
+        "Step 5:  Since the altitude has length $6$ and $CD$ is half of $AC$, we have $AC = 6$.",
+        "Step 6:  Using the Pythagorean theorem, $3^2 + 3^2 = x^2 \\Rightarrow x^2 = 18 \\Rightarrow x = \\sqrt{18}$.",
+        "Step 7:  Now that we have the lengths of the legs, we can find the area of the triangle using the formula for the area of a triangle, $A = \\frac{1}{2} \\times \\text{base} \\times \\text{height}$.",
+        "Step 8:  The area of the triangle is $\\frac{1}{2} \\times 6 \\times 6 = 18$.",
+        "Step 9:  The area of the triangle is $\\frac{1}{2} \\times 6 \\times 6 = 18$.",
+        "Step 10: \n$\\frac{1}{2} \\times 6 \\times 6 = 18$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Draw the altitude to the hypotenuse, let the points where it intersects the two legs be $C$ and $D$, and let the endpoints of the hypotenuse be $A$ and $B$.",
+            1
+        ],
+        [
+            "Step 2:  The altitude to the hypotenuse of a right triangle has the property that it creates two smaller triangles that are similar to the original triangle and to each other.  Using this property, we can write two similarity equations: $\\frac{BD}{CD}=\\frac{AB}{AD}$ and $\\frac{AD}{CD}=\\frac{AD}{AC}$",
+            1
+        ],
+        [
+            "Step 3:  From the first similarity equation, we have $\\frac{BD}{CD} = \\frac{AB}{AD}$. We can simplify this to $\\frac{BD}{CD} = \\frac{2}{1}$ because in an isosceles right triangle, the hypotenuse is $\\sqrt{2}$ times the length of each leg.",
+            1
+        ],
+        [
+            "Step 4:  Since $\\frac{BD}{CD} = \\frac{2}{1}$, $BD$ is twice $CD$, and $CD$ is one-fourth of $BD$. Because $CD$ is half of $AC$, $AC$ is twice $CD$. This means $AC = 2CD$ and $BD = 2CD$.",
+            1
+        ],
+        [
+            "Step 5:  Since the altitude has length $6$ and $CD$ is half of $AC$, we have $AC = 6$.",
+            1
+        ],
+        [
+            "Step 6:  Using the Pythagorean theorem, $3^2 + 3^2 = x^2 \\Rightarrow x^2 = 18 \\Rightarrow x = \\sqrt{18}$.",
+            1
+        ],
+        [
+            "Step 7:  Now that we have the lengths of the legs, we can find the area of the triangle using the formula for the area of a triangle, $A = \\frac{1}{2} \\times \\text{base} \\times \\text{height}$.",
+            1
+        ],
+        [
+            "Step 8:  The area of the triangle is $\\frac{1}{2} \\times 6 \\times 6 = 18$.",
+            1
+        ],
+        [
+            "Step 9:  The area of the triangle is $\\frac{1}{2} \\times 6 \\times 6 = 18$.",
+            1
+        ],
+        [
+            "Step 10: \n$\\frac{1}{2} \\times 6 \\times 6 = 18$",
+            1
+        ]
+    ],
+    "time": 135.70670342445374,
+    "total_tokens": 8253,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

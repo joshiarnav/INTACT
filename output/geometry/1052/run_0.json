@@ -1,0 +1,46 @@
+{
+    "problem": "In acute triangle $ABC$, altitudes $AD$, $BE$, and $CF$ intersect at the orthocenter $H$.  If $BD = 5$, $CD = 9$, and $CE = 42/5$, then find the length of $HE$.\n\n[asy]\nunitsize(0.3 cm);\n\npair A, B, C, D, E, F, H;\n\nA = (5,12);\nB = (0,0);\nC = (14,0);\nD = (A + reflect(B,C)*(A))/2;\nE = (B + reflect(C,A)*(B))/2;\nF = (C + reflect(A,B)*(C))/2;\nH = extension(B,E,C,F);\n\ndraw(A--B--C--cycle);\ndraw(A--D);\ndraw(B--E);\ndraw(C--F);\n\nlabel(\"$A$\", A, N);\nlabel(\"$B$\", B, SW);\nlabel(\"$C$\", C, SE);\nlabel(\"$D$\", D, S);\nlabel(\"$E$\", E, NE);\nlabel(\"$F$\", F, NW);\nlabel(\"$H$\", H, SE);\n[/asy]",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "By Pythagoras, $BE^2 = BC^2 - CE^2 = 14^2 - (42/5)^2 = 3136/25$, so $BE = \\sqrt{3136/25} = 56/5$.\n\nTriangles $BDH$ and $BEC$ are right, and share $\\angle HBD$, so they are similar.  Hence, \\[\\frac{BH}{BD} = \\frac{BC}{BE},\\]so \\[BH = \\frac{BC}{BE} \\cdot BD = \\frac{14}{56/5} \\cdot 5 = \\frac{25}{4}.\\]Then $HE = BE - BH = 56/5 - 25/4 = \\boxed{\\frac{99}{20}}$.",
+    "is_solved": false,
+    "model_solution": "Let $F_a$, $F_b$, and $F_c$ denote the feet of the altitudes from $A$, $B$, and $C$ to $\\overline{BC}$, $\\overline{CA}$, and $\\overline{AB}$, respectively.\nSince $D$ is the foot of the altitude from $A$ to $\\overline{BC}$ and $E$ is the foot of the altitude from $B$ to $\\overline{AC}$, we have that $BF_a = BC = BD + CD = 5 + 9 = 14.$\nSince $F_b$ and $F_a$ are the feet of the altitudes from $B$ and $A$ to $\\overline{C}\\overline{A}$ and $\\overline{B}\\overline{C}$, respectively, we have that $F_b F_a =CE = \\frac{42}{5}.$\nSince $F_a E = BF_a - BF_b = 14 - \\frac{42}{5}$ and $F_a D = BD - BF_b = 5 - \\frac{42}{5},$ we have that $\\frac{F_a D}{F_a E} = \\frac{BD - BF_b}{BF_a - BF_b}.$\nWe have that $\\frac{F_a D}{F_a E} = \\frac{BD - BF_b}{BF_a - BF_b} = \\frac{5 - \\frac{42}{5}}{14 - \\frac{42}{5}} = \\frac{25 - 42}{70 - 42} = \\frac{-17}{28}.$\nSince $\\triangle AHD \\sim \\triangle BEH$ and the ratio of corresponding sides of similar triangles is equal, we have that $\\frac{HE}{HD} = \\frac{HB}{HA}.$",
+    "steps": [
+        "Let $F_a$, $F_b$, and $F_c$ denote the feet of the altitudes from $A$, $B$, and $C$ to $\\overline{BC}$, $\\overline{CA}$, and $\\overline{AB}$, respectively.",
+        "Since $D$ is the foot of the altitude from $A$ to $\\overline{BC}$ and $E$ is the foot of the altitude from $B$ to $\\overline{AC}$, we have that $BF_a = BC = BD + CD = 5 + 9 = 14.$",
+        "Since $F_b$ and $F_a$ are the feet of the altitudes from $B$ and $A$ to $\\overline{C}\\overline{A}$ and $\\overline{B}\\overline{C}$, respectively, we have that $F_b F_a =CE = \\frac{42}{5}.$",
+        "Since $F_a E = BF_a - BF_b = 14 - \\frac{42}{5}$ and $F_a D = BD - BF_b = 5 - \\frac{42}{5},$ we have that $\\frac{F_a D}{F_a E} = \\frac{BD - BF_b}{BF_a - BF_b}.$",
+        "We have that $\\frac{F_a D}{F_a E} = \\frac{BD - BF_b}{BF_a - BF_b} = \\frac{5 - \\frac{42}{5}}{14 - \\frac{42}{5}} = \\frac{25 - 42}{70 - 42} = \\frac{-17}{28}.$",
+        "Since $\\triangle AHD \\sim \\triangle BEH$ and the ratio of corresponding sides of similar triangles is equal, we have that $\\frac{HE}{HD} = \\frac{HB}{HA}.$"
+    ],
+    "full_steps": [
+        [
+            "Let $F_a$, $F_b$, and $F_c$ denote the feet of the altitudes from $A$, $B$, and $C$ to $\\overline{BC}$, $\\overline{CA}$, and $\\overline{AB}$, respectively.",
+            1
+        ],
+        [
+            "Since $D$ is the foot of the altitude from $A$ to $\\overline{BC}$ and $E$ is the foot of the altitude from $B$ to $\\overline{AC}$, we have that $BF_a = BC = BD + CD = 5 + 9 = 14.$",
+            1
+        ],
+        [
+            "Since $F_b$ and $F_a$ are the feet of the altitudes from $B$ and $A$ to $\\overline{C}\\overline{A}$ and $\\overline{B}\\overline{C}$, respectively, we have that $F_b F_a =CE = \\frac{42}{5}.$",
+            1
+        ],
+        [
+            "Since $F_a E = BF_a - BF_b = 14 - \\frac{42}{5}$ and $F_a D = BD - BF_b = 5 - \\frac{42}{5},$ we have that $\\frac{F_a D}{F_a E} = \\frac{BD - BF_b}{BF_a - BF_b}.$",
+            1
+        ],
+        [
+            "We have that $\\frac{F_a D}{F_a E} = \\frac{BD - BF_b}{BF_a - BF_b} = \\frac{5 - \\frac{42}{5}}{14 - \\frac{42}{5}} = \\frac{25 - 42}{70 - 42} = \\frac{-17}{28}.$",
+            1
+        ],
+        [
+            "Since $\\triangle AHD \\sim \\triangle BEH$ and the ratio of corresponding sides of similar triangles is equal, we have that $\\frac{HE}{HD} = \\frac{HB}{HA}.$",
+            1
+        ]
+    ],
+    "time": 79.92990756034851,
+    "total_tokens": 6354,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

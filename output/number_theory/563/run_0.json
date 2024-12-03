@@ -1,0 +1,66 @@
+{
+    "problem": "For $n \\ge 0$, let $F_n$ denote the $n$th Fibonacci number (that is, $F_0 = 0, F_1 = 1$, and $F_n = F_{n-1} + F_{n-2}$ for all $n \\ge 2$). What is the greatest possible value of the greatest common divisor of two consecutive Fibonacci numbers?",
+    "level": "Level 3",
+    "type": "Number Theory",
+    "solution": "We want to find the maximum possible value of $\\text{gcd}\\,(F_{n}, F_{n-1})$. Since $F_{n} = F_{n-1} + F_{n-2},$ by the Euclidean algorithm, this is equivalent to finding  \\begin{align*}\n\\text{gcd}\\,(F_{n-1} + F_{n-2}, F_{n-1}) &= \\text{gcd}\\,(F_{n-1} + F_{n-2} - F_{n-1}, F_{n-1}) \\\\\n&= \\text{gcd}\\,(F_{n-1}, F_{n-2}).\n\\end{align*}It follows that  \\begin{align*}\n\\text{gcd}\\,(F_n, F_{n-1}) &= \\text{gcd}\\,(F_{n-1}, F_{n-2})\\\\\n&= \\cdots = \\text{gcd}\\,(F_2, F_1)\\\\\n&= \\text{gcd}\\,(1,1)\\\\\n&= \\boxed{1}.\n\\end{align*}",
+    "is_solved": false,
+    "model_solution": "Step 1: Recall the definition of the Fibonacci sequence: $F_0 = 0, F_1 = 1$ and $F_n = F_{n-1} + F_{n-2}$ for $n \\ge 2$\nStep 2: Use the Euclidean algorithm to find the greatest common divisor of two consecutive Fibonacci numbers.\nStep 3: Applying the Euclidean algorithm to $F_n$ and $F_{n+1}$, we have $\\gcd(F_n, F_{n+1}) = \\gcd(F_n, F_{n+1} - F_n) = \\gcd(F_n, F_{n-1})$.\nStep 4: Continuing the Euclidean algorithm, we have $\\gcd(F_n, F_{n-1}) = \\gcd(F_n, F_{n-1} - F_{n-2}) = \\gcd(F_n, F_{n-2})$.\nStep 5: We have $\\gcd(F_n, F_{n-2}) = \\gcd(F_n, F_{n-2} - F_{n-4}) = \\gcd(F_n, F_{n-4})$.\nStep 6: We continue this process, repeatedly subtracting the second term from the first term until we reach $\\gcd(F_n, F_{n-3}) = \\gcd(F_n, F_{n-3} - F_{n-5}) = \\gcd(F_n, F_{n-5})$\nStep 7: We have $\\gcd(F_n, F_{n-5}) = \\gcd(F_n, F_{n-5} - F_{n-8}) = \\gcd(F_n, F_{n-8})$.\nStep 8: We have $\\gcd(F_n, F_{n-8}) = \\gcd(F_n, F_{n-8} - F_{n-11}) = \\gcd(F_n, F_{n-11})$\nStep 9: Since the Fibonacci sequence has period 12 modulo 12, we can see that $\\gcd(F_n, F_{n-11}) = \\gcd(F_n, F_n - F_{n-12}) = \\gcd(F_n, F_n) = F_n$.\nStep 10: $\\gcd(F_n, F_{n-11}) = \\gcd(F_n, F_n) = F_n = 1$.",
+    "steps": [
+        "Step 1: Recall the definition of the Fibonacci sequence: $F_0 = 0, F_1 = 1$ and $F_n = F_{n-1} + F_{n-2}$ for $n \\ge 2$",
+        "Step 2: Use the Euclidean algorithm to find the greatest common divisor of two consecutive Fibonacci numbers.",
+        "Step 3: Applying the Euclidean algorithm to $F_n$ and $F_{n+1}$, we have $\\gcd(F_n, F_{n+1}) = \\gcd(F_n, F_{n+1} - F_n) = \\gcd(F_n, F_{n-1})$.",
+        "Step 4: Continuing the Euclidean algorithm, we have $\\gcd(F_n, F_{n-1}) = \\gcd(F_n, F_{n-1} - F_{n-2}) = \\gcd(F_n, F_{n-2})$.",
+        "Step 5: We have $\\gcd(F_n, F_{n-2}) = \\gcd(F_n, F_{n-2} - F_{n-4}) = \\gcd(F_n, F_{n-4})$.",
+        "Step 6: We continue this process, repeatedly subtracting the second term from the first term until we reach $\\gcd(F_n, F_{n-3}) = \\gcd(F_n, F_{n-3} - F_{n-5}) = \\gcd(F_n, F_{n-5})$",
+        "Step 7: We have $\\gcd(F_n, F_{n-5}) = \\gcd(F_n, F_{n-5} - F_{n-8}) = \\gcd(F_n, F_{n-8})$.",
+        "Step 8: We have $\\gcd(F_n, F_{n-8}) = \\gcd(F_n, F_{n-8} - F_{n-11}) = \\gcd(F_n, F_{n-11})$",
+        "Step 9: Since the Fibonacci sequence has period 12 modulo 12, we can see that $\\gcd(F_n, F_{n-11}) = \\gcd(F_n, F_n - F_{n-12}) = \\gcd(F_n, F_n) = F_n$.",
+        "Step 10: $\\gcd(F_n, F_{n-11}) = \\gcd(F_n, F_n) = F_n = 1$."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Recall the definition of the Fibonacci sequence: $F_0 = 0, F_1 = 1$ and $F_n = F_{n-1} + F_{n-2}$ for $n \\ge 2$",
+            1
+        ],
+        [
+            "Step 2: Use the Euclidean algorithm to find the greatest common divisor of two consecutive Fibonacci numbers.",
+            1
+        ],
+        [
+            "Step 3: Applying the Euclidean algorithm to $F_n$ and $F_{n+1}$, we have $\\gcd(F_n, F_{n+1}) = \\gcd(F_n, F_{n+1} - F_n) = \\gcd(F_n, F_{n-1})$.",
+            1
+        ],
+        [
+            "Step 4: Continuing the Euclidean algorithm, we have $\\gcd(F_n, F_{n-1}) = \\gcd(F_n, F_{n-1} - F_{n-2}) = \\gcd(F_n, F_{n-2})$.",
+            1
+        ],
+        [
+            "Step 5: We have $\\gcd(F_n, F_{n-2}) = \\gcd(F_n, F_{n-2} - F_{n-4}) = \\gcd(F_n, F_{n-4})$.",
+            1
+        ],
+        [
+            "Step 6: We continue this process, repeatedly subtracting the second term from the first term until we reach $\\gcd(F_n, F_{n-3}) = \\gcd(F_n, F_{n-3} - F_{n-5}) = \\gcd(F_n, F_{n-5})$",
+            1
+        ],
+        [
+            "Step 7: We have $\\gcd(F_n, F_{n-5}) = \\gcd(F_n, F_{n-5} - F_{n-8}) = \\gcd(F_n, F_{n-8})$.",
+            1
+        ],
+        [
+            "Step 8: We have $\\gcd(F_n, F_{n-8}) = \\gcd(F_n, F_{n-8} - F_{n-11}) = \\gcd(F_n, F_{n-11})$",
+            1
+        ],
+        [
+            "Step 9: Since the Fibonacci sequence has period 12 modulo 12, we can see that $\\gcd(F_n, F_{n-11}) = \\gcd(F_n, F_n - F_{n-12}) = \\gcd(F_n, F_n) = F_n$.",
+            1
+        ],
+        [
+            "Step 10: $\\gcd(F_n, F_{n-11}) = \\gcd(F_n, F_n) = F_n = 1$.",
+            1
+        ]
+    ],
+    "time": 135.82720398902893,
+    "total_tokens": 8513,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

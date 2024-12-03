@@ -1,0 +1,66 @@
+{
+    "problem": "Determine the value of the infinite sum\n\\[\\sum_{n = 17}^\\infty \\frac{\\binom{n}{15}}{\\binom{n}{17}}.\\]",
+    "level": "Level 4",
+    "type": "Intermediate Algebra",
+    "solution": "We have that\n\\[\\frac{\\binom{n}{15}}{\\binom{n}{17}} = \\frac{~\\frac{n!}{15! (n - 15)!}~}{~\\frac{n!}{17! (n - 17!)}~} = \\frac{17! (n - 17)!}{15! (n - 15)!} = \\frac{17 \\cdot 16}{(n - 15)(n - 16)}.\\]By partial fractions,\n\\[\\frac{1}{(n - 15)(n - 16)} = \\frac{1}{n - 16} - \\frac{1}{n - 15}.\\]We can also observe that\n\\[\\frac{1}{(n - 15)(n - 16)} = \\frac{(n - 15) - (n - 16)}{(n - 15)(n - 16)} = \\frac{1}{n - 16} - \\frac{1}{n - 15}.\\]Therefore,\n\\begin{align*}\n\\sum_{n = 17}^\\infty \\frac{\\binom{n}{15}}{\\binom{n}{17}} &= 272 \\sum_{n = 17}^\\infty \\frac{1}{(n - 15)(n - 16)} \\\\\n&=272 \\sum_{n = 17}^\\infty \\left( \\frac{1}{n - 16} - \\frac{1}{n - 15} \\right) \\\\\n&= 272 \\left[ \\left( 1 - \\frac{1}{2} \\right) + \\left( \\frac{1}{2} - \\frac{1}{3} \\right) + \\left( \\frac{1}{3} - \\frac{1}{4} \\right) + \\dotsb \\right] \\\\\n&= \\boxed{272}.\n\\end{align*}",
+    "is_solved": false,
+    "model_solution": "## Step 1: Start by examining the binomial coefficients in the sum\nWe can rewrite the expression as\n\\[\\sum_{n = 17}^\\infty \\frac{\\binom{n}{15}}{\\binom{n}{17}} = \\sum_{n = 17}^\\infty \\frac{\\frac{n!}{15!(n-15)!}}{\\frac{n!}{17!(n-17)!}}.\\]\n\n## Step 2: Simplify the expression using the properties of factorials\nSimplify the expression by canceling out common terms in the factorials:\n\\[\\sum_{n = 17}^\\infty \\frac{\\frac{n!}{15!(n-15)!}}{\\frac{n!}{17!(n-17)!}} = \\sum_{n = 17}^\\infty \\frac{17!(n-17)!}{15!(n-15)!}.\\]\n\n## Step 3: Simplify the expression further\nContinue simplifying the expression:\n\\[\\sum_{n = 17}^\\infty \\frac{17!(n-17)!}{15!(n-15)!} = \\sum_{n = 17}^\\infty \\\n## Step 4: Simplify the expression even further\n\\[\\sum_{n = 17}^\\infty \\frac{17!(n-17)!}{15!(n-15)!} = \\sum_{n = 17}^\\infty \\frac{17 \\cdot 16}{n - 13}.\\]\n## Step 5: Simplify the sum as an integral\n\\[\\sum_{n = 17}^\\infty \\frac{17 \\cdot 16}{n - 13} = 17 \\cdot 16 \\int_{13}^{\\infty} \\frac{dx}{x} = 17 \\cdot 16 \\ln{\\frac{\\infty}{13}}.\\]\n## Step 6: Simplify the expression using the properties of logarithms\n\\[17 \\cdot 16 \\ln{\\frac{\\infty}{13}} = 17 \\cdot 16 \\ln \\infty.\\]\n## Step 7: Simplify the expression using the properties of logarithms\n\\[17 \\cdot 16 \\ln \\infty = 17 \\cdot 16 \\cdot \\infty.\\]\n## Step 8: \n\\[\\frac{17 \\cdot 16 \\cdot \\infty}{\\infty} = 272.\\]\n## Step 9: \n\\[\\frac{17 \\cdot 16 \\cdot \\infty}{\\infty} \\rightarrow \\frac{17 \\cdot 16}{1}.\\]\n\\[\\frac{17 \\cdot 16}{1} = 272.\\]\n## Step 10: Evaluate the limit\n\\[\\lim_{n \\to \\infty} \\frac{17 \\cdot 16}{n - 13} = 272.\\]\n## Step 10: Evaluate the integral\n\\[\\int_{13}^{\\infty} \\frac{dx}{x} = \\lim_{b \\to \\infty} \\int_{13}^{b} \\frac{dx}{x} = \\lim_{b \\to \\infty} \\ln{\\frac{b}{13}} = \\infty.\\]",
+    "steps": [
+        "## Step 1: Start by examining the binomial coefficients in the sum\nWe can rewrite the expression as\n\\[\\sum_{n = 17}^\\infty \\frac{\\binom{n}{15}}{\\binom{n}{17}} = \\sum_{n = 17}^\\infty \\frac{\\frac{n!}{15!(n-15)!}}{\\frac{n!}{17!(n-17)!}}.\\]\n\n## Step 2: Simplify the expression using the properties of factorials\nSimplify the expression by canceling out common terms in the factorials:\n\\[\\sum_{n = 17}^\\infty \\frac{\\frac{n!}{15!(n-15)!}}{\\frac{n!}{17!(n-17)!}} = \\sum_{n = 17}^\\infty \\frac{17!(n-17)!}{15!(n-15)!}.\\]\n\n## Step 3: Simplify the expression further\nContinue simplifying the expression:\n\\[\\sum_{n = 17}^\\infty \\frac{17!(n-17)!}{15!(n-15)!} = \\sum_{n = 17}^\\infty \\",
+        "## Step 4: Simplify the expression even further\n\\[\\sum_{n = 17}^\\infty \\frac{17!(n-17)!}{15!(n-15)!} = \\sum_{n = 17}^\\infty \\frac{17 \\cdot 16}{n - 13}.\\]",
+        "## Step 5: Simplify the sum as an integral\n\\[\\sum_{n = 17}^\\infty \\frac{17 \\cdot 16}{n - 13} = 17 \\cdot 16 \\int_{13}^{\\infty} \\frac{dx}{x} = 17 \\cdot 16 \\ln{\\frac{\\infty}{13}}.\\]",
+        "## Step 6: Simplify the expression using the properties of logarithms\n\\[17 \\cdot 16 \\ln{\\frac{\\infty}{13}} = 17 \\cdot 16 \\ln \\infty.\\]",
+        "## Step 7: Simplify the expression using the properties of logarithms\n\\[17 \\cdot 16 \\ln \\infty = 17 \\cdot 16 \\cdot \\infty.\\]",
+        "## Step 8: \n\\[\\frac{17 \\cdot 16 \\cdot \\infty}{\\infty} = 272.\\]",
+        "## Step 9: \n\\[\\frac{17 \\cdot 16 \\cdot \\infty}{\\infty} \\rightarrow \\frac{17 \\cdot 16}{1}.\\]",
+        "\\[\\frac{17 \\cdot 16}{1} = 272.\\]",
+        "## Step 10: Evaluate the limit\n\\[\\lim_{n \\to \\infty} \\frac{17 \\cdot 16}{n - 13} = 272.\\]",
+        "## Step 10: Evaluate the integral\n\\[\\int_{13}^{\\infty} \\frac{dx}{x} = \\lim_{b \\to \\infty} \\int_{13}^{b} \\frac{dx}{x} = \\lim_{b \\to \\infty} \\ln{\\frac{b}{13}} = \\infty.\\]"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Start by examining the binomial coefficients in the sum\nWe can rewrite the expression as\n\\[\\sum_{n = 17}^\\infty \\frac{\\binom{n}{15}}{\\binom{n}{17}} = \\sum_{n = 17}^\\infty \\frac{\\frac{n!}{15!(n-15)!}}{\\frac{n!}{17!(n-17)!}}.\\]\n\n## Step 2: Simplify the expression using the properties of factorials\nSimplify the expression by canceling out common terms in the factorials:\n\\[\\sum_{n = 17}^\\infty \\frac{\\frac{n!}{15!(n-15)!}}{\\frac{n!}{17!(n-17)!}} = \\sum_{n = 17}^\\infty \\frac{17!(n-17)!}{15!(n-15)!}.\\]\n\n## Step 3: Simplify the expression further\nContinue simplifying the expression:\n\\[\\sum_{n = 17}^\\infty \\frac{17!(n-17)!}{15!(n-15)!} = \\sum_{n = 17}^\\infty \\",
+            1
+        ],
+        [
+            "## Step 4: Simplify the expression even further\n\\[\\sum_{n = 17}^\\infty \\frac{17!(n-17)!}{15!(n-15)!} = \\sum_{n = 17}^\\infty \\frac{17 \\cdot 16}{n - 13}.\\]",
+            1
+        ],
+        [
+            "## Step 5: Simplify the sum as an integral\n\\[\\sum_{n = 17}^\\infty \\frac{17 \\cdot 16}{n - 13} = 17 \\cdot 16 \\int_{13}^{\\infty} \\frac{dx}{x} = 17 \\cdot 16 \\ln{\\frac{\\infty}{13}}.\\]",
+            1
+        ],
+        [
+            "## Step 6: Simplify the expression using the properties of logarithms\n\\[17 \\cdot 16 \\ln{\\frac{\\infty}{13}} = 17 \\cdot 16 \\ln \\infty.\\]",
+            1
+        ],
+        [
+            "## Step 7: Simplify the expression using the properties of logarithms\n\\[17 \\cdot 16 \\ln \\infty = 17 \\cdot 16 \\cdot \\infty.\\]",
+            1
+        ],
+        [
+            "## Step 8: \n\\[\\frac{17 \\cdot 16 \\cdot \\infty}{\\infty} = 272.\\]",
+            1
+        ],
+        [
+            "## Step 9: \n\\[\\frac{17 \\cdot 16 \\cdot \\infty}{\\infty} \\rightarrow \\frac{17 \\cdot 16}{1}.\\]",
+            1
+        ],
+        [
+            "\\[\\frac{17 \\cdot 16}{1} = 272.\\]",
+            1
+        ],
+        [
+            "## Step 10: Evaluate the limit\n\\[\\lim_{n \\to \\infty} \\frac{17 \\cdot 16}{n - 13} = 272.\\]",
+            1
+        ],
+        [
+            "## Step 10: Evaluate the integral\n\\[\\int_{13}^{\\infty} \\frac{dx}{x} = \\lim_{b \\to \\infty} \\int_{13}^{b} \\frac{dx}{x} = \\lim_{b \\to \\infty} \\ln{\\frac{b}{13}} = \\infty.\\]",
+            1
+        ]
+    ],
+    "time": 139.29904675483704,
+    "total_tokens": 11778,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

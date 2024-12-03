@@ -1,0 +1,41 @@
+{
+    "problem": "In triangle $ABC,$ $\\angle A = 90^\\circ,$ $AC = 1,$ and $AB = 5.$  Point $D$ lies on ray $\\overrightarrow{AC}$ such that $\\angle DBC = 2 \\angle CBA.$  Compute $AD.$",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "Let $\\theta = \\angle CBA.$  Since $\\angle DBC = 2 \\theta,$ $\\angle DBA = 3 \\theta.$\n\n[asy]\nunitsize(1 cm);\n\npair A, B, C, D;\n\nA = (0,0);\nB = (5,0);\nC = (0,1);\nD = (0,37/11);\n\ndraw(A--B--D---cycle);\ndraw(B--C);\n\nlabel(\"$A$\", A, SW);\nlabel(\"$B$\", B, SE);\nlabel(\"$C$\", C, W);\nlabel(\"$D$\", D, NW);\nlabel(\"$1$\", (A + C)/2, W);\nlabel(\"$5$\", (A + B)/2, S);\n[/asy]\n\nNote that $\\tan \\theta = \\frac{1}{5}.$  By the triple angle formula,\n\\[\\tan 3 \\theta = \\frac{3 \\tan \\theta - \\tan^3 \\theta}{1 - 3 \\tan^2 \\theta} = \\frac{3 (\\frac{1}{5}) - (\\frac{1}{5})^3}{1 - 3 (\\frac{1}{5})^2} = \\frac{37}{55}.\\]Therefore,\n\\[AD = AB \\tan 3 \\theta = 5 \\cdot \\frac{37}{55} = \\boxed{\\frac{37}{11}}.\\]",
+    "is_solved": true,
+    "model_solution": "Step 1: Draw a diagram.\nStep 2: Since $\\angle DBC = 2 \\angle CBA,$ we have $\\angle DBC = 2 \\cdot \\angle CAB$ (because $\\angle CBA$ and $\\angle CAB$ are equal).  We can write the equation $\\angle DBC = 2 \\cdot \\angle CAB.$\nStep 3:\nSince $\\angle DBC = 90^{\\circ}-\\angle CAB,$ we have $90^{\\circ}-\\angle CAB=2\\angle CAB.$\nStep 4:\n3 \\angle CAB = 90^\\circ \\Rightarrow \\angle CAB = 30^\\circ \\Rightarrow AD = AC - CD = AC - BC = 1 - BC.\nWe have $\\triangle ABC$ is a right triangle with right angle at vertex $A,$ so by the Pythagorean Theorem, $BC = \\sqrt{5^2 - 1^2} = 4.$  Therefore, $AD = AC - CD = AC - BC = 1 - 4 = -3.$ Since $AD$ is a length, it is positive, so it must be $AD = \\boxed{3}$ Final Answer.",
+    "steps": [
+        "Step 1: Draw a diagram.",
+        "Step 2: Since $\\angle DBC = 2 \\angle CBA,$ we have $\\angle DBC = 2 \\cdot \\angle CAB$ (because $\\angle CBA$ and $\\angle CAB$ are equal).  We can write the equation $\\angle DBC = 2 \\cdot \\angle CAB.$",
+        "Step 3:\nSince $\\angle DBC = 90^{\\circ}-\\angle CAB,$ we have $90^{\\circ}-\\angle CAB=2\\angle CAB.$",
+        "Step 4:\n3 \\angle CAB = 90^\\circ \\Rightarrow \\angle CAB = 30^\\circ \\Rightarrow AD = AC - CD = AC - BC = 1 - BC.",
+        "We have $\\triangle ABC$ is a right triangle with right angle at vertex $A,$ so by the Pythagorean Theorem, $BC = \\sqrt{5^2 - 1^2} = 4.$  Therefore, $AD = AC - CD = AC - BC = 1 - 4 = -3.$ Since $AD$ is a length, it is positive, so it must be $AD = \\boxed{3}$ Final Answer."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Draw a diagram.",
+            1
+        ],
+        [
+            "Step 2: Since $\\angle DBC = 2 \\angle CBA,$ we have $\\angle DBC = 2 \\cdot \\angle CAB$ (because $\\angle CBA$ and $\\angle CAB$ are equal).  We can write the equation $\\angle DBC = 2 \\cdot \\angle CAB.$",
+            1
+        ],
+        [
+            "Step 3:\nSince $\\angle DBC = 90^{\\circ}-\\angle CAB,$ we have $90^{\\circ}-\\angle CAB=2\\angle CAB.$",
+            1
+        ],
+        [
+            "Step 4:\n3 \\angle CAB = 90^\\circ \\Rightarrow \\angle CAB = 30^\\circ \\Rightarrow AD = AC - CD = AC - BC = 1 - BC.",
+            1
+        ],
+        [
+            "We have $\\triangle ABC$ is a right triangle with right angle at vertex $A,$ so by the Pythagorean Theorem, $BC = \\sqrt{5^2 - 1^2} = 4.$  Therefore, $AD = AC - CD = AC - BC = 1 - 4 = -3.$ Since $AD$ is a length, it is positive, so it must be $AD = \\boxed{3}$ Final Answer.",
+            1
+        ]
+    ],
+    "time": 67.78075766563416,
+    "total_tokens": 2434,
+    "final_answer_tokens": 368,
+    "model": "meta-llama/Llama-Vision-Free"
+}

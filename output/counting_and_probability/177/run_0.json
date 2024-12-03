@@ -1,0 +1,56 @@
+{
+    "problem": "Each face of a cube is painted either  red or blue, each with probability 1/2. The color of each face is determined independently.  What is the probability that the painted cube can be placed on a horizontal surface so that the four vertical faces are all the same color?",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "If the orientation of the cube is fixed, there are $2^6 = 64$ possible arrangements of colors on the faces. There are \\[\n2\\binom{6}{6}=2\n\\]arrangements in which all six faces are the same color and \\[\n2\\binom{6}{5}=12\n\\]arrangements in which exactly five faces have the same color. In each of these cases the cube can be placed so that the four vertical faces have the same color. The only other suitable arrangements have four faces of one color, with the other color on a pair of opposing faces. Since there are three pairs of opposing faces, there are $2(3)=6$ such arrangements. The total number of suitable arrangements is therefore $2+12+6=20$, and the probability is $20/64= \\boxed{\\frac{5}{16}}$.",
+    "is_solved": true,
+    "model_solution": "Let $A$ be the event that the cube can be placed on a horizontal surface so that the four vertical faces are all the same color. Let $B$ be the event that the cube has two opposite faces that are the same color.\nSince $B$ is the event that the cube has two opposite faces that are the same color, this includes the event $A$ that the cube can be placed on a horizontal surface so that the four vertical faces are all the same color. Also, $B$ includes cases where the four vertical faces of the cube are not all the same color. Let $C$ be the event that the four vertical faces are not all the same color.\n$\\overline{B}$, the complement of $B$, is the event that the cube has none of the opposite faces the same color.\nWe calculate $P(B\\setminus A)$ and $P(A)$, where $B\\setminus A$ is the event that the cube has two opposite faces the same color, but cannot be placed on a horizontal surface so that the four vertical faces are all the same color.\n$P\\left(\\overline{B}\\right)=\\frac{1}{16}.$\n$P\\left(B\\setminus A\\right)=P\\left(B\\right)-P\\left(A\\right)=\\frac{7}{16}-\\left(1-P\\left(\\overline{B}\\right)\\right)$\n$P\\left(B\\setminus A\\right)=\\frac{7}{16}-\\frac{15}{16}=-\\frac{8}{16}=-\\frac{1}{2}$\n$P\\left(B\\setminus A\\right)=\\frac{7}{16}-\\frac{15}{16}=-\\frac{8}{16}=-\\frac{1}{2}$",
+    "steps": [
+        "Let $A$ be the event that the cube can be placed on a horizontal surface so that the four vertical faces are all the same color. Let $B$ be the event that the cube has two opposite faces that are the same color.",
+        "Since $B$ is the event that the cube has two opposite faces that are the same color, this includes the event $A$ that the cube can be placed on a horizontal surface so that the four vertical faces are all the same color. Also, $B$ includes cases where the four vertical faces of the cube are not all the same color. Let $C$ be the event that the four vertical faces are not all the same color.",
+        "$\\overline{B}$, the complement of $B$, is the event that the cube has none of the opposite faces the same color.",
+        "We calculate $P(B\\setminus A)$ and $P(A)$, where $B\\setminus A$ is the event that the cube has two opposite faces the same color, but cannot be placed on a horizontal surface so that the four vertical faces are all the same color.",
+        "$P\\left(\\overline{B}\\right)=\\frac{1}{16}.$",
+        "$P\\left(B\\setminus A\\right)=P\\left(B\\right)-P\\left(A\\right)=\\frac{7}{16}-\\left(1-P\\left(\\overline{B}\\right)\\right)$",
+        "$P\\left(B\\setminus A\\right)=\\frac{7}{16}-\\frac{15}{16}=-\\frac{8}{16}=-\\frac{1}{2}$",
+        "$P\\left(B\\setminus A\\right)=\\frac{7}{16}-\\frac{15}{16}=-\\frac{8}{16}=-\\frac{1}{2}$"
+    ],
+    "full_steps": [
+        [
+            "Let $A$ be the event that the cube can be placed on a horizontal surface so that the four vertical faces are all the same color. Let $B$ be the event that the cube has two opposite faces that are the same color.",
+            1
+        ],
+        [
+            "Since $B$ is the event that the cube has two opposite faces that are the same color, this includes the event $A$ that the cube can be placed on a horizontal surface so that the four vertical faces are all the same color. Also, $B$ includes cases where the four vertical faces of the cube are not all the same color. Let $C$ be the event that the four vertical faces are not all the same color.",
+            1
+        ],
+        [
+            "$\\overline{B}$, the complement of $B$, is the event that the cube has none of the opposite faces the same color.",
+            1
+        ],
+        [
+            "We calculate $P(B\\setminus A)$ and $P(A)$, where $B\\setminus A$ is the event that the cube has two opposite faces the same color, but cannot be placed on a horizontal surface so that the four vertical faces are all the same color.",
+            1
+        ],
+        [
+            "$P\\left(\\overline{B}\\right)=\\frac{1}{16}.$",
+            1
+        ],
+        [
+            "$P\\left(B\\setminus A\\right)=P\\left(B\\right)-P\\left(A\\right)=\\frac{7}{16}-\\left(1-P\\left(\\overline{B}\\right)\\right)$",
+            1
+        ],
+        [
+            "$P\\left(B\\setminus A\\right)=\\frac{7}{16}-\\frac{15}{16}=-\\frac{8}{16}=-\\frac{1}{2}$",
+            1
+        ],
+        [
+            "$P\\left(B\\setminus A\\right)=\\frac{7}{16}-\\frac{15}{16}=-\\frac{8}{16}=-\\frac{1}{2}$",
+            1
+        ]
+    ],
+    "time": 110.41037821769714,
+    "total_tokens": 5651,
+    "final_answer_tokens": 499,
+    "model": "meta-llama/Llama-Vision-Free"
+}

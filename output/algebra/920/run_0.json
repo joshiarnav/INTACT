@@ -1,0 +1,51 @@
+{
+    "problem": "The product of two positive integers plus their sum is 95. The integers are relatively prime, and each is less than 20. What is the sum of the two integers?",
+    "level": "Level 4",
+    "type": "Algebra",
+    "solution": "Let our numbers be $a$ and $b$ with $a>b.$ Then $ab+a+b=95$. With Simon's Favorite Factoring Trick in mind, we add $1$ to both sides and get $ab+a+b+1 = 96$, which factors as $(a+1)(b+1)=96$. We consider pairs $(a+1, b+1)$ of factors of $96$: $(96,1), (48,2), (32,3), (24,4), (16,6), \\text{and} (12,8)$. Since $a<20$, we can rule out the first 4 pairs. The pair $(16,6)$ gives us $a=15, b=5$ which doesn't work because $a$ and $b$ are relatively prime, so we are left with the last pair, which gives $a=11$ and $b=7$, so $a+b=\\boxed{18}$.",
+    "is_solved": true,
+    "model_solution": "Let the two positive integers be x and y. The product of the two positive integers plus their sum can be written as x * y + x + y = 95.\nStep 2: Add 1 to both sides of the equation to obtain x * y + x + y + 1 = 96.\nStep 3: Factor the left side of the equation as (x + 1)(y + 1) = 96.\nStep 4: Find the pairs of factors of 96 such that (x + 1) and (y + 1) are both less than 21.\nStep 5: \nList the pairs of factors of 96: (1, 96), (2, 48), (3, 32), (4, 24), (6, 16), (8, 12). \nEliminate the pairs where either (x + 1) or (y + 1) is greater than or equal to 21.\nThe remaining pairs are (1, 96), (2, 48), (3, 32), and (4, 24).\nEliminate the pairs where x and y are not relatively prime. The remaining pairs are (1, 96) does not count since x and y are not both integers. The only remaining pair is (8, 12).\nStep 6: \nx + 1 = 8 and y + 1 = 12, so x = 7 and y = 11.\n\nFinal Answer",
+    "steps": [
+        "Let the two positive integers be x and y. The product of the two positive integers plus their sum can be written as x * y + x + y = 95.",
+        "Step 2: Add 1 to both sides of the equation to obtain x * y + x + y + 1 = 96.",
+        "Step 3: Factor the left side of the equation as (x + 1)(y + 1) = 96.",
+        "Step 4: Find the pairs of factors of 96 such that (x + 1) and (y + 1) are both less than 21.",
+        "Step 5: \nList the pairs of factors of 96: (1, 96), (2, 48), (3, 32), (4, 24), (6, 16), (8, 12). \nEliminate the pairs where either (x + 1) or (y + 1) is greater than or equal to 21.\nThe remaining pairs are (1, 96), (2, 48), (3, 32), and (4, 24).",
+        "Eliminate the pairs where x and y are not relatively prime. The remaining pairs are (1, 96) does not count since x and y are not both integers. The only remaining pair is (8, 12).",
+        "Step 6: \nx + 1 = 8 and y + 1 = 12, so x = 7 and y = 11.\n\nFinal Answer"
+    ],
+    "full_steps": [
+        [
+            "Let the two positive integers be x and y. The product of the two positive integers plus their sum can be written as x * y + x + y = 95.",
+            1
+        ],
+        [
+            "Step 2: Add 1 to both sides of the equation to obtain x * y + x + y + 1 = 96.",
+            1
+        ],
+        [
+            "Step 3: Factor the left side of the equation as (x + 1)(y + 1) = 96.",
+            1
+        ],
+        [
+            "Step 4: Find the pairs of factors of 96 such that (x + 1) and (y + 1) are both less than 21.",
+            1
+        ],
+        [
+            "Step 5: \nList the pairs of factors of 96: (1, 96), (2, 48), (3, 32), (4, 24), (6, 16), (8, 12). \nEliminate the pairs where either (x + 1) or (y + 1) is greater than or equal to 21.\nThe remaining pairs are (1, 96), (2, 48), (3, 32), and (4, 24).",
+            1
+        ],
+        [
+            "Eliminate the pairs where x and y are not relatively prime. The remaining pairs are (1, 96) does not count since x and y are not both integers. The only remaining pair is (8, 12).",
+            1
+        ],
+        [
+            "Step 6: \nx + 1 = 8 and y + 1 = 12, so x = 7 and y = 11.\n\nFinal Answer",
+            1
+        ]
+    ],
+    "time": 95.8288357257843,
+    "total_tokens": 3676,
+    "final_answer_tokens": 407,
+    "model": "meta-llama/Llama-Vision-Free"
+}

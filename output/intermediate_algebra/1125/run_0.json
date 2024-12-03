@@ -1,0 +1,66 @@
+{
+    "problem": "Let $g(x) = x^2 - 11x + 30,$ and let $f(x)$ be a polynomial such that\n\\[g(f(x)) = x^4 - 14x^3 + 62x^2 - 91x + 42.\\]Find the sum of all possible values of $f(10^{100}).$",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "Let $d$ be the degree of $f(x).$  Then the degree of $g(f(x))$ is $2d = 4,$ so $d = 2.$\n\nAccordingly, let $f(x) = ax^2 + bx + c.$  Then\n\\begin{align*}\ng(f(x)) &= g(ax^2 + bx + c) \\\\\n&= (ax^2 + bx + c)^2 - 11(ax^2 + bx + c) + 30 \\\\\n&= a^2 x^4 + 2abx^3 + (2ac + b^2 - 11a) x^2 + (2bc - 11b) x + c^2 - 11c + 30.\n\\end{align*}Comparing coefficients, we get\n\\begin{align*}\na^2 &= 1, \\\\\n2ab &= -14, \\\\\n2ac + b^2 - 11a &= 62, \\\\\n2cb - 11b &= -91, \\\\\nc^2 - 11c + 30 &= 42.\n\\end{align*}From $a^2 = -1,$ $a = 1$ or $a = -1.$\n\nIf $a = 1,$ then from the equation $2ab = -14,$ $b = -7.$  Then from the equation $2cb - 11b = -91,$ $c = 12.$  Note that $(a,b,c) = (1,-7,12)$ satisfies all the equations.\n\nIf $a = -1,$ then from the equation $2ab = -14,$ $b = 7.$  Then from the equation $2cb - 11b = -91,$ $c = -1.$  Note that $(a,b,c) = (-1,7,-1)$ satisfies all the equations.\n\nTherefore, the possible polynomials $f(x)$ are $x^2 - 7x + 12$ and $-x^2 + 7x - 1.$  Since\n\\[x^2 - 7x + 12 + (-x^2 + 7x - 1) = 11\\]for all $x,$ the sum of all possible values of $f(10^{100})$ is $\\boxed{11}.$",
+    "is_solved": false,
+    "model_solution": "Step 1:  Let's start by analyzing the given composite function $g(f(x))$.\nStep 2:  We are given that $g(x) = x^2 - 11x + 30,$ and we need to find the polynomial $f(x)$ such that $g(f(x)) = x^4 - 14x^3 + 62x^2 - 91x + 42.$\nStep 3:  We first expand $g(f(x))$ by substituting $f(x)$ into the expression for $g(x)$.\nStep 4:  This gives us $g(f(x)) = (f(x))^2 - 11f(x) + 30.$\nStep 5:  We then compare this expanded form with the given expression $x^4 - 14x^3 + 62x^2 - 91x + 42.$\nStep 6:  To match the degree 4 polynomial on the right-hand side, the polynomial $f(x)$ must be of degree 2.\nStep 7:  We can express $f(x)$ as $f(x) = ax^2 + bx + c.$\nStep 8\nStep 9:  We substitute $f(x) = ax^2 + bx + c$ into the expanded form of $g(f(x))$ and compare the coefficients to the given expression $x^4 - 14x^3 + 62x^2 - 91x + 42$ to get a system of equations involving $a,$ $b,$ and $c.$\nStep 9:  Equating the coefficients of the terms on both sides of the equation $(f(x))^2 - 11f(x) + 30 = x^4 - 14x^3 + 62x^2 - 91x + 42,$ we obtain the following system of equations:\n\\[a^2 = 1, \\]\n\\[2a b = -14, \\]\n\\[a c + b^2 - 11b = - 62, \\]\n\\[2ac + b(-11) = - 91, \\]\n\\[c^2 - 11c + 30 = 42.\\]\nStep 10:  Solving the system of equations, we first solve for $a$ to get $a = 1$ or $a = -1.$\nSolve the equation $2ab = -14$ for $b$ to get $b = -7/a.$\nStep 11:\nFor $a = 1,$ we have $b = -7.$ Solving $b^2 - 11b = -62$ for $c$ gives $c = 4.$\nStep 12:\nFor $a = -1,$ we have $b = 7.$ Solving $b^2 - 11b = -62$ for $c$ gives $c = -6.$\nNow, we evaluate $f(x)$ for both cases.\nFor the first case, $f(x) = x^2 - 7x + 4$.\nFor the second case, $f(x) = x^2 + 7x - 6$.\nWe need to find the sum of all possible values of $f(10^{100})$.\nSubstitute $x = 10^{100}$ into both expressions for $f(x)$ to find the possible values of $f(10^{100})$.\nStep 2:\nEvaluate $f(10^{100})$ for both cases.",
+    "steps": [
+        "Step 1:  Let's start by analyzing the given composite function $g(f(x))$.\nStep 2:  We are given that $g(x) = x^2 - 11x + 30,$ and we need to find the polynomial $f(x)$ such that $g(f(x)) = x^4 - 14x^3 + 62x^2 - 91x + 42.$\nStep 3:  We first expand $g(f(x))$ by substituting $f(x)$ into the expression for $g(x)$.\nStep 4:  This gives us $g(f(x)) = (f(x))^2 - 11f(x) + 30.$\nStep 5:  We then compare this expanded form with the given expression $x^4 - 14x^3 + 62x^2 - 91x + 42.$\nStep 6:  To match the degree 4 polynomial on the right-hand side, the polynomial $f(x)$ must be of degree 2.\nStep 7:  We can express $f(x)$ as $f(x) = ax^2 + bx + c.$\nStep 8",
+        "Step 9:  We substitute $f(x) = ax^2 + bx + c$ into the expanded form of $g(f(x))$ and compare the coefficients to the given expression $x^4 - 14x^3 + 62x^2 - 91x + 42$ to get a system of equations involving $a,$ $b,$ and $c.$",
+        "Step 9:  Equating the coefficients of the terms on both sides of the equation $(f(x))^2 - 11f(x) + 30 = x^4 - 14x^3 + 62x^2 - 91x + 42,$ we obtain the following system of equations:\n\\[a^2 = 1, \\]\n\\[2a b = -14, \\]\n\\[a c + b^2 - 11b = - 62, \\]\n\\[2ac + b(-11) = - 91, \\]\n\\[c^2 - 11c + 30 = 42.\\]",
+        "Step 10:  Solving the system of equations, we first solve for $a$ to get $a = 1$ or $a = -1.$",
+        "Solve the equation $2ab = -14$ for $b$ to get $b = -7/a.$",
+        "Step 11:\nFor $a = 1,$ we have $b = -7.$ Solving $b^2 - 11b = -62$ for $c$ gives $c = 4.$",
+        "Step 12:\nFor $a = -1,$ we have $b = 7.$ Solving $b^2 - 11b = -62$ for $c$ gives $c = -6.$",
+        "Now, we evaluate $f(x)$ for both cases.\nFor the first case, $f(x) = x^2 - 7x + 4$.\nFor the second case, $f(x) = x^2 + 7x - 6$.\nWe need to find the sum of all possible values of $f(10^{100})$.",
+        "Substitute $x = 10^{100}$ into both expressions for $f(x)$ to find the possible values of $f(10^{100})$.",
+        "Step 2:\nEvaluate $f(10^{100})$ for both cases."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Let's start by analyzing the given composite function $g(f(x))$.\nStep 2:  We are given that $g(x) = x^2 - 11x + 30,$ and we need to find the polynomial $f(x)$ such that $g(f(x)) = x^4 - 14x^3 + 62x^2 - 91x + 42.$\nStep 3:  We first expand $g(f(x))$ by substituting $f(x)$ into the expression for $g(x)$.\nStep 4:  This gives us $g(f(x)) = (f(x))^2 - 11f(x) + 30.$\nStep 5:  We then compare this expanded form with the given expression $x^4 - 14x^3 + 62x^2 - 91x + 42.$\nStep 6:  To match the degree 4 polynomial on the right-hand side, the polynomial $f(x)$ must be of degree 2.\nStep 7:  We can express $f(x)$ as $f(x) = ax^2 + bx + c.$\nStep 8",
+            1
+        ],
+        [
+            "Step 9:  We substitute $f(x) = ax^2 + bx + c$ into the expanded form of $g(f(x))$ and compare the coefficients to the given expression $x^4 - 14x^3 + 62x^2 - 91x + 42$ to get a system of equations involving $a,$ $b,$ and $c.$",
+            1
+        ],
+        [
+            "Step 9:  Equating the coefficients of the terms on both sides of the equation $(f(x))^2 - 11f(x) + 30 = x^4 - 14x^3 + 62x^2 - 91x + 42,$ we obtain the following system of equations:\n\\[a^2 = 1, \\]\n\\[2a b = -14, \\]\n\\[a c + b^2 - 11b = - 62, \\]\n\\[2ac + b(-11) = - 91, \\]\n\\[c^2 - 11c + 30 = 42.\\]",
+            1
+        ],
+        [
+            "Step 10:  Solving the system of equations, we first solve for $a$ to get $a = 1$ or $a = -1.$",
+            1
+        ],
+        [
+            "Solve the equation $2ab = -14$ for $b$ to get $b = -7/a.$",
+            1
+        ],
+        [
+            "Step 11:\nFor $a = 1,$ we have $b = -7.$ Solving $b^2 - 11b = -62$ for $c$ gives $c = 4.$",
+            1
+        ],
+        [
+            "Step 12:\nFor $a = -1,$ we have $b = 7.$ Solving $b^2 - 11b = -62$ for $c$ gives $c = -6.$",
+            1
+        ],
+        [
+            "Now, we evaluate $f(x)$ for both cases.\nFor the first case, $f(x) = x^2 - 7x + 4$.\nFor the second case, $f(x) = x^2 + 7x - 6$.\nWe need to find the sum of all possible values of $f(10^{100})$.",
+            1
+        ],
+        [
+            "Substitute $x = 10^{100}$ into both expressions for $f(x)$ to find the possible values of $f(10^{100})$.",
+            1
+        ],
+        [
+            "Step 2:\nEvaluate $f(10^{100})$ for both cases.",
+            1
+        ]
+    ],
+    "time": 133.01532745361328,
+    "total_tokens": 13588,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,36 @@
+{
+    "problem": "Let $\\mathbf{a}$ be a unit vector.  Compute\n\\[\\|\\mathbf{a} \\times \\mathbf{i}\\|^2 + \\|\\mathbf{a} \\times \\mathbf{j}\\|^2 + \\|\\mathbf{a} \\times \\mathbf{k}\\|^2.\\]",
+    "level": "Level 2",
+    "type": "Precalculus",
+    "solution": "Let $\\mathbf{a} = \\begin{pmatrix} x \\\\ y \\\\ z \\end{pmatrix}.$  Since $\\mathbf{a}$ is a unit vector, $x^2 + y^2 + z^2 = 1.$\n\nAlso,\n\\[\\|\\mathbf{a} \\times \\mathbf{i}\\|^2 = \\left\\| \\begin{pmatrix} x \\\\ y \\\\ z \\end{pmatrix} \\times \\begin{pmatrix} 1 \\\\ 0 \\\\ 0 \\end{pmatrix} \\right\\|^2 = \\left\\| \\begin{pmatrix} 0 \\\\ z \\\\ -y \\end{pmatrix} \\right\\|^2 = y^2 + z^2.\\]Similarly,\n\\[\\|\\mathbf{a} \\times \\mathbf{j}\\|^2 = \\left\\| \\begin{pmatrix} x \\\\ y \\\\ z \\end{pmatrix} \\times \\begin{pmatrix} 0 \\\\ 1 \\\\ 0 \\end{pmatrix} \\right\\|^2 = \\left\\| \\begin{pmatrix} -z \\\\ 0 \\\\ x \\end{pmatrix} \\right\\|^2 = x^2 + z^2,\\]and\n\\[\\|\\mathbf{a} \\times \\mathbf{k}\\|^2 = \\left\\| \\begin{pmatrix} x \\\\ y \\\\ z \\end{pmatrix} \\times \\begin{pmatrix} 0 \\\\ 0 \\\\ 1 \\end{pmatrix} \\right\\|^2 = \\left\\| \\begin{pmatrix} y \\\\ -x \\\\ 0 \\end{pmatrix} \\right\\|^2 = x^2 + y^2.\\]Therefore,\n\\begin{align*}\n\\|\\mathbf{a} \\times \\mathbf{i}\\|^2 + \\|\\mathbf{a} \\times \\mathbf{j}\\|^2 + \\|\\mathbf{a} \\times \\mathbf{k}\\|^2 &= (y^2 + z^2) + (x^2 + z^2) + (x^ 2 + y^2) \\\\\n&= 2(x^2 + y^2 + z^2) = \\boxed{2}.\n\\end{align*}",
+    "is_solved": true,
+    "model_solution": "## Step 1: Recall the definition of the cross product and its magnitude\n\\[\\mathbf{a} \\times \\mathbf{i} = \\begin{vmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ a_1 & a_2 & a_3 \\\\ 1 & 0 & 0 \\end{vmatrix} = (a_2, -a_1, 0),\\]\n\\[\\mathbf{a} \\times \\mathbf{j} = \\begin{vmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ a_1 & a_2 & a_3 \\\\ 0 & 1 & 0 \\end{vmatrix} = (-a_3, 0, a_1),\\]\n\\[\\mathbf{a} \\times \\mathbf{k} = \\begin{vmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ a_1 & a_2 & a_3 \\\\ 0 & 0 & 1 \\end{vmatrix} = (0, -a_3\n## Step 2: Compute the square of the magnitudes\n\\[\\|\\mathbf{a} \\times \\mathbf{i}\\|^2 = a_2^2 + a_1^2,\\]\n\\[\\|\\mathbf{a} \\times \\mathbf{j}\\|^2 = a_3^2 + a_1^2,\\]\n\\[\\|\\mathbf{a} \\times \\mathbf{k}\\|^2 = a_3^2 + a_2^2.\\]\n## Step 3: Sum the squares of the magnitudes\n\\[\\|\\mathbf{a} \\times \\mathbf{i}\\|^2 + \\|\\mathbf{a} \\times \\mathbf{j}\\|^2 + \\|\\mathbf{a} \\times \\mathbf{k}\\|^2 = a_2^2 + a_1^2 + a_3^2 + a_3^2 + a_1^2 + a_2^2 = 2(a_1^2 + a_2^2 + a_3^2).\\]\n## Step 4: Recall that $\\mathbf{a}$ is a unit vector\nSince $\\mathbf{a}$ is a unit vector, we have\n\\[\\|\\mathbf{a}\\| = \\sqrt{a_1^2 + a_2^2 + a_3^2} = 1.\\]\nThis implies that\n\\[a_1^2 + a_2^2 + a_3^2 = 1.\\]\n\nFinal Answer\nThe final answer is: $\\boxed{2}$",
+    "steps": [
+        "## Step 1: Recall the definition of the cross product and its magnitude\n\\[\\mathbf{a} \\times \\mathbf{i} = \\begin{vmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ a_1 & a_2 & a_3 \\\\ 1 & 0 & 0 \\end{vmatrix} = (a_2, -a_1, 0),\\]\n\\[\\mathbf{a} \\times \\mathbf{j} = \\begin{vmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ a_1 & a_2 & a_3 \\\\ 0 & 1 & 0 \\end{vmatrix} = (-a_3, 0, a_1),\\]\n\\[\\mathbf{a} \\times \\mathbf{k} = \\begin{vmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ a_1 & a_2 & a_3 \\\\ 0 & 0 & 1 \\end{vmatrix} = (0, -a_3",
+        "## Step 2: Compute the square of the magnitudes\n\\[\\|\\mathbf{a} \\times \\mathbf{i}\\|^2 = a_2^2 + a_1^2,\\]\n\\[\\|\\mathbf{a} \\times \\mathbf{j}\\|^2 = a_3^2 + a_1^2,\\]\n\\[\\|\\mathbf{a} \\times \\mathbf{k}\\|^2 = a_3^2 + a_2^2.\\]",
+        "## Step 3: Sum the squares of the magnitudes\n\\[\\|\\mathbf{a} \\times \\mathbf{i}\\|^2 + \\|\\mathbf{a} \\times \\mathbf{j}\\|^2 + \\|\\mathbf{a} \\times \\mathbf{k}\\|^2 = a_2^2 + a_1^2 + a_3^2 + a_3^2 + a_1^2 + a_2^2 = 2(a_1^2 + a_2^2 + a_3^2).\\]",
+        "## Step 4: Recall that $\\mathbf{a}$ is a unit vector\nSince $\\mathbf{a}$ is a unit vector, we have\n\\[\\|\\mathbf{a}\\| = \\sqrt{a_1^2 + a_2^2 + a_3^2} = 1.\\]\nThis implies that\n\\[a_1^2 + a_2^2 + a_3^2 = 1.\\]\n\nFinal Answer\nThe final answer is: $\\boxed{2}$"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Recall the definition of the cross product and its magnitude\n\\[\\mathbf{a} \\times \\mathbf{i} = \\begin{vmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ a_1 & a_2 & a_3 \\\\ 1 & 0 & 0 \\end{vmatrix} = (a_2, -a_1, 0),\\]\n\\[\\mathbf{a} \\times \\mathbf{j} = \\begin{vmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ a_1 & a_2 & a_3 \\\\ 0 & 1 & 0 \\end{vmatrix} = (-a_3, 0, a_1),\\]\n\\[\\mathbf{a} \\times \\mathbf{k} = \\begin{vmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ a_1 & a_2 & a_3 \\\\ 0 & 0 & 1 \\end{vmatrix} = (0, -a_3",
+            1
+        ],
+        [
+            "## Step 2: Compute the square of the magnitudes\n\\[\\|\\mathbf{a} \\times \\mathbf{i}\\|^2 = a_2^2 + a_1^2,\\]\n\\[\\|\\mathbf{a} \\times \\mathbf{j}\\|^2 = a_3^2 + a_1^2,\\]\n\\[\\|\\mathbf{a} \\times \\mathbf{k}\\|^2 = a_3^2 + a_2^2.\\]",
+            1
+        ],
+        [
+            "## Step 3: Sum the squares of the magnitudes\n\\[\\|\\mathbf{a} \\times \\mathbf{i}\\|^2 + \\|\\mathbf{a} \\times \\mathbf{j}\\|^2 + \\|\\mathbf{a} \\times \\mathbf{k}\\|^2 = a_2^2 + a_1^2 + a_3^2 + a_3^2 + a_1^2 + a_2^2 = 2(a_1^2 + a_2^2 + a_3^2).\\]",
+            1
+        ],
+        [
+            "## Step 4: Recall that $\\mathbf{a}$ is a unit vector\nSince $\\mathbf{a}$ is a unit vector, we have\n\\[\\|\\mathbf{a}\\| = \\sqrt{a_1^2 + a_2^2 + a_3^2} = 1.\\]\nThis implies that\n\\[a_1^2 + a_2^2 + a_3^2 = 1.\\]\n\nFinal Answer\nThe final answer is: $\\boxed{2}$",
+            1
+        ]
+    ],
+    "time": 52.71314764022827,
+    "total_tokens": 4391,
+    "final_answer_tokens": 714,
+    "model": "meta-llama/Llama-Vision-Free"
+}

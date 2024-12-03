@@ -1,0 +1,66 @@
+{
+    "problem": "Compute $$\\sum_{n=0}^{\\infty}\\frac{n}{n^4+n^2+1}.$$",
+    "level": "Level 3",
+    "type": "Intermediate Algebra",
+    "solution": "Note that $$n^4+n^2+1=(n^4+2n^2+1)-n^2=(n^2+1)^2-n^2=(n^2+n+1)(n^2-n+1).$$Decomposing into partial fractions, we find that $$\\frac{n}{n^4+n^2+1}=\\frac{1}{2}\\left(\\frac{1}{n^2-n+1}-\\frac{1}{n^2+n+1}\\right).$$Now, note that if $f(n)=\\frac{1}{n^2-n+1}$, then $f(n+1)=\\frac{1}{(n+1)^2-(n+1)+1}=\\frac{1}{n^2+n+1}$. It follows that $$\\sum_{n=0}^{\\infty}\\frac{n}{n^4+n^2+1}=\\frac{1}{2}\\Bigl((f(0)-f(1))+(f(1)-f(2))+(f(2)-f(3))+\\cdots\\Bigr).$$Since $f(n)$ tends towards 0 as $n$ gets large, this sum telescopes to $f(0)/2=\\boxed{\\frac{1}{2}}$.",
+    "is_solved": false,
+    "model_solution": "## Step 1: Decompose the given series into partial fractions\nWe start by decomposing the given series into partial fractions. To do this, we need to factor the denominator $n^4+n^2+1$.\n\n## Step 2: Factor the denominator\nThe denominator $n^4+n^2+1$ can be factored as $n^4+n^2+1 = (n^2+n+1)^2 - (n^2-1)$.\n\n## Step 3: Further simplification of the denominator\nHowever, the correct approach to factor the given expression is to see it as a quadratic in $n^2$, so we can write it as $n^4+n^2+1 = (n^2+n+1)(n^2-n+1)$.\n\n## Step 4: Write the original series as a sum of partial fractions\nNow, we express the original series as a sum of partial fractions, $\\sum_{n=0}^{\\infty}\\frac{n}{n^4+n^2+1} = \\sum_{n=0}^{\\infty}\\frac{An+B}{(n^2+n+1)(n^\n## Step 5: Set up the equation for the partial fraction decomposition\n$\\frac{n}{(n^2+n+1)(n^2-n+1)} = \\frac{An+B}{n^2+n+1} - \\frac{Cn+D}{n^2-n+1}$.\n## Step 6: Clear fractions and equate coefficients\nBy clearing fractions, we get $n = (An+B)(n^2-n+1) - (Cn+D)(n^2+n+1)$. We can expand both sides and then equate coefficients to find the values of A, B, C, and D.\n## Step 7: Solve for A, B, C, and D\nAfter expanding and equating coefficients, we get the system of equations: $A+C=0$, $B-D=0$, $A-C=1$, and $B+D=0$.\nWe will solve this system of equations for A, B, C, and D.\n## Step 8: Solve the system of equations\n$A = \\frac{1}{2}$, $B = -\\frac{1}{4}$, $C = -\\frac{1}{2}$, $D = \\frac{1}{4}$\n## Step 9: Write the partial fraction decomposition\n$\\sum_{n=0}^{\\infty}\\frac{n}{n^4+n^2+1} = \\frac{1}{2}\\sum_{n=0}^{\\infty}\\left(\\frac{1}{n^2-n+1}-\\frac{1}{n^2+n+1}\\right) -\\frac{1}{4}\\sum_{n=0}^{\\infty}\\left(\\frac{1}{n^2+n+1}+\\frac{1}{n^2-n+1}\\right)$\n## Step 10: Simplify the series\n$\\sum_{n=0}^{\\infty}\\frac{n}{n^4+n^2+1} = \\frac{1}{2}\\sum_{n=0}^{\\infty}\\left(\\frac{1}{n^2-n+1}-\\frac{1}{n^2+n+1}\\right) -\\frac{1}{4}\\sum_{n=0}^{\\infty}\\left(\\frac{1}{n^2+n+1}+\\frac{1}{n^2-n+1}\\right)$\n## Step 11: Sum of the telescoping series\n$\\sum_{n=0}^{\\infty}\\frac{n}{n^4+n^2+1} = \\frac{1}{2}\\left(\\frac{1}{0^2-0+1}+\\frac{1}{1^2-1+1}\\right) - \\frac{1}{4}\\left(\\frac{1}{0^2+0+1}+\\frac{1}{0^2-0+1}\\right)$\n$\\frac{1}{2}\\left(\\frac{1}{1}+1\\right) - \\frac{1}{4}\\left(1+1\\right)$\n$\\frac{1}{2} \\cdot 2 - \\frac{1}{2}$",
+    "steps": [
+        "## Step 1: Decompose the given series into partial fractions\nWe start by decomposing the given series into partial fractions. To do this, we need to factor the denominator $n^4+n^2+1$.\n\n## Step 2: Factor the denominator\nThe denominator $n^4+n^2+1$ can be factored as $n^4+n^2+1 = (n^2+n+1)^2 - (n^2-1)$.\n\n## Step 3: Further simplification of the denominator\nHowever, the correct approach to factor the given expression is to see it as a quadratic in $n^2$, so we can write it as $n^4+n^2+1 = (n^2+n+1)(n^2-n+1)$.\n\n## Step 4: Write the original series as a sum of partial fractions\nNow, we express the original series as a sum of partial fractions, $\\sum_{n=0}^{\\infty}\\frac{n}{n^4+n^2+1} = \\sum_{n=0}^{\\infty}\\frac{An+B}{(n^2+n+1)(n^",
+        "## Step 5: Set up the equation for the partial fraction decomposition\n$\\frac{n}{(n^2+n+1)(n^2-n+1)} = \\frac{An+B}{n^2+n+1} - \\frac{Cn+D}{n^2-n+1}$.",
+        "## Step 6: Clear fractions and equate coefficients\nBy clearing fractions, we get $n = (An+B)(n^2-n+1) - (Cn+D)(n^2+n+1)$. We can expand both sides and then equate coefficients to find the values of A, B, C, and D.",
+        "## Step 7: Solve for A, B, C, and D\nAfter expanding and equating coefficients, we get the system of equations: $A+C=0$, $B-D=0$, $A-C=1$, and $B+D=0$.\nWe will solve this system of equations for A, B, C, and D.",
+        "## Step 8: Solve the system of equations\n$A = \\frac{1}{2}$, $B = -\\frac{1}{4}$, $C = -\\frac{1}{2}$, $D = \\frac{1}{4}$",
+        "## Step 9: Write the partial fraction decomposition\n$\\sum_{n=0}^{\\infty}\\frac{n}{n^4+n^2+1} = \\frac{1}{2}\\sum_{n=0}^{\\infty}\\left(\\frac{1}{n^2-n+1}-\\frac{1}{n^2+n+1}\\right) -\\frac{1}{4}\\sum_{n=0}^{\\infty}\\left(\\frac{1}{n^2+n+1}+\\frac{1}{n^2-n+1}\\right)$",
+        "## Step 10: Simplify the series\n$\\sum_{n=0}^{\\infty}\\frac{n}{n^4+n^2+1} = \\frac{1}{2}\\sum_{n=0}^{\\infty}\\left(\\frac{1}{n^2-n+1}-\\frac{1}{n^2+n+1}\\right) -\\frac{1}{4}\\sum_{n=0}^{\\infty}\\left(\\frac{1}{n^2+n+1}+\\frac{1}{n^2-n+1}\\right)$",
+        "## Step 11: Sum of the telescoping series\n$\\sum_{n=0}^{\\infty}\\frac{n}{n^4+n^2+1} = \\frac{1}{2}\\left(\\frac{1}{0^2-0+1}+\\frac{1}{1^2-1+1}\\right) - \\frac{1}{4}\\left(\\frac{1}{0^2+0+1}+\\frac{1}{0^2-0+1}\\right)$",
+        "$\\frac{1}{2}\\left(\\frac{1}{1}+1\\right) - \\frac{1}{4}\\left(1+1\\right)$",
+        "$\\frac{1}{2} \\cdot 2 - \\frac{1}{2}$"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Decompose the given series into partial fractions\nWe start by decomposing the given series into partial fractions. To do this, we need to factor the denominator $n^4+n^2+1$.\n\n## Step 2: Factor the denominator\nThe denominator $n^4+n^2+1$ can be factored as $n^4+n^2+1 = (n^2+n+1)^2 - (n^2-1)$.\n\n## Step 3: Further simplification of the denominator\nHowever, the correct approach to factor the given expression is to see it as a quadratic in $n^2$, so we can write it as $n^4+n^2+1 = (n^2+n+1)(n^2-n+1)$.\n\n## Step 4: Write the original series as a sum of partial fractions\nNow, we express the original series as a sum of partial fractions, $\\sum_{n=0}^{\\infty}\\frac{n}{n^4+n^2+1} = \\sum_{n=0}^{\\infty}\\frac{An+B}{(n^2+n+1)(n^",
+            1
+        ],
+        [
+            "## Step 5: Set up the equation for the partial fraction decomposition\n$\\frac{n}{(n^2+n+1)(n^2-n+1)} = \\frac{An+B}{n^2+n+1} - \\frac{Cn+D}{n^2-n+1}$.",
+            1
+        ],
+        [
+            "## Step 6: Clear fractions and equate coefficients\nBy clearing fractions, we get $n = (An+B)(n^2-n+1) - (Cn+D)(n^2+n+1)$. We can expand both sides and then equate coefficients to find the values of A, B, C, and D.",
+            1
+        ],
+        [
+            "## Step 7: Solve for A, B, C, and D\nAfter expanding and equating coefficients, we get the system of equations: $A+C=0$, $B-D=0$, $A-C=1$, and $B+D=0$.\nWe will solve this system of equations for A, B, C, and D.",
+            1
+        ],
+        [
+            "## Step 8: Solve the system of equations\n$A = \\frac{1}{2}$, $B = -\\frac{1}{4}$, $C = -\\frac{1}{2}$, $D = \\frac{1}{4}$",
+            1
+        ],
+        [
+            "## Step 9: Write the partial fraction decomposition\n$\\sum_{n=0}^{\\infty}\\frac{n}{n^4+n^2+1} = \\frac{1}{2}\\sum_{n=0}^{\\infty}\\left(\\frac{1}{n^2-n+1}-\\frac{1}{n^2+n+1}\\right) -\\frac{1}{4}\\sum_{n=0}^{\\infty}\\left(\\frac{1}{n^2+n+1}+\\frac{1}{n^2-n+1}\\right)$",
+            1
+        ],
+        [
+            "## Step 10: Simplify the series\n$\\sum_{n=0}^{\\infty}\\frac{n}{n^4+n^2+1} = \\frac{1}{2}\\sum_{n=0}^{\\infty}\\left(\\frac{1}{n^2-n+1}-\\frac{1}{n^2+n+1}\\right) -\\frac{1}{4}\\sum_{n=0}^{\\infty}\\left(\\frac{1}{n^2+n+1}+\\frac{1}{n^2-n+1}\\right)$",
+            1
+        ],
+        [
+            "## Step 11: Sum of the telescoping series\n$\\sum_{n=0}^{\\infty}\\frac{n}{n^4+n^2+1} = \\frac{1}{2}\\left(\\frac{1}{0^2-0+1}+\\frac{1}{1^2-1+1}\\right) - \\frac{1}{4}\\left(\\frac{1}{0^2+0+1}+\\frac{1}{0^2-0+1}\\right)$",
+            1
+        ],
+        [
+            "$\\frac{1}{2}\\left(\\frac{1}{1}+1\\right) - \\frac{1}{4}\\left(1+1\\right)$",
+            1
+        ],
+        [
+            "$\\frac{1}{2} \\cdot 2 - \\frac{1}{2}$",
+            1
+        ]
+    ],
+    "time": 136.10201597213745,
+    "total_tokens": 14033,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

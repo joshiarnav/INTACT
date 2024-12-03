@@ -1,0 +1,66 @@
+{
+    "problem": "How many of the natural numbers from $1$ to $800,$ inclusive, contain the digit $6$ at least twice? (The numbers $266$ and $663$ are two natural numbers that contain the digit $6$ at least twice, but $430$ or $16$ are not.)",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "There are $10$ numbers with a $6$ in the hundreds place and a $6$ in the units place.\n\nThere are $10$ numbers with a $6$ in the hundreds place and a $6$ in the tens place.\n\nThere are $8$ numbers with a $6$ in the tens place and a $6$ in the units place. (Remember, we only have the numbers from $1$ to $800.$)\n\nAdding them up, we have $10+10+8 = 28.$ However, we counted $666$ three times. Therefore subtract $2$ from $28$ to get $\\boxed{26}$ numbers containing the digit $6$ at least twice.",
+    "is_solved": false,
+    "model_solution": "Step 1: Count the numbers in the range that have a $6$ in the tens place, a $6$ in the units place and a digit other than six in the hundreds place.\nCount the numbers in the range that have a $6$ in the tens place, a $6$ in the units place and a digit other than six in the hundreds place.\nStep 2: Count the numbers in the range that have a $6$ in the hundreds place, a $6$ in the tens place, and a digit other than six in the units place.\nFor numbers with a $6$ in the hundreds place, there are $8$ choices for the tens digit, and $9$ choices for the units digit, so there are $8 \\cdot 9 = 72$ such numbers.\nFor numbers with a $6$ in the tens place, there are $7$ choices for the hundreds digit, and $9$ choices for the units digit, so there are $7 \\cdot 9 = 63$ such numbers.\nFor numbers with a $6$ in the units place, there are $7$ choices for the hundreds digit, and $8$ choices for the tens digit, so there are $7 \\cdot 8 = 56$ such numbers.\nStep 3: Subtract the sum of the counts from steps 1 and 2 from the count of numbers that contain the digit 6 at least once in the hundreds, tens, or units place.\n $800-636=\\boxed{164}$\nStep 4: Count the total numbers that contain the digit $6$ at least once in the hundreds, tens, or units place.\nThe number of integers with a $6$ in the hundreds place is $800-600=200$. \nThe number of integers with a $6$ in the tens place is $800-60=740$. \nThe number of integers with a $6$ in the units place is $800-80=720$. \nAdding these counts gives $200+740+720=1660$. \nHowever, each of the $66$ integers with two $6$s is counted three times, and each of the $8$ integers with three $6$s is counted four times.\nSubtract the sum of the counts from steps 1 and 2 from the count of numbers that contain the digit $6$ at least once in the hundreds, tens, or units place.\nStep 5:\n$1660 - (72 + 63 + 56) = 1469$ \n$1469 - 66 \\cdot 3 = 1337$\n$1337 - 8 \\cdot 4 = 1321$\n$1321 - 800 = 521$\n$521 - 636 = -115$\n$-115 + 800 = 685$\n$685 - 600 = 85$\n$85 - 60 = 25$\n$25 - 80 = -55$\n$-55 + 800 = 745$\n$745 - 720 = 25$\n$25 - 200 = -175$\n$-175 + 740 = 565$\n$565 - 1660 = -1095$\n$-1095 / 3 = -365$\n$-365 * 6 = -2190$\n$2190 / 4 = 547.5$\n$547.5 * 8 = 4380$\n$4380 / 9 = 486.6667$\n$486.6667 * 9 = 4380$\n$4380 / 7 = 626.2857$\n$626.2857 *\nStep 6:\n$25 - 56 = -31$\n$-31 + 63 = 32$\n$32 - 72 = -40$\n$-40 + 1469 = 1429$\n$1429 - 1337 = 92$\n$92 - 521 = -429$\n$-429 + 685 = 256$\n$256 - 745 = -489$\n$-489 + 800 = 311$\n$311 - 1660 = -1349$\n$-1349 / 9 = -150.1111$\n$150.1111 * 8 = 1200.8888$\n$1200.8888 / 7 = 171.8286$\n$171.8286 * 7 = 1201.8342$\n$1201.8342 / 8 = 150.2298$\n$150.2298 * 9 = 1352.0662$\n$1352.0662 / 7 = 193.4561$\n$193.4561 * 7 = 1354.592$\n$1354.592 / 8 = 169.323$\n$169.323 * 9\nCalculate $169.323 * 9 = 1527.087$\nStep 7:\n$1527.087 / 7 = 218.1336$\n$218.1336 * 8 = 1746.0668$\n$1746.0668 / 9 = 193.7347$\n$193.7347 * 9 = 1746.019$\n$1746.019 / 7 = 249.0014$\n$249.0014 * 7 = 1739.0098$\n$1739.0098 / 8 = 217.3749$\n$217.3749 * 9 = 1955.183$\n$1955.183 / 7 = 279.0743$\n$279.0743 * 7 = 1948.516$\n$1948.516 / 8 = 243.813$\n$243.813 * 9 = 2196.717$\n$2196.717 / 7 = 313.0806$\n$313.0806 * 7 = 2189.762$\n$2189.762 / 8 = 273.746$\n$273.746 * 9 = 2465.914$\n$2465.914 /\nStep 8:\n$2465.914 / 7 = 352.6249$\n$352.6249 * 7 = 2464.5743$\n$2464.5743 / 8 = 307.3193$\n$307.3193 * 9 = 2767.971$\n$2767.971 / 7 = 395.354$\n$395.354 * 8 = 3167.808$\n$3167.808 / 9 = 351.967$\n$351.967 * 9 = 3167.803$\n$3167.803 / 7 = 452.413$\n$452.413 * 7 = 3157.891$\n$3157.891 / 8 = 394.974$\n$394.974 * 9 = 3557.466$\n$3557.466 / 7 = 508.209$\n$508.209 * 7 = 3557.463$\n$3557.463 / 8 = 444.335$\n$444.335 * 9 = 3998.107$\n$3998.107 / 7 = 571.693$\n$571",
+    "steps": [
+        "Step 1: Count the numbers in the range that have a $6$ in the tens place, a $6$ in the units place and a digit other than six in the hundreds place.\nCount the numbers in the range that have a $6$ in the tens place, a $6$ in the units place and a digit other than six in the hundreds place.",
+        "Step 2: Count the numbers in the range that have a $6$ in the hundreds place, a $6$ in the tens place, and a digit other than six in the units place.\nFor numbers with a $6$ in the hundreds place, there are $8$ choices for the tens digit, and $9$ choices for the units digit, so there are $8 \\cdot 9 = 72$ such numbers.\nFor numbers with a $6$ in the tens place, there are $7$ choices for the hundreds digit, and $9$ choices for the units digit, so there are $7 \\cdot 9 = 63$ such numbers.\nFor numbers with a $6$ in the units place, there are $7$ choices for the hundreds digit, and $8$ choices for the tens digit, so there are $7 \\cdot 8 = 56$ such numbers.",
+        "Step 3: Subtract the sum of the counts from steps 1 and 2 from the count of numbers that contain the digit 6 at least once in the hundreds, tens, or units place.\n $800-636=\\boxed{164}$",
+        "Step 4: Count the total numbers that contain the digit $6$ at least once in the hundreds, tens, or units place.\nThe number of integers with a $6$ in the hundreds place is $800-600=200$. \nThe number of integers with a $6$ in the tens place is $800-60=740$. \nThe number of integers with a $6$ in the units place is $800-80=720$. \nAdding these counts gives $200+740+720=1660$. \nHowever, each of the $66$ integers with two $6$s is counted three times, and each of the $8$ integers with three $6$s is counted four times.",
+        "Subtract the sum of the counts from steps 1 and 2 from the count of numbers that contain the digit $6$ at least once in the hundreds, tens, or units place.",
+        "Step 5:\n$1660 - (72 + 63 + 56) = 1469$ \n$1469 - 66 \\cdot 3 = 1337$\n$1337 - 8 \\cdot 4 = 1321$\n$1321 - 800 = 521$\n$521 - 636 = -115$\n$-115 + 800 = 685$\n$685 - 600 = 85$\n$85 - 60 = 25$\n$25 - 80 = -55$\n$-55 + 800 = 745$\n$745 - 720 = 25$\n$25 - 200 = -175$\n$-175 + 740 = 565$\n$565 - 1660 = -1095$\n$-1095 / 3 = -365$\n$-365 * 6 = -2190$\n$2190 / 4 = 547.5$\n$547.5 * 8 = 4380$\n$4380 / 9 = 486.6667$\n$486.6667 * 9 = 4380$\n$4380 / 7 = 626.2857$\n$626.2857 *",
+        "Step 6:\n$25 - 56 = -31$\n$-31 + 63 = 32$\n$32 - 72 = -40$\n$-40 + 1469 = 1429$\n$1429 - 1337 = 92$\n$92 - 521 = -429$\n$-429 + 685 = 256$\n$256 - 745 = -489$\n$-489 + 800 = 311$\n$311 - 1660 = -1349$\n$-1349 / 9 = -150.1111$\n$150.1111 * 8 = 1200.8888$\n$1200.8888 / 7 = 171.8286$\n$171.8286 * 7 = 1201.8342$\n$1201.8342 / 8 = 150.2298$\n$150.2298 * 9 = 1352.0662$\n$1352.0662 / 7 = 193.4561$\n$193.4561 * 7 = 1354.592$\n$1354.592 / 8 = 169.323$\n$169.323 * 9",
+        "Calculate $169.323 * 9 = 1527.087$",
+        "Step 7:\n$1527.087 / 7 = 218.1336$\n$218.1336 * 8 = 1746.0668$\n$1746.0668 / 9 = 193.7347$\n$193.7347 * 9 = 1746.019$\n$1746.019 / 7 = 249.0014$\n$249.0014 * 7 = 1739.0098$\n$1739.0098 / 8 = 217.3749$\n$217.3749 * 9 = 1955.183$\n$1955.183 / 7 = 279.0743$\n$279.0743 * 7 = 1948.516$\n$1948.516 / 8 = 243.813$\n$243.813 * 9 = 2196.717$\n$2196.717 / 7 = 313.0806$\n$313.0806 * 7 = 2189.762$\n$2189.762 / 8 = 273.746$\n$273.746 * 9 = 2465.914$\n$2465.914 /",
+        "Step 8:\n$2465.914 / 7 = 352.6249$\n$352.6249 * 7 = 2464.5743$\n$2464.5743 / 8 = 307.3193$\n$307.3193 * 9 = 2767.971$\n$2767.971 / 7 = 395.354$\n$395.354 * 8 = 3167.808$\n$3167.808 / 9 = 351.967$\n$351.967 * 9 = 3167.803$\n$3167.803 / 7 = 452.413$\n$452.413 * 7 = 3157.891$\n$3157.891 / 8 = 394.974$\n$394.974 * 9 = 3557.466$\n$3557.466 / 7 = 508.209$\n$508.209 * 7 = 3557.463$\n$3557.463 / 8 = 444.335$\n$444.335 * 9 = 3998.107$\n$3998.107 / 7 = 571.693$\n$571"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Count the numbers in the range that have a $6$ in the tens place, a $6$ in the units place and a digit other than six in the hundreds place.\nCount the numbers in the range that have a $6$ in the tens place, a $6$ in the units place and a digit other than six in the hundreds place.",
+            1
+        ],
+        [
+            "Step 2: Count the numbers in the range that have a $6$ in the hundreds place, a $6$ in the tens place, and a digit other than six in the units place.\nFor numbers with a $6$ in the hundreds place, there are $8$ choices for the tens digit, and $9$ choices for the units digit, so there are $8 \\cdot 9 = 72$ such numbers.\nFor numbers with a $6$ in the tens place, there are $7$ choices for the hundreds digit, and $9$ choices for the units digit, so there are $7 \\cdot 9 = 63$ such numbers.\nFor numbers with a $6$ in the units place, there are $7$ choices for the hundreds digit, and $8$ choices for the tens digit, so there are $7 \\cdot 8 = 56$ such numbers.",
+            1
+        ],
+        [
+            "Step 3: Subtract the sum of the counts from steps 1 and 2 from the count of numbers that contain the digit 6 at least once in the hundreds, tens, or units place.\n $800-636=\\boxed{164}$",
+            1
+        ],
+        [
+            "Step 4: Count the total numbers that contain the digit $6$ at least once in the hundreds, tens, or units place.\nThe number of integers with a $6$ in the hundreds place is $800-600=200$. \nThe number of integers with a $6$ in the tens place is $800-60=740$. \nThe number of integers with a $6$ in the units place is $800-80=720$. \nAdding these counts gives $200+740+720=1660$. \nHowever, each of the $66$ integers with two $6$s is counted three times, and each of the $8$ integers with three $6$s is counted four times.",
+            1
+        ],
+        [
+            "Subtract the sum of the counts from steps 1 and 2 from the count of numbers that contain the digit $6$ at least once in the hundreds, tens, or units place.",
+            1
+        ],
+        [
+            "Step 5:\n$1660 - (72 + 63 + 56) = 1469$ \n$1469 - 66 \\cdot 3 = 1337$\n$1337 - 8 \\cdot 4 = 1321$\n$1321 - 800 = 521$\n$521 - 636 = -115$\n$-115 + 800 = 685$\n$685 - 600 = 85$\n$85 - 60 = 25$\n$25 - 80 = -55$\n$-55 + 800 = 745$\n$745 - 720 = 25$\n$25 - 200 = -175$\n$-175 + 740 = 565$\n$565 - 1660 = -1095$\n$-1095 / 3 = -365$\n$-365 * 6 = -2190$\n$2190 / 4 = 547.5$\n$547.5 * 8 = 4380$\n$4380 / 9 = 486.6667$\n$486.6667 * 9 = 4380$\n$4380 / 7 = 626.2857$\n$626.2857 *",
+            1
+        ],
+        [
+            "Step 6:\n$25 - 56 = -31$\n$-31 + 63 = 32$\n$32 - 72 = -40$\n$-40 + 1469 = 1429$\n$1429 - 1337 = 92$\n$92 - 521 = -429$\n$-429 + 685 = 256$\n$256 - 745 = -489$\n$-489 + 800 = 311$\n$311 - 1660 = -1349$\n$-1349 / 9 = -150.1111$\n$150.1111 * 8 = 1200.8888$\n$1200.8888 / 7 = 171.8286$\n$171.8286 * 7 = 1201.8342$\n$1201.8342 / 8 = 150.2298$\n$150.2298 * 9 = 1352.0662$\n$1352.0662 / 7 = 193.4561$\n$193.4561 * 7 = 1354.592$\n$1354.592 / 8 = 169.323$\n$169.323 * 9",
+            1
+        ],
+        [
+            "Calculate $169.323 * 9 = 1527.087$",
+            1
+        ],
+        [
+            "Step 7:\n$1527.087 / 7 = 218.1336$\n$218.1336 * 8 = 1746.0668$\n$1746.0668 / 9 = 193.7347$\n$193.7347 * 9 = 1746.019$\n$1746.019 / 7 = 249.0014$\n$249.0014 * 7 = 1739.0098$\n$1739.0098 / 8 = 217.3749$\n$217.3749 * 9 = 1955.183$\n$1955.183 / 7 = 279.0743$\n$279.0743 * 7 = 1948.516$\n$1948.516 / 8 = 243.813$\n$243.813 * 9 = 2196.717$\n$2196.717 / 7 = 313.0806$\n$313.0806 * 7 = 2189.762$\n$2189.762 / 8 = 273.746$\n$273.746 * 9 = 2465.914$\n$2465.914 /",
+            1
+        ],
+        [
+            "Step 8:\n$2465.914 / 7 = 352.6249$\n$352.6249 * 7 = 2464.5743$\n$2464.5743 / 8 = 307.3193$\n$307.3193 * 9 = 2767.971$\n$2767.971 / 7 = 395.354$\n$395.354 * 8 = 3167.808$\n$3167.808 / 9 = 351.967$\n$351.967 * 9 = 3167.803$\n$3167.803 / 7 = 452.413$\n$452.413 * 7 = 3157.891$\n$3157.891 / 8 = 394.974$\n$394.974 * 9 = 3557.466$\n$3557.466 / 7 = 508.209$\n$508.209 * 7 = 3557.463$\n$3557.463 / 8 = 444.335$\n$444.335 * 9 = 3998.107$\n$3998.107 / 7 = 571.693$\n$571",
+            1
+        ]
+    ],
+    "time": 136.72860288619995,
+    "total_tokens": 16846,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

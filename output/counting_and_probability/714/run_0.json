@@ -1,0 +1,51 @@
+{
+    "problem": "The letters of the word `SIXTEEN' are randomly arranged.  What is the probability that the two E's are not next to each other?",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "The best way to do this is to find the probability that the two E's are next to each other.  There are $\\dfrac{7!}{2}$ arrangements of the word SIXTEEN.  If we want to find the number of arrangements such that the E's are next to each other, we find the number of arrangements of the six-letter word SIXT(EE)N (where we treat the two E's as a block), which is $6!$.  So the probability that an arrangement of the word SIXTEEN has the two E's next to each other is $\\dfrac{6!}{\\frac{7!}{2}} = \\dfrac{2}{7}$.  So the probability that the two E's aren't next to each other is $1 - \\dfrac{2}{7} = \\boxed{\\dfrac{5}{7}}$.",
+    "is_solved": true,
+    "model_solution": "Total number of arrangements of 7 letters = 7! = 5040\nCalculate the number of arrangements where the two E's are next to each other, treating them as a single block, resulting in 6! * 2! = 1440 arrangements, since there are 2 ways to arrange the E's within the block.\nThe probability that the two E's are not next to each other = 1 - (number of arrangements where the two E's are next to each other / total number of arrangements) = 1 - 1440/5040\nSimplify the expression to get the probability.\n1 - 1440/5040 = 1 - 9/35 = (35 - 9)/35 = 26/35\nThe probability that the two E's are not next to each other = 26/35\nThe final answer is 26/35.",
+    "steps": [
+        "Total number of arrangements of 7 letters = 7! = 5040",
+        "Calculate the number of arrangements where the two E's are next to each other, treating them as a single block, resulting in 6! * 2! = 1440 arrangements, since there are 2 ways to arrange the E's within the block.",
+        "The probability that the two E's are not next to each other = 1 - (number of arrangements where the two E's are next to each other / total number of arrangements) = 1 - 1440/5040",
+        "Simplify the expression to get the probability.",
+        "1 - 1440/5040 = 1 - 9/35 = (35 - 9)/35 = 26/35",
+        "The probability that the two E's are not next to each other = 26/35",
+        "The final answer is 26/35."
+    ],
+    "full_steps": [
+        [
+            "Total number of arrangements of 7 letters = 7! = 5040",
+            1
+        ],
+        [
+            "Calculate the number of arrangements where the two E's are next to each other, treating them as a single block, resulting in 6! * 2! = 1440 arrangements, since there are 2 ways to arrange the E's within the block.",
+            1
+        ],
+        [
+            "The probability that the two E's are not next to each other = 1 - (number of arrangements where the two E's are next to each other / total number of arrangements) = 1 - 1440/5040",
+            1
+        ],
+        [
+            "Simplify the expression to get the probability.",
+            1
+        ],
+        [
+            "1 - 1440/5040 = 1 - 9/35 = (35 - 9)/35 = 26/35",
+            1
+        ],
+        [
+            "The probability that the two E's are not next to each other = 26/35",
+            1
+        ],
+        [
+            "The final answer is 26/35.",
+            1
+        ]
+    ],
+    "time": 93.31492733955383,
+    "total_tokens": 3032,
+    "final_answer_tokens": 275,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,21 @@
+{
+    "problem": "A sequence of numbers $a_1,$ $a_2,$ $a_3,$ $a_4,$ $\\dots,$ has the property that each term after the first is one less than the product of its two neighbors.  If $a_1 = 1492$ and $a_2 = 1776,$ then determine $a_{2003}.$",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "From the property given in the problem,\n\\[a_n = a_{n - 1} a_{n + 1} - 1.\\]Isolating $a_{n + 1},$ we find\n\\[a_{n + 1} = \\frac{a_n + 1}{a_{n - 1}}.\\]Let $a = a_1$ and $b = a_2.$  Then\n\\begin{align*}\na_3 &= \\frac{b + 1}{a}, \\\\\na_4 &= \\frac{(b + 1)/a + 1}{b} = \\frac{a + b + 1}{ab}, \\\\\na_5 &= \\frac{(a + b + 1)/(ab) + 1}{(b + 1)/a} = \\frac{a + 1}{b}, \\\\\na_6 &= \\frac{(a + 1)/b + 1}{(a + b + 1)/(ab)} = a, \\\\\na_7 &= \\frac{a + 1}{(a + 1)/b} = b.\n\\end{align*}Note that $a_6 = a = a_1$ and $a_7 = b = a_2.$  Since each term depends only on the two previous terms, the sequence is periodic from here on, and the length of the period is 5.  Therefore,\n\\[a_{2003} = a_3 = \\frac{b + 1}{a} = \\frac{a_2 + 1}{a_1} = \\boxed{\\frac{1777}{1492}}.\\]",
+    "is_solved": false,
+    "model_solution": "## Step 1: Write down the given information\n$a_1 = 1492$ and $a_2 = 1776.$\n\n## Step 2: Use the given information to find $a_3$\n$a_3 = a_1 \\cdot a_2 - 1 = 1492 \\cdot 1776 - 1.$\n\n## Step 3: Calculate the value of $a_3$\n$a_3 = 2649600 - 1 = 2649599.$\n\n## Step 4: Express $a_4$ in terms of $a_1, a_2, a_3$\n$a_4 = a_2 \\cdot a_3 - 1.$\n\n## Step 5: Express $a_4$ in terms of $a_1, a_2$\nWe can substitute the expression for $a_3$ from step 3 into the equation for $a_4$ in step 4, but notice that the relationship between $a_n$ and $a_{n-1}, a_{n-2}$ can also help us find $a_{2003}$ without computing all the intermediate terms.\n\n## Step 6:",
+    "steps": [
+        "## Step 1: Write down the given information\n$a_1 = 1492$ and $a_2 = 1776.$\n\n## Step 2: Use the given information to find $a_3$\n$a_3 = a_1 \\cdot a_2 - 1 = 1492 \\cdot 1776 - 1.$\n\n## Step 3: Calculate the value of $a_3$\n$a_3 = 2649600 - 1 = 2649599.$\n\n## Step 4: Express $a_4$ in terms of $a_1, a_2, a_3$\n$a_4 = a_2 \\cdot a_3 - 1.$\n\n## Step 5: Express $a_4$ in terms of $a_1, a_2$\nWe can substitute the expression for $a_3$ from step 3 into the equation for $a_4$ in step 4, but notice that the relationship between $a_n$ and $a_{n-1}, a_{n-2}$ can also help us find $a_{2003}$ without computing all the intermediate terms.\n\n## Step 6:"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Write down the given information\n$a_1 = 1492$ and $a_2 = 1776.$\n\n## Step 2: Use the given information to find $a_3$\n$a_3 = a_1 \\cdot a_2 - 1 = 1492 \\cdot 1776 - 1.$\n\n## Step 3: Calculate the value of $a_3$\n$a_3 = 2649600 - 1 = 2649599.$\n\n## Step 4: Express $a_4$ in terms of $a_1, a_2, a_3$\n$a_4 = a_2 \\cdot a_3 - 1.$\n\n## Step 5: Express $a_4$ in terms of $a_1, a_2$\nWe can substitute the expression for $a_3$ from step 3 into the equation for $a_4$ in step 4, but notice that the relationship between $a_n$ and $a_{n-1}, a_{n-2}$ can also help us find $a_{2003}$ without computing all the intermediate terms.\n\n## Step 6:",
+            1
+        ]
+    ],
+    "time": 13.0308358669281,
+    "total_tokens": 766,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

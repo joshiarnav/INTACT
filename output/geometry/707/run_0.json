@@ -1,0 +1,21 @@
+{
+    "problem": "Points $A,$ $B,$ and $C$ are placed on a circle centered at $O$ as in the following diagram: [asy]\npair pA, pB, pC, pO;\npO = (0, 0);\npA = pO + dir(-40);\npB = pO + dir(32);\npC = pO + dir(176);\ndraw(pA--pO--pB--pC--pA);\nlabel(\"$O$\", pO, 2 * E);\nlabel(\"$A$\", pA, SE);\nlabel(\"$B$\", pB, NE);\nlabel(\"$C$\", pC, W);\ndraw(circle(pO, 1));\n[/asy] If $AC = BC$ and $\\angle OAC = 18^\\circ,$ then how many degrees are in $\\angle AOB$?",
+    "level": "Level 4",
+    "type": "Geometry",
+    "solution": "First, let us draw $CO$: [asy]\npair pA, pB, pC, pO;\npO = (0, 0);\npA = pO + dir(-40);\npB = pO + dir(32);\npC = pO + dir(176);\ndraw(pA--pO--pB--pC--pA);\ndraw(pO--pC);\nlabel(\"$O$\", pO, 2 * E);\nlabel(\"$A$\", pA, SE);\nlabel(\"$B$\", pB, NE);\nlabel(\"$C$\", pC, W);\ndraw(circle(pO, 1));\n[/asy] Since $AO = CO,$ we have that $\\triangle AOC$ is isosceles, and so $\\angle CAO = \\angle ACO = 18^\\circ.$ We are given that $AC = BC,$ we can see that $\\triangle BOC \\cong \\triangle AOC,$  so $\\angle BCO = 18^\\circ.$ Now, $\\angle ACB = \\angle OAC + \\angle BCO = 36^\\circ,$ and as $\\angle ACB$ is an inscribed angle, we have $\\angle AOB = 2 \\cdot \\angle ACB = \\boxed{72^\\circ}.$",
+    "is_solved": true,
+    "model_solution": "Step 1:  We are given that points $A,$ $B,$ and $C$ are placed on a circle centered at $O,$ and that $AC = BC.$ This implies that triangle $ABC$ is isosceles.\nStep 2:  Given that $\\angle OAC = 18^\\circ,$ we know that the angles $\\angle OAB$ and $\\angle OBA$ are equal due to the symmetry of an isosceles triangle.\nStep 3:  Therefore, $\\angle OAB = \\angle OBA.$\nStep 4:  We also know that the sum of the angles in a triangle is $180$ degrees.\nStep 5:  So, $\\angle OAB + \\angle OBA + \\angle AOB = 180^\\circ.$\n\nThe final answer is: $\\boxed{180}$",
+    "steps": [
+        "Step 1:  We are given that points $A,$ $B,$ and $C$ are placed on a circle centered at $O,$ and that $AC = BC.$ This implies that triangle $ABC$ is isosceles.\nStep 2:  Given that $\\angle OAC = 18^\\circ,$ we know that the angles $\\angle OAB$ and $\\angle OBA$ are equal due to the symmetry of an isosceles triangle.\nStep 3:  Therefore, $\\angle OAB = \\angle OBA.$\nStep 4:  We also know that the sum of the angles in a triangle is $180$ degrees.\nStep 5:  So, $\\angle OAB + \\angle OBA + \\angle AOB = 180^\\circ.$\n\nThe final answer is: $\\boxed{180}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We are given that points $A,$ $B,$ and $C$ are placed on a circle centered at $O,$ and that $AC = BC.$ This implies that triangle $ABC$ is isosceles.\nStep 2:  Given that $\\angle OAC = 18^\\circ,$ we know that the angles $\\angle OAB$ and $\\angle OBA$ are equal due to the symmetry of an isosceles triangle.\nStep 3:  Therefore, $\\angle OAB = \\angle OBA.$\nStep 4:  We also know that the sum of the angles in a triangle is $180$ degrees.\nStep 5:  So, $\\angle OAB + \\angle OBA + \\angle AOB = 180^\\circ.$\n\nThe final answer is: $\\boxed{180}$",
+            1
+        ]
+    ],
+    "time": 13.93892502784729,
+    "total_tokens": 815,
+    "final_answer_tokens": 390,
+    "model": "meta-llama/Llama-Vision-Free"
+}

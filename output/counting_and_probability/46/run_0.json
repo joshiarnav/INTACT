@@ -1,0 +1,51 @@
+{
+    "problem": "Given that $\\binom{17}{10}=19448$, $\\binom{17}{11}=12376$ and $\\binom{19}{12}=50388$, find $\\binom{18}{12}$.",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "We know that $\\binom{19}{12}=\\binom{18}{11}+\\binom{18}{12}$ from Pascal's identity. Solving for $\\binom{18}{12}$ and substituting the value that we have for $\\binom{19}{12}$ gives us $\\binom{18}{12}=50388-\\binom{18}{11}$. Once again using Pascal's identity, we know that $\\binom{18}{11}=\\binom{17}{11}+\\binom{17}{10}$. Substituting the values that we have for the terms on the right side gives us $\\binom{18}{11}=31824$ and substituting that into our expression for $\\binom{18}{12}$ gives us $\\binom{18}{12}=50388-31824=\\boxed{18564}$.",
+    "is_solved": true,
+    "model_solution": "Step 1:  Pascal's Identity: $\\binom{n}{k}=\\binom{n-1}{k-1}+\\binom{n-1}{k}$\nStep 2: Using Pascal's Identity to express $\\binom{18}{11}$ and $\\binom{19}{12}$ in terms of combinations of $\\binom{17}{k}$\nStep 3: $\\binom{19}{12}=\\binom{18}{11}+\\binom{18}{12}=50388$\nUsing Pascal's Identity, $\\binom{18}{11}=\\binom{17}{10}+\\binom{17}{11}=19448+12376=31824$\n$\\binom{18}{12}=\\binom{19}{12}-\\binom{18}{11}=50388-31824$\n$\\binom{18}{12}=\\binom{19}{12}-\\binom{18}{11}=50388-31824=18564$\n$\\binom{18}{12}=\\binom{19}{12}-\\binom{18}{11}=50388-31824=18564$",
+    "steps": [
+        "Step 1:  Pascal's Identity: $\\binom{n}{k}=\\binom{n-1}{k-1}+\\binom{n-1}{k}$",
+        "Step 2: Using Pascal's Identity to express $\\binom{18}{11}$ and $\\binom{19}{12}$ in terms of combinations of $\\binom{17}{k}$",
+        "Step 3: $\\binom{19}{12}=\\binom{18}{11}+\\binom{18}{12}=50388$",
+        "Using Pascal's Identity, $\\binom{18}{11}=\\binom{17}{10}+\\binom{17}{11}=19448+12376=31824$",
+        "$\\binom{18}{12}=\\binom{19}{12}-\\binom{18}{11}=50388-31824$",
+        "$\\binom{18}{12}=\\binom{19}{12}-\\binom{18}{11}=50388-31824=18564$",
+        "$\\binom{18}{12}=\\binom{19}{12}-\\binom{18}{11}=50388-31824=18564$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Pascal's Identity: $\\binom{n}{k}=\\binom{n-1}{k-1}+\\binom{n-1}{k}$",
+            1
+        ],
+        [
+            "Step 2: Using Pascal's Identity to express $\\binom{18}{11}$ and $\\binom{19}{12}$ in terms of combinations of $\\binom{17}{k}$",
+            1
+        ],
+        [
+            "Step 3: $\\binom{19}{12}=\\binom{18}{11}+\\binom{18}{12}=50388$",
+            1
+        ],
+        [
+            "Using Pascal's Identity, $\\binom{18}{11}=\\binom{17}{10}+\\binom{17}{11}=19448+12376=31824$",
+            1
+        ],
+        [
+            "$\\binom{18}{12}=\\binom{19}{12}-\\binom{18}{11}=50388-31824$",
+            1
+        ],
+        [
+            "$\\binom{18}{12}=\\binom{19}{12}-\\binom{18}{11}=50388-31824=18564$",
+            1
+        ],
+        [
+            "$\\binom{18}{12}=\\binom{19}{12}-\\binom{18}{11}=50388-31824=18564$",
+            1
+        ]
+    ],
+    "time": 97.31699657440186,
+    "total_tokens": 3529,
+    "final_answer_tokens": 347,
+    "model": "meta-llama/Llama-Vision-Free"
+}

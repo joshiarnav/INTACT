@@ -1,0 +1,56 @@
+{
+    "problem": "How many ways are there to put 9 differently colored beads on a $3\\times3$ grid if the purple bead and the green bead cannot be adjacent (either horizontally, vertically, or diagonally), and rotations and reflections of the grid are considered the same?",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "There are $9!$ ways to put the beads on the grid, not taking rotations, reflections, and the restriction on the purple and green beads into account. We need to subtract off the number of arrangements where the purple and green beads are adjacent from this number. There are $2\\cdot3=6$ horizontally adjacent pairs of locations, $3\\cdot2=6$ vertically adjacent ones, and $2\\cdot2+2\\cdot2=8$ pairs of diagonally adjacent locations. For each of these pairs, there are two ways to put the purple and green beads in them, and $7!$ ways to put the rest of the beads on the grid, giving a total of $2(6+6+8)7!=40\\cdot7!$ invalid arrangements. So, the number of valid arrangements not counting rotations and reflections is $9!-40\\cdot7!=(9\\cdot8-40)7!=32\\cdot7!$. The grid can be rotated onto itself in four different ways, by rotations of 0, 90, 180, and 270 degrees. It can also be reflected onto itself in four different ways, by reflecting across its two diagonals and through horizontal and vertical lines through its center. So, the arrangements come in groups of $4+4=8$ equivalent arrangements, and the number of different arrangements is $32\\cdot7!/8=4\\cdot7!=\\boxed{20160}$.",
+    "is_solved": true,
+    "model_solution": "Step 1:  First, calculate the total number of ways to place 9 differently colored beads on a 3x3 grid without any restrictions, considering rotations and reflections as the same.\nStep 2:  There are $9!$ ways to place all 9 beads on the grid without any restrictions. However, since the grid is a square and rotations and reflections are considered the same, we must divide this number by the number of possible rotations and reflections. There are $4$ rotations and $4$ reflections, resulting in a total of $8$ distinct arrangements for each unique grid configuration. Therefore, the total number of ways to place the 9 beads on the grid without restrictions is $\\frac{9!}{8} = 181440$.\nStep 2:  Now, we need to subtract the number of arrangements where the purple and green beads are adjacent from the total number of arrangements. To find the number of arrangements where the purple and green beads are adjacent, we can place the purple and green beads as a single unit. There are now 8 \"units\" (7 individual beads and the combined purple and green bead) to arrange on the grid. As before, we must divide the total number of arrangements by the number of rotations and reflections, which is 8. Therefore, the number of arrangements where the purple and green beads are adjacent is $\\frac{8!}{8} = 40320$.\nStep 3:  Calculate the final number of ways to put 9 differently colored beads on the 3x3 grid by subtracting the number of arrangements where the purple and green beads are adjacent from the total number of arrangements: $181440 - 40320 = 141120$.\nCalculate the final number of ways to put 9 differently colored beads on the 3x3 grid by subtracting the number of arrangements where the purple and green beads are adjacent from the total number of arrangements: $181440 - 40320$.\n$181440 - 40320$\n$181440 - 40320 = 141120$\n$181440 - 40320 = 141120$",
+    "steps": [
+        "Step 1:  First, calculate the total number of ways to place 9 differently colored beads on a 3x3 grid without any restrictions, considering rotations and reflections as the same.",
+        "Step 2:  There are $9!$ ways to place all 9 beads on the grid without any restrictions. However, since the grid is a square and rotations and reflections are considered the same, we must divide this number by the number of possible rotations and reflections. There are $4$ rotations and $4$ reflections, resulting in a total of $8$ distinct arrangements for each unique grid configuration. Therefore, the total number of ways to place the 9 beads on the grid without restrictions is $\\frac{9!}{8} = 181440$.",
+        "Step 2:  Now, we need to subtract the number of arrangements where the purple and green beads are adjacent from the total number of arrangements. To find the number of arrangements where the purple and green beads are adjacent, we can place the purple and green beads as a single unit. There are now 8 \"units\" (7 individual beads and the combined purple and green bead) to arrange on the grid. As before, we must divide the total number of arrangements by the number of rotations and reflections, which is 8. Therefore, the number of arrangements where the purple and green beads are adjacent is $\\frac{8!}{8} = 40320$.",
+        "Step 3:  Calculate the final number of ways to put 9 differently colored beads on the 3x3 grid by subtracting the number of arrangements where the purple and green beads are adjacent from the total number of arrangements: $181440 - 40320 = 141120$.",
+        "Calculate the final number of ways to put 9 differently colored beads on the 3x3 grid by subtracting the number of arrangements where the purple and green beads are adjacent from the total number of arrangements: $181440 - 40320$.",
+        "$181440 - 40320$",
+        "$181440 - 40320 = 141120$",
+        "$181440 - 40320 = 141120$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  First, calculate the total number of ways to place 9 differently colored beads on a 3x3 grid without any restrictions, considering rotations and reflections as the same.",
+            1
+        ],
+        [
+            "Step 2:  There are $9!$ ways to place all 9 beads on the grid without any restrictions. However, since the grid is a square and rotations and reflections are considered the same, we must divide this number by the number of possible rotations and reflections. There are $4$ rotations and $4$ reflections, resulting in a total of $8$ distinct arrangements for each unique grid configuration. Therefore, the total number of ways to place the 9 beads on the grid without restrictions is $\\frac{9!}{8} = 181440$.",
+            1
+        ],
+        [
+            "Step 2:  Now, we need to subtract the number of arrangements where the purple and green beads are adjacent from the total number of arrangements. To find the number of arrangements where the purple and green beads are adjacent, we can place the purple and green beads as a single unit. There are now 8 \"units\" (7 individual beads and the combined purple and green bead) to arrange on the grid. As before, we must divide the total number of arrangements by the number of rotations and reflections, which is 8. Therefore, the number of arrangements where the purple and green beads are adjacent is $\\frac{8!}{8} = 40320$.",
+            1
+        ],
+        [
+            "Step 3:  Calculate the final number of ways to put 9 differently colored beads on the 3x3 grid by subtracting the number of arrangements where the purple and green beads are adjacent from the total number of arrangements: $181440 - 40320 = 141120$.",
+            1
+        ],
+        [
+            "Calculate the final number of ways to put 9 differently colored beads on the 3x3 grid by subtracting the number of arrangements where the purple and green beads are adjacent from the total number of arrangements: $181440 - 40320$.",
+            1
+        ],
+        [
+            "$181440 - 40320$",
+            1
+        ],
+        [
+            "$181440 - 40320 = 141120$",
+            1
+        ],
+        [
+            "$181440 - 40320 = 141120$",
+            1
+        ]
+    ],
+    "time": 107.04573369026184,
+    "total_tokens": 6920,
+    "final_answer_tokens": 548,
+    "model": "meta-llama/Llama-Vision-Free"
+}

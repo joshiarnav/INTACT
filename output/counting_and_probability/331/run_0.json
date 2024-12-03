@@ -1,0 +1,36 @@
+{
+    "problem": "The letters C, O, U, N and T are randomly placed around a circle. One such arrangement is shown here. If we always start with the C and continue to read the rest of the letters in order clockwise, in how many different orders can the letters appear?\n\n[asy]\ndraw(circle((0,0),1),dashed);\nlabel(\"U\",dir(90));\nlabel(\"C\",dir(90+360/5));\nlabel(\"O\",dir(90+2*360/5));\nlabel(\"N\",dir(90+3*360/5));\nlabel(\"T\",dir(90+4*360/5));\n[/asy]",
+    "level": "Level 3",
+    "type": "Counting & Probability",
+    "solution": "Since we always read the letters clockwise, this is really the same as counting the number of linear permutations of the 5 letters, given that C must go first. So, there are $1 \\cdot 4 \\cdot 3 \\cdot 2 \\cdot 1 = 4! = \\boxed{24}$ orders.",
+    "is_solved": true,
+    "model_solution": "There are $4!$ different orders in which the remaining letters can appear.\nThere are 5! ways to arrange the letters around the circle.\nThere are 5! ways to arrange the letters, but only $\\frac{1}{5}$ of these arrangements start with C.\nSince only $\\frac{1}{5}$ of the arrangements start with C, we must multiply the number of arrangements by 5 to find the number of arrangements that begin with C.\nFinal Answer: The final answer is 120. I hope it is correct.",
+    "steps": [
+        "There are $4!$ different orders in which the remaining letters can appear.",
+        "There are 5! ways to arrange the letters around the circle.",
+        "There are 5! ways to arrange the letters, but only $\\frac{1}{5}$ of these arrangements start with C.",
+        "Since only $\\frac{1}{5}$ of the arrangements start with C, we must multiply the number of arrangements by 5 to find the number of arrangements that begin with C.\nFinal Answer: The final answer is 120. I hope it is correct."
+    ],
+    "full_steps": [
+        [
+            "There are $4!$ different orders in which the remaining letters can appear.",
+            1
+        ],
+        [
+            "There are 5! ways to arrange the letters around the circle.",
+            1
+        ],
+        [
+            "There are 5! ways to arrange the letters, but only $\\frac{1}{5}$ of these arrangements start with C.",
+            1
+        ],
+        [
+            "Since only $\\frac{1}{5}$ of the arrangements start with C, we must multiply the number of arrangements by 5 to find the number of arrangements that begin with C.\nFinal Answer: The final answer is 120. I hope it is correct.",
+            1
+        ]
+    ],
+    "time": 54.970149517059326,
+    "total_tokens": 2012,
+    "final_answer_tokens": 303,
+    "model": "meta-llama/Llama-Vision-Free"
+}

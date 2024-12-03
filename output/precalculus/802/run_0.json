@@ -1,0 +1,56 @@
+{
+    "problem": "One line is described by\n\\[\\begin{pmatrix} -1 \\\\ -3 \\\\ -5 \\end{pmatrix} + t \\begin{pmatrix} 3 \\\\ k \\\\ 7 \\end{pmatrix}.\\]Another line is described by\n\\[\\begin{pmatrix} 2 \\\\ 4 \\\\ 6 \\end{pmatrix} + u \\begin{pmatrix} 1 \\\\ 4 \\\\ 7 \\end{pmatrix}.\\]Find $k$ so that the lines are coplanar (i.e. there is a plane that contains both lines).",
+    "level": "Level 3",
+    "type": "Precalculus",
+    "solution": "The direction vectors of the lines are $\\begin{pmatrix} 3 \\\\ k \\\\ 7 \\end{pmatrix}$ and $\\begin{pmatrix} 1 \\\\ 4 \\\\ 7 \\end{pmatrix}.$  These vectors cannot be proportional, which means that the lines cannot be parallel.  Therefore, the only way that the lines can be coplanar is if they intersect.\n\nMatching the entries in both lines, we obtain the system\n\\begin{align*}\n-1 + 3t &= 2 + u, \\\\\n-3 + kt &= 4 + 4u, \\\\\n-5 + 7t &= 6 + 7u.\n\\end{align*}Solving the equations $-1 + 3t = 2 + u$ and $-5 + 7t = 6 + 7u,$ we find $t = \\frac{5}{7}$ and $u = -\\frac{6}{7}$.  Substituting into the second equation, we get\n\\[-3 + \\frac{5}{7} k = 4 - \\frac{24}{7}.\\]This leads to $k = \\boxed{5}.$",
+    "is_solved": true,
+    "model_solution": "Step 1: Two lines are coplanar if and only if their direction vectors are parallel or one is a multiple of the other, or if the direction vectors and the vector between a point on each line are linearly dependent.\n\\[\\begin{pmatrix} 3 \\\\ k \\\\ 7 \\end{pmatrix} \\text{ and } \\begin{pmatrix} 1 \\\\ 4 \\\\ 7 \\end{pmatrix} \\text{ and } \\begin{pmatrix} -3 \\\\ 11 \\\\ 17 \\end{pmatrix}\\]\nStep 2:\n\\[\\begin{vmatrix} 3 & 1 & -3 \\\\ k & 4 & 11 \\\\ 7 & 7 & 17 \\end{vmatrix} = 0\\]\nStep 3:\n\\[\\begin{aligned} 3(68-77) & = 1(17k-77) \\\\ -9 & = 17k-77 \\\\ k & = \\frac{68}{17} \\end{aligned}\\]\nStep 4:\n\\[\\begin{aligned} k & = \\frac{68}{17} \\\\ \\text{However, we also need to check if the direction vectors are parallel.} \\\\ \\text{If the direction vectors are parallel, then } \\begin{pmatrix} 3 \\\\ k \\\\ 7 \\end{pmatrix} = c \\begin{pmatrix} 1 \\\\ 4 \\\\ 7 \\end{pmatrix} \\text{ for some scalar } c. \\\\ \\text{We see that } k=4c, 7=7c. \\\\ \\text{However, } c \\neq 1 \\text{ since } k \\neq 4. \\\\ \\text{Therefore, the direction vectors are not parallel.} \\\\ \\text{We also need to check if the direction vectors are multiples of each other.}\\\\ \\text{If the direction vectors are multiples of each other, then there exists a scalar } d \\text{ such that } \\begin{pmatrix} 3 \\\\ k \\\\ 7 \\end{pmatrix} = d \\begin{pmatrix} 1 \\\\ 4 \\\\ 7 \\end{pmatrix}. \\\\ \\text\n## Step 5\n\\[\\begin{aligned} 3 & = d \\\\ 4 & = 4d \\\\ 7 & = 7d \\\\ d & = 1 \\text{ and } k = 4 \\end{aligned}\\]\nSince we have found that $k = 4$, we can check if the lines are coplanar by seeing if the direction vectors and the vector between a point on each line are linearly dependent.\n\n\\[\\begin{pmatrix} 3 \\\\ k \\\\ 7 \\end{pmatrix} \\text{ and } \\begin{pmatrix} 1 \\\\ 4 \\\\ 7 \\end{pmatrix} \\text{ and } \\begin{pmatrix} -3 \\\\ 11 \\\\ 17 \\end{pmatrix}\\]\n\\[\\begin{aligned} \\text{We have that } \\begin{pmatrix} 3 \\\\ 4 \\\\ 7 \\end{pmatrix} \\text{ and } \\begin{pmatrix} 1 \\\\ 4 \\\\ 7 \\end{pmatrix} \\text{ and } \\begin{pmatrix} -3 \\\\ 11 \\\\ 17 \\end{pmatrix} \\text{ are linearly dependent} \\\\ \\text{if and only if there exist scalars } x, y, z \\text{ such that} \\\\ \\begin{pmatrix} 3 \\\\ 4 \\\\ 7 \\end{pmatrix} x +\n\\[\\begin{aligned} \\begin{vmatrix} 3 & 1 & -3 \\\\ 4 & 4 & 11 \\\\ 7 & 7 & 17 \\end{vmatrix} & = 0 \\end{aligned}\\]\n\\[\\begin{aligned} 3(68-77) & = 1(17(4)-77) \\\\ -9 & = 17(4)-77 \\\\ -9 & = 68-77 \\\\ -9 & = -9 \\\\ \\text{Therefore, the lines are coplanar.} \\\\ \\text{The final answer is } \\boxed{4}. \\end{aligned}\\]",
+    "steps": [
+        "Step 1: Two lines are coplanar if and only if their direction vectors are parallel or one is a multiple of the other, or if the direction vectors and the vector between a point on each line are linearly dependent.\n\\[\\begin{pmatrix} 3 \\\\ k \\\\ 7 \\end{pmatrix} \\text{ and } \\begin{pmatrix} 1 \\\\ 4 \\\\ 7 \\end{pmatrix} \\text{ and } \\begin{pmatrix} -3 \\\\ 11 \\\\ 17 \\end{pmatrix}\\]",
+        "Step 2:\n\\[\\begin{vmatrix} 3 & 1 & -3 \\\\ k & 4 & 11 \\\\ 7 & 7 & 17 \\end{vmatrix} = 0\\]",
+        "Step 3:\n\\[\\begin{aligned} 3(68-77) & = 1(17k-77) \\\\ -9 & = 17k-77 \\\\ k & = \\frac{68}{17} \\end{aligned}\\]",
+        "Step 4:\n\\[\\begin{aligned} k & = \\frac{68}{17} \\\\ \\text{However, we also need to check if the direction vectors are parallel.} \\\\ \\text{If the direction vectors are parallel, then } \\begin{pmatrix} 3 \\\\ k \\\\ 7 \\end{pmatrix} = c \\begin{pmatrix} 1 \\\\ 4 \\\\ 7 \\end{pmatrix} \\text{ for some scalar } c. \\\\ \\text{We see that } k=4c, 7=7c. \\\\ \\text{However, } c \\neq 1 \\text{ since } k \\neq 4. \\\\ \\text{Therefore, the direction vectors are not parallel.} \\\\ \\text{We also need to check if the direction vectors are multiples of each other.}\\\\ \\text{If the direction vectors are multiples of each other, then there exists a scalar } d \\text{ such that } \\begin{pmatrix} 3 \\\\ k \\\\ 7 \\end{pmatrix} = d \\begin{pmatrix} 1 \\\\ 4 \\\\ 7 \\end{pmatrix}. \\\\ \\text",
+        "## Step 5\n\\[\\begin{aligned} 3 & = d \\\\ 4 & = 4d \\\\ 7 & = 7d \\\\ d & = 1 \\text{ and } k = 4 \\end{aligned}\\]",
+        "Since we have found that $k = 4$, we can check if the lines are coplanar by seeing if the direction vectors and the vector between a point on each line are linearly dependent.\n\n\\[\\begin{pmatrix} 3 \\\\ k \\\\ 7 \\end{pmatrix} \\text{ and } \\begin{pmatrix} 1 \\\\ 4 \\\\ 7 \\end{pmatrix} \\text{ and } \\begin{pmatrix} -3 \\\\ 11 \\\\ 17 \\end{pmatrix}\\]\n\\[\\begin{aligned} \\text{We have that } \\begin{pmatrix} 3 \\\\ 4 \\\\ 7 \\end{pmatrix} \\text{ and } \\begin{pmatrix} 1 \\\\ 4 \\\\ 7 \\end{pmatrix} \\text{ and } \\begin{pmatrix} -3 \\\\ 11 \\\\ 17 \\end{pmatrix} \\text{ are linearly dependent} \\\\ \\text{if and only if there exist scalars } x, y, z \\text{ such that} \\\\ \\begin{pmatrix} 3 \\\\ 4 \\\\ 7 \\end{pmatrix} x +",
+        "\\[\\begin{aligned} \\begin{vmatrix} 3 & 1 & -3 \\\\ 4 & 4 & 11 \\\\ 7 & 7 & 17 \\end{vmatrix} & = 0 \\end{aligned}\\]",
+        "\\[\\begin{aligned} 3(68-77) & = 1(17(4)-77) \\\\ -9 & = 17(4)-77 \\\\ -9 & = 68-77 \\\\ -9 & = -9 \\\\ \\text{Therefore, the lines are coplanar.} \\\\ \\text{The final answer is } \\boxed{4}. \\end{aligned}\\]"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Two lines are coplanar if and only if their direction vectors are parallel or one is a multiple of the other, or if the direction vectors and the vector between a point on each line are linearly dependent.\n\\[\\begin{pmatrix} 3 \\\\ k \\\\ 7 \\end{pmatrix} \\text{ and } \\begin{pmatrix} 1 \\\\ 4 \\\\ 7 \\end{pmatrix} \\text{ and } \\begin{pmatrix} -3 \\\\ 11 \\\\ 17 \\end{pmatrix}\\]",
+            1
+        ],
+        [
+            "Step 2:\n\\[\\begin{vmatrix} 3 & 1 & -3 \\\\ k & 4 & 11 \\\\ 7 & 7 & 17 \\end{vmatrix} = 0\\]",
+            1
+        ],
+        [
+            "Step 3:\n\\[\\begin{aligned} 3(68-77) & = 1(17k-77) \\\\ -9 & = 17k-77 \\\\ k & = \\frac{68}{17} \\end{aligned}\\]",
+            1
+        ],
+        [
+            "Step 4:\n\\[\\begin{aligned} k & = \\frac{68}{17} \\\\ \\text{However, we also need to check if the direction vectors are parallel.} \\\\ \\text{If the direction vectors are parallel, then } \\begin{pmatrix} 3 \\\\ k \\\\ 7 \\end{pmatrix} = c \\begin{pmatrix} 1 \\\\ 4 \\\\ 7 \\end{pmatrix} \\text{ for some scalar } c. \\\\ \\text{We see that } k=4c, 7=7c. \\\\ \\text{However, } c \\neq 1 \\text{ since } k \\neq 4. \\\\ \\text{Therefore, the direction vectors are not parallel.} \\\\ \\text{We also need to check if the direction vectors are multiples of each other.}\\\\ \\text{If the direction vectors are multiples of each other, then there exists a scalar } d \\text{ such that } \\begin{pmatrix} 3 \\\\ k \\\\ 7 \\end{pmatrix} = d \\begin{pmatrix} 1 \\\\ 4 \\\\ 7 \\end{pmatrix}. \\\\ \\text",
+            1
+        ],
+        [
+            "## Step 5\n\\[\\begin{aligned} 3 & = d \\\\ 4 & = 4d \\\\ 7 & = 7d \\\\ d & = 1 \\text{ and } k = 4 \\end{aligned}\\]",
+            1
+        ],
+        [
+            "Since we have found that $k = 4$, we can check if the lines are coplanar by seeing if the direction vectors and the vector between a point on each line are linearly dependent.\n\n\\[\\begin{pmatrix} 3 \\\\ k \\\\ 7 \\end{pmatrix} \\text{ and } \\begin{pmatrix} 1 \\\\ 4 \\\\ 7 \\end{pmatrix} \\text{ and } \\begin{pmatrix} -3 \\\\ 11 \\\\ 17 \\end{pmatrix}\\]\n\\[\\begin{aligned} \\text{We have that } \\begin{pmatrix} 3 \\\\ 4 \\\\ 7 \\end{pmatrix} \\text{ and } \\begin{pmatrix} 1 \\\\ 4 \\\\ 7 \\end{pmatrix} \\text{ and } \\begin{pmatrix} -3 \\\\ 11 \\\\ 17 \\end{pmatrix} \\text{ are linearly dependent} \\\\ \\text{if and only if there exist scalars } x, y, z \\text{ such that} \\\\ \\begin{pmatrix} 3 \\\\ 4 \\\\ 7 \\end{pmatrix} x +",
+            1
+        ],
+        [
+            "\\[\\begin{aligned} \\begin{vmatrix} 3 & 1 & -3 \\\\ 4 & 4 & 11 \\\\ 7 & 7 & 17 \\end{vmatrix} & = 0 \\end{aligned}\\]",
+            1
+        ],
+        [
+            "\\[\\begin{aligned} 3(68-77) & = 1(17(4)-77) \\\\ -9 & = 17(4)-77 \\\\ -9 & = 68-77 \\\\ -9 & = -9 \\\\ \\text{Therefore, the lines are coplanar.} \\\\ \\text{The final answer is } \\boxed{4}. \\end{aligned}\\]",
+            1
+        ]
+    ],
+    "time": 108.30449080467224,
+    "total_tokens": 11047,
+    "final_answer_tokens": 1096,
+    "model": "meta-llama/Llama-Vision-Free"
+}

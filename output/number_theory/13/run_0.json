@@ -1,0 +1,56 @@
+{
+    "problem": "What is the average of the two smallest positive integer solutions to the congruence $$14u \\equiv 46 \\pmod{100}~?$$",
+    "level": "Level 5",
+    "type": "Number Theory",
+    "solution": "Note that $14$, $46$, and $100$ all have a common factor of $2$, so we can divide it out: the solutions to $$14u \\equiv 46 \\pmod{100}$$ are identical to the solutions to $$7u \\equiv 23 \\pmod{50}.$$ Make sure you see why this is the case.\n\nNow we can multiply both sides of the congruence by $7$ to obtain $$49u \\equiv 161 \\pmod{50},$$ which also has the same solutions as the previous congruence, since we could reverse the step above by multiplying both sides by $7^{-1}$. (We know that $7^{-1}$ exists modulo $50$ because $7$ and $50$ are relatively prime.)\n\nReplacing each side of $49u\\equiv 161$ by a $\\pmod{50}$ equivalent, we have $$-u \\equiv 11\\pmod{50},$$ and thus $$u \\equiv -11\\pmod{50}.$$ This is the set of solutions to our original congruence. The two smallest positive solutions are $-11+50 = 39$ and $-11+2\\cdot 50 = 89$. Their average is $\\boxed{64}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: The given congruence can be simplified by dividing both sides by their greatest common divisor and reducing the coefficient of u modulo 100. \n\\[\\frac{14u}{\\gcd(14,100)} \\equiv \\frac{46}{\\gcd(14,100)} \\pmod{\\frac{100}{\\gcd(14,100)}}\\]\nStep 2: Using the Euclidean algorithm, we find that $\\gcd(14, 100) = 2$. Therefore, we have $\\frac{14u}{2} \\equiv \\frac{46}{2} \\pmod{\\frac{100}{2}}$, which simplifies to $7u \\equiv 23 \\pmod{50}$.\nStep 3: We can multiply both sides of the congruence $7u \\equiv 23 \\pmod{50}$ by the multiplicative inverse of $7$ modulo $50$, which is $13$, to solve for $u$. This gives us $13 \\cdot 7u \\equiv 13 \\cdot 23 \\pmod{50}$, which simplifies to $u \\equiv 299 \\pmod{50}$.\nStep 4: We can simplify $u \\equiv 299 \\pmod{50}$ to its smallest positive integer solution by taking the remainder when $299$ is divided by $50$, which is $u \\equiv 49 \\pmod{50}$.\nStep 5:\n$u \\equiv 49 \\pmod{50}$ has a period of $50$, so the two smallest positive integer solutions are $49$ and $49+50=99$. The average of these two solutions is $\\frac{49+99}{2}=\\frac{148}{2}=74$.\nStep 6: The two smallest positive integer solutions to the congruence are 49 and 99, and their average is $\\frac{49+99}{2}$.\nThe two smallest positive integer solutions to the congruence are 49 and 99, and their average is $\\frac{49+99}{2}$.\nThe two smallest positive integer solutions to the congruence are 49 and 99, and their average is $\\frac{49+99}{2}$.",
+    "steps": [
+        "Step 1: The given congruence can be simplified by dividing both sides by their greatest common divisor and reducing the coefficient of u modulo 100. \n\\[\\frac{14u}{\\gcd(14,100)} \\equiv \\frac{46}{\\gcd(14,100)} \\pmod{\\frac{100}{\\gcd(14,100)}}\\]",
+        "Step 2: Using the Euclidean algorithm, we find that $\\gcd(14, 100) = 2$. Therefore, we have $\\frac{14u}{2} \\equiv \\frac{46}{2} \\pmod{\\frac{100}{2}}$, which simplifies to $7u \\equiv 23 \\pmod{50}$.",
+        "Step 3: We can multiply both sides of the congruence $7u \\equiv 23 \\pmod{50}$ by the multiplicative inverse of $7$ modulo $50$, which is $13$, to solve for $u$. This gives us $13 \\cdot 7u \\equiv 13 \\cdot 23 \\pmod{50}$, which simplifies to $u \\equiv 299 \\pmod{50}$.",
+        "Step 4: We can simplify $u \\equiv 299 \\pmod{50}$ to its smallest positive integer solution by taking the remainder when $299$ is divided by $50$, which is $u \\equiv 49 \\pmod{50}$.",
+        "Step 5:\n$u \\equiv 49 \\pmod{50}$ has a period of $50$, so the two smallest positive integer solutions are $49$ and $49+50=99$. The average of these two solutions is $\\frac{49+99}{2}=\\frac{148}{2}=74$.",
+        "Step 6: The two smallest positive integer solutions to the congruence are 49 and 99, and their average is $\\frac{49+99}{2}$.",
+        "The two smallest positive integer solutions to the congruence are 49 and 99, and their average is $\\frac{49+99}{2}$.",
+        "The two smallest positive integer solutions to the congruence are 49 and 99, and their average is $\\frac{49+99}{2}$."
+    ],
+    "full_steps": [
+        [
+            "Step 1: The given congruence can be simplified by dividing both sides by their greatest common divisor and reducing the coefficient of u modulo 100. \n\\[\\frac{14u}{\\gcd(14,100)} \\equiv \\frac{46}{\\gcd(14,100)} \\pmod{\\frac{100}{\\gcd(14,100)}}\\]",
+            1
+        ],
+        [
+            "Step 2: Using the Euclidean algorithm, we find that $\\gcd(14, 100) = 2$. Therefore, we have $\\frac{14u}{2} \\equiv \\frac{46}{2} \\pmod{\\frac{100}{2}}$, which simplifies to $7u \\equiv 23 \\pmod{50}$.",
+            1
+        ],
+        [
+            "Step 3: We can multiply both sides of the congruence $7u \\equiv 23 \\pmod{50}$ by the multiplicative inverse of $7$ modulo $50$, which is $13$, to solve for $u$. This gives us $13 \\cdot 7u \\equiv 13 \\cdot 23 \\pmod{50}$, which simplifies to $u \\equiv 299 \\pmod{50}$.",
+            1
+        ],
+        [
+            "Step 4: We can simplify $u \\equiv 299 \\pmod{50}$ to its smallest positive integer solution by taking the remainder when $299$ is divided by $50$, which is $u \\equiv 49 \\pmod{50}$.",
+            1
+        ],
+        [
+            "Step 5:\n$u \\equiv 49 \\pmod{50}$ has a period of $50$, so the two smallest positive integer solutions are $49$ and $49+50=99$. The average of these two solutions is $\\frac{49+99}{2}=\\frac{148}{2}=74$.",
+            1
+        ],
+        [
+            "Step 6: The two smallest positive integer solutions to the congruence are 49 and 99, and their average is $\\frac{49+99}{2}$.",
+            1
+        ],
+        [
+            "The two smallest positive integer solutions to the congruence are 49 and 99, and their average is $\\frac{49+99}{2}$.",
+            1
+        ],
+        [
+            "The two smallest positive integer solutions to the congruence are 49 and 99, and their average is $\\frac{49+99}{2}$.",
+            1
+        ]
+    ],
+    "time": 108.56457614898682,
+    "total_tokens": 6441,
+    "final_answer_tokens": 558,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,46 @@
+{
+    "problem": "What integer $n$ satisfies $0\\le n<{101}$ and $$123456\\equiv n\\pmod {101}~?$$",
+    "level": "Level 3",
+    "type": "Number Theory",
+    "solution": "Notice that $100\\equiv-1\\pmod{101}$.  Therefore  \\[120000\\equiv-1200\\equiv12\\pmod{101}.\\]Likewise  \\[3400\\equiv-34\\pmod{101}.\\]Combining these lets us write  \\[123456\\equiv 12-34+56\\pmod{101}\\]or  \\[123456\\equiv\\boxed{34}\\pmod{101}.\\]",
+    "is_solved": false,
+    "model_solution": "Step 1:  Recognize that $123456$ can be expressed as a sum of terms that are multiples of $101$, which will help simplify the congruence.\n$123456 = 12\\cdot10000 + 3456$\nStep 2:  Since $123456$ is congruent modulo $101$ to the sum of $12\\cdot10000$ and $3456$, we need to simplify $12\\cdot10000 + 3456$ modulo $101$ to find the value of $n$.\n$123456 \\equiv 12\\cdot10000 + 3456 \\equiv 12\\cdot(-1) + 3456 \\equiv -12 + 3456 \\pmod {101}$\nNext Step: $-12+3456 \\equiv 3444 \\pmod {101}$\nSince $3444\\equiv 4\\pmod{101}$, we have $$123456\\equiv 4\\pmod {101}.$$\n$-12+3456 \\equiv 3444 \\pmod {101}$\n$3444 \\equiv 44 \\pmod {101}$",
+    "steps": [
+        "Step 1:  Recognize that $123456$ can be expressed as a sum of terms that are multiples of $101$, which will help simplify the congruence.\n$123456 = 12\\cdot10000 + 3456$",
+        "Step 2:  Since $123456$ is congruent modulo $101$ to the sum of $12\\cdot10000$ and $3456$, we need to simplify $12\\cdot10000 + 3456$ modulo $101$ to find the value of $n$.\n$123456 \\equiv 12\\cdot10000 + 3456 \\equiv 12\\cdot(-1) + 3456 \\equiv -12 + 3456 \\pmod {101}$",
+        "Next Step: $-12+3456 \\equiv 3444 \\pmod {101}$",
+        "Since $3444\\equiv 4\\pmod{101}$, we have $$123456\\equiv 4\\pmod {101}.$$",
+        "$-12+3456 \\equiv 3444 \\pmod {101}$",
+        "$3444 \\equiv 44 \\pmod {101}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Recognize that $123456$ can be expressed as a sum of terms that are multiples of $101$, which will help simplify the congruence.\n$123456 = 12\\cdot10000 + 3456$",
+            1
+        ],
+        [
+            "Step 2:  Since $123456$ is congruent modulo $101$ to the sum of $12\\cdot10000$ and $3456$, we need to simplify $12\\cdot10000 + 3456$ modulo $101$ to find the value of $n$.\n$123456 \\equiv 12\\cdot10000 + 3456 \\equiv 12\\cdot(-1) + 3456 \\equiv -12 + 3456 \\pmod {101}$",
+            1
+        ],
+        [
+            "Next Step: $-12+3456 \\equiv 3444 \\pmod {101}$",
+            1
+        ],
+        [
+            "Since $3444\\equiv 4\\pmod{101}$, we have $$123456\\equiv 4\\pmod {101}.$$",
+            1
+        ],
+        [
+            "$-12+3456 \\equiv 3444 \\pmod {101}$",
+            1
+        ],
+        [
+            "$3444 \\equiv 44 \\pmod {101}$",
+            1
+        ]
+    ],
+    "time": 80.11116862297058,
+    "total_tokens": 3241,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

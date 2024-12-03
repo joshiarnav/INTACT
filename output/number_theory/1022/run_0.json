@@ -1,0 +1,66 @@
+{
+    "problem": "A math textbook with a double-digit number of pages is split into sections. Each section is exactly $12$ pages long, with the exception of the epilogue, which is $11$ pages long. Every page belongs to a section. Furthermore, on the bottom of each $5$th page, a trivia fact is presented on the bottom of the page, starting from the fifth page. If a trivia fact appears on the bottom of the second-to-last page, then how many pages does the textbook have?",
+    "level": "Level 4",
+    "type": "Number Theory",
+    "solution": "Suppose the book has $p$ pages. It follows that $p \\equiv 11 \\pmod{12}$. Also, since the second-to-last page has a trivia fact, then $p-1$ is divisible by $5$, so $p \\equiv 1 \\pmod{5}$. By the Chinese Remainder Theorem, since $11 \\equiv 1 \\pmod{5}$, then $p \\equiv 11 \\pmod{60}$. Now, $p$ is a double-digit number, so it must be either $11$ or $71$. However, the epilogue itself is already $11$ pages long, so it follows that there must be $\\boxed{71}$ pages in the book.",
+    "is_solved": false,
+    "model_solution": "Since we are given that the second-to-last page is a page with a trivia fact, it must be a page that is a multiple of $5$ pages from the beginning of the book.\nLet $n$ be the number of pages in the textbook. Then $n-1$ must be a multiple of $5$ since the second-to-last page is a page with a trivia fact.\nSince $n-1$ is a multiple of $5$, we can write $n-1=5m$ for some nonnegative integer $m$.\nSince there are $12$ pages in each section, with the exception of the epilogue, which has $11$ pages, the total number of pages can be expressed as $12a + 11$ for some nonnegative integer $a$, where $a$ is the number of full sections in the textbook, and this expression is equal to $5m + 1$.\nSince $12a + 11 = 5m + 1$, we have $12a = 5m - 10.$\nWe can rewrite $12a=5m-10$ as $12a+10=5m$, and since $12a+10$ is even, $5m$ must also be even.\nSince $5m$ is even, $m$ must be even.\nSince $m$ is even, we can write $m=2k$ for some nonnegative integer $k$.\nSince $m=2k$ and $12a+10=5m$, we have $12a+10=5(2k)$ which can be rewritten as $12a+10=10k$.\nSince $12a + 10 = 10k$, we have $12a = 10k - 10 = 10(k - 1)$, so $a$ must be even.",
+    "steps": [
+        "Since we are given that the second-to-last page is a page with a trivia fact, it must be a page that is a multiple of $5$ pages from the beginning of the book.",
+        "Let $n$ be the number of pages in the textbook. Then $n-1$ must be a multiple of $5$ since the second-to-last page is a page with a trivia fact.",
+        "Since $n-1$ is a multiple of $5$, we can write $n-1=5m$ for some nonnegative integer $m$.",
+        "Since there are $12$ pages in each section, with the exception of the epilogue, which has $11$ pages, the total number of pages can be expressed as $12a + 11$ for some nonnegative integer $a$, where $a$ is the number of full sections in the textbook, and this expression is equal to $5m + 1$.",
+        "Since $12a + 11 = 5m + 1$, we have $12a = 5m - 10.$",
+        "We can rewrite $12a=5m-10$ as $12a+10=5m$, and since $12a+10$ is even, $5m$ must also be even.",
+        "Since $5m$ is even, $m$ must be even.",
+        "Since $m$ is even, we can write $m=2k$ for some nonnegative integer $k$.",
+        "Since $m=2k$ and $12a+10=5m$, we have $12a+10=5(2k)$ which can be rewritten as $12a+10=10k$.",
+        "Since $12a + 10 = 10k$, we have $12a = 10k - 10 = 10(k - 1)$, so $a$ must be even."
+    ],
+    "full_steps": [
+        [
+            "Since we are given that the second-to-last page is a page with a trivia fact, it must be a page that is a multiple of $5$ pages from the beginning of the book.",
+            1
+        ],
+        [
+            "Let $n$ be the number of pages in the textbook. Then $n-1$ must be a multiple of $5$ since the second-to-last page is a page with a trivia fact.",
+            1
+        ],
+        [
+            "Since $n-1$ is a multiple of $5$, we can write $n-1=5m$ for some nonnegative integer $m$.",
+            1
+        ],
+        [
+            "Since there are $12$ pages in each section, with the exception of the epilogue, which has $11$ pages, the total number of pages can be expressed as $12a + 11$ for some nonnegative integer $a$, where $a$ is the number of full sections in the textbook, and this expression is equal to $5m + 1$.",
+            1
+        ],
+        [
+            "Since $12a + 11 = 5m + 1$, we have $12a = 5m - 10.$",
+            1
+        ],
+        [
+            "We can rewrite $12a=5m-10$ as $12a+10=5m$, and since $12a+10$ is even, $5m$ must also be even.",
+            1
+        ],
+        [
+            "Since $5m$ is even, $m$ must be even.",
+            1
+        ],
+        [
+            "Since $m$ is even, we can write $m=2k$ for some nonnegative integer $k$.",
+            1
+        ],
+        [
+            "Since $m=2k$ and $12a+10=5m$, we have $12a+10=5(2k)$ which can be rewritten as $12a+10=10k$.",
+            1
+        ],
+        [
+            "Since $12a + 10 = 10k$, we have $12a = 10k - 10 = 10(k - 1)$, so $a$ must be even.",
+            1
+        ]
+    ],
+    "time": 137.85935950279236,
+    "total_tokens": 7774,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

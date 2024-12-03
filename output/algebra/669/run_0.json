@@ -1,0 +1,21 @@
+{
+    "problem": "Define $f(x)=\\frac{1+x}{1-x}$ and $g(x)=\\frac{-2}{x+1}$. Find the value of \\[g(f(g(f(\\dotsb g(f(12)) \\dotsb ))))\\]where the function $f$ is applied 8 times, and the function $g$ is applied 8 times, alternating between the two.",
+    "level": "Level 5",
+    "type": "Algebra",
+    "solution": "Define a new function $h(x)$ so that $h(x)=g(f(x))$. Then  \\begin{align*}\nh(x) &= g\\left(\\frac{1+x}{1-x}\\right)=\\frac{-2}{\\frac{1+x}{1-x}+1}\\\\\n&= \\frac{-2}{\\frac{1+x}{1-x}+\\frac{1-x}{1-x}}=\\frac{-2}{\\frac{2}{1-x}}\\\\\n&= \\frac{-1}{\\frac{1}{1-x}}=-(1-x)=x-1.\n\\end{align*}Thus our desired value is equivalent to $8$ compositions of the function $h(x)$. For each composition we subtract $1$ from the input value, so for $8$ compositions we subtract a total of $8$ from the input value, which is $12$. So our answer is $12-8=\\boxed{4}$.",
+    "is_solved": true,
+    "model_solution": "## Step 1:  First, we need to compute the first application of function $f$ to the number 12.\n\\[f(12) = \\frac{1 + 12}{1 - 12} = \\frac{13}{-11} = -\\frac{13}{11}\\]\n\n## Step 2: Next, we need to apply function $g$ to the result from the first step.\n\\[g\\left(-\\frac{13}{11}\\right) = \\frac{-2}{-\\frac{13}{11} + 1} = \\frac{-2}{-\\frac{13}{11} + \\frac{11}{11}} = \\frac{-2}{-\\frac{2}{11}}\\]\n\n## Step 3: Now, we simplify the expression for the second application of function $g$.\n\\[\\frac{-2}{-\\frac{2}{11}} = -2 \\times -\\frac{11}{2} = 11\\]\n\nThe final answer is: $\\boxed{11}$",
+    "steps": [
+        "## Step 1:  First, we need to compute the first application of function $f$ to the number 12.\n\\[f(12) = \\frac{1 + 12}{1 - 12} = \\frac{13}{-11} = -\\frac{13}{11}\\]\n\n## Step 2: Next, we need to apply function $g$ to the result from the first step.\n\\[g\\left(-\\frac{13}{11}\\right) = \\frac{-2}{-\\frac{13}{11} + 1} = \\frac{-2}{-\\frac{13}{11} + \\frac{11}{11}} = \\frac{-2}{-\\frac{2}{11}}\\]\n\n## Step 3: Now, we simplify the expression for the second application of function $g$.\n\\[\\frac{-2}{-\\frac{2}{11}} = -2 \\times -\\frac{11}{2} = 11\\]\n\nThe final answer is: $\\boxed{11}$"
+    ],
+    "full_steps": [
+        [
+            "## Step 1:  First, we need to compute the first application of function $f$ to the number 12.\n\\[f(12) = \\frac{1 + 12}{1 - 12} = \\frac{13}{-11} = -\\frac{13}{11}\\]\n\n## Step 2: Next, we need to apply function $g$ to the result from the first step.\n\\[g\\left(-\\frac{13}{11}\\right) = \\frac{-2}{-\\frac{13}{11} + 1} = \\frac{-2}{-\\frac{13}{11} + \\frac{11}{11}} = \\frac{-2}{-\\frac{2}{11}}\\]\n\n## Step 3: Now, we simplify the expression for the second application of function $g$.\n\\[\\frac{-2}{-\\frac{2}{11}} = -2 \\times -\\frac{11}{2} = 11\\]\n\nThe final answer is: $\\boxed{11}$",
+            1
+        ]
+    ],
+    "time": 12.522217273712158,
+    "total_tokens": 707,
+    "final_answer_tokens": 336,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,66 @@
+{
+    "problem": "In triangle $ABC,$ $D$ and $E$ are on side $\\overline{BC}$ such that $BD = DE = EC.$  If $x = \\angle BAD,$ $y = \\angle DAE,$ and $z = \\angle EAC,$ then find\n\\[\\frac{\\sin (x + y) \\sin (y + z)}{\\sin x \\sin z}.\\]",
+    "level": "Level 5",
+    "type": "Precalculus",
+    "solution": "By the Law of Sines in triangle $ABE,$\n\\[\\frac{BE}{\\sin (x + y)} = \\frac{AE}{\\sin B} \\quad \\Rightarrow \\quad \\sin (x + y) = \\frac{BE \\sin B}{AE}.\\]By the Law of Sines in triangle $ADC,$\n\\[\\frac{CD}{\\sin (y + z)} = \\frac{AD}{\\sin C} \\quad \\Rightarrow \\quad \\sin (y + z) = \\frac{CD \\sin C}{AD}.\\][asy]\nunitsize (2 cm);\n\npair A, B, C, D, E;\n\nB = (0,0);\nD = (1,0);\nE = (2,0);\nC = (3,0);\nA = (2.5,1.5);\n\ndraw(A--B--C--cycle);\ndraw(A--D);\ndraw(A--E);\n\nlabel(\"$A$\", A, N);\nlabel(\"$B$\", B, SW);\nlabel(\"$C$\", C, SE);\nlabel(\"$D$\", D, S);\nlabel(\"$E$\", E, S);\nlabel(\"$x$\", A + (-0.75,-0.6));\nlabel(\"$y$\", A + (-0.35,-0.6));\nlabel(\"$z$\", A + (0,-0.5));\n[/asy]\n\nBy the Law of Sines in triangle $ABD,$\n\\[\\frac{BD}{\\sin x} = \\frac{AD}{\\sin B} \\quad \\Rightarrow \\quad \\sin x = \\frac{BD \\sin B}{AD}.\\]By the Law of Sines in triangle $AEC,$\n\\[\\frac{CE}{\\sin z} = \\frac{AE}{\\sin C} \\quad \\Rightarrow \\quad \\sin z = \\frac{CE \\sin C}{AE}.\\]Hence,\n\\begin{align*}\n\\frac{\\sin (x + y) \\sin (y + z)}{\\sin x \\sin z} &= \\frac{\\frac{BE \\sin B}{AE} \\cdot \\frac{CD \\sin C}{AD}}{\\frac{BD \\sin B}{AD} \\cdot \\frac{CE \\sin C}{AE}} \\\\\n&= \\frac{BE \\cdot CD}{BD \\cdot CE} \\\\\n&= \\frac{2BD \\cdot 2CE}{BD \\cdot CE} = \\boxed{4}.\n\\end{align*}",
+    "is_solved": false,
+    "model_solution": "Step 1: Apply the Law of Sines to triangles BAD and BAE to find expressions for sin x and sin y, and for sin z.\n\\[\\frac{\\sin x}{\\sin y} = \\frac{BD}{AD},\\]\n\\[\\frac{\\sin y}{\\sin z} = \\frac{DE}{AE}.\\]\nStep 2: Square the equations in Step 1 and use the equality of the two expressions to find an expression for \\[\\frac{\\sin^2 x}{\\sin^2 y} = \\frac{BD^2}{AD^2} = \\frac{DE^2}{AE^2} = \\frac{\\sin^2 y}{\\sin^2 z}.\\]\n\\begin{align*}\n\\frac{\\sin^2 x}{\\sin^2 y} &= \\frac{BD^2}{AD^2} = \\frac{DE^2}{AE^2} = \\frac{\\sin^2 y}{\\sin^2 z} \\\\\n\\Rightarrow\\qquad\\qquad \\sin^2 x \\sin^2 z &= \\sin^2 y \\sin^2 y\\\\\n\\Rightarrow\\qquad\\qquad \\sin^2 x \\sin^2 z &= \\sin^4 y\\\\\n\\end{align*}\n\\[\\frac{\\sin^2 x \\sin^2 z}{\\sin^4 y} = \\frac{\\frac{\\sin (x + y) \\sin (y + z)}{\\sin x \\sin z}}{\\sin^2 (y + z)}.\\]\n\\[\\frac{\\sin (x + y) \\sin (y + z)}{\\sin x \\sin z} = \\frac{\\sin^4 y}{\\sin^2 (y + z) \\sin^2 x \\sin^2 z}.\\]\n\\begin{align*}\n\\sin^2 (y + z) &= \\sin^2 y \\cos^2 z + \\sin^2 z \\cos^2 y\\\\\n&= \\sin^2 y (1 - \\sin^2 z) + \\sin^2 z (1 - \\sin^2 y)\\\\\n&= \\sin^2 y - \\sin^2 y \\sin^2 z + \\sin^2 z - \\sin^2 z \\sin^2 y\\\\\n&= \\sin^2 y + \\sin^2 z - \\sin^2 y \\sin^2 z - \\sin^2 z \\sin^2 y\\\\\n\\end{align*}\n\\[\\frac{\\sin (x + y) \\sin (y + z)}{\\sin x \\sin z} = \\frac{\\sin^4 y}{\\sin^2 (y + z) \\sin^2 x \\sin^2 z}.\\]\n\\begin{align*}\n&= \\frac{\\sin^4 y}{(\\sin^2 y + \\sin^2 z - \\sin^2 y \\sin^2 z - \\sin^2 z \\sin^2 y)\\sin^2 x \\sin^2 z}\\\\\n&= \\frac{\\sin^4 y}{\\sin^2 y \\sin^2 z + \\sin^2 z \\sin^2 y - \\sin^2 y \\sin^2 z \\sin^2 y - \\sin^2 z \\sin^2 y \\sin^2 z}\\\\\n&= \\frac{\\sin^4 y}{\\sin^2 y \\sin^2 z + \\sin^2 z \\sin^2 y - \\sin^2 y \\sin^2 z \\sin^2 y - \\sin^2 z \\sin^2 y \\sin^2 z}\\\\\n&= \\frac\n\\begin{align*}\n&= \\frac{\\sin^4 y}{\\sin^4 y - \\sin^4 z}\\\\\n&= 1 + \\frac{\\sin^4 z}{\\sin^4 y - \\sin^4 z}\\\\\n&= 1 + \\frac{(\\sin^2 z)^2}{(\\sin^2 y - \\sin^2 z)(\\sin^2 y + \\sin^2 z)} \\qquad \\text{by difference of squares}\\\\\n&= 1 + \\frac{(\\sin^2 z)^2}{(\\sin^2 y - \\sin^2 z)^2 + 2 \\sin^2 z \\sin^2 y}\n\\begin{align*}\n&= 1 + \\frac{(\\sin^2 z)^2}{(\\sin^2 y - \\sin^2 z)^2 + 2 \\sin^2 z \\sin^2 y} \\\\\n&= 1 + \\frac{(\\sin^2 z)^2}{(\\sin^2 y - \\sin^2 z)^2 + \\sin^2 y \\sin^2 z} \\\\\n&= 1 + \\frac{\\sin^2 z}{\\sin^2 y - \\sin^2 z + \\sin^2 y} \\\\\n&= 1 + \\frac{\\sin^2 z}{2 \\sin^2 y - \\sin^2 z} \\\\\n&= 1 + \\frac{\\sin^2 z}{2 \\sin^2 y - \\sin^2 z} \\\\\n&= 1 + \\frac{\\sin^2 z}{2 \\sin^2 y - \\sin^2 z} \\\\\n&= 1 + \\frac{\\frac{1}{2} \\sin^2 z}{\\sin^2 y - \\frac{1}{2} \\sin^2 z} \\\\\n&= 1 +\n1 + \\frac{\\frac{1}{2} \\sin^2 z}{\\sin^2 y - \\frac{1}{2} \\sin^2 z}",
+    "steps": [
+        "Step 1: Apply the Law of Sines to triangles BAD and BAE to find expressions for sin x and sin y, and for sin z.\n\\[\\frac{\\sin x}{\\sin y} = \\frac{BD}{AD},\\]\n\\[\\frac{\\sin y}{\\sin z} = \\frac{DE}{AE}.\\]",
+        "Step 2: Square the equations in Step 1 and use the equality of the two expressions to find an expression for \\[\\frac{\\sin^2 x}{\\sin^2 y} = \\frac{BD^2}{AD^2} = \\frac{DE^2}{AE^2} = \\frac{\\sin^2 y}{\\sin^2 z}.\\]",
+        "\\begin{align*}\n\\frac{\\sin^2 x}{\\sin^2 y} &= \\frac{BD^2}{AD^2} = \\frac{DE^2}{AE^2} = \\frac{\\sin^2 y}{\\sin^2 z} \\\\\n\\Rightarrow\\qquad\\qquad \\sin^2 x \\sin^2 z &= \\sin^2 y \\sin^2 y\\\\\n\\Rightarrow\\qquad\\qquad \\sin^2 x \\sin^2 z &= \\sin^4 y\\\\\n\\end{align*}",
+        "\\[\\frac{\\sin^2 x \\sin^2 z}{\\sin^4 y} = \\frac{\\frac{\\sin (x + y) \\sin (y + z)}{\\sin x \\sin z}}{\\sin^2 (y + z)}.\\]",
+        "\\[\\frac{\\sin (x + y) \\sin (y + z)}{\\sin x \\sin z} = \\frac{\\sin^4 y}{\\sin^2 (y + z) \\sin^2 x \\sin^2 z}.\\]",
+        "\\begin{align*}\n\\sin^2 (y + z) &= \\sin^2 y \\cos^2 z + \\sin^2 z \\cos^2 y\\\\\n&= \\sin^2 y (1 - \\sin^2 z) + \\sin^2 z (1 - \\sin^2 y)\\\\\n&= \\sin^2 y - \\sin^2 y \\sin^2 z + \\sin^2 z - \\sin^2 z \\sin^2 y\\\\\n&= \\sin^2 y + \\sin^2 z - \\sin^2 y \\sin^2 z - \\sin^2 z \\sin^2 y\\\\\n\\end{align*}",
+        "\\[\\frac{\\sin (x + y) \\sin (y + z)}{\\sin x \\sin z} = \\frac{\\sin^4 y}{\\sin^2 (y + z) \\sin^2 x \\sin^2 z}.\\]\n\\begin{align*}\n&= \\frac{\\sin^4 y}{(\\sin^2 y + \\sin^2 z - \\sin^2 y \\sin^2 z - \\sin^2 z \\sin^2 y)\\sin^2 x \\sin^2 z}\\\\\n&= \\frac{\\sin^4 y}{\\sin^2 y \\sin^2 z + \\sin^2 z \\sin^2 y - \\sin^2 y \\sin^2 z \\sin^2 y - \\sin^2 z \\sin^2 y \\sin^2 z}\\\\\n&= \\frac{\\sin^4 y}{\\sin^2 y \\sin^2 z + \\sin^2 z \\sin^2 y - \\sin^2 y \\sin^2 z \\sin^2 y - \\sin^2 z \\sin^2 y \\sin^2 z}\\\\\n&= \\frac",
+        "\\begin{align*}\n&= \\frac{\\sin^4 y}{\\sin^4 y - \\sin^4 z}\\\\\n&= 1 + \\frac{\\sin^4 z}{\\sin^4 y - \\sin^4 z}\\\\\n&= 1 + \\frac{(\\sin^2 z)^2}{(\\sin^2 y - \\sin^2 z)(\\sin^2 y + \\sin^2 z)} \\qquad \\text{by difference of squares}\\\\\n&= 1 + \\frac{(\\sin^2 z)^2}{(\\sin^2 y - \\sin^2 z)^2 + 2 \\sin^2 z \\sin^2 y}",
+        "\\begin{align*}\n&= 1 + \\frac{(\\sin^2 z)^2}{(\\sin^2 y - \\sin^2 z)^2 + 2 \\sin^2 z \\sin^2 y} \\\\\n&= 1 + \\frac{(\\sin^2 z)^2}{(\\sin^2 y - \\sin^2 z)^2 + \\sin^2 y \\sin^2 z} \\\\\n&= 1 + \\frac{\\sin^2 z}{\\sin^2 y - \\sin^2 z + \\sin^2 y} \\\\\n&= 1 + \\frac{\\sin^2 z}{2 \\sin^2 y - \\sin^2 z} \\\\\n&= 1 + \\frac{\\sin^2 z}{2 \\sin^2 y - \\sin^2 z} \\\\\n&= 1 + \\frac{\\sin^2 z}{2 \\sin^2 y - \\sin^2 z} \\\\\n&= 1 + \\frac{\\frac{1}{2} \\sin^2 z}{\\sin^2 y - \\frac{1}{2} \\sin^2 z} \\\\\n&= 1 +",
+        "1 + \\frac{\\frac{1}{2} \\sin^2 z}{\\sin^2 y - \\frac{1}{2} \\sin^2 z}"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Apply the Law of Sines to triangles BAD and BAE to find expressions for sin x and sin y, and for sin z.\n\\[\\frac{\\sin x}{\\sin y} = \\frac{BD}{AD},\\]\n\\[\\frac{\\sin y}{\\sin z} = \\frac{DE}{AE}.\\]",
+            1
+        ],
+        [
+            "Step 2: Square the equations in Step 1 and use the equality of the two expressions to find an expression for \\[\\frac{\\sin^2 x}{\\sin^2 y} = \\frac{BD^2}{AD^2} = \\frac{DE^2}{AE^2} = \\frac{\\sin^2 y}{\\sin^2 z}.\\]",
+            1
+        ],
+        [
+            "\\begin{align*}\n\\frac{\\sin^2 x}{\\sin^2 y} &= \\frac{BD^2}{AD^2} = \\frac{DE^2}{AE^2} = \\frac{\\sin^2 y}{\\sin^2 z} \\\\\n\\Rightarrow\\qquad\\qquad \\sin^2 x \\sin^2 z &= \\sin^2 y \\sin^2 y\\\\\n\\Rightarrow\\qquad\\qquad \\sin^2 x \\sin^2 z &= \\sin^4 y\\\\\n\\end{align*}",
+            1
+        ],
+        [
+            "\\[\\frac{\\sin^2 x \\sin^2 z}{\\sin^4 y} = \\frac{\\frac{\\sin (x + y) \\sin (y + z)}{\\sin x \\sin z}}{\\sin^2 (y + z)}.\\]",
+            1
+        ],
+        [
+            "\\[\\frac{\\sin (x + y) \\sin (y + z)}{\\sin x \\sin z} = \\frac{\\sin^4 y}{\\sin^2 (y + z) \\sin^2 x \\sin^2 z}.\\]",
+            1
+        ],
+        [
+            "\\begin{align*}\n\\sin^2 (y + z) &= \\sin^2 y \\cos^2 z + \\sin^2 z \\cos^2 y\\\\\n&= \\sin^2 y (1 - \\sin^2 z) + \\sin^2 z (1 - \\sin^2 y)\\\\\n&= \\sin^2 y - \\sin^2 y \\sin^2 z + \\sin^2 z - \\sin^2 z \\sin^2 y\\\\\n&= \\sin^2 y + \\sin^2 z - \\sin^2 y \\sin^2 z - \\sin^2 z \\sin^2 y\\\\\n\\end{align*}",
+            1
+        ],
+        [
+            "\\[\\frac{\\sin (x + y) \\sin (y + z)}{\\sin x \\sin z} = \\frac{\\sin^4 y}{\\sin^2 (y + z) \\sin^2 x \\sin^2 z}.\\]\n\\begin{align*}\n&= \\frac{\\sin^4 y}{(\\sin^2 y + \\sin^2 z - \\sin^2 y \\sin^2 z - \\sin^2 z \\sin^2 y)\\sin^2 x \\sin^2 z}\\\\\n&= \\frac{\\sin^4 y}{\\sin^2 y \\sin^2 z + \\sin^2 z \\sin^2 y - \\sin^2 y \\sin^2 z \\sin^2 y - \\sin^2 z \\sin^2 y \\sin^2 z}\\\\\n&= \\frac{\\sin^4 y}{\\sin^2 y \\sin^2 z + \\sin^2 z \\sin^2 y - \\sin^2 y \\sin^2 z \\sin^2 y - \\sin^2 z \\sin^2 y \\sin^2 z}\\\\\n&= \\frac",
+            1
+        ],
+        [
+            "\\begin{align*}\n&= \\frac{\\sin^4 y}{\\sin^4 y - \\sin^4 z}\\\\\n&= 1 + \\frac{\\sin^4 z}{\\sin^4 y - \\sin^4 z}\\\\\n&= 1 + \\frac{(\\sin^2 z)^2}{(\\sin^2 y - \\sin^2 z)(\\sin^2 y + \\sin^2 z)} \\qquad \\text{by difference of squares}\\\\\n&= 1 + \\frac{(\\sin^2 z)^2}{(\\sin^2 y - \\sin^2 z)^2 + 2 \\sin^2 z \\sin^2 y}",
+            1
+        ],
+        [
+            "\\begin{align*}\n&= 1 + \\frac{(\\sin^2 z)^2}{(\\sin^2 y - \\sin^2 z)^2 + 2 \\sin^2 z \\sin^2 y} \\\\\n&= 1 + \\frac{(\\sin^2 z)^2}{(\\sin^2 y - \\sin^2 z)^2 + \\sin^2 y \\sin^2 z} \\\\\n&= 1 + \\frac{\\sin^2 z}{\\sin^2 y - \\sin^2 z + \\sin^2 y} \\\\\n&= 1 + \\frac{\\sin^2 z}{2 \\sin^2 y - \\sin^2 z} \\\\\n&= 1 + \\frac{\\sin^2 z}{2 \\sin^2 y - \\sin^2 z} \\\\\n&= 1 + \\frac{\\sin^2 z}{2 \\sin^2 y - \\sin^2 z} \\\\\n&= 1 + \\frac{\\frac{1}{2} \\sin^2 z}{\\sin^2 y - \\frac{1}{2} \\sin^2 z} \\\\\n&= 1 +",
+            1
+        ],
+        [
+            "1 + \\frac{\\frac{1}{2} \\sin^2 z}{\\sin^2 y - \\frac{1}{2} \\sin^2 z}",
+            1
+        ]
+    ],
+    "time": 135.63278913497925,
+    "total_tokens": 14801,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

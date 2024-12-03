@@ -1,0 +1,61 @@
+{
+    "problem": "For a matrix $\\mathbf{M},$ the trace of $\\mathbf{M}$ is defined as the sum of its diagonal elements.  For example,\n\\[\\operatorname{Tr} \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} = a + d.\\]Given $\\operatorname{Tr} (\\mathbf{A}) = 2$ and $\\operatorname{Tr} (\\mathbf{A}^2) = 30,$ find $\\det \\mathbf{A}.$",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "Let $\\mathbf{A} = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}.$  Then $a + d = 2.$  Also,\n\\[\\mathbf{A}^2 = \\begin{pmatrix} a^2 + bc & ab + bd \\\\ ac + cd & bc + d^2 \\end{pmatrix},\\]so $a^2 + 2bc + d^2 = 30.$  We want to compute $\\det \\mathbf{A} = ad - bc.$\n\nSquaring $a + d = 2,$ we get $a^2 + 2ad + d^2 = 4.$  Subtracting the equation $a^2 + 2bc + d^2 = 30,$ we find\n\\[2ad - 2bc = 4 - 30 = -26,\\]so $ad - bc = \\boxed{-13}.$",
+    "is_solved": true,
+    "model_solution": "Step 1: We are given that $\\operatorname{Tr} (\\mathbf{A}) = 2$ and $\\operatorname{Tr} (\\mathbf{A}^2) = 30.$ We need to use these to find $\\det \\mathbf{A}.$\nStep 2: Letting $\\lambda$ be an eigenvalue of $\\mathbf{A}$ and $x$ be the corresponding eigenvector, we know that\n\\[\\mathbf{A}x = \\lambda x,\\]\n\\[\\mathbf{A}^2x = \\lambda^2 x.\\]\nTaking the trace of both sides of the equations and adding, we have\n\\[\\operatorname{Tr} (\\mathbf{A}) + \\operatorname{Tr} (\\mathbf{A}^2) = \\operatorname{Tr} (\\mathbf{A}) + \\operatorname{Tr} (\\lambda^2 \\mathbf{I}) = \\operatorname{Tr} (\\mathbf{A}) + \\sum \\lambda^2 = 2 + 30 = 32.\\]\nWe can use the identity\n\\[\\sum \\lambda^2 = (\\operatorname{Tr} (\\mathbf{A}))^2 - 2\\det \\mathbf{A}.\\]\nto find $\\det \\mathbf{A}.$\nSubstitute $\\sum \\lambda^2 = (\\operatorname{Tr} (\\mathbf{A}))^2 - 2\\det \\mathbf{A}$ into the equation $32 = \\operatorname{Tr} (\\mathbf{A}) + \\sum \\lambda^2$, then solve for $\\det \\mathbf{A}.$\nSubstitute the expressions for $\\sum \\lambda^2$ and $\\operatorname{Tr} (\\mathbf{A})$ into the equation $32 = \\operatorname{Tr} (\\mathbf{A}) + \\sum \\lambda^2$ to obtain $32 = 2 + (\\operatorname{Tr} (\\mathbf{A}))^2 - 2\\det \\mathbf{A}.$ Solve for $\\det \\mathbf{A}.$\nStep 3:\n$32 = 2 + (\\operatorname{Tr} (\\mathbf{A}))^2 - 2\\det \\mathbf{A}$\n\n$2 + (\\operatorname{Tr} (\\mathbf{A}))^2 = 32$\n\n$2 + 2^2 = 32$\n\n$6 = 32$\n\n$-24 = -2\\det \\mathbf{A}$\n$\\det \\mathbf{A} = 12$\n$-24 = -2\\det \\mathbf{A}$\n$\\det \\mathbf{A} = 12$\n$-24 = -2\\det \\mathbf{A}$\n$\\det \\mathbf{A} = 12$",
+    "steps": [
+        "Step 1: We are given that $\\operatorname{Tr} (\\mathbf{A}) = 2$ and $\\operatorname{Tr} (\\mathbf{A}^2) = 30.$ We need to use these to find $\\det \\mathbf{A}.$",
+        "Step 2: Letting $\\lambda$ be an eigenvalue of $\\mathbf{A}$ and $x$ be the corresponding eigenvector, we know that\n\\[\\mathbf{A}x = \\lambda x,\\]\n\\[\\mathbf{A}^2x = \\lambda^2 x.\\]\nTaking the trace of both sides of the equations and adding, we have\n\\[\\operatorname{Tr} (\\mathbf{A}) + \\operatorname{Tr} (\\mathbf{A}^2) = \\operatorname{Tr} (\\mathbf{A}) + \\operatorname{Tr} (\\lambda^2 \\mathbf{I}) = \\operatorname{Tr} (\\mathbf{A}) + \\sum \\lambda^2 = 2 + 30 = 32.\\]\nWe can use the identity\n\\[\\sum \\lambda^2 = (\\operatorname{Tr} (\\mathbf{A}))^2 - 2\\det \\mathbf{A}.\\]\nto find $\\det \\mathbf{A}.$",
+        "Substitute $\\sum \\lambda^2 = (\\operatorname{Tr} (\\mathbf{A}))^2 - 2\\det \\mathbf{A}$ into the equation $32 = \\operatorname{Tr} (\\mathbf{A}) + \\sum \\lambda^2$, then solve for $\\det \\mathbf{A}.$",
+        "Substitute the expressions for $\\sum \\lambda^2$ and $\\operatorname{Tr} (\\mathbf{A})$ into the equation $32 = \\operatorname{Tr} (\\mathbf{A}) + \\sum \\lambda^2$ to obtain $32 = 2 + (\\operatorname{Tr} (\\mathbf{A}))^2 - 2\\det \\mathbf{A}.$ Solve for $\\det \\mathbf{A}.$",
+        "Step 3:\n$32 = 2 + (\\operatorname{Tr} (\\mathbf{A}))^2 - 2\\det \\mathbf{A}$\n\n$2 + (\\operatorname{Tr} (\\mathbf{A}))^2 = 32$\n\n$2 + 2^2 = 32$\n\n$6 = 32$\n\n$-24 = -2\\det \\mathbf{A}$",
+        "$\\det \\mathbf{A} = 12$",
+        "$-24 = -2\\det \\mathbf{A}$\n$\\det \\mathbf{A} = 12$",
+        "$-24 = -2\\det \\mathbf{A}$",
+        "$\\det \\mathbf{A} = 12$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: We are given that $\\operatorname{Tr} (\\mathbf{A}) = 2$ and $\\operatorname{Tr} (\\mathbf{A}^2) = 30.$ We need to use these to find $\\det \\mathbf{A}.$",
+            1
+        ],
+        [
+            "Step 2: Letting $\\lambda$ be an eigenvalue of $\\mathbf{A}$ and $x$ be the corresponding eigenvector, we know that\n\\[\\mathbf{A}x = \\lambda x,\\]\n\\[\\mathbf{A}^2x = \\lambda^2 x.\\]\nTaking the trace of both sides of the equations and adding, we have\n\\[\\operatorname{Tr} (\\mathbf{A}) + \\operatorname{Tr} (\\mathbf{A}^2) = \\operatorname{Tr} (\\mathbf{A}) + \\operatorname{Tr} (\\lambda^2 \\mathbf{I}) = \\operatorname{Tr} (\\mathbf{A}) + \\sum \\lambda^2 = 2 + 30 = 32.\\]\nWe can use the identity\n\\[\\sum \\lambda^2 = (\\operatorname{Tr} (\\mathbf{A}))^2 - 2\\det \\mathbf{A}.\\]\nto find $\\det \\mathbf{A}.$",
+            1
+        ],
+        [
+            "Substitute $\\sum \\lambda^2 = (\\operatorname{Tr} (\\mathbf{A}))^2 - 2\\det \\mathbf{A}$ into the equation $32 = \\operatorname{Tr} (\\mathbf{A}) + \\sum \\lambda^2$, then solve for $\\det \\mathbf{A}.$",
+            1
+        ],
+        [
+            "Substitute the expressions for $\\sum \\lambda^2$ and $\\operatorname{Tr} (\\mathbf{A})$ into the equation $32 = \\operatorname{Tr} (\\mathbf{A}) + \\sum \\lambda^2$ to obtain $32 = 2 + (\\operatorname{Tr} (\\mathbf{A}))^2 - 2\\det \\mathbf{A}.$ Solve for $\\det \\mathbf{A}.$",
+            1
+        ],
+        [
+            "Step 3:\n$32 = 2 + (\\operatorname{Tr} (\\mathbf{A}))^2 - 2\\det \\mathbf{A}$\n\n$2 + (\\operatorname{Tr} (\\mathbf{A}))^2 = 32$\n\n$2 + 2^2 = 32$\n\n$6 = 32$\n\n$-24 = -2\\det \\mathbf{A}$",
+            1
+        ],
+        [
+            "$\\det \\mathbf{A} = 12$",
+            1
+        ],
+        [
+            "$-24 = -2\\det \\mathbf{A}$\n$\\det \\mathbf{A} = 12$",
+            1
+        ],
+        [
+            "$-24 = -2\\det \\mathbf{A}$",
+            1
+        ],
+        [
+            "$\\det \\mathbf{A} = 12$",
+            1
+        ]
+    ],
+    "time": 118.6311264038086,
+    "total_tokens": 11302,
+    "final_answer_tokens": 783,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,66 @@
+{
+    "problem": "If $x$ is an integer and $x^6-2x^5+2x^3-2x+1=292$, find $x$.",
+    "level": "Level 4",
+    "type": "Algebra",
+    "solution": "We could subtract $292$ to the other side and try to solve the sixth-degree equation, but that would be ugly and we have no guarantee that it would even work. We notice that we can add a $x^4-x^4 + x^2 - x^2$ to the polynomial without changing its value: $$x^6-2x^5+(x^4-x^4)+2x^3+(x^2-x^2)-2x+1=292.$$ We regroup the terms and factor the left side, leaving the $292$ alone. \\begin{align*}\n(x^6-2x^5+x^4)+(-x^4+2x^3+-x^2)+(x^2-2x+1)&=292\\\\\nx^4(x^2-2x+1)-x^2(x^2-2x+1)+1(x^2-2x+1)&=292\\\\\n(x^2-2x+1)(x^4-x^2+1)&=292\\\\\n(x-1)^2(x^4-x^2+1)&=292.\n\\end{align*} To see a different way of obtaining this factorization, we could also group the $x^6$ and $1$ terms together and factor, giving: \\begin{align*}\n(x^6+1)+(-2x^5+2x^3-2x)&=292\\\\\n(x^2+1)(x^4-x^2+1)-2x(x^4-x^2+1)&=292\\\\\n(x^4-x^2+1)(x^2+1-2x)&=292\\\\\n(x^4-x^2+1)(x-1)^2&=292.\\\\\n\\end{align*} Since $x$ is an integer, then $x^4-x^2+1$ and $x-1$ are integers, so they must be factors of $292$. The prime factorization of $292$ is $2^2\\cdot 73$. The value $(x-1)^2$ must be a square which divides $292$, and we can see that the only squares which divide $292$ are $1$ and $4$.\n\nIf $(x-1)^2=1$, then $x-1=\\pm 1$, and $x=2$ or $x=0$. If $x=0$, it's easy to see from the original equation that it won't work, since the left side of the original equation would be $1$ while the right side would be $292$. If $x=2$, then the left side would equal $(2^4-2^2+1)(2-1)^2=(16-4+1)(1)^2=13\\neq 292$. So both values of $x$ are impossible.\n\nThus $(x-1)^2=4$, so $x-1=\\pm 2$ and $x=3$ or $x=-1$. If $x=-1$, then we have the left side as $((-1)^4-(-1)^2+1)((-1)-1)^2=(1-1+1)(-2)^2=1(4)=4\\neq 292$. If $x=3$, then we have $(3^4-3^2+1)(3-1)^2=(81-9+1)(2^2)=73\\cdot2^2=292$ as desired. Thus the only possibility for $x$ is $\\boxed{3}$.",
+    "is_solved": false,
+    "model_solution": "## Step 1\nWe can begin by noticing that the left-hand side of the equation $x^6-2x^5+2x^3-2x+1=292$ can be written as $(x^3-1)^2(x^2+1)$ by factoring.\n\n## Step 2\nThe expression $(x^3-1)^2(x^2+1)$ can be further simplified by factoring $x^3-1$ using the difference of cubes identity, $a^3-b^3=(a-b)(a^2+ab+b^2)$, giving $(x-1)^3(x+1)^3(x^2+1)$\n## Step 3\nNow, we have $(x-1)^3(x+1)^3(x^2+1)=292$. Since $292=2\\cdot2\\cdot2\\cdot37$, we need to find $x$ such that $(x-1)^3(x+1)^3(x^2+1)$ is divisible by 2, 2, 2, and 37.\n\n## Step 4\nWe see that x must be odd for both $(x-1)$ and $(x+1)$ to be even, so that $(x-1)^3(x+1)^3(x^2+1)$ is divisible by 2 and 2, and 2. Also, since $x^2+1$ is always odd, $(x-1)^3(x+1)^3(x^2+1)$ must be divisible by 37.\n\n## Step 5\nTaking the cube root of both sides of the equation $(x-1)^3(x+1)^3(x^2+1)=292$, we get $|x-1|\\cdot |x+1| \\cdot |x^2+1| = \\sqrt[3]{292}$.\n## Step 6\n$(x-1)(x+1)=x^2-1$ and $x^2+1$ are both integers, so we need to find an integer $x$ such that $|x^2-1|\\cdot|x^2+1|=\\sqrt[3]{292}$. Since $\\sqrt[3]{292}$ is approximately 6.7, we can try integer values for $x$ such that $|x^2-1|$ and $|x^2+1|$ are close to 6.7.\n## Step 7\nTry $x=2$.\nIf $x=2$, then $|x^2-1|=|2^2-1|=|4-1|=|3|=3$ and $|x^2+1|=|2^2+1|=|4+1|=|5|=5$. Then, $|x^2-1|\\cdot|x^2+1|=3\\cdot 5=15$. However, 15 is not equal to $\\sqrt[3]{292}$, so this is not a solution.\n\n## Step 8\nTry $x=3$.\nIf $x=3$, then $|x^2-1|=|3^2-1|=|9-1|=|8|=8$ and $|x^2+1|=|3^2+1|=|9+1|=|10|=10$. Then, $|x^2-1|\\cdot|x^2+1|=8\\cdot 10=80$. However, 80 is not equal to $\\sqrt[3]{292}$, so this is not a solution.\n\n## Step 9\nTry $x=4$.\nIf $\n## Step 10\nIf $x=4$, then $|x^2-1|=|4^2-1|=|16-1|=|15|=15$ and $|x^2+1|=|4^2+1|=|16+1|=|17|=17$. Then, $|x^2-1|\\cdot|x^2+1|=15\\cdot 17=255$. However, 255 is not equal to $\\sqrt[3]{292}$, so this is not a solution.\n\n## Step 11\nTry $x=5$.\nIf $x=5$, then $|x^2-1|=|5^2-1|=|25-1|=|24|=24$ and $|x^2+1|=|5^2+1|=|25+1|=|26|=26$. Then, $|x^2-1|\\cdot|x^2+1|=24\\cdot 26=624$. However, 624 is not equal to $\\sqrt[3]{292}$, so this is not a solution.\n\n## Step 12\nTry $x=6$.\nIf $x=6$, then $|\n## Step 13\nIf $x=6$, then $|x^2-1|=|6^2-1|=|36-1|=|35|=35$ and $|x^2+1|=|6^2+1|=|36+1|=|37|=37$. Then, $|x^2-1|\\cdot|x^2+1|=35\\cdot 37=1295$. However, 1295 is not equal to $\\sqrt[3]{292}$, so this is not a solution.\nTry $x=7$.\n## Step 14\nIf $x=7$, then $|x^2-1|=|7^2-1|=|49-1|=|48|=48$ and $|x^2+1|=|7^2+1|=|49+1|=|50|=50$. Then, $|x^2-1|\\cdot|x^2+1|=48\\cdot 50=2400$. However, 2400 is not equal to $\\sqrt[3]{292}$, so this is not a solution.\nTry $x=8$.\nIf $x=8$, then $|x^2-1|=|8^2-1|=|64-1|=|63|=63$ and $|x^2+1|=|8^2+1|=|64+1|=|65|=65$. Then, $|x^2-1|\\cdot|x^2+1|=63\\cdot 65=4095$. However, 4095 is not equal to $\\sqrt[3]{292}$, so this is not a solution.\n## Step 15\nTry $x=3$, $x^2+1=10$, and $x^3-1=(x-1)^3(x+1)^3$. Therefore, $x^3-1=(3-1)^3(3+1)^3$ and $x^6-2x^5+2x^3-2x+1=(x^3-1)^2(x^2+1)=((3-1)^3(3+1)^3)^2(3^2+1)$. Therefore, $x^6-2x^5+2x^3-2x+1=292$.",
+    "steps": [
+        "## Step 1\nWe can begin by noticing that the left-hand side of the equation $x^6-2x^5+2x^3-2x+1=292$ can be written as $(x^3-1)^2(x^2+1)$ by factoring.\n\n## Step 2\nThe expression $(x^3-1)^2(x^2+1)$ can be further simplified by factoring $x^3-1$ using the difference of cubes identity, $a^3-b^3=(a-b)(a^2+ab+b^2)$, giving $(x-1)^3(x+1)^3(x^2+1)$",
+        "## Step 3\nNow, we have $(x-1)^3(x+1)^3(x^2+1)=292$. Since $292=2\\cdot2\\cdot2\\cdot37$, we need to find $x$ such that $(x-1)^3(x+1)^3(x^2+1)$ is divisible by 2, 2, 2, and 37.\n\n## Step 4\nWe see that x must be odd for both $(x-1)$ and $(x+1)$ to be even, so that $(x-1)^3(x+1)^3(x^2+1)$ is divisible by 2 and 2, and 2. Also, since $x^2+1$ is always odd, $(x-1)^3(x+1)^3(x^2+1)$ must be divisible by 37.\n\n## Step 5\nTaking the cube root of both sides of the equation $(x-1)^3(x+1)^3(x^2+1)=292$, we get $|x-1|\\cdot |x+1| \\cdot |x^2+1| = \\sqrt[3]{292}$.",
+        "## Step 6\n$(x-1)(x+1)=x^2-1$ and $x^2+1$ are both integers, so we need to find an integer $x$ such that $|x^2-1|\\cdot|x^2+1|=\\sqrt[3]{292}$. Since $\\sqrt[3]{292}$ is approximately 6.7, we can try integer values for $x$ such that $|x^2-1|$ and $|x^2+1|$ are close to 6.7.",
+        "## Step 7\nTry $x=2$.\nIf $x=2$, then $|x^2-1|=|2^2-1|=|4-1|=|3|=3$ and $|x^2+1|=|2^2+1|=|4+1|=|5|=5$. Then, $|x^2-1|\\cdot|x^2+1|=3\\cdot 5=15$. However, 15 is not equal to $\\sqrt[3]{292}$, so this is not a solution.\n\n## Step 8\nTry $x=3$.\nIf $x=3$, then $|x^2-1|=|3^2-1|=|9-1|=|8|=8$ and $|x^2+1|=|3^2+1|=|9+1|=|10|=10$. Then, $|x^2-1|\\cdot|x^2+1|=8\\cdot 10=80$. However, 80 is not equal to $\\sqrt[3]{292}$, so this is not a solution.\n\n## Step 9\nTry $x=4$.\nIf $",
+        "## Step 10\nIf $x=4$, then $|x^2-1|=|4^2-1|=|16-1|=|15|=15$ and $|x^2+1|=|4^2+1|=|16+1|=|17|=17$. Then, $|x^2-1|\\cdot|x^2+1|=15\\cdot 17=255$. However, 255 is not equal to $\\sqrt[3]{292}$, so this is not a solution.\n\n## Step 11\nTry $x=5$.\nIf $x=5$, then $|x^2-1|=|5^2-1|=|25-1|=|24|=24$ and $|x^2+1|=|5^2+1|=|25+1|=|26|=26$. Then, $|x^2-1|\\cdot|x^2+1|=24\\cdot 26=624$. However, 624 is not equal to $\\sqrt[3]{292}$, so this is not a solution.\n\n## Step 12\nTry $x=6$.\nIf $x=6$, then $|",
+        "## Step 13\nIf $x=6$, then $|x^2-1|=|6^2-1|=|36-1|=|35|=35$ and $|x^2+1|=|6^2+1|=|36+1|=|37|=37$. Then, $|x^2-1|\\cdot|x^2+1|=35\\cdot 37=1295$. However, 1295 is not equal to $\\sqrt[3]{292}$, so this is not a solution.",
+        "Try $x=7$.",
+        "## Step 14\nIf $x=7$, then $|x^2-1|=|7^2-1|=|49-1|=|48|=48$ and $|x^2+1|=|7^2+1|=|49+1|=|50|=50$. Then, $|x^2-1|\\cdot|x^2+1|=48\\cdot 50=2400$. However, 2400 is not equal to $\\sqrt[3]{292}$, so this is not a solution.",
+        "Try $x=8$.\nIf $x=8$, then $|x^2-1|=|8^2-1|=|64-1|=|63|=63$ and $|x^2+1|=|8^2+1|=|64+1|=|65|=65$. Then, $|x^2-1|\\cdot|x^2+1|=63\\cdot 65=4095$. However, 4095 is not equal to $\\sqrt[3]{292}$, so this is not a solution.",
+        "## Step 15\nTry $x=3$, $x^2+1=10$, and $x^3-1=(x-1)^3(x+1)^3$. Therefore, $x^3-1=(3-1)^3(3+1)^3$ and $x^6-2x^5+2x^3-2x+1=(x^3-1)^2(x^2+1)=((3-1)^3(3+1)^3)^2(3^2+1)$. Therefore, $x^6-2x^5+2x^3-2x+1=292$."
+    ],
+    "full_steps": [
+        [
+            "## Step 1\nWe can begin by noticing that the left-hand side of the equation $x^6-2x^5+2x^3-2x+1=292$ can be written as $(x^3-1)^2(x^2+1)$ by factoring.\n\n## Step 2\nThe expression $(x^3-1)^2(x^2+1)$ can be further simplified by factoring $x^3-1$ using the difference of cubes identity, $a^3-b^3=(a-b)(a^2+ab+b^2)$, giving $(x-1)^3(x+1)^3(x^2+1)$",
+            1
+        ],
+        [
+            "## Step 3\nNow, we have $(x-1)^3(x+1)^3(x^2+1)=292$. Since $292=2\\cdot2\\cdot2\\cdot37$, we need to find $x$ such that $(x-1)^3(x+1)^3(x^2+1)$ is divisible by 2, 2, 2, and 37.\n\n## Step 4\nWe see that x must be odd for both $(x-1)$ and $(x+1)$ to be even, so that $(x-1)^3(x+1)^3(x^2+1)$ is divisible by 2 and 2, and 2. Also, since $x^2+1$ is always odd, $(x-1)^3(x+1)^3(x^2+1)$ must be divisible by 37.\n\n## Step 5\nTaking the cube root of both sides of the equation $(x-1)^3(x+1)^3(x^2+1)=292$, we get $|x-1|\\cdot |x+1| \\cdot |x^2+1| = \\sqrt[3]{292}$.",
+            1
+        ],
+        [
+            "## Step 6\n$(x-1)(x+1)=x^2-1$ and $x^2+1$ are both integers, so we need to find an integer $x$ such that $|x^2-1|\\cdot|x^2+1|=\\sqrt[3]{292}$. Since $\\sqrt[3]{292}$ is approximately 6.7, we can try integer values for $x$ such that $|x^2-1|$ and $|x^2+1|$ are close to 6.7.",
+            1
+        ],
+        [
+            "## Step 7\nTry $x=2$.\nIf $x=2$, then $|x^2-1|=|2^2-1|=|4-1|=|3|=3$ and $|x^2+1|=|2^2+1|=|4+1|=|5|=5$. Then, $|x^2-1|\\cdot|x^2+1|=3\\cdot 5=15$. However, 15 is not equal to $\\sqrt[3]{292}$, so this is not a solution.\n\n## Step 8\nTry $x=3$.\nIf $x=3$, then $|x^2-1|=|3^2-1|=|9-1|=|8|=8$ and $|x^2+1|=|3^2+1|=|9+1|=|10|=10$. Then, $|x^2-1|\\cdot|x^2+1|=8\\cdot 10=80$. However, 80 is not equal to $\\sqrt[3]{292}$, so this is not a solution.\n\n## Step 9\nTry $x=4$.\nIf $",
+            1
+        ],
+        [
+            "## Step 10\nIf $x=4$, then $|x^2-1|=|4^2-1|=|16-1|=|15|=15$ and $|x^2+1|=|4^2+1|=|16+1|=|17|=17$. Then, $|x^2-1|\\cdot|x^2+1|=15\\cdot 17=255$. However, 255 is not equal to $\\sqrt[3]{292}$, so this is not a solution.\n\n## Step 11\nTry $x=5$.\nIf $x=5$, then $|x^2-1|=|5^2-1|=|25-1|=|24|=24$ and $|x^2+1|=|5^2+1|=|25+1|=|26|=26$. Then, $|x^2-1|\\cdot|x^2+1|=24\\cdot 26=624$. However, 624 is not equal to $\\sqrt[3]{292}$, so this is not a solution.\n\n## Step 12\nTry $x=6$.\nIf $x=6$, then $|",
+            1
+        ],
+        [
+            "## Step 13\nIf $x=6$, then $|x^2-1|=|6^2-1|=|36-1|=|35|=35$ and $|x^2+1|=|6^2+1|=|36+1|=|37|=37$. Then, $|x^2-1|\\cdot|x^2+1|=35\\cdot 37=1295$. However, 1295 is not equal to $\\sqrt[3]{292}$, so this is not a solution.",
+            1
+        ],
+        [
+            "Try $x=7$.",
+            1
+        ],
+        [
+            "## Step 14\nIf $x=7$, then $|x^2-1|=|7^2-1|=|49-1|=|48|=48$ and $|x^2+1|=|7^2+1|=|49+1|=|50|=50$. Then, $|x^2-1|\\cdot|x^2+1|=48\\cdot 50=2400$. However, 2400 is not equal to $\\sqrt[3]{292}$, so this is not a solution.",
+            1
+        ],
+        [
+            "Try $x=8$.\nIf $x=8$, then $|x^2-1|=|8^2-1|=|64-1|=|63|=63$ and $|x^2+1|=|8^2+1|=|64+1|=|65|=65$. Then, $|x^2-1|\\cdot|x^2+1|=63\\cdot 65=4095$. However, 4095 is not equal to $\\sqrt[3]{292}$, so this is not a solution.",
+            1
+        ],
+        [
+            "## Step 15\nTry $x=3$, $x^2+1=10$, and $x^3-1=(x-1)^3(x+1)^3$. Therefore, $x^3-1=(3-1)^3(3+1)^3$ and $x^6-2x^5+2x^3-2x+1=(x^3-1)^2(x^2+1)=((3-1)^3(3+1)^3)^2(3^2+1)$. Therefore, $x^6-2x^5+2x^3-2x+1=292$.",
+            1
+        ]
+    ],
+    "time": 132.606867313385,
+    "total_tokens": 20350,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

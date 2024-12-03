@@ -1,0 +1,26 @@
+{
+    "problem": "Let $w,$ $x,$ $y,$ and $z,$ be positive real numbers.  Find the maximum value of\n\\[\\frac{wx + xy + yz}{w^2 + x^2 + y^2 + z^2}.\\]",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "We want to prove an inequality of the form\n\\[\\frac{wx + xy + yz}{w^2 + x^2 + y^2 + z^2} \\le k,\\]or $w^2 + x^2 + y^2 + z^2 \\ge \\frac{1}{k} (wx + xy + yz).$  Our strategy is to divide $w^2 + x^2 + y^2 + z^2$ into several expressions, apply AM-GM to each expression, and come up with a multiple of $wx + xy + yz.$\n\nSince the expressions are symmetric with respect to $w$ and $z,$ and symmetric with respect to $x$ and $y,$ we try to divide $w^2 + x^2 + y^2 + z^2$ into\n\\[(w^2 + ax^2) + [(1 - a)x^2 + (1 - a)y^2] + (ay^2 + z^2).\\]Then by AM-GM,\n\\begin{align*}\nw^2 + ax^2 &\\ge 2 \\sqrt{(w^2)(ax^2)} = 2wx \\sqrt{a}, \\\\\n(1 - a)x^2 + (1 - a)y^2 &\\ge 2(1 - a)xy, \\\\\nay^2 + z^2 &\\ge 2 \\sqrt{(ay^2)(z^2)} = 2yz \\sqrt{a}.\n\\end{align*}In order to get a multiple of $wx + xy + yz,$ we want all the coefficient of $wx,$ $xy,$ and $yz$ to be equal.  Thus, we want an $a$ so that\n\\[2 \\sqrt{a} = 2(1 - a).\\]Then $\\sqrt{a} = 1 - a.$  Squaring both sides, we get $a = (1 - a)^2 = a^2 - 2a + 1,$ so $a^2 - 3a + 1 = 0.$  By the quadratic formula,\n\\[a = \\frac{3 \\pm \\sqrt{5}}{2}.\\]Since we want $a$ between 0 and 1, we take\n\\[a = \\frac{3 - \\sqrt{5}}{2}.\\]Then\n\\[w^2 + x^2 + y^2 + z^2 \\ge 2(1 - a)(wx + xy + yz),\\]or\n\\[\\frac{wx + xy + yz}{w^2 + x^2 + y^2 + z^2} \\le \\frac{1}{2(1 - a)} = \\frac{1}{\\sqrt{5} - 1} = \\frac{1 + \\sqrt{5}}{4}.\\]Equality occurs when $w = x \\sqrt{a} = y \\sqrt{a} = z.$  Hence, the maximum value is $\\boxed{\\frac{1 + \\sqrt{5}}{4}}.$",
+    "is_solved": false,
+    "model_solution": "## Step 1: We can apply the AM-GM inequality to the expression $w^2 + x^2 + y^2 + z^2.$\n\\[w^2 + x^2 + y^2 + z^2 \\ge 4 \\sqrt[4]{w^2x^2y^2z^2} = 4wxyz\\]\n\n## Step 2: Divide both sides of the inequality by $4wxyz$ to get\n\\[\\frac{w^2 + x^2 + y^2 + z^2}{4wxyz} \\ge 1.\\]\n\n## Step 3: Multiply both sides of the inequality by $\\frac{wx + xy + yz}{wxyz}$ to get\n\\[\\frac{wx + xy + yz}{w^2 + x^2 + y^2 + z^2} \\le \\frac{\\frac{wx + xy + yz}{wxyz}}{4}.\\]\n\n## Step 4: We can apply the AM-GM inequality to the expression $\\frac{wx + xy + yz}{wxyz}.$\n\\[\\frac{wx + xy + yz}{wxyz\n## Step 5: \\[\\frac{wx + xy + yz}{wxyz} \\le \\frac{(3/2)w^{\\frac{1}{3}}x^{\\frac{1}{3}}y^{\\frac{1}{3}}z^{\\frac{1}{3}}}{wxyz} = \\frac{3}{2}.\\]",
+    "steps": [
+        "## Step 1: We can apply the AM-GM inequality to the expression $w^2 + x^2 + y^2 + z^2.$\n\\[w^2 + x^2 + y^2 + z^2 \\ge 4 \\sqrt[4]{w^2x^2y^2z^2} = 4wxyz\\]\n\n## Step 2: Divide both sides of the inequality by $4wxyz$ to get\n\\[\\frac{w^2 + x^2 + y^2 + z^2}{4wxyz} \\ge 1.\\]\n\n## Step 3: Multiply both sides of the inequality by $\\frac{wx + xy + yz}{wxyz}$ to get\n\\[\\frac{wx + xy + yz}{w^2 + x^2 + y^2 + z^2} \\le \\frac{\\frac{wx + xy + yz}{wxyz}}{4}.\\]\n\n## Step 4: We can apply the AM-GM inequality to the expression $\\frac{wx + xy + yz}{wxyz}.$\n\\[\\frac{wx + xy + yz}{wxyz",
+        "## Step 5: \\[\\frac{wx + xy + yz}{wxyz} \\le \\frac{(3/2)w^{\\frac{1}{3}}x^{\\frac{1}{3}}y^{\\frac{1}{3}}z^{\\frac{1}{3}}}{wxyz} = \\frac{3}{2}.\\]"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: We can apply the AM-GM inequality to the expression $w^2 + x^2 + y^2 + z^2.$\n\\[w^2 + x^2 + y^2 + z^2 \\ge 4 \\sqrt[4]{w^2x^2y^2z^2} = 4wxyz\\]\n\n## Step 2: Divide both sides of the inequality by $4wxyz$ to get\n\\[\\frac{w^2 + x^2 + y^2 + z^2}{4wxyz} \\ge 1.\\]\n\n## Step 3: Multiply both sides of the inequality by $\\frac{wx + xy + yz}{wxyz}$ to get\n\\[\\frac{wx + xy + yz}{w^2 + x^2 + y^2 + z^2} \\le \\frac{\\frac{wx + xy + yz}{wxyz}}{4}.\\]\n\n## Step 4: We can apply the AM-GM inequality to the expression $\\frac{wx + xy + yz}{wxyz}.$\n\\[\\frac{wx + xy + yz}{wxyz",
+            1
+        ],
+        [
+            "## Step 5: \\[\\frac{wx + xy + yz}{wxyz} \\le \\frac{(3/2)w^{\\frac{1}{3}}x^{\\frac{1}{3}}y^{\\frac{1}{3}}z^{\\frac{1}{3}}}{wxyz} = \\frac{3}{2}.\\]",
+            1
+        ]
+    ],
+    "time": 25.191380262374878,
+    "total_tokens": 1621,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

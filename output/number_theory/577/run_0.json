@@ -1,0 +1,61 @@
+{
+    "problem": "Compute $81_9 - 72_9$.  Express your answer in base 9.",
+    "level": "Level 4",
+    "type": "Number Theory",
+    "solution": "We can line up the numbers and subtract just as we do in base 10.  For example, when we borrow from the $9^1$s place, the digit 1 in the units place becomes $10$, while the digit in the $9^1$s place decreases by 1. Continuing in this way, we find  $$\\begin{array}{c@{}c@{\\;}c@{}c} & & \\cancelto{7}{8} & \\cancelto{10}{1}_9 \\\\ &- & 7 & 2_9 \\\\ \\cline{2-4} & & & 8_9, \\end{array} $$so the difference is $\\boxed{8_9}$.",
+    "is_solved": true,
+    "model_solution": "Subtracting 7 from 1 in the ones place results in a negative number, so we must borrow from the 8 in the nines place.\nSubtracting 9 from 8 in the nines place results in 8 - 9 = -1, so we must borrow again from the next nines place.\nSubtracting 2 from 8 in the nines place results in 8 - 2 = 6.\nSubtracting 9 from 6 in the nines place results in 6 - 9 = -3, so we must borrow again from the next nines place.\nSubtracting 6 from 0 in the nines place results in 0 - 6 = -6, so we must borrow again from the next nines place.\nSubtracting 9 from -6 in the nines place results in -6 - 9 = -15, so we must borrow again from the next nines place.\nSubtracting 9 from -15 in the nines place results in -15 - 9 = -24.\nWe convert -24 in base 9 to a positive number in base 9. We need 3 nines to get to -24, so 3 * 9 = 27. Then -24 = -27 + 3. The negative sign is equivalent to 8 (the largest negative number in base 9), so we write -24 as 8 - 3 = 5.\nThe final answer is: $18_9.$",
+    "steps": [
+        "Subtracting 7 from 1 in the ones place results in a negative number, so we must borrow from the 8 in the nines place.",
+        "Subtracting 9 from 8 in the nines place results in 8 - 9 = -1, so we must borrow again from the next nines place.",
+        "Subtracting 2 from 8 in the nines place results in 8 - 2 = 6.",
+        "Subtracting 9 from 6 in the nines place results in 6 - 9 = -3, so we must borrow again from the next nines place.",
+        "Subtracting 6 from 0 in the nines place results in 0 - 6 = -6, so we must borrow again from the next nines place.",
+        "Subtracting 9 from -6 in the nines place results in -6 - 9 = -15, so we must borrow again from the next nines place.",
+        "Subtracting 9 from -15 in the nines place results in -15 - 9 = -24.",
+        "We convert -24 in base 9 to a positive number in base 9. We need 3 nines to get to -24, so 3 * 9 = 27. Then -24 = -27 + 3. The negative sign is equivalent to 8 (the largest negative number in base 9), so we write -24 as 8 - 3 = 5.",
+        "The final answer is: $18_9.$"
+    ],
+    "full_steps": [
+        [
+            "Subtracting 7 from 1 in the ones place results in a negative number, so we must borrow from the 8 in the nines place.",
+            1
+        ],
+        [
+            "Subtracting 9 from 8 in the nines place results in 8 - 9 = -1, so we must borrow again from the next nines place.",
+            1
+        ],
+        [
+            "Subtracting 2 from 8 in the nines place results in 8 - 2 = 6.",
+            1
+        ],
+        [
+            "Subtracting 9 from 6 in the nines place results in 6 - 9 = -3, so we must borrow again from the next nines place.",
+            1
+        ],
+        [
+            "Subtracting 6 from 0 in the nines place results in 0 - 6 = -6, so we must borrow again from the next nines place.",
+            1
+        ],
+        [
+            "Subtracting 9 from -6 in the nines place results in -6 - 9 = -15, so we must borrow again from the next nines place.",
+            1
+        ],
+        [
+            "Subtracting 9 from -15 in the nines place results in -15 - 9 = -24.",
+            1
+        ],
+        [
+            "We convert -24 in base 9 to a positive number in base 9. We need 3 nines to get to -24, so 3 * 9 = 27. Then -24 = -27 + 3. The negative sign is equivalent to 8 (the largest negative number in base 9), so we write -24 as 8 - 3 = 5.",
+            1
+        ],
+        [
+            "The final answer is: $18_9.$",
+            1
+        ]
+    ],
+    "time": 120.87744402885437,
+    "total_tokens": 4576,
+    "final_answer_tokens": 394,
+    "model": "meta-llama/Llama-Vision-Free"
+}

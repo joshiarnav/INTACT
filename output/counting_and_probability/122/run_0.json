@@ -1,0 +1,56 @@
+{
+    "problem": "The Screamers are coached by Coach Yellsalot.  The Screamers have 12 players, but two of them, Bob and Yogi, refuse to play together.  How many starting lineups (of 5 players) can Coach Yellsalot make, if the starting lineup can't contain both Bob and Yogi?  (The order of the 5 players in the lineup does not matter; that is, two lineups are the same if they consist of the same 5 players.)",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "There are 3 different cases for the starting lineup.\n\nCase 1: Bob starts (and Yogi doesn't). In this case, the coach must choose 4 more players from the 10 remaining players (remember that Yogi won't play, so there are only 10 players left to select from).  Thus there are $\\binom{10}{4}$ lineups that the coach can choose.\n\nCase 2: Yogi starts (and Bob doesn't). As in Case 1, the coach must choose 4 more players from the 10 remaining players.  So there are $\\binom{10}{4}$ lineups in this case.\n\nCase 3: Neither Bob nor Yogi starts. In this case, the coach must choose all 5 players in the lineup from the 10 remaining players.  Hence there are $\\binom{10}{5}$ lineups in this case. To get the total number of starting lineups, we add the number of lineups in each of the cases: $$ \\binom{10}{4} + \\binom{10}{4} + \\binom{10}{5} = 210 + 210 + 252 = \\boxed{672}. $$",
+    "is_solved": true,
+    "model_solution": "Total number of possible lineups if there are no restrictions. \n\n27C5\nTotal number of lineups with both Bob and Yogi, which need to be subtracted from the total. \n5C3 * 2\nCalculate total number of possible lineups with both Bob and Yogi subtracted from the total number of lineups\n27C5 - (5C3 * 2)\n27C5 = 27! / (5! * 22!) = 46,376\n5C3 = 5! / (3! * 2!) = 10\n5C3 * 2 = 10 * 2 = 20\n46,376 - 20\n46,376 - 20 = 46,356\n46,356\n46,356",
+    "steps": [
+        "Total number of possible lineups if there are no restrictions. \n\n27C5",
+        "Total number of lineups with both Bob and Yogi, which need to be subtracted from the total. \n5C3 * 2",
+        "Calculate total number of possible lineups with both Bob and Yogi subtracted from the total number of lineups\n27C5 - (5C3 * 2)",
+        "27C5 = 27! / (5! * 22!) = 46,376\n5C3 = 5! / (3! * 2!) = 10\n5C3 * 2 = 10 * 2 = 20",
+        "46,376 - 20",
+        "46,376 - 20 = 46,356",
+        "46,356",
+        "46,356"
+    ],
+    "full_steps": [
+        [
+            "Total number of possible lineups if there are no restrictions. \n\n27C5",
+            1
+        ],
+        [
+            "Total number of lineups with both Bob and Yogi, which need to be subtracted from the total. \n5C3 * 2",
+            1
+        ],
+        [
+            "Calculate total number of possible lineups with both Bob and Yogi subtracted from the total number of lineups\n27C5 - (5C3 * 2)",
+            1
+        ],
+        [
+            "27C5 = 27! / (5! * 22!) = 46,376\n5C3 = 5! / (3! * 2!) = 10\n5C3 * 2 = 10 * 2 = 20",
+            1
+        ],
+        [
+            "46,376 - 20",
+            1
+        ],
+        [
+            "46,376 - 20 = 46,356",
+            1
+        ],
+        [
+            "46,356",
+            1
+        ],
+        [
+            "46,356",
+            1
+        ]
+    ],
+    "time": 105.81675505638123,
+    "total_tokens": 4530,
+    "final_answer_tokens": 328,
+    "model": "meta-llama/Llama-Vision-Free"
+}

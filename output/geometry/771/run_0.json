@@ -1,0 +1,51 @@
+{
+    "problem": "$ABCD$ is a regular tetrahedron (right pyramid whose faces are all equilateral triangles).  If $M$ is the midpoint of $\\overline{CD}$, then what is $\\cos \\angle ABM$?",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "The tetrahedron is shown below.  In order to find $\\cos \\angle ABM$, we build a right triangle with $\\angle ABM$ among its angles.  The foot of the altitude from $A$ to face $BCD$ is the centroid, $G$, of triangle $BCD$.\n\n[asy]\nimport three;\ncurrentprojection = orthographic(1.5,1.1,-1);\ntriple A = (1,1,1);\ntriple B = (1,0,0);\ntriple C = (0,1,0);\ntriple D = (0,0,1);\ndraw(A--B--C--A);\ndraw(A--D,dashed);\ndraw(C--D--B,dashed);\nlabel(\"$A$\",A,NW);\nlabel(\"$B$\",B,W);\nlabel(\"$C$\",C,S);\nlabel(\"$D$\",D,NW);\ntriple M = (0,0.5,0.5);\ndraw(A--M--B,dashed);\nlabel(\"$M$\",M,NE);\ntriple G = B/3 + 2*M/3;\ndraw(A--G,dashed);\nlabel(\"$G$\",G,S);\n\n[/asy]\n\nSince $\\overline{BM}$ is a median of $\\triangle BCD$, point $G$ is on $\\overline{BM}$ such that $BG = \\frac23BM$.  From 30-60-90 triangle $BMC$, we have $BM = \\frac{\\sqrt{3}}{2}\\cdot BC$, so \\[BG = \\frac23BM =\\frac23\\cdot \\frac{\\sqrt{3}}{2}\\cdot BC = \\frac{\\sqrt{3}}{3} \\cdot BC.\\]Finally, since $AB = BC$, we have  \\[\\cos \\angle ABM = \\cos \\angle ABG = \\frac{BG}{AB} = \\frac{(\\sqrt{3}/3)BC}{BC}=\\boxed{\\frac{\\sqrt{3}}{3}}.\\]",
+    "is_solved": true,
+    "model_solution": "Step 1:  To solve this problem, we will utilize geometry and trigonometry principles.\nStep 2:  Let's begin by drawing a diagram representing the regular tetrahedron $ABCD$ with $M$ as the midpoint of $\\overline{CD}$. This will help us visualize the problem and identify any relevant geometric relationships.\nStep 3:  We can use the properties of the regular tetrahedron to identify some key angles and lengths in the diagram.\nStep 4:  We'll start by considering the height of the tetrahedron, denoted as $AD$, and the height of the triangle $\\triangle ADM$, denoted as $h$.\nStep 2:  We can calculate the height $h$ of the tetrahedron by considering its base $AC$ and the perpendicular from $D$ to $AC$. Since $AC=CD=1$, we have that $h=\\sqrt{1^2-\\left(\\frac{1}{2}\\right)^2}=\\frac{\\sqrt{3}}{2}$.\nStep 3:  Since $\\triangle{ABM}$ is isosceles, we know that $\\cos \\angle ABM = \\frac{AM^2+BM^2-AB^2}{2\\cdot AM\\cdot BM}$ and we can calculate $AB$, $AM$, and $BM$ using the properties of the regular tetrahedron.\nStep 4:  Since $ABCD$ is a regular tetrahedron, we know that $AB=BC=CA=1$. Now we can calculate $AM$ using the Pythagorean Theorem on the right triangle $\\triangle ADM$ and $BM$ as the midpoint of $\\overline{CD}$, so $BM=CD/2=\\frac{1}{2}$.\n$AB^2 = 1^2 = 1$, $AM^2 = AD^2 + DM^2 = \\left( \\frac{\\sqrt{3}}{2} \\right)^2 + \\left( \\frac{1}{2} \\right)^2 = \\frac{3}{4} + \\frac{1}{4} = 1$, and $BM^2 = \\left( \\frac{1}{2} \\right)^2 = \\frac{1}{4}$.\n$\\cos \\angle ABM = \\frac{AB^2 + AM^2 + BM^2}{2 \\cdot AM \\cdot BM} = \\frac{1 + 1 + \\frac{1}{4}}{2 \\cdot 1 \\cdot \\frac{1}{2}}$\nFinal Answer: $\\boxed{\\frac{3}{2}}$",
+    "steps": [
+        "Step 1:  To solve this problem, we will utilize geometry and trigonometry principles.\nStep 2:  Let's begin by drawing a diagram representing the regular tetrahedron $ABCD$ with $M$ as the midpoint of $\\overline{CD}$. This will help us visualize the problem and identify any relevant geometric relationships.\nStep 3:  We can use the properties of the regular tetrahedron to identify some key angles and lengths in the diagram.\nStep 4:  We'll start by considering the height of the tetrahedron, denoted as $AD$, and the height of the triangle $\\triangle ADM$, denoted as $h$.",
+        "Step 2:  We can calculate the height $h$ of the tetrahedron by considering its base $AC$ and the perpendicular from $D$ to $AC$. Since $AC=CD=1$, we have that $h=\\sqrt{1^2-\\left(\\frac{1}{2}\\right)^2}=\\frac{\\sqrt{3}}{2}$.",
+        "Step 3:  Since $\\triangle{ABM}$ is isosceles, we know that $\\cos \\angle ABM = \\frac{AM^2+BM^2-AB^2}{2\\cdot AM\\cdot BM}$ and we can calculate $AB$, $AM$, and $BM$ using the properties of the regular tetrahedron.",
+        "Step 4:  Since $ABCD$ is a regular tetrahedron, we know that $AB=BC=CA=1$. Now we can calculate $AM$ using the Pythagorean Theorem on the right triangle $\\triangle ADM$ and $BM$ as the midpoint of $\\overline{CD}$, so $BM=CD/2=\\frac{1}{2}$.",
+        "$AB^2 = 1^2 = 1$, $AM^2 = AD^2 + DM^2 = \\left( \\frac{\\sqrt{3}}{2} \\right)^2 + \\left( \\frac{1}{2} \\right)^2 = \\frac{3}{4} + \\frac{1}{4} = 1$, and $BM^2 = \\left( \\frac{1}{2} \\right)^2 = \\frac{1}{4}$.",
+        "$\\cos \\angle ABM = \\frac{AB^2 + AM^2 + BM^2}{2 \\cdot AM \\cdot BM} = \\frac{1 + 1 + \\frac{1}{4}}{2 \\cdot 1 \\cdot \\frac{1}{2}}$",
+        "Final Answer: $\\boxed{\\frac{3}{2}}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  To solve this problem, we will utilize geometry and trigonometry principles.\nStep 2:  Let's begin by drawing a diagram representing the regular tetrahedron $ABCD$ with $M$ as the midpoint of $\\overline{CD}$. This will help us visualize the problem and identify any relevant geometric relationships.\nStep 3:  We can use the properties of the regular tetrahedron to identify some key angles and lengths in the diagram.\nStep 4:  We'll start by considering the height of the tetrahedron, denoted as $AD$, and the height of the triangle $\\triangle ADM$, denoted as $h$.",
+            1
+        ],
+        [
+            "Step 2:  We can calculate the height $h$ of the tetrahedron by considering its base $AC$ and the perpendicular from $D$ to $AC$. Since $AC=CD=1$, we have that $h=\\sqrt{1^2-\\left(\\frac{1}{2}\\right)^2}=\\frac{\\sqrt{3}}{2}$.",
+            1
+        ],
+        [
+            "Step 3:  Since $\\triangle{ABM}$ is isosceles, we know that $\\cos \\angle ABM = \\frac{AM^2+BM^2-AB^2}{2\\cdot AM\\cdot BM}$ and we can calculate $AB$, $AM$, and $BM$ using the properties of the regular tetrahedron.",
+            1
+        ],
+        [
+            "Step 4:  Since $ABCD$ is a regular tetrahedron, we know that $AB=BC=CA=1$. Now we can calculate $AM$ using the Pythagorean Theorem on the right triangle $\\triangle ADM$ and $BM$ as the midpoint of $\\overline{CD}$, so $BM=CD/2=\\frac{1}{2}$.",
+            1
+        ],
+        [
+            "$AB^2 = 1^2 = 1$, $AM^2 = AD^2 + DM^2 = \\left( \\frac{\\sqrt{3}}{2} \\right)^2 + \\left( \\frac{1}{2} \\right)^2 = \\frac{3}{4} + \\frac{1}{4} = 1$, and $BM^2 = \\left( \\frac{1}{2} \\right)^2 = \\frac{1}{4}$.",
+            1
+        ],
+        [
+            "$\\cos \\angle ABM = \\frac{AB^2 + AM^2 + BM^2}{2 \\cdot AM \\cdot BM} = \\frac{1 + 1 + \\frac{1}{4}}{2 \\cdot 1 \\cdot \\frac{1}{2}}$",
+            1
+        ],
+        [
+            "Final Answer: $\\boxed{\\frac{3}{2}}$",
+            1
+        ]
+    ],
+    "time": 90.3291118144989,
+    "total_tokens": 6856,
+    "final_answer_tokens": 669,
+    "model": "meta-llama/Llama-Vision-Free"
+}

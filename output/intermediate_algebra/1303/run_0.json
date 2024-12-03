@@ -1,0 +1,41 @@
+{
+    "problem": "Define \\[f(x) = \\frac{1}{x + \\frac{1}{x}}\\]and \\[g(x) = \\frac{1}{x - \\frac{1}{x}}.\\]Find the square of the largest real solution to the equation \\[ (g(x))^2 - (f(x))^2 = \\tfrac54.\\]",
+    "level": "Level 4",
+    "type": "Intermediate Algebra",
+    "solution": "We first simplify the expressions for $f(x)$ and $g(x).$ We have \\[ f(x) = \\frac{1}{x + \\frac1x} = \\frac{1}{ \\tfrac{x^2+1}{x} } = \\frac{x}{x^2+1} \\]and \\[ g(x) = \\frac{1}{x-\\frac1x} = \\frac{1}{\\tfrac{x^2-1}{x}} = \\frac{x}{x^2-1}.\\]Therefore, \\[\\begin{aligned} (g(x))^2 - (f(x))^2 &= \\frac{x^2}{(x^2-1)^2} - \\frac{x^2}{(x^2+1)^2} \\\\ &= \\frac{x^2\\left((x^2+1)^2-(x^2-1)^2\\right)}{(x^2-1)^2(x^2+1)^2} \\\\ &= \\frac{x^2(4x^2)}{(x^4-1)^2} \\\\ &= \\frac{4x^4}{(x^4-1)^2}. \\end{aligned}\\]Therefore, we have the equation \\[\\frac{4x^4}{(x^4-1)^2} = \\frac{5}{4}.\\]Cross-multiplying and expanding, we get \\[16x^4 = 5x^8 - 10x^4 + 5,\\]so \\[0 = 5x^8 - 26x^4 + 5.\\]This factors as \\[0 = (5x^4-1)(x^4-5),\\]so either $x^4 = \\tfrac15$ or $x^4 = 5.$ It follows that the largest solution to the equation is $x = \\sqrt[4]{5},$ so $x^2 = \\boxed{\\sqrt5}.$",
+    "is_solved": false,
+    "model_solution": "Step 1: Express the given equation in terms of $f(x)$ and $g(x)$.\n\\[(g(x))^2 - (f(x))^2 = (\\frac{1}{x - \\frac{1}{x}})^2 - (\\frac{1}{x + \\frac{1}{x}})^2 = \\tfrac54.\\]\nStep 2: Expand the equation from step 1.\n\\[\\left(\\frac{1}{x - \\frac{1}{x}}\\right)^2 - \\left(\\frac{1}{x + \\frac{1}{x}}\\right)^2 = \\frac{(x - \\frac{1}{x})^2 - (x + \\frac{1}{x})^2}{(x - \\frac{1}{x})^2 (x + \\frac{1}{x})^2} = \\tfrac54.\\]\nStep 3: \n\\begin{align*}\n\\frac{(x - \\frac{1}{x})^2 - (x + \\frac{1}{x})^2}{(x - \\frac{1}{x})^2 (x + \\frac{1}{x})^2} &= \\tfrac54\\\\\n\\frac{x^2 - 2 + \\frac{1}{x^2} - x^2 - 2 - \\frac{1}{x^2}}{x^4 - 2 + \\frac{1}{x^4}} &= \\tfrac54\\\\\n\\frac{-4}{x^4 - 2 + \\frac{1}{x^4}} &= \\tfrac54\\\\\n-8 &= x^4 - 2 + \\frac{1}{x^4}\n\\end{align*}\n\\begin{align*}\n-8 &= x^4 - 2 + \\frac{1}{x^4}\\\\\n0 &= x^4 + \\frac{1}{x^4} + 2\\\\\n0 &= (x^4 + 2) + \\frac{1}{x^4}\\\\\n0 &= \\left(x^2 + \\frac{1}{x^2}\\right)^2 - 2\\\\\n2 &= \\left(x^2 + \\frac{1}{x^2}\\right)^2\n\\end{align*}\n## Step 4\n\\begin{align*}\n2 &= \\left(x^2 + \\frac{1}{x^2}\\right)^2\\\\\n\\pm\\sqrt{2} &= x^2 + \\frac{1}{x^2}\\\\\nx^2 + \\frac{1}{x^2} &= \\sqrt{2}\n\\end{align*}",
+    "steps": [
+        "Step 1: Express the given equation in terms of $f(x)$ and $g(x)$.\n\\[(g(x))^2 - (f(x))^2 = (\\frac{1}{x - \\frac{1}{x}})^2 - (\\frac{1}{x + \\frac{1}{x}})^2 = \\tfrac54.\\]",
+        "Step 2: Expand the equation from step 1.\n\\[\\left(\\frac{1}{x - \\frac{1}{x}}\\right)^2 - \\left(\\frac{1}{x + \\frac{1}{x}}\\right)^2 = \\frac{(x - \\frac{1}{x})^2 - (x + \\frac{1}{x})^2}{(x - \\frac{1}{x})^2 (x + \\frac{1}{x})^2} = \\tfrac54.\\]",
+        "Step 3: \n\\begin{align*}\n\\frac{(x - \\frac{1}{x})^2 - (x + \\frac{1}{x})^2}{(x - \\frac{1}{x})^2 (x + \\frac{1}{x})^2} &= \\tfrac54\\\\\n\\frac{x^2 - 2 + \\frac{1}{x^2} - x^2 - 2 - \\frac{1}{x^2}}{x^4 - 2 + \\frac{1}{x^4}} &= \\tfrac54\\\\\n\\frac{-4}{x^4 - 2 + \\frac{1}{x^4}} &= \\tfrac54\\\\\n-8 &= x^4 - 2 + \\frac{1}{x^4}\n\\end{align*}",
+        "\\begin{align*}\n-8 &= x^4 - 2 + \\frac{1}{x^4}\\\\\n0 &= x^4 + \\frac{1}{x^4} + 2\\\\\n0 &= (x^4 + 2) + \\frac{1}{x^4}\\\\\n0 &= \\left(x^2 + \\frac{1}{x^2}\\right)^2 - 2\\\\\n2 &= \\left(x^2 + \\frac{1}{x^2}\\right)^2\n\\end{align*}",
+        "## Step 4\n\\begin{align*}\n2 &= \\left(x^2 + \\frac{1}{x^2}\\right)^2\\\\\n\\pm\\sqrt{2} &= x^2 + \\frac{1}{x^2}\\\\\nx^2 + \\frac{1}{x^2} &= \\sqrt{2}\n\\end{align*}"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Express the given equation in terms of $f(x)$ and $g(x)$.\n\\[(g(x))^2 - (f(x))^2 = (\\frac{1}{x - \\frac{1}{x}})^2 - (\\frac{1}{x + \\frac{1}{x}})^2 = \\tfrac54.\\]",
+            1
+        ],
+        [
+            "Step 2: Expand the equation from step 1.\n\\[\\left(\\frac{1}{x - \\frac{1}{x}}\\right)^2 - \\left(\\frac{1}{x + \\frac{1}{x}}\\right)^2 = \\frac{(x - \\frac{1}{x})^2 - (x + \\frac{1}{x})^2}{(x - \\frac{1}{x})^2 (x + \\frac{1}{x})^2} = \\tfrac54.\\]",
+            1
+        ],
+        [
+            "Step 3: \n\\begin{align*}\n\\frac{(x - \\frac{1}{x})^2 - (x + \\frac{1}{x})^2}{(x - \\frac{1}{x})^2 (x + \\frac{1}{x})^2} &= \\tfrac54\\\\\n\\frac{x^2 - 2 + \\frac{1}{x^2} - x^2 - 2 - \\frac{1}{x^2}}{x^4 - 2 + \\frac{1}{x^4}} &= \\tfrac54\\\\\n\\frac{-4}{x^4 - 2 + \\frac{1}{x^4}} &= \\tfrac54\\\\\n-8 &= x^4 - 2 + \\frac{1}{x^4}\n\\end{align*}",
+            1
+        ],
+        [
+            "\\begin{align*}\n-8 &= x^4 - 2 + \\frac{1}{x^4}\\\\\n0 &= x^4 + \\frac{1}{x^4} + 2\\\\\n0 &= (x^4 + 2) + \\frac{1}{x^4}\\\\\n0 &= \\left(x^2 + \\frac{1}{x^2}\\right)^2 - 2\\\\\n2 &= \\left(x^2 + \\frac{1}{x^2}\\right)^2\n\\end{align*}",
+            1
+        ],
+        [
+            "## Step 4\n\\begin{align*}\n2 &= \\left(x^2 + \\frac{1}{x^2}\\right)^2\\\\\n\\pm\\sqrt{2} &= x^2 + \\frac{1}{x^2}\\\\\nx^2 + \\frac{1}{x^2} &= \\sqrt{2}\n\\end{align*}",
+            1
+        ]
+    ],
+    "time": 65.7716600894928,
+    "total_tokens": 4797,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

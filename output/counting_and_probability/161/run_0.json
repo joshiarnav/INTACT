@@ -1,0 +1,66 @@
+{
+    "problem": "Ryan has 3 red lava lamps and 3 blue lava lamps. He arranges them in a row on a shelf randomly, and then randomly turns 3 of them on. What is the probability that the leftmost lamp is blue and off, and the rightmost lamp is red and on?",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "There are $\\binom{6}{3}=20$ ways to choose where the red lamps go, and $\\binom{6}{3}=20$ ways to choose which lamps are on. If the left lamp is blue and off, and the right lamp is red and on, there are $\\binom{4}{2}=6$ ways to choose which of the remaining lamps are red, and $\\binom{4}{2}=6$ ways to choose which of the remaining lamps are on. Therefore, the probability is $\\dfrac{6\\cdot6}{20\\cdot20}=\\boxed{\\dfrac{9}{100}}$.",
+    "is_solved": false,
+    "model_solution": "There are 6 lamps in total, so the number of different ways to arrange them is 6!/(3!3!) = 20.\n\nThe number of ways to choose which 3 lamps are turned on is 6C3 = 20.\n\nThe number of ways to arrange the remaining 3 lamps is 4!/(1!3!) = 4.\nMultiply the number of ways to choose which 3 lamps are turned on by the number of ways to arrange the remaining 3 lamps.\nThe number of ways to arrange the leftmost lamp and the rightmost lamp is 4, and the remaining 4 lamps can be arranged in 4!/(1!3!) = 4 ways. Multiply the number of ways to choose which 3 lamps are turned on by the number of ways to arrange the remaining 3 lamps, then multiply by the number of ways to arrange the leftmost lamp and the rightmost lamp, then by the number of ways to arrange the remaining 4 lamps.\nThe number of ways to choose which 3 lamps are turned on, such that the rightmost lamp is on, is 4C2 = 6.\nThe number of ways to arrange the leftmost lamp and the rightmost lamp is 4, and the remaining 4 lamps can be arranged in 4!/(1!3!) = 4 ways, giving 4*4 = 16 ways.\nMultiply the number of ways to choose which 3 lamps are turned on, by the number of ways to arrange the leftmost lamp and the rightmost lamp, by the number of ways to arrange the remaining 4 lamps.\nMultiply the number of ways to choose which 3 lamps are turned on by the number of ways to arrange the leftmost lamp and the rightmost lamp, by the number of ways to arrange the remaining 4 lamps, then multiply by the probability that the rightmost lamp is on.\nThe probability that the rightmost lamp is on is 3/6, since 3 lamps are turned on and there are 6 lamps in total.\nMultiply the number of ways to choose which 3 lamps are turned on, by the number of ways to arrange the leftmost lamp and the rightmost lamp, by the number of ways to arrange the remaining 4 lamps, then multiply by the probability that the rightmost lamp is on, then multiply by the probability that the leftmost lamp is blue.\nThe probability that the leftmost lamp is blue is 3/6, since 3 lamps are blue and there are 6 lamps in total.",
+    "steps": [
+        "There are 6 lamps in total, so the number of different ways to arrange them is 6!/(3!3!) = 20.\n\nThe number of ways to choose which 3 lamps are turned on is 6C3 = 20.\n\nThe number of ways to arrange the remaining 3 lamps is 4!/(1!3!) = 4.",
+        "Multiply the number of ways to choose which 3 lamps are turned on by the number of ways to arrange the remaining 3 lamps.",
+        "The number of ways to arrange the leftmost lamp and the rightmost lamp is 4, and the remaining 4 lamps can be arranged in 4!/(1!3!) = 4 ways. Multiply the number of ways to choose which 3 lamps are turned on by the number of ways to arrange the remaining 3 lamps, then multiply by the number of ways to arrange the leftmost lamp and the rightmost lamp, then by the number of ways to arrange the remaining 4 lamps.",
+        "The number of ways to choose which 3 lamps are turned on, such that the rightmost lamp is on, is 4C2 = 6.",
+        "The number of ways to arrange the leftmost lamp and the rightmost lamp is 4, and the remaining 4 lamps can be arranged in 4!/(1!3!) = 4 ways, giving 4*4 = 16 ways.",
+        "Multiply the number of ways to choose which 3 lamps are turned on, by the number of ways to arrange the leftmost lamp and the rightmost lamp, by the number of ways to arrange the remaining 4 lamps.",
+        "Multiply the number of ways to choose which 3 lamps are turned on by the number of ways to arrange the leftmost lamp and the rightmost lamp, by the number of ways to arrange the remaining 4 lamps, then multiply by the probability that the rightmost lamp is on.",
+        "The probability that the rightmost lamp is on is 3/6, since 3 lamps are turned on and there are 6 lamps in total.",
+        "Multiply the number of ways to choose which 3 lamps are turned on, by the number of ways to arrange the leftmost lamp and the rightmost lamp, by the number of ways to arrange the remaining 4 lamps, then multiply by the probability that the rightmost lamp is on, then multiply by the probability that the leftmost lamp is blue.",
+        "The probability that the leftmost lamp is blue is 3/6, since 3 lamps are blue and there are 6 lamps in total."
+    ],
+    "full_steps": [
+        [
+            "There are 6 lamps in total, so the number of different ways to arrange them is 6!/(3!3!) = 20.\n\nThe number of ways to choose which 3 lamps are turned on is 6C3 = 20.\n\nThe number of ways to arrange the remaining 3 lamps is 4!/(1!3!) = 4.",
+            1
+        ],
+        [
+            "Multiply the number of ways to choose which 3 lamps are turned on by the number of ways to arrange the remaining 3 lamps.",
+            1
+        ],
+        [
+            "The number of ways to arrange the leftmost lamp and the rightmost lamp is 4, and the remaining 4 lamps can be arranged in 4!/(1!3!) = 4 ways. Multiply the number of ways to choose which 3 lamps are turned on by the number of ways to arrange the remaining 3 lamps, then multiply by the number of ways to arrange the leftmost lamp and the rightmost lamp, then by the number of ways to arrange the remaining 4 lamps.",
+            1
+        ],
+        [
+            "The number of ways to choose which 3 lamps are turned on, such that the rightmost lamp is on, is 4C2 = 6.",
+            1
+        ],
+        [
+            "The number of ways to arrange the leftmost lamp and the rightmost lamp is 4, and the remaining 4 lamps can be arranged in 4!/(1!3!) = 4 ways, giving 4*4 = 16 ways.",
+            1
+        ],
+        [
+            "Multiply the number of ways to choose which 3 lamps are turned on, by the number of ways to arrange the leftmost lamp and the rightmost lamp, by the number of ways to arrange the remaining 4 lamps.",
+            1
+        ],
+        [
+            "Multiply the number of ways to choose which 3 lamps are turned on by the number of ways to arrange the leftmost lamp and the rightmost lamp, by the number of ways to arrange the remaining 4 lamps, then multiply by the probability that the rightmost lamp is on.",
+            1
+        ],
+        [
+            "The probability that the rightmost lamp is on is 3/6, since 3 lamps are turned on and there are 6 lamps in total.",
+            1
+        ],
+        [
+            "Multiply the number of ways to choose which 3 lamps are turned on, by the number of ways to arrange the leftmost lamp and the rightmost lamp, by the number of ways to arrange the remaining 4 lamps, then multiply by the probability that the rightmost lamp is on, then multiply by the probability that the leftmost lamp is blue.",
+            1
+        ],
+        [
+            "The probability that the leftmost lamp is blue is 3/6, since 3 lamps are blue and there are 6 lamps in total.",
+            1
+        ]
+    ],
+    "time": 135.091290473938,
+    "total_tokens": 8642,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

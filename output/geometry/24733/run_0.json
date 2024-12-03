@@ -1,0 +1,36 @@
+{
+    "problem": "A cube of edge length $s > 0$ has the property that its surface area is equal to the sum of its volume and five times its edge length. Compute the sum of all possible values of $s$.\n\n[asy]\n\nsize(5cm,5cm);\n\npair A,B,C,D,E,F,G,H;\n\nA=(0,0);\nB=(1,0);\nC=(1,1);\nD=(0,1);\nE=(0.3,1.5);\nF=C+(E-D);\nG=B+(E-D);\nH=A+(E-D);\n\ndraw(A--B--C--D--A--H--E);\ndraw(D--C--F);\ndraw(H--G);\ndraw(D--E--F--G--B);\n\ndot(A);\ndot(B);\ndot(C);\ndot(D);\ndot(E);\ndot(F);\ndot(G);\ndot(H);\n\n[/asy]",
+    "level": "Level 4",
+    "type": "Geometry",
+    "solution": "The volume of the cube is $s^3$ and its surface area is $6s^2$, so we have $6s^2=s^3+5s$, or $0=s^3-6s^2+5s=s(s-1)(s-5)$. So, the two nonzero possibilities for $s$ are 1 and 5.  Their sum is $\\boxed{6}$.",
+    "is_solved": true,
+    "model_solution": "6s^2 = 6s^3 + 5s\n$6s^3-6s^2-5s=0$\n$6s(s^2-s-\\frac{5}{6})=0$\n$6s(s-\\frac{5}{3})(s+1)=0$\n$s=0$ does not satisfy the given property since $s>0$, so the equation reduces to $6s(s-\\frac{5}{3})(s+1)=0$.\nThe equation $6s(s-\\frac{5}{3})(s+1)=0$ has solutions $s=-\\frac{1}{3}, \\frac{5}{3}.$  \nFinal Answer: The final answer is $\\frac{5}{3}.$",
+    "steps": [
+        "6s^2 = 6s^3 + 5s",
+        "$6s^3-6s^2-5s=0$\n$6s(s^2-s-\\frac{5}{6})=0$\n$6s(s-\\frac{5}{3})(s+1)=0$",
+        "$s=0$ does not satisfy the given property since $s>0$, so the equation reduces to $6s(s-\\frac{5}{3})(s+1)=0$.",
+        "The equation $6s(s-\\frac{5}{3})(s+1)=0$ has solutions $s=-\\frac{1}{3}, \\frac{5}{3}.$  \nFinal Answer: The final answer is $\\frac{5}{3}.$"
+    ],
+    "full_steps": [
+        [
+            "6s^2 = 6s^3 + 5s",
+            1
+        ],
+        [
+            "$6s^3-6s^2-5s=0$\n$6s(s^2-s-\\frac{5}{6})=0$\n$6s(s-\\frac{5}{3})(s+1)=0$",
+            1
+        ],
+        [
+            "$s=0$ does not satisfy the given property since $s>0$, so the equation reduces to $6s(s-\\frac{5}{3})(s+1)=0$.",
+            1
+        ],
+        [
+            "The equation $6s(s-\\frac{5}{3})(s+1)=0$ has solutions $s=-\\frac{1}{3}, \\frac{5}{3}.$  \nFinal Answer: The final answer is $\\frac{5}{3}.$",
+            1
+        ]
+    ],
+    "time": 53.92093300819397,
+    "total_tokens": 2650,
+    "final_answer_tokens": 400,
+    "model": "meta-llama/Llama-Vision-Free"
+}

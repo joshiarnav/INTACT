@@ -1,0 +1,66 @@
+{
+    "problem": "What is the minimum value of $\\left|x-1\\right| + \\left|2x-1\\right| + \\left|3x-1\\right| + \\cdots + \\left|119x - 1 \\right|$?",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "Let\n\\[f(x) = |x - 1| + |2x - 1| + |3x - 1| + \\dots + |119x - 1|.\\]If $x \\le \\frac{1}{119},$ then\n\\[f(x) = -(x - 1) - (2x - 1) \\dotsm - (119x - 1).\\]If $\\frac{1}{m} \\le x \\le \\frac{1}{m - 1},$ for some positive integer $2 \\le m \\le 119,$ then\n\\[f(x) = -(x - 1) - (2x - 1) \\dotsm - ((m - 1) x - 1) + (mx - 1) + \\dots + (119x - 1).\\]If $x \\ge 1,$ then\n\\[f(x) = (x - 1) + (2x - 1) + \\dots + (119x - 1).\\]Thus, the graph is linear on the interval $x \\le \\frac{1}{119}$ with slope $-1 - 2 - \\dots - 119,$ linear on the interval $\\frac{1}{m} \\le x \\le \\frac{1}{m - 1}$ with slope\n\\[-1 - 2 - \\dots - (m - 1) + m + \\dots + 119,\\]and linear on the interval $x \\ge 1$ with slope\n\\[1 + 2 + \\dots + 119.\\]Note that\n\\begin{align*}\n-1 - 2 - \\dots - (m - 1) + m + \\dots + 119 &= -\\frac{(m - 1)m}{2} + \\frac{(m + 119)(120 - m)}{2} \\\\\n&= -m^2 + m + 7140 \\\\\n&= -(m + 84)(m - 85).\n\\end{align*}Thus, $f(x)$ is minimized on the interval $\\frac{1}{85} \\le x \\le \\frac{1}{84},$ where it is constant, and this constant is\n\\[(85 - 1) - (119 - 85 + 1) = \\boxed{49}.\\]",
+    "is_solved": false,
+    "model_solution": "Step 1:  We start by letting $f(x) = \\left|x-1\\right| + \\left|2x-1\\right| + \\left|3x-1\\right| + \\cdots + \\left|119x - 1 \\right|$.\n$f(x)$\nStep 2:  Consider the function $g(x) = \\frac{\\left|x-1\\right| + \\left|2x-1\\right| + \\left|3x-1\\right| + \\cdots + \\left|119x - 1 \\right|}{120}$\n$g(x)$\nStep 3:  We observe that $g(x)$ is a continuous, increasing function, and its minimum value will be $x$, where $g(x) = x$, so $g(x) - x = 0$.\n$g(x) - x = 0$\nStep 4:  To find the minimum value of $g(x)$, we need to solve the equation $g(x) - x = 0$.\n$g(x) - x = 0 \\implies x - \\frac{\\left|x-1\\right| + \\left|2x-1\\right| + \\left|3x-1\\right| + \\cdots + \\left|119x - 1 \\right|}{120} = 0$\nStep 5:  We can simplify the equation to $x - \\frac{1}{120}\\left(\\left|x-1\\right| + \\left|2x-1\\right| + \\left|3x-1\\right| + \\cdots + \\left|119x - 1 \\right|\\right) = 0$\nStep 6:  $120x - \\left(\\left|x-1\\right| + \\left|2x-1\\right| + \\left|3x-1\\right| + \\cdots + \\left|119x - 1 \\right|\\right) = 0 \\implies \\left|x-1\\right| + \\left|2x-1\\right| + \\left|3x-1\\right| + \\cdots + \\left|119x - 1 \\right| = 120x$\nStep 6:  Since $f(x)$ is an increasing function and $x=1$ is the minimum value of the function, the minimum value of $f(x)$ is $f(1)$.\nStep 7:  $f(1) = \\left|1-1\\right| + \\left|2-1\\right| + \\left|3-1\\right| + \\cdots + \\left|119-1 \\right| = 60$\nSince $f(x)$ is an increasing function and $x=1$ is the minimum value of the function, the minimum value of $f(x)$ is $f(1)$.\n$f(1) = \\left|1-1\\right| + \\left|2-1\\right| + \\left|3-1\\right| + \\cdots + \\left|119-1 \\right| = 60$\nStep 8:\n$60$",
+    "steps": [
+        "Step 1:  We start by letting $f(x) = \\left|x-1\\right| + \\left|2x-1\\right| + \\left|3x-1\\right| + \\cdots + \\left|119x - 1 \\right|$.\n$f(x)$",
+        "Step 2:  Consider the function $g(x) = \\frac{\\left|x-1\\right| + \\left|2x-1\\right| + \\left|3x-1\\right| + \\cdots + \\left|119x - 1 \\right|}{120}$\n$g(x)$",
+        "Step 3:  We observe that $g(x)$ is a continuous, increasing function, and its minimum value will be $x$, where $g(x) = x$, so $g(x) - x = 0$.\n$g(x) - x = 0$",
+        "Step 4:  To find the minimum value of $g(x)$, we need to solve the equation $g(x) - x = 0$.\n$g(x) - x = 0 \\implies x - \\frac{\\left|x-1\\right| + \\left|2x-1\\right| + \\left|3x-1\\right| + \\cdots + \\left|119x - 1 \\right|}{120} = 0$",
+        "Step 5:  We can simplify the equation to $x - \\frac{1}{120}\\left(\\left|x-1\\right| + \\left|2x-1\\right| + \\left|3x-1\\right| + \\cdots + \\left|119x - 1 \\right|\\right) = 0$",
+        "Step 6:  $120x - \\left(\\left|x-1\\right| + \\left|2x-1\\right| + \\left|3x-1\\right| + \\cdots + \\left|119x - 1 \\right|\\right) = 0 \\implies \\left|x-1\\right| + \\left|2x-1\\right| + \\left|3x-1\\right| + \\cdots + \\left|119x - 1 \\right| = 120x$",
+        "Step 6:  Since $f(x)$ is an increasing function and $x=1$ is the minimum value of the function, the minimum value of $f(x)$ is $f(1)$.",
+        "Step 7:  $f(1) = \\left|1-1\\right| + \\left|2-1\\right| + \\left|3-1\\right| + \\cdots + \\left|119-1 \\right| = 60$",
+        "Since $f(x)$ is an increasing function and $x=1$ is the minimum value of the function, the minimum value of $f(x)$ is $f(1)$.\n$f(1) = \\left|1-1\\right| + \\left|2-1\\right| + \\left|3-1\\right| + \\cdots + \\left|119-1 \\right| = 60$",
+        "Step 8:\n$60$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We start by letting $f(x) = \\left|x-1\\right| + \\left|2x-1\\right| + \\left|3x-1\\right| + \\cdots + \\left|119x - 1 \\right|$.\n$f(x)$",
+            1
+        ],
+        [
+            "Step 2:  Consider the function $g(x) = \\frac{\\left|x-1\\right| + \\left|2x-1\\right| + \\left|3x-1\\right| + \\cdots + \\left|119x - 1 \\right|}{120}$\n$g(x)$",
+            1
+        ],
+        [
+            "Step 3:  We observe that $g(x)$ is a continuous, increasing function, and its minimum value will be $x$, where $g(x) = x$, so $g(x) - x = 0$.\n$g(x) - x = 0$",
+            1
+        ],
+        [
+            "Step 4:  To find the minimum value of $g(x)$, we need to solve the equation $g(x) - x = 0$.\n$g(x) - x = 0 \\implies x - \\frac{\\left|x-1\\right| + \\left|2x-1\\right| + \\left|3x-1\\right| + \\cdots + \\left|119x - 1 \\right|}{120} = 0$",
+            1
+        ],
+        [
+            "Step 5:  We can simplify the equation to $x - \\frac{1}{120}\\left(\\left|x-1\\right| + \\left|2x-1\\right| + \\left|3x-1\\right| + \\cdots + \\left|119x - 1 \\right|\\right) = 0$",
+            1
+        ],
+        [
+            "Step 6:  $120x - \\left(\\left|x-1\\right| + \\left|2x-1\\right| + \\left|3x-1\\right| + \\cdots + \\left|119x - 1 \\right|\\right) = 0 \\implies \\left|x-1\\right| + \\left|2x-1\\right| + \\left|3x-1\\right| + \\cdots + \\left|119x - 1 \\right| = 120x$",
+            1
+        ],
+        [
+            "Step 6:  Since $f(x)$ is an increasing function and $x=1$ is the minimum value of the function, the minimum value of $f(x)$ is $f(1)$.",
+            1
+        ],
+        [
+            "Step 7:  $f(1) = \\left|1-1\\right| + \\left|2-1\\right| + \\left|3-1\\right| + \\cdots + \\left|119-1 \\right| = 60$",
+            1
+        ],
+        [
+            "Since $f(x)$ is an increasing function and $x=1$ is the minimum value of the function, the minimum value of $f(x)$ is $f(1)$.\n$f(1) = \\left|1-1\\right| + \\left|2-1\\right| + \\left|3-1\\right| + \\cdots + \\left|119-1 \\right| = 60$",
+            1
+        ],
+        [
+            "Step 8:\n$60$",
+            1
+        ]
+    ],
+    "time": 138.50284361839294,
+    "total_tokens": 10369,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

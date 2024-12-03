@@ -1,0 +1,36 @@
+{
+    "problem": "Two parabolas have the same focus, namely the point $(3,-28).$  Their directrices are the $x$-axis and the $y$-axis, respectively.  Compute the slope of their common chord.",
+    "level": "Level 4",
+    "type": "Intermediate Algebra",
+    "solution": "Let $P$ and $Q$ be the the intersection points of the two parabolas.  Then by definition of the parabola, the distance from $P$ to their common focus $F$ is equal to the distance from $P$ to the $x$-axis.  Also, the distance between $P$ to $F$ is equal to $P$ to the $y$-axis.  This means $P$ is equidistant to both the $x$-axis and $y$-axis, so $P$ must lie on the line $y = -x.$\n\n[asy]\nunitsize(0.15 cm);\n\npair F, P, Q;\n\nreal parab (real x) {\n  return(-(x^2 - 6*x + 793)/56);\n}\n\nreal upperparab(real x) {\n  return(sqrt(3)*sqrt(2*x - 3) - 28);\n}\n\nreal lowerparab(real x) {\n  return(-sqrt(3)*sqrt(2*x - 3) - 28);\n}\n\nF = (3,-28);\nP = (18.0385,-18.0385);\nQ = (43.9615,-43.9615);\n\ndraw((-10,0)--(50,0));\ndraw((0,-50)--(0,10));\ndraw(graph(parab,-10,47),red);\ndraw(graph(upperparab,3/2,50),blue);\ndraw(graph(lowerparab,3/2,50),blue);\ndraw(F--P--(P.x,0));\ndraw(P--(0,P.y));\ndraw(F--Q--(Q.x,0));\ndraw(Q--(0,Q.y));\ndraw((-10,10)--(50,-50),dashed);\n\nlabel(\"$F$\", F, NW, UnFill);\nlabel(\"$P$\", P, NE, UnFill);\nlabel(\"$Q$\", Q, NE, UnFill);\n\ndot(F);\n[/asy]\n\nBy the same argument, $Q$ also lies on the line $y = -x.$  Therefore, the slope of $\\overline{PQ}$ is $\\boxed{-1}.$",
+    "is_solved": true,
+    "model_solution": "Step 1:  We can start by setting up the standard forms for the two parabolas, $x=4a(y+k)$ and $y=4a(x+k)$, where $(h,k)$ is the vertex of each parabola, and the focus is at $(h,k-8a)$ and $(h+8a,k)$, respectively.\nStep 2:  This information allows us to calculate the values of $4a$ for each parabola. Since the focus of each parabola is the same point $(3,-28)$, we can equate the $y$-coordinates of the focus to the $y$-coordinates of the parabolas to find $a$. For the first parabola, we have $k-8a=-28$, giving $k=8a-28$. Similarly, for the second parabola, we have $h+8a=3$, giving $h=3-8a$.\nStep 3:  Since the directrices are the $x$-axis and the $y$-axis, respectively, the vertices of the parabolas must be on the line $y=x-3$.\nSubstitute $k=8a-28$ and $h=3-8a$ into $y=x-3$ and solve for $a$ to find $a=-\\frac{7}{8}$.\nSubstitute $k=8a-28$ and $h=3-8a$ into $y=x-3$ to get $8a-28=3-8a-3$, and solve for $a$.\nSolve for $a$: \n$8a - 28 = 3 - 8a - 3$\n$16a - 28 = -3$\n$16a = 25$\n$a = \\frac{25}{16}$\nThen, substitute $a=-\\frac{7}{8}$ into $k=8a-28$ and $h=3-8a$ to get $k=8(-\\frac{7}{8})-28$ and $h=3-8(-\\frac{7}{8})$.\n$k=-7-28=-35$\n$h=3+7=10$\nFinal Answer: The final answer is $\\boxed{-\\frac{3}{4}}$.",
+    "steps": [
+        "Step 1:  We can start by setting up the standard forms for the two parabolas, $x=4a(y+k)$ and $y=4a(x+k)$, where $(h,k)$ is the vertex of each parabola, and the focus is at $(h,k-8a)$ and $(h+8a,k)$, respectively.\nStep 2:  This information allows us to calculate the values of $4a$ for each parabola. Since the focus of each parabola is the same point $(3,-28)$, we can equate the $y$-coordinates of the focus to the $y$-coordinates of the parabolas to find $a$. For the first parabola, we have $k-8a=-28$, giving $k=8a-28$. Similarly, for the second parabola, we have $h+8a=3$, giving $h=3-8a$.\nStep 3:  Since the directrices are the $x$-axis and the $y$-axis, respectively, the vertices of the parabolas must be on the line $y=x-3$.",
+        "Substitute $k=8a-28$ and $h=3-8a$ into $y=x-3$ and solve for $a$ to find $a=-\\frac{7}{8}$.",
+        "Substitute $k=8a-28$ and $h=3-8a$ into $y=x-3$ to get $8a-28=3-8a-3$, and solve for $a$.",
+        "Solve for $a$: \n$8a - 28 = 3 - 8a - 3$\n$16a - 28 = -3$\n$16a = 25$\n$a = \\frac{25}{16}$\nThen, substitute $a=-\\frac{7}{8}$ into $k=8a-28$ and $h=3-8a$ to get $k=8(-\\frac{7}{8})-28$ and $h=3-8(-\\frac{7}{8})$.\n$k=-7-28=-35$\n$h=3+7=10$\nFinal Answer: The final answer is $\\boxed{-\\frac{3}{4}}$."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We can start by setting up the standard forms for the two parabolas, $x=4a(y+k)$ and $y=4a(x+k)$, where $(h,k)$ is the vertex of each parabola, and the focus is at $(h,k-8a)$ and $(h+8a,k)$, respectively.\nStep 2:  This information allows us to calculate the values of $4a$ for each parabola. Since the focus of each parabola is the same point $(3,-28)$, we can equate the $y$-coordinates of the focus to the $y$-coordinates of the parabolas to find $a$. For the first parabola, we have $k-8a=-28$, giving $k=8a-28$. Similarly, for the second parabola, we have $h+8a=3$, giving $h=3-8a$.\nStep 3:  Since the directrices are the $x$-axis and the $y$-axis, respectively, the vertices of the parabolas must be on the line $y=x-3$.",
+            1
+        ],
+        [
+            "Substitute $k=8a-28$ and $h=3-8a$ into $y=x-3$ and solve for $a$ to find $a=-\\frac{7}{8}$.",
+            1
+        ],
+        [
+            "Substitute $k=8a-28$ and $h=3-8a$ into $y=x-3$ to get $8a-28=3-8a-3$, and solve for $a$.",
+            1
+        ],
+        [
+            "Solve for $a$: \n$8a - 28 = 3 - 8a - 3$\n$16a - 28 = -3$\n$16a = 25$\n$a = \\frac{25}{16}$\nThen, substitute $a=-\\frac{7}{8}$ into $k=8a-28$ and $h=3-8a$ to get $k=8(-\\frac{7}{8})-28$ and $h=3-8(-\\frac{7}{8})$.\n$k=-7-28=-35$\n$h=3+7=10$\nFinal Answer: The final answer is $\\boxed{-\\frac{3}{4}}$.",
+            1
+        ]
+    ],
+    "time": 55.02770447731018,
+    "total_tokens": 3633,
+    "final_answer_tokens": 597,
+    "model": "meta-llama/Llama-Vision-Free"
+}

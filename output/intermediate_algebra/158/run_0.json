@@ -1,0 +1,66 @@
+{
+    "problem": "Let $a,$ $b,$ $c,$ and $d$ be positive real numbers such that $a + b + c + d = 10.$  Find the maximum value of $ab^2 c^3 d^4.$",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "By AM-GM,\n\\begin{align*}\na + b + c + d &= a + \\frac{b}{2} + \\frac{b}{2} + \\frac{c}{3} + \\frac{c}{3} + \\frac{c}{3} + \\frac{d}{4} + \\frac{d}{4} + \\frac{d}{4} + \\frac{d}{4} \\\\\n&\\ge 10 \\sqrt[10]{a \\left( \\frac{b}{2} \\right)^2 \\left( \\frac{c}{3} \\right)^3 \\left( \\frac{d}{4} \\right)^4} \\\\\n&= 10 \\sqrt[10]{\\frac{ab^2 c^3 d^4}{27648}}.\n\\end{align*}Since $a + b + c + d = 10,$\n\\[ab^2 c^3 d^4 \\le 27648.\\]Equality occurs when $a = 1,$ $b = 2,$ $c = 3,$ and $d = 4,$ so the maximum value is $\\boxed{27648}.$",
+    "is_solved": false,
+    "model_solution": "Step 1:  Since we are asked to find the maximum value of $ab^2 c^3 d^4,$ we want to express this quantity in terms of a single variable using the given constraint $a + b + c + d = 10.$\nStep 2:  We can utilize the AM-GM inequality, which states that the arithmetic mean of a set of non-negative real numbers is greater than or equal to the geometric mean of the same set of numbers.\n \n$ \\frac{a + b + c + d}{4} \\geq \\sqrt[4]{abcd} $\nStep 3:  We can manipulate the given constraint $a + b + c + d = 10$ to be in the form of $\\frac{a + b + c + d}{4}.$ This manipulation can be done by dividing both sides of the equation by $4.$\n\n$ \\frac{a + b + c + d}{4} = \\frac{10}{4} = \\frac{5}{2} $\n\n$ \\frac{5}{2} \\geq \\sqrt[4]{abcd} $\n\n$ \\left( \\frac{5}{2} \\right)^4 \\geq abcd $\n\n$ \\frac{625}{16} \\geq abcd $\n\n$ \\frac{625}{16} \\geq ab \\left( \\frac{b}{a} \\right)^2 c \\left( \\frac{c}{b} \\right)^3 d^4 $\nStep 4:  $ ab^2 c^3 d^4 \\leq \\frac{625}{16} \\cdot \\frac{b^4}{a^3} \\cdot \\frac{c^4}{b^3} \\cdot d^4 = \\frac{625}{16} \\cdot \\frac{b^4}{a^3} \\cdot \\frac{c^4}{b^3} \\cdot d^4 = \\frac{625}{16} \\cdot \\frac{b \\cdot b^3 \\cdot c^4 \\cdot d^4}{a^3 \\cdot b^3} = \\frac{625}{16} \\cdot \\frac{b}{a^3} \\cdot b^3 \\cdot c^4 \\cdot d^4 $\nUsing the AM-GM inequality with the numbers $a,$ $a,$ $b,$ $b,$ $b,$ $c,$ $c,$ $c,$ $c,$ $d,$ $d,$ $d,$ $d,$ $d,$ we get\n\n$ \\frac{a + a + b + b + b + c + c + c + c + d + d + d + d + d}{15} \\geq \\sqrt[15]{a^2 b^3 c^4 d^5} $\n\n$ \\frac{10}{15} \\geq \\sqrt[15]{a^2 b^3 c^4 d^5} $\n\n$ \\frac{2}{3} \\geq \\sqrt[15]{a^2 b^3 c^4 d^5} $\n\n$ \\left( \\frac{2}{3} \\right)^{15} \\geq a^2 b^3 c^4 d^5 $\n\n$ \\frac{2^{15}}{3^{15}} \\geq a^2 b^3 c^4 d^5 $\n\n$ \\frac{2^{15}}{3^{15}} \\geq a^\n$ \\left( \\frac{2}{3} \\right)^{15} \\geq a^2 b^3 c^4 d^5 $ \n\n$ \\frac{2^{15}}{3^{15}} \\geq ab^3 c^4 d^5 $ \n\n$ \\frac{2^{15}}{3^{15}} \\geq ab^3 c^4 d^5 \\cdot ab^2 c^3 d^4$\n$ab^2 c^3 d^4 \\leq \\frac{2^{15}}{3^{15}} \\cdot ab^2 c^3 d^4$\n$\\frac{2^{15}}{3^{15}} \\cdot ab^2 c^3 d^4 \\leq \\frac{2^{15}}{3^{15}} \\cdot \\left( \\frac{10}{4} \\right)^{15}$\n$ \\frac{2^{15}}{3^{15}} \\cdot \\left( \\frac{10}{4} \\right)^{15} = \\frac{2^{15}}{3^{15}} \\cdot 5^{15} \\cdot 3^{15} = 2^{15} \\cdot 5^{15} = \\frac{3125 \\cdot 32768}{1} = 1024000000 $\n$\\frac{2^{15}}{3^{15}} \\cdot \\left( \\frac{10}{4} \\right)^{15} = \\frac{2^{15}}{3^{15}} \\cdot 5^{15} \\cdot 3^{15} = 2^{15} \\cdot 5^{15} = \\frac{3125 \\cdot 32768}{1} = 1024000000 $",
+    "steps": [
+        "Step 1:  Since we are asked to find the maximum value of $ab^2 c^3 d^4,$ we want to express this quantity in terms of a single variable using the given constraint $a + b + c + d = 10.$",
+        "Step 2:  We can utilize the AM-GM inequality, which states that the arithmetic mean of a set of non-negative real numbers is greater than or equal to the geometric mean of the same set of numbers.\n \n$ \\frac{a + b + c + d}{4} \\geq \\sqrt[4]{abcd} $",
+        "Step 3:  We can manipulate the given constraint $a + b + c + d = 10$ to be in the form of $\\frac{a + b + c + d}{4}.$ This manipulation can be done by dividing both sides of the equation by $4.$\n\n$ \\frac{a + b + c + d}{4} = \\frac{10}{4} = \\frac{5}{2} $\n\n$ \\frac{5}{2} \\geq \\sqrt[4]{abcd} $\n\n$ \\left( \\frac{5}{2} \\right)^4 \\geq abcd $\n\n$ \\frac{625}{16} \\geq abcd $\n\n$ \\frac{625}{16} \\geq ab \\left( \\frac{b}{a} \\right)^2 c \\left( \\frac{c}{b} \\right)^3 d^4 $",
+        "Step 4:  $ ab^2 c^3 d^4 \\leq \\frac{625}{16} \\cdot \\frac{b^4}{a^3} \\cdot \\frac{c^4}{b^3} \\cdot d^4 = \\frac{625}{16} \\cdot \\frac{b^4}{a^3} \\cdot \\frac{c^4}{b^3} \\cdot d^4 = \\frac{625}{16} \\cdot \\frac{b \\cdot b^3 \\cdot c^4 \\cdot d^4}{a^3 \\cdot b^3} = \\frac{625}{16} \\cdot \\frac{b}{a^3} \\cdot b^3 \\cdot c^4 \\cdot d^4 $",
+        "Using the AM-GM inequality with the numbers $a,$ $a,$ $b,$ $b,$ $b,$ $c,$ $c,$ $c,$ $c,$ $d,$ $d,$ $d,$ $d,$ $d,$ we get\n\n$ \\frac{a + a + b + b + b + c + c + c + c + d + d + d + d + d}{15} \\geq \\sqrt[15]{a^2 b^3 c^4 d^5} $\n\n$ \\frac{10}{15} \\geq \\sqrt[15]{a^2 b^3 c^4 d^5} $\n\n$ \\frac{2}{3} \\geq \\sqrt[15]{a^2 b^3 c^4 d^5} $\n\n$ \\left( \\frac{2}{3} \\right)^{15} \\geq a^2 b^3 c^4 d^5 $\n\n$ \\frac{2^{15}}{3^{15}} \\geq a^2 b^3 c^4 d^5 $\n\n$ \\frac{2^{15}}{3^{15}} \\geq a^",
+        "$ \\left( \\frac{2}{3} \\right)^{15} \\geq a^2 b^3 c^4 d^5 $ \n\n$ \\frac{2^{15}}{3^{15}} \\geq ab^3 c^4 d^5 $ \n\n$ \\frac{2^{15}}{3^{15}} \\geq ab^3 c^4 d^5 \\cdot ab^2 c^3 d^4$",
+        "$ab^2 c^3 d^4 \\leq \\frac{2^{15}}{3^{15}} \\cdot ab^2 c^3 d^4$",
+        "$\\frac{2^{15}}{3^{15}} \\cdot ab^2 c^3 d^4 \\leq \\frac{2^{15}}{3^{15}} \\cdot \\left( \\frac{10}{4} \\right)^{15}$",
+        "$ \\frac{2^{15}}{3^{15}} \\cdot \\left( \\frac{10}{4} \\right)^{15} = \\frac{2^{15}}{3^{15}} \\cdot 5^{15} \\cdot 3^{15} = 2^{15} \\cdot 5^{15} = \\frac{3125 \\cdot 32768}{1} = 1024000000 $",
+        "$\\frac{2^{15}}{3^{15}} \\cdot \\left( \\frac{10}{4} \\right)^{15} = \\frac{2^{15}}{3^{15}} \\cdot 5^{15} \\cdot 3^{15} = 2^{15} \\cdot 5^{15} = \\frac{3125 \\cdot 32768}{1} = 1024000000 $"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Since we are asked to find the maximum value of $ab^2 c^3 d^4,$ we want to express this quantity in terms of a single variable using the given constraint $a + b + c + d = 10.$",
+            1
+        ],
+        [
+            "Step 2:  We can utilize the AM-GM inequality, which states that the arithmetic mean of a set of non-negative real numbers is greater than or equal to the geometric mean of the same set of numbers.\n \n$ \\frac{a + b + c + d}{4} \\geq \\sqrt[4]{abcd} $",
+            1
+        ],
+        [
+            "Step 3:  We can manipulate the given constraint $a + b + c + d = 10$ to be in the form of $\\frac{a + b + c + d}{4}.$ This manipulation can be done by dividing both sides of the equation by $4.$\n\n$ \\frac{a + b + c + d}{4} = \\frac{10}{4} = \\frac{5}{2} $\n\n$ \\frac{5}{2} \\geq \\sqrt[4]{abcd} $\n\n$ \\left( \\frac{5}{2} \\right)^4 \\geq abcd $\n\n$ \\frac{625}{16} \\geq abcd $\n\n$ \\frac{625}{16} \\geq ab \\left( \\frac{b}{a} \\right)^2 c \\left( \\frac{c}{b} \\right)^3 d^4 $",
+            1
+        ],
+        [
+            "Step 4:  $ ab^2 c^3 d^4 \\leq \\frac{625}{16} \\cdot \\frac{b^4}{a^3} \\cdot \\frac{c^4}{b^3} \\cdot d^4 = \\frac{625}{16} \\cdot \\frac{b^4}{a^3} \\cdot \\frac{c^4}{b^3} \\cdot d^4 = \\frac{625}{16} \\cdot \\frac{b \\cdot b^3 \\cdot c^4 \\cdot d^4}{a^3 \\cdot b^3} = \\frac{625}{16} \\cdot \\frac{b}{a^3} \\cdot b^3 \\cdot c^4 \\cdot d^4 $",
+            1
+        ],
+        [
+            "Using the AM-GM inequality with the numbers $a,$ $a,$ $b,$ $b,$ $b,$ $c,$ $c,$ $c,$ $c,$ $d,$ $d,$ $d,$ $d,$ $d,$ we get\n\n$ \\frac{a + a + b + b + b + c + c + c + c + d + d + d + d + d}{15} \\geq \\sqrt[15]{a^2 b^3 c^4 d^5} $\n\n$ \\frac{10}{15} \\geq \\sqrt[15]{a^2 b^3 c^4 d^5} $\n\n$ \\frac{2}{3} \\geq \\sqrt[15]{a^2 b^3 c^4 d^5} $\n\n$ \\left( \\frac{2}{3} \\right)^{15} \\geq a^2 b^3 c^4 d^5 $\n\n$ \\frac{2^{15}}{3^{15}} \\geq a^2 b^3 c^4 d^5 $\n\n$ \\frac{2^{15}}{3^{15}} \\geq a^",
+            1
+        ],
+        [
+            "$ \\left( \\frac{2}{3} \\right)^{15} \\geq a^2 b^3 c^4 d^5 $ \n\n$ \\frac{2^{15}}{3^{15}} \\geq ab^3 c^4 d^5 $ \n\n$ \\frac{2^{15}}{3^{15}} \\geq ab^3 c^4 d^5 \\cdot ab^2 c^3 d^4$",
+            1
+        ],
+        [
+            "$ab^2 c^3 d^4 \\leq \\frac{2^{15}}{3^{15}} \\cdot ab^2 c^3 d^4$",
+            1
+        ],
+        [
+            "$\\frac{2^{15}}{3^{15}} \\cdot ab^2 c^3 d^4 \\leq \\frac{2^{15}}{3^{15}} \\cdot \\left( \\frac{10}{4} \\right)^{15}$",
+            1
+        ],
+        [
+            "$ \\frac{2^{15}}{3^{15}} \\cdot \\left( \\frac{10}{4} \\right)^{15} = \\frac{2^{15}}{3^{15}} \\cdot 5^{15} \\cdot 3^{15} = 2^{15} \\cdot 5^{15} = \\frac{3125 \\cdot 32768}{1} = 1024000000 $",
+            1
+        ],
+        [
+            "$\\frac{2^{15}}{3^{15}} \\cdot \\left( \\frac{10}{4} \\right)^{15} = \\frac{2^{15}}{3^{15}} \\cdot 5^{15} \\cdot 3^{15} = 2^{15} \\cdot 5^{15} = \\frac{3125 \\cdot 32768}{1} = 1024000000 $",
+            1
+        ]
+    ],
+    "time": 134.91915893554688,
+    "total_tokens": 15229,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

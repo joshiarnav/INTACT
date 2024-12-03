@@ -1,0 +1,66 @@
+{
+    "problem": "The coordinates of a parallelogram are (5, 3), (6, 8), (7, 4) and $(x, y)$ and $x > 7$. What is the value of $x + y$?",
+    "level": "Level 4",
+    "type": "Geometry",
+    "solution": "Name the points $A(5,3)$, $B(6,8)$, $C(7,4)$, and $D(x,y)$ and sketch the first three.  We find that there are three possible locations for $D$ (see figure).  Only the one to the right has an $x$-coordinate greater than 7.  Since $AC$ is parallel to $BD$ and equal in length to it, $D$ is two units to the right and one unit up from $B$, just as $C$ is two units to the right and one unit up from $A$.  Therefore, the coordinates of $D$ are $(8,9)$, and $x+y=8+9=\\boxed{17}$.\n\n[asy]\nsize(5cm);\nimport graph;\ndefaultpen(linewidth(0.7)+fontsize(10));\ndotfactor=5;\nreal x = 7;\npair A=(5,3), B=(6,8), C=(7,4), D1=(8,9), D2=(4,7),D3=(6,-1);\npair[] dots = {A,B,C};\ndot(dots);\nxaxis(-2,10,Ticks(\" \",1.0,begin=false,end=false,NoZero),Arrows(4));\nyaxis(-2,10,Ticks(\" \",1.0,begin=false,end=false,NoZero),Arrows(4));\ndraw(A--C--D1--B--cycle);//linetype(\"8 8\"));\ndraw(A--D3--C);\ndraw(A--C--B--D2--cycle);//,linetype(\"1 2 3 1\"));\nlabel(\"$A(5,3)$\",A,SW);\nlabel(\"$B(6,8)$\",B,NW);\nlabel(\"$C(7,4)$\",C,E);\ndot(D1,UnFill);\ndot(D2,UnFill);\ndot(D3,UnFill);[/asy]",
+    "is_solved": false,
+    "model_solution": "Step 1: The opposite sides of a parallelogram are parallel, so the slope of the line connecting (5, 3) and (6, 8) should be equal to the slope of the line connecting (7, 4) and $(x, y)$.\nStep 2: Calculate the slope of the line connecting (5, 3) and (6, 8) to get $\\frac{8-3}{6-5} = 5$.\nThe slope of the line connecting (7, 4) and $(x, y)$ is $\\frac{y-4}{x-7} = 5$.\nStep 3: Solve the equation $\\frac{y-4}{x-7} = 5$ for $y$ to get $y = 5x - 27$.\nStep 4: Since the point (7, 4) lies on the line connecting (6, 8) and (5, 3), the y-coordinate of the point $(x, y)$ must be 4, so $y = 5x - 27 = 4$.\nStep 5: Solve $5x - 27 = 4$ to get $5x = 31$.\nStep 6: Solve $5x = 31$ to get $x = \\frac{31}{5}$.\nStep 7: Solve $x = \\frac{31}{5}$ to get $y = 5\\left(\\frac{31}{5}\\right) - 27$ to get $y = 31 - 27$ to get $y = 4$.\nStep 8: Substitute $x = \\frac{31}{5}$ into the equation $y = 5x - 27$ to get $y = 5\\left(\\frac{31}{5}\\right) - 27$ to get $y = 31 - 27$ to get $y = 4$.\nStep 9: Substitute x = 31/5 into the equation y = 4 to get x + y = (31/5) + 4.",
+    "steps": [
+        "Step 1: The opposite sides of a parallelogram are parallel, so the slope of the line connecting (5, 3) and (6, 8) should be equal to the slope of the line connecting (7, 4) and $(x, y)$.",
+        "Step 2: Calculate the slope of the line connecting (5, 3) and (6, 8) to get $\\frac{8-3}{6-5} = 5$.",
+        "The slope of the line connecting (7, 4) and $(x, y)$ is $\\frac{y-4}{x-7} = 5$.",
+        "Step 3: Solve the equation $\\frac{y-4}{x-7} = 5$ for $y$ to get $y = 5x - 27$.",
+        "Step 4: Since the point (7, 4) lies on the line connecting (6, 8) and (5, 3), the y-coordinate of the point $(x, y)$ must be 4, so $y = 5x - 27 = 4$.",
+        "Step 5: Solve $5x - 27 = 4$ to get $5x = 31$.",
+        "Step 6: Solve $5x = 31$ to get $x = \\frac{31}{5}$.",
+        "Step 7: Solve $x = \\frac{31}{5}$ to get $y = 5\\left(\\frac{31}{5}\\right) - 27$ to get $y = 31 - 27$ to get $y = 4$.",
+        "Step 8: Substitute $x = \\frac{31}{5}$ into the equation $y = 5x - 27$ to get $y = 5\\left(\\frac{31}{5}\\right) - 27$ to get $y = 31 - 27$ to get $y = 4$.",
+        "Step 9: Substitute x = 31/5 into the equation y = 4 to get x + y = (31/5) + 4."
+    ],
+    "full_steps": [
+        [
+            "Step 1: The opposite sides of a parallelogram are parallel, so the slope of the line connecting (5, 3) and (6, 8) should be equal to the slope of the line connecting (7, 4) and $(x, y)$.",
+            1
+        ],
+        [
+            "Step 2: Calculate the slope of the line connecting (5, 3) and (6, 8) to get $\\frac{8-3}{6-5} = 5$.",
+            1
+        ],
+        [
+            "The slope of the line connecting (7, 4) and $(x, y)$ is $\\frac{y-4}{x-7} = 5$.",
+            1
+        ],
+        [
+            "Step 3: Solve the equation $\\frac{y-4}{x-7} = 5$ for $y$ to get $y = 5x - 27$.",
+            1
+        ],
+        [
+            "Step 4: Since the point (7, 4) lies on the line connecting (6, 8) and (5, 3), the y-coordinate of the point $(x, y)$ must be 4, so $y = 5x - 27 = 4$.",
+            1
+        ],
+        [
+            "Step 5: Solve $5x - 27 = 4$ to get $5x = 31$.",
+            1
+        ],
+        [
+            "Step 6: Solve $5x = 31$ to get $x = \\frac{31}{5}$.",
+            1
+        ],
+        [
+            "Step 7: Solve $x = \\frac{31}{5}$ to get $y = 5\\left(\\frac{31}{5}\\right) - 27$ to get $y = 31 - 27$ to get $y = 4$.",
+            1
+        ],
+        [
+            "Step 8: Substitute $x = \\frac{31}{5}$ into the equation $y = 5x - 27$ to get $y = 5\\left(\\frac{31}{5}\\right) - 27$ to get $y = 31 - 27$ to get $y = 4$.",
+            1
+        ],
+        [
+            "Step 9: Substitute x = 31/5 into the equation y = 4 to get x + y = (31/5) + 4.",
+            1
+        ]
+    ],
+    "time": 137.42823910713196,
+    "total_tokens": 7187,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

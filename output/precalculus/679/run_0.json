@@ -1,0 +1,66 @@
+{
+    "problem": "Find all real $x \\in [0, 2 \\pi]$ such that\n\\[\\tan 7x - \\sin 6x = \\cos 4x - \\cot 7x.\\]Enter all the real solutions, separated by commas.",
+    "level": "Level 5",
+    "type": "Precalculus",
+    "solution": "Writing everything in terms of sine and cosine and rearranging, we have:\n\\begin{align*}\n\\frac{\\sin 7x}{\\cos 7x} - \\sin 6x &= \\cos 4x - \\frac{\\cos 7x}{\\sin 7x} \\\\\n\\Leftrightarrow \\quad \\frac{\\sin 7x}{\\cos 7x} + \\frac{\\cos 7x}{\\sin 7x} &= \\cos 4x + \\sin 6x \\\\\n\\Leftrightarrow \\quad \\frac{\\sin^2 7x + \\cos^2 7x}{\\sin 7x \\cos 7x} &= \\cos 4x + \\sin 6x \\\\\n\\Leftrightarrow \\quad \\frac{1}{\\sin 7x \\cos 7x} &= \\cos 4x + \\sin 6x \\\\\n\\Leftrightarrow \\quad \\frac{2}{\\sin 14x} &= \\cos 4x + \\sin 6x \\\\\n\\Leftrightarrow \\quad 2 &= \\sin 14x (\\cos 4x + \\sin 6x).\n\\end{align*}Since the range of sine and cosine are $[-1,1]$, $|\\sin 14x| \\le 1$ and $|\\cos 4x + \\sin 6x| \\le 2$ for all $x$.  Since the product of these two expressions is 2, they must all attain the maximum value.  That is, $|\\sin 14x| = 1$, $|\\sin 6x| = 1$, and $\\cos 4x = \\sin 6x$.  There are two cases:\n\nCase 1: If $\\sin 14x = -1$, then $\\cos 4x = \\sin 6x = -1$.  So $4x = k \\pi$, where $k$ is an odd integer.  Then for $x$ between 0 and $2\\pi$, we have $x = \\frac{\\pi}{4},$ $\\frac{3\\pi}{4},$ $\\frac{5\\pi}{4},$ $\\frac{7\\pi}{4}.$  It is not difficult to verify that only $x = \\frac{\\pi}{4}$ and $x = \\frac{5\\pi}{4}$ satisfy the other two equations.\n\nCase 2: If $\\sin 14x = 1$, then $\\cos 4x = \\sin 6x = 1$.  So $4x = k \\pi$, where $k$ is an even integer.  For $x$ between 0 and $2\\pi$, we have $x = 0,$ $\\frac{\\pi}{2},$ $\\pi,$ $\\frac{3\\pi}{2},$ $2 \\pi.$  Note that for all four possible values of $x$, $6x$ is a multiple of $\\pi$, and $\\sin 6x = 0$.  Therefore, there are no solutions in this case.\n\nIn conclusion, the solutions of $x$ between 0 and $2\\pi$ are $\\boxed{\\frac{\\pi}{4}}$ and $\\boxed{\\frac{5\\pi}{4}}$.",
+    "is_solved": false,
+    "model_solution": "Step 1: We begin by writing the given trigonometric equation:\n\\[\\tan 7x - \\sin 6x = \\cos 4x - \\cot 7x.\\]\nStep 2: \n\\[\\tan 7x - \\sin 6x = \\cos 4x - \\cot 7x\\]\n\\[\\tan 7x - \\sin 6x = \\cos 4x - \\frac{1}{\\tan 7x}.\\]\n$\\tan 7x - \\sin 6x = \\cos 4x - \\frac{1}{\\tan 7x}$\n$\\tan 7x \\cos 4x - \\frac{\\cos 4x}{\\tan 7x} = \\sin 6x$\n$\\frac{\\tan 7x - \\frac{1}{\\tan 7x}}{1} \\cos 4x = \\sin 6x$\n$\\frac{\\tan^2 7x - 1}{\\tan 7x} \\cos 4x = \\sin 6x$\n$\\frac{\\sec^2 7x - 1}{\\sec 7x} \\cos 4x = \\sin 6x$\n\\[\\frac{\\sec^2 7x - 1}{\\sec 7x} \\cos 4x = \\sin 6x\\]\n\\[\\frac{1 - \\cos^2 7x}{\\sec 7x} \\cos 4x = \\sin 6x\\]\n\\[\\frac{\\sin^2 7x}{\\sec 7x} \\cos 4x = \\sin 6x\\]\n\\[\\sin^2 7x \\cos 4x = \\sin 6x\\]\n\\[\\sin^2 7x \\cos 4x = \\sin 6x\\]\n\\[\\sin^2 7x \\cos 4x - \\sin 6x = 0\\]\n\\[\\sin^2 7x \\cos 4x - \\sin 6x = 0\\]\n\\[\\sin 6x (\\sin^2 7x \\cos 4x - 1) = 0\\]\n\\[\\sin 6x (\\sin 7x + \\cos 7x) (\\sin 7x - \\cos 7x) = 0\\]\n$\\sin 6x (\\sin 7x + \\cos 7x) (\\sin 7x - \\cos 7x) = 0$\n$\\sin 6x = 0$ or $\\sin 7x + \\cos 7x = 0$ or $\\sin 7x - \\cos 7x = 0$\n$\\sin 6x = 0$ implies $x = 0, \\frac{\\pi}{3}, \\frac{2\\pi}{3}, \\pi, \\frac{4\\pi}{3}, \\frac{5\\pi}{3}, 2\\pi$ or $\\sin 7x + \\cos 7x = 0$ implies $\\tan 7x = -1$ implies $7x = \\frac{3\\pi}{4} + k\\pi$ for $k \\in \\mathbb{Z}$, so $x = \\frac{\\pi}{4} + \\frac{k\\pi}{7}$ or $\\sin 7x - \\cos 7x = 0$ implies $\\tan 7x = 1$ implies $7x = \\frac{\\pi}{4} + k\\pi$ for $k \\in \\mathbb{Z}$, so $x = \\frac{\\pi}{28} + \\frac{k\\pi}{7}$.\nWe must check the solutions within the interval $[0,2\\pi]$.\n\n$\\sin 6x = 0$ implies $x = 0, \\frac{\\pi}{3}, \\frac{2\\pi}{3}, \\pi, \\frac{4\\pi}{3}, \\frac{5\\pi}{3}, 2\\pi$.\n$\\sin 7x + \\cos 7x = 0$ implies $\\tan 7x = -1$ implies $7x = \\frac{3\\pi}{4} + k\\pi$ for $k \\in \\mathbb{Z}$, so $x = \\frac{\\pi}{4} + \\frac{k\\pi}{7}$.\n$\\sin 7x - \\cos 7x = 0$ implies $\\tan 7x = 1$ implies $7x = \\frac{\\pi}{4} + k\\pi$ for $k \\in \\mathbb{Z}$, so $x = \\frac{\\pi}{28} + \\frac{k\\pi}{7}$.\n$\\frac{\\pi}{4} + \\frac{k\\pi}{7} \\in [0, 2 \\pi]$ implies $k = 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15$.\nThus, $x = \\frac{\\pi}{4}, \\frac{9\\pi}{28}, \\frac{17\\pi}{28}, \\frac{25\\pi}{28}, \\frac{33\\pi}{28}, \\frac{\\pi}{4} + \\frac{3\\pi}{7}, \\frac{\\pi}{4} + \\frac{\\pi}{7}, \\frac{\\pi}{4} + \\frac{5\\pi}{7}, \\frac{\\pi}{4} + \\frac{9\\pi}{7}, \\frac{5\\pi}{4}, \\frac{\\pi}{4} + \\frac{11\\pi}{7}, \\frac{\\pi}{4} + \\frac{13\\pi}{7}, \\frac{9\\pi}{4} + \\frac{3",
+    "steps": [
+        "Step 1: We begin by writing the given trigonometric equation:\n\\[\\tan 7x - \\sin 6x = \\cos 4x - \\cot 7x.\\]",
+        "Step 2: \n\\[\\tan 7x - \\sin 6x = \\cos 4x - \\cot 7x\\]\n\\[\\tan 7x - \\sin 6x = \\cos 4x - \\frac{1}{\\tan 7x}.\\]",
+        "$\\tan 7x - \\sin 6x = \\cos 4x - \\frac{1}{\\tan 7x}$\n$\\tan 7x \\cos 4x - \\frac{\\cos 4x}{\\tan 7x} = \\sin 6x$\n$\\frac{\\tan 7x - \\frac{1}{\\tan 7x}}{1} \\cos 4x = \\sin 6x$\n$\\frac{\\tan^2 7x - 1}{\\tan 7x} \\cos 4x = \\sin 6x$\n$\\frac{\\sec^2 7x - 1}{\\sec 7x} \\cos 4x = \\sin 6x$",
+        "\\[\\frac{\\sec^2 7x - 1}{\\sec 7x} \\cos 4x = \\sin 6x\\]\n\\[\\frac{1 - \\cos^2 7x}{\\sec 7x} \\cos 4x = \\sin 6x\\]\n\\[\\frac{\\sin^2 7x}{\\sec 7x} \\cos 4x = \\sin 6x\\]\n\\[\\sin^2 7x \\cos 4x = \\sin 6x\\]",
+        "\\[\\sin^2 7x \\cos 4x = \\sin 6x\\]\n\\[\\sin^2 7x \\cos 4x - \\sin 6x = 0\\]",
+        "\\[\\sin^2 7x \\cos 4x - \\sin 6x = 0\\]\n\\[\\sin 6x (\\sin^2 7x \\cos 4x - 1) = 0\\]\n\\[\\sin 6x (\\sin 7x + \\cos 7x) (\\sin 7x - \\cos 7x) = 0\\]",
+        "$\\sin 6x (\\sin 7x + \\cos 7x) (\\sin 7x - \\cos 7x) = 0$\n$\\sin 6x = 0$ or $\\sin 7x + \\cos 7x = 0$ or $\\sin 7x - \\cos 7x = 0$",
+        "$\\sin 6x = 0$ implies $x = 0, \\frac{\\pi}{3}, \\frac{2\\pi}{3}, \\pi, \\frac{4\\pi}{3}, \\frac{5\\pi}{3}, 2\\pi$ or $\\sin 7x + \\cos 7x = 0$ implies $\\tan 7x = -1$ implies $7x = \\frac{3\\pi}{4} + k\\pi$ for $k \\in \\mathbb{Z}$, so $x = \\frac{\\pi}{4} + \\frac{k\\pi}{7}$ or $\\sin 7x - \\cos 7x = 0$ implies $\\tan 7x = 1$ implies $7x = \\frac{\\pi}{4} + k\\pi$ for $k \\in \\mathbb{Z}$, so $x = \\frac{\\pi}{28} + \\frac{k\\pi}{7}$.",
+        "We must check the solutions within the interval $[0,2\\pi]$.\n\n$\\sin 6x = 0$ implies $x = 0, \\frac{\\pi}{3}, \\frac{2\\pi}{3}, \\pi, \\frac{4\\pi}{3}, \\frac{5\\pi}{3}, 2\\pi$.\n$\\sin 7x + \\cos 7x = 0$ implies $\\tan 7x = -1$ implies $7x = \\frac{3\\pi}{4} + k\\pi$ for $k \\in \\mathbb{Z}$, so $x = \\frac{\\pi}{4} + \\frac{k\\pi}{7}$.\n$\\sin 7x - \\cos 7x = 0$ implies $\\tan 7x = 1$ implies $7x = \\frac{\\pi}{4} + k\\pi$ for $k \\in \\mathbb{Z}$, so $x = \\frac{\\pi}{28} + \\frac{k\\pi}{7}$.",
+        "$\\frac{\\pi}{4} + \\frac{k\\pi}{7} \\in [0, 2 \\pi]$ implies $k = 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15$.\nThus, $x = \\frac{\\pi}{4}, \\frac{9\\pi}{28}, \\frac{17\\pi}{28}, \\frac{25\\pi}{28}, \\frac{33\\pi}{28}, \\frac{\\pi}{4} + \\frac{3\\pi}{7}, \\frac{\\pi}{4} + \\frac{\\pi}{7}, \\frac{\\pi}{4} + \\frac{5\\pi}{7}, \\frac{\\pi}{4} + \\frac{9\\pi}{7}, \\frac{5\\pi}{4}, \\frac{\\pi}{4} + \\frac{11\\pi}{7}, \\frac{\\pi}{4} + \\frac{13\\pi}{7}, \\frac{9\\pi}{4} + \\frac{3"
+    ],
+    "full_steps": [
+        [
+            "Step 1: We begin by writing the given trigonometric equation:\n\\[\\tan 7x - \\sin 6x = \\cos 4x - \\cot 7x.\\]",
+            1
+        ],
+        [
+            "Step 2: \n\\[\\tan 7x - \\sin 6x = \\cos 4x - \\cot 7x\\]\n\\[\\tan 7x - \\sin 6x = \\cos 4x - \\frac{1}{\\tan 7x}.\\]",
+            1
+        ],
+        [
+            "$\\tan 7x - \\sin 6x = \\cos 4x - \\frac{1}{\\tan 7x}$\n$\\tan 7x \\cos 4x - \\frac{\\cos 4x}{\\tan 7x} = \\sin 6x$\n$\\frac{\\tan 7x - \\frac{1}{\\tan 7x}}{1} \\cos 4x = \\sin 6x$\n$\\frac{\\tan^2 7x - 1}{\\tan 7x} \\cos 4x = \\sin 6x$\n$\\frac{\\sec^2 7x - 1}{\\sec 7x} \\cos 4x = \\sin 6x$",
+            1
+        ],
+        [
+            "\\[\\frac{\\sec^2 7x - 1}{\\sec 7x} \\cos 4x = \\sin 6x\\]\n\\[\\frac{1 - \\cos^2 7x}{\\sec 7x} \\cos 4x = \\sin 6x\\]\n\\[\\frac{\\sin^2 7x}{\\sec 7x} \\cos 4x = \\sin 6x\\]\n\\[\\sin^2 7x \\cos 4x = \\sin 6x\\]",
+            1
+        ],
+        [
+            "\\[\\sin^2 7x \\cos 4x = \\sin 6x\\]\n\\[\\sin^2 7x \\cos 4x - \\sin 6x = 0\\]",
+            1
+        ],
+        [
+            "\\[\\sin^2 7x \\cos 4x - \\sin 6x = 0\\]\n\\[\\sin 6x (\\sin^2 7x \\cos 4x - 1) = 0\\]\n\\[\\sin 6x (\\sin 7x + \\cos 7x) (\\sin 7x - \\cos 7x) = 0\\]",
+            1
+        ],
+        [
+            "$\\sin 6x (\\sin 7x + \\cos 7x) (\\sin 7x - \\cos 7x) = 0$\n$\\sin 6x = 0$ or $\\sin 7x + \\cos 7x = 0$ or $\\sin 7x - \\cos 7x = 0$",
+            1
+        ],
+        [
+            "$\\sin 6x = 0$ implies $x = 0, \\frac{\\pi}{3}, \\frac{2\\pi}{3}, \\pi, \\frac{4\\pi}{3}, \\frac{5\\pi}{3}, 2\\pi$ or $\\sin 7x + \\cos 7x = 0$ implies $\\tan 7x = -1$ implies $7x = \\frac{3\\pi}{4} + k\\pi$ for $k \\in \\mathbb{Z}$, so $x = \\frac{\\pi}{4} + \\frac{k\\pi}{7}$ or $\\sin 7x - \\cos 7x = 0$ implies $\\tan 7x = 1$ implies $7x = \\frac{\\pi}{4} + k\\pi$ for $k \\in \\mathbb{Z}$, so $x = \\frac{\\pi}{28} + \\frac{k\\pi}{7}$.",
+            1
+        ],
+        [
+            "We must check the solutions within the interval $[0,2\\pi]$.\n\n$\\sin 6x = 0$ implies $x = 0, \\frac{\\pi}{3}, \\frac{2\\pi}{3}, \\pi, \\frac{4\\pi}{3}, \\frac{5\\pi}{3}, 2\\pi$.\n$\\sin 7x + \\cos 7x = 0$ implies $\\tan 7x = -1$ implies $7x = \\frac{3\\pi}{4} + k\\pi$ for $k \\in \\mathbb{Z}$, so $x = \\frac{\\pi}{4} + \\frac{k\\pi}{7}$.\n$\\sin 7x - \\cos 7x = 0$ implies $\\tan 7x = 1$ implies $7x = \\frac{\\pi}{4} + k\\pi$ for $k \\in \\mathbb{Z}$, so $x = \\frac{\\pi}{28} + \\frac{k\\pi}{7}$.",
+            1
+        ],
+        [
+            "$\\frac{\\pi}{4} + \\frac{k\\pi}{7} \\in [0, 2 \\pi]$ implies $k = 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15$.\nThus, $x = \\frac{\\pi}{4}, \\frac{9\\pi}{28}, \\frac{17\\pi}{28}, \\frac{25\\pi}{28}, \\frac{33\\pi}{28}, \\frac{\\pi}{4} + \\frac{3\\pi}{7}, \\frac{\\pi}{4} + \\frac{\\pi}{7}, \\frac{\\pi}{4} + \\frac{5\\pi}{7}, \\frac{\\pi}{4} + \\frac{9\\pi}{7}, \\frac{5\\pi}{4}, \\frac{\\pi}{4} + \\frac{11\\pi}{7}, \\frac{\\pi}{4} + \\frac{13\\pi}{7}, \\frac{9\\pi}{4} + \\frac{3",
+            1
+        ]
+    ],
+    "time": 133.28261756896973,
+    "total_tokens": 13139,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

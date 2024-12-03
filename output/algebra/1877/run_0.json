@@ -1,0 +1,56 @@
+{
+    "problem": "Jo adds up all the positive integers from 1 to 50. Kate does a similar thing with the first 50 positive integers; however, she first rounds every integer to its nearest multiple of 10 (rounding 5s up) and then adds the 50 values. What is the positive difference between Jo's sum and Kate's sum?",
+    "level": "Level 4",
+    "type": "Algebra",
+    "solution": "Consider the numbers $1, 2, 3,\\dots, 10$. Jo would add these integers up as is, while Kate would round the first four down to 0, decreasing her sum by $1+2+3+4=10$, and would round the last six up to 10, increasing her sum by $5+4+3+2+1+0=15$. Thus, her sum is $-10+15=5$ more than Jo's sum for the numbers $1, 2, 3,\\dots, 10$. This same logic applies to the numbers $11, 12, 13,\\dots, 20$ also, and in general it applies to every ten numbers greater than 20. Since there are five sets of ten numbers from 1 to 50, Kate's sum is $5 \\cdot 5 = \\boxed{25}$ more than Jo's sum.",
+    "is_solved": true,
+    "model_solution": "Step 1: Calculate the sum of the first 50 positive integers using Jo's method: $1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50$\n\n$=\\frac{n}{2}(a_1+a_n)=\\frac{50}{2}(1+50)=25(51)=1275$\nStep 2: \n$10+11+12+13+14+15+16+17+18+19$ $=10\\cdot10+10\\left(11+12+13+14+15+16+17+18+19\\right)=10\\cdot 90+10\\cdot 129=900+1290=2190$\n\n$20+21+22+23+24+25+26+27+28+29$ $=20\\cdot10+10\\left(21+22+23+24+25+26+27+28+29\\right)=20\\cdot 90+10\\cdot 215=1800+2150=3950$\n\n$30+31+32+33+34+35+36+37+38+39$ $=30\\cdot10+10\\left(31+32+33+34+35+36+37+38+39\\right)=30\\cdot 90+10\\cdot 301=2700+3010=5710$\n\n$40+41+42+43+44+45+46+47+48+49$ $=40\\cdot10\nStep 3: $10a_1+10a_2+10a_3+10a_4+10a_5+10a_6+10a_7+10a_8+10a_9=(10\\cdot10+10\\cdot10+10\\cdot10+10\\cdot10+10\\cdot10+10\\cdot10+10\\cdot10+10\\cdot10+10\\cdot10)+(10\\cdot 11+10\\cdot 12+10\\cdot 13+10\\cdot 14+10\\cdot 15+10\\cdot 16+10\\cdot 17+10\\cdot 18+10\\cdot 19)+...+(10\\cdot 41+10\\cdot 42+10\\cdot 43+10\\cdot 44+10\\cdot 45+10\\cdot 46+10\\cdot 47+10\\cdot 48+10\\cdot 49)$ $=10\\cdot 10(9)+10\\cdot 90+10\\cdot 90+10\\cdot 90+10\\cdot 90+10\\cdot 90+10\\cdot 90\n$10\\cdot 10(9)\\cdot 5+10\\cdot 9\\cdot 90=9000+8100=17100$\n\n$17100+17100+17100+17100=68400$\n\n$68400-1275=66025$\nStep 4: $|66025-1275|=65750$\nStep 5: Since the sum of the rounded values is exactly $5$ times the sum of the values rounded to the nearest multiple of $10$ and then multiplied by $10$, Jo's sum is $1275$ and Kate's sum is $68400$, so the difference between Kate's sum and Jo's sum is $|68400-1275|=66125$.\nStep 6: \n$|68400-1275|=|67225|=67225$\nStep 5: Since the sum of the rounded values is exactly $5$ times the sum of the values rounded to the nearest multiple of $10$ and then multiplied by $10$, Jo's sum is $1275$ and Kate's sum is $68400$, so the difference between Kate's sum and Jo's sum is $|68400-1275|=66125$.",
+    "steps": [
+        "Step 1: Calculate the sum of the first 50 positive integers using Jo's method: $1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50$\n\n$=\\frac{n}{2}(a_1+a_n)=\\frac{50}{2}(1+50)=25(51)=1275$",
+        "Step 2: \n$10+11+12+13+14+15+16+17+18+19$ $=10\\cdot10+10\\left(11+12+13+14+15+16+17+18+19\\right)=10\\cdot 90+10\\cdot 129=900+1290=2190$\n\n$20+21+22+23+24+25+26+27+28+29$ $=20\\cdot10+10\\left(21+22+23+24+25+26+27+28+29\\right)=20\\cdot 90+10\\cdot 215=1800+2150=3950$\n\n$30+31+32+33+34+35+36+37+38+39$ $=30\\cdot10+10\\left(31+32+33+34+35+36+37+38+39\\right)=30\\cdot 90+10\\cdot 301=2700+3010=5710$\n\n$40+41+42+43+44+45+46+47+48+49$ $=40\\cdot10",
+        "Step 3: $10a_1+10a_2+10a_3+10a_4+10a_5+10a_6+10a_7+10a_8+10a_9=(10\\cdot10+10\\cdot10+10\\cdot10+10\\cdot10+10\\cdot10+10\\cdot10+10\\cdot10+10\\cdot10+10\\cdot10)+(10\\cdot 11+10\\cdot 12+10\\cdot 13+10\\cdot 14+10\\cdot 15+10\\cdot 16+10\\cdot 17+10\\cdot 18+10\\cdot 19)+...+(10\\cdot 41+10\\cdot 42+10\\cdot 43+10\\cdot 44+10\\cdot 45+10\\cdot 46+10\\cdot 47+10\\cdot 48+10\\cdot 49)$ $=10\\cdot 10(9)+10\\cdot 90+10\\cdot 90+10\\cdot 90+10\\cdot 90+10\\cdot 90+10\\cdot 90",
+        "$10\\cdot 10(9)\\cdot 5+10\\cdot 9\\cdot 90=9000+8100=17100$\n\n$17100+17100+17100+17100=68400$\n\n$68400-1275=66025$",
+        "Step 4: $|66025-1275|=65750$",
+        "Step 5: Since the sum of the rounded values is exactly $5$ times the sum of the values rounded to the nearest multiple of $10$ and then multiplied by $10$, Jo's sum is $1275$ and Kate's sum is $68400$, so the difference between Kate's sum and Jo's sum is $|68400-1275|=66125$.",
+        "Step 6: \n$|68400-1275|=|67225|=67225$",
+        "Step 5: Since the sum of the rounded values is exactly $5$ times the sum of the values rounded to the nearest multiple of $10$ and then multiplied by $10$, Jo's sum is $1275$ and Kate's sum is $68400$, so the difference between Kate's sum and Jo's sum is $|68400-1275|=66125$."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Calculate the sum of the first 50 positive integers using Jo's method: $1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50$\n\n$=\\frac{n}{2}(a_1+a_n)=\\frac{50}{2}(1+50)=25(51)=1275$",
+            1
+        ],
+        [
+            "Step 2: \n$10+11+12+13+14+15+16+17+18+19$ $=10\\cdot10+10\\left(11+12+13+14+15+16+17+18+19\\right)=10\\cdot 90+10\\cdot 129=900+1290=2190$\n\n$20+21+22+23+24+25+26+27+28+29$ $=20\\cdot10+10\\left(21+22+23+24+25+26+27+28+29\\right)=20\\cdot 90+10\\cdot 215=1800+2150=3950$\n\n$30+31+32+33+34+35+36+37+38+39$ $=30\\cdot10+10\\left(31+32+33+34+35+36+37+38+39\\right)=30\\cdot 90+10\\cdot 301=2700+3010=5710$\n\n$40+41+42+43+44+45+46+47+48+49$ $=40\\cdot10",
+            1
+        ],
+        [
+            "Step 3: $10a_1+10a_2+10a_3+10a_4+10a_5+10a_6+10a_7+10a_8+10a_9=(10\\cdot10+10\\cdot10+10\\cdot10+10\\cdot10+10\\cdot10+10\\cdot10+10\\cdot10+10\\cdot10+10\\cdot10)+(10\\cdot 11+10\\cdot 12+10\\cdot 13+10\\cdot 14+10\\cdot 15+10\\cdot 16+10\\cdot 17+10\\cdot 18+10\\cdot 19)+...+(10\\cdot 41+10\\cdot 42+10\\cdot 43+10\\cdot 44+10\\cdot 45+10\\cdot 46+10\\cdot 47+10\\cdot 48+10\\cdot 49)$ $=10\\cdot 10(9)+10\\cdot 90+10\\cdot 90+10\\cdot 90+10\\cdot 90+10\\cdot 90+10\\cdot 90",
+            1
+        ],
+        [
+            "$10\\cdot 10(9)\\cdot 5+10\\cdot 9\\cdot 90=9000+8100=17100$\n\n$17100+17100+17100+17100=68400$\n\n$68400-1275=66025$",
+            1
+        ],
+        [
+            "Step 4: $|66025-1275|=65750$",
+            1
+        ],
+        [
+            "Step 5: Since the sum of the rounded values is exactly $5$ times the sum of the values rounded to the nearest multiple of $10$ and then multiplied by $10$, Jo's sum is $1275$ and Kate's sum is $68400$, so the difference between Kate's sum and Jo's sum is $|68400-1275|=66125$.",
+            1
+        ],
+        [
+            "Step 6: \n$|68400-1275|=|67225|=67225$",
+            1
+        ],
+        [
+            "Step 5: Since the sum of the rounded values is exactly $5$ times the sum of the values rounded to the nearest multiple of $10$ and then multiplied by $10$, Jo's sum is $1275$ and Kate's sum is $68400$, so the difference between Kate's sum and Jo's sum is $|68400-1275|=66125$.",
+            1
+        ]
+    ],
+    "time": 104.14065957069397,
+    "total_tokens": 12513,
+    "final_answer_tokens": 1032,
+    "model": "meta-llama/Llama-Vision-Free"
+}

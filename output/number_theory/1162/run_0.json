@@ -1,0 +1,26 @@
+{
+    "problem": "How many integers $m$ are there such that $0<m<100$ and $\\gcd(m,100)$ is a single-digit number?",
+    "level": "Level 5",
+    "type": "Number Theory",
+    "solution": "If $m$ is any integer, then $\\gcd(m,100)$ is one of the positive divisors of $100$: $$1, 2, 4, 5, 10, 20, 25, 50, 100.$$We note that the numbers on this list with more than one digit are all multiples of $10$, with the exception of $25$. Thus, $m$ has a single-digit $\\gcd$ with $100$ if and only if $m$ is not a multiple of either $10$ or $25$. Thus, we just need to count integers $m$ between $0$ and $100$ which are not multiples of $10$ or of $25$.\n\nThere are $99$ integers $m$ such that $0<m<100$. These include nine multiples of $10$ ($10,20,30,\\ldots,80,90$) and two more multiples of $25$ ($25$ and $75$; we don't count $50$ because we already counted it). So, that leaves $99-9-2=\\boxed{88}$ integers whose greatest common divisor with $100$ has a single digit.",
+    "is_solved": true,
+    "model_solution": "Step 1:  To solve this problem, we need to find the number of integers $m$ such that $0<m<100$ and $\\gcd(m,100)$ is a single-digit number.\nStep 2:  Let's consider the prime factorization of $100$, which is $2^2\\cdot5^2$.\nStep 3:  For each single-digit number $d$ that is a divisor of $100$, we need to find the total number of multiples of $d$ that are less than $100$.\nStep 4:  We can start by finding the multiples of $1, 2, 3, 4, 5, 6, 7, 8, 9$ and $10$ that are less than $100$.\nStep 5:  However, since the $\\gcd$ with $100$ must be a single-digit number, we cannot have any multiples of $10$.\nStep 6:  We also need to consider the multiples of $2$ and $4$ separately, as their multiples that are less than $100$ will be $\\frac{100}{2} + \\frac{100}{4} = 50\nStep 2:  For the remaining single-digit divisors $2, 4,$ and $5$, we have $50$ multiples for each of them, corresponding to $\\frac{100}{2}, \\frac{100}{4},$ and $\\frac{100}{5}$, respectively.\n\nNote: The final answer will be provided in the last response.",
+    "steps": [
+        "Step 1:  To solve this problem, we need to find the number of integers $m$ such that $0<m<100$ and $\\gcd(m,100)$ is a single-digit number.\nStep 2:  Let's consider the prime factorization of $100$, which is $2^2\\cdot5^2$.\nStep 3:  For each single-digit number $d$ that is a divisor of $100$, we need to find the total number of multiples of $d$ that are less than $100$.\nStep 4:  We can start by finding the multiples of $1, 2, 3, 4, 5, 6, 7, 8, 9$ and $10$ that are less than $100$.\nStep 5:  However, since the $\\gcd$ with $100$ must be a single-digit number, we cannot have any multiples of $10$.\nStep 6:  We also need to consider the multiples of $2$ and $4$ separately, as their multiples that are less than $100$ will be $\\frac{100}{2} + \\frac{100}{4} = 50",
+        "Step 2:  For the remaining single-digit divisors $2, 4,$ and $5$, we have $50$ multiples for each of them, corresponding to $\\frac{100}{2}, \\frac{100}{4},$ and $\\frac{100}{5}$, respectively.\n\nNote: The final answer will be provided in the last response."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  To solve this problem, we need to find the number of integers $m$ such that $0<m<100$ and $\\gcd(m,100)$ is a single-digit number.\nStep 2:  Let's consider the prime factorization of $100$, which is $2^2\\cdot5^2$.\nStep 3:  For each single-digit number $d$ that is a divisor of $100$, we need to find the total number of multiples of $d$ that are less than $100$.\nStep 4:  We can start by finding the multiples of $1, 2, 3, 4, 5, 6, 7, 8, 9$ and $10$ that are less than $100$.\nStep 5:  However, since the $\\gcd$ with $100$ must be a single-digit number, we cannot have any multiples of $10$.\nStep 6:  We also need to consider the multiples of $2$ and $4$ separately, as their multiples that are less than $100$ will be $\\frac{100}{2} + \\frac{100}{4} = 50",
+            1
+        ],
+        [
+            "Step 2:  For the remaining single-digit divisors $2, 4,$ and $5$, we have $50$ multiples for each of them, corresponding to $\\frac{100}{2}, \\frac{100}{4},$ and $\\frac{100}{5}$, respectively.\n\nNote: The final answer will be provided in the last response.",
+            1
+        ]
+    ],
+    "time": 28.39477801322937,
+    "total_tokens": 1506,
+    "final_answer_tokens": 412,
+    "model": "meta-llama/Llama-Vision-Free"
+}

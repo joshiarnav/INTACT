@@ -1,0 +1,46 @@
+{
+    "problem": "A square and a regular heptagon  are coplanar and share a common side $\\overline{AD}$, as shown. What is the degree measure of angle $BAC$?  Express your answer as a common fraction.\n\n[asy]\nfor(int i=0; i <=7; ++i) {\ndraw(dir(360*i/7+90)--dir(360*(i+1)/7+90));\n}\npair A = dir(360*3/7+90);\npair F = dir(360*4/7+90);\npair C = A+dir(90)*(F-A);\npair D = C+F-A;\npair B = dir(360*2/7+90);\n\ndraw(A--C--D--F);\n\nlabel(\"$A$\",A,S);\nlabel(\"$B$\",B,W);\nlabel(\"$C$\",C,SE);\nlabel(\"$D$\",F,S);\n\n[/asy]",
+    "level": "Level 5",
+    "type": "Prealgebra",
+    "solution": "The measure of each interior angle in a regular $n$-gon is $180(n-2)/n$ degrees.  Therefore, the measure of angle $\\angle BAD$ is $180(7-2)/7=\\frac{900}7$ degrees and the measure of angle $CAD$ is 90 degrees.  Their difference, $\\angle BAC$, measures  \\[\\frac{900}7-\\frac{630}7=\\boxed{\\frac{270}7\\text{ degrees}}.\\]",
+    "is_solved": true,
+    "model_solution": "The measure of the interior angle $\\angle BAD$ of the regular heptagon is $\\frac{900}{7}^{\\circ}$, since the sum of the interior angles of any polygon is $180(n-2)$, where $n$ is the number of sides.\nThe measure of the angle $\\angle CAD$ is $\\angle BAD$ since $\\overline{AD}$ is an interior angle of the regular heptagon. Therefore, the measure of $\\angle CAD$ is also $\\frac{900}{7}^{\\circ}$.\nThe sum of the measures of the interior angles of $\\triangle ABC$ is $180^{\\circ}.$  Therefore, the measure of $\\angle BAC$ can be found by solving the equation $\\frac{900}{7}+\\frac{900}{7}+x=180.$\nSubtract $\\frac{900}{7}+\\frac{900}{7}$ from both sides of the equation to obtain $\\begin{aligned} x &= 180 - \\frac{1800}{7}\\\\ & = \\frac{1260}{7} - \\frac{1800}{7}\\\\ &= \\frac{-540}{7}. \\end{aligned}$\nSince $x$ represents the measure of an angle, it must be positive. Therefore, the equation $x = \\frac{-540}{7}$ must be rejected because it implies that $x$ is negative. We should replace this equation with the equation $180 - \\frac{1800}{7} = 180 - \\frac{7\\cdot 180\\cdot 2}{7\\cdot 2} = 180 - \\frac{4\\cdot 7\\cdot 45}{7\\cdot 2} = 180 - \\frac{4\\cdot 45}{2} = 180 - \\frac{4\\cdot 9\\cdot 5}{2} = 180 - 90\\cdot 5 = 180 - 450 = -270$ is rejected because it is negative. Instead we should use the equation $180 - \\frac{1800}{7} = 180 - 180 - \\frac{1800 - 7\\cdot 180}{7} = - \\frac{1800 - 7\\cdot 180}{7} = - \\frac{1800 - 1260}{7} = - \\frac{540}{7}$ is rejected\nThe equation $\\frac{1800}{7}+x=180$ can be solved for $x$ by subtracting $\\frac{1800}{7}$ from both sides of the equation to obtain $x = 180 - \\frac{1800}{7}$.\n\nFinal Answer: The final answer is 180 - \\frac{1800}{7}.",
+    "steps": [
+        "The measure of the interior angle $\\angle BAD$ of the regular heptagon is $\\frac{900}{7}^{\\circ}$, since the sum of the interior angles of any polygon is $180(n-2)$, where $n$ is the number of sides.",
+        "The measure of the angle $\\angle CAD$ is $\\angle BAD$ since $\\overline{AD}$ is an interior angle of the regular heptagon. Therefore, the measure of $\\angle CAD$ is also $\\frac{900}{7}^{\\circ}$.",
+        "The sum of the measures of the interior angles of $\\triangle ABC$ is $180^{\\circ}.$  Therefore, the measure of $\\angle BAC$ can be found by solving the equation $\\frac{900}{7}+\\frac{900}{7}+x=180.$",
+        "Subtract $\\frac{900}{7}+\\frac{900}{7}$ from both sides of the equation to obtain $\\begin{aligned} x &= 180 - \\frac{1800}{7}\\\\ & = \\frac{1260}{7} - \\frac{1800}{7}\\\\ &= \\frac{-540}{7}. \\end{aligned}$",
+        "Since $x$ represents the measure of an angle, it must be positive. Therefore, the equation $x = \\frac{-540}{7}$ must be rejected because it implies that $x$ is negative. We should replace this equation with the equation $180 - \\frac{1800}{7} = 180 - \\frac{7\\cdot 180\\cdot 2}{7\\cdot 2} = 180 - \\frac{4\\cdot 7\\cdot 45}{7\\cdot 2} = 180 - \\frac{4\\cdot 45}{2} = 180 - \\frac{4\\cdot 9\\cdot 5}{2} = 180 - 90\\cdot 5 = 180 - 450 = -270$ is rejected because it is negative. Instead we should use the equation $180 - \\frac{1800}{7} = 180 - 180 - \\frac{1800 - 7\\cdot 180}{7} = - \\frac{1800 - 7\\cdot 180}{7} = - \\frac{1800 - 1260}{7} = - \\frac{540}{7}$ is rejected",
+        "The equation $\\frac{1800}{7}+x=180$ can be solved for $x$ by subtracting $\\frac{1800}{7}$ from both sides of the equation to obtain $x = 180 - \\frac{1800}{7}$.\n\nFinal Answer: The final answer is 180 - \\frac{1800}{7}."
+    ],
+    "full_steps": [
+        [
+            "The measure of the interior angle $\\angle BAD$ of the regular heptagon is $\\frac{900}{7}^{\\circ}$, since the sum of the interior angles of any polygon is $180(n-2)$, where $n$ is the number of sides.",
+            1
+        ],
+        [
+            "The measure of the angle $\\angle CAD$ is $\\angle BAD$ since $\\overline{AD}$ is an interior angle of the regular heptagon. Therefore, the measure of $\\angle CAD$ is also $\\frac{900}{7}^{\\circ}$.",
+            1
+        ],
+        [
+            "The sum of the measures of the interior angles of $\\triangle ABC$ is $180^{\\circ}.$  Therefore, the measure of $\\angle BAC$ can be found by solving the equation $\\frac{900}{7}+\\frac{900}{7}+x=180.$",
+            1
+        ],
+        [
+            "Subtract $\\frac{900}{7}+\\frac{900}{7}$ from both sides of the equation to obtain $\\begin{aligned} x &= 180 - \\frac{1800}{7}\\\\ & = \\frac{1260}{7} - \\frac{1800}{7}\\\\ &= \\frac{-540}{7}. \\end{aligned}$",
+            1
+        ],
+        [
+            "Since $x$ represents the measure of an angle, it must be positive. Therefore, the equation $x = \\frac{-540}{7}$ must be rejected because it implies that $x$ is negative. We should replace this equation with the equation $180 - \\frac{1800}{7} = 180 - \\frac{7\\cdot 180\\cdot 2}{7\\cdot 2} = 180 - \\frac{4\\cdot 7\\cdot 45}{7\\cdot 2} = 180 - \\frac{4\\cdot 45}{2} = 180 - \\frac{4\\cdot 9\\cdot 5}{2} = 180 - 90\\cdot 5 = 180 - 450 = -270$ is rejected because it is negative. Instead we should use the equation $180 - \\frac{1800}{7} = 180 - 180 - \\frac{1800 - 7\\cdot 180}{7} = - \\frac{1800 - 7\\cdot 180}{7} = - \\frac{1800 - 1260}{7} = - \\frac{540}{7}$ is rejected",
+            1
+        ],
+        [
+            "The equation $\\frac{1800}{7}+x=180$ can be solved for $x$ by subtracting $\\frac{1800}{7}$ from both sides of the equation to obtain $x = 180 - \\frac{1800}{7}$.\n\nFinal Answer: The final answer is 180 - \\frac{1800}{7}.",
+            1
+        ]
+    ],
+    "time": 80.29605865478516,
+    "total_tokens": 6329,
+    "final_answer_tokens": 818,
+    "model": "meta-llama/Llama-Vision-Free"
+}

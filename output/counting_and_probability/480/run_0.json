@@ -1,0 +1,31 @@
+{
+    "problem": "Joe will randomly select two letters from the word CAMP, four letters from the word HERBS, and three letters from the word GLOW.  What is the probability that he will have all of the letters from the word PROBLEM?  Express your answer as a common fraction.",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "Each letter in the word PROBLEM appears exactly once among the words CAMP, HERBS, and GLOW.  Therefore, in order to have all of the letters to spell PROBLEM, Joe must select both M and P when choosing two letters from CAMP.  The probability of this is $1/\\binom{4}{2}=1/6$.  Also, he must select the letters E, R, and B when choosing four letters from the word HERBS.  Among the $\\binom{5}{4}=5$ ways of choosing these letters, 2 of them contain all of the letters E, R, and B.  Therefore, the probability that he will select E, R, and B from HERBS is 2/5.  Finally, Joe must select L and O among the 3 letters he chooses from GLOW.  Among the $\\binom{4}{3}=4$ ways of choosing these letters, 2 of them contain both L and O.  Therefore, the probability that he will select L and O from GLOW is $2/4=1/2$.  Altogether, the probability that he will select all the letters from the word PROBLEM is $\\left(\\frac{1}{6}\\right)\\left(\\frac{2}{5}\\right)\\left(\\frac{1}{2}\\right)=\\boxed{\\frac{1}{30}}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: We need to determine the total number of possible selections of two letters from CAMP, four letters from HERBS, and three letters from GLOW. \n\nTotal possible selections from CAMP = $\\binom{4}{2}=\\frac{4!}{2!2!}=6$\nTotal possible selections from HERBS = $\\binom{5}{4}=\\frac{5!}{4!1!}=5$\nTotal possible selections from GLOW = $\\binom{4}{3}=\\frac{4!}{3!1!}=4$\nStep 2: We need to determine the number of possible selections that contain all of the letters from the word PROBLEM.\n\nThere are $2$ ways to choose the M and P from CAMP since we must get both.\nThere are $\\binom{4}{3}=4$ ways to choose the E, R, and B from HERBS since we must get all three.\nThere is only $1$ way to choose the L and O from GLOW since we must get both.\n\nTherefore, the total number of selections containing all of the letters from the word PROBLEM is $(2)(4)(1)=8$.\nStep 3: The total number of ways that Joe can pick the letters is $\\left(\\binom{4}{2}\\right)\\left(\\binom{5}{4}\\right)\\left(\\binom{4}{3}\\right)=6\\cdot 5\\cdot 4=120$\nFinal Answer",
+    "steps": [
+        "Step 1: We need to determine the total number of possible selections of two letters from CAMP, four letters from HERBS, and three letters from GLOW. \n\nTotal possible selections from CAMP = $\\binom{4}{2}=\\frac{4!}{2!2!}=6$\nTotal possible selections from HERBS = $\\binom{5}{4}=\\frac{5!}{4!1!}=5$\nTotal possible selections from GLOW = $\\binom{4}{3}=\\frac{4!}{3!1!}=4$",
+        "Step 2: We need to determine the number of possible selections that contain all of the letters from the word PROBLEM.\n\nThere are $2$ ways to choose the M and P from CAMP since we must get both.\nThere are $\\binom{4}{3}=4$ ways to choose the E, R, and B from HERBS since we must get all three.\nThere is only $1$ way to choose the L and O from GLOW since we must get both.\n\nTherefore, the total number of selections containing all of the letters from the word PROBLEM is $(2)(4)(1)=8$.",
+        "Step 3: The total number of ways that Joe can pick the letters is $\\left(\\binom{4}{2}\\right)\\left(\\binom{5}{4}\\right)\\left(\\binom{4}{3}\\right)=6\\cdot 5\\cdot 4=120$\nFinal Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1: We need to determine the total number of possible selections of two letters from CAMP, four letters from HERBS, and three letters from GLOW. \n\nTotal possible selections from CAMP = $\\binom{4}{2}=\\frac{4!}{2!2!}=6$\nTotal possible selections from HERBS = $\\binom{5}{4}=\\frac{5!}{4!1!}=5$\nTotal possible selections from GLOW = $\\binom{4}{3}=\\frac{4!}{3!1!}=4$",
+            1
+        ],
+        [
+            "Step 2: We need to determine the number of possible selections that contain all of the letters from the word PROBLEM.\n\nThere are $2$ ways to choose the M and P from CAMP since we must get both.\nThere are $\\binom{4}{3}=4$ ways to choose the E, R, and B from HERBS since we must get all three.\nThere is only $1$ way to choose the L and O from GLOW since we must get both.\n\nTherefore, the total number of selections containing all of the letters from the word PROBLEM is $(2)(4)(1)=8$.",
+            1
+        ],
+        [
+            "Step 3: The total number of ways that Joe can pick the letters is $\\left(\\binom{4}{2}\\right)\\left(\\binom{5}{4}\\right)\\left(\\binom{4}{3}\\right)=6\\cdot 5\\cdot 4=120$\nFinal Answer",
+            1
+        ]
+    ],
+    "time": 41.26736283302307,
+    "total_tokens": 2065,
+    "final_answer_tokens": 426,
+    "model": "meta-llama/Llama-Vision-Free"
+}

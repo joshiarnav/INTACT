@@ -1,0 +1,41 @@
+{
+    "problem": "We flip a fair coin 10 times.  What is the probability that we get heads in at least 8 of the 10 flips?",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "There are $2^{10} = 1024$ possible outcomes of the 10 coin flips. The number of ways to get 8, 9, or 10 heads is $\\binom{10}{8}+\\binom{10}{9}+\\binom{10}{10}=45+10+1=56$.  So the probability is $\\dfrac{56}{1024}=\\boxed{\\dfrac{7}{128}}$.",
+    "is_solved": true,
+    "model_solution": "Since we can get 8 heads, 9 heads, or 10 heads, \nP(at least 8 heads) = P(8 heads) + P(9 heads) + P(10 heads)\nP(8 heads) = {10 \\choose 8}(1/2)^8(1/2)^2 = 45/1024 \nP(9 heads) = {10 \\choose 9}(1/2)^9(1/2)^1 = 10/1024 \nP(10 heads) = {10 \\choose 10}(1/2)^10(1/2)^0 = 1/1024\nAdd P(8 heads), P(9 heads), and P(10 heads): \nP(at least 8 heads) = (45/1024) + (10/1024) + (1/1024)\n(45/1024) + (10/1024) + (1/1024) = 56/1024 = 7/128\nThe final answer is: $\\boxed{\\frac{7}{128}}$",
+    "steps": [
+        "Since we can get 8 heads, 9 heads, or 10 heads, \nP(at least 8 heads) = P(8 heads) + P(9 heads) + P(10 heads)",
+        "P(8 heads) = {10 \\choose 8}(1/2)^8(1/2)^2 = 45/1024 \nP(9 heads) = {10 \\choose 9}(1/2)^9(1/2)^1 = 10/1024 \nP(10 heads) = {10 \\choose 10}(1/2)^10(1/2)^0 = 1/1024",
+        "Add P(8 heads), P(9 heads), and P(10 heads): \nP(at least 8 heads) = (45/1024) + (10/1024) + (1/1024)",
+        "(45/1024) + (10/1024) + (1/1024) = 56/1024 = 7/128",
+        "The final answer is: $\\boxed{\\frac{7}{128}}$"
+    ],
+    "full_steps": [
+        [
+            "Since we can get 8 heads, 9 heads, or 10 heads, \nP(at least 8 heads) = P(8 heads) + P(9 heads) + P(10 heads)",
+            1
+        ],
+        [
+            "P(8 heads) = {10 \\choose 8}(1/2)^8(1/2)^2 = 45/1024 \nP(9 heads) = {10 \\choose 9}(1/2)^9(1/2)^1 = 10/1024 \nP(10 heads) = {10 \\choose 10}(1/2)^10(1/2)^0 = 1/1024",
+            1
+        ],
+        [
+            "Add P(8 heads), P(9 heads), and P(10 heads): \nP(at least 8 heads) = (45/1024) + (10/1024) + (1/1024)",
+            1
+        ],
+        [
+            "(45/1024) + (10/1024) + (1/1024) = 56/1024 = 7/128",
+            1
+        ],
+        [
+            "The final answer is: $\\boxed{\\frac{7}{128}}$",
+            1
+        ]
+    ],
+    "time": 67.46121525764465,
+    "total_tokens": 2523,
+    "final_answer_tokens": 316,
+    "model": "meta-llama/Llama-Vision-Free"
+}

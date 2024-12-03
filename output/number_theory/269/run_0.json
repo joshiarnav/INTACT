@@ -1,0 +1,36 @@
+{
+    "problem": "When the expression $2005^2 + 2005^0 + 2005^0 + 2005^5$ is evaluated, what are the final two digits?",
+    "level": "Level 3",
+    "type": "Number Theory",
+    "solution": "First, $2005^2 = 4020025$, so the last two digits of $2005^2$ are 25.\n\nWe need to look at $2005^5$, but since we only need the final two digits, we don't actually have to calculate this number entirely.\n\nConsider $2005^3 = 2005^2 \\times 2005 = 4020025 \\times 2005$.  When we carry out this multiplication, the last two digits of the product will only depend on the last two digits of the each of the two numbers being multiplied (try this by hand!), so the last two digits of $2005^3$ are the same as the last two digits of $25 \\times 5 = 125$, ie. are 25.\n\nSimilarly, to calculate $2005^4$, we multiply $2005^3$ (which ends in 25) by $2005$, so by the same reasoning $2005^4$ ends in 25. Similarly, $2005^5$ ends in 25.\n\nTherefore, $2005^2$ and $2005^5$ both end in 25.\n\nAlso, $2005^0 = 1$, so the expression overall is equal to $$\\ldots 25 + 1 + 1 + \\ldots 25 = \\ldots 52.$$Therefore, the final two digits are $\\boxed{52}$.",
+    "is_solved": true,
+    "model_solution": "Step 1:  Calculate the values of the powers of 2005 that appear in the expression: $2005^0$, $2005^2$, $2005^5$.\nStep 2:  Since the expression is $2005^2 + 2005^0 + 2005^0 + 2005^5$, calculate the values of the powers of 2005: $2005^0 = 1$, $2005^2 = 4,030,025$, $2005^5 = 16,123,132,625$.\nStep 3: \n$2005^0 + 2005^0 = 1 + 1 = 2$,\n$2005^2 + 2005^5 = 4,030,025 + 16,123,132,625 = 16,127,156,650$,\n$2005^2 + 2005^5 + 2005^0 + 2005^0 = 16,127,156,650 + 2 = 16,127,156,652$.\nSince the final two digits of the expression's value are 52, the final answer is: $\\boxed{52}$",
+    "steps": [
+        "Step 1:  Calculate the values of the powers of 2005 that appear in the expression: $2005^0$, $2005^2$, $2005^5$.",
+        "Step 2:  Since the expression is $2005^2 + 2005^0 + 2005^0 + 2005^5$, calculate the values of the powers of 2005: $2005^0 = 1$, $2005^2 = 4,030,025$, $2005^5 = 16,123,132,625$.",
+        "Step 3: \n$2005^0 + 2005^0 = 1 + 1 = 2$,\n$2005^2 + 2005^5 = 4,030,025 + 16,123,132,625 = 16,127,156,650$,\n$2005^2 + 2005^5 + 2005^0 + 2005^0 = 16,127,156,650 + 2 = 16,127,156,652$.",
+        "Since the final two digits of the expression's value are 52, the final answer is: $\\boxed{52}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Calculate the values of the powers of 2005 that appear in the expression: $2005^0$, $2005^2$, $2005^5$.",
+            1
+        ],
+        [
+            "Step 2:  Since the expression is $2005^2 + 2005^0 + 2005^0 + 2005^5$, calculate the values of the powers of 2005: $2005^0 = 1$, $2005^2 = 4,030,025$, $2005^5 = 16,123,132,625$.",
+            1
+        ],
+        [
+            "Step 3: \n$2005^0 + 2005^0 = 1 + 1 = 2$,\n$2005^2 + 2005^5 = 4,030,025 + 16,123,132,625 = 16,127,156,650$,\n$2005^2 + 2005^5 + 2005^0 + 2005^0 = 16,127,156,650 + 2 = 16,127,156,652$.",
+            1
+        ],
+        [
+            "Since the final two digits of the expression's value are 52, the final answer is: $\\boxed{52}$",
+            1
+        ]
+    ],
+    "time": 52.32990074157715,
+    "total_tokens": 2096,
+    "final_answer_tokens": 352,
+    "model": "meta-llama/Llama-Vision-Free"
+}

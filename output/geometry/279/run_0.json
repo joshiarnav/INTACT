@@ -1,0 +1,41 @@
+{
+    "problem": "Rectangle $WXYZ$ is drawn on $\\triangle ABC$, such that point $W$ lies on segment $AB$, point $X$ lies on segment $AC$, and points $Y$ and $Z$ lies on segment $BC$, as shown. If $m\\angle BWZ=26^{\\circ}$ and $m\\angle CXY=64^{\\circ}$, what is $m\\angle BAC$, in degrees? [asy]\nunitsize(0.3cm);\ndraw((0,0)--(4.5,6)--(21,0)--cycle);\ndraw((3,0)--(3,4)--(10,4)--(10,0)--cycle);\nlabel(\"B\",(0,0),SW);\nlabel(\"W\",(3,4),W);\nlabel(\"A\",(4.5,6),N);\nlabel(\"X\",(10,4),NE);\nlabel(\"C\",(21,0),E);\nlabel(\"Y\",(10,0),S);\nlabel(\"Z\",(3,0),S);\nlabel(scale(0.7)*Label(\"$26^{\\circ}$\",(2.4,2.6),S));\nlabel(scale(0.8)*Label(\"$64^{\\circ}$\",(11,3.5),S));\n[/asy]",
+    "level": "Level 1",
+    "type": "Geometry",
+    "solution": "Since $WXYZ$ is a rectangle, angles $XYC$ and $WZB$ are right angles. Since the acute angles of a right triangle sum to $90^\\circ$, $m\\angle WBZ=90-m\\angle BWZ=90-26=64^\\circ$ and $m\\angle XCY=90-m\\angle CXY=90-64=26^\\circ$. In triangle $ABC$, the interior angles must sum to $180^\\circ$, so $m\\angle BAC=180-m\\angle WBZ-m\\angle XCY=180-64-26=\\boxed{90^\\circ}$.",
+    "is_solved": false,
+    "model_solution": "Step 1:  We can start by identifying the angles given in the problem and how they are related to the angles in $\\triangle ABC$. \nThe angles $\\angle BWZ$ and $\\angle CXY$ are given as $26^{\\circ}$ and $64^{\\circ}$, respectively. Since $WXYZ$ is a rectangle, we know that $\\angle BWZ$ and $\\angle WYZ$ are complementary, meaning that they sum up to $90^{\\circ}$. Similarly, $\\angle CXY$ and $\\angle YXZ$ are complementary as well.\nStep 2:  $\\angle BAC=\\angle BAZ+\\angle CZA$\n$\\angle BAZ=90^{\\circ}-\\angle BWZ$\n$\\angle CZA=90^{\\circ}-\\angle CXY$\n$\\angle BAZ=90^{\\circ}-26^{\\circ}=64^{\\circ}$\n$\\angle CZA=90^{\\circ}-64^{\\circ}=26^{\\circ}$\n$\\angle BAC=\\angle BAZ+\\angle CZA$\n$\\angle BAC=64^{\\circ}+26^{\\circ}=90^{\\circ}$\nSince $\\triangle ABC$ is a right triangle (due to the properties of a rectangle on a triangle), we have $m\\angle BAC=90^{\\circ}$.",
+    "steps": [
+        "Step 1:  We can start by identifying the angles given in the problem and how they are related to the angles in $\\triangle ABC$. \nThe angles $\\angle BWZ$ and $\\angle CXY$ are given as $26^{\\circ}$ and $64^{\\circ}$, respectively. Since $WXYZ$ is a rectangle, we know that $\\angle BWZ$ and $\\angle WYZ$ are complementary, meaning that they sum up to $90^{\\circ}$. Similarly, $\\angle CXY$ and $\\angle YXZ$ are complementary as well.",
+        "Step 2:  $\\angle BAC=\\angle BAZ+\\angle CZA$\n$\\angle BAZ=90^{\\circ}-\\angle BWZ$\n$\\angle CZA=90^{\\circ}-\\angle CXY$\n$\\angle BAZ=90^{\\circ}-26^{\\circ}=64^{\\circ}$\n$\\angle CZA=90^{\\circ}-64^{\\circ}=26^{\\circ}$",
+        "$\\angle BAC=\\angle BAZ+\\angle CZA$",
+        "$\\angle BAC=64^{\\circ}+26^{\\circ}=90^{\\circ}$",
+        "Since $\\triangle ABC$ is a right triangle (due to the properties of a rectangle on a triangle), we have $m\\angle BAC=90^{\\circ}$."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We can start by identifying the angles given in the problem and how they are related to the angles in $\\triangle ABC$. \nThe angles $\\angle BWZ$ and $\\angle CXY$ are given as $26^{\\circ}$ and $64^{\\circ}$, respectively. Since $WXYZ$ is a rectangle, we know that $\\angle BWZ$ and $\\angle WYZ$ are complementary, meaning that they sum up to $90^{\\circ}$. Similarly, $\\angle CXY$ and $\\angle YXZ$ are complementary as well.",
+            1
+        ],
+        [
+            "Step 2:  $\\angle BAC=\\angle BAZ+\\angle CZA$\n$\\angle BAZ=90^{\\circ}-\\angle BWZ$\n$\\angle CZA=90^{\\circ}-\\angle CXY$\n$\\angle BAZ=90^{\\circ}-26^{\\circ}=64^{\\circ}$\n$\\angle CZA=90^{\\circ}-64^{\\circ}=26^{\\circ}$",
+            1
+        ],
+        [
+            "$\\angle BAC=\\angle BAZ+\\angle CZA$",
+            1
+        ],
+        [
+            "$\\angle BAC=64^{\\circ}+26^{\\circ}=90^{\\circ}$",
+            1
+        ],
+        [
+            "Since $\\triangle ABC$ is a right triangle (due to the properties of a rectangle on a triangle), we have $m\\angle BAC=90^{\\circ}$.",
+            1
+        ]
+    ],
+    "time": 66.33148646354675,
+    "total_tokens": 5446,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

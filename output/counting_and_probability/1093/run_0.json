@@ -1,0 +1,56 @@
+{
+    "problem": "Jack rolls 5 fair six-sided dice. What is the probability that at least two dice show the same number?",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "The only way in which there won't be two dice displaying the same number is if exactly one number between 1 and 6 isn't being displayed on any of the dice and the 5 dice all display different numbers. There are 6 different possibilities for the number that isn't being displayed, and then there are a total of $5!$ ways in which the 5 dice displaying different numbers can be arranged, so there are a total of $6\\cdot5!$ outcomes that result in the dice all displaying different numbers. Since each of the 5 dice can have 6 results when rolled and all of the rolls are determined independently, there are a total of $6^5$ possible outcomes, which means that the probability of all of the dice showing different numbers is $\\dfrac{6\\cdot5!}{6^5}=\\dfrac{5}{54}$, so the probability that we want is $1-\\dfrac{5}{54}=\\boxed{\\dfrac{49}{54}}$.",
+    "is_solved": true,
+    "model_solution": "## Step 1: Calculate the total number of outcomes when rolling 5 dice\nThe total number of outcomes when rolling 5 six-sided dice is $6^5$.\n## Step 2: Calculate the number of outcomes where no two dice show the same number\nThis can be calculated as $P(5,6) = \\frac{5!}{(5-6)!} = 6 \\times 5 \\times 4 \\times 3 \\times 2 = 720$.\n\nHowever, since we are rolling 6-sided dice, the correct calculation for the number of outcomes where all dice show different numbers should be:\n\n$P(5,6) = 6 \\times 5 \\times 4 \\times 3 \\times 2 = 720$.\n\nBut this is for permutations where order matters, for combinations where order does not matter we use:\n\n$C(6,5) \\times 5! = 6 \\times 5! = 720$\n\nWhich is also incorrect, the correct formula should be:\n\n$C(6,5) = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\times 1!} = 6$\n\nThen multiply by $5!$ to get the correct number of combinations:\n\n$6 \\times 5! = 6 \\times 120\n## Step 3: Calculate the probability that at least two dice show the same number\n$1 - \\frac{6 \\times 120}{6^5}$\n## Step 4: \n$1 - \\frac{6 \\times 120}{6^5} = 1 - \\frac{720}{7776} = 1 - \\frac{5}{54}$\n$1 - \\frac{5}{54} = \\frac{49}{54}$\n## Step 5: Simplify the fraction\n$\\frac{49}{54}$\n$\\frac{49}{54}$\n$\\frac{49}{54}$",
+    "steps": [
+        "## Step 1: Calculate the total number of outcomes when rolling 5 dice\nThe total number of outcomes when rolling 5 six-sided dice is $6^5$.",
+        "## Step 2: Calculate the number of outcomes where no two dice show the same number\nThis can be calculated as $P(5,6) = \\frac{5!}{(5-6)!} = 6 \\times 5 \\times 4 \\times 3 \\times 2 = 720$.\n\nHowever, since we are rolling 6-sided dice, the correct calculation for the number of outcomes where all dice show different numbers should be:\n\n$P(5,6) = 6 \\times 5 \\times 4 \\times 3 \\times 2 = 720$.\n\nBut this is for permutations where order matters, for combinations where order does not matter we use:\n\n$C(6,5) \\times 5! = 6 \\times 5! = 720$\n\nWhich is also incorrect, the correct formula should be:\n\n$C(6,5) = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\times 1!} = 6$\n\nThen multiply by $5!$ to get the correct number of combinations:\n\n$6 \\times 5! = 6 \\times 120",
+        "## Step 3: Calculate the probability that at least two dice show the same number\n$1 - \\frac{6 \\times 120}{6^5}$",
+        "## Step 4: \n$1 - \\frac{6 \\times 120}{6^5} = 1 - \\frac{720}{7776} = 1 - \\frac{5}{54}$",
+        "$1 - \\frac{5}{54} = \\frac{49}{54}$",
+        "## Step 5: Simplify the fraction\n$\\frac{49}{54}$",
+        "$\\frac{49}{54}$",
+        "$\\frac{49}{54}$"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Calculate the total number of outcomes when rolling 5 dice\nThe total number of outcomes when rolling 5 six-sided dice is $6^5$.",
+            1
+        ],
+        [
+            "## Step 2: Calculate the number of outcomes where no two dice show the same number\nThis can be calculated as $P(5,6) = \\frac{5!}{(5-6)!} = 6 \\times 5 \\times 4 \\times 3 \\times 2 = 720$.\n\nHowever, since we are rolling 6-sided dice, the correct calculation for the number of outcomes where all dice show different numbers should be:\n\n$P(5,6) = 6 \\times 5 \\times 4 \\times 3 \\times 2 = 720$.\n\nBut this is for permutations where order matters, for combinations where order does not matter we use:\n\n$C(6,5) \\times 5! = 6 \\times 5! = 720$\n\nWhich is also incorrect, the correct formula should be:\n\n$C(6,5) = \\frac{6!}{5!(6-5)!} = \\frac{6!}{5! \\times 1!} = 6$\n\nThen multiply by $5!$ to get the correct number of combinations:\n\n$6 \\times 5! = 6 \\times 120",
+            1
+        ],
+        [
+            "## Step 3: Calculate the probability that at least two dice show the same number\n$1 - \\frac{6 \\times 120}{6^5}$",
+            1
+        ],
+        [
+            "## Step 4: \n$1 - \\frac{6 \\times 120}{6^5} = 1 - \\frac{720}{7776} = 1 - \\frac{5}{54}$",
+            1
+        ],
+        [
+            "$1 - \\frac{5}{54} = \\frac{49}{54}$",
+            1
+        ],
+        [
+            "## Step 5: Simplify the fraction\n$\\frac{49}{54}$",
+            1
+        ],
+        [
+            "$\\frac{49}{54}$",
+            1
+        ],
+        [
+            "$\\frac{49}{54}$",
+            1
+        ]
+    ],
+    "time": 106.53183341026306,
+    "total_tokens": 6664,
+    "final_answer_tokens": 501,
+    "model": "meta-llama/Llama-Vision-Free"
+}

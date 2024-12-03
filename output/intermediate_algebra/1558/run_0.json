@@ -1,0 +1,66 @@
+{
+    "problem": "A rectangle is inscribed in a unit circle.  Find the largest possible area of the rectangle.",
+    "level": "Level 3",
+    "type": "Intermediate Algebra",
+    "solution": "Let the dimensions of the rectangle be $a$ and $b.$  Since $a$ and $b$ are the legs of a triangle with hypotenuse 2, $a^2 + b^2 = 4.$\n\n[asy]\nunitsize (2 cm);\n\npair A, B, C, D;\n\nA = dir(35);\nB = dir(180 - 35);\nC = dir(180 + 35);\nD = dir(360 - 35);\n\ndraw(Circle((0,0),1));\ndraw(A--B--C--D--cycle);\ndraw(A--C);\ndraw(rightanglemark(C,D,A,4));\n\nlabel(\"$a$\", (A + D)/2, W);\nlabel(\"$b$\", (C + D)/2, N);\n\ndot((0,0));\n[/asy]\n\nThen by AM-GM,\n\\[4 = a^2 + b^2 \\ge 2ab,\\]so $ab \\le 2.$\n\nEquality occurs when $a = b = \\sqrt{2},$ so the largest possible area is $\\boxed{2}.$",
+    "is_solved": false,
+    "model_solution": "Let x be the half-length of the rectangle and y be the half-width of the rectangle.\nThe area of the rectangle can be expressed as A = 4xy, and the diagonal of the rectangle is a diameter of the circle, so by the Pythagorean theorem, we have x\u00b2 + y\u00b2 = 1.\nDifferentiate A = 4xy implicitly with respect to x.\nd(4xy)/dx = 4y + 4x(dy/dx)\nSet 4y + 4x(dy/dx) = 0.\nSolve the equation 4y + 4x(dy/dx) = 0 for dy/dx to obtain dy/dx = -y/x.\nSolve the equation x\u00b2 + y\u00b2 = 1 for y\u00b2 to obtain y\u00b2 = 1 - x\u00b2, and substitute into dy/dx = -y/x to obtain dy/dx = -(1 - x\u00b2)^(1/2)/x.\nDifferentiate dy/dx = -(1 - x\u00b2)^(1/2)/x with respect to x and solve the resulting equation to find the critical point(s) of A.\nFind (dy/dx)' by differentiating dy/dx = -(1 - x\u00b2)^(1/2)/x with respect to x.\nFind (dy/dx)' by differentiating dy/dx = -(1 - x\u00b2)^(1/2)/x with respect to x. \n(d/dx)[-(1 - x\u00b2)^(1/2)/x] = (-(1/2)(1 - x\u00b2)^(-1/2)(-2x) - (1 - x\u00b2)^(1/2)(1/x\u00b2)) / x\u00b2.",
+    "steps": [
+        "Let x be the half-length of the rectangle and y be the half-width of the rectangle.",
+        "The area of the rectangle can be expressed as A = 4xy, and the diagonal of the rectangle is a diameter of the circle, so by the Pythagorean theorem, we have x\u00b2 + y\u00b2 = 1.",
+        "Differentiate A = 4xy implicitly with respect to x.",
+        "d(4xy)/dx = 4y + 4x(dy/dx)",
+        "Set 4y + 4x(dy/dx) = 0.",
+        "Solve the equation 4y + 4x(dy/dx) = 0 for dy/dx to obtain dy/dx = -y/x.",
+        "Solve the equation x\u00b2 + y\u00b2 = 1 for y\u00b2 to obtain y\u00b2 = 1 - x\u00b2, and substitute into dy/dx = -y/x to obtain dy/dx = -(1 - x\u00b2)^(1/2)/x.",
+        "Differentiate dy/dx = -(1 - x\u00b2)^(1/2)/x with respect to x and solve the resulting equation to find the critical point(s) of A.",
+        "Find (dy/dx)' by differentiating dy/dx = -(1 - x\u00b2)^(1/2)/x with respect to x.",
+        "Find (dy/dx)' by differentiating dy/dx = -(1 - x\u00b2)^(1/2)/x with respect to x. \n(d/dx)[-(1 - x\u00b2)^(1/2)/x] = (-(1/2)(1 - x\u00b2)^(-1/2)(-2x) - (1 - x\u00b2)^(1/2)(1/x\u00b2)) / x\u00b2."
+    ],
+    "full_steps": [
+        [
+            "Let x be the half-length of the rectangle and y be the half-width of the rectangle.",
+            1
+        ],
+        [
+            "The area of the rectangle can be expressed as A = 4xy, and the diagonal of the rectangle is a diameter of the circle, so by the Pythagorean theorem, we have x\u00b2 + y\u00b2 = 1.",
+            1
+        ],
+        [
+            "Differentiate A = 4xy implicitly with respect to x.",
+            1
+        ],
+        [
+            "d(4xy)/dx = 4y + 4x(dy/dx)",
+            1
+        ],
+        [
+            "Set 4y + 4x(dy/dx) = 0.",
+            1
+        ],
+        [
+            "Solve the equation 4y + 4x(dy/dx) = 0 for dy/dx to obtain dy/dx = -y/x.",
+            1
+        ],
+        [
+            "Solve the equation x\u00b2 + y\u00b2 = 1 for y\u00b2 to obtain y\u00b2 = 1 - x\u00b2, and substitute into dy/dx = -y/x to obtain dy/dx = -(1 - x\u00b2)^(1/2)/x.",
+            1
+        ],
+        [
+            "Differentiate dy/dx = -(1 - x\u00b2)^(1/2)/x with respect to x and solve the resulting equation to find the critical point(s) of A.",
+            1
+        ],
+        [
+            "Find (dy/dx)' by differentiating dy/dx = -(1 - x\u00b2)^(1/2)/x with respect to x.",
+            1
+        ],
+        [
+            "Find (dy/dx)' by differentiating dy/dx = -(1 - x\u00b2)^(1/2)/x with respect to x. \n(d/dx)[-(1 - x\u00b2)^(1/2)/x] = (-(1/2)(1 - x\u00b2)^(-1/2)(-2x) - (1 - x\u00b2)^(1/2)(1/x\u00b2)) / x\u00b2.",
+            1
+        ]
+    ],
+    "time": 135.27380895614624,
+    "total_tokens": 4839,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

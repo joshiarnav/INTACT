@@ -1,0 +1,51 @@
+{
+    "problem": "How many ways are there for 8 people to sit around a circular table if none of Alice, Bob, and Eve (three of the 8 people) want to sit next to each other? Two seatings are considered the same if one is a rotation of the other.",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "First choose a seat for Alice. It doesn't matter what seat we choose because we can rotate the table to move Alice's seat to wherever we want. After Alice's seat has been chosen, there are five seats Bob is willing to sit in. Of these seats, 2 are two seats away from Alice, and 3 are not. If Bob sits in either of the locations two seats away from Alice, there will be 3 places left Eve is willing to sit. If he sits in one of the other seats, there will be 2 places left Eve is willing to sit. Once Alice, Bob, and Eve's seats have been chosen, the remaining people can be placed in $5!$ ways. Therefore, the total number of ways for the 8 people to sit around the table is $2\\cdot3\\cdot5!+3\\cdot2\\cdot5!=\\boxed{1440}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: Calculate the total number of ways for 8 people to sit around a circular table without any restrictions.\nStep 2: Calculate the total number of ways for 7 people to sit around a circular table (the 8th person will be one of Alice, Bob, or Eve), which is (7-1)! = 6!.\nStep 3: Multiply the total number of ways for 8 people to sit around a circular table without any restrictions (Step 1) by the total number of ways for 7 people to sit around a circular table (Step 2), and subtract the result from Step 2 by the total number of ways for 8 people including Alice, Bob, and Eve sitting next to each other.\nStep 4: Calculate the total number of ways for 5 people (the remaining 5 people, not including Alice, Bob, or Eve) to sit around a circular table, which is (5-1)! = 4!.\nStep 5: There are 3 ways to place the trio of Alice, Bob, and Eve next to each other (as a block), and then there are 6! ways for the other 5 people to sit around the circular table. The total number of ways for 8 people to sit around a circular table with Alice, Bob, and Eve sitting next to each other is 3 * 6!.\nStep 6: Subtract the result of Step 5 from the result of Step 3.\nStep 4: Calculate the total number of ways for 5 people (the remaining 5 people, not including Alice, Bob, or Eve) to sit around a circular table, which is (5-1)! = 4!.",
+    "steps": [
+        "Step 1: Calculate the total number of ways for 8 people to sit around a circular table without any restrictions.",
+        "Step 2: Calculate the total number of ways for 7 people to sit around a circular table (the 8th person will be one of Alice, Bob, or Eve), which is (7-1)! = 6!.",
+        "Step 3: Multiply the total number of ways for 8 people to sit around a circular table without any restrictions (Step 1) by the total number of ways for 7 people to sit around a circular table (Step 2), and subtract the result from Step 2 by the total number of ways for 8 people including Alice, Bob, and Eve sitting next to each other.",
+        "Step 4: Calculate the total number of ways for 5 people (the remaining 5 people, not including Alice, Bob, or Eve) to sit around a circular table, which is (5-1)! = 4!.",
+        "Step 5: There are 3 ways to place the trio of Alice, Bob, and Eve next to each other (as a block), and then there are 6! ways for the other 5 people to sit around the circular table. The total number of ways for 8 people to sit around a circular table with Alice, Bob, and Eve sitting next to each other is 3 * 6!.",
+        "Step 6: Subtract the result of Step 5 from the result of Step 3.",
+        "Step 4: Calculate the total number of ways for 5 people (the remaining 5 people, not including Alice, Bob, or Eve) to sit around a circular table, which is (5-1)! = 4!."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Calculate the total number of ways for 8 people to sit around a circular table without any restrictions.",
+            1
+        ],
+        [
+            "Step 2: Calculate the total number of ways for 7 people to sit around a circular table (the 8th person will be one of Alice, Bob, or Eve), which is (7-1)! = 6!.",
+            1
+        ],
+        [
+            "Step 3: Multiply the total number of ways for 8 people to sit around a circular table without any restrictions (Step 1) by the total number of ways for 7 people to sit around a circular table (Step 2), and subtract the result from Step 2 by the total number of ways for 8 people including Alice, Bob, and Eve sitting next to each other.",
+            1
+        ],
+        [
+            "Step 4: Calculate the total number of ways for 5 people (the remaining 5 people, not including Alice, Bob, or Eve) to sit around a circular table, which is (5-1)! = 4!.",
+            1
+        ],
+        [
+            "Step 5: There are 3 ways to place the trio of Alice, Bob, and Eve next to each other (as a block), and then there are 6! ways for the other 5 people to sit around the circular table. The total number of ways for 8 people to sit around a circular table with Alice, Bob, and Eve sitting next to each other is 3 * 6!.",
+            1
+        ],
+        [
+            "Step 6: Subtract the result of Step 5 from the result of Step 3.",
+            1
+        ],
+        [
+            "Step 4: Calculate the total number of ways for 5 people (the remaining 5 people, not including Alice, Bob, or Eve) to sit around a circular table, which is (5-1)! = 4!.",
+            1
+        ]
+    ],
+    "time": 93.98583960533142,
+    "total_tokens": 4470,
+    "final_answer_tokens": 468,
+    "model": "meta-llama/Llama-Vision-Free"
+}

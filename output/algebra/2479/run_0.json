@@ -1,0 +1,66 @@
+{
+    "problem": "A certain organization consists of five leaders and some number of regular members. Every year, the current leaders are kicked out of the organization. Next, each regular member must find two new people to join as regular members. Finally, five new people are elected from outside the organization to become leaders. In the beginning, there are fifteen people in the organization total. How many people total will be in the organization five years from now?",
+    "level": "Level 5",
+    "type": "Algebra",
+    "solution": "Let $a_k$ denote the number of people in year $k$ (with initially $k=0$). One might notice that after the leaders are kicked out, there are $a_k-5$ regular members. Then, there are $3(a_k-5)$ regular members after the new regular members join. Finally, after the new leaders are elected, we have a grand total of $3(a_k-5)+5 = 3a_k-10$ people the next year. One might wish to solve this recursion with $a_0=15$. But there is an easier way.\n\nNotice that the number of leaders stays the same each year, and the number of regular members triples. Thus the number of regular members follows a geometric sequence. In the beginning, there are $15-5=10$ regular members. Therefore, five years later, there will be $(3^5)(10)=2430$ regular members. The total number of people will be $5+2430=\\boxed{2435}$.",
+    "is_solved": false,
+    "model_solution": "Let T be the number of regular members. The number of people in the organization is T + 5.\n\nYear 0:\nT + 5 = 15\nT = 10\n\nThe regular members and the leaders are removed from the organization.\nThe number of regular members becomes 10 \u00d7 3 = 30.\nFive new leaders are added to the organization.\nThe number of people in the organization is 30 + 5 = 35.\nYear 1:\nThe number of regular members becomes 30 \u00d7 3 = 90.\nThe number of people in the organization is 90 + 5 = 95.\nYear 2:\nThe number of regular members becomes 90 \u00d7 3 = 270.\nThe number of people in the organization is 270 + 5 = 275.\nYear 3:\nThe number of regular members becomes 270 \u00d7 3 = 810.\nThe number of people in the organization is 810 + 5 = 815.\nYear 4:\nThe number of regular members becomes 810 \u00d7 3 = 2430.\nThe number of people in the organization is 2430 + 5 = 2435.\nYear 5:\nThe number of regular members becomes 2430 \u00d7 3 = 7290.\nThe number of people in the organization is 7290 + 5 = 7295.\nYear 6:\nThe number of regular members becomes 7290 \u00d7 3 = 21870.\nThe number of people in the organization is 21870 + 5 = 21875.\nYear 7:\nThe number of regular members becomes 21870 \u00d7 3 = 65610.\nThe number of people in the organization is 65610 + 5 = 65615.\nYear 8:\nThe number of regular members becomes 65610 \u00d7 3 = 196830.\nThe number of people in the organization is 196830 + 5 = 196835.\nYear 9:\nThe number of regular members becomes 196830 \u00d7 3 = 590490.\nThe number of people in the organization is 590490 + 5 = 590495.",
+    "steps": [
+        "Let T be the number of regular members. The number of people in the organization is T + 5.\n\nYear 0:\nT + 5 = 15\nT = 10\n\nThe regular members and the leaders are removed from the organization.\nThe number of regular members becomes 10 \u00d7 3 = 30.\nFive new leaders are added to the organization.\nThe number of people in the organization is 30 + 5 = 35.",
+        "Year 1:\nThe number of regular members becomes 30 \u00d7 3 = 90.\nThe number of people in the organization is 90 + 5 = 95.",
+        "Year 2:\nThe number of regular members becomes 90 \u00d7 3 = 270.\nThe number of people in the organization is 270 + 5 = 275.",
+        "Year 3:\nThe number of regular members becomes 270 \u00d7 3 = 810.\nThe number of people in the organization is 810 + 5 = 815.",
+        "Year 4:\nThe number of regular members becomes 810 \u00d7 3 = 2430.\nThe number of people in the organization is 2430 + 5 = 2435.",
+        "Year 5:\nThe number of regular members becomes 2430 \u00d7 3 = 7290.\nThe number of people in the organization is 7290 + 5 = 7295.",
+        "Year 6:\nThe number of regular members becomes 7290 \u00d7 3 = 21870.\nThe number of people in the organization is 21870 + 5 = 21875.",
+        "Year 7:\nThe number of regular members becomes 21870 \u00d7 3 = 65610.\nThe number of people in the organization is 65610 + 5 = 65615.",
+        "Year 8:\nThe number of regular members becomes 65610 \u00d7 3 = 196830.\nThe number of people in the organization is 196830 + 5 = 196835.",
+        "Year 9:\nThe number of regular members becomes 196830 \u00d7 3 = 590490.\nThe number of people in the organization is 590490 + 5 = 590495."
+    ],
+    "full_steps": [
+        [
+            "Let T be the number of regular members. The number of people in the organization is T + 5.\n\nYear 0:\nT + 5 = 15\nT = 10\n\nThe regular members and the leaders are removed from the organization.\nThe number of regular members becomes 10 \u00d7 3 = 30.\nFive new leaders are added to the organization.\nThe number of people in the organization is 30 + 5 = 35.",
+            1
+        ],
+        [
+            "Year 1:\nThe number of regular members becomes 30 \u00d7 3 = 90.\nThe number of people in the organization is 90 + 5 = 95.",
+            1
+        ],
+        [
+            "Year 2:\nThe number of regular members becomes 90 \u00d7 3 = 270.\nThe number of people in the organization is 270 + 5 = 275.",
+            1
+        ],
+        [
+            "Year 3:\nThe number of regular members becomes 270 \u00d7 3 = 810.\nThe number of people in the organization is 810 + 5 = 815.",
+            1
+        ],
+        [
+            "Year 4:\nThe number of regular members becomes 810 \u00d7 3 = 2430.\nThe number of people in the organization is 2430 + 5 = 2435.",
+            1
+        ],
+        [
+            "Year 5:\nThe number of regular members becomes 2430 \u00d7 3 = 7290.\nThe number of people in the organization is 7290 + 5 = 7295.",
+            1
+        ],
+        [
+            "Year 6:\nThe number of regular members becomes 7290 \u00d7 3 = 21870.\nThe number of people in the organization is 21870 + 5 = 21875.",
+            1
+        ],
+        [
+            "Year 7:\nThe number of regular members becomes 21870 \u00d7 3 = 65610.\nThe number of people in the organization is 65610 + 5 = 65615.",
+            1
+        ],
+        [
+            "Year 8:\nThe number of regular members becomes 65610 \u00d7 3 = 196830.\nThe number of people in the organization is 196830 + 5 = 196835.",
+            1
+        ],
+        [
+            "Year 9:\nThe number of regular members becomes 196830 \u00d7 3 = 590490.\nThe number of people in the organization is 590490 + 5 = 590495.",
+            1
+        ]
+    ],
+    "time": 138.11733961105347,
+    "total_tokens": 8226,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

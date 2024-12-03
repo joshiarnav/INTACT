@@ -1,0 +1,41 @@
+{
+    "problem": "3 cards are chosen at random from a standard 52-card deck.  What is the probability that they can be arranged into a group of three consecutive cards, all of the same suit? For this problem, an Ace can either come before a 2 or after a King, but not both (so A23 and QKA both count, but KA2 doesn't).",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "There are $\\binom{52}{3} = 22,\\!100$ ways to choose 3 cards out of 52, without regard to order. For any suit, there are 12 possible triples of consecutive cards (since the three consecutive cards can start on an A, 2, 3, ..., or Q, but not on a K). Since there are 4 suits, there are $4\\cdot12=48$ valid triples. The chance that three cards chosen randomly are three consecutive cards of the same suit is therefore $\\frac{48}{22,\\!100}=\\boxed{\\frac{12}{5,\\!525}}$",
+    "is_solved": true,
+    "model_solution": "There are 52 cards in a standard deck and 3 cards are chosen at random, so the total number of possible card combinations is:\n\n52C3 = 52! / (3! * (52-3)!)\n= 52! / (3! * 49!)\n= 22,100\nThere are 4 suits in a standard deck (hearts, diamonds, clubs, spades) and we want all 3 cards to be of the same suit, so there are 4 possible ways to choose the suit for the 3 cards.\n\nThe first card can be any of the 13 cards in the chosen suit, the second card can be any of the remaining 12 cards in the chosen suit, and the third card can be any of the remaining 11 cards in the chosen suit.\n\n4 * 13 * 12 * 11 = 7,056\n\nThese 7,056 combinations can be arranged in 3! = 6 ways.\n7,056 / (4 * 3!) = 7,056 / 24 = 294\nThe probability is 294 / 22,100.\nThe probability is 294 / 22,100. \n\nFinal Answer",
+    "steps": [
+        "There are 52 cards in a standard deck and 3 cards are chosen at random, so the total number of possible card combinations is:\n\n52C3 = 52! / (3! * (52-3)!)\n= 52! / (3! * 49!)\n= 22,100",
+        "There are 4 suits in a standard deck (hearts, diamonds, clubs, spades) and we want all 3 cards to be of the same suit, so there are 4 possible ways to choose the suit for the 3 cards.\n\nThe first card can be any of the 13 cards in the chosen suit, the second card can be any of the remaining 12 cards in the chosen suit, and the third card can be any of the remaining 11 cards in the chosen suit.\n\n4 * 13 * 12 * 11 = 7,056\n\nThese 7,056 combinations can be arranged in 3! = 6 ways.",
+        "7,056 / (4 * 3!) = 7,056 / 24 = 294",
+        "The probability is 294 / 22,100.",
+        "The probability is 294 / 22,100. \n\nFinal Answer"
+    ],
+    "full_steps": [
+        [
+            "There are 52 cards in a standard deck and 3 cards are chosen at random, so the total number of possible card combinations is:\n\n52C3 = 52! / (3! * (52-3)!)\n= 52! / (3! * 49!)\n= 22,100",
+            1
+        ],
+        [
+            "There are 4 suits in a standard deck (hearts, diamonds, clubs, spades) and we want all 3 cards to be of the same suit, so there are 4 possible ways to choose the suit for the 3 cards.\n\nThe first card can be any of the 13 cards in the chosen suit, the second card can be any of the remaining 12 cards in the chosen suit, and the third card can be any of the remaining 11 cards in the chosen suit.\n\n4 * 13 * 12 * 11 = 7,056\n\nThese 7,056 combinations can be arranged in 3! = 6 ways.",
+            1
+        ],
+        [
+            "7,056 / (4 * 3!) = 7,056 / 24 = 294",
+            1
+        ],
+        [
+            "The probability is 294 / 22,100.",
+            1
+        ],
+        [
+            "The probability is 294 / 22,100. \n\nFinal Answer",
+            1
+        ]
+    ],
+    "time": 67.11160254478455,
+    "total_tokens": 3327,
+    "final_answer_tokens": 381,
+    "model": "meta-llama/Llama-Vision-Free"
+}

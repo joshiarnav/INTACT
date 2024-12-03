@@ -1,0 +1,36 @@
+{
+    "problem": "Let $\\mathbf{a}$ and $\\mathbf{b}$ be vectors such that the angle between $\\mathbf{a}$ and $\\mathbf{b}$ is $29^\\circ,$ and the angle between $\\mathbf{b}$ and $\\mathbf{a} - \\mathbf{b}$ is $84^\\circ.$  Find the angle between $\\mathbf{a}$ and $\\mathbf{a} - \\mathbf{b}.$",
+    "level": "Level 3",
+    "type": "Precalculus",
+    "solution": "Since $\\mathbf{a}, \\mathbf{b},$ and $\\mathbf{a-b}$ all lie in the same plane, from the diagram below, we see that the angle between $\\mathbf{a}$ and $\\mathbf{a} - \\mathbf{b}$ is $84^\\circ - 29^\\circ = \\boxed{55^\\circ}.$\n\n[asy]\nunitsize(5 cm);\n\npair A, B, C, O;\n\nO = (0,0);\nA = (1,0);\nB = extension(O, O + dir(29), A, A + dir(180 - 55));\nC = O + A - B;\n\ndraw(O--A,red,Arrow(6));\ndraw(O--B,green,Arrow(6));\ndraw(C--A,green,Arrow(6));\ndraw(O--C,blue,Arrow(6));\ndraw(B--A,blue,Arrow(6));\n\nlabel(\"$\\mathbf{a}$\", A/2, S);\nlabel(\"$\\mathbf{b}$\", B/2, NW);\nlabel(\"$\\mathbf{b}$\", (A + C)/2, SE);\nlabel(\"$\\mathbf{a} - \\mathbf{b}$\", C/2, SW);\nlabel(\"$\\mathbf{a} - \\mathbf{b}$\", (A + B)/2, NE);\nlabel(\"$29^\\circ$\", (0.2,0.05));\nlabel(\"$55^\\circ$\", (0.15,-0.05));\n[/asy]",
+    "is_solved": false,
+    "model_solution": "Step 1:  We are given vectors $\\mathbf{a}$ and $\\mathbf{b}$, with the angle between $\\mathbf{a}$ and $\\mathbf{b}$ being $29^\\circ$, and the angle between $\\mathbf{b}$ and $\\mathbf{a} - \\mathbf{b}$ being $84^\\circ$.\nStep 2:  We are asked to find the angle between $\\mathbf{a}$ and $\\mathbf{a} - \\mathbf{b}.$\nStep 3:  To approach this, we can use the dot product formula, which relates the dot product of two vectors to the product of their magnitudes and the cosine of the angle between them.\nStep 4:  We'll start by using the given information to find the angle between $\\mathbf{a}$ and $\\mathbf{b}$, and then use the properties of the dot product to find the angle between $\\mathbf{a}$ and $\\mathbf{a} - \\mathbf{b}$.\n\n## Step 2: \nWe'll use the formula for the dot product to express the relationship between the vectors $\\mathbf{a}$, $\\\n## Step 3: \n$\\mathbf{a} \\cdot \\mathbf{b} = \\|\\mathbf{a}\\| \\|\\mathbf{b}\\| \\cos 29^\\circ$\n## Step 4: \n$\\mathbf{a} \\cdot (\\mathbf{a} - \\mathbf{b}) = \\|\\mathbf{a}\\| \\|\\mathbf{a} - \\mathbf{b}\\| \\cos \\theta$\n\n## Step 5: \n$\\mathbf{a} \\cdot (\\mathbf{a} - \\mathbf{b}) = \\|\\mathbf{a}\\|^2 - \\mathbf{a} \\cdot \\mathbf{b}$\n\n## Step 6: \n$\\|\\mathbf{a}\\|^2 - \\mathbf{a} \\cdot \\mathbf{b} = \\|\\mathbf{a}\\| \\|\\mathbf{a} - \\mathbf{b}\\| \\cos \\theta$\n\n## Step 7: \n$\\|\\mathbf{a}\\|^2 - \\|\\mathbf{a}\\| \\|\\mathbf{b}\\| \\cos 29^\\circ = \\|\\mathbf{a}\\| \\|\\mathbf{a} - \\mathbf{b}\\| \\cos \\theta$\n\n## Step 8: \n$\\|\\mathbf{a} - \\\n## Step 9: \n$\\cos \\theta = \\frac{\\|\\mathbf{a}\\|^2 - \\|\\mathbf{a}\\| \\|\\mathbf{b}\\| \\cos 29^\\circ}{\\|\\mathbf{a}\\|^2 - \\|\\mathbf{a}\\| \\|\\mathbf{b}\\| \\cos 84^\\circ}$",
+    "steps": [
+        "Step 1:  We are given vectors $\\mathbf{a}$ and $\\mathbf{b}$, with the angle between $\\mathbf{a}$ and $\\mathbf{b}$ being $29^\\circ$, and the angle between $\\mathbf{b}$ and $\\mathbf{a} - \\mathbf{b}$ being $84^\\circ$.\nStep 2:  We are asked to find the angle between $\\mathbf{a}$ and $\\mathbf{a} - \\mathbf{b}.$\nStep 3:  To approach this, we can use the dot product formula, which relates the dot product of two vectors to the product of their magnitudes and the cosine of the angle between them.\nStep 4:  We'll start by using the given information to find the angle between $\\mathbf{a}$ and $\\mathbf{b}$, and then use the properties of the dot product to find the angle between $\\mathbf{a}$ and $\\mathbf{a} - \\mathbf{b}$.\n\n## Step 2: \nWe'll use the formula for the dot product to express the relationship between the vectors $\\mathbf{a}$, $\\",
+        "## Step 3: \n$\\mathbf{a} \\cdot \\mathbf{b} = \\|\\mathbf{a}\\| \\|\\mathbf{b}\\| \\cos 29^\\circ$",
+        "## Step 4: \n$\\mathbf{a} \\cdot (\\mathbf{a} - \\mathbf{b}) = \\|\\mathbf{a}\\| \\|\\mathbf{a} - \\mathbf{b}\\| \\cos \\theta$\n\n## Step 5: \n$\\mathbf{a} \\cdot (\\mathbf{a} - \\mathbf{b}) = \\|\\mathbf{a}\\|^2 - \\mathbf{a} \\cdot \\mathbf{b}$\n\n## Step 6: \n$\\|\\mathbf{a}\\|^2 - \\mathbf{a} \\cdot \\mathbf{b} = \\|\\mathbf{a}\\| \\|\\mathbf{a} - \\mathbf{b}\\| \\cos \\theta$\n\n## Step 7: \n$\\|\\mathbf{a}\\|^2 - \\|\\mathbf{a}\\| \\|\\mathbf{b}\\| \\cos 29^\\circ = \\|\\mathbf{a}\\| \\|\\mathbf{a} - \\mathbf{b}\\| \\cos \\theta$\n\n## Step 8: \n$\\|\\mathbf{a} - \\",
+        "## Step 9: \n$\\cos \\theta = \\frac{\\|\\mathbf{a}\\|^2 - \\|\\mathbf{a}\\| \\|\\mathbf{b}\\| \\cos 29^\\circ}{\\|\\mathbf{a}\\|^2 - \\|\\mathbf{a}\\| \\|\\mathbf{b}\\| \\cos 84^\\circ}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We are given vectors $\\mathbf{a}$ and $\\mathbf{b}$, with the angle between $\\mathbf{a}$ and $\\mathbf{b}$ being $29^\\circ$, and the angle between $\\mathbf{b}$ and $\\mathbf{a} - \\mathbf{b}$ being $84^\\circ$.\nStep 2:  We are asked to find the angle between $\\mathbf{a}$ and $\\mathbf{a} - \\mathbf{b}.$\nStep 3:  To approach this, we can use the dot product formula, which relates the dot product of two vectors to the product of their magnitudes and the cosine of the angle between them.\nStep 4:  We'll start by using the given information to find the angle between $\\mathbf{a}$ and $\\mathbf{b}$, and then use the properties of the dot product to find the angle between $\\mathbf{a}$ and $\\mathbf{a} - \\mathbf{b}$.\n\n## Step 2: \nWe'll use the formula for the dot product to express the relationship between the vectors $\\mathbf{a}$, $\\",
+            1
+        ],
+        [
+            "## Step 3: \n$\\mathbf{a} \\cdot \\mathbf{b} = \\|\\mathbf{a}\\| \\|\\mathbf{b}\\| \\cos 29^\\circ$",
+            1
+        ],
+        [
+            "## Step 4: \n$\\mathbf{a} \\cdot (\\mathbf{a} - \\mathbf{b}) = \\|\\mathbf{a}\\| \\|\\mathbf{a} - \\mathbf{b}\\| \\cos \\theta$\n\n## Step 5: \n$\\mathbf{a} \\cdot (\\mathbf{a} - \\mathbf{b}) = \\|\\mathbf{a}\\|^2 - \\mathbf{a} \\cdot \\mathbf{b}$\n\n## Step 6: \n$\\|\\mathbf{a}\\|^2 - \\mathbf{a} \\cdot \\mathbf{b} = \\|\\mathbf{a}\\| \\|\\mathbf{a} - \\mathbf{b}\\| \\cos \\theta$\n\n## Step 7: \n$\\|\\mathbf{a}\\|^2 - \\|\\mathbf{a}\\| \\|\\mathbf{b}\\| \\cos 29^\\circ = \\|\\mathbf{a}\\| \\|\\mathbf{a} - \\mathbf{b}\\| \\cos \\theta$\n\n## Step 8: \n$\\|\\mathbf{a} - \\",
+            1
+        ],
+        [
+            "## Step 9: \n$\\cos \\theta = \\frac{\\|\\mathbf{a}\\|^2 - \\|\\mathbf{a}\\| \\|\\mathbf{b}\\| \\cos 29^\\circ}{\\|\\mathbf{a}\\|^2 - \\|\\mathbf{a}\\| \\|\\mathbf{b}\\| \\cos 84^\\circ}$",
+            1
+        ]
+    ],
+    "time": 54.6886043548584,
+    "total_tokens": 4702,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

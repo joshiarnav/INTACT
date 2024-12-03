@@ -1,0 +1,66 @@
+{
+    "problem": "A regular dodecahedron is a convex polyhedron with 12 regular pentagonal faces and 20 vertices.  If two distinct vertices are chosen at random, what is the probability that the line connecting them lies inside the dodecahedron?",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "There are a total of $\\dbinom{20}{2}=190$ ways to choose two distinct vertices.  When the line is drawn connecting these vertices, some will correspond to edges or face diagonals, and the rest will lie inside the dodecahedron. Each of the 12 pentagonal faces has 5 edges.  This makes a total of $5\\cdot12=60$ edges.  This counts each edge twice, once for each adjacent face, so there are only $60/2=30$ edges.  Each of the 12 pentagonal faces also has $5$ face diagonals.  This can be seen by drawing out an example, or remembering that an $n$ sided polygon has $\\frac{n(n-3)}{2}$ face diagonals.  This is a total of $5\\cdot 12= 60$ face diagonals.\n\nTherefore, of the 190 ways to choose two vertices, $190-30-60=100$ will give lines that lie inside the dodecahedron when connected.  The probability of selecting such a pair is then: $$\\frac{100}{190}=\\boxed{\\frac{10}{19}}$$",
+    "is_solved": false,
+    "model_solution": "Step 1: Determine the total number of ways to choose 2 distinct vertices from the 20 vertices of the dodecahedron.\nStep 2:\nFind the number of pairs of distinct vertices that lie on the same pentagonal face of the dodecahedron.\nThere are $\\binom{5}{2}=10$ ways to choose 2 vertices from a regular pentagon, so there are $12\\cdot10=120$ such pairs of vertices.\nIn each of these cases, the line segment connecting the two vertices lies on the boundary of the dodecahedron, and therefore does not lie inside the dodecahedron.\nStep 3: Find the number of pairs of distinct vertices that do not lie on the same pentagonal face of the dodecahedron.\nStep 4: \nThere are $\\binom{20}{2}=190$ ways to choose 2 distinct vertices from the 20 vertices of the dodecahedron, and 120 of these pairs lie on the same pentagonal face of the dodecahedron. Therefore, the number of pairs that do not lie on the same pentagonal face is $190-120=70.$\nStep 5:\n$\\frac{70}{190} = \\frac{7}{19}$\nStep 4:\nThere are $\\binom{20}{2}=190$ ways to choose 2 distinct vertices from the 20 vertices of the dodecahedron, and 120 of these pairs lie on the same pentagonal face of the dodecahedron. Therefore, the number of pairs that do not lie on the same pentagonal face is $190-120=70.$\nThe probability that the line connecting the two vertices lies inside the dodecahedron is $\\frac{70}{190}$.\nFind the probability that the line connecting the two vertices lies inside the dodecahedron.\n$\\frac{70}{190}$\nThe probability that the line connecting the two vertices lies inside the dodecahedron is $\\frac{70}{190}$",
+    "steps": [
+        "Step 1: Determine the total number of ways to choose 2 distinct vertices from the 20 vertices of the dodecahedron.",
+        "Step 2:\nFind the number of pairs of distinct vertices that lie on the same pentagonal face of the dodecahedron.\nThere are $\\binom{5}{2}=10$ ways to choose 2 vertices from a regular pentagon, so there are $12\\cdot10=120$ such pairs of vertices.\nIn each of these cases, the line segment connecting the two vertices lies on the boundary of the dodecahedron, and therefore does not lie inside the dodecahedron.",
+        "Step 3: Find the number of pairs of distinct vertices that do not lie on the same pentagonal face of the dodecahedron.",
+        "Step 4: \nThere are $\\binom{20}{2}=190$ ways to choose 2 distinct vertices from the 20 vertices of the dodecahedron, and 120 of these pairs lie on the same pentagonal face of the dodecahedron. Therefore, the number of pairs that do not lie on the same pentagonal face is $190-120=70.$",
+        "Step 5:\n$\\frac{70}{190} = \\frac{7}{19}$",
+        "Step 4:\nThere are $\\binom{20}{2}=190$ ways to choose 2 distinct vertices from the 20 vertices of the dodecahedron, and 120 of these pairs lie on the same pentagonal face of the dodecahedron. Therefore, the number of pairs that do not lie on the same pentagonal face is $190-120=70.$",
+        "The probability that the line connecting the two vertices lies inside the dodecahedron is $\\frac{70}{190}$.",
+        "Find the probability that the line connecting the two vertices lies inside the dodecahedron.",
+        "$\\frac{70}{190}$",
+        "The probability that the line connecting the two vertices lies inside the dodecahedron is $\\frac{70}{190}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Determine the total number of ways to choose 2 distinct vertices from the 20 vertices of the dodecahedron.",
+            1
+        ],
+        [
+            "Step 2:\nFind the number of pairs of distinct vertices that lie on the same pentagonal face of the dodecahedron.\nThere are $\\binom{5}{2}=10$ ways to choose 2 vertices from a regular pentagon, so there are $12\\cdot10=120$ such pairs of vertices.\nIn each of these cases, the line segment connecting the two vertices lies on the boundary of the dodecahedron, and therefore does not lie inside the dodecahedron.",
+            1
+        ],
+        [
+            "Step 3: Find the number of pairs of distinct vertices that do not lie on the same pentagonal face of the dodecahedron.",
+            1
+        ],
+        [
+            "Step 4: \nThere are $\\binom{20}{2}=190$ ways to choose 2 distinct vertices from the 20 vertices of the dodecahedron, and 120 of these pairs lie on the same pentagonal face of the dodecahedron. Therefore, the number of pairs that do not lie on the same pentagonal face is $190-120=70.$",
+            1
+        ],
+        [
+            "Step 5:\n$\\frac{70}{190} = \\frac{7}{19}$",
+            1
+        ],
+        [
+            "Step 4:\nThere are $\\binom{20}{2}=190$ ways to choose 2 distinct vertices from the 20 vertices of the dodecahedron, and 120 of these pairs lie on the same pentagonal face of the dodecahedron. Therefore, the number of pairs that do not lie on the same pentagonal face is $190-120=70.$",
+            1
+        ],
+        [
+            "The probability that the line connecting the two vertices lies inside the dodecahedron is $\\frac{70}{190}$.",
+            1
+        ],
+        [
+            "Find the probability that the line connecting the two vertices lies inside the dodecahedron.",
+            1
+        ],
+        [
+            "$\\frac{70}{190}$",
+            1
+        ],
+        [
+            "The probability that the line connecting the two vertices lies inside the dodecahedron is $\\frac{70}{190}$",
+            1
+        ]
+    ],
+    "time": 130.83993768692017,
+    "total_tokens": 7927,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

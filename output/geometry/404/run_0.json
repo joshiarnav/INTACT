@@ -1,0 +1,66 @@
+{
+    "problem": "In rectangle $ABCD$, $AD=1$, $P$ is on $\\overline{AB}$, and $\\overline{DB}$ and $\\overline{DP}$ trisect $\\angle ADC$. Write the perimeter of $\\triangle BDP$ in simplest form as:  $w + \\frac{x \\cdot \\sqrt{y}}{z}$, where $w, x, y, z$ are nonnegative integers.  What is $w + x + y + z$?\n\n[asy]\npair A,B,C,D,P;\nA=(0,5);\nB=(8,5);\nC=(8,0);\nD=(0,0);\nP=(3,5);\ndraw(A--B--C--D--cycle);\ndraw(P--D--B);\nlabel(\"$A$\",A,N);\nlabel(\"$B$\",B,N);\nlabel(\"$C$\",C,S);\nlabel(\"$D$\",D,S);\nlabel(\"$P$\",P,N);\n[/asy]",
+    "level": "Level 4",
+    "type": "Geometry",
+    "solution": "Both triangles $APD$ and $CBD$ are 30-60-90 triangles.  Thus $DP=\\frac{2\\sqrt{3}}{3}$ and $DB=2$. Since $\\angle\nBDP=\\angle PBD$, it follows that $PB=PD=\\frac{2\\sqrt{3}}{3}$. Hence the perimeter of $\\triangle BDP$ is $\\frac{2\\sqrt{3}}{3}+\\frac{2\\sqrt{3}}{3}+2={2+\\frac{4\\sqrt{3}}{3}}$.  Converting this to our contrived notation gives $w + x + y + z = \\boxed{12}$.",
+    "is_solved": false,
+    "model_solution": "Step 1:  Let $\\angle ADB = \\theta$.\nStep 2:  Then $\\angle PDB = \\frac{\\theta}{3}$, and $\\angle DPB = \\frac{2\\theta}{3}$.\n\nStep 3:  By the Law of Sines on $\\triangle ADB$, we have $\\frac{AD}{\\sin \\frac{2\\theta}{3}}=\\frac{BD}{\\sin \\theta}$.\nStep 4:  We can solve for $BD$ using the Law of Sines.\nStep 5:  $BD=AD\\cdot\\frac{\\sin \\theta}{\\sin \\frac{2\\theta}{3}}=1\\cdot\\frac{\\sin \\theta}{\\sin \\frac{2\\theta}{3}}=1\\cdot\\frac{\\sin \\theta}{2\\sin \\frac{\\theta}{3}\\cos \\frac{\\theta}{3}}$\nStep 6:  Simplifying, we find that $BD=\\frac{3}{2\\sin\\frac{\\theta}{3} \\cos \\frac{\\theta}{3}}$\nStep 7:  We can use the double-angle identity to simplify the denominator\nStep 8:  Using the double-angle identity $\\sin \\frac{\\theta}{3}\\cos \\frac{\\theta}{3}=\\frac{1}{2}\\sin \\frac{2\\theta}{3}$, we can further simplify $BD=\\frac{3}{\\sin \\frac{2\\theta}{3}}$\nStep 9:  Now, we can use the Law of Cosines to find $BD^2$. We have $BD^2=1^2+1^2-2\\cdot1\\cdot1\\cdot\\cos\\theta=2-2\\cos\\theta$\nStep 10:  We can use the double-angle identity $\\cos \\theta=1-2\\sin^2 \\frac{\\theta}{2}$ to simplify the expression\nStep 11:  We can further simplify $BD^2=2(1-\\cos\\theta)=4\\sin^2 \\frac{\\theta}{2}$\nStep 12:  Using the double-angle identity $\\sin \\frac{\\theta}{2}=\\frac{1}{2}\\sqrt{\\frac{2}{\\sin \\frac{2\\theta}{3}}+\\frac{4\\sin \\frac{\\theta}{3}}{\\sin \\frac{2\\theta}{3}}}$, we can simplify $BD=\\frac{2\\sqrt{3}}{\\sqrt{\\sin \\frac{2\\theta}{3}}}$\nWe can use the Law of Sines on $\\triangle BDP$ to find $DP$. We have $\\frac{DP}{\\sin \\frac{2\\theta}{3}}=\\frac{BD}{\\sin \\frac{\\theta}{3}}$\n$\\frac{DP}{\\sin \\frac{2\\theta}{3}}=\\frac{\\frac{2\\sqrt{3}}{\\sqrt{\\sin \\frac{2\\theta}{3}}}}{\\sin \\frac{\\theta}{3}}$\n$DP=\\frac{2\\sqrt{3}}{\\sin \\frac{2\\theta}{3}}\\cdot\\frac{\\sin \\frac{2\\theta}{3}}{\\sin \\frac{\\theta}{3}}=\\frac{2\\sqrt{3}\\cdot\\sin \\frac{\\theta}{3}}{\\sin \\frac{\\theta}{3}}=2\\sqrt{3}$\nStep 14:  The perimeter of $\\triangle BDP$ is $BD+DP+BP$.\nStep 15:  $BP=AD=1$.\nStep 16:  Therefore, the perimeter of $\\triangle BDP$ is $BD+DP+BP=\\frac{2\\sqrt{3}}{\\sqrt{\\sin \\frac{2\\theta}{3}}}+2\\sqrt{3}+1$.\nStep 17:  We can simplify the expression by using the double-angle identity $\\sin \\frac{2\\theta}{3}=\\frac{3\\sqrt{3}}{2}\\sin \\frac{\\theta}{3}\\cos \\frac{\\theta}{3}=\\frac{3\\sqrt{3}}{2}\\left(\\frac{\\sqrt{3}}{2}\\sin \\frac{2\\theta}{3}\\right)$.\nStep 18:  Simplifying, we find that $\\frac{2\\sqrt{3}}{\\sqrt{\\sin \\frac{2\\theta}{3}}}=\\frac{4\\sqrt{3}}{3\\sqrt{3}\\sin \\frac{2\\theta}{3}}=\\frac{4}{3\\sin \\frac\n$\\frac{4}{3\\sin \\frac{2\\theta}{3}}=\\frac{4\\sqrt{3}}{3\\sqrt{3}\\sin \\frac{2\\theta}{3}}\\cdot\\frac{\\sqrt{3}}{\\sqrt{3}}=\\frac{4\\sqrt{3}}{3\\sqrt{3}\\sin \\frac{2\\theta}{3}}\\cdot\\frac{\\sqrt{3}}{\\sqrt{3}}=2\\sqrt{3}\\csc \\frac{2\\theta}{3}$\n$=2\\sqrt{3}\\cdot\\frac{1}{\\sin \\frac{2\\theta}{3}}=\\frac{4\\sqrt{3}}{3\\sin \\frac{2\\theta}{3}}$\n$=\\frac{4\\sqrt{3}}{3}\\frac{1}{\\frac{1}{2}\\sin \\frac{2\\theta}{3}}=\\frac{4\\sqrt{3}}{3}\\frac{2}{\\sin \\frac{2\\theta}{3}}=\\frac{8\\sqrt{3}}{3\\sin \\frac{2\\theta}{3}}$\n$\\frac{8\\sqrt{3}}{3\\sin \\frac{2\\theta}{3}}+2\\sqrt{3}+1=\\frac{8\\sqrt{3}}{3\\sin \\frac{2\\theta}{3}}+\\frac{3\\sqrt{3}}{\\sqrt{3}}=\\frac{8\\sqrt{3}+9\\sqrt{3}}{3\\sin \\frac{2\\theta}{3}}=\\frac{17\\sqrt{3}}{3\\sin \\frac{2\\theta}{3}}$",
+    "steps": [
+        "Step 1:  Let $\\angle ADB = \\theta$.\nStep 2:  Then $\\angle PDB = \\frac{\\theta}{3}$, and $\\angle DPB = \\frac{2\\theta}{3}$.\n\nStep 3:  By the Law of Sines on $\\triangle ADB$, we have $\\frac{AD}{\\sin \\frac{2\\theta}{3}}=\\frac{BD}{\\sin \\theta}$.\nStep 4:  We can solve for $BD$ using the Law of Sines.\nStep 5:  $BD=AD\\cdot\\frac{\\sin \\theta}{\\sin \\frac{2\\theta}{3}}=1\\cdot\\frac{\\sin \\theta}{\\sin \\frac{2\\theta}{3}}=1\\cdot\\frac{\\sin \\theta}{2\\sin \\frac{\\theta}{3}\\cos \\frac{\\theta}{3}}$\nStep 6:  Simplifying, we find that $BD=\\frac{3}{2\\sin\\frac{\\theta}{3} \\cos \\frac{\\theta}{3}}$\nStep 7:  We can use the double-angle identity to simplify the denominator",
+        "Step 8:  Using the double-angle identity $\\sin \\frac{\\theta}{3}\\cos \\frac{\\theta}{3}=\\frac{1}{2}\\sin \\frac{2\\theta}{3}$, we can further simplify $BD=\\frac{3}{\\sin \\frac{2\\theta}{3}}$",
+        "Step 9:  Now, we can use the Law of Cosines to find $BD^2$. We have $BD^2=1^2+1^2-2\\cdot1\\cdot1\\cdot\\cos\\theta=2-2\\cos\\theta$\nStep 10:  We can use the double-angle identity $\\cos \\theta=1-2\\sin^2 \\frac{\\theta}{2}$ to simplify the expression\nStep 11:  We can further simplify $BD^2=2(1-\\cos\\theta)=4\\sin^2 \\frac{\\theta}{2}$",
+        "Step 12:  Using the double-angle identity $\\sin \\frac{\\theta}{2}=\\frac{1}{2}\\sqrt{\\frac{2}{\\sin \\frac{2\\theta}{3}}+\\frac{4\\sin \\frac{\\theta}{3}}{\\sin \\frac{2\\theta}{3}}}$, we can simplify $BD=\\frac{2\\sqrt{3}}{\\sqrt{\\sin \\frac{2\\theta}{3}}}$",
+        "We can use the Law of Sines on $\\triangle BDP$ to find $DP$. We have $\\frac{DP}{\\sin \\frac{2\\theta}{3}}=\\frac{BD}{\\sin \\frac{\\theta}{3}}$",
+        "$\\frac{DP}{\\sin \\frac{2\\theta}{3}}=\\frac{\\frac{2\\sqrt{3}}{\\sqrt{\\sin \\frac{2\\theta}{3}}}}{\\sin \\frac{\\theta}{3}}$",
+        "$DP=\\frac{2\\sqrt{3}}{\\sin \\frac{2\\theta}{3}}\\cdot\\frac{\\sin \\frac{2\\theta}{3}}{\\sin \\frac{\\theta}{3}}=\\frac{2\\sqrt{3}\\cdot\\sin \\frac{\\theta}{3}}{\\sin \\frac{\\theta}{3}}=2\\sqrt{3}$",
+        "Step 14:  The perimeter of $\\triangle BDP$ is $BD+DP+BP$.\nStep 15:  $BP=AD=1$.\nStep 16:  Therefore, the perimeter of $\\triangle BDP$ is $BD+DP+BP=\\frac{2\\sqrt{3}}{\\sqrt{\\sin \\frac{2\\theta}{3}}}+2\\sqrt{3}+1$.\nStep 17:  We can simplify the expression by using the double-angle identity $\\sin \\frac{2\\theta}{3}=\\frac{3\\sqrt{3}}{2}\\sin \\frac{\\theta}{3}\\cos \\frac{\\theta}{3}=\\frac{3\\sqrt{3}}{2}\\left(\\frac{\\sqrt{3}}{2}\\sin \\frac{2\\theta}{3}\\right)$.\nStep 18:  Simplifying, we find that $\\frac{2\\sqrt{3}}{\\sqrt{\\sin \\frac{2\\theta}{3}}}=\\frac{4\\sqrt{3}}{3\\sqrt{3}\\sin \\frac{2\\theta}{3}}=\\frac{4}{3\\sin \\frac",
+        "$\\frac{4}{3\\sin \\frac{2\\theta}{3}}=\\frac{4\\sqrt{3}}{3\\sqrt{3}\\sin \\frac{2\\theta}{3}}\\cdot\\frac{\\sqrt{3}}{\\sqrt{3}}=\\frac{4\\sqrt{3}}{3\\sqrt{3}\\sin \\frac{2\\theta}{3}}\\cdot\\frac{\\sqrt{3}}{\\sqrt{3}}=2\\sqrt{3}\\csc \\frac{2\\theta}{3}$\n$=2\\sqrt{3}\\cdot\\frac{1}{\\sin \\frac{2\\theta}{3}}=\\frac{4\\sqrt{3}}{3\\sin \\frac{2\\theta}{3}}$\n$=\\frac{4\\sqrt{3}}{3}\\frac{1}{\\frac{1}{2}\\sin \\frac{2\\theta}{3}}=\\frac{4\\sqrt{3}}{3}\\frac{2}{\\sin \\frac{2\\theta}{3}}=\\frac{8\\sqrt{3}}{3\\sin \\frac{2\\theta}{3}}$",
+        "$\\frac{8\\sqrt{3}}{3\\sin \\frac{2\\theta}{3}}+2\\sqrt{3}+1=\\frac{8\\sqrt{3}}{3\\sin \\frac{2\\theta}{3}}+\\frac{3\\sqrt{3}}{\\sqrt{3}}=\\frac{8\\sqrt{3}+9\\sqrt{3}}{3\\sin \\frac{2\\theta}{3}}=\\frac{17\\sqrt{3}}{3\\sin \\frac{2\\theta}{3}}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Let $\\angle ADB = \\theta$.\nStep 2:  Then $\\angle PDB = \\frac{\\theta}{3}$, and $\\angle DPB = \\frac{2\\theta}{3}$.\n\nStep 3:  By the Law of Sines on $\\triangle ADB$, we have $\\frac{AD}{\\sin \\frac{2\\theta}{3}}=\\frac{BD}{\\sin \\theta}$.\nStep 4:  We can solve for $BD$ using the Law of Sines.\nStep 5:  $BD=AD\\cdot\\frac{\\sin \\theta}{\\sin \\frac{2\\theta}{3}}=1\\cdot\\frac{\\sin \\theta}{\\sin \\frac{2\\theta}{3}}=1\\cdot\\frac{\\sin \\theta}{2\\sin \\frac{\\theta}{3}\\cos \\frac{\\theta}{3}}$\nStep 6:  Simplifying, we find that $BD=\\frac{3}{2\\sin\\frac{\\theta}{3} \\cos \\frac{\\theta}{3}}$\nStep 7:  We can use the double-angle identity to simplify the denominator",
+            1
+        ],
+        [
+            "Step 8:  Using the double-angle identity $\\sin \\frac{\\theta}{3}\\cos \\frac{\\theta}{3}=\\frac{1}{2}\\sin \\frac{2\\theta}{3}$, we can further simplify $BD=\\frac{3}{\\sin \\frac{2\\theta}{3}}$",
+            1
+        ],
+        [
+            "Step 9:  Now, we can use the Law of Cosines to find $BD^2$. We have $BD^2=1^2+1^2-2\\cdot1\\cdot1\\cdot\\cos\\theta=2-2\\cos\\theta$\nStep 10:  We can use the double-angle identity $\\cos \\theta=1-2\\sin^2 \\frac{\\theta}{2}$ to simplify the expression\nStep 11:  We can further simplify $BD^2=2(1-\\cos\\theta)=4\\sin^2 \\frac{\\theta}{2}$",
+            1
+        ],
+        [
+            "Step 12:  Using the double-angle identity $\\sin \\frac{\\theta}{2}=\\frac{1}{2}\\sqrt{\\frac{2}{\\sin \\frac{2\\theta}{3}}+\\frac{4\\sin \\frac{\\theta}{3}}{\\sin \\frac{2\\theta}{3}}}$, we can simplify $BD=\\frac{2\\sqrt{3}}{\\sqrt{\\sin \\frac{2\\theta}{3}}}$",
+            1
+        ],
+        [
+            "We can use the Law of Sines on $\\triangle BDP$ to find $DP$. We have $\\frac{DP}{\\sin \\frac{2\\theta}{3}}=\\frac{BD}{\\sin \\frac{\\theta}{3}}$",
+            1
+        ],
+        [
+            "$\\frac{DP}{\\sin \\frac{2\\theta}{3}}=\\frac{\\frac{2\\sqrt{3}}{\\sqrt{\\sin \\frac{2\\theta}{3}}}}{\\sin \\frac{\\theta}{3}}$",
+            1
+        ],
+        [
+            "$DP=\\frac{2\\sqrt{3}}{\\sin \\frac{2\\theta}{3}}\\cdot\\frac{\\sin \\frac{2\\theta}{3}}{\\sin \\frac{\\theta}{3}}=\\frac{2\\sqrt{3}\\cdot\\sin \\frac{\\theta}{3}}{\\sin \\frac{\\theta}{3}}=2\\sqrt{3}$",
+            1
+        ],
+        [
+            "Step 14:  The perimeter of $\\triangle BDP$ is $BD+DP+BP$.\nStep 15:  $BP=AD=1$.\nStep 16:  Therefore, the perimeter of $\\triangle BDP$ is $BD+DP+BP=\\frac{2\\sqrt{3}}{\\sqrt{\\sin \\frac{2\\theta}{3}}}+2\\sqrt{3}+1$.\nStep 17:  We can simplify the expression by using the double-angle identity $\\sin \\frac{2\\theta}{3}=\\frac{3\\sqrt{3}}{2}\\sin \\frac{\\theta}{3}\\cos \\frac{\\theta}{3}=\\frac{3\\sqrt{3}}{2}\\left(\\frac{\\sqrt{3}}{2}\\sin \\frac{2\\theta}{3}\\right)$.\nStep 18:  Simplifying, we find that $\\frac{2\\sqrt{3}}{\\sqrt{\\sin \\frac{2\\theta}{3}}}=\\frac{4\\sqrt{3}}{3\\sqrt{3}\\sin \\frac{2\\theta}{3}}=\\frac{4}{3\\sin \\frac",
+            1
+        ],
+        [
+            "$\\frac{4}{3\\sin \\frac{2\\theta}{3}}=\\frac{4\\sqrt{3}}{3\\sqrt{3}\\sin \\frac{2\\theta}{3}}\\cdot\\frac{\\sqrt{3}}{\\sqrt{3}}=\\frac{4\\sqrt{3}}{3\\sqrt{3}\\sin \\frac{2\\theta}{3}}\\cdot\\frac{\\sqrt{3}}{\\sqrt{3}}=2\\sqrt{3}\\csc \\frac{2\\theta}{3}$\n$=2\\sqrt{3}\\cdot\\frac{1}{\\sin \\frac{2\\theta}{3}}=\\frac{4\\sqrt{3}}{3\\sin \\frac{2\\theta}{3}}$\n$=\\frac{4\\sqrt{3}}{3}\\frac{1}{\\frac{1}{2}\\sin \\frac{2\\theta}{3}}=\\frac{4\\sqrt{3}}{3}\\frac{2}{\\sin \\frac{2\\theta}{3}}=\\frac{8\\sqrt{3}}{3\\sin \\frac{2\\theta}{3}}$",
+            1
+        ],
+        [
+            "$\\frac{8\\sqrt{3}}{3\\sin \\frac{2\\theta}{3}}+2\\sqrt{3}+1=\\frac{8\\sqrt{3}}{3\\sin \\frac{2\\theta}{3}}+\\frac{3\\sqrt{3}}{\\sqrt{3}}=\\frac{8\\sqrt{3}+9\\sqrt{3}}{3\\sin \\frac{2\\theta}{3}}=\\frac{17\\sqrt{3}}{3\\sin \\frac{2\\theta}{3}}$",
+            1
+        ]
+    ],
+    "time": 134.36618423461914,
+    "total_tokens": 19483,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

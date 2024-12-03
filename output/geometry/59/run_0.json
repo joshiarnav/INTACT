@@ -1,0 +1,66 @@
+{
+    "problem": "A triangle with sides $3a-1$, $a^2 + 1$ and $a^2 + 2$ has a perimeter of 16 units. What is the number of square units in the area of the triangle?",
+    "level": "Level 3",
+    "type": "Geometry",
+    "solution": "Sum $3a-1$, $a^2+1$, and $a^2+2$ to find $2a^2+3a+2=16$.  Subtract 16 from both sides and factor the left-hand side to find $(2a+7)(a-2)=0\\implies a=-7/2$ or $a=2$.  Discarding the negative solution, we substitute $a=2$ into $3a-1$, $a^2+1$, and $a^2+2$ to find that the side lengths of the triangle are 5, 5, and 6 units.  Draw a perpendicular from the 6-unit side to the opposite vertex to divide the triangle into two congruent right triangles (see figure).  The height of the triangle is $\\sqrt{5^2-3^2}=4$ units, so the area of the triangle is $\\frac{1}{2}(6)(4)=\\boxed{12\\text{ square units}}$.\n\n[asy]\nimport olympiad;\nsize(150);\ndefaultpen(linewidth(0.8)+fontsize(10));\npair A=(0,0), B=(6,0), C=(3,4);\ndraw(A--B--C--cycle);\ndraw(C--(A+B)/2,linetype(\"2 3\"));\nlabel(\"5\",(A+C)/2,unit((-4,3)));\nlabel(\"3\",B/4,S);\ndraw(\"6\",shift((0,-0.6))*(A--B),Bars(5));\ndraw(rightanglemark(A,(A+B)/2,C));[/asy]",
+    "is_solved": false,
+    "model_solution": "Step 1: Write down the perimeter equation using the given sides of the triangle: $3a-1+a^2+1+a^2+2=16$.\nStep 2: Combine like terms to get $6a+2a^2=16$\nStep 3: Rearrange the equation to get $2a^2+6a-16=0$\nDivide both sides of the quadratic equation by 2 to simplify: $a^2 + 3a - 8 = 0$.\nStep 4: Factor the quadratic equation to solve for a: $a^2 + 3a - 8 = (a + 4)(a - 2) = 0$.\nSet each factor equal to zero to find the values of a: $a + 4 = 0 \\to a = -4$ and $a - 2 = 0 \\to a = 2$.\nStep 5: Since a represents the length of a side, a negative length is not possible, so a = -4 is discarded and the only valid value of a is a = 2.\nStep 6: Use the valid value of a to find the lengths of the sides of the triangle, which are $3(2) - 1 = 5$, $2^2 + 1 = 5$, and $2^2 + 2 = 6$. Since two sides are equal (5), the triangle is isosceles.\nStep 7: Calculate the area of the isosceles triangle using the formula $\\frac{1}{2} \\times \\text{base} \\times \\text{height}$.\nStep 8: Drop a perpendicular from the vertex with the equal sides to the base, splitting the triangle into two right triangles. Calculate the height of the triangle, which is the leg of the right triangle with hypotenuse 6. Use the Pythagorean theorem: $h^2 = 6^2 - 5^2$.",
+    "steps": [
+        "Step 1: Write down the perimeter equation using the given sides of the triangle: $3a-1+a^2+1+a^2+2=16$.",
+        "Step 2: Combine like terms to get $6a+2a^2=16$",
+        "Step 3: Rearrange the equation to get $2a^2+6a-16=0$",
+        "Divide both sides of the quadratic equation by 2 to simplify: $a^2 + 3a - 8 = 0$.",
+        "Step 4: Factor the quadratic equation to solve for a: $a^2 + 3a - 8 = (a + 4)(a - 2) = 0$.",
+        "Set each factor equal to zero to find the values of a: $a + 4 = 0 \\to a = -4$ and $a - 2 = 0 \\to a = 2$.",
+        "Step 5: Since a represents the length of a side, a negative length is not possible, so a = -4 is discarded and the only valid value of a is a = 2.",
+        "Step 6: Use the valid value of a to find the lengths of the sides of the triangle, which are $3(2) - 1 = 5$, $2^2 + 1 = 5$, and $2^2 + 2 = 6$. Since two sides are equal (5), the triangle is isosceles.",
+        "Step 7: Calculate the area of the isosceles triangle using the formula $\\frac{1}{2} \\times \\text{base} \\times \\text{height}$.",
+        "Step 8: Drop a perpendicular from the vertex with the equal sides to the base, splitting the triangle into two right triangles. Calculate the height of the triangle, which is the leg of the right triangle with hypotenuse 6. Use the Pythagorean theorem: $h^2 = 6^2 - 5^2$."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Write down the perimeter equation using the given sides of the triangle: $3a-1+a^2+1+a^2+2=16$.",
+            1
+        ],
+        [
+            "Step 2: Combine like terms to get $6a+2a^2=16$",
+            1
+        ],
+        [
+            "Step 3: Rearrange the equation to get $2a^2+6a-16=0$",
+            1
+        ],
+        [
+            "Divide both sides of the quadratic equation by 2 to simplify: $a^2 + 3a - 8 = 0$.",
+            1
+        ],
+        [
+            "Step 4: Factor the quadratic equation to solve for a: $a^2 + 3a - 8 = (a + 4)(a - 2) = 0$.",
+            1
+        ],
+        [
+            "Set each factor equal to zero to find the values of a: $a + 4 = 0 \\to a = -4$ and $a - 2 = 0 \\to a = 2$.",
+            1
+        ],
+        [
+            "Step 5: Since a represents the length of a side, a negative length is not possible, so a = -4 is discarded and the only valid value of a is a = 2.",
+            1
+        ],
+        [
+            "Step 6: Use the valid value of a to find the lengths of the sides of the triangle, which are $3(2) - 1 = 5$, $2^2 + 1 = 5$, and $2^2 + 2 = 6$. Since two sides are equal (5), the triangle is isosceles.",
+            1
+        ],
+        [
+            "Step 7: Calculate the area of the isosceles triangle using the formula $\\frac{1}{2} \\times \\text{base} \\times \\text{height}$.",
+            1
+        ],
+        [
+            "Step 8: Drop a perpendicular from the vertex with the equal sides to the base, splitting the triangle into two right triangles. Calculate the height of the triangle, which is the leg of the right triangle with hypotenuse 6. Use the Pythagorean theorem: $h^2 = 6^2 - 5^2$.",
+            1
+        ]
+    ],
+    "time": 136.48958110809326,
+    "total_tokens": 6137,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

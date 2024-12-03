@@ -1,0 +1,46 @@
+{
+    "problem": "Jax bought exactly enough trees to plant eight equal rows. Then one tree died and couldn't be planted, but he still had enough trees left to plant exactly nine equal rows. After that, a tree was stolen, but he still had enough trees left to plant exactly ten equal rows. If he bought the least number of trees satisfying these three conditions, how many trees did he buy?",
+    "level": "Level 4",
+    "type": "Number Theory",
+    "solution": "Let $n$ be the number of trees Jax bought. The three conditions can be written as follows:\n\n1. $n$ is a multiple of 8.\n\n2. $n$ is 1 more than a multiple of 9\n\n3. $n$ is 2 more than a multiple of 10.\n\nIn other words, $n = 8a = 9b + 1 = 10c + 2$ for some nonnegative integers $a,$ $b,$ and $c.$\n\nThe third condition means that $n$ is one of $2,\\, 12,\\, 22,\\, 32,\\ldots$ and so on.  The first number in this sequence that is one more than a multiple of 9 is 82.  Note that if we add a multiple of 90 to 82, the result is also a number that is 2 more than a multiple of 10, and 1 more than a multiple of 9.  Furthermore, these are the only numbers that satisfy the last two conditions.  To see this, we can look at the equations $n = 9b + 1 = 10c + 2.$  Then\n\\[n - 82 = 9b - 81 = 10c - 80,\\]which we can write as $n - 82 = 9(b - 9) = 10(c - 8).$  This tells us $n - 82$ is both a multiple of 9 and 10, so $n - 82$ must be a multiple of 90.\n\nSo, $n$ lies in the sequence\n\\[82, 172, 262, 352, 442, \\dots.\\]The first number in this sequence that is a multiple of 8 is $\\boxed{352}$.",
+    "is_solved": true,
+    "model_solution": "Let T be the number of trees. T \u2261 0 (mod 8)\nT \u2261 1 (mod 9)\nT \u2261 2 (mod 10)\nChinese Remainder Theorem to solve the system of congruences.\nFind the product of the moduli, N = 8*9*10 = 720.\nCompute N/M = 720/8 = 90, which is the product of the other moduli, and find the multiplicative inverse of 90 modulo 9, which is 1.\nCompute N/M = 720/9 = 80, which is the product of the other moduli, and find the multiplicative inverse of 80 modulo 8, which is 5.\nSolve for x in the system of congruences:\nx \u2261 0 (mod 8)\nx \u2261 90(1) + 0(5) (mod 720)\nx \u2261 1 (mod 9)\nx \u2261 80(5) + 1(1) (mod 720)\nx \u2261 2 (mod 10)\nx \u2261 720(1) + 2(5) + 2(1) (mod 720) \nx \u2261 2 (mod 720)\n\nThe final answer is: \n362",
+    "steps": [
+        "Let T be the number of trees. T \u2261 0 (mod 8)\nT \u2261 1 (mod 9)\nT \u2261 2 (mod 10)",
+        "Chinese Remainder Theorem to solve the system of congruences.",
+        "Find the product of the moduli, N = 8*9*10 = 720.",
+        "Compute N/M = 720/8 = 90, which is the product of the other moduli, and find the multiplicative inverse of 90 modulo 9, which is 1.",
+        "Compute N/M = 720/9 = 80, which is the product of the other moduli, and find the multiplicative inverse of 80 modulo 8, which is 5.",
+        "Solve for x in the system of congruences:\nx \u2261 0 (mod 8)\nx \u2261 90(1) + 0(5) (mod 720)\nx \u2261 1 (mod 9)\nx \u2261 80(5) + 1(1) (mod 720)\nx \u2261 2 (mod 10)\nx \u2261 720(1) + 2(5) + 2(1) (mod 720) \nx \u2261 2 (mod 720)\n\nThe final answer is: \n362"
+    ],
+    "full_steps": [
+        [
+            "Let T be the number of trees. T \u2261 0 (mod 8)\nT \u2261 1 (mod 9)\nT \u2261 2 (mod 10)",
+            1
+        ],
+        [
+            "Chinese Remainder Theorem to solve the system of congruences.",
+            1
+        ],
+        [
+            "Find the product of the moduli, N = 8*9*10 = 720.",
+            1
+        ],
+        [
+            "Compute N/M = 720/8 = 90, which is the product of the other moduli, and find the multiplicative inverse of 90 modulo 9, which is 1.",
+            1
+        ],
+        [
+            "Compute N/M = 720/9 = 80, which is the product of the other moduli, and find the multiplicative inverse of 80 modulo 8, which is 5.",
+            1
+        ],
+        [
+            "Solve for x in the system of congruences:\nx \u2261 0 (mod 8)\nx \u2261 90(1) + 0(5) (mod 720)\nx \u2261 1 (mod 9)\nx \u2261 80(5) + 1(1) (mod 720)\nx \u2261 2 (mod 10)\nx \u2261 720(1) + 2(5) + 2(1) (mod 720) \nx \u2261 2 (mod 720)\n\nThe final answer is: \n362",
+            1
+        ]
+    ],
+    "time": 81.70292615890503,
+    "total_tokens": 3104,
+    "final_answer_tokens": 411,
+    "model": "meta-llama/Llama-Vision-Free"
+}

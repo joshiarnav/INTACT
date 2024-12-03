@@ -1,0 +1,66 @@
+{
+    "problem": "Find the number of ordered triples $(x,y,z)$ of real numbers that satisfy\n\\begin{align*}\nx + y - z &= 0, \\\\\nxz - xy + yz &= 27, \\\\\nxyz &= 54.\n\\end{align*}",
+    "level": "Level 4",
+    "type": "Intermediate Algebra",
+    "solution": "Let $a = x,$ $b = y,$ and $c = -z.$  Then $x = a,$ $y = b,$ and $z = -c,$ so the given equations become\n\\begin{align*}\na + b + c &= 0, \\\\\n-ac - ab - bc &= 27, \\\\\n-abc &= 54.\n\\end{align*}We re-write these as\n\\begin{align*}\na + b + c &= 0, \\\\\nab + ac + bc &= -27, \\\\\nabc &= -54.\n\\end{align*}Then by Vieta's formulas, $a,$ $b,$ and $c$ are the roots of\n\\[t^3 - 27t + 54 = 0,\\]which factors as $(t - 3)^2 (t + 6) = 0.$  Therefore, $a,$ $b,$ $c$ are equal to 3, 3, and $-6,$ in some order.\n\nThis leads to the solutions $(x,y,z) = (3,3,6),$ $(3,-6,-3),$ $(-6,3,-3),$ for a total of $\\boxed{3}$ solutions.",
+    "is_solved": false,
+    "model_solution": "The problem can be solved by using a substitution to simplify the equations.\n\nStep 1: From the third equation, solve for $z$ in terms of $x$ and $y$.\n\n$z = \\frac{54}{xy}$\nStep 2: Substitute $z = \\frac{54}{xy}$ into the first equation.\n$x + y - \\frac{54}{xy} = 0$\nStep 3: Multiply both sides by $xy$ to clear the fraction and then multiply both sides by $-1$ to simplify.\n$-x^2 y - x y^2 + 54 = 0$\nStep 4: Factor the equation from Step 3 to obtain $-(x+y)(x^2-xy+y^2) = -54.$\nStep 5: Recognize that $x^2 - xy + y^2 = (x - \\frac{y}{2})^2 + \\frac{3y^2}{4}$, and that $x + y$ and $x - \\frac{y}{2}$ are linearly independent, and so the only way for the product $-(x + y)(x^2 - xy + y^2)$ to equal $-54$ is if $x + y = -6$ and $x^2 - xy + y^2 = 9$.\nStep 6: Substitute $x + y = -6$ into $x^2 - xy + y^2 = 9$ to obtain $(\\frac{y}{2})^2 + 9 = 9.$\nSubstitute $y = -6 - x$ into the equation $(\\frac{y}{2})^2 + 9 = 9.$\nSimplify the equation $(\\frac{y}{2})^2 + 9 = 9.$\nStep 7: Solve the equation $\\left(\\frac{y}{2}\\right)^2=0$ to obtain $y = 0.$\nSubstitute $y = 0$ into $x + y = -6$ to obtain $x = -6.$\nFinal Answer.",
+    "steps": [
+        "The problem can be solved by using a substitution to simplify the equations.\n\nStep 1: From the third equation, solve for $z$ in terms of $x$ and $y$.\n\n$z = \\frac{54}{xy}$",
+        "Step 2: Substitute $z = \\frac{54}{xy}$ into the first equation.\n$x + y - \\frac{54}{xy} = 0$",
+        "Step 3: Multiply both sides by $xy$ to clear the fraction and then multiply both sides by $-1$ to simplify.\n$-x^2 y - x y^2 + 54 = 0$",
+        "Step 4: Factor the equation from Step 3 to obtain $-(x+y)(x^2-xy+y^2) = -54.$",
+        "Step 5: Recognize that $x^2 - xy + y^2 = (x - \\frac{y}{2})^2 + \\frac{3y^2}{4}$, and that $x + y$ and $x - \\frac{y}{2}$ are linearly independent, and so the only way for the product $-(x + y)(x^2 - xy + y^2)$ to equal $-54$ is if $x + y = -6$ and $x^2 - xy + y^2 = 9$.",
+        "Step 6: Substitute $x + y = -6$ into $x^2 - xy + y^2 = 9$ to obtain $(\\frac{y}{2})^2 + 9 = 9.$",
+        "Substitute $y = -6 - x$ into the equation $(\\frac{y}{2})^2 + 9 = 9.$",
+        "Simplify the equation $(\\frac{y}{2})^2 + 9 = 9.$",
+        "Step 7: Solve the equation $\\left(\\frac{y}{2}\\right)^2=0$ to obtain $y = 0.$",
+        "Substitute $y = 0$ into $x + y = -6$ to obtain $x = -6.$\nFinal Answer."
+    ],
+    "full_steps": [
+        [
+            "The problem can be solved by using a substitution to simplify the equations.\n\nStep 1: From the third equation, solve for $z$ in terms of $x$ and $y$.\n\n$z = \\frac{54}{xy}$",
+            1
+        ],
+        [
+            "Step 2: Substitute $z = \\frac{54}{xy}$ into the first equation.\n$x + y - \\frac{54}{xy} = 0$",
+            1
+        ],
+        [
+            "Step 3: Multiply both sides by $xy$ to clear the fraction and then multiply both sides by $-1$ to simplify.\n$-x^2 y - x y^2 + 54 = 0$",
+            1
+        ],
+        [
+            "Step 4: Factor the equation from Step 3 to obtain $-(x+y)(x^2-xy+y^2) = -54.$",
+            1
+        ],
+        [
+            "Step 5: Recognize that $x^2 - xy + y^2 = (x - \\frac{y}{2})^2 + \\frac{3y^2}{4}$, and that $x + y$ and $x - \\frac{y}{2}$ are linearly independent, and so the only way for the product $-(x + y)(x^2 - xy + y^2)$ to equal $-54$ is if $x + y = -6$ and $x^2 - xy + y^2 = 9$.",
+            1
+        ],
+        [
+            "Step 6: Substitute $x + y = -6$ into $x^2 - xy + y^2 = 9$ to obtain $(\\frac{y}{2})^2 + 9 = 9.$",
+            1
+        ],
+        [
+            "Substitute $y = -6 - x$ into the equation $(\\frac{y}{2})^2 + 9 = 9.$",
+            1
+        ],
+        [
+            "Simplify the equation $(\\frac{y}{2})^2 + 9 = 9.$",
+            1
+        ],
+        [
+            "Step 7: Solve the equation $\\left(\\frac{y}{2}\\right)^2=0$ to obtain $y = 0.$",
+            1
+        ],
+        [
+            "Substitute $y = 0$ into $x + y = -6$ to obtain $x = -6.$\nFinal Answer.",
+            1
+        ]
+    ],
+    "time": 135.14017343521118,
+    "total_tokens": 7667,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

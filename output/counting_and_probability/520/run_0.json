@@ -1,0 +1,66 @@
+{
+    "problem": "Carlos has chosen twelve different compact discs (CDs) he would like to buy. Four are rap music, five are country music, and three are heavy metal music. Carlos then randomly selects five of the 12 CDs to purchase. What is the probability that his purchase includes at least one CD from each of the three categories? Express your answer as a common fraction.",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "There are $\\binom{12}{5}=792$ equally likely choices for the set of 5 CDs Carlos purchases.  Of these, $\\binom{9}{5}$ include no heavy metal CDs, $\\binom{8}{5}$ include no rap CDs, and $\\binom{7}{5}$ include no country CDs.  We can add these numbers to find the number of sets of CDs which do not include at least one CD from each category, except that we have counted the set of 5 country CDs twice, since it omits both heavy metal and rap.  Therefore,  \\[\n\\binom{9}{5}+\\binom{8}{5}+\\binom{7}{5}-1=126+56+21-1=202\n\\] of the sets of 5 CDs do not include at least one CD from each category.  Subtracting from 792, we find that 590 of the sets do include at least one CD from each category.  The probability that a chosen randomly set will be one of these is $\\dfrac{590}{792}=\\boxed{\\frac{295}{396}}$.",
+    "is_solved": false,
+    "model_solution": "Step 1:  Determine the total number of possible CD selections.\nThe total number of possible CD selections can be calculated using combinations. We need to find the number of ways to choose 5 CDs from a total of 12 CDs. This can be calculated using the combination formula, which is C(n, k) = n! / (k!(n-k)!), where n is the total number of items, k is the number of items to choose, and ! denotes factorial.\n\nC(12, 5) = 12! / (5!(12-5)!)\n= 792\nStep 2:\nFind the number of selections that include CDs from each category.\nWe need to find the number of ways to choose at least one CD from each category. This can be broken down into choosing 1 CD from each category and then choosing 2 CDs from the remaining 9 CDs (since we already have 1 CD from each category).\n\nWe can choose 1 CD from each category in 4C1 * 5C1 * 3C1 = 4 * 5 * 3 = 60 ways.\n\nWe can choose 2 CDs from the remaining 9 CDs in 9C2 = 9! / (2!(9-2)!) = 36 ways.\n\nSo, the total number of selections that include CDs from each category is 60 * 36 = 2160.\nStep 3:\nFind the probability of the desired outcome.\nThe probability of the desired outcome is the number of desired outcomes divided by the total number of possible outcomes.\nProbability = (Number of desired outcomes) / (Total number of possible outcomes)\n= 2160 / 792\nSimplify the fraction 2160/792 to its simplest form.\nFind the greatest common divisor (GCD) of 2160 and 792 to simplify the fraction.\n\nGCD(2160, 792) = 24\n\nDivide both numerator and denominator by the GCD: \n= (2160 / 24) / (792 / 24)\n= 90 / 33\nStep 4: \n= (90 / 33) \n= (30 * 3) / (11 * 3)\n= 30 / 11\nStep 5: \n= (30 / 11)\nStep 6: \n= (30 / 11)\n= (30 / 11)\n\n Final Answer",
+    "steps": [
+        "Step 1:  Determine the total number of possible CD selections.\nThe total number of possible CD selections can be calculated using combinations. We need to find the number of ways to choose 5 CDs from a total of 12 CDs. This can be calculated using the combination formula, which is C(n, k) = n! / (k!(n-k)!), where n is the total number of items, k is the number of items to choose, and ! denotes factorial.\n\nC(12, 5) = 12! / (5!(12-5)!)\n= 792",
+        "Step 2:\nFind the number of selections that include CDs from each category.\nWe need to find the number of ways to choose at least one CD from each category. This can be broken down into choosing 1 CD from each category and then choosing 2 CDs from the remaining 9 CDs (since we already have 1 CD from each category).\n\nWe can choose 1 CD from each category in 4C1 * 5C1 * 3C1 = 4 * 5 * 3 = 60 ways.\n\nWe can choose 2 CDs from the remaining 9 CDs in 9C2 = 9! / (2!(9-2)!) = 36 ways.\n\nSo, the total number of selections that include CDs from each category is 60 * 36 = 2160.",
+        "Step 3:\nFind the probability of the desired outcome.\nThe probability of the desired outcome is the number of desired outcomes divided by the total number of possible outcomes.\nProbability = (Number of desired outcomes) / (Total number of possible outcomes)\n= 2160 / 792",
+        "Simplify the fraction 2160/792 to its simplest form.",
+        "Find the greatest common divisor (GCD) of 2160 and 792 to simplify the fraction.\n\nGCD(2160, 792) = 24\n\nDivide both numerator and denominator by the GCD: \n= (2160 / 24) / (792 / 24)\n= 90 / 33",
+        "Step 4: \n= (90 / 33) \n= (30 * 3) / (11 * 3)",
+        "= 30 / 11",
+        "Step 5: \n= (30 / 11)",
+        "Step 6: \n= (30 / 11)",
+        "= (30 / 11)\n\n Final Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Determine the total number of possible CD selections.\nThe total number of possible CD selections can be calculated using combinations. We need to find the number of ways to choose 5 CDs from a total of 12 CDs. This can be calculated using the combination formula, which is C(n, k) = n! / (k!(n-k)!), where n is the total number of items, k is the number of items to choose, and ! denotes factorial.\n\nC(12, 5) = 12! / (5!(12-5)!)\n= 792",
+            1
+        ],
+        [
+            "Step 2:\nFind the number of selections that include CDs from each category.\nWe need to find the number of ways to choose at least one CD from each category. This can be broken down into choosing 1 CD from each category and then choosing 2 CDs from the remaining 9 CDs (since we already have 1 CD from each category).\n\nWe can choose 1 CD from each category in 4C1 * 5C1 * 3C1 = 4 * 5 * 3 = 60 ways.\n\nWe can choose 2 CDs from the remaining 9 CDs in 9C2 = 9! / (2!(9-2)!) = 36 ways.\n\nSo, the total number of selections that include CDs from each category is 60 * 36 = 2160.",
+            1
+        ],
+        [
+            "Step 3:\nFind the probability of the desired outcome.\nThe probability of the desired outcome is the number of desired outcomes divided by the total number of possible outcomes.\nProbability = (Number of desired outcomes) / (Total number of possible outcomes)\n= 2160 / 792",
+            1
+        ],
+        [
+            "Simplify the fraction 2160/792 to its simplest form.",
+            1
+        ],
+        [
+            "Find the greatest common divisor (GCD) of 2160 and 792 to simplify the fraction.\n\nGCD(2160, 792) = 24\n\nDivide both numerator and denominator by the GCD: \n= (2160 / 24) / (792 / 24)\n= 90 / 33",
+            1
+        ],
+        [
+            "Step 4: \n= (90 / 33) \n= (30 * 3) / (11 * 3)",
+            1
+        ],
+        [
+            "= 30 / 11",
+            1
+        ],
+        [
+            "Step 5: \n= (30 / 11)",
+            1
+        ],
+        [
+            "Step 6: \n= (30 / 11)",
+            1
+        ],
+        [
+            "= (30 / 11)\n\n Final Answer",
+            1
+        ]
+    ],
+    "time": 132.7132604122162,
+    "total_tokens": 10601,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

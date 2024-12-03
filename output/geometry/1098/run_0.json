@@ -1,0 +1,36 @@
+{
+    "problem": "Compute $\\tan 330^\\circ$.",
+    "level": "Level 4",
+    "type": "Geometry",
+    "solution": "Let $P$ be the point on the unit circle that is $330^\\circ$ counterclockwise from $(1,0)$, and let $D$ be the foot of the altitude from $P$ to the $x$-axis, as shown below.\n\n[asy]\npair A,C,P,O,D;\ndraw((0,-1.2)--(0,1.2),p=black+1.2bp,Arrows(0.15cm));\ndraw((-1.2,0)--(1.2,0),p=black+1.2bp,Arrows(0.15cm));\nA = (1,0);\nO= (0,0);\nlabel(\"$x$\",(1.2,0),SE);\nlabel(\"$y$\",(0,1.2),NE);\n\nP = rotate(330)*A;\nD = foot(P,A,-A);\ndraw(O--P--D);\ndraw(rightanglemark(O,D,P,2));\ndraw(Circle(O,1));\nlabel(\"$O$\",O,NW);\nlabel(\"$P$\",P,SE);\n//label(\"$A$\",A,SE);\nlabel(\"$D$\",D,N);\n[/asy]\n\nTriangle $POD$ is a 30-60-90 triangle, so $DO = \\frac{\\sqrt{3}}{2}$ and $PD = \\frac{1}{2}$.  Therefore, the coordinates of $P$ are $\\left(\\frac{\\sqrt{3}}{2},-\\frac{1}{2}\\right)$, so $\\tan 330^\\circ = \\frac{\\sin330^\\circ}{\\cos 330^\\circ} = \\frac{-1/2}{\\sqrt{3}/2} = -\\frac{1}{\\sqrt{3}} = \\boxed{-\\frac{\\sqrt{3}}{3}}$.",
+    "is_solved": true,
+    "model_solution": "## Step 1: Recall that the tangent function is defined as the ratio of the sine and cosine functions.\n$\\tan \\theta = \\frac{\\sin \\theta}{\\cos \\theta}$. We need to compute $\\tan 330^\\circ$.\n## Step 2: Convert the angle to a corresponding angle in the first quadrant.\nWe can convert $330^\\circ$ to an equivalent angle in the first quadrant by adding $360^\\circ$, which is a full rotation. This gives us $330^\\circ + 360^\\circ = 690^\\circ$. Then, we can subtract $360^\\circ$ to get $690^\\circ - 360^\\circ = 330^\\circ$. However, this does not change the value of the angle. A better approach is to use the fact that $330^\\circ$ is in the fourth quadrant, which is equivalent to $360^\\circ - 330^\\circ = 30^\\circ$. Since tangent is an odd function, $\\tan 330^\\circ = \\tan (-30^\\circ) = -\\tan 30^\\circ$.\n## Step 3: Recall that $\\tan 30^\\circ = \\frac{\\sqrt{3}}{3}$.\nWe can use this to find the value of $\\tan 330^\\circ = -\\tan 30^\\circ = -\\frac{\\sqrt{3}}{3}$.\nFinal Answer: The final answer is $\\boxed{-\\frac{\\sqrt{3}}{3}}$.",
+    "steps": [
+        "## Step 1: Recall that the tangent function is defined as the ratio of the sine and cosine functions.\n$\\tan \\theta = \\frac{\\sin \\theta}{\\cos \\theta}$. We need to compute $\\tan 330^\\circ$.",
+        "## Step 2: Convert the angle to a corresponding angle in the first quadrant.\nWe can convert $330^\\circ$ to an equivalent angle in the first quadrant by adding $360^\\circ$, which is a full rotation. This gives us $330^\\circ + 360^\\circ = 690^\\circ$. Then, we can subtract $360^\\circ$ to get $690^\\circ - 360^\\circ = 330^\\circ$. However, this does not change the value of the angle. A better approach is to use the fact that $330^\\circ$ is in the fourth quadrant, which is equivalent to $360^\\circ - 330^\\circ = 30^\\circ$. Since tangent is an odd function, $\\tan 330^\\circ = \\tan (-30^\\circ) = -\\tan 30^\\circ$.",
+        "## Step 3: Recall that $\\tan 30^\\circ = \\frac{\\sqrt{3}}{3}$.\nWe can use this to find the value of $\\tan 330^\\circ = -\\tan 30^\\circ = -\\frac{\\sqrt{3}}{3}$.",
+        "Final Answer: The final answer is $\\boxed{-\\frac{\\sqrt{3}}{3}}$."
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Recall that the tangent function is defined as the ratio of the sine and cosine functions.\n$\\tan \\theta = \\frac{\\sin \\theta}{\\cos \\theta}$. We need to compute $\\tan 330^\\circ$.",
+            1
+        ],
+        [
+            "## Step 2: Convert the angle to a corresponding angle in the first quadrant.\nWe can convert $330^\\circ$ to an equivalent angle in the first quadrant by adding $360^\\circ$, which is a full rotation. This gives us $330^\\circ + 360^\\circ = 690^\\circ$. Then, we can subtract $360^\\circ$ to get $690^\\circ - 360^\\circ = 330^\\circ$. However, this does not change the value of the angle. A better approach is to use the fact that $330^\\circ$ is in the fourth quadrant, which is equivalent to $360^\\circ - 330^\\circ = 30^\\circ$. Since tangent is an odd function, $\\tan 330^\\circ = \\tan (-30^\\circ) = -\\tan 30^\\circ$.",
+            1
+        ],
+        [
+            "## Step 3: Recall that $\\tan 30^\\circ = \\frac{\\sqrt{3}}{3}$.\nWe can use this to find the value of $\\tan 330^\\circ = -\\tan 30^\\circ = -\\frac{\\sqrt{3}}{3}$.",
+            1
+        ],
+        [
+            "Final Answer: The final answer is $\\boxed{-\\frac{\\sqrt{3}}{3}}$.",
+            1
+        ]
+    ],
+    "time": 57.035781383514404,
+    "total_tokens": 2309,
+    "final_answer_tokens": 374,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,31 @@
+{
+    "problem": "How many ways are there to fill in the tens digit and hundreds digit of $1\\underline{\\hphantom{2}}\\,\\underline{\\hphantom{2}}4$ so that it is divisible by $11$?",
+    "level": "Level 5",
+    "type": "Number Theory",
+    "solution": "For integer $abcd$ to be divisible by $11$, then $a-b+c-d$ must be divisible by $11$. The only possibilities for $a-b+c-d$ are $-11$, $0$, and $11$.\nPossibility 1: $1-b+c-4=-11 \\implies c-b=-8$. This gives us two possible values: $c=0, b=8$, and $c=1, b=9$.\nPossibility 2: $1-b+c-4=0 \\implies c-b=3$. This gives us $7$ possible values, where $c$ is any integer from $3$ to $9$, and $b=c-3$.\nPossibility 3: $1-b+c-4=11 \\implies c-b=14$. This is impossible since the digit $c$ cannot be greater than $14$,  Thus there are a total of $2+7=\\boxed{9}$ possible values.",
+    "is_solved": true,
+    "model_solution": "Step 1:  To determine the number of ways to fill in the tens and hundreds digit of $1\\underline{\\hphantom{2}}\\,\\underline{\\hphantom{2}}4$ such that it is divisible by 11, we should first understand the divisibility rule for 11.\nStep 2:  A number is divisible by 11 if the difference between the sum of the digits at odd places (hundreds and tens digit) and the sum of the digits at even places (ones and thousands digit) is 0 or a multiple of 11.\nStep 3:  In this case, the number given is $1\\underline{\\hphantom{2}}\\,\\underline{\\hphantom{2}}4$, and we need to find the values for the tens digit and hundreds digit that make the number divisible by 11.\nStep 4:  Since the number ends in 4, the difference between the sum of the digits at odd places and the sum of the digits at even places will be $1 + \\text{tens digit} + 4 = (1+4) + \\text{tens digit} = 5 + \\text{\nStep 2:\nLet $x$ be the tens digit and $y$ be the hundreds digit. Then, we have the equation $5 + x - (x + y) = 0$ for divisibility by 11. Simplifying this, we get $5 - y = 0 \\Rightarrow y = 5$, and we know $x$ can be any integer from $0$ to $9$.\nStep 3:  Since $x$ can be any integer from $0$ to $9$, we have 10 possibilities for $x$.\n\nFinal Answer: The final answer is 10.",
+    "steps": [
+        "Step 1:  To determine the number of ways to fill in the tens and hundreds digit of $1\\underline{\\hphantom{2}}\\,\\underline{\\hphantom{2}}4$ such that it is divisible by 11, we should first understand the divisibility rule for 11.\nStep 2:  A number is divisible by 11 if the difference between the sum of the digits at odd places (hundreds and tens digit) and the sum of the digits at even places (ones and thousands digit) is 0 or a multiple of 11.\nStep 3:  In this case, the number given is $1\\underline{\\hphantom{2}}\\,\\underline{\\hphantom{2}}4$, and we need to find the values for the tens digit and hundreds digit that make the number divisible by 11.\nStep 4:  Since the number ends in 4, the difference between the sum of the digits at odd places and the sum of the digits at even places will be $1 + \\text{tens digit} + 4 = (1+4) + \\text{tens digit} = 5 + \\text{",
+        "Step 2:\nLet $x$ be the tens digit and $y$ be the hundreds digit. Then, we have the equation $5 + x - (x + y) = 0$ for divisibility by 11. Simplifying this, we get $5 - y = 0 \\Rightarrow y = 5$, and we know $x$ can be any integer from $0$ to $9$.",
+        "Step 3:  Since $x$ can be any integer from $0$ to $9$, we have 10 possibilities for $x$.\n\nFinal Answer: The final answer is 10."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  To determine the number of ways to fill in the tens and hundreds digit of $1\\underline{\\hphantom{2}}\\,\\underline{\\hphantom{2}}4$ such that it is divisible by 11, we should first understand the divisibility rule for 11.\nStep 2:  A number is divisible by 11 if the difference between the sum of the digits at odd places (hundreds and tens digit) and the sum of the digits at even places (ones and thousands digit) is 0 or a multiple of 11.\nStep 3:  In this case, the number given is $1\\underline{\\hphantom{2}}\\,\\underline{\\hphantom{2}}4$, and we need to find the values for the tens digit and hundreds digit that make the number divisible by 11.\nStep 4:  Since the number ends in 4, the difference between the sum of the digits at odd places and the sum of the digits at even places will be $1 + \\text{tens digit} + 4 = (1+4) + \\text{tens digit} = 5 + \\text{",
+            1
+        ],
+        [
+            "Step 2:\nLet $x$ be the tens digit and $y$ be the hundreds digit. Then, we have the equation $5 + x - (x + y) = 0$ for divisibility by 11. Simplifying this, we get $5 - y = 0 \\Rightarrow y = 5$, and we know $x$ can be any integer from $0$ to $9$.",
+            1
+        ],
+        [
+            "Step 3:  Since $x$ can be any integer from $0$ to $9$, we have 10 possibilities for $x$.\n\nFinal Answer: The final answer is 10.",
+            1
+        ]
+    ],
+    "time": 39.87973165512085,
+    "total_tokens": 2594,
+    "final_answer_tokens": 485,
+    "model": "meta-llama/Llama-Vision-Free"
+}

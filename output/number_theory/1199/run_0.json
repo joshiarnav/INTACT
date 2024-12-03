@@ -1,0 +1,21 @@
+{
+    "problem": "What is the smallest positive integer $n$ for which $(12{,}500{,}000)\\cdot n$ leaves a remainder of $111$ when divided by $999{,}999{,}999$?",
+    "level": "Level 5",
+    "type": "Number Theory",
+    "solution": "Suppose $n$ is a solution to the congruence $$(12{,}500{,}000)\\cdot n\\equiv 111\\pmod{999{,}999{,}999}.$$Then, by multiplying both sides by $80$, we see that $n$ satisfies $$(1{,}000{,}000{,}000)\\cdot n\\equiv 8{,}880 \\pmod{999{,}999{,}999}.$$The left side of this congruence is equivalent to $1\\cdot n = n\\pmod{999{,}999{,}999}$, so we have $n\\equiv 8{,}880\\pmod{999{,}999{,}999}$.\n\nSince $80$ is relatively prime to $999{,}999{,}999$, it has an inverse $\\pmod{999{,}999{,}999}$. (In fact, we know this inverse: it's $12{,}500{,}000$.) Thus we can reverse the steps above by multiplying both sides by $80^{-1}$. So, any integer $n$ satisfying $n\\equiv 8{,}880\\pmod{999{,}999{,}999}$ is a solution to the original congruence.\n\nThe smallest positive integer in this solution set is $n=\\boxed{8{,}880}$.",
+    "is_solved": true,
+    "model_solution": "Step 1:  We want to find the smallest positive integer $n$ such that $(12,500,000) \\cdot n$ leaves a remainder of $111$ when divided by $999,999,999$.\nStep 2:  First, we can express $12,500,000$ as $12,499,999+1$, where $12,499,999$ is divisible by $999,999,999$.\nStep 3:  When we multiply $12,499,999+1$ by $n$, we can use the distributive property to expand the expression.\nStep 4:  This gives us $12,499,999n + n$, which is still equivalent to $(12,500,000)n$.\nStep 5:  We want the remainder of this expression when divided by $999,999,999$, so we can focus on the term $n$.\nStep 6:  Our goal is to find the smallest value of $n$ that satisfies this condition.\nStep 7:  This leads us to the equation $999,999,999n \\equiv 111 \\pmod{999,999,999}$.\n\nThe final answer is",
+    "steps": [
+        "Step 1:  We want to find the smallest positive integer $n$ such that $(12,500,000) \\cdot n$ leaves a remainder of $111$ when divided by $999,999,999$.\nStep 2:  First, we can express $12,500,000$ as $12,499,999+1$, where $12,499,999$ is divisible by $999,999,999$.\nStep 3:  When we multiply $12,499,999+1$ by $n$, we can use the distributive property to expand the expression.\nStep 4:  This gives us $12,499,999n + n$, which is still equivalent to $(12,500,000)n$.\nStep 5:  We want the remainder of this expression when divided by $999,999,999$, so we can focus on the term $n$.\nStep 6:  Our goal is to find the smallest value of $n$ that satisfies this condition.\nStep 7:  This leads us to the equation $999,999,999n \\equiv 111 \\pmod{999,999,999}$.\n\nThe final answer is"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We want to find the smallest positive integer $n$ such that $(12,500,000) \\cdot n$ leaves a remainder of $111$ when divided by $999,999,999$.\nStep 2:  First, we can express $12,500,000$ as $12,499,999+1$, where $12,499,999$ is divisible by $999,999,999$.\nStep 3:  When we multiply $12,499,999+1$ by $n$, we can use the distributive property to expand the expression.\nStep 4:  This gives us $12,499,999n + n$, which is still equivalent to $(12,500,000)n$.\nStep 5:  We want the remainder of this expression when divided by $999,999,999$, so we can focus on the term $n$.\nStep 6:  Our goal is to find the smallest value of $n$ that satisfies this condition.\nStep 7:  This leads us to the equation $999,999,999n \\equiv 111 \\pmod{999,999,999}$.\n\nThe final answer is",
+            1
+        ]
+    ],
+    "time": 13.899296045303345,
+    "total_tokens": 702,
+    "final_answer_tokens": 333,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,66 @@
+{
+    "problem": "In $\\triangle ABC$ we have $AB=7$, $AC=8$, and $BC=9$. Point $D$ is on the circumscribed circle of the triangle so that $\\overline{AD}$ bisects $\\angle BAC$. What is the value of $AD/CD$?",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "Suppose that $AD$ and $BC$ intersect at $E$.\n\n[asy]\npair A,B,C,D,I;\nA=(-9,-4.36);\nB=(-7,7.14);\nC=(8,-6);\nD=(7.5,6.61);\nI=(2.7,3);\ndraw(Circle((0,0),10));\ndraw(A--B--C--cycle,linewidth(0.7));\ndraw(B--D--C);\ndraw(A--D);\nlabel(\"$E$\",I,S);\nlabel(\"$B$\",B,N);\nlabel(\"$D$\",D,NE);\nlabel(\"$C$\",C,E);\nlabel(\"$A$\",A,SW);\n[/asy]\n\nSince $\\angle ADC$ and $\\angle ABC$ cut the same arc of the circumscribed circle, the Inscribed Angle Theorem implies that \\[\n\\angle ABC= \\angle ADC.\n\\]Also, $ \\angle EAB = \\angle CAD$, so $\\triangle ABE$ is similar to $\\triangle ADC$, and \\[\n\\frac{AD}{CD} = \\frac{AB}{BE}.\n\\]By the Angle Bisector Theorem, \\[\n\\frac{BE}{EC} = \\frac{AB}{AC},\n\\]so \\[\nBE = \\frac{AB}{AC} \\cdot EC = \\frac{AB}{AC}(BC - BE)\n\\quad\\text{and}\\quad BE = \\frac{AB\\cdot BC}{AB+AC}.\n\\]Hence \\[\n\\frac{AD}{CD} = \\frac{AB}{BE} = \\frac{AB+AC}{BC} =\n\\frac{7+8}{9} = \\boxed{\\frac{5}{3}}.\n\\]",
+    "is_solved": false,
+    "model_solution": "Step 1: Draw the diagram of $\\triangle ABC$ with the given side lengths and the point $D$ on the circumscribed circle, with $\\overline{AD}$ bisecting $\\angle BAC$.\nStep 2: Apply the Angle Bisector Theorem to $\\triangle ABC$ with the angle bisector $\\overline{AD}$ to find the relationship between the lengths $AB$, $AC$, and $BD$, $CD$.\nStep 3: Use the Law of Cosines on $\\triangle ABC$ to find the measure of $\\angle BAC$ and then use the fact that the bisector of $\\angle BAC$ divides the opposite side into segments proportional to the adjacent sides to find the relationship between $BD$ and $CD$.\nStep 4: Apply the Power of a Point Theorem to point $D$ to find the relationship between the lengths $AD$ and $CD$.\nStep 5: Use the relationship between $BD$ and $CD$ from Step 3 to find the value of $AD/CD$ using the equation from Step 4.\nStep 2: $\\dfrac{BD}{CD}=\\dfrac{AB}{AC}=\\dfrac{7}{8}$\nStep 3: $\\dfrac{BD}{CD}=\\dfrac{AB}{AC}=\\cos A=\\dfrac{7}{9\\cos B}$\nStep 4: $\\dfrac{AD^2}{CD^2}=\\dfrac{AB^2+BD^2}{CD^2}=\\dfrac{AB^2+\\left(\\dfrac{7}{8}CD\\right)^2}{CD^2}$\nStep 5: $\\dfrac{AD^2}{CD^2}=\\dfrac{49}{CD^2}+\\dfrac{49}{64}=\\dfrac{49}{CD^2}\\left(1+\\dfrac{49}{64}\\right)=\\dfrac{49}{CD^2}\\cdot\\dfrac{113}{64} \\implies AD^2=\\dfrac{49\\cdot113}{64}CD^2 \\implies AD/CD=\\sqrt{\\dfrac{49\\cdot113}{64}}=\\sqrt{\\dfrac{49\\cdot113}{64}}=\\sqrt{\\dfrac{49}{64}\\cdot113}$\nStep 6: $\\dfrac{AD}{CD}=\\dfrac{7}{8}\\sqrt{113}$",
+    "steps": [
+        "Step 1: Draw the diagram of $\\triangle ABC$ with the given side lengths and the point $D$ on the circumscribed circle, with $\\overline{AD}$ bisecting $\\angle BAC$.",
+        "Step 2: Apply the Angle Bisector Theorem to $\\triangle ABC$ with the angle bisector $\\overline{AD}$ to find the relationship between the lengths $AB$, $AC$, and $BD$, $CD$.",
+        "Step 3: Use the Law of Cosines on $\\triangle ABC$ to find the measure of $\\angle BAC$ and then use the fact that the bisector of $\\angle BAC$ divides the opposite side into segments proportional to the adjacent sides to find the relationship between $BD$ and $CD$.",
+        "Step 4: Apply the Power of a Point Theorem to point $D$ to find the relationship between the lengths $AD$ and $CD$.",
+        "Step 5: Use the relationship between $BD$ and $CD$ from Step 3 to find the value of $AD/CD$ using the equation from Step 4.",
+        "Step 2: $\\dfrac{BD}{CD}=\\dfrac{AB}{AC}=\\dfrac{7}{8}$",
+        "Step 3: $\\dfrac{BD}{CD}=\\dfrac{AB}{AC}=\\cos A=\\dfrac{7}{9\\cos B}$",
+        "Step 4: $\\dfrac{AD^2}{CD^2}=\\dfrac{AB^2+BD^2}{CD^2}=\\dfrac{AB^2+\\left(\\dfrac{7}{8}CD\\right)^2}{CD^2}$",
+        "Step 5: $\\dfrac{AD^2}{CD^2}=\\dfrac{49}{CD^2}+\\dfrac{49}{64}=\\dfrac{49}{CD^2}\\left(1+\\dfrac{49}{64}\\right)=\\dfrac{49}{CD^2}\\cdot\\dfrac{113}{64} \\implies AD^2=\\dfrac{49\\cdot113}{64}CD^2 \\implies AD/CD=\\sqrt{\\dfrac{49\\cdot113}{64}}=\\sqrt{\\dfrac{49\\cdot113}{64}}=\\sqrt{\\dfrac{49}{64}\\cdot113}$",
+        "Step 6: $\\dfrac{AD}{CD}=\\dfrac{7}{8}\\sqrt{113}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Draw the diagram of $\\triangle ABC$ with the given side lengths and the point $D$ on the circumscribed circle, with $\\overline{AD}$ bisecting $\\angle BAC$.",
+            1
+        ],
+        [
+            "Step 2: Apply the Angle Bisector Theorem to $\\triangle ABC$ with the angle bisector $\\overline{AD}$ to find the relationship between the lengths $AB$, $AC$, and $BD$, $CD$.",
+            1
+        ],
+        [
+            "Step 3: Use the Law of Cosines on $\\triangle ABC$ to find the measure of $\\angle BAC$ and then use the fact that the bisector of $\\angle BAC$ divides the opposite side into segments proportional to the adjacent sides to find the relationship between $BD$ and $CD$.",
+            1
+        ],
+        [
+            "Step 4: Apply the Power of a Point Theorem to point $D$ to find the relationship between the lengths $AD$ and $CD$.",
+            1
+        ],
+        [
+            "Step 5: Use the relationship between $BD$ and $CD$ from Step 3 to find the value of $AD/CD$ using the equation from Step 4.",
+            1
+        ],
+        [
+            "Step 2: $\\dfrac{BD}{CD}=\\dfrac{AB}{AC}=\\dfrac{7}{8}$",
+            1
+        ],
+        [
+            "Step 3: $\\dfrac{BD}{CD}=\\dfrac{AB}{AC}=\\cos A=\\dfrac{7}{9\\cos B}$",
+            1
+        ],
+        [
+            "Step 4: $\\dfrac{AD^2}{CD^2}=\\dfrac{AB^2+BD^2}{CD^2}=\\dfrac{AB^2+\\left(\\dfrac{7}{8}CD\\right)^2}{CD^2}$",
+            1
+        ],
+        [
+            "Step 5: $\\dfrac{AD^2}{CD^2}=\\dfrac{49}{CD^2}+\\dfrac{49}{64}=\\dfrac{49}{CD^2}\\left(1+\\dfrac{49}{64}\\right)=\\dfrac{49}{CD^2}\\cdot\\dfrac{113}{64} \\implies AD^2=\\dfrac{49\\cdot113}{64}CD^2 \\implies AD/CD=\\sqrt{\\dfrac{49\\cdot113}{64}}=\\sqrt{\\dfrac{49\\cdot113}{64}}=\\sqrt{\\dfrac{49}{64}\\cdot113}$",
+            1
+        ],
+        [
+            "Step 6: $\\dfrac{AD}{CD}=\\dfrac{7}{8}\\sqrt{113}$",
+            1
+        ]
+    ],
+    "time": 138.71396160125732,
+    "total_tokens": 7782,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

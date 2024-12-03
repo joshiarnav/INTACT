@@ -1,0 +1,51 @@
+{
+    "problem": "Simplify\n\\[4 \\sin x \\sin (60^\\circ - x) \\sin (60^\\circ + x).\\]The answer will be a trigonometric function of some simple function of $x,$ like \"$\\cos (2x)$\" or \"$\\sin (x^3)$\".",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "By product-to-sum,\n\\begin{align*}\n4 \\sin x \\sin (60^\\circ - x) \\sin (60^\\circ + x) &= 4 \\sin x \\cdot \\frac{1}{2} (\\cos 2x - \\cos 120^\\circ) \\\\\n&= 2 \\sin x \\left( \\cos 2x + \\frac{1}{2} \\right) \\\\\n&= 2 \\sin x \\cos 2x + \\sin x.\n\\end{align*}Again by product-to-sum,\n\\begin{align*}\n2 \\sin x \\cos 2x + \\sin x &= \\sin 3x + \\sin (-x) + \\sin x \\\\\n&= \\boxed{\\sin 3x}.\n\\end{align*}",
+    "is_solved": true,
+    "model_solution": "Step 1: Use the product-to-sum identity\n\\[\\sin a \\sin b = \\frac{1}{2} \\left[ \\cos (a - b) - \\cos (a + b) \\right].\\]\nSet $a = 60^\\circ - x$ and $b = x.$\nStep 2: \n\\begin{align*}\n4 \\sin x \\sin (60^\\circ - x) \\sin (60^\\circ + x) &= 2 \\sin x \\sin (60^\\circ - x) 2 \\sin x \\sin (60^\\circ + x) \\\\\n&= 2 \\left[ \\frac{1}{2} \\left( \\cos (60^\\circ - 2x) - \\cos (60^\\circ) \\right) \\right] 2 \\left[ \\frac{1}{2} \\left( \\cos (120^\\circ) - \\cos 2x \\right) \\right] \\\\\n&= \\left( \\cos (60^\\circ - 2x) - \\cos (60^\\circ) \\right) \\left( \\cos (120^\\circ) - \\cos 2x \\right) \\\\\n&= \\left( \\cos (60^\\circ - 2x) - \\frac{1}{2} \\right) \\left( -\\frac{1}{2} - \\cos 2x \\right).\n\\end{align*}\n\\begin{align*}\n\\left( \\cos (60^\\circ - 2x) - \\frac{1}{2} \\right) \\left( -\\frac{1}{2} - \\cos 2x \\right) &= \\frac{1}{4} - \\frac{\\cos (60^\\circ - 2x)}{2} - \\frac{\\cos 2x}{2} - \\frac{1}{4} \\cos 2x + \\frac{1}{4} \\cos (60^\\circ - 2x) \\\\\n&= \\frac{1}{2} \\left[ \\cos (60^\\circ - 2x) + \\cos 2x \\right] - \\frac{1}{2} \\left[ \\cos 2x + \\cos (60^\\circ - 2x) \\right] \\\\\n&= \\frac{1}{2} \\left[ \\cos (60^\\circ - 2x) + \\cos 2x \\right] - \\frac{1}{2} \\left[ \\cos (2x - 60^\\circ) + \\cos (2x + 60^\\circ)\nUsing the sum-to-product identity\n\\[\\cos a + \\cos b = 2 \\cos \\left(\\frac{a + b}{2}\\right) \\cos \\left(\\frac{a - b}{2}\\right)\\]\nset $a = 60^\\circ - 2x$ and $b = 2x.$\n\\begin{align*}\n\\frac{1}{2} \\left[ \\cos (60^\\circ - 2x) + \\cos 2x \\right] - \\frac{1}{2} \\left[ \\cos (2x - 60^\\circ) + \\cos (2x + 60^\\circ) \\right] &= \\frac{1}{2} \\left[ 2 \\cos \\left(\\frac{60^\\circ - 2x + 2x}{2}\\right) \\cos \\left(\\frac{60^\\circ - 2x - 2x}{2}\\right) \\right] \\\\\n&\\quad - \\frac{1}{2} \\left[ 2 \\cos \\left(\\frac{2x - 60^\\circ + 2x}{2}\\right) \\cos \\left(\\frac{2x - 60^\\circ - 2x}{2}\\right) \\right] \\\\\n&= \\cos 30^\\circ \\cos (-x) - \\cos x \\cos 90^\\circ \\\\\n&= \\cos 30^\\circ \\cos x - 0 \\\\\n&= \\frac{\\sqrt{3}}\n\\begin{align*}\n\\frac{\\sqrt{3}}{2} \\cos x &= \\boxed{\\frac{\\sqrt{3}}{4} (2 \\cos x)} \\\\\nFinal Answer: The final answer is \\frac{\\sqrt{3}}{2} \\cos x.",
+    "steps": [
+        "Step 1: Use the product-to-sum identity\n\\[\\sin a \\sin b = \\frac{1}{2} \\left[ \\cos (a - b) - \\cos (a + b) \\right].\\]\nSet $a = 60^\\circ - x$ and $b = x.$",
+        "Step 2: \n\\begin{align*}\n4 \\sin x \\sin (60^\\circ - x) \\sin (60^\\circ + x) &= 2 \\sin x \\sin (60^\\circ - x) 2 \\sin x \\sin (60^\\circ + x) \\\\\n&= 2 \\left[ \\frac{1}{2} \\left( \\cos (60^\\circ - 2x) - \\cos (60^\\circ) \\right) \\right] 2 \\left[ \\frac{1}{2} \\left( \\cos (120^\\circ) - \\cos 2x \\right) \\right] \\\\\n&= \\left( \\cos (60^\\circ - 2x) - \\cos (60^\\circ) \\right) \\left( \\cos (120^\\circ) - \\cos 2x \\right) \\\\\n&= \\left( \\cos (60^\\circ - 2x) - \\frac{1}{2} \\right) \\left( -\\frac{1}{2} - \\cos 2x \\right).\n\\end{align*}",
+        "\\begin{align*}\n\\left( \\cos (60^\\circ - 2x) - \\frac{1}{2} \\right) \\left( -\\frac{1}{2} - \\cos 2x \\right) &= \\frac{1}{4} - \\frac{\\cos (60^\\circ - 2x)}{2} - \\frac{\\cos 2x}{2} - \\frac{1}{4} \\cos 2x + \\frac{1}{4} \\cos (60^\\circ - 2x) \\\\\n&= \\frac{1}{2} \\left[ \\cos (60^\\circ - 2x) + \\cos 2x \\right] - \\frac{1}{2} \\left[ \\cos 2x + \\cos (60^\\circ - 2x) \\right] \\\\\n&= \\frac{1}{2} \\left[ \\cos (60^\\circ - 2x) + \\cos 2x \\right] - \\frac{1}{2} \\left[ \\cos (2x - 60^\\circ) + \\cos (2x + 60^\\circ)",
+        "Using the sum-to-product identity\n\\[\\cos a + \\cos b = 2 \\cos \\left(\\frac{a + b}{2}\\right) \\cos \\left(\\frac{a - b}{2}\\right)\\]\nset $a = 60^\\circ - 2x$ and $b = 2x.$",
+        "\\begin{align*}\n\\frac{1}{2} \\left[ \\cos (60^\\circ - 2x) + \\cos 2x \\right] - \\frac{1}{2} \\left[ \\cos (2x - 60^\\circ) + \\cos (2x + 60^\\circ) \\right] &= \\frac{1}{2} \\left[ 2 \\cos \\left(\\frac{60^\\circ - 2x + 2x}{2}\\right) \\cos \\left(\\frac{60^\\circ - 2x - 2x}{2}\\right) \\right] \\\\\n&\\quad - \\frac{1}{2} \\left[ 2 \\cos \\left(\\frac{2x - 60^\\circ + 2x}{2}\\right) \\cos \\left(\\frac{2x - 60^\\circ - 2x}{2}\\right) \\right] \\\\\n&= \\cos 30^\\circ \\cos (-x) - \\cos x \\cos 90^\\circ \\\\\n&= \\cos 30^\\circ \\cos x - 0 \\\\\n&= \\frac{\\sqrt{3}}",
+        "\\begin{align*}\n\\frac{\\sqrt{3}}{2} \\cos x &= \\boxed{\\frac{\\sqrt{3}}{4} (2 \\cos x)} \\\\",
+        "Final Answer: The final answer is \\frac{\\sqrt{3}}{2} \\cos x."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Use the product-to-sum identity\n\\[\\sin a \\sin b = \\frac{1}{2} \\left[ \\cos (a - b) - \\cos (a + b) \\right].\\]\nSet $a = 60^\\circ - x$ and $b = x.$",
+            1
+        ],
+        [
+            "Step 2: \n\\begin{align*}\n4 \\sin x \\sin (60^\\circ - x) \\sin (60^\\circ + x) &= 2 \\sin x \\sin (60^\\circ - x) 2 \\sin x \\sin (60^\\circ + x) \\\\\n&= 2 \\left[ \\frac{1}{2} \\left( \\cos (60^\\circ - 2x) - \\cos (60^\\circ) \\right) \\right] 2 \\left[ \\frac{1}{2} \\left( \\cos (120^\\circ) - \\cos 2x \\right) \\right] \\\\\n&= \\left( \\cos (60^\\circ - 2x) - \\cos (60^\\circ) \\right) \\left( \\cos (120^\\circ) - \\cos 2x \\right) \\\\\n&= \\left( \\cos (60^\\circ - 2x) - \\frac{1}{2} \\right) \\left( -\\frac{1}{2} - \\cos 2x \\right).\n\\end{align*}",
+            1
+        ],
+        [
+            "\\begin{align*}\n\\left( \\cos (60^\\circ - 2x) - \\frac{1}{2} \\right) \\left( -\\frac{1}{2} - \\cos 2x \\right) &= \\frac{1}{4} - \\frac{\\cos (60^\\circ - 2x)}{2} - \\frac{\\cos 2x}{2} - \\frac{1}{4} \\cos 2x + \\frac{1}{4} \\cos (60^\\circ - 2x) \\\\\n&= \\frac{1}{2} \\left[ \\cos (60^\\circ - 2x) + \\cos 2x \\right] - \\frac{1}{2} \\left[ \\cos 2x + \\cos (60^\\circ - 2x) \\right] \\\\\n&= \\frac{1}{2} \\left[ \\cos (60^\\circ - 2x) + \\cos 2x \\right] - \\frac{1}{2} \\left[ \\cos (2x - 60^\\circ) + \\cos (2x + 60^\\circ)",
+            1
+        ],
+        [
+            "Using the sum-to-product identity\n\\[\\cos a + \\cos b = 2 \\cos \\left(\\frac{a + b}{2}\\right) \\cos \\left(\\frac{a - b}{2}\\right)\\]\nset $a = 60^\\circ - 2x$ and $b = 2x.$",
+            1
+        ],
+        [
+            "\\begin{align*}\n\\frac{1}{2} \\left[ \\cos (60^\\circ - 2x) + \\cos 2x \\right] - \\frac{1}{2} \\left[ \\cos (2x - 60^\\circ) + \\cos (2x + 60^\\circ) \\right] &= \\frac{1}{2} \\left[ 2 \\cos \\left(\\frac{60^\\circ - 2x + 2x}{2}\\right) \\cos \\left(\\frac{60^\\circ - 2x - 2x}{2}\\right) \\right] \\\\\n&\\quad - \\frac{1}{2} \\left[ 2 \\cos \\left(\\frac{2x - 60^\\circ + 2x}{2}\\right) \\cos \\left(\\frac{2x - 60^\\circ - 2x}{2}\\right) \\right] \\\\\n&= \\cos 30^\\circ \\cos (-x) - \\cos x \\cos 90^\\circ \\\\\n&= \\cos 30^\\circ \\cos x - 0 \\\\\n&= \\frac{\\sqrt{3}}",
+            1
+        ],
+        [
+            "\\begin{align*}\n\\frac{\\sqrt{3}}{2} \\cos x &= \\boxed{\\frac{\\sqrt{3}}{4} (2 \\cos x)} \\\\",
+            1
+        ],
+        [
+            "Final Answer: The final answer is \\frac{\\sqrt{3}}{2} \\cos x.",
+            1
+        ]
+    ],
+    "time": 94.01215362548828,
+    "total_tokens": 10353,
+    "final_answer_tokens": 1060,
+    "model": "meta-llama/Llama-Vision-Free"
+}

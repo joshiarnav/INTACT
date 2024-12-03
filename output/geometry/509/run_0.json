@@ -1,0 +1,46 @@
+{
+    "problem": "The square with vertices $(-1, -1)$, $(1, -1)$, $(-1, 1)$ and $(1, 1)$ is cut by the line $y=\\frac{x}{2}+ 1$ into a triangle and a pentagon. What is the number of square units in the area of the pentagon? Express your answer as a decimal to the nearest hundredth.",
+    "level": "Level 4",
+    "type": "Geometry",
+    "solution": "Sketch the square and the line to find that the line intersects the top side and the left side of the square.  Substituting $y=1$ and $x=-1$ into the equation for the line, we find that the intersection points are (0,1) and $(-1,\\frac{1}{2})$.  The legs of the removed right triangle (shaded in the figure) measure 1 and 1/2 units, so the area of the triangle is $\\frac{1}{2}(1)\\left(\\frac{1}{2}\\right)=\\frac{1}{4}$ square units.  Since the area of the whole square is $2^2=4$ square units, the area of the pentagon is $4-\\frac{1}{4}=\\boxed{3.75}$ square units.\n\n\n[asy]\nimport graph;\nsize(200);\ndefaultpen(linewidth(0.7)+fontsize(10));\ndotfactor=4;\n\nreal f(real x)\n{\n\nreturn x/2+1;\n}\n\nxaxis(xmax=1.5,Arrows(4),above=true);\nyaxis(ymin=-1.5,Arrows(4),above=true);\n\nfill((-1,1)--(-1,1/2)--(0,1)--cycle,gray(0.7));\n\npair A=(-1,1), B=(1,1), C=(1,-1), D=(-1,-1);\npair[] dots={A,B,C,D};\nLabel[] alphabet={\"$A$\", \"$B$\", \"$C$\", shift(5,0)*\"$D$\", \"$E$\", \"$F$\"};\ndraw(A--B--C--D--cycle);\ndraw(graph(f,-1.8,1.2),Arrows(4));\nlabel(\"$y=\\frac{x}{2}+1$\",(-1.5,0.5));\n[/asy]",
+    "is_solved": true,
+    "model_solution": "Step 1:  In order to find the area of the pentagon formed by the line $y=\\frac{x}{2}+ 1$ cutting the square, we need to find the points of intersection between the line and the square's sides.\nTo determine the points of intersection, we will start by finding the $x$-coordinates of the intersections between the line and each side of the square.\nStep 2: \nFind the x-coordinates of the intersections between the line and the sides of the square. The line intersects the left side of the square at (-1, 0), the right side of the square at (1, 2), the bottom side of the square at (-4, -1), and the top side of the square at (0, 1).\nStep 3:\nFind the area of the pentagon by subtracting the area of the triangle formed by the line and the sides of the square from the area of the square.\nStep 4:\nThe area of the square is $(2)(2) = 4$ square units. The area of the triangle formed by the line and the sides of the square can be found using the formula for the area of a triangle, which is $\\frac{1}{2}bh$. The base of the triangle is the horizontal distance between the points $(-4,-1)$ and $(0,1)$, which is $4$. The height of the triangle is the vertical distance between the point $(0,1)$ and the line $y=\\frac{x}{2}+ 1$, which is $0$. However, the base of the triangle is actually the horizontal distance between the points $(-4,-1)$ and $(0,1)$ and the x-coordinate where the line intersects the top side of the square, which is 0. The height of the triangle is the vertical distance between the point (0,1) and the line $y=\\frac{x}{2}+ 1$, which is 1. The area of the triangle is $\\frac{1}{2}(2)(1) = 1$ square unit. The area of the pentagon is $4 - 1 =\nThe area of the pentagon is $4 - 1 = 3$ square units.\nThe area of the pentagon is $4 - 1 = 3$ square units.",
+    "steps": [
+        "Step 1:  In order to find the area of the pentagon formed by the line $y=\\frac{x}{2}+ 1$ cutting the square, we need to find the points of intersection between the line and the square's sides.\nTo determine the points of intersection, we will start by finding the $x$-coordinates of the intersections between the line and each side of the square.",
+        "Step 2: \nFind the x-coordinates of the intersections between the line and the sides of the square. The line intersects the left side of the square at (-1, 0), the right side of the square at (1, 2), the bottom side of the square at (-4, -1), and the top side of the square at (0, 1).",
+        "Step 3:\nFind the area of the pentagon by subtracting the area of the triangle formed by the line and the sides of the square from the area of the square.",
+        "Step 4:\nThe area of the square is $(2)(2) = 4$ square units. The area of the triangle formed by the line and the sides of the square can be found using the formula for the area of a triangle, which is $\\frac{1}{2}bh$. The base of the triangle is the horizontal distance between the points $(-4,-1)$ and $(0,1)$, which is $4$. The height of the triangle is the vertical distance between the point $(0,1)$ and the line $y=\\frac{x}{2}+ 1$, which is $0$. However, the base of the triangle is actually the horizontal distance between the points $(-4,-1)$ and $(0,1)$ and the x-coordinate where the line intersects the top side of the square, which is 0. The height of the triangle is the vertical distance between the point (0,1) and the line $y=\\frac{x}{2}+ 1$, which is 1. The area of the triangle is $\\frac{1}{2}(2)(1) = 1$ square unit. The area of the pentagon is $4 - 1 =",
+        "The area of the pentagon is $4 - 1 = 3$ square units.",
+        "The area of the pentagon is $4 - 1 = 3$ square units."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  In order to find the area of the pentagon formed by the line $y=\\frac{x}{2}+ 1$ cutting the square, we need to find the points of intersection between the line and the square's sides.\nTo determine the points of intersection, we will start by finding the $x$-coordinates of the intersections between the line and each side of the square.",
+            1
+        ],
+        [
+            "Step 2: \nFind the x-coordinates of the intersections between the line and the sides of the square. The line intersects the left side of the square at (-1, 0), the right side of the square at (1, 2), the bottom side of the square at (-4, -1), and the top side of the square at (0, 1).",
+            1
+        ],
+        [
+            "Step 3:\nFind the area of the pentagon by subtracting the area of the triangle formed by the line and the sides of the square from the area of the square.",
+            1
+        ],
+        [
+            "Step 4:\nThe area of the square is $(2)(2) = 4$ square units. The area of the triangle formed by the line and the sides of the square can be found using the formula for the area of a triangle, which is $\\frac{1}{2}bh$. The base of the triangle is the horizontal distance between the points $(-4,-1)$ and $(0,1)$, which is $4$. The height of the triangle is the vertical distance between the point $(0,1)$ and the line $y=\\frac{x}{2}+ 1$, which is $0$. However, the base of the triangle is actually the horizontal distance between the points $(-4,-1)$ and $(0,1)$ and the x-coordinate where the line intersects the top side of the square, which is 0. The height of the triangle is the vertical distance between the point (0,1) and the line $y=\\frac{x}{2}+ 1$, which is 1. The area of the triangle is $\\frac{1}{2}(2)(1) = 1$ square unit. The area of the pentagon is $4 - 1 =",
+            1
+        ],
+        [
+            "The area of the pentagon is $4 - 1 = 3$ square units.",
+            1
+        ],
+        [
+            "The area of the pentagon is $4 - 1 = 3$ square units.",
+            1
+        ]
+    ],
+    "time": 77.7772765159607,
+    "total_tokens": 5467,
+    "final_answer_tokens": 628,
+    "model": "meta-llama/Llama-Vision-Free"
+}

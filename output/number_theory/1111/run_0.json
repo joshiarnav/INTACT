@@ -1,0 +1,31 @@
+{
+    "problem": "Of all the primes in the prime factorization of \\begin{align*}\\gcd(&2^23^35^57^711^{11}13^{13}17^{17}19^{19}23^{23}, \\\\ &\\quad 2^{23}3^{19}5^{17}7^{13}11^{11}13^717^519^323^2),\\end{align*}which prime appears with largest exponent?",
+    "level": "Level 4",
+    "type": "Number Theory",
+    "solution": "The greatest common divisor of $2^a3^b5^c\\cdots$ and $2^{a'}3^{b'}5^{c'}\\cdots$ is $$2^{\\min\\{a,a'\\}}3^{\\min\\{b,b'\\}}5^{\\min\\{c,c'\\}}\\cdots.$$That is, each prime occurs with the smaller of the two exponents with which it occurs in the prime factorizations of the original two numbers.\n\nIn this case, the prime $11$ occurs with exponent $11$ in both of the original numbers, while all other primes occur with an exponent smaller than $11$ in one of the original numbers. Specifically, \\begin{align*}\n\\gcd(&2^23^35^57^711^{11}13^{13}17^{17}19^{19}23^{23},\\\\ &\\quad 2^{23}3^{19}5^{17}7^{13}11^{11}13^717^519^323^2)\n\\\\=\\ & 2^23^35^57^711^{11}13^717^519^323^2.\n\\end{align*}So, the prime with largest exponent in the $\\gcd$ is $\\boxed{11}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: Identify the exponents of each prime in each expression. \nFor the first expression, the exponents are 2, 3, 5, 7, 11, 13, 17, and 19. \nFor the second expression, the exponents are 23, 19, 17, 13, 11, 7, 5, and 2.\nStep 2: Take the smaller exponent for each prime: $2^{2}, 3^3, 5^5, 7^7, 11^{11}, 13^{13}, 17^{17}, 19^{19}$\nStep 3:\n$\\gcd(2^2, 23) = 2^2, \\gcd(3^3, 19) = 3^3, \\gcd(5^5, 17) = 5^5, \\gcd(7^7, 13) = 7^7, \\gcd(11^{11}, 11) = 11^{11}, \\gcd(13^{13}, 7) = 13^{13}, \\gcd(17^{17}, 5) = 17^{17}, \\gcd(19^{19}, 2) = 19^{19}$\nFinal Answer: The final answer is $19^{19}$.",
+    "steps": [
+        "Step 1: Identify the exponents of each prime in each expression. \nFor the first expression, the exponents are 2, 3, 5, 7, 11, 13, 17, and 19. \nFor the second expression, the exponents are 23, 19, 17, 13, 11, 7, 5, and 2.",
+        "Step 2: Take the smaller exponent for each prime: $2^{2}, 3^3, 5^5, 7^7, 11^{11}, 13^{13}, 17^{17}, 19^{19}$",
+        "Step 3:\n$\\gcd(2^2, 23) = 2^2, \\gcd(3^3, 19) = 3^3, \\gcd(5^5, 17) = 5^5, \\gcd(7^7, 13) = 7^7, \\gcd(11^{11}, 11) = 11^{11}, \\gcd(13^{13}, 7) = 13^{13}, \\gcd(17^{17}, 5) = 17^{17}, \\gcd(19^{19}, 2) = 19^{19}$\nFinal Answer: The final answer is $19^{19}$."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Identify the exponents of each prime in each expression. \nFor the first expression, the exponents are 2, 3, 5, 7, 11, 13, 17, and 19. \nFor the second expression, the exponents are 23, 19, 17, 13, 11, 7, 5, and 2.",
+            1
+        ],
+        [
+            "Step 2: Take the smaller exponent for each prime: $2^{2}, 3^3, 5^5, 7^7, 11^{11}, 13^{13}, 17^{17}, 19^{19}$",
+            1
+        ],
+        [
+            "Step 3:\n$\\gcd(2^2, 23) = 2^2, \\gcd(3^3, 19) = 3^3, \\gcd(5^5, 17) = 5^5, \\gcd(7^7, 13) = 7^7, \\gcd(11^{11}, 11) = 11^{11}, \\gcd(13^{13}, 7) = 13^{13}, \\gcd(17^{17}, 5) = 17^{17}, \\gcd(19^{19}, 2) = 19^{19}$\nFinal Answer: The final answer is $19^{19}$.",
+            1
+        ]
+    ],
+    "time": 40.28097057342529,
+    "total_tokens": 1952,
+    "final_answer_tokens": 436,
+    "model": "meta-llama/Llama-Vision-Free"
+}

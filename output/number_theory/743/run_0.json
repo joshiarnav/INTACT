@@ -1,0 +1,51 @@
+{
+    "problem": "A four-digit perfect square number is created by placing two positive two-digit perfect square numbers next to each other. What is the four-digit square number?",
+    "level": "Level 3",
+    "type": "Number Theory",
+    "solution": "Let $m^2$ and $n^2$ be the two-digit square numbers; we then have $4 \\leq m, n \\leq 9$. Putting them next to each other yields a number $100m^2 + n^2$, which must be equal to some other square $x^2$. Rearranging, we have $100m^2 = x^2 - n^2 = (x+n)(x-n)$, so the RHS contains a factor of 100. The biggest possible square is 8181, whose square root is about 90.5, and the smallest is 1616, whose square root is about 40.2, so $41 \\leq x \\leq 90$. To get the factor of 100, we have two cases:\n\n1. Both $x+n$ and $x-n$ must be multiples of 5. In fact, this means $n = 5$, $x$ is a multiple of 5, and $x-n$, $x$, and $x+n$ are consecutive multiples of 5. Trying possibilities up to $x = 85$, we see that this case doesn't work.\n\n2. One of $x+n$ and $x-n$ is a multiple of 25. Since $x+n = 25$ is impossible, the simplest possibilities are $x-n = 50$ and $x + n = 50$.  The case $x - n = 25$ implies $x + n = 4p^2$ for $(x+n)(x-n)$ to be a perfect square multiple of 100, and thus $57 \\leq 4p^2 \\leq 77$ from $41 \\leq x \\leq 90$. The only possibility is $4p^2 = 64$, which leads to non-integral $x$ and $n$. The case $x + n = 50$ requires $x -n = 2p^2$ for $(x+n)(x-n)$ to be a perfect square. To have $x \\geq 41$ we must have $x - n \\geq 32$, and in fact the lower bound works: $(50)(32) = 1600 = 40^2$. Thus $x = 41$, and $x^2 = \\boxed{1681}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: Identify the two-digit perfect square numbers: 16, 25, 36, 49, 64, and 81.\nStep 2: Combine each two-digit perfect square with the next one to see if any result in a four-digit perfect square: \n16 and 25 \n16 and 36 \n16 and 49 \n16 and 64 \n16 and 81 \n25 and 36 \n25 and 49 \n25 and 64 \n25 and 81 \n36 and 49 \n36 and 64 \n36 and 81 \n49 and 64 \n49 and 81 \n64 and 81\nStep 3: Determine which of the combinations result in a four-digit perfect square: \n25 and 36 (5625)\n49 and 64 (3169 is not a perfect square, 49 and 81 is not a four-digit number when combined in this order)\n64 and 81 (4489)\nStep 4: Check if the combinations that result in a four-digit perfect square have a square root that is an integer: \n5625 is a perfect square (75^2), \n4489 is not a perfect square.\n\n5625 is a four-digit perfect square number.\nStep 5: The square root of 5625 is 75, which is an integer.\nStep 6: The square root of 5625 is 75, which is an integer.\nStep 7: Final Answer",
+    "steps": [
+        "Step 1: Identify the two-digit perfect square numbers: 16, 25, 36, 49, 64, and 81.",
+        "Step 2: Combine each two-digit perfect square with the next one to see if any result in a four-digit perfect square: \n16 and 25 \n16 and 36 \n16 and 49 \n16 and 64 \n16 and 81 \n25 and 36 \n25 and 49 \n25 and 64 \n25 and 81 \n36 and 49 \n36 and 64 \n36 and 81 \n49 and 64 \n49 and 81 \n64 and 81",
+        "Step 3: Determine which of the combinations result in a four-digit perfect square: \n25 and 36 (5625)\n49 and 64 (3169 is not a perfect square, 49 and 81 is not a four-digit number when combined in this order)\n64 and 81 (4489)",
+        "Step 4: Check if the combinations that result in a four-digit perfect square have a square root that is an integer: \n5625 is a perfect square (75^2), \n4489 is not a perfect square.\n\n5625 is a four-digit perfect square number.",
+        "Step 5: The square root of 5625 is 75, which is an integer.",
+        "Step 6: The square root of 5625 is 75, which is an integer.",
+        "Step 7: Final Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Identify the two-digit perfect square numbers: 16, 25, 36, 49, 64, and 81.",
+            1
+        ],
+        [
+            "Step 2: Combine each two-digit perfect square with the next one to see if any result in a four-digit perfect square: \n16 and 25 \n16 and 36 \n16 and 49 \n16 and 64 \n16 and 81 \n25 and 36 \n25 and 49 \n25 and 64 \n25 and 81 \n36 and 49 \n36 and 64 \n36 and 81 \n49 and 64 \n49 and 81 \n64 and 81",
+            1
+        ],
+        [
+            "Step 3: Determine which of the combinations result in a four-digit perfect square: \n25 and 36 (5625)\n49 and 64 (3169 is not a perfect square, 49 and 81 is not a four-digit number when combined in this order)\n64 and 81 (4489)",
+            1
+        ],
+        [
+            "Step 4: Check if the combinations that result in a four-digit perfect square have a square root that is an integer: \n5625 is a perfect square (75^2), \n4489 is not a perfect square.\n\n5625 is a four-digit perfect square number.",
+            1
+        ],
+        [
+            "Step 5: The square root of 5625 is 75, which is an integer.",
+            1
+        ],
+        [
+            "Step 6: The square root of 5625 is 75, which is an integer.",
+            1
+        ],
+        [
+            "Step 7: Final Answer",
+            1
+        ]
+    ],
+    "time": 92.4469063282013,
+    "total_tokens": 4266,
+    "final_answer_tokens": 387,
+    "model": "meta-llama/Llama-Vision-Free"
+}

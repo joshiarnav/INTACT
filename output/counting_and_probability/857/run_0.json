@@ -1,0 +1,36 @@
+{
+    "problem": "Our physics club has $20$ members, among which we have 3 officers: President, Vice President, and Treasurer.  However, one member, Alex, hates another member, Bob.  How many ways can we fill the offices if Alex refuses to serve as an officer if Bob is also an officer? (No person is allowed to hold more than one office.)",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "The best way to approach this problem is to use complementary counting. We already know that there are $20 \\times 19 \\times 18$ ways to choose the 3 officers if we ignore the restriction about Alex and Bob.  So now we want to count the number of ways that both Alex and Bob serve as officers.\n\nFor this, we will use constructive counting.  We need to pick an office for Alex, then pick an office for Bob, then put someone in the last office.  We have 3 choices for an office for Alex, either President, VP, or Treasurer.  Once we pick an office for Alex, we have 2 offices left from which to choose an office for Bob.\n\nOnce we have both Alex and Bob installed in offices, we have 18 members left in the club to pick from for the remaining vacant office.  So there are $3 \\times 2 \\times 18$ ways to pick officers such that Alex and Bob are both in an office.  Remember that these are the cases that we want to exclude, so to finish the problem we subtract these cases from the total number of cases.  Hence the answer is: $$ (20 \\times 19 \\times 18) - (3 \\times 2 \\times 18) = ((20 \\times 19)-6) \\times 18 = 374 \\times 18 = \\boxed{6732}. $$",
+    "is_solved": true,
+    "model_solution": "Step 1: Determine the number of ways to select the officers from the 20 members with no restrictions.\nStep 2: Calculate the number of ways Alex and Bob can both be selected as officers and subtract this from the total number of ways to select officers from the 20 members with no restrictions.\nStep 2: Calculate the number of ways Alex and Bob can both be selected as officers: $3\\cdot2\\cdot1=6$ ways. Also, for these 6 ways, we must select 1 more officer from the 18 remaining members, which can be done in $18\\cdot17\\cdot16=4896$ ways. Therefore, there are $6\\cdot4896=29376$ ways Alex and Bob can both be selected as officers.\nStep 3: Calculate the total number of ways to select the officers from the 20 members with no restrictions: $20\\cdot19\\cdot18=6840$ ways. \nFinal Answer",
+    "steps": [
+        "Step 1: Determine the number of ways to select the officers from the 20 members with no restrictions.",
+        "Step 2: Calculate the number of ways Alex and Bob can both be selected as officers and subtract this from the total number of ways to select officers from the 20 members with no restrictions.",
+        "Step 2: Calculate the number of ways Alex and Bob can both be selected as officers: $3\\cdot2\\cdot1=6$ ways. Also, for these 6 ways, we must select 1 more officer from the 18 remaining members, which can be done in $18\\cdot17\\cdot16=4896$ ways. Therefore, there are $6\\cdot4896=29376$ ways Alex and Bob can both be selected as officers.",
+        "Step 3: Calculate the total number of ways to select the officers from the 20 members with no restrictions: $20\\cdot19\\cdot18=6840$ ways. \nFinal Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Determine the number of ways to select the officers from the 20 members with no restrictions.",
+            1
+        ],
+        [
+            "Step 2: Calculate the number of ways Alex and Bob can both be selected as officers and subtract this from the total number of ways to select officers from the 20 members with no restrictions.",
+            1
+        ],
+        [
+            "Step 2: Calculate the number of ways Alex and Bob can both be selected as officers: $3\\cdot2\\cdot1=6$ ways. Also, for these 6 ways, we must select 1 more officer from the 18 remaining members, which can be done in $18\\cdot17\\cdot16=4896$ ways. Therefore, there are $6\\cdot4896=29376$ ways Alex and Bob can both be selected as officers.",
+            1
+        ],
+        [
+            "Step 3: Calculate the total number of ways to select the officers from the 20 members with no restrictions: $20\\cdot19\\cdot18=6840$ ways. \nFinal Answer",
+            1
+        ]
+    ],
+    "time": 53.55509161949158,
+    "total_tokens": 1981,
+    "final_answer_tokens": 332,
+    "model": "meta-llama/Llama-Vision-Free"
+}

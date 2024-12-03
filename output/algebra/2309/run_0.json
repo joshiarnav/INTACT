@@ -1,0 +1,56 @@
+{
+    "problem": "Below is a portion of the graph of a function, $y=h(x)$:\n\n[asy]\nimport graph; size(8cm); real lsf=0.5; pen dps=linewidth(0.7)+fontsize(10); defaultpen(dps); pen ds=black; real xmin=-4.25,xmax=4.25,ymin=-7.25,ymax=6.25;\n\npen cqcqcq=rgb(0.75,0.75,0.75);\n\n/*grid*/ pen gs=linewidth(0.7)+cqcqcq+linetype(\"2 2\"); real gx=1,gy=1;\nfor(real i=ceil(xmin/gx)*gx;i<=floor(xmax/gx)*gx;i+=gx) draw((i,ymin)--(i,ymax),gs); for(real i=ceil(ymin/gy)*gy;i<=floor(ymax/gy)*gy;i+=gy) draw((xmin,i)--(xmax,i),gs);\n\nLabel laxis; laxis.p=fontsize(10);\n\nxaxis(\"\",xmin,xmax,Ticks(laxis,Step=1.0,Size=2,NoZero),Arrows(6),above=true); yaxis(\"\",ymin,ymax,Ticks(laxis,Step=1.0,Size=2,NoZero),Arrows(6),above=true);\nreal f1(real x){return 4.125-(x+0.5)^2/2;}\ndraw(graph(f1,-4.25,4.25),linewidth(1));\nclip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle);\nlabel(\"$y=h(x)$\",(4.5,-6),E);\n[/asy]\n\nIf the graph of $y=h(x-3)$ is drawn on the same set of axes as the graph above, then the two graphs intersect at one point. What is the sum of the coordinates of that point?",
+    "level": "Level 5",
+    "type": "Algebra",
+    "solution": "If the graphs intersect at $(a,b)$, then we have $$h(a) = h(a-3) \\qquad(= b).$$Thus, $(a,b)$ and $(a-3,b)$ are both on the original graph of $y=h(x)$. Looking for two points on the original graph which are separated by $3$ units horizontally, we find $(-2,3)$ and $(1,3)$. Thus $a-3=-2,$ $a=1,$ and $b=3;$ the graphs of $y=h(x)$ and $y=h(x-3)$ intersect at $(1,3),$ the sum of whose coordinates is $\\boxed{4}$.",
+    "is_solved": true,
+    "model_solution": "Step 1:  The problem provides a graph of a function $y=h(x)$ and asks for the sum of the coordinates of the point of intersection between this graph and the graph of $y=h(x-3)$.\nStep 2:  To find the point of intersection, we need to determine the values of $x$ and $y$ where the two graphs meet.\nStep 3:  The function $y=h(x-3)$ represents the original function $h(x)$ shifted three units to the right.\nStep 4:  Therefore, the two graphs will intersect at points where the original graph has the same $y$-value as the shifted graph.\n\n```python\nimport sympy as sp\nStep 2:\nStep 3:\nLet $(a,b)$ be the point of intersection. Then we know that $h(a) = b$ and $h(a-3) = b.$\nStep 4:\n$a = a - 3$\nStep 5:\nWe can now solve the equation $h(a) = h(a-3)$.\n\n```python\nStep 6: \na = 3\nStep 7:\nLet $(a,b)$ be the point of intersection. Then we know that $h(a) = b$ and $h(a-3) = b.$ So, $h(a) = h(a-3)$. We also know that $a = a - 3$. This implies that $h(a) =  h(0)$ and $a = 3$.\n\n```python\nStep 8:\nFrom the graph of $h(x)$, we can determine that $h(0) = 3.$ Therefore, the point of intersection is $(3,3).$\nFinal Answer: The final answer is 6.",
+    "steps": [
+        "Step 1:  The problem provides a graph of a function $y=h(x)$ and asks for the sum of the coordinates of the point of intersection between this graph and the graph of $y=h(x-3)$.\nStep 2:  To find the point of intersection, we need to determine the values of $x$ and $y$ where the two graphs meet.\nStep 3:  The function $y=h(x-3)$ represents the original function $h(x)$ shifted three units to the right.\nStep 4:  Therefore, the two graphs will intersect at points where the original graph has the same $y$-value as the shifted graph.\n\n```python\nimport sympy as sp",
+        "Step 2:",
+        "Step 3:\nLet $(a,b)$ be the point of intersection. Then we know that $h(a) = b$ and $h(a-3) = b.$",
+        "Step 4:\n$a = a - 3$",
+        "Step 5:\nWe can now solve the equation $h(a) = h(a-3)$.\n\n```python",
+        "Step 6: \na = 3",
+        "Step 7:\nLet $(a,b)$ be the point of intersection. Then we know that $h(a) = b$ and $h(a-3) = b.$ So, $h(a) = h(a-3)$. We also know that $a = a - 3$. This implies that $h(a) =  h(0)$ and $a = 3$.\n\n```python",
+        "Step 8:\nFrom the graph of $h(x)$, we can determine that $h(0) = 3.$ Therefore, the point of intersection is $(3,3).$\nFinal Answer: The final answer is 6."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  The problem provides a graph of a function $y=h(x)$ and asks for the sum of the coordinates of the point of intersection between this graph and the graph of $y=h(x-3)$.\nStep 2:  To find the point of intersection, we need to determine the values of $x$ and $y$ where the two graphs meet.\nStep 3:  The function $y=h(x-3)$ represents the original function $h(x)$ shifted three units to the right.\nStep 4:  Therefore, the two graphs will intersect at points where the original graph has the same $y$-value as the shifted graph.\n\n```python\nimport sympy as sp",
+            1
+        ],
+        [
+            "Step 2:",
+            1
+        ],
+        [
+            "Step 3:\nLet $(a,b)$ be the point of intersection. Then we know that $h(a) = b$ and $h(a-3) = b.$",
+            1
+        ],
+        [
+            "Step 4:\n$a = a - 3$",
+            1
+        ],
+        [
+            "Step 5:\nWe can now solve the equation $h(a) = h(a-3)$.\n\n```python",
+            1
+        ],
+        [
+            "Step 6: \na = 3",
+            1
+        ],
+        [
+            "Step 7:\nLet $(a,b)$ be the point of intersection. Then we know that $h(a) = b$ and $h(a-3) = b.$ So, $h(a) = h(a-3)$. We also know that $a = a - 3$. This implies that $h(a) =  h(0)$ and $a = 3$.\n\n```python",
+            1
+        ],
+        [
+            "Step 8:\nFrom the graph of $h(x)$, we can determine that $h(0) = 3.$ Therefore, the point of intersection is $(3,3).$\nFinal Answer: The final answer is 6.",
+            1
+        ]
+    ],
+    "time": 108.49433898925781,
+    "total_tokens": 11196,
+    "final_answer_tokens": 833,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,41 @@
+{
+    "problem": "What is the sum of all integer values $n$ for which $\\binom{26}{13}+\\binom{26}{n}=\\binom{27}{14}$?",
+    "level": "Level 3",
+    "type": "Counting & Probability",
+    "solution": "From Pascal's identity $\\binom{n-1}{k-1}+\\binom{n-1}{k}=\\binom{n}{k}$.\n\nTherefore, we have $\\binom{26}{13}+\\binom{26}{14}=\\binom{27}{14}$, so $n=14$.\n\nWe know that $\\binom{27}{14}=\\binom{27}{27-14}=\\binom{27}{13}$.\n\nWe use Pascal's identity again to get $\\binom{26}{13}+\\binom{26}{12}=\\binom{27}{13}$, so $n=12$.\n\nThere are two values for $n$, $12$ and $14$, so the sum is $12+14=\\boxed{26}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: Pascal's identity states that $\\binom{n}{k}+\\binom{n}{k-1}=\\binom{n+1}{k}$ for all nonnegative integers $n$ and $k$ where $0<k<n$.\n$\\binom{27}{14}=\\binom{26}{14}+\\binom{26}{13}$\nStep 2: $\\binom{27}{14}=\\binom{26}{14}+\\binom{26}{13}$, so $\\binom{26}{13}+\\binom{26}{n}=\\binom{26}{14}+\\binom{26}{13}$\nStep 3: $\\binom{26}{13}+\\binom{26}{n}=\\binom{26}{14}+\\binom{26}{13}$, so $\\binom{26}{n}=\\binom{26}{14}$\nSince $\\binom{26}{n}=\\binom{26}{14}$, we have $n=14$ or $n=12$, because $\\binom{n}{k}=\\binom{n}{n-k}$.\nStep 4:\nThe final answer is: $\\boxed{26}$",
+    "steps": [
+        "Step 1: Pascal's identity states that $\\binom{n}{k}+\\binom{n}{k-1}=\\binom{n+1}{k}$ for all nonnegative integers $n$ and $k$ where $0<k<n$.\n$\\binom{27}{14}=\\binom{26}{14}+\\binom{26}{13}$",
+        "Step 2: $\\binom{27}{14}=\\binom{26}{14}+\\binom{26}{13}$, so $\\binom{26}{13}+\\binom{26}{n}=\\binom{26}{14}+\\binom{26}{13}$",
+        "Step 3: $\\binom{26}{13}+\\binom{26}{n}=\\binom{26}{14}+\\binom{26}{13}$, so $\\binom{26}{n}=\\binom{26}{14}$",
+        "Since $\\binom{26}{n}=\\binom{26}{14}$, we have $n=14$ or $n=12$, because $\\binom{n}{k}=\\binom{n}{n-k}$.",
+        "Step 4:\nThe final answer is: $\\boxed{26}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Pascal's identity states that $\\binom{n}{k}+\\binom{n}{k-1}=\\binom{n+1}{k}$ for all nonnegative integers $n$ and $k$ where $0<k<n$.\n$\\binom{27}{14}=\\binom{26}{14}+\\binom{26}{13}$",
+            1
+        ],
+        [
+            "Step 2: $\\binom{27}{14}=\\binom{26}{14}+\\binom{26}{13}$, so $\\binom{26}{13}+\\binom{26}{n}=\\binom{26}{14}+\\binom{26}{13}$",
+            1
+        ],
+        [
+            "Step 3: $\\binom{26}{13}+\\binom{26}{n}=\\binom{26}{14}+\\binom{26}{13}$, so $\\binom{26}{n}=\\binom{26}{14}$",
+            1
+        ],
+        [
+            "Since $\\binom{26}{n}=\\binom{26}{14}$, we have $n=14$ or $n=12$, because $\\binom{n}{k}=\\binom{n}{n-k}$.",
+            1
+        ],
+        [
+            "Step 4:\nThe final answer is: $\\boxed{26}$",
+            1
+        ]
+    ],
+    "time": 67.25536370277405,
+    "total_tokens": 2848,
+    "final_answer_tokens": 354,
+    "model": "meta-llama/Llama-Vision-Free"
+}

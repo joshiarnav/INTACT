@@ -1,0 +1,66 @@
+{
+    "problem": "A 12-slice pizza was made with only pepperoni and mushroom toppings, and every slice has at least one topping. Only five slices have pepperoni, and exactly eight slices have mushrooms. How many slices have both pepperoni and mushrooms?",
+    "level": "Level 1",
+    "type": "Counting & Probability",
+    "solution": "There are 12 total slices, and 5 of them have pepperoni and 8 have mushrooms. Let $n$ be the number that have both toppings. So, there are $5-n$ slices with only pepperoni and $8-n$ with only mushrooms.  So, there are a total of $n + (5-n) + (8-n)$ slices.  Since there are 12 slices, we have $(5-n) + (8-n) + n = 12$, from which we find that $n=\\boxed{1}$.",
+    "is_solved": false,
+    "model_solution": "Let P be the set of slices with pepperoni and M be the set of slices with mushrooms. \n\n|P| = 5 \n|M| = 8 \n|P \u222a M| = 12\nUsing the inclusion-exclusion principle: |P \u222a M| = |P| + |M| - |P \u2229 M|\n12 = 5 + 8 - |P \u2229 M|\n|P \u2229 M| = 3\n|P \u2229 M| = 3, so the number of slices with only pepperoni is |P| - |P \u2229 M| = 5 - 3 = 2.\nThe number of slices with only mushrooms is |M| - |P \u2229 M| = 8 - 3 = 5.\nThe total number of slices is the sum of the slices with only pepperoni, only mushrooms, and both toppings.\nThe total number of slices is the sum of the slices with only pepperoni, only mushrooms, and both toppings: 2 + 5 + 3 =\n2 + 5 + 3 = 10\nFinal Answer: 10",
+    "steps": [
+        "Let P be the set of slices with pepperoni and M be the set of slices with mushrooms. \n\n|P| = 5 \n|M| = 8 \n|P \u222a M| = 12",
+        "Using the inclusion-exclusion principle: |P \u222a M| = |P| + |M| - |P \u2229 M|",
+        "12 = 5 + 8 - |P \u2229 M|",
+        "|P \u2229 M| = 3",
+        "|P \u2229 M| = 3, so the number of slices with only pepperoni is |P| - |P \u2229 M| = 5 - 3 = 2.",
+        "The number of slices with only mushrooms is |M| - |P \u2229 M| = 8 - 3 = 5.",
+        "The total number of slices is the sum of the slices with only pepperoni, only mushrooms, and both toppings.",
+        "The total number of slices is the sum of the slices with only pepperoni, only mushrooms, and both toppings: 2 + 5 + 3 =",
+        "2 + 5 + 3 = 10",
+        "Final Answer: 10"
+    ],
+    "full_steps": [
+        [
+            "Let P be the set of slices with pepperoni and M be the set of slices with mushrooms. \n\n|P| = 5 \n|M| = 8 \n|P \u222a M| = 12",
+            1
+        ],
+        [
+            "Using the inclusion-exclusion principle: |P \u222a M| = |P| + |M| - |P \u2229 M|",
+            1
+        ],
+        [
+            "12 = 5 + 8 - |P \u2229 M|",
+            1
+        ],
+        [
+            "|P \u2229 M| = 3",
+            1
+        ],
+        [
+            "|P \u2229 M| = 3, so the number of slices with only pepperoni is |P| - |P \u2229 M| = 5 - 3 = 2.",
+            1
+        ],
+        [
+            "The number of slices with only mushrooms is |M| - |P \u2229 M| = 8 - 3 = 5.",
+            1
+        ],
+        [
+            "The total number of slices is the sum of the slices with only pepperoni, only mushrooms, and both toppings.",
+            1
+        ],
+        [
+            "The total number of slices is the sum of the slices with only pepperoni, only mushrooms, and both toppings: 2 + 5 + 3 =",
+            1
+        ],
+        [
+            "2 + 5 + 3 = 10",
+            1
+        ],
+        [
+            "Final Answer: 10",
+            1
+        ]
+    ],
+    "time": 137.94243621826172,
+    "total_tokens": 5209,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

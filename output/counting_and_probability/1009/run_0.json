@@ -1,0 +1,46 @@
+{
+    "problem": "Pat is to select six cookies from a tray containing only chocolate chip, oatmeal, and peanut butter cookies. There are at least six of each of these three kinds of cookies on the tray. How many different assortments of six cookies can be selected? (Note that cookies of the same type are not distinguishable.)",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "The numbers of the three types of cookies must have a sum of six. Possible sets of whole numbers whose sum is six are \\[\n0,0,6;\\ 0,1,5;\\ 0,2,4;\\ 0,3,3;\\ 1,1,4;\\ 1,2,3;\\ \\ \\text{and}\\ 2,2,2.\n\\]Every ordering of each of these sets determines a different assortment of cookies. There are 3 orders for each of the sets \\[\n0,0,6;\\ 0,3,3;\\ \\text{and}\\ 1,1,4.\n\\]There are 6 orders for each of the sets \\[\n0,1,5;\\ 0,2,4;\\ \\text{and}\\ 1,2,3.\n\\]There is only one order for $2,2,2$. Therefore the total number of assortments of six cookies is $3\\cdot 3 + 3\\cdot 6 + 1 = \\boxed{28}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: Determine the types of cookies that can be selected, which are chocolate chip, oatmeal, and peanut butter cookies.\n\nWe will use stars and bars to represent the cookies. \nLet's use stars (*) to represent individual cookies and bars (|) to separate the different types of cookies.\nFor example, we can represent 2 chocolate chip cookies, 2 oatmeal cookies, and 2 peanut butter cookies as follows: * * | * * | * * \n\nTo find the number of ways to select the six cookies, we need to find the number of ways to arrange 6 stars and 2 bars, since each bar separates the different types of cookies.\nStep 2: Use the formula for combinations with repetition (also known as \"stars and bars\") to calculate the number of ways to arrange the stars and bars, which is (n+k-1) choose (k-1), where n is the number of stars (6 cookies) and k is the number of categories (3 types of cookies).\nStep 3: (6+3-1) choose (3-1) = 8 choose 2\nStep 4: Calculate (8 choose 2) = (8*7)/(2*1) = 28\nCalculate 8 choose 2 = (8*7)/(2*1) = 28\nStep 5: The final answer is 28.",
+    "steps": [
+        "Step 1: Determine the types of cookies that can be selected, which are chocolate chip, oatmeal, and peanut butter cookies.\n\nWe will use stars and bars to represent the cookies. \nLet's use stars (*) to represent individual cookies and bars (|) to separate the different types of cookies.\nFor example, we can represent 2 chocolate chip cookies, 2 oatmeal cookies, and 2 peanut butter cookies as follows: * * | * * | * * \n\nTo find the number of ways to select the six cookies, we need to find the number of ways to arrange 6 stars and 2 bars, since each bar separates the different types of cookies.",
+        "Step 2: Use the formula for combinations with repetition (also known as \"stars and bars\") to calculate the number of ways to arrange the stars and bars, which is (n+k-1) choose (k-1), where n is the number of stars (6 cookies) and k is the number of categories (3 types of cookies).",
+        "Step 3: (6+3-1) choose (3-1) = 8 choose 2",
+        "Step 4: Calculate (8 choose 2) = (8*7)/(2*1) = 28",
+        "Calculate 8 choose 2 = (8*7)/(2*1) = 28",
+        "Step 5: The final answer is 28."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Determine the types of cookies that can be selected, which are chocolate chip, oatmeal, and peanut butter cookies.\n\nWe will use stars and bars to represent the cookies. \nLet's use stars (*) to represent individual cookies and bars (|) to separate the different types of cookies.\nFor example, we can represent 2 chocolate chip cookies, 2 oatmeal cookies, and 2 peanut butter cookies as follows: * * | * * | * * \n\nTo find the number of ways to select the six cookies, we need to find the number of ways to arrange 6 stars and 2 bars, since each bar separates the different types of cookies.",
+            1
+        ],
+        [
+            "Step 2: Use the formula for combinations with repetition (also known as \"stars and bars\") to calculate the number of ways to arrange the stars and bars, which is (n+k-1) choose (k-1), where n is the number of stars (6 cookies) and k is the number of categories (3 types of cookies).",
+            1
+        ],
+        [
+            "Step 3: (6+3-1) choose (3-1) = 8 choose 2",
+            1
+        ],
+        [
+            "Step 4: Calculate (8 choose 2) = (8*7)/(2*1) = 28",
+            1
+        ],
+        [
+            "Calculate 8 choose 2 = (8*7)/(2*1) = 28",
+            1
+        ],
+        [
+            "Step 5: The final answer is 28.",
+            1
+        ]
+    ],
+    "time": 78.8701741695404,
+    "total_tokens": 4319,
+    "final_answer_tokens": 410,
+    "model": "meta-llama/Llama-Vision-Free"
+}

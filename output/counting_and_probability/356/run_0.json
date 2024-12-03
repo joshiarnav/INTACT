@@ -1,0 +1,51 @@
+{
+    "problem": "Two distinct positive integers from 1 to 50 inclusive are chosen.  Let the sum of the integers equal $S$ and the product equal $P$.  What is the probability that $P+S$ is one less than a multiple of 5?",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "There are a total of $\\binom{50}{2}=1225$ ways to choose the two positive integers.  Call these integers $a$ and $b$.  The problem asks what the probability is that: $$ab+a+b=n-1$$where $n$ is a multiple of 5.  We can add one to each side of this equation and factor: $$ab+a+b+1=(a+1)(b+1)=n$$Now, we need to count the number of values of $a$ and $b$ such that $(a+1)(b+1)$ is a multiple of 5.  This will happen if at least one of the factors is a multiple of 5, which will mean $a$ or $b$ is one less than a multiple of 5.\n\nThere are 10 integers from 1 to 50 inclusive that are 1 less than a multiple of 5: $4,9,14, \\dots, 49$.  So, the number of ways to choose $a$ and $b$ so the product is $\\textit{not}$ a multiple of 5 is $\\binom{40}{2}=780$.  Therefore, there are $1225-780=445$ ways to choose $a$ and $b$ that do satisfy the requirement, which gives a probability of: $$\\frac{445}{1225}=\\boxed{\\frac{89}{245}}$$",
+    "is_solved": true,
+    "model_solution": "Step 1:  To solve this problem, we can start by considering the total number of ways to choose two distinct positive integers from 1 to 50 inclusive.\nThe total number of ways to choose two distinct positive integers from 1 to 50 inclusive can be calculated using combinations, denoted as ${50 \\choose 2}$.\nThis can be calculated using the formula $\\frac{n(n-1)}{2}$, where $n$ is the total number of integers.\nStep 2: $\\frac{50 \\times 49}{2} = 1225.$\nStep 2: \nTo find the probability that $P+S$ is one less than a multiple of 5, we need to calculate the total number of pairs $(a,b)$ such that $ab+a+b\\equiv0\\pmod 5$. If $a\\not\\equiv b\\not\\equiv0\\pmod 5$, then we have $$ab+a+b=(a+1)(b+1)-1\\equiv0\\pmod 5.$$ We can use this congruence to determine the pairs that satisfy this condition.\nThere are $\\left \\lfloor \\frac{50}{5}\\right \\rfloor \\cdot \\left \\lfloor \\frac{50}{5}\\right \\rfloor = 10 \\cdot 10 = 100$ pairs of integers $(a,b)$ such that $a\\equiv b\\equiv0\\pmod 5$, $\\left \\lfloor \\frac{50}{5}\\right \\rfloor \\cdot \\left \\lfloor \\frac{45}{5}\\right \\rfloor = 10 \\cdot 9=90$ pairs such that $a\\equiv0\\pmod 5$ and $b\\not \\equiv 0\\pmod 5$, $\\left \\lfloor \\frac{45}{5}\\right \\rfloor \\cdot \\left \\lfloor \\frac{50}{5}\\right \\rfloor = 9 \\cdot 10 = 90$ pairs such that $a\\not \\equiv 0\\pmod 5$ and $b\\equiv 0\\pmod 5$, and $ \\left \\lfloor \\frac{45}{5}\\right \\rfloor \\cdot \\left \\lfloor \\frac{45}{5}\\\n$100 + 90 + 90 + 2025 - 45 - 45 = 2125.$\n$\\dfrac{2125}{1225} = \\dfrac{425}{245} = \\dfrac{5\\cdot85}{5\\cdot49} = \\dfrac{85}{49}$\n$\\dfrac{2125}{1225} = \\dfrac{425}{245} = \\dfrac{5\\cdot85}{5\\cdot49} = \\dfrac{85}{49}$",
+    "steps": [
+        "Step 1:  To solve this problem, we can start by considering the total number of ways to choose two distinct positive integers from 1 to 50 inclusive.\nThe total number of ways to choose two distinct positive integers from 1 to 50 inclusive can be calculated using combinations, denoted as ${50 \\choose 2}$.\nThis can be calculated using the formula $\\frac{n(n-1)}{2}$, where $n$ is the total number of integers.",
+        "Step 2: $\\frac{50 \\times 49}{2} = 1225.$",
+        "Step 2: \nTo find the probability that $P+S$ is one less than a multiple of 5, we need to calculate the total number of pairs $(a,b)$ such that $ab+a+b\\equiv0\\pmod 5$. If $a\\not\\equiv b\\not\\equiv0\\pmod 5$, then we have $$ab+a+b=(a+1)(b+1)-1\\equiv0\\pmod 5.$$ We can use this congruence to determine the pairs that satisfy this condition.",
+        "There are $\\left \\lfloor \\frac{50}{5}\\right \\rfloor \\cdot \\left \\lfloor \\frac{50}{5}\\right \\rfloor = 10 \\cdot 10 = 100$ pairs of integers $(a,b)$ such that $a\\equiv b\\equiv0\\pmod 5$, $\\left \\lfloor \\frac{50}{5}\\right \\rfloor \\cdot \\left \\lfloor \\frac{45}{5}\\right \\rfloor = 10 \\cdot 9=90$ pairs such that $a\\equiv0\\pmod 5$ and $b\\not \\equiv 0\\pmod 5$, $\\left \\lfloor \\frac{45}{5}\\right \\rfloor \\cdot \\left \\lfloor \\frac{50}{5}\\right \\rfloor = 9 \\cdot 10 = 90$ pairs such that $a\\not \\equiv 0\\pmod 5$ and $b\\equiv 0\\pmod 5$, and $ \\left \\lfloor \\frac{45}{5}\\right \\rfloor \\cdot \\left \\lfloor \\frac{45}{5}\\",
+        "$100 + 90 + 90 + 2025 - 45 - 45 = 2125.$",
+        "$\\dfrac{2125}{1225} = \\dfrac{425}{245} = \\dfrac{5\\cdot85}{5\\cdot49} = \\dfrac{85}{49}$",
+        "$\\dfrac{2125}{1225} = \\dfrac{425}{245} = \\dfrac{5\\cdot85}{5\\cdot49} = \\dfrac{85}{49}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  To solve this problem, we can start by considering the total number of ways to choose two distinct positive integers from 1 to 50 inclusive.\nThe total number of ways to choose two distinct positive integers from 1 to 50 inclusive can be calculated using combinations, denoted as ${50 \\choose 2}$.\nThis can be calculated using the formula $\\frac{n(n-1)}{2}$, where $n$ is the total number of integers.",
+            1
+        ],
+        [
+            "Step 2: $\\frac{50 \\times 49}{2} = 1225.$",
+            1
+        ],
+        [
+            "Step 2: \nTo find the probability that $P+S$ is one less than a multiple of 5, we need to calculate the total number of pairs $(a,b)$ such that $ab+a+b\\equiv0\\pmod 5$. If $a\\not\\equiv b\\not\\equiv0\\pmod 5$, then we have $$ab+a+b=(a+1)(b+1)-1\\equiv0\\pmod 5.$$ We can use this congruence to determine the pairs that satisfy this condition.",
+            1
+        ],
+        [
+            "There are $\\left \\lfloor \\frac{50}{5}\\right \\rfloor \\cdot \\left \\lfloor \\frac{50}{5}\\right \\rfloor = 10 \\cdot 10 = 100$ pairs of integers $(a,b)$ such that $a\\equiv b\\equiv0\\pmod 5$, $\\left \\lfloor \\frac{50}{5}\\right \\rfloor \\cdot \\left \\lfloor \\frac{45}{5}\\right \\rfloor = 10 \\cdot 9=90$ pairs such that $a\\equiv0\\pmod 5$ and $b\\not \\equiv 0\\pmod 5$, $\\left \\lfloor \\frac{45}{5}\\right \\rfloor \\cdot \\left \\lfloor \\frac{50}{5}\\right \\rfloor = 9 \\cdot 10 = 90$ pairs such that $a\\not \\equiv 0\\pmod 5$ and $b\\equiv 0\\pmod 5$, and $ \\left \\lfloor \\frac{45}{5}\\right \\rfloor \\cdot \\left \\lfloor \\frac{45}{5}\\",
+            1
+        ],
+        [
+            "$100 + 90 + 90 + 2025 - 45 - 45 = 2125.$",
+            1
+        ],
+        [
+            "$\\dfrac{2125}{1225} = \\dfrac{425}{245} = \\dfrac{5\\cdot85}{5\\cdot49} = \\dfrac{85}{49}$",
+            1
+        ],
+        [
+            "$\\dfrac{2125}{1225} = \\dfrac{425}{245} = \\dfrac{5\\cdot85}{5\\cdot49} = \\dfrac{85}{49}$",
+            1
+        ]
+    ],
+    "time": 95.22376537322998,
+    "total_tokens": 6780,
+    "final_answer_tokens": 704,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,36 @@
+{
+    "problem": "Let the roots of\n\\[z^3 = 2 + 2i\\]be $a_1 + ib_1,$ $a_2 + ib_2,$ and $a_3 + ib_3.$  Compute $a_1 a_2 a_3.$",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "Taking the absolute value of both sides, we get\n\\[|z^3| = |2 + 2i| = 2 \\sqrt{2}.\\]Then $|z|^3 = 2 \\sqrt{2},$ so $|z| = \\sqrt{2}.$\n\nLet $w = \\frac{z + \\overline{z}}{2},$ so the possible values of $w$ are $a_1,$ $a_2,$ and $a_3.$  Then\n\\[w^3 = \\frac{z^3 + 3z^2 \\overline{z} + 3z \\overline{z}^2 + \\overline{z}^3}{8}.\\]We know that $z^3 = 2 + 2i.$  Taking the conjugate, we get $\\overline{z^3} = \\overline{2 + 2i},$ so $\\overline{z}^3 = 2 - 2i.$  Also,\n\\[3z^2 \\overline{z} + 3z \\overline{z} = 3z \\overline{z} (z + \\overline{z}) = 6|z|^2 w = 12w,\\]so\n\\[w^3 = \\frac{2 + 2i + 12w + 2 - 2i}{8} = \\frac{4 + 12w}{8} = \\frac{3}{2} w + \\frac{1}{2}.\\]Then\n\\[w^3 - \\frac{3}{2} w - \\frac{1}{2} = 0.\\]By Vieta's formulas, $a_1 a_2 a_3 = \\boxed{\\frac{1}{2}}.$",
+    "is_solved": false,
+    "model_solution": "## Step 1\nLet $z = a + bi.$ Then, \\[z^3 = (a + bi)^3 = a^3 - 3ab^2 + 3a^2bi - b^3i = (a^3 - 3ab^2) + (3a^2b - b^3)i.\\] Thus, we have that \\[a^3 - 3ab^2 = 2 \\quad\\text{and}\\quad 3a^2b - b^3 = 2.\\]\n\n## Step 2\nWe can rearrange the first equation as \\[a^3 - 3ab^2 - 2 = 0\\]and the second equation as \\[3a^2b - b^3 - 2 = 0.\\]\n\n## Step 3\nFactoring out a $b$ from the first equation and a $a$ from the second equation, we obtain the equations \\[b(a^3 - 3ab^2) - 2 = 0\\quad\\text{and}\\quad a(3a^2b - b^3) - 2 = 0.\\]\n## Step 4\nWe can write the first equation as \\[b(a^3 - 3ab^2) = 2\\]and the second equation as \\[a(3a^2b - b^3) = 2.\\]Now, let's divide the first equation by the second equation to obtain \\[\\frac{b(a^3 - 3ab^2)}{a(3a^2b - b^3)} = \\frac{2}{2}.\\]Simplifying both sides, we get \\[\\frac{b}{a} = \\frac{3a^2b - b^3}{a^3 - 3ab^2}.\\]Cross-multiplying, we get \\[b(a^3 - 3ab^2) = a(3a^2b - b^3).\\]Expanding both sides, we get \\[ba^3 - 3ab^3 = 3a^3b - ab^3.\\]Subtracting $3a^3b$ from both sides and adding $ab^3$ to both sides, we get \\[ba^3 - 3a^3\n## Step 5\nWe can rearrange this equation to get $-2a^3b = 0.$ Since we cannot have $a = b = 0$ (otherwise $z = 0$ and we have only one root), we must have $b = 0.$\n## Step 6\nSetting $b = 0$ in the equation $a^3 - 3ab^2 = 2,$ we get $a^3 = 2.$ Thus, the solutions for $a$ are $a = \\sqrt[3]{2},$ $a = \\sqrt[3]{2} \\left(\\frac{-1 + i \\sqrt{3}}{2} \\right),$ and $a = \\sqrt[3]{2} \\left( \\frac{-1 - i \\sqrt{3}}{2} \\right).$",
+    "steps": [
+        "## Step 1\nLet $z = a + bi.$ Then, \\[z^3 = (a + bi)^3 = a^3 - 3ab^2 + 3a^2bi - b^3i = (a^3 - 3ab^2) + (3a^2b - b^3)i.\\] Thus, we have that \\[a^3 - 3ab^2 = 2 \\quad\\text{and}\\quad 3a^2b - b^3 = 2.\\]\n\n## Step 2\nWe can rearrange the first equation as \\[a^3 - 3ab^2 - 2 = 0\\]and the second equation as \\[3a^2b - b^3 - 2 = 0.\\]\n\n## Step 3\nFactoring out a $b$ from the first equation and a $a$ from the second equation, we obtain the equations \\[b(a^3 - 3ab^2) - 2 = 0\\quad\\text{and}\\quad a(3a^2b - b^3) - 2 = 0.\\]",
+        "## Step 4\nWe can write the first equation as \\[b(a^3 - 3ab^2) = 2\\]and the second equation as \\[a(3a^2b - b^3) = 2.\\]Now, let's divide the first equation by the second equation to obtain \\[\\frac{b(a^3 - 3ab^2)}{a(3a^2b - b^3)} = \\frac{2}{2}.\\]Simplifying both sides, we get \\[\\frac{b}{a} = \\frac{3a^2b - b^3}{a^3 - 3ab^2}.\\]Cross-multiplying, we get \\[b(a^3 - 3ab^2) = a(3a^2b - b^3).\\]Expanding both sides, we get \\[ba^3 - 3ab^3 = 3a^3b - ab^3.\\]Subtracting $3a^3b$ from both sides and adding $ab^3$ to both sides, we get \\[ba^3 - 3a^3",
+        "## Step 5\nWe can rearrange this equation to get $-2a^3b = 0.$ Since we cannot have $a = b = 0$ (otherwise $z = 0$ and we have only one root), we must have $b = 0.$",
+        "## Step 6\nSetting $b = 0$ in the equation $a^3 - 3ab^2 = 2,$ we get $a^3 = 2.$ Thus, the solutions for $a$ are $a = \\sqrt[3]{2},$ $a = \\sqrt[3]{2} \\left(\\frac{-1 + i \\sqrt{3}}{2} \\right),$ and $a = \\sqrt[3]{2} \\left( \\frac{-1 - i \\sqrt{3}}{2} \\right).$"
+    ],
+    "full_steps": [
+        [
+            "## Step 1\nLet $z = a + bi.$ Then, \\[z^3 = (a + bi)^3 = a^3 - 3ab^2 + 3a^2bi - b^3i = (a^3 - 3ab^2) + (3a^2b - b^3)i.\\] Thus, we have that \\[a^3 - 3ab^2 = 2 \\quad\\text{and}\\quad 3a^2b - b^3 = 2.\\]\n\n## Step 2\nWe can rearrange the first equation as \\[a^3 - 3ab^2 - 2 = 0\\]and the second equation as \\[3a^2b - b^3 - 2 = 0.\\]\n\n## Step 3\nFactoring out a $b$ from the first equation and a $a$ from the second equation, we obtain the equations \\[b(a^3 - 3ab^2) - 2 = 0\\quad\\text{and}\\quad a(3a^2b - b^3) - 2 = 0.\\]",
+            1
+        ],
+        [
+            "## Step 4\nWe can write the first equation as \\[b(a^3 - 3ab^2) = 2\\]and the second equation as \\[a(3a^2b - b^3) = 2.\\]Now, let's divide the first equation by the second equation to obtain \\[\\frac{b(a^3 - 3ab^2)}{a(3a^2b - b^3)} = \\frac{2}{2}.\\]Simplifying both sides, we get \\[\\frac{b}{a} = \\frac{3a^2b - b^3}{a^3 - 3ab^2}.\\]Cross-multiplying, we get \\[b(a^3 - 3ab^2) = a(3a^2b - b^3).\\]Expanding both sides, we get \\[ba^3 - 3ab^3 = 3a^3b - ab^3.\\]Subtracting $3a^3b$ from both sides and adding $ab^3$ to both sides, we get \\[ba^3 - 3a^3",
+            1
+        ],
+        [
+            "## Step 5\nWe can rearrange this equation to get $-2a^3b = 0.$ Since we cannot have $a = b = 0$ (otherwise $z = 0$ and we have only one root), we must have $b = 0.$",
+            1
+        ],
+        [
+            "## Step 6\nSetting $b = 0$ in the equation $a^3 - 3ab^2 = 2,$ we get $a^3 = 2.$ Thus, the solutions for $a$ are $a = \\sqrt[3]{2},$ $a = \\sqrt[3]{2} \\left(\\frac{-1 + i \\sqrt{3}}{2} \\right),$ and $a = \\sqrt[3]{2} \\left( \\frac{-1 - i \\sqrt{3}}{2} \\right).$",
+            1
+        ]
+    ],
+    "time": 54.59337854385376,
+    "total_tokens": 4978,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

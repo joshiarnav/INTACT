@@ -1,0 +1,66 @@
+{
+    "problem": "There are real numbers $a$ and $b$ such that for every positive number $x$, we have the identity\n\\[\n  \\tan^{-1} \\left( \\frac{1}{x} - \\frac{x}{8} \\right) + \\tan^{-1}(ax) + \\tan^{-1}(bx) \n    = \\frac{\\pi}{2} \\, .\n\\](Throughout this equation, $\\tan^{-1}$ means the inverse tangent function, sometimes written $\\arctan$.)  What is the value of $a^2 + b^2$?",
+    "level": "Level 5",
+    "type": "Precalculus",
+    "solution": "By the tangent addition formula,\n\\[\\tan (\\tan^{-1} p + \\tan^{-1} q) = \\frac{p + q}{1 - pq}.\\]From the given equation,\n\\[\\tan^{-1} ax + \\tan^{-1} bx = \\frac{\\pi}{2} - \\tan^{-1} \\left( \\frac{1}{x} - \\frac{x}{8} \\right).\\]Then\n\\[\\tan (\\tan^{-1} ax + \\tan^{-1} bx) = \\tan \\left( \\frac{\\pi}{2} - \\tan^{-1} \\left( \\frac{1}{x} - \\frac{x}{8} \\right) \\right),\\]The left-hand side is $\\frac{ax + bx}{1 - abx^2}.$  The right-hand side is\n\\begin{align*}\n\\tan \\left( \\frac{\\pi}{2} - \\tan^{-1} \\left( \\frac{1}{x} - \\frac{x}{8} \\right) \\right) &= \\frac{1}{\\tan \\left( \\tan^{-1} \\left( \\frac{1}{x} - \\frac{x}{8} \\right) \\right)} \\\\\n&= \\frac{1}{\\frac{1}{x} - \\frac{x}{8}} \\\\\n&= \\frac{x}{1 - \\frac{1}{8} x^2}.\n\\end{align*}Hence, $a + b = 1$ and $ab = \\frac{1}{8},$ so\n\\[a^2 + b^2 = (a + b)^2 - 2ab = 1 - \\frac{2}{8} = \\boxed{\\frac{3}{4}}.\\]",
+    "is_solved": false,
+    "model_solution": "Step 1: Let $f(x) = \\tan^{-1} \\left( \\frac{1}{x} - \\frac{x}{8} \\right) + \\tan^{-1}(ax) + \\tan^{-1}(bx)$. Then for all $x > 0,$ we have $f(x) = \\frac{\\pi}{2}.$\nWe note that the range of $\\tan^{-1}$ is $(-\\frac{\\pi}{2}, \\frac{\\pi}{2})$, and since $f(x) = \\frac{\\pi}{2}$ for all $x > 0,$ the only possible value for $\\tan^{-1}\\left(\\frac{1}{x}-\\frac{x}{8}\\right)$, $\\tan^{-1}(ax)$, and $\\tan^{-1}(bx)$ is $\\frac{\\pi}{4}.$\nStep 2:\nWe can write\n\\[\n\\tan^{-1} \\left( \\frac{1}{x} - \\frac{x}{8} \\right) = \\frac{\\pi}{4},\\quad \\tan^{-1}(ax)=\\frac{\\pi}{4},\\quad\\tan^{-1}(bx)=\\frac{\\pi}{4}.\n\\]\nFor any positive $x,$\n\\[ \\left( \\frac{1}{x} - \\frac{x}{8} \\right),\\; ax,\\; \\text{and}\\; bx \\]are all positive. Thus, using the tangent addition formula, we have\n\\[ \\tan \\left( \\tan^{-1} \\left( \\frac{1}{x} - \\frac{x}{8} \\right) + \\tan^{-1}(ax) + \\tan^{-1}(bx) \\right) = \\frac{ \\frac{1}{x} - \\frac{x}{8} + ax + bx}{1 - \\frac{1}{x} \\left( \\frac{x}{8} + ax + bx \\right) }.\\]\nThe next step is:\nStep 3:\nSince this last expression is equal to $\\tan \\frac{\\pi}{2} = \\infty$ for all positive $x,$ we can conclude that\n\\[ \\frac{1}{x} - \\frac{x}{8} + ax + bx = \\infty - \\frac{1}{x} \\left( \\frac{x}{8} + ax + bx \\right) \\]\nfor all $x > 0.$ Simplifying, we get\n\n\\begin{align*}\n \\frac{1}{x} - \\frac{x}{8} + ax + bx &= \\infty -\\frac{1}{x} \\left( \\frac{x}{8} + ax + bx \\right)\\\\\n\\Rightarrow \\qquad 1 - \\frac{x^2}{8} + axx + bxx &= \\infty -\\frac{1}{x} \\left( \\frac{x}{8} + ax + bx \\right)\\\\\n\\Rightarrow \\qquad 1 - \\frac{x^2}{8} + axx + bxx &= \\frac{-1}{x} \\cdot \\frac{x}{8} - \\\n\\begin{align*}\n   1 - \\frac{x^2}{8} + axx + bxx &= \\infty -\\frac{1}{x} \\left( \\frac{x}{8} + ax + bx \\right)\\\\\n\\Rightarrow \\qquad 1 - \\frac{x^2}{8} + axx + bxx &= \\frac{-1}{x} \\cdot \\frac{x}{8} - \\frac{a}{x} \\cdot x - \\frac{b}{x} \\cdot x\\\\\n\\Rightarrow \\qquad 1 - \\frac{x^2}{8} + (ax + b)x &= \\frac{-1}{8} - a - b\\\\\n\\Rightarrow \\qquad 8 - x^2 + 8ax + 8bx &= -8 - 8(a + b)\\\\\n\\Rightarrow \\qquad 8 + 8ax + 8bx &= x^2 - 8 - 8(a + b)\\\\\n\\Rightarrow \\qquad 8(1 + ax + bx) &= x^2 - 8 - 8(a + b)\\\\\n\\Rightarrow \\qquad\nFor all $x$, we have $8(1 + ax + bx) = x^2 - 8 - 8(a + b)$. This can only be true if $a^2 + b^2 = 1.$\nSince this equation must hold for all values of $x$, we can conclude that $a$ and $b$ must be such that $8(1 + ax + bx) = x^2 - 8 - 8(a + b)$ for all $x$. The only way this equation can hold for all $x$ is if $a^2 + b^2 = 1.$\nSince this equation must hold for all values of $x$, we can equate the coefficients of the quadratic terms to obtain\n$8a = 1$\nand the constant terms to obtain\n$8(1 + b) = -8 - 8(a + b)$.\nSolving these two equations simultaneously, we get $a = \\frac{1}{8}$ and $b = -\\frac{1}{8}$.\nFrom $8a = 1$ we have $a = \\frac{1}{8}.$\nSolve the equation $8(1 + b) = -8 - 8(a + b)$ for $b$.",
+    "steps": [
+        "Step 1: Let $f(x) = \\tan^{-1} \\left( \\frac{1}{x} - \\frac{x}{8} \\right) + \\tan^{-1}(ax) + \\tan^{-1}(bx)$. Then for all $x > 0,$ we have $f(x) = \\frac{\\pi}{2}.$\nWe note that the range of $\\tan^{-1}$ is $(-\\frac{\\pi}{2}, \\frac{\\pi}{2})$, and since $f(x) = \\frac{\\pi}{2}$ for all $x > 0,$ the only possible value for $\\tan^{-1}\\left(\\frac{1}{x}-\\frac{x}{8}\\right)$, $\\tan^{-1}(ax)$, and $\\tan^{-1}(bx)$ is $\\frac{\\pi}{4}.$",
+        "Step 2:\nWe can write\n\\[\n\\tan^{-1} \\left( \\frac{1}{x} - \\frac{x}{8} \\right) = \\frac{\\pi}{4},\\quad \\tan^{-1}(ax)=\\frac{\\pi}{4},\\quad\\tan^{-1}(bx)=\\frac{\\pi}{4}.\n\\]",
+        "For any positive $x,$\n\\[ \\left( \\frac{1}{x} - \\frac{x}{8} \\right),\\; ax,\\; \\text{and}\\; bx \\]are all positive. Thus, using the tangent addition formula, we have\n\\[ \\tan \\left( \\tan^{-1} \\left( \\frac{1}{x} - \\frac{x}{8} \\right) + \\tan^{-1}(ax) + \\tan^{-1}(bx) \\right) = \\frac{ \\frac{1}{x} - \\frac{x}{8} + ax + bx}{1 - \\frac{1}{x} \\left( \\frac{x}{8} + ax + bx \\right) }.\\]",
+        "The next step is:\nStep 3:\nSince this last expression is equal to $\\tan \\frac{\\pi}{2} = \\infty$ for all positive $x,$ we can conclude that\n\\[ \\frac{1}{x} - \\frac{x}{8} + ax + bx = \\infty - \\frac{1}{x} \\left( \\frac{x}{8} + ax + bx \\right) \\]\nfor all $x > 0.$ Simplifying, we get\n\n\\begin{align*}\n \\frac{1}{x} - \\frac{x}{8} + ax + bx &= \\infty -\\frac{1}{x} \\left( \\frac{x}{8} + ax + bx \\right)\\\\\n\\Rightarrow \\qquad 1 - \\frac{x^2}{8} + axx + bxx &= \\infty -\\frac{1}{x} \\left( \\frac{x}{8} + ax + bx \\right)\\\\\n\\Rightarrow \\qquad 1 - \\frac{x^2}{8} + axx + bxx &= \\frac{-1}{x} \\cdot \\frac{x}{8} - \\",
+        "\\begin{align*}\n   1 - \\frac{x^2}{8} + axx + bxx &= \\infty -\\frac{1}{x} \\left( \\frac{x}{8} + ax + bx \\right)\\\\\n\\Rightarrow \\qquad 1 - \\frac{x^2}{8} + axx + bxx &= \\frac{-1}{x} \\cdot \\frac{x}{8} - \\frac{a}{x} \\cdot x - \\frac{b}{x} \\cdot x\\\\\n\\Rightarrow \\qquad 1 - \\frac{x^2}{8} + (ax + b)x &= \\frac{-1}{8} - a - b\\\\\n\\Rightarrow \\qquad 8 - x^2 + 8ax + 8bx &= -8 - 8(a + b)\\\\\n\\Rightarrow \\qquad 8 + 8ax + 8bx &= x^2 - 8 - 8(a + b)\\\\\n\\Rightarrow \\qquad 8(1 + ax + bx) &= x^2 - 8 - 8(a + b)\\\\\n\\Rightarrow \\qquad",
+        "For all $x$, we have $8(1 + ax + bx) = x^2 - 8 - 8(a + b)$. This can only be true if $a^2 + b^2 = 1.$",
+        "Since this equation must hold for all values of $x$, we can conclude that $a$ and $b$ must be such that $8(1 + ax + bx) = x^2 - 8 - 8(a + b)$ for all $x$. The only way this equation can hold for all $x$ is if $a^2 + b^2 = 1.$",
+        "Since this equation must hold for all values of $x$, we can equate the coefficients of the quadratic terms to obtain\n$8a = 1$\nand the constant terms to obtain\n$8(1 + b) = -8 - 8(a + b)$.\nSolving these two equations simultaneously, we get $a = \\frac{1}{8}$ and $b = -\\frac{1}{8}$.",
+        "From $8a = 1$ we have $a = \\frac{1}{8}.$",
+        "Solve the equation $8(1 + b) = -8 - 8(a + b)$ for $b$."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Let $f(x) = \\tan^{-1} \\left( \\frac{1}{x} - \\frac{x}{8} \\right) + \\tan^{-1}(ax) + \\tan^{-1}(bx)$. Then for all $x > 0,$ we have $f(x) = \\frac{\\pi}{2}.$\nWe note that the range of $\\tan^{-1}$ is $(-\\frac{\\pi}{2}, \\frac{\\pi}{2})$, and since $f(x) = \\frac{\\pi}{2}$ for all $x > 0,$ the only possible value for $\\tan^{-1}\\left(\\frac{1}{x}-\\frac{x}{8}\\right)$, $\\tan^{-1}(ax)$, and $\\tan^{-1}(bx)$ is $\\frac{\\pi}{4}.$",
+            1
+        ],
+        [
+            "Step 2:\nWe can write\n\\[\n\\tan^{-1} \\left( \\frac{1}{x} - \\frac{x}{8} \\right) = \\frac{\\pi}{4},\\quad \\tan^{-1}(ax)=\\frac{\\pi}{4},\\quad\\tan^{-1}(bx)=\\frac{\\pi}{4}.\n\\]",
+            1
+        ],
+        [
+            "For any positive $x,$\n\\[ \\left( \\frac{1}{x} - \\frac{x}{8} \\right),\\; ax,\\; \\text{and}\\; bx \\]are all positive. Thus, using the tangent addition formula, we have\n\\[ \\tan \\left( \\tan^{-1} \\left( \\frac{1}{x} - \\frac{x}{8} \\right) + \\tan^{-1}(ax) + \\tan^{-1}(bx) \\right) = \\frac{ \\frac{1}{x} - \\frac{x}{8} + ax + bx}{1 - \\frac{1}{x} \\left( \\frac{x}{8} + ax + bx \\right) }.\\]",
+            1
+        ],
+        [
+            "The next step is:\nStep 3:\nSince this last expression is equal to $\\tan \\frac{\\pi}{2} = \\infty$ for all positive $x,$ we can conclude that\n\\[ \\frac{1}{x} - \\frac{x}{8} + ax + bx = \\infty - \\frac{1}{x} \\left( \\frac{x}{8} + ax + bx \\right) \\]\nfor all $x > 0.$ Simplifying, we get\n\n\\begin{align*}\n \\frac{1}{x} - \\frac{x}{8} + ax + bx &= \\infty -\\frac{1}{x} \\left( \\frac{x}{8} + ax + bx \\right)\\\\\n\\Rightarrow \\qquad 1 - \\frac{x^2}{8} + axx + bxx &= \\infty -\\frac{1}{x} \\left( \\frac{x}{8} + ax + bx \\right)\\\\\n\\Rightarrow \\qquad 1 - \\frac{x^2}{8} + axx + bxx &= \\frac{-1}{x} \\cdot \\frac{x}{8} - \\",
+            1
+        ],
+        [
+            "\\begin{align*}\n   1 - \\frac{x^2}{8} + axx + bxx &= \\infty -\\frac{1}{x} \\left( \\frac{x}{8} + ax + bx \\right)\\\\\n\\Rightarrow \\qquad 1 - \\frac{x^2}{8} + axx + bxx &= \\frac{-1}{x} \\cdot \\frac{x}{8} - \\frac{a}{x} \\cdot x - \\frac{b}{x} \\cdot x\\\\\n\\Rightarrow \\qquad 1 - \\frac{x^2}{8} + (ax + b)x &= \\frac{-1}{8} - a - b\\\\\n\\Rightarrow \\qquad 8 - x^2 + 8ax + 8bx &= -8 - 8(a + b)\\\\\n\\Rightarrow \\qquad 8 + 8ax + 8bx &= x^2 - 8 - 8(a + b)\\\\\n\\Rightarrow \\qquad 8(1 + ax + bx) &= x^2 - 8 - 8(a + b)\\\\\n\\Rightarrow \\qquad",
+            1
+        ],
+        [
+            "For all $x$, we have $8(1 + ax + bx) = x^2 - 8 - 8(a + b)$. This can only be true if $a^2 + b^2 = 1.$",
+            1
+        ],
+        [
+            "Since this equation must hold for all values of $x$, we can conclude that $a$ and $b$ must be such that $8(1 + ax + bx) = x^2 - 8 - 8(a + b)$ for all $x$. The only way this equation can hold for all $x$ is if $a^2 + b^2 = 1.$",
+            1
+        ],
+        [
+            "Since this equation must hold for all values of $x$, we can equate the coefficients of the quadratic terms to obtain\n$8a = 1$\nand the constant terms to obtain\n$8(1 + b) = -8 - 8(a + b)$.\nSolving these two equations simultaneously, we get $a = \\frac{1}{8}$ and $b = -\\frac{1}{8}$.",
+            1
+        ],
+        [
+            "From $8a = 1$ we have $a = \\frac{1}{8}.$",
+            1
+        ],
+        [
+            "Solve the equation $8(1 + b) = -8 - 8(a + b)$ for $b$.",
+            1
+        ]
+    ],
+    "time": 134.18545532226562,
+    "total_tokens": 19589,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

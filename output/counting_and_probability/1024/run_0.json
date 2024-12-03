@@ -1,0 +1,26 @@
+{
+    "problem": "Each block on the grid shown in the Figure is 1 unit by 1 unit.  Suppose we wish to walk from $A$ to $B$ via a 7 unit path, but we have to stay on the grid -- no cutting across blocks.  How many different paths can we take?[asy]size(3cm,3cm);int w=5;int h=4;int i;for (i=0; i<h; ++i){draw((0,i) -- (w-1,i));}for (i=0; i<w; ++i){draw((i, 0)--(i,h-1));}label(\"B\", (w-1,h-1), NE);label(\"A\", (0,0), SW);[/asy]",
+    "level": "Level 3",
+    "type": "Counting & Probability",
+    "solution": "We know that we must take a 7 unit path.  If we look at the grid a little more carefully, we can see that our path must consist of 4 steps to the right and 3 steps up, and we can take those steps in any order.  So in order to specify a path, we must choose 3 of our 7 steps to be `up' (and the other 4 steps will thus be `right').  Hence the number of paths is $$ \\binom{7}{3} = \\frac{7 \\times 6 \\times 5}{3 \\times 2 \\times 1} = \\boxed{35}. $$",
+    "is_solved": true,
+    "model_solution": "The problem is asking to find the number of different paths from $A$ to $B$ on a grid, where the path must be 7 units long and must stay on the grid.\nStep 1:  To solve this problem, we need to find the number of different paths from point $A$ to point $B$ on the grid, where the path must be 7 units long and must stay on the grid.\nStep 2:  We can represent the path as a sequence of steps, where we move either right or up at each step. Since we need to travel 4 units to the right and 3 units up, we can think of each path as a sequence of 4 $R$'s (right steps) and 3 $U$'s (up steps).\nStep 3:  Therefore, we are essentially finding the number of ways to arrange the sequence of 4 $R$'s and 3 $U$'s in a 7-step path.\n\nFinal Answer: The final answer is: $\\boxed{\\binom{7}{3}}$",
+    "steps": [
+        "The problem is asking to find the number of different paths from $A$ to $B$ on a grid, where the path must be 7 units long and must stay on the grid.",
+        "Step 1:  To solve this problem, we need to find the number of different paths from point $A$ to point $B$ on the grid, where the path must be 7 units long and must stay on the grid.\nStep 2:  We can represent the path as a sequence of steps, where we move either right or up at each step. Since we need to travel 4 units to the right and 3 units up, we can think of each path as a sequence of 4 $R$'s (right steps) and 3 $U$'s (up steps).\nStep 3:  Therefore, we are essentially finding the number of ways to arrange the sequence of 4 $R$'s and 3 $U$'s in a 7-step path.\n\nFinal Answer: The final answer is: $\\boxed{\\binom{7}{3}}$"
+    ],
+    "full_steps": [
+        [
+            "The problem is asking to find the number of different paths from $A$ to $B$ on a grid, where the path must be 7 units long and must stay on the grid.",
+            1
+        ],
+        [
+            "Step 1:  To solve this problem, we need to find the number of different paths from point $A$ to point $B$ on the grid, where the path must be 7 units long and must stay on the grid.\nStep 2:  We can represent the path as a sequence of steps, where we move either right or up at each step. Since we need to travel 4 units to the right and 3 units up, we can think of each path as a sequence of 4 $R$'s (right steps) and 3 $U$'s (up steps).\nStep 3:  Therefore, we are essentially finding the number of ways to arrange the sequence of 4 $R$'s and 3 $U$'s in a 7-step path.\n\nFinal Answer: The final answer is: $\\boxed{\\binom{7}{3}}$",
+            1
+        ]
+    ],
+    "time": 26.679230213165283,
+    "total_tokens": 1422,
+    "final_answer_tokens": 448,
+    "model": "meta-llama/Llama-Vision-Free"
+}

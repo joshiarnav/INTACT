@@ -1,0 +1,41 @@
+{
+    "problem": "Find all solutions to the equation $$(z^2 - 3z + 1)^2 - 3(z^2 - 3z + 1) + 1 = z.$$",
+    "level": "Level 4",
+    "type": "Intermediate Algebra",
+    "solution": "The expression $z^2-3z+1$ appears twice in the equation we're trying to solve. This suggests that we should try the substitution $y=z^2-3z+1$. Applying this to the left side of our original equation, we get\n$$y^2-3y+1=z,$$which, interestingly, looks just like the substitution we made except that the variables are reversed. Thus we have a symmetric system of equations:\n\\begin{align*}\ny &= z^2-3z+1, \\\\\ny^2-3y+1 &= z.\n\\end{align*}Adding these two equations gives us\n$$y^2-2y+1 = z^2-2z+1,$$which looks promising as each side can be factored as a perfect square:\n$$(y-1)^2 = (z-1)^2.$$It follows that either $y-1 = z-1$ (and so $y=z$), or $y-1 = -(z-1)$ (and so $y=2-z$). We consider each of these two cases.\n\nIf $y=z$, then we have $z = z^2-3z+1$, and so $0 = z^2-4z+1$. Solving this quadratic yields $z=\\frac{4\\pm\\sqrt{12}}2 = 2\\pm\\sqrt 3$.\n\nIf $y=2-z$, then we have $2-z = z^2-3z+1$, and so $2 = z^2-2z+1 = (z-1)^2$. Thus we have $z-1=\\pm\\sqrt 2$, and $z=1\\pm\\sqrt 2$.\n\nPutting our two cases together, we have four solutions in all: $z=\\boxed{1+\\sqrt 2,\\ 1-\\sqrt 2,\\ 2+\\sqrt 3,\\ 2-\\sqrt 3}$.",
+    "is_solved": true,
+    "model_solution": "## Step 1: Make the substitution $x = z^2 - 3z + 1$\nSubstitute $x = z^2 - 3z + 1$ into the given equation to get: $x^2 - 3x + 1 = z.$\n## Step 2: Rearrange the equation to get $x^2 - 3x - z + 1 = 0.$\n## Step 3: Since z is a function of x, we can make the substitution y = x^2 - 3x - z + 1, and then substitute z = x in the equation to get y = x^2 - 3x - (x^2 - 3x + 1) + 1\n$y = x^2 - 3x - x^2 + 3x - 1 + 1$\n$y = 2$\n## Step 4: Solve the equation $y = 2$ for $x$.\n$2 = 2$\n$0 = 0$\n## Step 5: Solve for z using $x = z^2 - 3z + 1.$\n$z^2 - 3z + 1 = 1$\n$z^2 - 3z = 0$\n$z(z - 3) = 0$\n$z = 0, 3$\nFinal Answer: The final answer is $\\boxed{0, 3}$.",
+    "steps": [
+        "## Step 1: Make the substitution $x = z^2 - 3z + 1$\nSubstitute $x = z^2 - 3z + 1$ into the given equation to get: $x^2 - 3x + 1 = z.$",
+        "## Step 2: Rearrange the equation to get $x^2 - 3x - z + 1 = 0.$",
+        "## Step 3: Since z is a function of x, we can make the substitution y = x^2 - 3x - z + 1, and then substitute z = x in the equation to get y = x^2 - 3x - (x^2 - 3x + 1) + 1\n$y = x^2 - 3x - x^2 + 3x - 1 + 1$\n$y = 2$",
+        "## Step 4: Solve the equation $y = 2$ for $x$.\n$2 = 2$\n$0 = 0$",
+        "## Step 5: Solve for z using $x = z^2 - 3z + 1.$\n$z^2 - 3z + 1 = 1$\n$z^2 - 3z = 0$\n$z(z - 3) = 0$\n$z = 0, 3$\nFinal Answer: The final answer is $\\boxed{0, 3}$."
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Make the substitution $x = z^2 - 3z + 1$\nSubstitute $x = z^2 - 3z + 1$ into the given equation to get: $x^2 - 3x + 1 = z.$",
+            1
+        ],
+        [
+            "## Step 2: Rearrange the equation to get $x^2 - 3x - z + 1 = 0.$",
+            1
+        ],
+        [
+            "## Step 3: Since z is a function of x, we can make the substitution y = x^2 - 3x - z + 1, and then substitute z = x in the equation to get y = x^2 - 3x - (x^2 - 3x + 1) + 1\n$y = x^2 - 3x - x^2 + 3x - 1 + 1$\n$y = 2$",
+            1
+        ],
+        [
+            "## Step 4: Solve the equation $y = 2$ for $x$.\n$2 = 2$\n$0 = 0$",
+            1
+        ],
+        [
+            "## Step 5: Solve for z using $x = z^2 - 3z + 1.$\n$z^2 - 3z + 1 = 1$\n$z^2 - 3z = 0$\n$z(z - 3) = 0$\n$z = 0, 3$\nFinal Answer: The final answer is $\\boxed{0, 3}$.",
+            1
+        ]
+    ],
+    "time": 66.7281322479248,
+    "total_tokens": 2780,
+    "final_answer_tokens": 407,
+    "model": "meta-llama/Llama-Vision-Free"
+}

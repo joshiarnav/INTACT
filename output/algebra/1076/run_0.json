@@ -1,0 +1,31 @@
+{
+    "problem": "Below is a portion of the graph of a function, $y=u(x)$:\n\n[asy]\nimport graph; size(5.5cm); real lsf=0.5; pen dps=linewidth(0.7)+fontsize(10); defaultpen(dps); pen ds=black; real xmin=-3.25,xmax=3.25,ymin=-3.25,ymax=3.25;\n\npen cqcqcq=rgb(0.75,0.75,0.75);\n\n/*grid*/ pen gs=linewidth(0.7)+cqcqcq+linetype(\"2 2\"); real gx=1,gy=1;\nfor(real i=ceil(xmin/gx)*gx;i<=floor(xmax/gx)*gx;i+=gx) draw((i,ymin)--(i,ymax),gs); for(real i=ceil(ymin/gy)*gy;i<=floor(ymax/gy)*gy;i+=gy) draw((xmin,i)--(xmax,i),gs);\n\nLabel laxis; laxis.p=fontsize(10);\n\nxaxis(\"\",xmin,xmax,Ticks(laxis,Step=1.0,Size=2,NoZero),Arrows(6),above=true); yaxis(\"\",ymin,ymax,Ticks(laxis,Step=1.0,Size=2,NoZero),Arrows(6),above=true);\nreal f1(real x){return -x+3*sin(x*pi/3);}\ndraw(graph(f1,-3.25,3.25),linewidth(1));\nclip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle);\n[/asy]\n\nWhat is the exact value of $u(-2.33)+u(-0.81)+u(0.81)+u(2.33)$ ?",
+    "level": "Level 3",
+    "type": "Algebra",
+    "solution": "We can't read off the exact value of $u(-2.33)$ or $u(-0.81)$ or $u(0.81)$ or $u(2.33)$ from the graph. However, the symmetry of the graph (under $180^\\circ$ rotation around the origin) tells us that $u(-x) = -u(x)$ for all $x$ in the visible interval, so, in particular, $$u(-2.33)+u(2.33) = 0\\phantom{.}$$and $$u(-0.81)+u(0.81) = 0.$$Thus, the exact value of $u(-2.33)+u(-0.81)+u(0.81)+u(2.33)$ is $\\boxed{0}$.",
+    "is_solved": false,
+    "model_solution": "Since the graph of $y=u(x)$ exhibits symmetry under a $180^\\circ$ rotation around the origin, $u(-x) = -u(x)$ for all $x.$\nSince $u(-x) = -u(x)$ for all $x,$ we have \\begin{align*}\nu(-2.33)+u(-0.81)+u(0.81)+u(2.33)&=u(-2.33)+u(-0.81)-(u(0.81)+u(2.33))\\\\\n&=-u(2.33)-u(0.81)+u(0.81)+u(2.33)=\\boxed{0}.\n\\end{align*}\nSince $u(-x) = -u(x)$ for all $x,$ we have $u(-2.33)+u(2.33)=0$ and $u(-0.81)+u(0.81)=0$.",
+    "steps": [
+        "Since the graph of $y=u(x)$ exhibits symmetry under a $180^\\circ$ rotation around the origin, $u(-x) = -u(x)$ for all $x.$",
+        "Since $u(-x) = -u(x)$ for all $x,$ we have \\begin{align*}\nu(-2.33)+u(-0.81)+u(0.81)+u(2.33)&=u(-2.33)+u(-0.81)-(u(0.81)+u(2.33))\\\\\n&=-u(2.33)-u(0.81)+u(0.81)+u(2.33)=\\boxed{0}.\n\\end{align*}",
+        "Since $u(-x) = -u(x)$ for all $x,$ we have $u(-2.33)+u(2.33)=0$ and $u(-0.81)+u(0.81)=0$."
+    ],
+    "full_steps": [
+        [
+            "Since the graph of $y=u(x)$ exhibits symmetry under a $180^\\circ$ rotation around the origin, $u(-x) = -u(x)$ for all $x.$",
+            1
+        ],
+        [
+            "Since $u(-x) = -u(x)$ for all $x,$ we have \\begin{align*}\nu(-2.33)+u(-0.81)+u(0.81)+u(2.33)&=u(-2.33)+u(-0.81)-(u(0.81)+u(2.33))\\\\\n&=-u(2.33)-u(0.81)+u(0.81)+u(2.33)=\\boxed{0}.\n\\end{align*}",
+            1
+        ],
+        [
+            "Since $u(-x) = -u(x)$ for all $x,$ we have $u(-2.33)+u(2.33)=0$ and $u(-0.81)+u(0.81)=0$.",
+            1
+        ]
+    ],
+    "time": 41.0889790058136,
+    "total_tokens": 3417,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

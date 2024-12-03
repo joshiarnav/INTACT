@@ -1,0 +1,61 @@
+{
+    "problem": "The area of right triangle $ABC$ is 4, and the hypotenuse $\\overline{AB}$ is 12.  Compute $\\sin 2A.$",
+    "level": "Level 2",
+    "type": "Precalculus",
+    "solution": "We have that $\\frac{1}{2} ab = 4,$ so $ab = 8.$\n\n[asy]\nunitsize (1 cm);\n\npair A, B, C;\n\nC = (0,0);\nB = (3,0);\nA = (0,2);\n\ndraw(A--B--C--cycle);\ndraw(rightanglemark(A,C,B,6));\n\nlabel(\"$A$\", A, N);\nlabel(\"$B$\", B, E);\nlabel(\"$C$\", C, SW);\nlabel(\"$a$\", (B + C)/2, S, red);\nlabel(\"$b$\", (A + C)/2, W, red);\nlabel(\"$12$\", (A + B)/2, NE, red);\n[/asy]\n\nThen\n\\[\\sin 2A = 2 \\sin A \\cos A = 2 \\cdot \\frac{a}{12} \\cdot \\frac{b}{12} = \\frac{ab}{72} = \\frac{8}{72} = \\boxed{\\frac{1}{9}}.\\]",
+    "is_solved": true,
+    "model_solution": "Step 1:  We are given a right triangle $ABC$ with a hypotenuse $\\overline{AB}$ of length 12 and an area of 4. We want to find the value of $\\sin 2A$.\nStep 2:  First, recall that the area of a right triangle can be expressed as $\\frac{1}{2}ab,$ where $a$ and $b$ are the lengths of the legs of the triangle.\nStep 3:  In this case, we are given the area as 4 and the hypotenuse as 12, so we can write: $\\frac{1}{2}ab = 4$\nStep 4:  It is also known that for a right triangle, the hypotenuse is given by the Pythagorean theorem: $a^2 + b^2 = c^2$, where $c$ is the length of the hypotenuse.\nStep 5:  Given that the hypotenuse $AB$ has a length of 12, we can write the equation: $a^2 + b^2 = 12^2 = 144$\nStep 2: $a = \\frac{8}{b}$\nStep 3: \n\\[\\sin 2A = 2 \\sin A \\cos A = 2 \\left( \\frac{4}{12} \\right) \\left( \\frac{12 - \\frac{64}{12}}{12} \\right)\\]\n\\[2 \\left( \\frac{4}{12} \\right) \\left( \\frac{12 - \\frac{64}{12}}{12} \\right) = 2 \\left( \\frac{4}{12} \\right) \\left( \\frac{144 - 64}{12 \\cdot 12} \\right) = 2 \\left( \\frac{4}{12} \\right) \\left( \\frac{80}{12 \\cdot 12} \\right)\\]\n$2 \\left( \\frac{4}{12} \\right) \\left( \\frac{80}{12 \\cdot 12} \\right) = 2 \\left( \\frac{80}{12^2} \\right) \\left( \\frac{1}{3} \\right) = \\frac{160}{432} = \\frac{20}{54}$\n$\\frac{20}{54} = \\frac{10}{27}$\n$= \\frac{2 \\cdot 4}{12} \\cdot \\left( \\frac{12 - \\frac{64}{12}}{12} \\right) = \\frac{2 \\cdot 4}{12} \\cdot \\left( \\frac{144 - 64}{12 \\cdot 12} \\right) = \\frac{2 \\cdot 4}{12} \\cdot \\left( \\frac{80}{12 \\cdot 12} \\right)$\n$\\frac{160}{432} = \\frac{20}{54}$\n$= \\frac{2 \\cdot 4}{12} \\cdot \\left( \\frac{12 - \\frac{64}{12}}{12} \\right) = \\frac{2 \\cdot 4}{12} \\cdot \\left( \\frac{144 - 64}{12 \\cdot 12} \\right) = \\frac{2 \\cdot 4}{12} \\cdot \\left( \\frac{80}{12 \\cdot 12} \\right)$",
+    "steps": [
+        "Step 1:  We are given a right triangle $ABC$ with a hypotenuse $\\overline{AB}$ of length 12 and an area of 4. We want to find the value of $\\sin 2A$.\nStep 2:  First, recall that the area of a right triangle can be expressed as $\\frac{1}{2}ab,$ where $a$ and $b$ are the lengths of the legs of the triangle.\nStep 3:  In this case, we are given the area as 4 and the hypotenuse as 12, so we can write: $\\frac{1}{2}ab = 4$\nStep 4:  It is also known that for a right triangle, the hypotenuse is given by the Pythagorean theorem: $a^2 + b^2 = c^2$, where $c$ is the length of the hypotenuse.\nStep 5:  Given that the hypotenuse $AB$ has a length of 12, we can write the equation: $a^2 + b^2 = 12^2 = 144$",
+        "Step 2: $a = \\frac{8}{b}$",
+        "Step 3: \n\\[\\sin 2A = 2 \\sin A \\cos A = 2 \\left( \\frac{4}{12} \\right) \\left( \\frac{12 - \\frac{64}{12}}{12} \\right)\\]",
+        "\\[2 \\left( \\frac{4}{12} \\right) \\left( \\frac{12 - \\frac{64}{12}}{12} \\right) = 2 \\left( \\frac{4}{12} \\right) \\left( \\frac{144 - 64}{12 \\cdot 12} \\right) = 2 \\left( \\frac{4}{12} \\right) \\left( \\frac{80}{12 \\cdot 12} \\right)\\]",
+        "$2 \\left( \\frac{4}{12} \\right) \\left( \\frac{80}{12 \\cdot 12} \\right) = 2 \\left( \\frac{80}{12^2} \\right) \\left( \\frac{1}{3} \\right) = \\frac{160}{432} = \\frac{20}{54}$",
+        "$\\frac{20}{54} = \\frac{10}{27}$",
+        "$= \\frac{2 \\cdot 4}{12} \\cdot \\left( \\frac{12 - \\frac{64}{12}}{12} \\right) = \\frac{2 \\cdot 4}{12} \\cdot \\left( \\frac{144 - 64}{12 \\cdot 12} \\right) = \\frac{2 \\cdot 4}{12} \\cdot \\left( \\frac{80}{12 \\cdot 12} \\right)$",
+        "$\\frac{160}{432} = \\frac{20}{54}$",
+        "$= \\frac{2 \\cdot 4}{12} \\cdot \\left( \\frac{12 - \\frac{64}{12}}{12} \\right) = \\frac{2 \\cdot 4}{12} \\cdot \\left( \\frac{144 - 64}{12 \\cdot 12} \\right) = \\frac{2 \\cdot 4}{12} \\cdot \\left( \\frac{80}{12 \\cdot 12} \\right)$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We are given a right triangle $ABC$ with a hypotenuse $\\overline{AB}$ of length 12 and an area of 4. We want to find the value of $\\sin 2A$.\nStep 2:  First, recall that the area of a right triangle can be expressed as $\\frac{1}{2}ab,$ where $a$ and $b$ are the lengths of the legs of the triangle.\nStep 3:  In this case, we are given the area as 4 and the hypotenuse as 12, so we can write: $\\frac{1}{2}ab = 4$\nStep 4:  It is also known that for a right triangle, the hypotenuse is given by the Pythagorean theorem: $a^2 + b^2 = c^2$, where $c$ is the length of the hypotenuse.\nStep 5:  Given that the hypotenuse $AB$ has a length of 12, we can write the equation: $a^2 + b^2 = 12^2 = 144$",
+            1
+        ],
+        [
+            "Step 2: $a = \\frac{8}{b}$",
+            1
+        ],
+        [
+            "Step 3: \n\\[\\sin 2A = 2 \\sin A \\cos A = 2 \\left( \\frac{4}{12} \\right) \\left( \\frac{12 - \\frac{64}{12}}{12} \\right)\\]",
+            1
+        ],
+        [
+            "\\[2 \\left( \\frac{4}{12} \\right) \\left( \\frac{12 - \\frac{64}{12}}{12} \\right) = 2 \\left( \\frac{4}{12} \\right) \\left( \\frac{144 - 64}{12 \\cdot 12} \\right) = 2 \\left( \\frac{4}{12} \\right) \\left( \\frac{80}{12 \\cdot 12} \\right)\\]",
+            1
+        ],
+        [
+            "$2 \\left( \\frac{4}{12} \\right) \\left( \\frac{80}{12 \\cdot 12} \\right) = 2 \\left( \\frac{80}{12^2} \\right) \\left( \\frac{1}{3} \\right) = \\frac{160}{432} = \\frac{20}{54}$",
+            1
+        ],
+        [
+            "$\\frac{20}{54} = \\frac{10}{27}$",
+            1
+        ],
+        [
+            "$= \\frac{2 \\cdot 4}{12} \\cdot \\left( \\frac{12 - \\frac{64}{12}}{12} \\right) = \\frac{2 \\cdot 4}{12} \\cdot \\left( \\frac{144 - 64}{12 \\cdot 12} \\right) = \\frac{2 \\cdot 4}{12} \\cdot \\left( \\frac{80}{12 \\cdot 12} \\right)$",
+            1
+        ],
+        [
+            "$\\frac{160}{432} = \\frac{20}{54}$",
+            1
+        ],
+        [
+            "$= \\frac{2 \\cdot 4}{12} \\cdot \\left( \\frac{12 - \\frac{64}{12}}{12} \\right) = \\frac{2 \\cdot 4}{12} \\cdot \\left( \\frac{144 - 64}{12 \\cdot 12} \\right) = \\frac{2 \\cdot 4}{12} \\cdot \\left( \\frac{80}{12 \\cdot 12} \\right)$",
+            1
+        ]
+    ],
+    "time": 116.59353446960449,
+    "total_tokens": 10183,
+    "final_answer_tokens": 825,
+    "model": "meta-llama/Llama-Vision-Free"
+}

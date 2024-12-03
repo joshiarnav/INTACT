@@ -1,0 +1,66 @@
+{
+    "problem": "Let $T$ be the set of all triples $(a,b,c)$ of positive integers for which there exist triangles with side lengths $a,$ $b,$ $c.$  Compute\n\\[\\sum_{(a,b,c) \\in T} \\frac{2^a}{3^b 5^c}.\\]",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "For a triangle with side lengths $a,$ $b,$ $c,$ let $s = \\frac{a + b + c}{2},$ and let\n\\begin{align*}\nx &= s - a = \\frac{-a + b + c}{2}, \\\\\ny &= s - b = \\frac{a - b + c}{2}, \\\\\nz &= s - c = \\frac{a + b - c}{2}.\n\\end{align*}By the Triangle Inequality, $x,$ $y,$ and $z$ are all positive.  (This technique is often referred to as the Ravi Substitution.)  Note that\n\\begin{align*}\na &= y + z, \\\\\nb &= x + z, \\\\\nc &= x + y.\n\\end{align*}If $s$ is even, then $x,$ $y,$ and $z$ are all positive integers.  So, we can set $x = i,$ $y = j,$ and $z = k,$ which gives us the parameterization $(a,b,c) = (j + k, i + k, i + j).$\n\nIf $s$ is odd, then $x,$ $y,$ and $z$ are all of the form $n - \\frac{1}{2},$ where $n$ is a positive integer.  So, we can set $x = i - \\frac{1}{2},$ $y = j - \\frac{1}{2},$ and $z = k - \\frac{1}{2}.$  This gives us the parameterization $(a,b,c) = (j + k - 1, i + k - 1, i + j - 1).$\n\nThus, our sum is\n\\begin{align*}\n\\sum_{(a,b,c) \\in T} \\frac{2^a}{3^b 5^c} &= \\sum_{i = 1}^\\infty \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\left( \\frac{2^{j + k}}{3^{i + k} 5^{i + j}} + \\frac{2^{j + k - 1}}{3^{i + k - 1} 5^{i + j - 1}} \\right) \\\\\n&= \\sum_{i = 1}^\\infty \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\left( \\frac{2^{j + k}}{3^{i + k} 5^{i + j}} + \\frac{15}{2} \\cdot \\frac{2^{j + k}}{3^{i + k} 5^{i + j}} \\right) \\\\\n&= \\frac{17}{2} \\sum_{i = 1}^\\infty \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{2^{j + k}}{3^{i + k} 5^{i + j}} \\\\\n&= \\frac{17}{2} \\sum_{i = 1}^\\infty \\frac{1}{15^i} \\sum_{j = 1}^\\infty \\left( \\frac{2}{5} \\right)^j \\sum_{k = 1}^\\infty \\left( \\frac{2}{3} \\right)^k \\\\\n&= \\frac{17}{2} \\cdot \\frac{1/15}{1 - 1/15} \\cdot \\frac{2/5}{1 - 2/5} \\cdot \\frac{2/3}{1 - 2/3} \\\\\n&= \\boxed{\\frac{17}{21}}.\n\\end{align*}",
+    "is_solved": false,
+    "model_solution": "## Step 1: Define the set T\nT = {(a,b,c) | a,b,c are positive integers and a+b > c, a+c > b, b+c > a}\n\n## Step 2: Recognize the conditions for a triangle\na+b > c, a+c > b, b+c > a are necessary and sufficient conditions for a triangle with side lengths a, b, c to exist.\n\n## Step 3: Determine the possible values of a, b, and c\nThe possible values of a, b, and c are all positive integers.\n\n## Step 4: Observe the symmetry of the sum\nThe sum is symmetric in a, b, and c.\n\n## Step 5: Write the sum as a triple sum\n\\sum_{(a,b,c) \\in T} \\frac{2^a}{3^b 5^c} = \\sum_{a=1}^\\infty \\sum_{b=1}^\\infty \\sum_{c=1}^\\infty \\frac{2^a}{3^b 5^c} \\text{ where } a+b > c, a+c > b, b+c > a\n\n##\n## Step 6: Evaluate the sum over c\n\\sum_{c=1}^\\infty \\frac{1}{5^c} = \\frac{1}{4}\n## Step 7: Evaluate the sum over b\n\\sum_{b=1}^\\infty \\frac{1}{3^b} \\sum_{c=1}^{b-1} \\frac{1}{5^c} = \\sum_{b=1}^\\infty \\frac{1}{3^b} \\frac{1}{4} = \\frac{1}{4} \\sum_{b=1}^\\infty \\frac{1}{3^b} = \\frac{1}{4} \\frac{1}{2} = \\frac{1}{8}\n## Step 8: Evaluate the sum over a\n\\sum_{a=1}^\\infty \\frac{2^a}{8} = \\frac{2}{8} \\sum_{a=1}^\\infty \\frac{1}{2^{a-1}} = \\frac{2}{8} \\cdot 2 = \\frac{1}{2}\n\\sum_{(a,b,c) \\in T} \\frac{2^a}{3^b 5^c} = \\frac{1}{2}\n## Step 9: \\sum_{(a,b,c) \\in T} \\frac{2^a}{3^b 5^c} = \\frac{1}{2}\n## Step 10: \\sum_{(a,b,c) \\in T} \\frac{2^a}{3^b 5^c} = \\frac{1}{2}\n## Step 1: Recognize the conditions for a triangle\na+b > c, a+c > b, b+c > a are necessary and sufficient conditions for a triangle with side lengths a, b, c to exist.\n## Step 2\n\\sum_{a=1}^\\infty \\frac{2^a}{8} = \\sum_{a=1}^\\infty \\frac{1}{4} \\left( \\frac{1}{2} \\right)^{a-1}\n## Step 3: Evaluate the sum over a\n\\sum_{a=1}^\\infty \\frac{1}{4} \\left( \\frac{1}{2} \\right)^{a-1} = \\frac{1}{4} \\sum_{a=1}^\\infty \\left( \\frac{1}{2} \\right)^{a-1} = \\frac{1}{4} \\cdot \\frac{1}{1-\\frac{1}{2}} = \\frac{1}{4} \\cdot 2 = \\frac{1}{2}",
+    "steps": [
+        "## Step 1: Define the set T\nT = {(a,b,c) | a,b,c are positive integers and a+b > c, a+c > b, b+c > a}\n\n## Step 2: Recognize the conditions for a triangle\na+b > c, a+c > b, b+c > a are necessary and sufficient conditions for a triangle with side lengths a, b, c to exist.\n\n## Step 3: Determine the possible values of a, b, and c\nThe possible values of a, b, and c are all positive integers.\n\n## Step 4: Observe the symmetry of the sum\nThe sum is symmetric in a, b, and c.\n\n## Step 5: Write the sum as a triple sum\n\\sum_{(a,b,c) \\in T} \\frac{2^a}{3^b 5^c} = \\sum_{a=1}^\\infty \\sum_{b=1}^\\infty \\sum_{c=1}^\\infty \\frac{2^a}{3^b 5^c} \\text{ where } a+b > c, a+c > b, b+c > a\n\n##",
+        "## Step 6: Evaluate the sum over c\n\\sum_{c=1}^\\infty \\frac{1}{5^c} = \\frac{1}{4}",
+        "## Step 7: Evaluate the sum over b\n\\sum_{b=1}^\\infty \\frac{1}{3^b} \\sum_{c=1}^{b-1} \\frac{1}{5^c} = \\sum_{b=1}^\\infty \\frac{1}{3^b} \\frac{1}{4} = \\frac{1}{4} \\sum_{b=1}^\\infty \\frac{1}{3^b} = \\frac{1}{4} \\frac{1}{2} = \\frac{1}{8}",
+        "## Step 8: Evaluate the sum over a\n\\sum_{a=1}^\\infty \\frac{2^a}{8} = \\frac{2}{8} \\sum_{a=1}^\\infty \\frac{1}{2^{a-1}} = \\frac{2}{8} \\cdot 2 = \\frac{1}{2}",
+        "\\sum_{(a,b,c) \\in T} \\frac{2^a}{3^b 5^c} = \\frac{1}{2}",
+        "## Step 9: \\sum_{(a,b,c) \\in T} \\frac{2^a}{3^b 5^c} = \\frac{1}{2}",
+        "## Step 10: \\sum_{(a,b,c) \\in T} \\frac{2^a}{3^b 5^c} = \\frac{1}{2}",
+        "## Step 1: Recognize the conditions for a triangle\na+b > c, a+c > b, b+c > a are necessary and sufficient conditions for a triangle with side lengths a, b, c to exist.",
+        "## Step 2\n\\sum_{a=1}^\\infty \\frac{2^a}{8} = \\sum_{a=1}^\\infty \\frac{1}{4} \\left( \\frac{1}{2} \\right)^{a-1}",
+        "## Step 3: Evaluate the sum over a\n\\sum_{a=1}^\\infty \\frac{1}{4} \\left( \\frac{1}{2} \\right)^{a-1} = \\frac{1}{4} \\sum_{a=1}^\\infty \\left( \\frac{1}{2} \\right)^{a-1} = \\frac{1}{4} \\cdot \\frac{1}{1-\\frac{1}{2}} = \\frac{1}{4} \\cdot 2 = \\frac{1}{2}"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Define the set T\nT = {(a,b,c) | a,b,c are positive integers and a+b > c, a+c > b, b+c > a}\n\n## Step 2: Recognize the conditions for a triangle\na+b > c, a+c > b, b+c > a are necessary and sufficient conditions for a triangle with side lengths a, b, c to exist.\n\n## Step 3: Determine the possible values of a, b, and c\nThe possible values of a, b, and c are all positive integers.\n\n## Step 4: Observe the symmetry of the sum\nThe sum is symmetric in a, b, and c.\n\n## Step 5: Write the sum as a triple sum\n\\sum_{(a,b,c) \\in T} \\frac{2^a}{3^b 5^c} = \\sum_{a=1}^\\infty \\sum_{b=1}^\\infty \\sum_{c=1}^\\infty \\frac{2^a}{3^b 5^c} \\text{ where } a+b > c, a+c > b, b+c > a\n\n##",
+            1
+        ],
+        [
+            "## Step 6: Evaluate the sum over c\n\\sum_{c=1}^\\infty \\frac{1}{5^c} = \\frac{1}{4}",
+            1
+        ],
+        [
+            "## Step 7: Evaluate the sum over b\n\\sum_{b=1}^\\infty \\frac{1}{3^b} \\sum_{c=1}^{b-1} \\frac{1}{5^c} = \\sum_{b=1}^\\infty \\frac{1}{3^b} \\frac{1}{4} = \\frac{1}{4} \\sum_{b=1}^\\infty \\frac{1}{3^b} = \\frac{1}{4} \\frac{1}{2} = \\frac{1}{8}",
+            1
+        ],
+        [
+            "## Step 8: Evaluate the sum over a\n\\sum_{a=1}^\\infty \\frac{2^a}{8} = \\frac{2}{8} \\sum_{a=1}^\\infty \\frac{1}{2^{a-1}} = \\frac{2}{8} \\cdot 2 = \\frac{1}{2}",
+            1
+        ],
+        [
+            "\\sum_{(a,b,c) \\in T} \\frac{2^a}{3^b 5^c} = \\frac{1}{2}",
+            1
+        ],
+        [
+            "## Step 9: \\sum_{(a,b,c) \\in T} \\frac{2^a}{3^b 5^c} = \\frac{1}{2}",
+            1
+        ],
+        [
+            "## Step 10: \\sum_{(a,b,c) \\in T} \\frac{2^a}{3^b 5^c} = \\frac{1}{2}",
+            1
+        ],
+        [
+            "## Step 1: Recognize the conditions for a triangle\na+b > c, a+c > b, b+c > a are necessary and sufficient conditions for a triangle with side lengths a, b, c to exist.",
+            1
+        ],
+        [
+            "## Step 2\n\\sum_{a=1}^\\infty \\frac{2^a}{8} = \\sum_{a=1}^\\infty \\frac{1}{4} \\left( \\frac{1}{2} \\right)^{a-1}",
+            1
+        ],
+        [
+            "## Step 3: Evaluate the sum over a\n\\sum_{a=1}^\\infty \\frac{1}{4} \\left( \\frac{1}{2} \\right)^{a-1} = \\frac{1}{4} \\sum_{a=1}^\\infty \\left( \\frac{1}{2} \\right)^{a-1} = \\frac{1}{4} \\cdot \\frac{1}{1-\\frac{1}{2}} = \\frac{1}{4} \\cdot 2 = \\frac{1}{2}",
+            1
+        ]
+    ],
+    "time": 137.59951996803284,
+    "total_tokens": 13389,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

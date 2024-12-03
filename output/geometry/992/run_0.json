@@ -1,0 +1,66 @@
+{
+    "problem": "The following diagonal is drawn in a regular heptagon, creating a pentagon and a quadrilateral.  What is the measure of $x$, in degrees?  Express your answer as a common fraction.\n\n[asy]\nimport markers;\nfor(int i=0; i <=7; ++i) {\ndraw(dir(360*i/7+90)--dir(360*(i+1)/7+90));\n}\npair A = dir(360*0/7+90);\npair F = dir(360*4/7+90);\npair G = dir(360*5/7+90);\npair H = dir(360*6/7+90);\n\ndraw(A--F);\n\nmarkangle(Label(\"$x$\",Relative(0.5)),n=1,radius=18,G,F,A);\n\n[/asy]",
+    "level": "Level 4",
+    "type": "Geometry",
+    "solution": "The angles of a regular $n$-gon have measure $\\left(\\frac{180(n-2)}n\\right)^\\circ$.  Therefore the angles in a regular heptagon measure \\[y=\\frac{180\\cdot5}7=\\frac{900}7\\]degrees.\n\nWe also note that since the larger angles of the quadrilateral are equal, and the three corresponding sides are equal, this is an isosceles trapezoid.  Therefore we get the following angles:\n\n[asy]\nimport markers;\nfor(int i=0; i <=7; ++i) {\ndraw(dir(360*i/7+90)--dir(360*(i+1)/7+90));\n}\npair A = dir(360*0/7+90);\npair F = dir(360*4/7+90);\npair G = dir(360*5/7+90);\npair H = dir(360*6/7+90);\n\ndraw(A--F);\n\nmarkangle(Label(\"$x$\",Relative(0.5)),n=1,radius=18,G,F,A);\nmarkangle(Label(\"$x$\",Relative(0.5)),n=1,radius=18,F,A,H);\nmarkangle(Label(\"$y$\",Relative(0.5)),n=1,radius=14,A,H,G);\nmarkangle(Label(\"$y$\",Relative(0.5)),n=1,radius=14,H,G,F);\n\n[/asy]\n\nThe sum of the angle measures in a quadrilateral is always $360^\\circ$, so we have  \\[360=x+x+y+y=x+x+\\frac{900}7+\\frac{900}7.\\]Therefore  \\begin{align*}\nx+x&=\\frac{360\\cdot7-900-900}7\\\\\n&=\\frac{180\\cdot14-180\\cdot5-180\\cdot5}7\\\\\n&=\\frac{180\\cdot4}7\\\\\n&=\\frac{720}7.\\\\\n\\end{align*}Since $x$ is half of that, $x=\\boxed{\\frac{360}7}$ degrees.",
+    "is_solved": false,
+    "model_solution": "The sum of angles around any point is $360^{\\circ}$, so the sum of the measures of the angles around $A$ is $360^{\\circ}$.\nSince the given heptagon is regular, each interior angle measures $\\frac{180(7-2)}{7}=135^{\\circ}.$\nSince a regular heptagon has 7 sides, the sum of the measures of its interior angles is $5 \\cdot 180^{\\circ} = 900^{\\circ}$.\nThe sum of the measures of the interior angles of the quadrilateral is $\\frac{180(4-2)}{2}=180^{\\circ}.$\nThe measure of $\\angle FGH$ is $x^{\\circ}$ and the measure of $\\angle GHF$ is $135^{\\circ}$.\nSince $\\angle AFH$ is an exterior angle of the quadrilateral, it is the sum of the measures of the two remote interior angles, so the measure of $\\angle AFH$ is $180^{\\circ}-135^{\\circ}=45^{\\circ}.$\nThe measure of $\\angle FGH$ is $x^{\\circ}$ and the measure of $\\angle GHF$ is $135^{\\circ}$, so the sum of the measures of $\\angle FGH$ and $\\angle GHF$ is $x+135^{\\circ}$.\n$45^{\\circ}=x+135^{\\circ}$.\nSubtract 135 from both sides of the equation $45^{\\circ}=x+135^{\\circ}$.\n$45^{\\circ}-135^{\\circ}=x$",
+    "steps": [
+        "The sum of angles around any point is $360^{\\circ}$, so the sum of the measures of the angles around $A$ is $360^{\\circ}$.",
+        "Since the given heptagon is regular, each interior angle measures $\\frac{180(7-2)}{7}=135^{\\circ}.$",
+        "Since a regular heptagon has 7 sides, the sum of the measures of its interior angles is $5 \\cdot 180^{\\circ} = 900^{\\circ}$.",
+        "The sum of the measures of the interior angles of the quadrilateral is $\\frac{180(4-2)}{2}=180^{\\circ}.$",
+        "The measure of $\\angle FGH$ is $x^{\\circ}$ and the measure of $\\angle GHF$ is $135^{\\circ}$.",
+        "Since $\\angle AFH$ is an exterior angle of the quadrilateral, it is the sum of the measures of the two remote interior angles, so the measure of $\\angle AFH$ is $180^{\\circ}-135^{\\circ}=45^{\\circ}.$",
+        "The measure of $\\angle FGH$ is $x^{\\circ}$ and the measure of $\\angle GHF$ is $135^{\\circ}$, so the sum of the measures of $\\angle FGH$ and $\\angle GHF$ is $x+135^{\\circ}$.",
+        "$45^{\\circ}=x+135^{\\circ}$.",
+        "Subtract 135 from both sides of the equation $45^{\\circ}=x+135^{\\circ}$.",
+        "$45^{\\circ}-135^{\\circ}=x$"
+    ],
+    "full_steps": [
+        [
+            "The sum of angles around any point is $360^{\\circ}$, so the sum of the measures of the angles around $A$ is $360^{\\circ}$.",
+            1
+        ],
+        [
+            "Since the given heptagon is regular, each interior angle measures $\\frac{180(7-2)}{7}=135^{\\circ}.$",
+            1
+        ],
+        [
+            "Since a regular heptagon has 7 sides, the sum of the measures of its interior angles is $5 \\cdot 180^{\\circ} = 900^{\\circ}$.",
+            1
+        ],
+        [
+            "The sum of the measures of the interior angles of the quadrilateral is $\\frac{180(4-2)}{2}=180^{\\circ}.$",
+            1
+        ],
+        [
+            "The measure of $\\angle FGH$ is $x^{\\circ}$ and the measure of $\\angle GHF$ is $135^{\\circ}$.",
+            1
+        ],
+        [
+            "Since $\\angle AFH$ is an exterior angle of the quadrilateral, it is the sum of the measures of the two remote interior angles, so the measure of $\\angle AFH$ is $180^{\\circ}-135^{\\circ}=45^{\\circ}.$",
+            1
+        ],
+        [
+            "The measure of $\\angle FGH$ is $x^{\\circ}$ and the measure of $\\angle GHF$ is $135^{\\circ}$, so the sum of the measures of $\\angle FGH$ and $\\angle GHF$ is $x+135^{\\circ}$.",
+            1
+        ],
+        [
+            "$45^{\\circ}=x+135^{\\circ}$.",
+            1
+        ],
+        [
+            "Subtract 135 from both sides of the equation $45^{\\circ}=x+135^{\\circ}$.",
+            1
+        ],
+        [
+            "$45^{\\circ}-135^{\\circ}=x$",
+            1
+        ]
+    ],
+    "time": 138.60930466651917,
+    "total_tokens": 8649,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

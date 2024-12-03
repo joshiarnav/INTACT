@@ -1,0 +1,56 @@
+{
+    "problem": "Find $(2^{20} + 2^{20} + 2^{20} +2^{21}) \\div 2^{17}$.",
+    "level": "Level 2",
+    "type": "Prealgebra",
+    "solution": "As is often the case, calculating $2^{20}$ by brute force is not practical.  Instead, we will try simplifying the expression and combining some terms.  First, note that $2^{21} = 2 \\cdot 2^{20}$, because of the definition of an exponent.  So, we can rewrite the expression as $(2^{20} + 2^{20} + 2^{20} + 2 \\cdot 2^{20}) \\div 2^{17} = 5 \\cdot 2^{20} \\div 2^{17}$.\n\nUsing the division of powers rule, that equals $5 \\cdot 2^{20-17} = 5 \\cdot 2^3 = 5 \\cdot 8 = \\boxed{40}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: Combine the like terms in the numerator: $(2^{20} + 2^{20} + 2^{20} +2^{21}) = 3(2^{20}) + 2^{21}$\nStep 2: Factor out $2^{17}$ from the terms in the numerator that have it, and change the division by $2^{17}$ to multiplication by $2^{-17}$: $3(2^{20}) + 2^{21} = 2^{17}(3(2^{3}) + 2^{4}) \\cdot 2^{-17}$.\nStep 3: Apply the properties of exponents to simplify the expression: $2^{17}(3(2^{3}) + 2^{4}) \\cdot 2^{-17} = (3(2^{3}) + 2^{4})$\nStep 4: Evaluate the expression inside the parentheses: $(3(2^{3}) + 2^{4}) = (3(8) + 16)$\n$= 24 + 16$\nStep 5: Add the numbers inside the parentheses: $(24 + 16) = 40$\nStep 6: (40)\nStep 4: Evaluate the expression inside the parentheses: $(3(2^{3}) + 2^{4}) = (3(8) + 16)$",
+    "steps": [
+        "Step 1: Combine the like terms in the numerator: $(2^{20} + 2^{20} + 2^{20} +2^{21}) = 3(2^{20}) + 2^{21}$",
+        "Step 2: Factor out $2^{17}$ from the terms in the numerator that have it, and change the division by $2^{17}$ to multiplication by $2^{-17}$: $3(2^{20}) + 2^{21} = 2^{17}(3(2^{3}) + 2^{4}) \\cdot 2^{-17}$.",
+        "Step 3: Apply the properties of exponents to simplify the expression: $2^{17}(3(2^{3}) + 2^{4}) \\cdot 2^{-17} = (3(2^{3}) + 2^{4})$",
+        "Step 4: Evaluate the expression inside the parentheses: $(3(2^{3}) + 2^{4}) = (3(8) + 16)$",
+        "$= 24 + 16$",
+        "Step 5: Add the numbers inside the parentheses: $(24 + 16) = 40$",
+        "Step 6: (40)",
+        "Step 4: Evaluate the expression inside the parentheses: $(3(2^{3}) + 2^{4}) = (3(8) + 16)$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Combine the like terms in the numerator: $(2^{20} + 2^{20} + 2^{20} +2^{21}) = 3(2^{20}) + 2^{21}$",
+            1
+        ],
+        [
+            "Step 2: Factor out $2^{17}$ from the terms in the numerator that have it, and change the division by $2^{17}$ to multiplication by $2^{-17}$: $3(2^{20}) + 2^{21} = 2^{17}(3(2^{3}) + 2^{4}) \\cdot 2^{-17}$.",
+            1
+        ],
+        [
+            "Step 3: Apply the properties of exponents to simplify the expression: $2^{17}(3(2^{3}) + 2^{4}) \\cdot 2^{-17} = (3(2^{3}) + 2^{4})$",
+            1
+        ],
+        [
+            "Step 4: Evaluate the expression inside the parentheses: $(3(2^{3}) + 2^{4}) = (3(8) + 16)$",
+            1
+        ],
+        [
+            "$= 24 + 16$",
+            1
+        ],
+        [
+            "Step 5: Add the numbers inside the parentheses: $(24 + 16) = 40$",
+            1
+        ],
+        [
+            "Step 6: (40)",
+            1
+        ],
+        [
+            "Step 4: Evaluate the expression inside the parentheses: $(3(2^{3}) + 2^{4}) = (3(8) + 16)$",
+            1
+        ]
+    ],
+    "time": 106.37716436386108,
+    "total_tokens": 4686,
+    "final_answer_tokens": 376,
+    "model": "meta-llama/Llama-Vision-Free"
+}

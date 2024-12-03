@@ -1,0 +1,36 @@
+{
+    "problem": "What is the nearest integer to $(2+\\sqrt3)^4$?",
+    "level": "Level 3",
+    "type": "Counting & Probability",
+    "solution": "If we expand this using the binomial theorem, we get a bunch of terms with $\\sqrt3$ in them. To avoid painful estimation, we use the following trick: Add $(2-\\sqrt3)^4$ to this expression. We know that $(2-\\sqrt3)^4$ is small, since $2-\\sqrt3<1$. When we add these together, the $\\sqrt3$ terms magically cancel out. By the Binomial Theorem,  $$(2+\\sqrt3)^4=2^4+4\\cdot2^3\\cdot(\\sqrt3)+6\\cdot2^2\\cdot(\\sqrt3)^2+4\\cdot2\\cdot(\\sqrt3)^3+(\\sqrt3)^4$$ whereas $$(2-\\sqrt3)^4=2^4-4\\cdot2^3\\cdot(\\sqrt3)+6\\cdot2^2\\cdot(\\sqrt3)^2-4\\cdot2\\cdot(\\sqrt3)^3+(\\sqrt3)^4$$ Therefore, their sum is $$2(2^4+6\\cdot2^2(\\sqrt3)^2+(\\sqrt3)^4)=2(16+72+9)=194$$ Since the term we added, $(2-\\sqrt3)^4$, is less than a half (actually, it's less than .01), $\\boxed{194}$ is the closest integer to $(2+\\sqrt3)^4$.",
+    "is_solved": true,
+    "model_solution": "## Step 1: Expand the expression using the binomial theorem\n$(2+\\sqrt3)^4 = \\binom{4}{0}(2)^4(\\sqrt3)^0 + \\binom{4}{1}(2)^3(\\sqrt3)^1 + \\binom{4}{2}(2)^2(\\sqrt3)^2 + \\binom{4}{3}(2)^1(\\sqrt3)^3 + \\binom{4}{4}(2)^0(\\sqrt3)^4$\n\n## Step 2: Simplify the expression\n$(2+\\sqrt3)^4 = 16 + 4(8\\sqrt3) + 6(4)(3) + 4(2)(3\\sqrt3) + 9$\n## Step 3: Perform the arithmetic\n$(2+\\sqrt3)^4 = 16 + 32\\sqrt3 + 72 + 24\\sqrt3 + 9$\n\n## Step 4: Combine like terms\n$(2+\\sqrt3)^4 = 97 + 56\\sqrt3$\n\n## Step 5: Calculate the decimal approximation of $56\\sqrt3$\n$56\\sqrt3 \\approx 97.41$\n\n## Step 6: Add the decimal approximation to 97\n$97 + 97.41 = 194.41$\n\n## Step 7: Round the sum to the nearest integer\n194.41 rounded is 194\n## Step 8: 194\n## Step 9: \nThe final answer is: $\\boxed{194}$",
+    "steps": [
+        "## Step 1: Expand the expression using the binomial theorem\n$(2+\\sqrt3)^4 = \\binom{4}{0}(2)^4(\\sqrt3)^0 + \\binom{4}{1}(2)^3(\\sqrt3)^1 + \\binom{4}{2}(2)^2(\\sqrt3)^2 + \\binom{4}{3}(2)^1(\\sqrt3)^3 + \\binom{4}{4}(2)^0(\\sqrt3)^4$\n\n## Step 2: Simplify the expression\n$(2+\\sqrt3)^4 = 16 + 4(8\\sqrt3) + 6(4)(3) + 4(2)(3\\sqrt3) + 9$",
+        "## Step 3: Perform the arithmetic\n$(2+\\sqrt3)^4 = 16 + 32\\sqrt3 + 72 + 24\\sqrt3 + 9$\n\n## Step 4: Combine like terms\n$(2+\\sqrt3)^4 = 97 + 56\\sqrt3$\n\n## Step 5: Calculate the decimal approximation of $56\\sqrt3$\n$56\\sqrt3 \\approx 97.41$\n\n## Step 6: Add the decimal approximation to 97\n$97 + 97.41 = 194.41$\n\n## Step 7: Round the sum to the nearest integer\n194.41 rounded is 194",
+        "## Step 8: 194",
+        "## Step 9: \nThe final answer is: $\\boxed{194}$"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Expand the expression using the binomial theorem\n$(2+\\sqrt3)^4 = \\binom{4}{0}(2)^4(\\sqrt3)^0 + \\binom{4}{1}(2)^3(\\sqrt3)^1 + \\binom{4}{2}(2)^2(\\sqrt3)^2 + \\binom{4}{3}(2)^1(\\sqrt3)^3 + \\binom{4}{4}(2)^0(\\sqrt3)^4$\n\n## Step 2: Simplify the expression\n$(2+\\sqrt3)^4 = 16 + 4(8\\sqrt3) + 6(4)(3) + 4(2)(3\\sqrt3) + 9$",
+            1
+        ],
+        [
+            "## Step 3: Perform the arithmetic\n$(2+\\sqrt3)^4 = 16 + 32\\sqrt3 + 72 + 24\\sqrt3 + 9$\n\n## Step 4: Combine like terms\n$(2+\\sqrt3)^4 = 97 + 56\\sqrt3$\n\n## Step 5: Calculate the decimal approximation of $56\\sqrt3$\n$56\\sqrt3 \\approx 97.41$\n\n## Step 6: Add the decimal approximation to 97\n$97 + 97.41 = 194.41$\n\n## Step 7: Round the sum to the nearest integer\n194.41 rounded is 194",
+            1
+        ],
+        [
+            "## Step 8: 194",
+            1
+        ],
+        [
+            "## Step 9: \nThe final answer is: $\\boxed{194}$",
+            1
+        ]
+    ],
+    "time": 51.75742769241333,
+    "total_tokens": 2790,
+    "final_answer_tokens": 395,
+    "model": "meta-llama/Llama-Vision-Free"
+}

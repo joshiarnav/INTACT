@@ -1,0 +1,31 @@
+{
+    "problem": "The vertices of a triangle are the points of intersection of the line $y = -x-1$, the line $x=2$, and $y = \\frac{1}{5}x+\\frac{13}{5}$. Find an equation of the circle passing through all three vertices.\n\n[asy]\ndraw( (-5,0) -- (5,0), Arrows); draw( (0,-3) -- (0,4), Arrows);\ndraw( (-5,0) -- (5,0), linewidth(.8)); draw( (0,-3) -- (0,4), linewidth(.8));\ndraw( (-4, 3) -- (3, -4)); draw( (-4 , 9/5) -- (3, 16/5)); draw( (2, -5) -- (2, 4));\n\n[/asy]",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "Let $A, B,$ and $C$ be the points of intersection in quadrants 4, 1, and 2 respectively. To find the coordinates of $A, B,$ and $C$, we take two line equations at a time and solve for $x$ and $y$. Doing so yields points $A=(2,-3)$, $B=(2,3)$, and $C=(-3,2)$ as vertices of the triangle.\n\nThe circle that passes through the three vertices is the circumcircle of the triangle, and by definition, its center is the intersection of the perpendicular bisectors of the triangle's sides. To find the center, it suffices to find two perpendicular bisectors (since the third must pass through the intersection of the first two). We find that the perpendicular bisector of $AB$ is the line $y=0$ and the perpendicular bisector of $AC$ is the line $y=x$. These two perpendicular bisectors intersect at $(0,0)$, which is the center of our desired circle.\n\nTo find the radius of our circle, we calculate the distance between the origin and any one of the vertices. The radius has length $\\sqrt{13}$. Thus, our circle has formula $(x-0)^2 + (y-0)^2 = (\\sqrt{13})^2$, or $\\boxed{x^2 + y^2 = 13}$.",
+    "is_solved": true,
+    "model_solution": "The vertices of the triangle are $(-4,3)$, $(2,-5)$, and $(2,\\frac{16}{5})$.\nSince the center of the circle is the centroid of the triangle, the center of the circle is $\\left(\\frac{-4+2+2}{3},\\frac{3-5+16/5}{3}\\right)=\\left(\\frac{-4+2+2}{3},\\frac{3-5+16/5}{3}\\right)=\\left(\\frac{-4+4}{3},\\frac{15-25+16}{15}\\right)=\\left(0,\\frac{-4}{15}\\right)$.\nThe distance from the center $\\left(0,\\frac{-4}{15}\\right)$ of the circle to any of the vertices is the radius of the circle. Using the point $(-4,3)$, we have\n\n$$r^2=\\left(0-\\left(-4\\right)\\right)^2+\\left(0-\\frac{-4}{15}\\right)^2=16+\\left(\\frac{4}{15}\\right)^2$$\nFinal Answer: The final answer is $\\boxed{r^2=16+\\frac{16}{225}=\\frac{400}{225}}$.",
+    "steps": [
+        "The vertices of the triangle are $(-4,3)$, $(2,-5)$, and $(2,\\frac{16}{5})$.",
+        "Since the center of the circle is the centroid of the triangle, the center of the circle is $\\left(\\frac{-4+2+2}{3},\\frac{3-5+16/5}{3}\\right)=\\left(\\frac{-4+2+2}{3},\\frac{3-5+16/5}{3}\\right)=\\left(\\frac{-4+4}{3},\\frac{15-25+16}{15}\\right)=\\left(0,\\frac{-4}{15}\\right)$.",
+        "The distance from the center $\\left(0,\\frac{-4}{15}\\right)$ of the circle to any of the vertices is the radius of the circle. Using the point $(-4,3)$, we have\n\n$$r^2=\\left(0-\\left(-4\\right)\\right)^2+\\left(0-\\frac{-4}{15}\\right)^2=16+\\left(\\frac{4}{15}\\right)^2$$\nFinal Answer: The final answer is $\\boxed{r^2=16+\\frac{16}{225}=\\frac{400}{225}}$."
+    ],
+    "full_steps": [
+        [
+            "The vertices of the triangle are $(-4,3)$, $(2,-5)$, and $(2,\\frac{16}{5})$.",
+            1
+        ],
+        [
+            "Since the center of the circle is the centroid of the triangle, the center of the circle is $\\left(\\frac{-4+2+2}{3},\\frac{3-5+16/5}{3}\\right)=\\left(\\frac{-4+2+2}{3},\\frac{3-5+16/5}{3}\\right)=\\left(\\frac{-4+4}{3},\\frac{15-25+16}{15}\\right)=\\left(0,\\frac{-4}{15}\\right)$.",
+            1
+        ],
+        [
+            "The distance from the center $\\left(0,\\frac{-4}{15}\\right)$ of the circle to any of the vertices is the radius of the circle. Using the point $(-4,3)$, we have\n\n$$r^2=\\left(0-\\left(-4\\right)\\right)^2+\\left(0-\\frac{-4}{15}\\right)^2=16+\\left(\\frac{4}{15}\\right)^2$$\nFinal Answer: The final answer is $\\boxed{r^2=16+\\frac{16}{225}=\\frac{400}{225}}$.",
+            1
+        ]
+    ],
+    "time": 38.90897488594055,
+    "total_tokens": 2342,
+    "final_answer_tokens": 507,
+    "model": "meta-llama/Llama-Vision-Free"
+}

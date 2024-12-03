@@ -1,0 +1,66 @@
+{
+    "problem": "The graph of the rational function $\\frac{p(x)}{q(x)}$ is shown below, with a horizontal asymptote at $y = 0$. If $q(x)$ is quadratic, $p(2)=2$, and $q(-1) = 18$, find $p(x) + q(x).$\n[asy]\nsize(8cm);\nimport graph;\n\nLabel f; \nf.p=fontsize(6); \n\nreal f(real x) {return 2*(x-1)/(3*(x-2)*(x-1));}\n\nint gridsize = 5;\ndraw((-gridsize,0)--(gridsize,0), black+1bp, Arrows(8));\ndraw((0,-gridsize)--(0, gridsize), black+1bp, Arrows(8));\nlabel(\"$x$\", (gridsize, 0), E);\nlabel(\"$y$\", (0, gridsize), N);\nlabel(\"$0$\", (0,0),SE, p=fontsize(8pt));\nfor (int i=-gridsize+1; i<0; ++i){\n    label(\"$\"+string(i)+\"$\",(i,0),S, p=fontsize(8pt));\n    label(\"$\"+string(i)+\"$\",(0,i),E, p=fontsize(8pt));}\nfor (int i=1; i<=gridsize-1; ++i){\n    label(\"$\"+string(i)+\"$\",(i,0),S, p=fontsize(8pt));\n    label(\"$\"+string(i)+\"$\",(0,i),E, p=fontsize(8pt));}\n\n\n\ndraw(graph(f,-5,.85));\ndraw(graph(f,1.15,1.85));\ndraw(graph(f,2.15,5));\ndraw((2,-5)--(2,5), dashed);\ndraw(circle((1,-2/3),.15));\n\n[/asy]",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "The graph has a horizontal asymptote $y = 0,$ a hole at $x=1$, and a vertical asymptote at $x=2$. Since $q(x)$ is a quadratic, and we have a horizontal asymptote at $y = 0,$ $p(x)$ must be linear (have degree 1).\n\nSince we have a hole at $x=1$, there must be a factor of $x-1$ in both $p(x)$ and $q(x)$. Lastly, since there is a vertical asymptote at $x=2$, the denominator $q(x)$ must have a factor of $x-2$. Since $q(x)$ is quadratic, we know that $q(x) = b(x-1)(x-2)$ for some $b.$ It follows that $p(x) = a(x-1),$ for some constant $a.$ Since $p(2) = 2$, we have $a(2-1) = 2$ and $a=2.$ Since $q(-1) = 18,$ we have $b(-1-1)(-1-2) = 18$ and hence $b=3.$\n\nSo $p(x) = 2(x - 1) = 2x - 2$ and $q(x) = 3(x - 1)(x - 2) = 3x^2 - 9x + 6,$ so $p(x) + q(x) = \\boxed{3x^2 - 7x + 4}.$",
+    "is_solved": false,
+    "model_solution": "The degree of $p(x)$ is 1.\nThe degree of $q(x)$ is 2.\nThe degree of $p(x)$ is less than the degree of $q(x)$, so the horizontal asymptote of the graph of the rational function is $y=0$.\nThe leading coefficient of the numerator is nonzero, so $p(x)$ never equals zero.\nSince $p(2)=2$ and the degree of $p(x)$ is 1, we know that $p(x)=ax+b$ for some constants $a$ and $b$.\nSince $p(x)=ax+b$ for some constants $a$ and $b$, $p(2)=2a+b$.\nWe also know that $p(2) = 2$, so $2a+b=2$.\nSince $q(x)$ is quadratic, $q(x)$ can be written as $cx^2+dx+e$ for constants $c$, $d$, and $e$.\nNote that $q(-1) = 18$ and $q(x) = cx^2+dx+e$.\nSince $q(-1) = 18$ and $q(x) = cx^2+dx+e$, we have that $c(-1)^2+d(-1)+e = 18$.\nTherefore, $c-d+e=18$.\nSince $q(x)=cx^2+dx+e$, the graph of the rational function has a hole at $x=1$, and the graph of the function has a vertical asymptote at $x=2$, the denominator $q(x)$ must factor as $q(x)=c(x-1)(x-2)$ for some nonzero constant $c$.\nSince $q(x)$ factors as $c(x-1)(x-2)$ for some nonzero constant $c$, $q(x) = c(x-1)(x-2)$.\nFinal Answer:",
+    "steps": [
+        "The degree of $p(x)$ is 1.",
+        "The degree of $q(x)$ is 2.",
+        "The degree of $p(x)$ is less than the degree of $q(x)$, so the horizontal asymptote of the graph of the rational function is $y=0$.",
+        "The leading coefficient of the numerator is nonzero, so $p(x)$ never equals zero.",
+        "Since $p(2)=2$ and the degree of $p(x)$ is 1, we know that $p(x)=ax+b$ for some constants $a$ and $b$.",
+        "Since $p(x)=ax+b$ for some constants $a$ and $b$, $p(2)=2a+b$.\nWe also know that $p(2) = 2$, so $2a+b=2$.",
+        "Since $q(x)$ is quadratic, $q(x)$ can be written as $cx^2+dx+e$ for constants $c$, $d$, and $e$.\nNote that $q(-1) = 18$ and $q(x) = cx^2+dx+e$.",
+        "Since $q(-1) = 18$ and $q(x) = cx^2+dx+e$, we have that $c(-1)^2+d(-1)+e = 18$.\nTherefore, $c-d+e=18$.",
+        "Since $q(x)=cx^2+dx+e$, the graph of the rational function has a hole at $x=1$, and the graph of the function has a vertical asymptote at $x=2$, the denominator $q(x)$ must factor as $q(x)=c(x-1)(x-2)$ for some nonzero constant $c$.",
+        "Since $q(x)$ factors as $c(x-1)(x-2)$ for some nonzero constant $c$, $q(x) = c(x-1)(x-2)$.\nFinal Answer:"
+    ],
+    "full_steps": [
+        [
+            "The degree of $p(x)$ is 1.",
+            1
+        ],
+        [
+            "The degree of $q(x)$ is 2.",
+            1
+        ],
+        [
+            "The degree of $p(x)$ is less than the degree of $q(x)$, so the horizontal asymptote of the graph of the rational function is $y=0$.",
+            1
+        ],
+        [
+            "The leading coefficient of the numerator is nonzero, so $p(x)$ never equals zero.",
+            1
+        ],
+        [
+            "Since $p(2)=2$ and the degree of $p(x)$ is 1, we know that $p(x)=ax+b$ for some constants $a$ and $b$.",
+            1
+        ],
+        [
+            "Since $p(x)=ax+b$ for some constants $a$ and $b$, $p(2)=2a+b$.\nWe also know that $p(2) = 2$, so $2a+b=2$.",
+            1
+        ],
+        [
+            "Since $q(x)$ is quadratic, $q(x)$ can be written as $cx^2+dx+e$ for constants $c$, $d$, and $e$.\nNote that $q(-1) = 18$ and $q(x) = cx^2+dx+e$.",
+            1
+        ],
+        [
+            "Since $q(-1) = 18$ and $q(x) = cx^2+dx+e$, we have that $c(-1)^2+d(-1)+e = 18$.\nTherefore, $c-d+e=18$.",
+            1
+        ],
+        [
+            "Since $q(x)=cx^2+dx+e$, the graph of the rational function has a hole at $x=1$, and the graph of the function has a vertical asymptote at $x=2$, the denominator $q(x)$ must factor as $q(x)=c(x-1)(x-2)$ for some nonzero constant $c$.",
+            1
+        ],
+        [
+            "Since $q(x)$ factors as $c(x-1)(x-2)$ for some nonzero constant $c$, $q(x) = c(x-1)(x-2)$.\nFinal Answer:",
+            1
+        ]
+    ],
+    "time": 138.9784083366394,
+    "total_tokens": 12568,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

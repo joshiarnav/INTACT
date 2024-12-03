@@ -1,0 +1,66 @@
+{
+    "problem": "Let $A$ and $B$ be two opposite corners of a unit cube, and let $C$ be another vertex of the cube other than $A$ and $B.$  Find the distance from $C$ to line $AB.$",
+    "level": "Level 5",
+    "type": "Precalculus",
+    "solution": "We can take $A = (0,0,0),$ $B = (1,1,1),$ and $C = (0,0,1).$  Then line is $AB$ is parameterized by $(t,t,t).$\n\n[asy]\nimport three;\n\nsize(180);\ncurrentprojection = perspective(6,3,2);\n\ntriple I = (1,0,0), J = (0,1,0), K = (0,0,1), O = (0,0,0);\ntriple A = (0,0,0), B = (1,1,1), C = (0,0,1), P = interp(A,B,1/3);\n\ndraw((1,0,0)--(1,0,1)--(0,0,1)--(0,1,1)--(0,1,0)--(1,1,0)--cycle);\ndraw((0,0,0)--(1,0,0),dashed);\ndraw((0,0,0)--(0,1,0),dashed);\ndraw((0,0,0)--(0,0,1),dashed);\ndraw((0,1,1)--(1,1,1));\ndraw((1,0,1)--(1,1,1));\ndraw((1,1,0)--(1,1,1));\ndraw(A--B,dashed);\ndraw(C--P,dashed);\n\nlabel(\"$A$\", A, S);\nlabel(\"$B$\", B, N);\nlabel(\"$C$\", C, N);\nlabel(\"$P$\", P, SE);\n[/asy]\n\nLet $P = (t,t,t).$  Then lines $CP$ and $AB$ are perpendicular, so their respective vectors are orthgonal.  Hence,\n\\[\\begin{pmatrix} t \\\\ t \\\\ t - 1 \\end{pmatrix} \\cdot \\begin{pmatrix} 1 \\\\ 1 \\\\ 1 \\end{pmatrix} = 0.\\]Then $(t)(1) + (t)(1) + (t - 1)(1) = 0.$  Solving, we find $t = \\frac{1}{3}.$\n\nThen $P = \\left( \\frac{1}{3}, \\frac{1}{3}, \\frac{1}{3} \\right),$ and so $CP = \\boxed{\\frac{\\sqrt{6}}{3}}.$",
+    "is_solved": false,
+    "model_solution": "Step 1:  We are tasked with finding the distance from point $C$ to line $AB$ in a unit cube, where $A$ and $B$ are opposite corners and $C$ is another vertex.\nStep 2:  We begin by considering the coordinates of points $A,$ $B,$ and $C.$ Let $A = (0,0,0),$ $B = (1,1,1),$ and $C = (x,y,z).$\nStep 3:  The line $AB$ can be parameterized as $\\vec{r} = t\\langle 1,1,1 \\rangle,$ where $t$ is a parameter, and the line can be expressed in terms of $t.$\nStep 4:  We want to find the point on the line $AB$ that is closest to point $C.$ The point on the line $AB$ at distance $d$ from $C$ must lie on the line perpendicular to $AB.$\nStep 5:  The vector from $C$ to the point on the line $AB$ can be written as $\\langle 1 - x, 1 - y, 1 - z \\rangle.$\nStep 6:\nThe vector from $C$ to the point on the line $AB$ is perpendicular to line $AB,$ so the dot product of $\\langle 1 - x, 1 - y, 1 - z \\rangle$ and $\\langle 1,1,1 \\rangle$ must be equal to 0.\n$(1 - x) + (1 - y) + (1 - z) = 0.$\nStep 7:\nIf we rewrite the equation as $x + y + z = 3,$ we find that the coordinates of point $C$ must satisfy this equation.\n\nThis is the only information we have about the coordinates of $C$ at this point.\nStep 8:  The distance from point $C$ to line $AB$ is the distance from $C$ to the point on the line $AB$ that is closest to $C.$ To find this distance, we can use the formula for the distance between a point and a line, which is given by $d = \\frac{\\| \\mathbf{v} \\times \\mathbf{w} \\|}{\\| \\mathbf{v} \\|},$ where $\\mathbf{v}$ is a vector from a point on the line to the point off the line, and $\\mathbf{w}$ is a vector along the line.\nStep 9:\nWe can use the given distance formula to find the distance from $C$ to line $AB.$ We have $\\mathbf{v} = \\langle 1 - x, 1 - y, 1 - z \\rangle$ and $\\mathbf{w} = \\langle 1, 1, 1 \\rangle.$ The cross product of $\\mathbf{v}$ and $\\mathbf{w}$ is given by $\\begin{vmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ 1 - x & 1 - y & 1 - z \\\\ 1 & 1 & 1 \\end{vmatrix}.$\nStep 10:\n$\\begin{vmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ 1 - x & 1 - y & 1 - z \\\\ 1 & 1 & 1 \\end{vmatrix} = (1 - y - 1 + z)\\mathbf{i} - (1 - x - 1 + z)\\mathbf{j} + (1 - x - 1 + y)\\mathbf{k}$\n$= (z - y)\\mathbf{i} - (x - z)\\mathbf{j} + (y - x)\\mathbf{k}$\n$= \\langle z - y, x - z, y - x \\rangle.$\nThe magnitude of the cross product is $\\| \\mathbf{v} \\times \\mathbf{w} \\| = \\sqrt{(z - y)^2 + (x - z)^2 + (y - x)^2}.$\n$\\| \\mathbf{v} \\| = \\sqrt{(1 - x)^2 + (1 - y)^2 + (1 - z)^2}.$\n$\\| \\mathbf{v} \\times \\mathbf{w} \\| = \\sqrt{(z - y)^2 + (x - z)^2 + (y - x)^2} = \\sqrt{x^2 + y^2 + z^2 - 2xy - 2xz + 2yz}$\n$= \\sqrt{x^2 + y^2 + z^2 - 2xy - 2xz + 2yz - 3 + 3}$\n$= \\sqrt{(x - y - 1)^2 + (y - z - 1)^2 + (z - x - 1)^2 + 3}.$",
+    "steps": [
+        "Step 1:  We are tasked with finding the distance from point $C$ to line $AB$ in a unit cube, where $A$ and $B$ are opposite corners and $C$ is another vertex.\nStep 2:  We begin by considering the coordinates of points $A,$ $B,$ and $C.$ Let $A = (0,0,0),$ $B = (1,1,1),$ and $C = (x,y,z).$\nStep 3:  The line $AB$ can be parameterized as $\\vec{r} = t\\langle 1,1,1 \\rangle,$ where $t$ is a parameter, and the line can be expressed in terms of $t.$\nStep 4:  We want to find the point on the line $AB$ that is closest to point $C.$ The point on the line $AB$ at distance $d$ from $C$ must lie on the line perpendicular to $AB.$\nStep 5:  The vector from $C$ to the point on the line $AB$ can be written as $\\langle 1 - x, 1 - y, 1 - z \\rangle.$",
+        "Step 6:\nThe vector from $C$ to the point on the line $AB$ is perpendicular to line $AB,$ so the dot product of $\\langle 1 - x, 1 - y, 1 - z \\rangle$ and $\\langle 1,1,1 \\rangle$ must be equal to 0.",
+        "$(1 - x) + (1 - y) + (1 - z) = 0.$",
+        "Step 7:\nIf we rewrite the equation as $x + y + z = 3,$ we find that the coordinates of point $C$ must satisfy this equation.\n\nThis is the only information we have about the coordinates of $C$ at this point.",
+        "Step 8:  The distance from point $C$ to line $AB$ is the distance from $C$ to the point on the line $AB$ that is closest to $C.$ To find this distance, we can use the formula for the distance between a point and a line, which is given by $d = \\frac{\\| \\mathbf{v} \\times \\mathbf{w} \\|}{\\| \\mathbf{v} \\|},$ where $\\mathbf{v}$ is a vector from a point on the line to the point off the line, and $\\mathbf{w}$ is a vector along the line.",
+        "Step 9:\nWe can use the given distance formula to find the distance from $C$ to line $AB.$ We have $\\mathbf{v} = \\langle 1 - x, 1 - y, 1 - z \\rangle$ and $\\mathbf{w} = \\langle 1, 1, 1 \\rangle.$ The cross product of $\\mathbf{v}$ and $\\mathbf{w}$ is given by $\\begin{vmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ 1 - x & 1 - y & 1 - z \\\\ 1 & 1 & 1 \\end{vmatrix}.$",
+        "Step 10:\n$\\begin{vmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ 1 - x & 1 - y & 1 - z \\\\ 1 & 1 & 1 \\end{vmatrix} = (1 - y - 1 + z)\\mathbf{i} - (1 - x - 1 + z)\\mathbf{j} + (1 - x - 1 + y)\\mathbf{k}$\n$= (z - y)\\mathbf{i} - (x - z)\\mathbf{j} + (y - x)\\mathbf{k}$\n$= \\langle z - y, x - z, y - x \\rangle.$",
+        "The magnitude of the cross product is $\\| \\mathbf{v} \\times \\mathbf{w} \\| = \\sqrt{(z - y)^2 + (x - z)^2 + (y - x)^2}.$",
+        "$\\| \\mathbf{v} \\| = \\sqrt{(1 - x)^2 + (1 - y)^2 + (1 - z)^2}.$",
+        "$\\| \\mathbf{v} \\times \\mathbf{w} \\| = \\sqrt{(z - y)^2 + (x - z)^2 + (y - x)^2} = \\sqrt{x^2 + y^2 + z^2 - 2xy - 2xz + 2yz}$\n$= \\sqrt{x^2 + y^2 + z^2 - 2xy - 2xz + 2yz - 3 + 3}$\n$= \\sqrt{(x - y - 1)^2 + (y - z - 1)^2 + (z - x - 1)^2 + 3}.$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We are tasked with finding the distance from point $C$ to line $AB$ in a unit cube, where $A$ and $B$ are opposite corners and $C$ is another vertex.\nStep 2:  We begin by considering the coordinates of points $A,$ $B,$ and $C.$ Let $A = (0,0,0),$ $B = (1,1,1),$ and $C = (x,y,z).$\nStep 3:  The line $AB$ can be parameterized as $\\vec{r} = t\\langle 1,1,1 \\rangle,$ where $t$ is a parameter, and the line can be expressed in terms of $t.$\nStep 4:  We want to find the point on the line $AB$ that is closest to point $C.$ The point on the line $AB$ at distance $d$ from $C$ must lie on the line perpendicular to $AB.$\nStep 5:  The vector from $C$ to the point on the line $AB$ can be written as $\\langle 1 - x, 1 - y, 1 - z \\rangle.$",
+            1
+        ],
+        [
+            "Step 6:\nThe vector from $C$ to the point on the line $AB$ is perpendicular to line $AB,$ so the dot product of $\\langle 1 - x, 1 - y, 1 - z \\rangle$ and $\\langle 1,1,1 \\rangle$ must be equal to 0.",
+            1
+        ],
+        [
+            "$(1 - x) + (1 - y) + (1 - z) = 0.$",
+            1
+        ],
+        [
+            "Step 7:\nIf we rewrite the equation as $x + y + z = 3,$ we find that the coordinates of point $C$ must satisfy this equation.\n\nThis is the only information we have about the coordinates of $C$ at this point.",
+            1
+        ],
+        [
+            "Step 8:  The distance from point $C$ to line $AB$ is the distance from $C$ to the point on the line $AB$ that is closest to $C.$ To find this distance, we can use the formula for the distance between a point and a line, which is given by $d = \\frac{\\| \\mathbf{v} \\times \\mathbf{w} \\|}{\\| \\mathbf{v} \\|},$ where $\\mathbf{v}$ is a vector from a point on the line to the point off the line, and $\\mathbf{w}$ is a vector along the line.",
+            1
+        ],
+        [
+            "Step 9:\nWe can use the given distance formula to find the distance from $C$ to line $AB.$ We have $\\mathbf{v} = \\langle 1 - x, 1 - y, 1 - z \\rangle$ and $\\mathbf{w} = \\langle 1, 1, 1 \\rangle.$ The cross product of $\\mathbf{v}$ and $\\mathbf{w}$ is given by $\\begin{vmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ 1 - x & 1 - y & 1 - z \\\\ 1 & 1 & 1 \\end{vmatrix}.$",
+            1
+        ],
+        [
+            "Step 10:\n$\\begin{vmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ 1 - x & 1 - y & 1 - z \\\\ 1 & 1 & 1 \\end{vmatrix} = (1 - y - 1 + z)\\mathbf{i} - (1 - x - 1 + z)\\mathbf{j} + (1 - x - 1 + y)\\mathbf{k}$\n$= (z - y)\\mathbf{i} - (x - z)\\mathbf{j} + (y - x)\\mathbf{k}$\n$= \\langle z - y, x - z, y - x \\rangle.$",
+            1
+        ],
+        [
+            "The magnitude of the cross product is $\\| \\mathbf{v} \\times \\mathbf{w} \\| = \\sqrt{(z - y)^2 + (x - z)^2 + (y - x)^2}.$",
+            1
+        ],
+        [
+            "$\\| \\mathbf{v} \\| = \\sqrt{(1 - x)^2 + (1 - y)^2 + (1 - z)^2}.$",
+            1
+        ],
+        [
+            "$\\| \\mathbf{v} \\times \\mathbf{w} \\| = \\sqrt{(z - y)^2 + (x - z)^2 + (y - x)^2} = \\sqrt{x^2 + y^2 + z^2 - 2xy - 2xz + 2yz}$\n$= \\sqrt{x^2 + y^2 + z^2 - 2xy - 2xz + 2yz - 3 + 3}$\n$= \\sqrt{(x - y - 1)^2 + (y - z - 1)^2 + (z - x - 1)^2 + 3}.$",
+            1
+        ]
+    ],
+    "time": 135.02192330360413,
+    "total_tokens": 14695,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

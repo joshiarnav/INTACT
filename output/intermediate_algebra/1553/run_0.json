@@ -1,0 +1,66 @@
+{
+    "problem": "For a complex number $z,$ compute the minimum value of\n\\[|z + 5 - 3i| + |z - 7 + 2i|.\\]",
+    "level": "Level 4",
+    "type": "Intermediate Algebra",
+    "solution": "Geometrically, $|z + 5 - 3i|$ is the distance between the complex numbers $z$ and $-5 + 3i$ in the complex plane, and $|z - 7 + 2i|$ is the distance between $z$ and $7 - 2i.$\n\n[asy]\nunitsize(0.4 cm);\n\npair A, B, Z;\n\nA = (-5,3);\nB = (7,-2);\nZ = (6,6);\n\ndraw(A--B);\ndraw(A--Z--B);\n\ndot(\"$-5 + 3i$\", A, NW);\ndot(\"$7 - 2i$\", B, SE);\ndot(\"$z$\", Z, NE);\n[/asy]\n\nBy the Triangle Inequality, the sum of the distances is minimized when $z$ lies on the line segment connecting the two complex numbers $-5 + 3i$ and $7- 2i,$ in which case the sum of the distances is simply $|(5 - 3i) - (-7 + 2i)| = |12 - 5i| = \\boxed{13}.$",
+    "is_solved": false,
+    "model_solution": "Step 1:  We are given the expression $|z + 5 - 3i| + |z - 7 + 2i|.$\nStep 2:  To find the minimum value of this expression, we can use the Triangle Inequality, which states that for any complex numbers $a$ and $b,$ we have $|a + b| \\le |a| + |b|.$\nStep 3:  We want to apply the Triangle Inequality to the expression $|z + 5 - 3i| + |z - 7 + 2i|,$ so let's rewrite it in a form that is more amenable to the Triangle Inequality.\nStep 4:  We can write $|z + 5 - 3i| + |z - 7 + 2i| = |(z - a) + (a - 5 + 3i)| + |(z - a) - (a - 7 - 2i)|,$ where $a$ is a complex number that we will determine later.\nStep 5:  Using the Triangle Inequality, we get $|z + 5 - 3\nStep 6:  To find the value of $a$ that minimizes the expression, we take the derivative of the expression with respect to $a,$ set it equal to zero, and solve for $a.$\nStep 7:  By the Triangle Inequality, we have $|z + 5 - 3i| + |z - 7 + 2i| \\ge |(z - a) + (a - 5 + 3i)| + |(z - a) - (a - 7 - 2i)| = |2z - 2 + 4i|.$\nStep 8: $|2z - 2 + 4i| = 2 |z - 1 + 2i|.$\n$|2z - 2 + 4i| \\ge 2 \\sqrt{(z - 1 + 2i)(\\overline{z - 1 + 2i})}.$\nStep 9: $|2z - 2 + 4i| \\ge 2 \\sqrt{(z - 1 + 2i)(\\overline{z - 1 + 2i})} = 2 \\sqrt{(z - 1)^2 - 4}.$\nSince $|2z - 2 + 4i| = 2 |z - 1 + 2i| = 2 \\sqrt{(z - 1)^2 - 4}$ attains its minimum value when $z - 1 = 2$, the minimum value of $|z + 5 - 3i| + |z - 7 + 2i|$ is $\\boxed{2 \\sqrt{29}}.$\nStep 10: $|2z - 2 + 4i| \\ge 2 \\sqrt{(z - 1)^2 - 4}.$\nStep 11: $|2z - 2 + 4i| = 2 |z - 1 + 2i| = 2 \\sqrt{(z - 1)^2 - 4}.$\nSince $|2z - 2 + 4i| = 2 |z - 1 + 2i| = 2 \\sqrt{(z - 1)^2 - 4}$ attains its minimum value when $z - 1 = 2$, the minimum value of $|z + 5 - 3i| + |z - 7 + 2i|$ is $\\boxed{2 \\sqrt{29}}.$",
+    "steps": [
+        "Step 1:  We are given the expression $|z + 5 - 3i| + |z - 7 + 2i|.$\nStep 2:  To find the minimum value of this expression, we can use the Triangle Inequality, which states that for any complex numbers $a$ and $b,$ we have $|a + b| \\le |a| + |b|.$\nStep 3:  We want to apply the Triangle Inequality to the expression $|z + 5 - 3i| + |z - 7 + 2i|,$ so let's rewrite it in a form that is more amenable to the Triangle Inequality.\nStep 4:  We can write $|z + 5 - 3i| + |z - 7 + 2i| = |(z - a) + (a - 5 + 3i)| + |(z - a) - (a - 7 - 2i)|,$ where $a$ is a complex number that we will determine later.\nStep 5:  Using the Triangle Inequality, we get $|z + 5 - 3",
+        "Step 6:  To find the value of $a$ that minimizes the expression, we take the derivative of the expression with respect to $a,$ set it equal to zero, and solve for $a.$",
+        "Step 7:  By the Triangle Inequality, we have $|z + 5 - 3i| + |z - 7 + 2i| \\ge |(z - a) + (a - 5 + 3i)| + |(z - a) - (a - 7 - 2i)| = |2z - 2 + 4i|.$",
+        "Step 8: $|2z - 2 + 4i| = 2 |z - 1 + 2i|.$",
+        "$|2z - 2 + 4i| \\ge 2 \\sqrt{(z - 1 + 2i)(\\overline{z - 1 + 2i})}.$",
+        "Step 9: $|2z - 2 + 4i| \\ge 2 \\sqrt{(z - 1 + 2i)(\\overline{z - 1 + 2i})} = 2 \\sqrt{(z - 1)^2 - 4}.$",
+        "Since $|2z - 2 + 4i| = 2 |z - 1 + 2i| = 2 \\sqrt{(z - 1)^2 - 4}$ attains its minimum value when $z - 1 = 2$, the minimum value of $|z + 5 - 3i| + |z - 7 + 2i|$ is $\\boxed{2 \\sqrt{29}}.$",
+        "Step 10: $|2z - 2 + 4i| \\ge 2 \\sqrt{(z - 1)^2 - 4}.$",
+        "Step 11: $|2z - 2 + 4i| = 2 |z - 1 + 2i| = 2 \\sqrt{(z - 1)^2 - 4}.$",
+        "Since $|2z - 2 + 4i| = 2 |z - 1 + 2i| = 2 \\sqrt{(z - 1)^2 - 4}$ attains its minimum value when $z - 1 = 2$, the minimum value of $|z + 5 - 3i| + |z - 7 + 2i|$ is $\\boxed{2 \\sqrt{29}}.$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We are given the expression $|z + 5 - 3i| + |z - 7 + 2i|.$\nStep 2:  To find the minimum value of this expression, we can use the Triangle Inequality, which states that for any complex numbers $a$ and $b,$ we have $|a + b| \\le |a| + |b|.$\nStep 3:  We want to apply the Triangle Inequality to the expression $|z + 5 - 3i| + |z - 7 + 2i|,$ so let's rewrite it in a form that is more amenable to the Triangle Inequality.\nStep 4:  We can write $|z + 5 - 3i| + |z - 7 + 2i| = |(z - a) + (a - 5 + 3i)| + |(z - a) - (a - 7 - 2i)|,$ where $a$ is a complex number that we will determine later.\nStep 5:  Using the Triangle Inequality, we get $|z + 5 - 3",
+            1
+        ],
+        [
+            "Step 6:  To find the value of $a$ that minimizes the expression, we take the derivative of the expression with respect to $a,$ set it equal to zero, and solve for $a.$",
+            1
+        ],
+        [
+            "Step 7:  By the Triangle Inequality, we have $|z + 5 - 3i| + |z - 7 + 2i| \\ge |(z - a) + (a - 5 + 3i)| + |(z - a) - (a - 7 - 2i)| = |2z - 2 + 4i|.$",
+            1
+        ],
+        [
+            "Step 8: $|2z - 2 + 4i| = 2 |z - 1 + 2i|.$",
+            1
+        ],
+        [
+            "$|2z - 2 + 4i| \\ge 2 \\sqrt{(z - 1 + 2i)(\\overline{z - 1 + 2i})}.$",
+            1
+        ],
+        [
+            "Step 9: $|2z - 2 + 4i| \\ge 2 \\sqrt{(z - 1 + 2i)(\\overline{z - 1 + 2i})} = 2 \\sqrt{(z - 1)^2 - 4}.$",
+            1
+        ],
+        [
+            "Since $|2z - 2 + 4i| = 2 |z - 1 + 2i| = 2 \\sqrt{(z - 1)^2 - 4}$ attains its minimum value when $z - 1 = 2$, the minimum value of $|z + 5 - 3i| + |z - 7 + 2i|$ is $\\boxed{2 \\sqrt{29}}.$",
+            1
+        ],
+        [
+            "Step 10: $|2z - 2 + 4i| \\ge 2 \\sqrt{(z - 1)^2 - 4}.$",
+            1
+        ],
+        [
+            "Step 11: $|2z - 2 + 4i| = 2 |z - 1 + 2i| = 2 \\sqrt{(z - 1)^2 - 4}.$",
+            1
+        ],
+        [
+            "Since $|2z - 2 + 4i| = 2 |z - 1 + 2i| = 2 \\sqrt{(z - 1)^2 - 4}$ attains its minimum value when $z - 1 = 2$, the minimum value of $|z + 5 - 3i| + |z - 7 + 2i|$ is $\\boxed{2 \\sqrt{29}}.$",
+            1
+        ]
+    ],
+    "time": 136.19603300094604,
+    "total_tokens": 12160,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

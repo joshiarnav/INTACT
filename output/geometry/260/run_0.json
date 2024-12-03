@@ -1,0 +1,41 @@
+{
+    "problem": "Given quadrilateral $ABCD$ with $A(3,7)$, $B(3,5)$, $C(-1,1)$, and $D(-1,3)$, find the number of square units in the area of the quadrilateral.",
+    "level": "Level 3",
+    "type": "Geometry",
+    "solution": "Quadrilateral $ABCD$ is a parallelogram, so we can find the area by multiplying the base and height.  Let's take $CD$ to be the base.\n\n[asy]\npen sm=fontsize(9);\npair A=(3,7), B=(3,5), C=(-1,1), D=(-1,3), E=(3,1);\ndraw(A--B--C--D--cycle);\ndraw(B--E--C, dotted);\nlabel(\"$A(3,7)$\", A, NE, sm);\nlabel(\"$B(3,5)$\", B, E, sm);\nlabel(\"$E(3,1)$\", E, SE, sm);\nlabel(\"$C(-1,1)$\", C, SW, sm);\nlabel(\"$D(-1,3)$\", D, NW, sm);\nlabel(\"$4$\", (C+E)/2, S, sm);\nlabel(\"$2$\", (C+D)/2, W, sm);\ndraw(rightanglemark(B,E,C));\n[/asy]\n\nThe length of $CD$ is $2$, and the length of $CE$ is $4$, so the area of parallelogram $ABCD$ is $2\\cdot4 = \\boxed{8}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: Calculate the length of the two base sides by finding the difference in the x-coordinates and y-coordinates for the two points of each base.\nStep 2: Calculate the height of the trapezoid by finding the difference in the y-coordinates of points A and C or the y-coordinates of points B and D.\nStep 3: Calculate the area of the trapezoid using the formula $\\frac{1}{2}h\\left(b_{1}+b_{2}\\right)$ where $h$ is the height and $b_{1}$ and $b_{2}$ are the bases.\nStep 2: Calculate the height of the trapezoid by finding the difference in the y-coordinates of points A and C, which is $7-1=6$ units.\nStep 3: Calculate the area of the trapezoid using the formula $\\frac{1}{2}h\\left(b_{1}+b_{2}\\right)$ where $h$ is the height and $b_{1}$ and $b_{2}$ are the bases.",
+    "steps": [
+        "Step 1: Calculate the length of the two base sides by finding the difference in the x-coordinates and y-coordinates for the two points of each base.",
+        "Step 2: Calculate the height of the trapezoid by finding the difference in the y-coordinates of points A and C or the y-coordinates of points B and D.",
+        "Step 3: Calculate the area of the trapezoid using the formula $\\frac{1}{2}h\\left(b_{1}+b_{2}\\right)$ where $h$ is the height and $b_{1}$ and $b_{2}$ are the bases.",
+        "Step 2: Calculate the height of the trapezoid by finding the difference in the y-coordinates of points A and C, which is $7-1=6$ units.",
+        "Step 3: Calculate the area of the trapezoid using the formula $\\frac{1}{2}h\\left(b_{1}+b_{2}\\right)$ where $h$ is the height and $b_{1}$ and $b_{2}$ are the bases."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Calculate the length of the two base sides by finding the difference in the x-coordinates and y-coordinates for the two points of each base.",
+            1
+        ],
+        [
+            "Step 2: Calculate the height of the trapezoid by finding the difference in the y-coordinates of points A and C or the y-coordinates of points B and D.",
+            1
+        ],
+        [
+            "Step 3: Calculate the area of the trapezoid using the formula $\\frac{1}{2}h\\left(b_{1}+b_{2}\\right)$ where $h$ is the height and $b_{1}$ and $b_{2}$ are the bases.",
+            1
+        ],
+        [
+            "Step 2: Calculate the height of the trapezoid by finding the difference in the y-coordinates of points A and C, which is $7-1=6$ units.",
+            1
+        ],
+        [
+            "Step 3: Calculate the area of the trapezoid using the formula $\\frac{1}{2}h\\left(b_{1}+b_{2}\\right)$ where $h$ is the height and $b_{1}$ and $b_{2}$ are the bases.",
+            1
+        ]
+    ],
+    "time": 70.4331624507904,
+    "total_tokens": 2450,
+    "final_answer_tokens": 343,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,61 @@
+{
+    "problem": "A right hexagonal prism has a height of 3 feet and each edge of the hexagonal bases is 6 inches. What is the sum of the areas of the non-hexagonal faces of the prism, in square feet?\n\n[asy]import three;\n\ncurrentprojection=orthographic(1/2,-1,1/2);\n\ndraw((0,0,0)--(1,0,0)--(1.5,0.86,0)--(1,1.72,0)--(0,1.72,0)--(-0.5,0.86,0)--cycle);\n\ndraw((0,0,6)--(1,0,6)--(1.5,0.86,6)--(1,1.72,6)--(0,1.72,6)--(-0.5,0.86,6)--cycle);\n\ndraw((0,0,0)--(0,0,6));\n\ndraw((1,0,0)--(1,0,6));\n\ndraw((1.5,0.86,0)--(1.5,0.86,6));\n\ndraw((1,1.72,0)--(1,1.72,6));\n\ndraw((0,1.72,0)--(0,1.72,6));\n\ndraw((-0.5,0.86,0)--(-0.5,0.86,6));\n\n[/asy]",
+    "level": "Level 4",
+    "type": "Geometry",
+    "solution": "Since each non-hexagonal face is a rectangle with base 6 inches and height 3 feet, each face has an area of $6$ inches $\\times 3$ feet $= .5$ feet $\\times 3$ feet $= 1.5$ square feet per face.  Since there are 6 faces (6 edges to a hexagon), that makes for a total area of $\\boxed{9}$ square feet.",
+    "is_solved": true,
+    "model_solution": "The hexagonal bases have side length 1/2 feet and 6 of these bases make up the perimeter of each hexagon. The area of a hexagon can be found by breaking it into six equilateral triangles with side length 1/2 feet. The area of one such equilateral triangle is $\\frac{\\sqrt{3}}{4} \\left( \\frac{1}{2} \\right)^2 = \\frac{\\sqrt{3}}{16}$ square feet. Therefore, the area of a hexagonal base is $\\frac{6\\sqrt{3}}{16}$ square feet.\nThere are 6 rectangular faces, each with a height of 3 feet and a perimeter of the hexagonal base. The perimeter of the hexagonal base is 6 feet, so each rectangular face has an area of $3 \\cdot 6 = 18$ square feet.\nThere are six non-hexagonal faces, each with an area of 18 square feet.\nTo find the sum of the areas of the non-hexagonal faces of the prism, multiply the area of one face by the total number of faces.\nThe area of the non-hexagonal faces is $18 \\cdot 6 = 108$ square feet.\nThe sum of the areas of the non-hexagonal faces of the prism is equal to 6 times the area of one non-hexagonal face.\nMultiply the area of one non-hexagonal face by the total number of faces.\nThe area of one non-hexagonal face is $18$ square feet.\nMultiply the area of one non-hexagonal face by the total number of faces.",
+    "steps": [
+        "The hexagonal bases have side length 1/2 feet and 6 of these bases make up the perimeter of each hexagon. The area of a hexagon can be found by breaking it into six equilateral triangles with side length 1/2 feet. The area of one such equilateral triangle is $\\frac{\\sqrt{3}}{4} \\left( \\frac{1}{2} \\right)^2 = \\frac{\\sqrt{3}}{16}$ square feet. Therefore, the area of a hexagonal base is $\\frac{6\\sqrt{3}}{16}$ square feet.",
+        "There are 6 rectangular faces, each with a height of 3 feet and a perimeter of the hexagonal base. The perimeter of the hexagonal base is 6 feet, so each rectangular face has an area of $3 \\cdot 6 = 18$ square feet.",
+        "There are six non-hexagonal faces, each with an area of 18 square feet.",
+        "To find the sum of the areas of the non-hexagonal faces of the prism, multiply the area of one face by the total number of faces.",
+        "The area of the non-hexagonal faces is $18 \\cdot 6 = 108$ square feet.",
+        "The sum of the areas of the non-hexagonal faces of the prism is equal to 6 times the area of one non-hexagonal face.",
+        "Multiply the area of one non-hexagonal face by the total number of faces.",
+        "The area of one non-hexagonal face is $18$ square feet.",
+        "Multiply the area of one non-hexagonal face by the total number of faces."
+    ],
+    "full_steps": [
+        [
+            "The hexagonal bases have side length 1/2 feet and 6 of these bases make up the perimeter of each hexagon. The area of a hexagon can be found by breaking it into six equilateral triangles with side length 1/2 feet. The area of one such equilateral triangle is $\\frac{\\sqrt{3}}{4} \\left( \\frac{1}{2} \\right)^2 = \\frac{\\sqrt{3}}{16}$ square feet. Therefore, the area of a hexagonal base is $\\frac{6\\sqrt{3}}{16}$ square feet.",
+            1
+        ],
+        [
+            "There are 6 rectangular faces, each with a height of 3 feet and a perimeter of the hexagonal base. The perimeter of the hexagonal base is 6 feet, so each rectangular face has an area of $3 \\cdot 6 = 18$ square feet.",
+            1
+        ],
+        [
+            "There are six non-hexagonal faces, each with an area of 18 square feet.",
+            1
+        ],
+        [
+            "To find the sum of the areas of the non-hexagonal faces of the prism, multiply the area of one face by the total number of faces.",
+            1
+        ],
+        [
+            "The area of the non-hexagonal faces is $18 \\cdot 6 = 108$ square feet.",
+            1
+        ],
+        [
+            "The sum of the areas of the non-hexagonal faces of the prism is equal to 6 times the area of one non-hexagonal face.",
+            1
+        ],
+        [
+            "Multiply the area of one non-hexagonal face by the total number of faces.",
+            1
+        ],
+        [
+            "The area of one non-hexagonal face is $18$ square feet.",
+            1
+        ],
+        [
+            "Multiply the area of one non-hexagonal face by the total number of faces.",
+            1
+        ]
+    ],
+    "time": 119.59835314750671,
+    "total_tokens": 11031,
+    "final_answer_tokens": 694,
+    "model": "meta-llama/Llama-Vision-Free"
+}

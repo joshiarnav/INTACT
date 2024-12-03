@@ -1,0 +1,56 @@
+{
+    "problem": "The volume of a cylinder is 60 cubic centimeters. What is the number of cubic centimeters in the volume of the sphere it circumscribes?",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "We begin by drawing a diagram: [asy]\nimport solids; size(150); import three; defaultpen(linewidth(0.8)); currentprojection = orthographic(5,0,2);\nrevolution c = cylinder((0,0,0), 1, 2);\ndraw(c,black);\ndraw(Circle((0,1),1));\ndraw((-1,1)..(0,.7)..(1,1)); draw((-1,1)..(0,1.3)..(1,1),linetype(\"2 4\")); dot((0,1));\n[/asy]\n\nLet the radius of the sphere be $r$.  We see the radius of the cylinder is $r$ and the height of the cylinder is $2r$.  Thus, from the cylinder's volume we have \\[60 = \\pi (r^2)(2r) = 2\\pi r^3.\\]  Dividing both sides by 2 yields $\\pi r^3 = 30$.  The volume of the sphere is \\[\\frac{4}{3}\\pi r^3 = \\frac{4}{3}(30) = \\boxed{40}\\] cubic centimeters.  (Notice that we didn't have to solve for $r$!)",
+    "is_solved": true,
+    "model_solution": "Step 1: Recall the formulas for the volume of a cylinder and a sphere: V_cylinder = \u03c0r^2h and V_sphere = (4/3)\u03c0r^3.\nStep 2: Since the cylinder circumscribes the sphere, the diameter of the cylinder is equal to the diameter of the sphere, therefore r_cylinder = r_sphere = r.\nStep 3: The radius of the sphere is equal to the radius of the cylinder, which is the same as the radius of the base of the cylinder. The height of the cylinder is twice the radius of the cylinder. Substitute the values into the volume of the cylinder formula to find the radius of the cylinder: 60 = \u03c0r^2(2r).\nStep 4: Simplify the equation 60 = 2\u03c0r^3 to find the radius of the cylinder: 60 = 2\u03c0r^3 \u2192 30 = \u03c0r^3 \u2192 30/\u03c0 = r^3 \u2192 r^3 = 30/\u03c0 \u2192 r = \u221b(30/\u03c0) = 2.37 \u2248 2.36.\nStep 5: Now that we know the radius of the sphere, substitute this value into the formula for the volume of a sphere to find the volume: V_sphere = (4/3)\u03c0(2.37)^3.\nStep 6: V_sphere = (4/3)\u03c0(2.37)^3 = (4/3)\u03c0(13.96) = (4/3) * 43.67 \u2248 58.27.\nStep 7: V_sphere = (4/3) * 43.67 = 58.27.\nStep 6: V_sphere = (4/3)\u03c0(2.37)^3 = (4/3)\u03c0(13.96) = (4/3) * 43.67 \u2248 58.27.",
+    "steps": [
+        "Step 1: Recall the formulas for the volume of a cylinder and a sphere: V_cylinder = \u03c0r^2h and V_sphere = (4/3)\u03c0r^3.",
+        "Step 2: Since the cylinder circumscribes the sphere, the diameter of the cylinder is equal to the diameter of the sphere, therefore r_cylinder = r_sphere = r.",
+        "Step 3: The radius of the sphere is equal to the radius of the cylinder, which is the same as the radius of the base of the cylinder. The height of the cylinder is twice the radius of the cylinder. Substitute the values into the volume of the cylinder formula to find the radius of the cylinder: 60 = \u03c0r^2(2r).",
+        "Step 4: Simplify the equation 60 = 2\u03c0r^3 to find the radius of the cylinder: 60 = 2\u03c0r^3 \u2192 30 = \u03c0r^3 \u2192 30/\u03c0 = r^3 \u2192 r^3 = 30/\u03c0 \u2192 r = \u221b(30/\u03c0) = 2.37 \u2248 2.36.",
+        "Step 5: Now that we know the radius of the sphere, substitute this value into the formula for the volume of a sphere to find the volume: V_sphere = (4/3)\u03c0(2.37)^3.",
+        "Step 6: V_sphere = (4/3)\u03c0(2.37)^3 = (4/3)\u03c0(13.96) = (4/3) * 43.67 \u2248 58.27.",
+        "Step 7: V_sphere = (4/3) * 43.67 = 58.27.",
+        "Step 6: V_sphere = (4/3)\u03c0(2.37)^3 = (4/3)\u03c0(13.96) = (4/3) * 43.67 \u2248 58.27."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Recall the formulas for the volume of a cylinder and a sphere: V_cylinder = \u03c0r^2h and V_sphere = (4/3)\u03c0r^3.",
+            1
+        ],
+        [
+            "Step 2: Since the cylinder circumscribes the sphere, the diameter of the cylinder is equal to the diameter of the sphere, therefore r_cylinder = r_sphere = r.",
+            1
+        ],
+        [
+            "Step 3: The radius of the sphere is equal to the radius of the cylinder, which is the same as the radius of the base of the cylinder. The height of the cylinder is twice the radius of the cylinder. Substitute the values into the volume of the cylinder formula to find the radius of the cylinder: 60 = \u03c0r^2(2r).",
+            1
+        ],
+        [
+            "Step 4: Simplify the equation 60 = 2\u03c0r^3 to find the radius of the cylinder: 60 = 2\u03c0r^3 \u2192 30 = \u03c0r^3 \u2192 30/\u03c0 = r^3 \u2192 r^3 = 30/\u03c0 \u2192 r = \u221b(30/\u03c0) = 2.37 \u2248 2.36.",
+            1
+        ],
+        [
+            "Step 5: Now that we know the radius of the sphere, substitute this value into the formula for the volume of a sphere to find the volume: V_sphere = (4/3)\u03c0(2.37)^3.",
+            1
+        ],
+        [
+            "Step 6: V_sphere = (4/3)\u03c0(2.37)^3 = (4/3)\u03c0(13.96) = (4/3) * 43.67 \u2248 58.27.",
+            1
+        ],
+        [
+            "Step 7: V_sphere = (4/3) * 43.67 = 58.27.",
+            1
+        ],
+        [
+            "Step 6: V_sphere = (4/3)\u03c0(2.37)^3 = (4/3)\u03c0(13.96) = (4/3) * 43.67 \u2248 58.27.",
+            1
+        ]
+    ],
+    "time": 110.97288918495178,
+    "total_tokens": 5230,
+    "final_answer_tokens": 487,
+    "model": "meta-llama/Llama-Vision-Free"
+}

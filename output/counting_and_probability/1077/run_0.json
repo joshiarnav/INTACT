@@ -1,0 +1,46 @@
+{
+    "problem": "A street has 50 houses on each side, for a total of 100 houses. The addresses on the south side of the street form an arithmetic sequence, as do the addresses on the north side of the street. On the south side, the addresses are 1, 5, 9, etc., and on the north side they are 3, 7, 11, etc. A sign painter paints house numbers on a house for $\\$1$ per digit. If he paints the appropriate house number once on each of these 100 houses, how much does he earn?",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "If we combine the house numbers on the north and south sides, we get exactly the odd positive integers. The $100^{\\text{th}}$ odd integer is 199, so we divide the first 100 odd integers into three groups: \\[\\{1, 3,\\ldots, 9\\},\\qquad\\{11, 13, \\ldots, 99\\},\\qquad\\{101, 103, \\ldots, 199\\}\\] There are five numbers with one digit, 45 numbers with two digits, and 50 numbers with three digits. Thus, the total revenue is $1\\times5 + 2\\times 45 + 3\\times 50 = \\boxed{245}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: Determine the sequence of house numbers on each side of the street.\n- South side: 1, 5, 9, 13, ..., 49\n- North side: 3, 7, 11, 15, ..., 99\nStep 2: Determine the number of digits in each address on each side of the street.\n- South side: 1-digit addresses 1-9, 2-digit addresses 11-49\n- North side: 1-digit addresses 3-9, 2-digit addresses 11-99\nStep 3:\n- South side: Count the number of 1-digit addresses (9) and 2-digit addresses (39), so there are 48 addresses in total. The number of digits is 1 \u00d7 9 + 2 \u00d7 39 = 87.\n- North side: Count the number of 1-digit addresses (7) and 2-digit addresses (93), so there are 100 addresses in total. The number of digits is 1 \u00d7 7 + 2 \u00d7 93 = 193.\nStep 4: Calculate the total amount earned by adding the number of digits on the south and north sides.\n$87 + 193 =$\nStep 5: \n$87 + 193 = 280$\nStep 6: Final Answer",
+    "steps": [
+        "Step 1: Determine the sequence of house numbers on each side of the street.\n- South side: 1, 5, 9, 13, ..., 49\n- North side: 3, 7, 11, 15, ..., 99",
+        "Step 2: Determine the number of digits in each address on each side of the street.\n- South side: 1-digit addresses 1-9, 2-digit addresses 11-49\n- North side: 1-digit addresses 3-9, 2-digit addresses 11-99",
+        "Step 3:\n- South side: Count the number of 1-digit addresses (9) and 2-digit addresses (39), so there are 48 addresses in total. The number of digits is 1 \u00d7 9 + 2 \u00d7 39 = 87.\n- North side: Count the number of 1-digit addresses (7) and 2-digit addresses (93), so there are 100 addresses in total. The number of digits is 1 \u00d7 7 + 2 \u00d7 93 = 193.",
+        "Step 4: Calculate the total amount earned by adding the number of digits on the south and north sides.\n$87 + 193 =$",
+        "Step 5: \n$87 + 193 = 280$",
+        "Step 6: Final Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Determine the sequence of house numbers on each side of the street.\n- South side: 1, 5, 9, 13, ..., 49\n- North side: 3, 7, 11, 15, ..., 99",
+            1
+        ],
+        [
+            "Step 2: Determine the number of digits in each address on each side of the street.\n- South side: 1-digit addresses 1-9, 2-digit addresses 11-49\n- North side: 1-digit addresses 3-9, 2-digit addresses 11-99",
+            1
+        ],
+        [
+            "Step 3:\n- South side: Count the number of 1-digit addresses (9) and 2-digit addresses (39), so there are 48 addresses in total. The number of digits is 1 \u00d7 9 + 2 \u00d7 39 = 87.\n- North side: Count the number of 1-digit addresses (7) and 2-digit addresses (93), so there are 100 addresses in total. The number of digits is 1 \u00d7 7 + 2 \u00d7 93 = 193.",
+            1
+        ],
+        [
+            "Step 4: Calculate the total amount earned by adding the number of digits on the south and north sides.\n$87 + 193 =$",
+            1
+        ],
+        [
+            "Step 5: \n$87 + 193 = 280$",
+            1
+        ],
+        [
+            "Step 6: Final Answer",
+            1
+        ]
+    ],
+    "time": 81.10419178009033,
+    "total_tokens": 4620,
+    "final_answer_tokens": 455,
+    "model": "meta-llama/Llama-Vision-Free"
+}

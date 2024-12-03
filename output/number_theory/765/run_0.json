@@ -1,0 +1,41 @@
+{
+    "problem": "What is the largest negative integer $x$ satisfying $$24x \\equiv 15 \\pmod{1199}~?$$",
+    "level": "Level 5",
+    "type": "Number Theory",
+    "solution": "To start, notice that $24\\cdot 50 = 1200\\equiv 1\\pmod{1199}$ (in other words, $24$ and $50$ are inverses modulo $1199$).\n\nTo solve the congruence $24x\\equiv 15\\pmod{1199}$, we multiply both sides by $50$ and simplify: \\begin{align*}\n50\\cdot 24x &\\equiv 50\\cdot 15 \\pmod{1199} \\\\\nx &\\equiv 750 \\pmod{1199}\n\\end{align*}This process can also be reversed (by multiplying both sides by $50^{-1}=24$), so the solutions to the original congruence are precisely the same as the solutions to $x\\equiv 750\\pmod{1199}$. The largest negative solution is $750-1199 = \\boxed{-449}$.",
+    "is_solved": true,
+    "model_solution": "Step 1:  The problem asks for the largest negative integer $x$ that satisfies the congruence $24x \\equiv 15 \\pmod{1199}$.\nStep 2:  To start solving this congruence, we need to find the modular inverse of $24$ modulo $1199$. The modular inverse of $24$ is the integer $a$ such that $24a \\equiv 1 \\pmod{1199}$.\nStep 3:  We can calculate the modular inverse using the Extended Euclidean Algorithm, which computes the greatest common divisor of two integers and expresses it as a linear combination of the two integers.\nStep 4:  The algorithm states that for any integers $a$ and $b$, there exist integers $x$ and $y$ such that $ax + by = \\gcd(a, b)$.\nStep 5:  Applying the Extended Euclidean Algorithm to $24$ and $1199$, we find the coefficients $x$ and $y$ such that $24x + 1199y = \\gcd(24, 1199)$.\nStep 6:  This will help us find the modular inverse of $24$ modulo $119\nStep 2:  Calculate the modular inverse of $24$ modulo $1199$ using the Extended Euclidean Algorithm.\nThe modular inverse of $24$ modulo $1199$ is found to be $50$, as $24 \\cdot 50 \\equiv 1 \\pmod{1199}$.\nStep 3:  To solve the congruence $24x \\equiv 15 \\pmod{1199}$, we multiply both sides by the modular inverse of $24$ modulo $1199$, which is $50$. This yields $x \\equiv 50 \\cdot 15 \\equiv 750 \\pmod{1199}$.\nStep 4: \nWe need to find the largest negative integer $x$ satisfying $x \\equiv 750 \\pmod{1199}$. Since we need the largest negative $x$, we subtract the modulus $1199$ from $750$ to get $x \\equiv -449 \\equiv 750 - 1199 \\pmod{1199}$.\n\nFinal Answer: $\\boxed{-449}$",
+    "steps": [
+        "Step 1:  The problem asks for the largest negative integer $x$ that satisfies the congruence $24x \\equiv 15 \\pmod{1199}$.\nStep 2:  To start solving this congruence, we need to find the modular inverse of $24$ modulo $1199$. The modular inverse of $24$ is the integer $a$ such that $24a \\equiv 1 \\pmod{1199}$.\nStep 3:  We can calculate the modular inverse using the Extended Euclidean Algorithm, which computes the greatest common divisor of two integers and expresses it as a linear combination of the two integers.\nStep 4:  The algorithm states that for any integers $a$ and $b$, there exist integers $x$ and $y$ such that $ax + by = \\gcd(a, b)$.\nStep 5:  Applying the Extended Euclidean Algorithm to $24$ and $1199$, we find the coefficients $x$ and $y$ such that $24x + 1199y = \\gcd(24, 1199)$.\nStep 6:  This will help us find the modular inverse of $24$ modulo $119",
+        "Step 2:  Calculate the modular inverse of $24$ modulo $1199$ using the Extended Euclidean Algorithm.",
+        "The modular inverse of $24$ modulo $1199$ is found to be $50$, as $24 \\cdot 50 \\equiv 1 \\pmod{1199}$.",
+        "Step 3:  To solve the congruence $24x \\equiv 15 \\pmod{1199}$, we multiply both sides by the modular inverse of $24$ modulo $1199$, which is $50$. This yields $x \\equiv 50 \\cdot 15 \\equiv 750 \\pmod{1199}$.",
+        "Step 4: \nWe need to find the largest negative integer $x$ satisfying $x \\equiv 750 \\pmod{1199}$. Since we need the largest negative $x$, we subtract the modulus $1199$ from $750$ to get $x \\equiv -449 \\equiv 750 - 1199 \\pmod{1199}$.\n\nFinal Answer: $\\boxed{-449}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  The problem asks for the largest negative integer $x$ that satisfies the congruence $24x \\equiv 15 \\pmod{1199}$.\nStep 2:  To start solving this congruence, we need to find the modular inverse of $24$ modulo $1199$. The modular inverse of $24$ is the integer $a$ such that $24a \\equiv 1 \\pmod{1199}$.\nStep 3:  We can calculate the modular inverse using the Extended Euclidean Algorithm, which computes the greatest common divisor of two integers and expresses it as a linear combination of the two integers.\nStep 4:  The algorithm states that for any integers $a$ and $b$, there exist integers $x$ and $y$ such that $ax + by = \\gcd(a, b)$.\nStep 5:  Applying the Extended Euclidean Algorithm to $24$ and $1199$, we find the coefficients $x$ and $y$ such that $24x + 1199y = \\gcd(24, 1199)$.\nStep 6:  This will help us find the modular inverse of $24$ modulo $119",
+            1
+        ],
+        [
+            "Step 2:  Calculate the modular inverse of $24$ modulo $1199$ using the Extended Euclidean Algorithm.",
+            1
+        ],
+        [
+            "The modular inverse of $24$ modulo $1199$ is found to be $50$, as $24 \\cdot 50 \\equiv 1 \\pmod{1199}$.",
+            1
+        ],
+        [
+            "Step 3:  To solve the congruence $24x \\equiv 15 \\pmod{1199}$, we multiply both sides by the modular inverse of $24$ modulo $1199$, which is $50$. This yields $x \\equiv 50 \\cdot 15 \\equiv 750 \\pmod{1199}$.",
+            1
+        ],
+        [
+            "Step 4: \nWe need to find the largest negative integer $x$ satisfying $x \\equiv 750 \\pmod{1199}$. Since we need the largest negative $x$, we subtract the modulus $1199$ from $750$ to get $x \\equiv -449 \\equiv 750 - 1199 \\pmod{1199}$.\n\nFinal Answer: $\\boxed{-449}$",
+            1
+        ]
+    ],
+    "time": 66.62910509109497,
+    "total_tokens": 4300,
+    "final_answer_tokens": 556,
+    "model": "meta-llama/Llama-Vision-Free"
+}

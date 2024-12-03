@@ -1,0 +1,31 @@
+{
+    "problem": "Let $a_0 = 6$ and\n\\[a_n = \\frac{a_{n - 1}}{1 + a_{n - 1}}\\]for all $n \\ge 1.$  Find $a_{100}.$",
+    "level": "Level 3",
+    "type": "Intermediate Algebra",
+    "solution": "Let $b_n = \\frac{1}{a_n}.$  Then $a_n = \\frac{1}{b_n},$ so\n\\[\\frac{1}{b_n} = \\frac{\\frac{1}{b_{n - 1}}}{1 + \\frac{1}{b_{n - 1}}} = \\frac{1}{b_{n - 1} + 1},\\]so $b_n = b_{n - 1} + 1.$  Since $b_0 = \\frac{1}{6},$ it follows that $b_n = n + \\frac{1}{6}$ for all $n.$  Hence,\n\\[a_n = \\frac{1}{n + \\frac{1}{6}} = \\frac{6}{6n + 1}.\\]for all $n.$  It follows that $a_{100} = \\boxed{\\frac{6}{601}}.$",
+    "is_solved": false,
+    "model_solution": "## Step 1: Begin with the recursive definition of the sequence.\n$a_n = \\frac{a_{n - 1}}{1 + a_{n - 1}}$\n\n## Step 2: Calculate the first few terms to identify a pattern.\n$a_1 = \\frac{a_0}{1 + a_0} = \\frac{6}{1 + 6} = \\frac{6}{7}$\n$a_2 = \\frac{a_1}{1 + a_1} = \\frac{\\frac{6}{7}}{1 + \\frac{6}{7}} = \\frac{\\frac{6}{7}}{\\frac{13}{7}} = \\frac{6}{13}$\n$a_3 = \\frac{a_2}{1 + a_2} = \\frac{\\frac{6}{13}}{1 + \\frac{6}{13}} = \\frac{\\frac{6}{13}}{\\frac{19}{13}} = \\frac{6}{19}$\n## Step 3: Continue to calculate the first few terms to identify a pattern.\n$a_4 = \\frac{a_3}{1 + a_3} = \\frac{\\frac{6}{19}}{1 + \\frac{6}{19}} = \\frac{\\frac{6}{19}}{\\frac{25}{19}} = \\frac{6}{25}$\n## Step 4: Notice that the denominators are consecutive integers, which suggests that the sequence $a_n$ is actually $a_n = \\frac{6}{6n + 13}.$\n$a_0 = \\frac{6}{6(0) + 13} = 6, a_1 = \\frac{6}{6(1) + 13} = \\frac{6}{19}, a_2 = \\frac{6}{6(2) + 13} = \\frac{6}{25}, \\dots , a_n = \\frac{6}{6n + 13}.$",
+    "steps": [
+        "## Step 1: Begin with the recursive definition of the sequence.\n$a_n = \\frac{a_{n - 1}}{1 + a_{n - 1}}$\n\n## Step 2: Calculate the first few terms to identify a pattern.\n$a_1 = \\frac{a_0}{1 + a_0} = \\frac{6}{1 + 6} = \\frac{6}{7}$\n$a_2 = \\frac{a_1}{1 + a_1} = \\frac{\\frac{6}{7}}{1 + \\frac{6}{7}} = \\frac{\\frac{6}{7}}{\\frac{13}{7}} = \\frac{6}{13}$\n$a_3 = \\frac{a_2}{1 + a_2} = \\frac{\\frac{6}{13}}{1 + \\frac{6}{13}} = \\frac{\\frac{6}{13}}{\\frac{19}{13}} = \\frac{6}{19}$",
+        "## Step 3: Continue to calculate the first few terms to identify a pattern.\n$a_4 = \\frac{a_3}{1 + a_3} = \\frac{\\frac{6}{19}}{1 + \\frac{6}{19}} = \\frac{\\frac{6}{19}}{\\frac{25}{19}} = \\frac{6}{25}$",
+        "## Step 4: Notice that the denominators are consecutive integers, which suggests that the sequence $a_n$ is actually $a_n = \\frac{6}{6n + 13}.$\n$a_0 = \\frac{6}{6(0) + 13} = 6, a_1 = \\frac{6}{6(1) + 13} = \\frac{6}{19}, a_2 = \\frac{6}{6(2) + 13} = \\frac{6}{25}, \\dots , a_n = \\frac{6}{6n + 13}.$"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Begin with the recursive definition of the sequence.\n$a_n = \\frac{a_{n - 1}}{1 + a_{n - 1}}$\n\n## Step 2: Calculate the first few terms to identify a pattern.\n$a_1 = \\frac{a_0}{1 + a_0} = \\frac{6}{1 + 6} = \\frac{6}{7}$\n$a_2 = \\frac{a_1}{1 + a_1} = \\frac{\\frac{6}{7}}{1 + \\frac{6}{7}} = \\frac{\\frac{6}{7}}{\\frac{13}{7}} = \\frac{6}{13}$\n$a_3 = \\frac{a_2}{1 + a_2} = \\frac{\\frac{6}{13}}{1 + \\frac{6}{13}} = \\frac{\\frac{6}{13}}{\\frac{19}{13}} = \\frac{6}{19}$",
+            1
+        ],
+        [
+            "## Step 3: Continue to calculate the first few terms to identify a pattern.\n$a_4 = \\frac{a_3}{1 + a_3} = \\frac{\\frac{6}{19}}{1 + \\frac{6}{19}} = \\frac{\\frac{6}{19}}{\\frac{25}{19}} = \\frac{6}{25}$",
+            1
+        ],
+        [
+            "## Step 4: Notice that the denominators are consecutive integers, which suggests that the sequence $a_n$ is actually $a_n = \\frac{6}{6n + 13}.$\n$a_0 = \\frac{6}{6(0) + 13} = 6, a_1 = \\frac{6}{6(1) + 13} = \\frac{6}{19}, a_2 = \\frac{6}{6(2) + 13} = \\frac{6}{25}, \\dots , a_n = \\frac{6}{6n + 13}.$",
+            1
+        ]
+    ],
+    "time": 39.25131607055664,
+    "total_tokens": 2576,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,66 @@
+{
+    "problem": "In right triangle $ABC$, we have $\\angle BAC = 90^\\circ$ and $D$ is the midpoint of $\\overline{AC}$.  If $AB = 7$ and $BC = 25$, then what is $\\tan \\angle BDC$?",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "[asy]\npair A,B,C,D;\nA = (0,0);\nB = (0,7);\nC = (24,0);\nD = C/2;\ndraw(D--B--C--A--B);\ndraw(rightanglemark(D,A,B,40));\nlabel(\"$A$\",A,SW);\nlabel(\"$B$\",B,N);\nlabel(\"$D$\",D,S);\nlabel(\"$C$\",C,SE);\n[/asy]\n\nSince $\\sin (180^\\circ - x) =\\sin x$ and $\\cos (180^\\circ - x) = -\\cos x$ for any angle, we have $$\\tan(180^\\circ - x) =\n\\frac{\\sin(180^\\circ - x)}{\\cos(180^\\circ - x)} = \\frac{\\sin x}{-\\cos x} = -\\tan x$$for any angle for which $\\tan x$ is defined.  Therefore, $\\tan\\angle BDC = -\\tan\\angle BDA$.\n\nFrom the Pythagorean Theorem, we have $AC = \\sqrt{BC^2 - BA^2} = 24$.  Since $D$ is the midpoint of $\\overline{AC}$, we have $AD = AC/2 =12$.  Therefore, we have $\\tan \\angle BDC = -\\tan \\angle BDA = -\\frac{BA}{AD} = \\boxed{-\\frac{7}{12}}$.",
+    "is_solved": false,
+    "model_solution": "Step 1:  Since $\\overline{AD} \\parallel \\overline{BC}$ and $\\overline{BD}$ is transversal, we have $\\angle BDC = \\angle BAC = 90^\\circ$ by alternate interior angles postulate, and $\\angle BDA = \\angle ABC$ by corresponding angles postulate.\nStep 2:  Since $\\angle BDC = 90^\\circ$, we know that $BD$ is perpendicular to $AC$, so $\\tan \\angle BDC = \\tan 90^\\circ = \\frac{BC}{AD}.$\nStep 3:  Since $D$ is the midpoint of $\\overline{AC}$, we have $AD = \\frac{AC}{2} = \\frac{BD}{7} = \\frac{25}{2}.$\nStep 4:  Since $BC = 25$ and $AD = \\frac{25}{2}$, we have $\\tan \\angle BDC = \\tan 90^\\circ = \\frac{BC}{AD} = \\frac{25}{\\frac{25}{2}}.$\nStep 5:  $\\tan \\angle BDC = \\frac{25}{\\frac{25}{2}} = \\frac{25 \\cdot 2}{25} =$\n$= 2$\n= 2\nStep 6: \n= 2\n= $\\frac{50}{25}$\nStep 7: = 2",
+    "steps": [
+        "Step 1:  Since $\\overline{AD} \\parallel \\overline{BC}$ and $\\overline{BD}$ is transversal, we have $\\angle BDC = \\angle BAC = 90^\\circ$ by alternate interior angles postulate, and $\\angle BDA = \\angle ABC$ by corresponding angles postulate.",
+        "Step 2:  Since $\\angle BDC = 90^\\circ$, we know that $BD$ is perpendicular to $AC$, so $\\tan \\angle BDC = \\tan 90^\\circ = \\frac{BC}{AD}.$",
+        "Step 3:  Since $D$ is the midpoint of $\\overline{AC}$, we have $AD = \\frac{AC}{2} = \\frac{BD}{7} = \\frac{25}{2}.$",
+        "Step 4:  Since $BC = 25$ and $AD = \\frac{25}{2}$, we have $\\tan \\angle BDC = \\tan 90^\\circ = \\frac{BC}{AD} = \\frac{25}{\\frac{25}{2}}.$",
+        "Step 5:  $\\tan \\angle BDC = \\frac{25}{\\frac{25}{2}} = \\frac{25 \\cdot 2}{25} =$",
+        "$= 2$",
+        "= 2",
+        "Step 6: \n= 2",
+        "= $\\frac{50}{25}$",
+        "Step 7: = 2"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Since $\\overline{AD} \\parallel \\overline{BC}$ and $\\overline{BD}$ is transversal, we have $\\angle BDC = \\angle BAC = 90^\\circ$ by alternate interior angles postulate, and $\\angle BDA = \\angle ABC$ by corresponding angles postulate.",
+            1
+        ],
+        [
+            "Step 2:  Since $\\angle BDC = 90^\\circ$, we know that $BD$ is perpendicular to $AC$, so $\\tan \\angle BDC = \\tan 90^\\circ = \\frac{BC}{AD}.$",
+            1
+        ],
+        [
+            "Step 3:  Since $D$ is the midpoint of $\\overline{AC}$, we have $AD = \\frac{AC}{2} = \\frac{BD}{7} = \\frac{25}{2}.$",
+            1
+        ],
+        [
+            "Step 4:  Since $BC = 25$ and $AD = \\frac{25}{2}$, we have $\\tan \\angle BDC = \\tan 90^\\circ = \\frac{BC}{AD} = \\frac{25}{\\frac{25}{2}}.$",
+            1
+        ],
+        [
+            "Step 5:  $\\tan \\angle BDC = \\frac{25}{\\frac{25}{2}} = \\frac{25 \\cdot 2}{25} =$",
+            1
+        ],
+        [
+            "$= 2$",
+            1
+        ],
+        [
+            "= 2",
+            1
+        ],
+        [
+            "Step 6: \n= 2",
+            1
+        ],
+        [
+            "= $\\frac{50}{25}$",
+            1
+        ],
+        [
+            "Step 7: = 2",
+            1
+        ]
+    ],
+    "time": 135.1378095149994,
+    "total_tokens": 7154,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

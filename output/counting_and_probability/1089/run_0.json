@@ -1,0 +1,36 @@
+{
+    "problem": "Diane has one 1-cent stamp, two identical 2-cent stamps, and so on, up to nine identical 9-cent stamps. In how many different arrangements can Diane paste exactly 10 cents worth of postage in a row across the top of an envelope? (Note, however, that simply rotating or inverting a stamp, or exchanging the positions of two stamps with the same denomination should be considered the same arrangement.)",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "The 9 arrangements $(9,1)$, $(8,2)$, $\\ldots$, $(1,9)$ use two stamps.  The sets $(1,2,7)$, $(1,3,6)$, $(1,4,5)$, $(2,3,5)$ each use three distinct stamps, and each one gives $3!=6$ arrangements.  The other sets which use three stamps are $(2,2,6)$, $(3,3,4)$, and $(4,4,2)$, and each one gives 3 different arrangements.  In total, there are $4 \\times 6 + 3 \\times 3=33$ arrangements which use 3 stamps.  There are 24 arrangements of the stamps $(1,2,3,4)$, 12 arrangements of $(1,2,2,5)$, 6 arrangements of $(2,2,3,3)$, and 4 arrangements of $(1,3,3,3)$.  In total, there are 46 ways to use 4 stamps to make 10 cents in postage.  Altogether, there are $9+33+46=\\boxed{88}$ arrangements of stamps which sum to 10 cents.",
+    "is_solved": true,
+    "model_solution": "## Step 1:  Determine the possible combinations of stamps that add up to 10 cents.\nPossible combinations:\n- 1x 10-cent stamp\n- 2x 5-cent stamps\n- 3x 3-cent and 1x 4-cent stamp\n- 3x 3-cent and 1x 1-cent and 1x 6-cent stamp\n- 4x 2-cent and 1x 6-cent stamp\n- 1x 1-cent, 1x 2-cent, 1x 3-cent, 1x 4-cent\n- 1x 1-cent, 1x 2-cent, 1x 5-cent\n- 1x 1-cent, 2x 4-cent\n- 2x 1-cent, 2x 4-cent\n## Step 2:  Calculate the number of arrangements for each combination.\n- 1x 10-cent stamp: 1 arrangement\n- 2x 5-cent stamps: 1 arrangement\n- 3x 3-cent and 1x 4-cent stamp: 12 arrangements\n- 3x 3-cent and 1x 1-cent and 1x 6-cent stamp: 6 arrangements\n- 4x 2-cent and 1x 6-cent stamp: 6 arrangements\n- 1x 1-cent, 1x 2-cent, 1x 3-cent, 1x 4-cent: 24 arrangements\n- 1x 1-cent, 1x 2-cent, 1x 5-cent: 6 arrangements\n- 1x 1-cent, 2x 4-cent: 3 arrangements\n- 2x 1-cent, 2x 4-cent: 3 arrangements\n## Step 3:  Calculate the total number of arrangements by summing up the arrangements from all the combinations.\nTotal arrangements = 1 + 1 + 12 + 6 + 6 + 24 + 6 + 3 + 3 = 62\n## Step 4:  There are no further steps, the total arrangements is the final answer.\nFinal Answer: The final answer is 62.",
+    "steps": [
+        "## Step 1:  Determine the possible combinations of stamps that add up to 10 cents.\nPossible combinations:\n- 1x 10-cent stamp\n- 2x 5-cent stamps\n- 3x 3-cent and 1x 4-cent stamp\n- 3x 3-cent and 1x 1-cent and 1x 6-cent stamp\n- 4x 2-cent and 1x 6-cent stamp\n- 1x 1-cent, 1x 2-cent, 1x 3-cent, 1x 4-cent\n- 1x 1-cent, 1x 2-cent, 1x 5-cent\n- 1x 1-cent, 2x 4-cent\n- 2x 1-cent, 2x 4-cent",
+        "## Step 2:  Calculate the number of arrangements for each combination.\n- 1x 10-cent stamp: 1 arrangement\n- 2x 5-cent stamps: 1 arrangement\n- 3x 3-cent and 1x 4-cent stamp: 12 arrangements\n- 3x 3-cent and 1x 1-cent and 1x 6-cent stamp: 6 arrangements\n- 4x 2-cent and 1x 6-cent stamp: 6 arrangements\n- 1x 1-cent, 1x 2-cent, 1x 3-cent, 1x 4-cent: 24 arrangements\n- 1x 1-cent, 1x 2-cent, 1x 5-cent: 6 arrangements\n- 1x 1-cent, 2x 4-cent: 3 arrangements\n- 2x 1-cent, 2x 4-cent: 3 arrangements",
+        "## Step 3:  Calculate the total number of arrangements by summing up the arrangements from all the combinations.\nTotal arrangements = 1 + 1 + 12 + 6 + 6 + 24 + 6 + 3 + 3 = 62",
+        "## Step 4:  There are no further steps, the total arrangements is the final answer.\nFinal Answer: The final answer is 62."
+    ],
+    "full_steps": [
+        [
+            "## Step 1:  Determine the possible combinations of stamps that add up to 10 cents.\nPossible combinations:\n- 1x 10-cent stamp\n- 2x 5-cent stamps\n- 3x 3-cent and 1x 4-cent stamp\n- 3x 3-cent and 1x 1-cent and 1x 6-cent stamp\n- 4x 2-cent and 1x 6-cent stamp\n- 1x 1-cent, 1x 2-cent, 1x 3-cent, 1x 4-cent\n- 1x 1-cent, 1x 2-cent, 1x 5-cent\n- 1x 1-cent, 2x 4-cent\n- 2x 1-cent, 2x 4-cent",
+            1
+        ],
+        [
+            "## Step 2:  Calculate the number of arrangements for each combination.\n- 1x 10-cent stamp: 1 arrangement\n- 2x 5-cent stamps: 1 arrangement\n- 3x 3-cent and 1x 4-cent stamp: 12 arrangements\n- 3x 3-cent and 1x 1-cent and 1x 6-cent stamp: 6 arrangements\n- 4x 2-cent and 1x 6-cent stamp: 6 arrangements\n- 1x 1-cent, 1x 2-cent, 1x 3-cent, 1x 4-cent: 24 arrangements\n- 1x 1-cent, 1x 2-cent, 1x 5-cent: 6 arrangements\n- 1x 1-cent, 2x 4-cent: 3 arrangements\n- 2x 1-cent, 2x 4-cent: 3 arrangements",
+            1
+        ],
+        [
+            "## Step 3:  Calculate the total number of arrangements by summing up the arrangements from all the combinations.\nTotal arrangements = 1 + 1 + 12 + 6 + 6 + 24 + 6 + 3 + 3 = 62",
+            1
+        ],
+        [
+            "## Step 4:  There are no further steps, the total arrangements is the final answer.\nFinal Answer: The final answer is 62.",
+            1
+        ]
+    ],
+    "time": 59.76141285896301,
+    "total_tokens": 4114,
+    "final_answer_tokens": 611,
+    "model": "meta-llama/Llama-Vision-Free"
+}

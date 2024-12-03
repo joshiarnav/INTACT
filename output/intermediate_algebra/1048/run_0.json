@@ -1,0 +1,66 @@
+{
+    "problem": "Find all the solutions to\n\\[3 \\sqrt[3]{3x - 2} = x^3 + 2.\\]Enter all the solutions, separated by commas.",
+    "level": "Level 4",
+    "type": "Intermediate Algebra",
+    "solution": "Let $y = \\sqrt[3]{3x - 2}.$  Then the given equation becomes $3y = x^3 + 2,$ so\n\\[x^3 = 3y - 2.\\]Also, from the equation $y = \\sqrt[3]{3x - 2},$ $y^3 = 3x - 2.$  Subtracting these equations, we get\n\\[x^3 - y^3 = 3y - 3x.\\]Then $x^3 - y^3 + 3x - 3y = 0,$ which factors as\n\\[(x - y)(x^2 + xy + y^2 + 3) = 0.\\]Since\n\\[x^2 + xy + y^2 + 3 = \\left( x + \\frac{y}{2} \\right)^2 + \\frac{3}{4} y^2 + 3 > 0,\\]we must have $x = y.$  Then $x^3 - 3x + 2 = 0,$ which factors as $(x - 1)^2 (x + 2) = 0.$  Hence, the solutions are $\\boxed{1,-2}.$",
+    "is_solved": false,
+    "model_solution": "Step 1: Move all terms to one side of the equation to set the equation equal to zero.\n\\[3 \\sqrt[3]{3x - 2} - x^3 - 2 = 0\\]\nStep 2: To remove the cube root, cube both sides of the equation.\n\\[\\left(3 \\sqrt[3]{3x - 2}\\right)^3 = (x^3 + 2)^3\\]\nStep 3: Expand both sides of the equation using the formula $(a-b)^3 = a^3 - 3a^2b + 3ab^2 - b^3$ and $(a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3$, then simplify the equation to obtain $27(3x - 2) = x^9 + 6x^6 + 12x^3 + 8$\nStep 4: Subtract $x^9 + 6x^6 + 12x^3 + 8$ from both sides of the equation, factor out $x^3$ on the left side, and simplify the equation to obtain $81x - 54 = x^9 + 6x^6 + 12x^3 + 8$. Subtract 8 from both sides to get $81x - 62 = x^9 + 6x^6 + 12x^3$.\nSubtract $x^9 + 6x^6 + 12x^3$ from both sides of the equation to obtain $81x - 62 - (x^9 + 6x^6 + 12x^3) = 0$ or $81x - x^9 - 6x^6 - 12x^3 - 62 = 0$.\nSubtract $81x$ from both sides of the equation to obtain $-x^9 - 6x^6 - 12x^3 + 62 = 0$\nLet $y = x^3$ and rewrite the equation as $-y^3 - 6y^2 - 12y + 62 = 0.$\nLet $y = x^3$ and rewrite the equation as $-y^3 - 6y^2 - 12y + 62 = 0.$\nIn order to factor this expression, we can use the Rational Root Theorem to test possible roots.\nStep 5:\nTest the possible rational roots 1, -1, 2, -2, 31, and -31 to find that x = 2 is a solution to the original equation.\nSubtract $(x-2)^3$ from both sides of the equation to obtain $-y^3 - 6y^2 - 12y + 62 = (x-2)^3.$\nSubtract 62 from both sides of the equation to obtain $-y^3 - 6y^2 - 12y = (x-2)^3 - 62$\nStep 6:\n Factor the left side of the equation to obtain $-(y+2)(y^2+4y+31) = (x-2)^3 - 62.$",
+    "steps": [
+        "Step 1: Move all terms to one side of the equation to set the equation equal to zero.\n\\[3 \\sqrt[3]{3x - 2} - x^3 - 2 = 0\\]",
+        "Step 2: To remove the cube root, cube both sides of the equation.\n\\[\\left(3 \\sqrt[3]{3x - 2}\\right)^3 = (x^3 + 2)^3\\]",
+        "Step 3: Expand both sides of the equation using the formula $(a-b)^3 = a^3 - 3a^2b + 3ab^2 - b^3$ and $(a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3$, then simplify the equation to obtain $27(3x - 2) = x^9 + 6x^6 + 12x^3 + 8$",
+        "Step 4: Subtract $x^9 + 6x^6 + 12x^3 + 8$ from both sides of the equation, factor out $x^3$ on the left side, and simplify the equation to obtain $81x - 54 = x^9 + 6x^6 + 12x^3 + 8$. Subtract 8 from both sides to get $81x - 62 = x^9 + 6x^6 + 12x^3$.",
+        "Subtract $x^9 + 6x^6 + 12x^3$ from both sides of the equation to obtain $81x - 62 - (x^9 + 6x^6 + 12x^3) = 0$ or $81x - x^9 - 6x^6 - 12x^3 - 62 = 0$.",
+        "Subtract $81x$ from both sides of the equation to obtain $-x^9 - 6x^6 - 12x^3 + 62 = 0$",
+        "Let $y = x^3$ and rewrite the equation as $-y^3 - 6y^2 - 12y + 62 = 0.$",
+        "Let $y = x^3$ and rewrite the equation as $-y^3 - 6y^2 - 12y + 62 = 0.$\nIn order to factor this expression, we can use the Rational Root Theorem to test possible roots.",
+        "Step 5:\nTest the possible rational roots 1, -1, 2, -2, 31, and -31 to find that x = 2 is a solution to the original equation.\nSubtract $(x-2)^3$ from both sides of the equation to obtain $-y^3 - 6y^2 - 12y + 62 = (x-2)^3.$\nSubtract 62 from both sides of the equation to obtain $-y^3 - 6y^2 - 12y = (x-2)^3 - 62$",
+        "Step 6:\n Factor the left side of the equation to obtain $-(y+2)(y^2+4y+31) = (x-2)^3 - 62.$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Move all terms to one side of the equation to set the equation equal to zero.\n\\[3 \\sqrt[3]{3x - 2} - x^3 - 2 = 0\\]",
+            1
+        ],
+        [
+            "Step 2: To remove the cube root, cube both sides of the equation.\n\\[\\left(3 \\sqrt[3]{3x - 2}\\right)^3 = (x^3 + 2)^3\\]",
+            1
+        ],
+        [
+            "Step 3: Expand both sides of the equation using the formula $(a-b)^3 = a^3 - 3a^2b + 3ab^2 - b^3$ and $(a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3$, then simplify the equation to obtain $27(3x - 2) = x^9 + 6x^6 + 12x^3 + 8$",
+            1
+        ],
+        [
+            "Step 4: Subtract $x^9 + 6x^6 + 12x^3 + 8$ from both sides of the equation, factor out $x^3$ on the left side, and simplify the equation to obtain $81x - 54 = x^9 + 6x^6 + 12x^3 + 8$. Subtract 8 from both sides to get $81x - 62 = x^9 + 6x^6 + 12x^3$.",
+            1
+        ],
+        [
+            "Subtract $x^9 + 6x^6 + 12x^3$ from both sides of the equation to obtain $81x - 62 - (x^9 + 6x^6 + 12x^3) = 0$ or $81x - x^9 - 6x^6 - 12x^3 - 62 = 0$.",
+            1
+        ],
+        [
+            "Subtract $81x$ from both sides of the equation to obtain $-x^9 - 6x^6 - 12x^3 + 62 = 0$",
+            1
+        ],
+        [
+            "Let $y = x^3$ and rewrite the equation as $-y^3 - 6y^2 - 12y + 62 = 0.$",
+            1
+        ],
+        [
+            "Let $y = x^3$ and rewrite the equation as $-y^3 - 6y^2 - 12y + 62 = 0.$\nIn order to factor this expression, we can use the Rational Root Theorem to test possible roots.",
+            1
+        ],
+        [
+            "Step 5:\nTest the possible rational roots 1, -1, 2, -2, 31, and -31 to find that x = 2 is a solution to the original equation.\nSubtract $(x-2)^3$ from both sides of the equation to obtain $-y^3 - 6y^2 - 12y + 62 = (x-2)^3.$\nSubtract 62 from both sides of the equation to obtain $-y^3 - 6y^2 - 12y = (x-2)^3 - 62$",
+            1
+        ],
+        [
+            "Step 6:\n Factor the left side of the equation to obtain $-(y+2)(y^2+4y+31) = (x-2)^3 - 62.$",
+            1
+        ]
+    ],
+    "time": 135.84518694877625,
+    "total_tokens": 9528,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

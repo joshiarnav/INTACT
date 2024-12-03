@@ -1,0 +1,66 @@
+{
+    "problem": "An equilateral triangle is inscribed in the parabola $x^2 = 8y,$ such that one of the vertices of the triangle coincides with the vertex of the parabola.  Find the side length of this equilateral triangle.",
+    "level": "Level 4",
+    "type": "Intermediate Algebra",
+    "solution": "The vertex of the parabola is the origin.  Let $A = \\left( a, \\frac{a^2}{8} \\right)$ be one vertex of the triangle.  Then by symmetry, $B = \\left( -a, \\frac{a^2}{8} \\right)$ is another vertex of the triangle.\n\n[asy]\nunitsize(0.2 cm);\n\nreal parab (real x) {\n  return(x^2/8);\n}\n\npair A, B, O;\n\nA = (8*sqrt(3),24);\nB = (-8*sqrt(3),24);\nO = (0,0);\n\ndraw(O--A--B--cycle);\ndraw(graph(parab,-15,15));\n\ndot(\"$A = (a,\\frac{a^2}{8})$\", A, E);\ndot(\"$B = (-a,\\frac{a^2}{8})$\", B, W);\ndot(\"$O = (0,0)$\", O, S);\n[/asy]\n\nThen $AB^2 = (a + a)^2 = 4a^2,$ and\n\\[OA^2 = a^2 + \\frac{a^4}{64}.\\]Hence, $4a^2 = a^2 + \\frac{a^4}{64}.$  Then $3a^2 = \\frac{a^4}{64},$ so $a^2 = 3 \\cdot 64,$ which means $a = 8 \\sqrt{3}.$\n\nTherefore, the side length of the triangle is $2a = \\boxed{16 \\sqrt{3}}.$",
+    "is_solved": false,
+    "model_solution": "Step 1: The vertices of the equilateral triangle are located at $(4\\sqrt{3},4),$ $(4,0),$ and $(-4,0).$\nStep 2: Because the triangle is equilateral, the vertex of the triangle located at $(4,0)$ must be 2 units closer to the vertex of the parabola than the vertex at $(4\\sqrt{3},4)$ so that it forms a 60\u00b0 angle with this vertex.\nStep 3: Let $\\left(x,\\frac{x^2}{8}\\right)$ be the other two vertices of the equilateral triangle. Then the distance between $(4\\sqrt{3},4)$ and $\\left(x,\\frac{x^2}{8}\\right)$ is the same as the distance between $(4,0)$ and $\\left(x,\\frac{x^2}{8}\\right)$, which is equal to $2$.\nStep 4:\n\\[\\sqrt{(x-4\\sqrt{3})^2+\\left(\\frac{x^2}{8}-4\\right)^2}=\\sqrt{(x-4)^2+\\left(\\frac{x^2}{8}\\right)^2}.\\]\nSolving this equation yields $x=8.$\nSince the side length of the equilateral triangle is the distance between $(8,\\frac{64}{8})$ and $(4,0),$ it is equal to $\\sqrt{(8-4)^2+\\left(8-\\frac{64}{8}\\right)^2}=\\sqrt{16+4}=\\sqrt{20}=2\\sqrt{5}.$\nStep 5:\n$\\sqrt{(8-4\\sqrt{3})^2+\\left(\\frac{8^2}{8}-4\\right)^2}=\\sqrt{(8-4)^2+\\left(\\frac{8^2}{8}\\right)^2}.$\nSimplify both sides of the equation in step 4 and square both sides of the equation to get rid of the square roots.\nStep 4:\n\\[\\sqrt{(x-4\\sqrt{3})^2+\\left(\\frac{x^2}{8}-4\\right)^2}=\\sqrt{(x-4)^2+\\left(\\frac{x^2}{8}\\right)^2}.\\]\nSquaring both sides of the equation yields: $(x-4\\sqrt{3})^2+\\left(\\frac{x^2}{8}-4\\right)^2=(x-4)^2+\\left(\\frac{x^2}{8}\\right)^2.$\nStep 5:\nExpand the left-hand side of the equation to get $x^2-16\\sqrt{3}x+48+\\frac{x^4}{64}-\\frac{x^2}{2}+16=\\left(x-4\\right)^2+\\left(\\frac{x^2}{8}\\right)^2.$\nExpand the right-hand side of the equation to get $\\left(x-4\\right)^2+\\left(\\frac{x^2}{8}\\right)^2=x^2-8x+16+\\frac{x^4}{64}.$",
+    "steps": [
+        "Step 1: The vertices of the equilateral triangle are located at $(4\\sqrt{3},4),$ $(4,0),$ and $(-4,0).$",
+        "Step 2: Because the triangle is equilateral, the vertex of the triangle located at $(4,0)$ must be 2 units closer to the vertex of the parabola than the vertex at $(4\\sqrt{3},4)$ so that it forms a 60\u00b0 angle with this vertex.",
+        "Step 3: Let $\\left(x,\\frac{x^2}{8}\\right)$ be the other two vertices of the equilateral triangle. Then the distance between $(4\\sqrt{3},4)$ and $\\left(x,\\frac{x^2}{8}\\right)$ is the same as the distance between $(4,0)$ and $\\left(x,\\frac{x^2}{8}\\right)$, which is equal to $2$.",
+        "Step 4:\n\\[\\sqrt{(x-4\\sqrt{3})^2+\\left(\\frac{x^2}{8}-4\\right)^2}=\\sqrt{(x-4)^2+\\left(\\frac{x^2}{8}\\right)^2}.\\]\nSolving this equation yields $x=8.$",
+        "Since the side length of the equilateral triangle is the distance between $(8,\\frac{64}{8})$ and $(4,0),$ it is equal to $\\sqrt{(8-4)^2+\\left(8-\\frac{64}{8}\\right)^2}=\\sqrt{16+4}=\\sqrt{20}=2\\sqrt{5}.$",
+        "Step 5:\n$\\sqrt{(8-4\\sqrt{3})^2+\\left(\\frac{8^2}{8}-4\\right)^2}=\\sqrt{(8-4)^2+\\left(\\frac{8^2}{8}\\right)^2}.$",
+        "Simplify both sides of the equation in step 4 and square both sides of the equation to get rid of the square roots.",
+        "Step 4:\n\\[\\sqrt{(x-4\\sqrt{3})^2+\\left(\\frac{x^2}{8}-4\\right)^2}=\\sqrt{(x-4)^2+\\left(\\frac{x^2}{8}\\right)^2}.\\]\nSquaring both sides of the equation yields: $(x-4\\sqrt{3})^2+\\left(\\frac{x^2}{8}-4\\right)^2=(x-4)^2+\\left(\\frac{x^2}{8}\\right)^2.$",
+        "Step 5:\nExpand the left-hand side of the equation to get $x^2-16\\sqrt{3}x+48+\\frac{x^4}{64}-\\frac{x^2}{2}+16=\\left(x-4\\right)^2+\\left(\\frac{x^2}{8}\\right)^2.$",
+        "Expand the right-hand side of the equation to get $\\left(x-4\\right)^2+\\left(\\frac{x^2}{8}\\right)^2=x^2-8x+16+\\frac{x^4}{64}.$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: The vertices of the equilateral triangle are located at $(4\\sqrt{3},4),$ $(4,0),$ and $(-4,0).$",
+            1
+        ],
+        [
+            "Step 2: Because the triangle is equilateral, the vertex of the triangle located at $(4,0)$ must be 2 units closer to the vertex of the parabola than the vertex at $(4\\sqrt{3},4)$ so that it forms a 60\u00b0 angle with this vertex.",
+            1
+        ],
+        [
+            "Step 3: Let $\\left(x,\\frac{x^2}{8}\\right)$ be the other two vertices of the equilateral triangle. Then the distance between $(4\\sqrt{3},4)$ and $\\left(x,\\frac{x^2}{8}\\right)$ is the same as the distance between $(4,0)$ and $\\left(x,\\frac{x^2}{8}\\right)$, which is equal to $2$.",
+            1
+        ],
+        [
+            "Step 4:\n\\[\\sqrt{(x-4\\sqrt{3})^2+\\left(\\frac{x^2}{8}-4\\right)^2}=\\sqrt{(x-4)^2+\\left(\\frac{x^2}{8}\\right)^2}.\\]\nSolving this equation yields $x=8.$",
+            1
+        ],
+        [
+            "Since the side length of the equilateral triangle is the distance between $(8,\\frac{64}{8})$ and $(4,0),$ it is equal to $\\sqrt{(8-4)^2+\\left(8-\\frac{64}{8}\\right)^2}=\\sqrt{16+4}=\\sqrt{20}=2\\sqrt{5}.$",
+            1
+        ],
+        [
+            "Step 5:\n$\\sqrt{(8-4\\sqrt{3})^2+\\left(\\frac{8^2}{8}-4\\right)^2}=\\sqrt{(8-4)^2+\\left(\\frac{8^2}{8}\\right)^2}.$",
+            1
+        ],
+        [
+            "Simplify both sides of the equation in step 4 and square both sides of the equation to get rid of the square roots.",
+            1
+        ],
+        [
+            "Step 4:\n\\[\\sqrt{(x-4\\sqrt{3})^2+\\left(\\frac{x^2}{8}-4\\right)^2}=\\sqrt{(x-4)^2+\\left(\\frac{x^2}{8}\\right)^2}.\\]\nSquaring both sides of the equation yields: $(x-4\\sqrt{3})^2+\\left(\\frac{x^2}{8}-4\\right)^2=(x-4)^2+\\left(\\frac{x^2}{8}\\right)^2.$",
+            1
+        ],
+        [
+            "Step 5:\nExpand the left-hand side of the equation to get $x^2-16\\sqrt{3}x+48+\\frac{x^4}{64}-\\frac{x^2}{2}+16=\\left(x-4\\right)^2+\\left(\\frac{x^2}{8}\\right)^2.$",
+            1
+        ],
+        [
+            "Expand the right-hand side of the equation to get $\\left(x-4\\right)^2+\\left(\\frac{x^2}{8}\\right)^2=x^2-8x+16+\\frac{x^4}{64}.$",
+            1
+        ]
+    ],
+    "time": 139.04660987854004,
+    "total_tokens": 9376,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

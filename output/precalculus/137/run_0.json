@@ -1,0 +1,66 @@
+{
+    "problem": "Let $a,$ $b,$ $c,$ $p,$ $q,$ and $r$ be real numbers such that\n\\[\\begin{vmatrix} p & b & c \\\\ a & q & c \\\\ a & b & r \\end{vmatrix} = 0.\\]Assuming that $a \\neq p,$ $b \\neq q,$ and $c \\neq r,$ find the value of $\\frac{p}{p - a} + \\frac{q}{q - b} + \\frac{r}{r - c}.$",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "Expanding the determinant, we get\n\\begin{align*}\n\\begin{vmatrix} p & b & c \\\\ a & q & c \\\\ a & b & r \\end{vmatrix} &= p \\begin{vmatrix} q & c \\\\ b & r \\end{vmatrix} - b \\begin{vmatrix} a & c \\\\ a & r \\end{vmatrix} + c \\begin{vmatrix} a & q \\\\ a & b \\end{vmatrix} \\\\\n&= p(qr - bc) - b(ar - ac) + c(ab - aq) \\\\\n&= pqr - bpc - abr + abc + abc - acq \\\\\n&= 2abc - abr - acq - bcp + pqr.\n\\end{align*}Let $x = p - a,$ $y = q - b,$ and $z = r - c.$  Then $p = a + x,$ $q = b + y,$ and $r = c + z.$  Substituting, we get\n\\[2abc - ab(c + z) - ac(b + y) - bc(a + x) + (a + x)(b + y)(c + z) = 0.\\]This simplifies to $ayz + bxz + cxy + xyz = 0.$\n\nThen\n\\begin{align*}\n\\frac{p}{p - a} + \\frac{q}{q - b} + \\frac{r}{r - c} &= \\frac{a + x}{x} + \\frac{b + y}{y} + \\frac{c + z}{z} \\\\\n&= \\frac{a}{x} + 1 + \\frac{b}{y} + 1 + \\frac{c}{z} + 1 \\\\\n&= \\frac{a}{x} + \\frac{b}{y} + \\frac{c}{z} + 3 \\\\\n&= \\frac{ayz + bxz + cxy}{xyz} +  3 \\\\\n&= \\frac{-xyz}{xyz} + 3 = \\boxed{2}.\n\\end{align*}",
+    "is_solved": false,
+    "model_solution": "Step 1:  We are given a determinant of a 3x3 matrix and are asked to find the value of an expression involving the elements of the matrix.\nThe given determinant can be expanded as follows:\n\\[\\begin{vmatrix} p & b & c \\\\ a & q & c \\\\ a & b & r \\end{vmatrix} = p(qr - bc) - b(rc - ac) + c(ab - aq)\\]\nStep 2:  We can simplify this expression by expanding and rearranging the terms.\nStep 3:  The given determinant equals 0, so we can set the expression equal to 0 and solve for the elements of the matrix.\nStep 4:  We can then use these expressions to find the value of the given expression involving the elements of the matrix.\nStep 5:  This involves substituting the expressions for p, q, and r into the given expression and simplifying.\n\n$\\begin{aligned} 0 &= p(qr - bc) - b(rc - ac) + c(ab - aq) \\\\ &= (pq - pb)r - (pc - ac)b + abc - aqc \\\\ &= (pq - pb)r + abc -\n$p(qr - bc) - b(rc - ac) + c(ab - aq) = 0$\n$(pq - pb)r + abc - aqc - (pc - ac)b = 0$\n$(p - a)cr + abc - aqc - (p - a)cb = 0$\n$cr(p - a) + abc - aqc - (p - a)cb = 0$\n$cr(p - a) - cb(p - a) + abc - aqc = 0$\n$(p - a)(cr - cb) + abc - aqc = 0$\n$(p - a)(c(r - b)) + abc - aqc = 0$\n$(p - a)(c(r - b)) + c(ab - aq) = 0$\n$(p - a)(c(r - b)) - c(aq - ab) = 0$\n$(p - a)(c(r - b) - (a(q - b))) = 0$\n$(p - a)(cr - cb - aq + ab) = 0$\n$(p - a)(c(r - b) - a(q - b)) = 0$\n$(p - a)((c - a)(r - b)) = 0$\n$(p - a)((c - a)(r - b)) = 0$\nTherefore, $p = a$ or $c = r$ or $q = b.$\nSince $a \\neq p,$ $b \\neq q,$\nSince $c \\neq r$, we have $p = a$ or $q = b$.\n\n$\\frac{p}{p - a} + \\frac{q}{q - b} + \\frac{r}{r - c}$\n$= \\frac{a}{a - a} + \\frac{q}{q - b} + \\frac{r}{r - c}$\n$= 0 + \\frac{q}{q - b} + \\frac{r}{r - c}$\n$= \\frac{q}{q - b} + \\frac{r}{r - c}$\n$\\frac{q}{q - b} + \\frac{r}{r - c} = \\frac{q(r - c) + r(q - b)}{(q - b)(r - c)}$\n$\\frac{q(r - c) + r(q - b)}{(q - b)(r - c)} = \\frac{qr - qc + rq - rb}{(q - b)(r - c)} = \\frac{2qr - (q + r)(b + c)}{(q - b)(r - c)}$\n$\\frac{2qr - (q + r)(b + c)}{(q - b)(r - c)} = \\frac{2qr - qb - qc - rb - rc}{(q - b)(r - c)}$\n$\\frac{2qr - qb - qc - rb - rc}{(q - b)(r - c)}$\n$= \\frac{2qr - q(b + c) - r(b + c)}{(q - b)(r - c)}$\n$= \\frac{(2qr - q(b + c)) - r(b + c)}{(q - b)(r - c)}$\n$= \\frac{(2r - b - c)q - r(b + c)}{(q - b)(r - c)}$\n$= \\frac{(2r - b - c)q - r(b + c)}{(q - b)(r - c)}$\n$\\frac{(2r - b - c)q - r(b + c)}{(q - b)(r - c)} = \\frac{(2r - b - c)q}{(q - b)(r - c)} - \\frac{r(b + c)}{(q - b)(r - c)}$\n$\\frac{(2r - b - c)q}{(q - b)(r - c)} - \\frac{r(b + c)}{(q - b)(r - c)} = \\frac{(2r - b - c)q}{(q - b)(r - c)} - \\frac{r(b + c)}{(q - b)(r - c)}$\n$= \\frac{(2r - b - c)q}{(q - b)(r - c)} - \\frac{r(q - b) + r(b + c)}{(q - b)(r - c)}$\n$= \\frac{(2r - b - c)q - r(q - b) - r(b + c)}{(q - b)(r - c)}$",
+    "steps": [
+        "Step 1:  We are given a determinant of a 3x3 matrix and are asked to find the value of an expression involving the elements of the matrix.\nThe given determinant can be expanded as follows:\n\\[\\begin{vmatrix} p & b & c \\\\ a & q & c \\\\ a & b & r \\end{vmatrix} = p(qr - bc) - b(rc - ac) + c(ab - aq)\\]\nStep 2:  We can simplify this expression by expanding and rearranging the terms.\nStep 3:  The given determinant equals 0, so we can set the expression equal to 0 and solve for the elements of the matrix.\nStep 4:  We can then use these expressions to find the value of the given expression involving the elements of the matrix.\nStep 5:  This involves substituting the expressions for p, q, and r into the given expression and simplifying.\n\n$\\begin{aligned} 0 &= p(qr - bc) - b(rc - ac) + c(ab - aq) \\\\ &= (pq - pb)r - (pc - ac)b + abc - aqc \\\\ &= (pq - pb)r + abc -",
+        "$p(qr - bc) - b(rc - ac) + c(ab - aq) = 0$\n$(pq - pb)r + abc - aqc - (pc - ac)b = 0$\n$(p - a)cr + abc - aqc - (p - a)cb = 0$",
+        "$cr(p - a) + abc - aqc - (p - a)cb = 0$\n$cr(p - a) - cb(p - a) + abc - aqc = 0$\n$(p - a)(cr - cb) + abc - aqc = 0$\n$(p - a)(c(r - b)) + abc - aqc = 0$\n$(p - a)(c(r - b)) + c(ab - aq) = 0$\n$(p - a)(c(r - b)) - c(aq - ab) = 0$\n$(p - a)(c(r - b) - (a(q - b))) = 0$\n$(p - a)(cr - cb - aq + ab) = 0$\n$(p - a)(c(r - b) - a(q - b)) = 0$\n$(p - a)((c - a)(r - b)) = 0$\n$(p - a)((c - a)(r - b)) = 0$\nTherefore, $p = a$ or $c = r$ or $q = b.$\nSince $a \\neq p,$ $b \\neq q,$",
+        "Since $c \\neq r$, we have $p = a$ or $q = b$.\n\n$\\frac{p}{p - a} + \\frac{q}{q - b} + \\frac{r}{r - c}$\n$= \\frac{a}{a - a} + \\frac{q}{q - b} + \\frac{r}{r - c}$\n$= 0 + \\frac{q}{q - b} + \\frac{r}{r - c}$\n$= \\frac{q}{q - b} + \\frac{r}{r - c}$",
+        "$\\frac{q}{q - b} + \\frac{r}{r - c} = \\frac{q(r - c) + r(q - b)}{(q - b)(r - c)}$",
+        "$\\frac{q(r - c) + r(q - b)}{(q - b)(r - c)} = \\frac{qr - qc + rq - rb}{(q - b)(r - c)} = \\frac{2qr - (q + r)(b + c)}{(q - b)(r - c)}$",
+        "$\\frac{2qr - (q + r)(b + c)}{(q - b)(r - c)} = \\frac{2qr - qb - qc - rb - rc}{(q - b)(r - c)}$",
+        "$\\frac{2qr - qb - qc - rb - rc}{(q - b)(r - c)}$\n$= \\frac{2qr - q(b + c) - r(b + c)}{(q - b)(r - c)}$\n$= \\frac{(2qr - q(b + c)) - r(b + c)}{(q - b)(r - c)}$\n$= \\frac{(2r - b - c)q - r(b + c)}{(q - b)(r - c)}$\n$= \\frac{(2r - b - c)q - r(b + c)}{(q - b)(r - c)}$",
+        "$\\frac{(2r - b - c)q - r(b + c)}{(q - b)(r - c)} = \\frac{(2r - b - c)q}{(q - b)(r - c)} - \\frac{r(b + c)}{(q - b)(r - c)}$",
+        "$\\frac{(2r - b - c)q}{(q - b)(r - c)} - \\frac{r(b + c)}{(q - b)(r - c)} = \\frac{(2r - b - c)q}{(q - b)(r - c)} - \\frac{r(b + c)}{(q - b)(r - c)}$\n$= \\frac{(2r - b - c)q}{(q - b)(r - c)} - \\frac{r(q - b) + r(b + c)}{(q - b)(r - c)}$\n$= \\frac{(2r - b - c)q - r(q - b) - r(b + c)}{(q - b)(r - c)}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We are given a determinant of a 3x3 matrix and are asked to find the value of an expression involving the elements of the matrix.\nThe given determinant can be expanded as follows:\n\\[\\begin{vmatrix} p & b & c \\\\ a & q & c \\\\ a & b & r \\end{vmatrix} = p(qr - bc) - b(rc - ac) + c(ab - aq)\\]\nStep 2:  We can simplify this expression by expanding and rearranging the terms.\nStep 3:  The given determinant equals 0, so we can set the expression equal to 0 and solve for the elements of the matrix.\nStep 4:  We can then use these expressions to find the value of the given expression involving the elements of the matrix.\nStep 5:  This involves substituting the expressions for p, q, and r into the given expression and simplifying.\n\n$\\begin{aligned} 0 &= p(qr - bc) - b(rc - ac) + c(ab - aq) \\\\ &= (pq - pb)r - (pc - ac)b + abc - aqc \\\\ &= (pq - pb)r + abc -",
+            1
+        ],
+        [
+            "$p(qr - bc) - b(rc - ac) + c(ab - aq) = 0$\n$(pq - pb)r + abc - aqc - (pc - ac)b = 0$\n$(p - a)cr + abc - aqc - (p - a)cb = 0$",
+            1
+        ],
+        [
+            "$cr(p - a) + abc - aqc - (p - a)cb = 0$\n$cr(p - a) - cb(p - a) + abc - aqc = 0$\n$(p - a)(cr - cb) + abc - aqc = 0$\n$(p - a)(c(r - b)) + abc - aqc = 0$\n$(p - a)(c(r - b)) + c(ab - aq) = 0$\n$(p - a)(c(r - b)) - c(aq - ab) = 0$\n$(p - a)(c(r - b) - (a(q - b))) = 0$\n$(p - a)(cr - cb - aq + ab) = 0$\n$(p - a)(c(r - b) - a(q - b)) = 0$\n$(p - a)((c - a)(r - b)) = 0$\n$(p - a)((c - a)(r - b)) = 0$\nTherefore, $p = a$ or $c = r$ or $q = b.$\nSince $a \\neq p,$ $b \\neq q,$",
+            1
+        ],
+        [
+            "Since $c \\neq r$, we have $p = a$ or $q = b$.\n\n$\\frac{p}{p - a} + \\frac{q}{q - b} + \\frac{r}{r - c}$\n$= \\frac{a}{a - a} + \\frac{q}{q - b} + \\frac{r}{r - c}$\n$= 0 + \\frac{q}{q - b} + \\frac{r}{r - c}$\n$= \\frac{q}{q - b} + \\frac{r}{r - c}$",
+            1
+        ],
+        [
+            "$\\frac{q}{q - b} + \\frac{r}{r - c} = \\frac{q(r - c) + r(q - b)}{(q - b)(r - c)}$",
+            1
+        ],
+        [
+            "$\\frac{q(r - c) + r(q - b)}{(q - b)(r - c)} = \\frac{qr - qc + rq - rb}{(q - b)(r - c)} = \\frac{2qr - (q + r)(b + c)}{(q - b)(r - c)}$",
+            1
+        ],
+        [
+            "$\\frac{2qr - (q + r)(b + c)}{(q - b)(r - c)} = \\frac{2qr - qb - qc - rb - rc}{(q - b)(r - c)}$",
+            1
+        ],
+        [
+            "$\\frac{2qr - qb - qc - rb - rc}{(q - b)(r - c)}$\n$= \\frac{2qr - q(b + c) - r(b + c)}{(q - b)(r - c)}$\n$= \\frac{(2qr - q(b + c)) - r(b + c)}{(q - b)(r - c)}$\n$= \\frac{(2r - b - c)q - r(b + c)}{(q - b)(r - c)}$\n$= \\frac{(2r - b - c)q - r(b + c)}{(q - b)(r - c)}$",
+            1
+        ],
+        [
+            "$\\frac{(2r - b - c)q - r(b + c)}{(q - b)(r - c)} = \\frac{(2r - b - c)q}{(q - b)(r - c)} - \\frac{r(b + c)}{(q - b)(r - c)}$",
+            1
+        ],
+        [
+            "$\\frac{(2r - b - c)q}{(q - b)(r - c)} - \\frac{r(b + c)}{(q - b)(r - c)} = \\frac{(2r - b - c)q}{(q - b)(r - c)} - \\frac{r(b + c)}{(q - b)(r - c)}$\n$= \\frac{(2r - b - c)q}{(q - b)(r - c)} - \\frac{r(q - b) + r(b + c)}{(q - b)(r - c)}$\n$= \\frac{(2r - b - c)q - r(q - b) - r(b + c)}{(q - b)(r - c)}$",
+            1
+        ]
+    ],
+    "time": 139.3824234008789,
+    "total_tokens": 18760,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

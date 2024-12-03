@@ -1,0 +1,61 @@
+{
+    "problem": "How many positive integers less than or equal to 100 have a prime factor that is greater than 4?",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "The easiest solution is to find the number of positive integers with only 2 and 3 as their prime factors. If the number has no factors of 3, the qualifying numbers are $2^0, 2^1, 2^2, 2^3, 2^4, 2^5, 2^6$ for 7 total. If there is one factor of 3, we have $2^0 \\cdot 3^1, 2^1 \\cdot 3^1, 2^2 \\cdot 3^1, 2^3 \\cdot 3^1, 2^4 \\cdot 3^1, 2^5 \\cdot 3^1$ for 6 total. With two factors of 3, we have $2^0 \\cdot 3^2, 2^1 \\cdot 3^2, 2^2 \\cdot 3^2, 2^3 \\cdot 3^2$ for 4 total. With three factors of 3, we have $2^0 \\cdot 3^3, 2^1 \\cdot 3^3$ for 2 total. Finally, $3^4$ gives us 1 more. So, there are $7+ 6+4+2+1 = 20$ positive integers less than or equal to 100 that have only 2 and 3 as prime factors. Therefore, there are $100-20 = \\boxed{80}$ positive integers less than or equal to 100 that have a prime factor greater than 4.",
+    "is_solved": true,
+    "model_solution": "Step 1: Identify the prime numbers greater than 4 that are less than or equal to 100.\nStep 2: Exclude the prime numbers 2 and 3 (the only primes less than or equal to 4) from the set of all positive integers less than or equal to 100, since they do not meet the condition of having a prime factor greater than 4.\nStep 3: Count the total number of remaining positive integers, which are the set of all integers less than or equal to 100, excluding 1 and the multiples of 2 and 3 (i.e., integers divisible by 2 or 3).\nStep 4: Count the total number of remaining positive integers, which is 100 - 49 = 51.\nStep 5: Realize that steps 1-4 were unnecessary and that the problem can be solved more simply by counting the total number of positive integers less than or equal to 100 and subtracting the total number of integers that are only divisible by 2 or 3 (which is the same as the total number of integers divisible by 2 or 3).\nStep 6: Calculate the number of integers divisible by 2 or 3, which is the sum of the number of integers divisible by 2 and the number of integers divisible by 3, minus the number of integers divisible by 6 (since they were counted twice). 50 + 33 - 16 = 67.\nSubtract the number of integers divisible by 2 or 3 from the total number of positive integers less than or equal to 100.\nSubtract 67 from 100.\nSubtract 67 from 100.",
+    "steps": [
+        "Step 1: Identify the prime numbers greater than 4 that are less than or equal to 100.",
+        "Step 2: Exclude the prime numbers 2 and 3 (the only primes less than or equal to 4) from the set of all positive integers less than or equal to 100, since they do not meet the condition of having a prime factor greater than 4.",
+        "Step 3: Count the total number of remaining positive integers, which are the set of all integers less than or equal to 100, excluding 1 and the multiples of 2 and 3 (i.e., integers divisible by 2 or 3).",
+        "Step 4: Count the total number of remaining positive integers, which is 100 - 49 = 51.",
+        "Step 5: Realize that steps 1-4 were unnecessary and that the problem can be solved more simply by counting the total number of positive integers less than or equal to 100 and subtracting the total number of integers that are only divisible by 2 or 3 (which is the same as the total number of integers divisible by 2 or 3).",
+        "Step 6: Calculate the number of integers divisible by 2 or 3, which is the sum of the number of integers divisible by 2 and the number of integers divisible by 3, minus the number of integers divisible by 6 (since they were counted twice). 50 + 33 - 16 = 67.",
+        "Subtract the number of integers divisible by 2 or 3 from the total number of positive integers less than or equal to 100.",
+        "Subtract 67 from 100.",
+        "Subtract 67 from 100."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Identify the prime numbers greater than 4 that are less than or equal to 100.",
+            1
+        ],
+        [
+            "Step 2: Exclude the prime numbers 2 and 3 (the only primes less than or equal to 4) from the set of all positive integers less than or equal to 100, since they do not meet the condition of having a prime factor greater than 4.",
+            1
+        ],
+        [
+            "Step 3: Count the total number of remaining positive integers, which are the set of all integers less than or equal to 100, excluding 1 and the multiples of 2 and 3 (i.e., integers divisible by 2 or 3).",
+            1
+        ],
+        [
+            "Step 4: Count the total number of remaining positive integers, which is 100 - 49 = 51.",
+            1
+        ],
+        [
+            "Step 5: Realize that steps 1-4 were unnecessary and that the problem can be solved more simply by counting the total number of positive integers less than or equal to 100 and subtracting the total number of integers that are only divisible by 2 or 3 (which is the same as the total number of integers divisible by 2 or 3).",
+            1
+        ],
+        [
+            "Step 6: Calculate the number of integers divisible by 2 or 3, which is the sum of the number of integers divisible by 2 and the number of integers divisible by 3, minus the number of integers divisible by 6 (since they were counted twice). 50 + 33 - 16 = 67.",
+            1
+        ],
+        [
+            "Subtract the number of integers divisible by 2 or 3 from the total number of positive integers less than or equal to 100.",
+            1
+        ],
+        [
+            "Subtract 67 from 100.",
+            1
+        ],
+        [
+            "Subtract 67 from 100.",
+            1
+        ]
+    ],
+    "time": 119.10746026039124,
+    "total_tokens": 5405,
+    "final_answer_tokens": 423,
+    "model": "meta-llama/Llama-Vision-Free"
+}

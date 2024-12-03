@@ -1,0 +1,56 @@
+{
+    "problem": "Let\n\\[x^8 + 3x^4 - 4 = p_1(x) p_2(x) \\dotsm p_k(x),\\]where each non-constant polynomial $p_i(x)$ is monic with integer coefficients, and cannot be factored further over the integers.  Compute $p_1(1) + p_2(1) + \\dots + p_k(1).$",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "First, we can factor $x^8 + 3x^4 - 4$ as $(x^4 - 1)(x^4 + 4).$  Then\n\\[x^4 - 1 = (x^2 + 1)(x^2 - 1) = (x^2 + 1)(x - 1)(x + 1),\\]and by Sophie Germain,\n\\[x^4 + 4 = x^4 + 4x^2 + 4 - 4x^2 = (x^2 + 2)^2 - (2x)^2 = (x^2 + 2x + 2)(x^2 - 2x + 2).\\]Thus, the full factorization is\n\\[x^8 + 3x^4 - 4 = (x^2 + 1)(x - 1)(x + 1)(x^2 + 2x + 2)(x^2 - 2x + 2).\\]Evaluating each factor at $x = 1,$ we get $2 + 0 + 2 + 5 + 1 = \\boxed{10}.$",
+    "is_solved": true,
+    "model_solution": "Step 1:  We are given the polynomial $x^8 + 3x^4 - 4$ and need to factor it into monic polynomials with integer coefficients that cannot be factored further over the integers.\nStep 2:  To start, we can attempt to factor the given polynomial by using a substitution. We'll use the substitution $y = x^4$ to simplify the expression.\nStep 3:  Making this substitution, the polynomial becomes $x^8 + 3x^4 - 4 = y^2 + 3y - 4.$\nStep 4:  The quadratic expression $y^2 + 3y - 4$ can be factored as $(y - 1)(y + 4)$.\nStep 5:  Therefore, we can rewrite the original polynomial as $(x^4 - 1)(x^4 + 4)$.\nStep 6:  Further factoring the first factor, we have $(x^4 - 1) = (x^2 - 1)(x^2 + 1) = (x - 1)(x + 1)(x^2 + 1)$.\nStep\nThe factorization $(x^4 - 1)(x^4 + 4)$ can be written as $(x - 1)(x + 1)(x^2 + 1)(x^2 + 2x \\sqrt{2} + 2)(x^2 - 2x \\sqrt{2} + 2)$\nSince $x^2 + 2x \\sqrt{2} + 2$ and $x^2 - 2x \\sqrt{2} + 2$ cannot be factored further over the integers, our factorization is complete. \n\nWe have $p_1(x) = x - 1,$ $p_2(x) = x + 1,$ $p_3(x) = x^2 + 1,$ $p_4(x) = x^2 + 2x \\sqrt{2} + 2,$ and $p_5(x) = x^2 - 2x \\sqrt{2} + 2.$\nWe have $p_1(1) = 0,$ $p_2(1) = 2,$ $p_3(1) = 2,$ $p_4(1) = 4 + 2 \\cdot 1 \\cdot \\sqrt{2} + 2 = 6 + 2 \\sqrt{2},$ and $p_5(1) = 4 - 2 \\cdot 1 \\cdot \\sqrt{2} + 2 = 6 - 2 \\sqrt{2}.$\nStep 8:\n$p_1(1) + p_2(1) + p_3(1) + p_4(1) + p_5(1) = 0 + 2 + 2 + (6 + 2 \\sqrt{2}) + (6 - 2 \\sqrt{2})$\n$p_1(1) + p_2(1) + p_3(1) + p_4(1) + p_5(1) = 0 + 2 + 2 + (6 + 2 \\sqrt{2}) + (6 - 2 \\sqrt{2}) = 16$\n$p_1(1) + p_2(1) + p_3(1) + p_4(1) + p_5(1) = 0 + 2 + 2 + (6 + 2 \\sqrt{2}) + (6 - 2 \\sqrt{2})$\n$p_1(1) + p_2(1) + p_3(1) + p_4(1) + p_5(1) = 0 + 2 + 2 + (6 + 2 \\sqrt{2}) + (6 - 2 \\sqrt{2}) = 16$\n$p_1(1) + p_2(1) + p_3(1) + p_4(1) + p_5(1) = 0 + 2 + 2 + (6 + 2 \\sqrt{2}) + (6 - 2 \\sqrt{2})$\n$p_1(1) + p_2(1) + p_3(1) + p_4(1) + p_5(1) = 0 + 2 + 2 + (6 + 2 \\sqrt{2}) + (6 - 2 \\sqrt{2}) = 16$",
+    "steps": [
+        "Step 1:  We are given the polynomial $x^8 + 3x^4 - 4$ and need to factor it into monic polynomials with integer coefficients that cannot be factored further over the integers.\nStep 2:  To start, we can attempt to factor the given polynomial by using a substitution. We'll use the substitution $y = x^4$ to simplify the expression.\nStep 3:  Making this substitution, the polynomial becomes $x^8 + 3x^4 - 4 = y^2 + 3y - 4.$\nStep 4:  The quadratic expression $y^2 + 3y - 4$ can be factored as $(y - 1)(y + 4)$.\nStep 5:  Therefore, we can rewrite the original polynomial as $(x^4 - 1)(x^4 + 4)$.\nStep 6:  Further factoring the first factor, we have $(x^4 - 1) = (x^2 - 1)(x^2 + 1) = (x - 1)(x + 1)(x^2 + 1)$.\nStep",
+        "The factorization $(x^4 - 1)(x^4 + 4)$ can be written as $(x - 1)(x + 1)(x^2 + 1)(x^2 + 2x \\sqrt{2} + 2)(x^2 - 2x \\sqrt{2} + 2)$",
+        "Since $x^2 + 2x \\sqrt{2} + 2$ and $x^2 - 2x \\sqrt{2} + 2$ cannot be factored further over the integers, our factorization is complete. \n\nWe have $p_1(x) = x - 1,$ $p_2(x) = x + 1,$ $p_3(x) = x^2 + 1,$ $p_4(x) = x^2 + 2x \\sqrt{2} + 2,$ and $p_5(x) = x^2 - 2x \\sqrt{2} + 2.$",
+        "We have $p_1(1) = 0,$ $p_2(1) = 2,$ $p_3(1) = 2,$ $p_4(1) = 4 + 2 \\cdot 1 \\cdot \\sqrt{2} + 2 = 6 + 2 \\sqrt{2},$ and $p_5(1) = 4 - 2 \\cdot 1 \\cdot \\sqrt{2} + 2 = 6 - 2 \\sqrt{2}.$",
+        "Step 8:\n$p_1(1) + p_2(1) + p_3(1) + p_4(1) + p_5(1) = 0 + 2 + 2 + (6 + 2 \\sqrt{2}) + (6 - 2 \\sqrt{2})$",
+        "$p_1(1) + p_2(1) + p_3(1) + p_4(1) + p_5(1) = 0 + 2 + 2 + (6 + 2 \\sqrt{2}) + (6 - 2 \\sqrt{2}) = 16$",
+        "$p_1(1) + p_2(1) + p_3(1) + p_4(1) + p_5(1) = 0 + 2 + 2 + (6 + 2 \\sqrt{2}) + (6 - 2 \\sqrt{2})$\n$p_1(1) + p_2(1) + p_3(1) + p_4(1) + p_5(1) = 0 + 2 + 2 + (6 + 2 \\sqrt{2}) + (6 - 2 \\sqrt{2}) = 16$",
+        "$p_1(1) + p_2(1) + p_3(1) + p_4(1) + p_5(1) = 0 + 2 + 2 + (6 + 2 \\sqrt{2}) + (6 - 2 \\sqrt{2})$\n$p_1(1) + p_2(1) + p_3(1) + p_4(1) + p_5(1) = 0 + 2 + 2 + (6 + 2 \\sqrt{2}) + (6 - 2 \\sqrt{2}) = 16$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We are given the polynomial $x^8 + 3x^4 - 4$ and need to factor it into monic polynomials with integer coefficients that cannot be factored further over the integers.\nStep 2:  To start, we can attempt to factor the given polynomial by using a substitution. We'll use the substitution $y = x^4$ to simplify the expression.\nStep 3:  Making this substitution, the polynomial becomes $x^8 + 3x^4 - 4 = y^2 + 3y - 4.$\nStep 4:  The quadratic expression $y^2 + 3y - 4$ can be factored as $(y - 1)(y + 4)$.\nStep 5:  Therefore, we can rewrite the original polynomial as $(x^4 - 1)(x^4 + 4)$.\nStep 6:  Further factoring the first factor, we have $(x^4 - 1) = (x^2 - 1)(x^2 + 1) = (x - 1)(x + 1)(x^2 + 1)$.\nStep",
+            1
+        ],
+        [
+            "The factorization $(x^4 - 1)(x^4 + 4)$ can be written as $(x - 1)(x + 1)(x^2 + 1)(x^2 + 2x \\sqrt{2} + 2)(x^2 - 2x \\sqrt{2} + 2)$",
+            1
+        ],
+        [
+            "Since $x^2 + 2x \\sqrt{2} + 2$ and $x^2 - 2x \\sqrt{2} + 2$ cannot be factored further over the integers, our factorization is complete. \n\nWe have $p_1(x) = x - 1,$ $p_2(x) = x + 1,$ $p_3(x) = x^2 + 1,$ $p_4(x) = x^2 + 2x \\sqrt{2} + 2,$ and $p_5(x) = x^2 - 2x \\sqrt{2} + 2.$",
+            1
+        ],
+        [
+            "We have $p_1(1) = 0,$ $p_2(1) = 2,$ $p_3(1) = 2,$ $p_4(1) = 4 + 2 \\cdot 1 \\cdot \\sqrt{2} + 2 = 6 + 2 \\sqrt{2},$ and $p_5(1) = 4 - 2 \\cdot 1 \\cdot \\sqrt{2} + 2 = 6 - 2 \\sqrt{2}.$",
+            1
+        ],
+        [
+            "Step 8:\n$p_1(1) + p_2(1) + p_3(1) + p_4(1) + p_5(1) = 0 + 2 + 2 + (6 + 2 \\sqrt{2}) + (6 - 2 \\sqrt{2})$",
+            1
+        ],
+        [
+            "$p_1(1) + p_2(1) + p_3(1) + p_4(1) + p_5(1) = 0 + 2 + 2 + (6 + 2 \\sqrt{2}) + (6 - 2 \\sqrt{2}) = 16$",
+            1
+        ],
+        [
+            "$p_1(1) + p_2(1) + p_3(1) + p_4(1) + p_5(1) = 0 + 2 + 2 + (6 + 2 \\sqrt{2}) + (6 - 2 \\sqrt{2})$\n$p_1(1) + p_2(1) + p_3(1) + p_4(1) + p_5(1) = 0 + 2 + 2 + (6 + 2 \\sqrt{2}) + (6 - 2 \\sqrt{2}) = 16$",
+            1
+        ],
+        [
+            "$p_1(1) + p_2(1) + p_3(1) + p_4(1) + p_5(1) = 0 + 2 + 2 + (6 + 2 \\sqrt{2}) + (6 - 2 \\sqrt{2})$\n$p_1(1) + p_2(1) + p_3(1) + p_4(1) + p_5(1) = 0 + 2 + 2 + (6 + 2 \\sqrt{2}) + (6 - 2 \\sqrt{2}) = 16$",
+            1
+        ]
+    ],
+    "time": 107.56879305839539,
+    "total_tokens": 12068,
+    "final_answer_tokens": 1134,
+    "model": "meta-llama/Llama-Vision-Free"
+}

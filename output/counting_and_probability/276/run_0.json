@@ -1,0 +1,46 @@
+{
+    "problem": "In how many ways is it possible to arrange the digits of 1150 to get a four-digit multiple of 5?",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "A multiple of 5 has to end in 0 or 5. If it ends in 0, the three remaining digits can go anywhere. There are 3! ways to arrange 3 digits, but we must divide by 2! to correct for overcounting since the 1's are identical. If the number ends in 5, the digit 0 can go in either of 2 places. Then the two remaining digits can go anywhere. There are 2! ways to arrange 2 digits, but we must divide this by 2! to correct for overcounting since the 1's are identical. So, there are $3!/2!+2\\cdot 2!/2!=3+2=\\boxed{5}$ possible ways to arrange the digits of 1150 to get a four-digit multiple of 5.",
+    "is_solved": true,
+    "model_solution": "Step 1: To be a multiple of 5, the number must end in either 0 or 5.\nStep 2: If the number ends in 0, the other 3 digits can be arranged in 3!/(2!)(1!)=3 ways.\nIf the number ends in 5, the 0 can be placed in either of 2 places, and the remaining 2 digits can be arranged in 2!/(2!)=1 way.\nStep 3: Total number of arrangements = (number of arrangements ending in 0) + (number of arrangements ending in 5) = 3 + 2(1)\nTotal number of arrangements = 3 + 2(1) = 5\nStep 4: Total number of arrangements = 5\nStep 5: Final Answer: The final answer is 5.",
+    "steps": [
+        "Step 1: To be a multiple of 5, the number must end in either 0 or 5.",
+        "Step 2: If the number ends in 0, the other 3 digits can be arranged in 3!/(2!)(1!)=3 ways.\nIf the number ends in 5, the 0 can be placed in either of 2 places, and the remaining 2 digits can be arranged in 2!/(2!)=1 way.",
+        "Step 3: Total number of arrangements = (number of arrangements ending in 0) + (number of arrangements ending in 5) = 3 + 2(1)",
+        "Total number of arrangements = 3 + 2(1) = 5",
+        "Step 4: Total number of arrangements = 5",
+        "Step 5: Final Answer: The final answer is 5."
+    ],
+    "full_steps": [
+        [
+            "Step 1: To be a multiple of 5, the number must end in either 0 or 5.",
+            1
+        ],
+        [
+            "Step 2: If the number ends in 0, the other 3 digits can be arranged in 3!/(2!)(1!)=3 ways.\nIf the number ends in 5, the 0 can be placed in either of 2 places, and the remaining 2 digits can be arranged in 2!/(2!)=1 way.",
+            1
+        ],
+        [
+            "Step 3: Total number of arrangements = (number of arrangements ending in 0) + (number of arrangements ending in 5) = 3 + 2(1)",
+            1
+        ],
+        [
+            "Total number of arrangements = 3 + 2(1) = 5",
+            1
+        ],
+        [
+            "Step 4: Total number of arrangements = 5",
+            1
+        ],
+        [
+            "Step 5: Final Answer: The final answer is 5.",
+            1
+        ]
+    ],
+    "time": 81.30826139450073,
+    "total_tokens": 2572,
+    "final_answer_tokens": 262,
+    "model": "meta-llama/Llama-Vision-Free"
+}

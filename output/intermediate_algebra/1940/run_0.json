@@ -1,0 +1,66 @@
+{
+    "problem": "Compute the value of the expression\n\\[ 2009^4 - 4 \\times 2007^4 + 6 \\times 2005^4 - 4 \\times 2003^4 + 2001^4 \\, .\\]",
+    "level": "Level 3",
+    "type": "Intermediate Algebra",
+    "solution": "Let $x = 2005$. Then the expression becomes\n$$(x+4)^4 - 4(x+2)^4 + 6x^4 - 4(x-2)^4 + (x-4)^4$$We use the Binomial theorem (or Pascal's triangle) to expand the expression and get\n$$\\begin{aligned} &x^4 + 4x^3\\cdot4 + 6x^24^2+4x\\cdot4^3 +4^4 \\\\\n&-4(x^4 + 4x^3\\cdot2 + 6x^2\\cdot2^2 + 4x\\cdot2^3 + 2^4) \\\\\n&+ 6x^4\\\\\n& - 4 (x^4 + 4x^3\\cdot2 + 6x^2\\cdot2^2 + 4x\\cdot2^3 + 2^4) \\\\\n&+ x^4 + 4x^3\\cdot4 + 6x^24^2+4x\\cdot4^3 +4^4. \\end{aligned}$$Many of these terms cancel out! After simplifying, we are left with\n$$4^4 - 4\\cdot 2^4 - 4\\cdot 2^4 + 4^4 =2\\cdot4^3 (4-1) = 128 \\cdot 3 = \\boxed{384}$$",
+    "is_solved": false,
+    "model_solution": "Step 1: Observe that the expression is almost a perfect square of the form \\((a-b)^4 = a^4-4a^3b+6a^2b^2-4ab^3+b^4\\).\nStep 2: Let $x = 2007$, $y = 2005$, and $z = 2003$, and note that the expression becomes\n\\[ x^4 - 4x^2y^2 + 6y^4 - 4xy^2 + z^4 \\, .\\]\nStep 3: Now, let $a = x^2$, $b = y^2$, and $c = z^2$, and note that the expression becomes\n\\[ a^2 - 4ab + 6b^2 - 4bc + c^2 \\, .\\]\nStep 4: Note that the expression $a^2-4ab+6b^2-4bc+c^2$ resembles the square of a binomial $(a-2b+3c)^2 = a^2-4ab+6b^2-4bc+c^2$.\n$= (x^2-2y^2+3z^2)^2$\nStep 5:  Substitute back the expressions for $x$, $y$, and $z$ in terms of the original variables.\n\\[= (2007^2-2\\cdot2005^2+3\\cdot2003^2)^2\\]\nStep 6: \n\\[= (2007^2-2\\cdot2005^2+3\\cdot2003^2)^2 = (2007^2-4010^2+6010\\cdot2003) = (-4\\cdot2003^2+6010\\cdot2003) = (-4\\cdot2003+6010)\\cdot2003 = 6010\\cdot2003 - 4\\cdot2003^2\\]\nStep 7: Compute the value inside the parentheses:\n\\[ = (-4\\cdot2003+6010)^2 = (-80012+6010)^2 = -64002^2 = 4096000404 \\]\nStep 8: \\[= 4096000404 \\]\nStep 9:\n\\[= 4096000404 \\]\nStep 10:\n\\[= 4096000404\\]",
+    "steps": [
+        "Step 1: Observe that the expression is almost a perfect square of the form \\((a-b)^4 = a^4-4a^3b+6a^2b^2-4ab^3+b^4\\).",
+        "Step 2: Let $x = 2007$, $y = 2005$, and $z = 2003$, and note that the expression becomes\n\\[ x^4 - 4x^2y^2 + 6y^4 - 4xy^2 + z^4 \\, .\\]",
+        "Step 3: Now, let $a = x^2$, $b = y^2$, and $c = z^2$, and note that the expression becomes\n\\[ a^2 - 4ab + 6b^2 - 4bc + c^2 \\, .\\]",
+        "Step 4: Note that the expression $a^2-4ab+6b^2-4bc+c^2$ resembles the square of a binomial $(a-2b+3c)^2 = a^2-4ab+6b^2-4bc+c^2$.\n$= (x^2-2y^2+3z^2)^2$",
+        "Step 5:  Substitute back the expressions for $x$, $y$, and $z$ in terms of the original variables.\n\\[= (2007^2-2\\cdot2005^2+3\\cdot2003^2)^2\\]",
+        "Step 6: \n\\[= (2007^2-2\\cdot2005^2+3\\cdot2003^2)^2 = (2007^2-4010^2+6010\\cdot2003) = (-4\\cdot2003^2+6010\\cdot2003) = (-4\\cdot2003+6010)\\cdot2003 = 6010\\cdot2003 - 4\\cdot2003^2\\]",
+        "Step 7: Compute the value inside the parentheses:\n\\[ = (-4\\cdot2003+6010)^2 = (-80012+6010)^2 = -64002^2 = 4096000404 \\]",
+        "Step 8: \\[= 4096000404 \\]",
+        "Step 9:\n\\[= 4096000404 \\]",
+        "Step 10:\n\\[= 4096000404\\]"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Observe that the expression is almost a perfect square of the form \\((a-b)^4 = a^4-4a^3b+6a^2b^2-4ab^3+b^4\\).",
+            1
+        ],
+        [
+            "Step 2: Let $x = 2007$, $y = 2005$, and $z = 2003$, and note that the expression becomes\n\\[ x^4 - 4x^2y^2 + 6y^4 - 4xy^2 + z^4 \\, .\\]",
+            1
+        ],
+        [
+            "Step 3: Now, let $a = x^2$, $b = y^2$, and $c = z^2$, and note that the expression becomes\n\\[ a^2 - 4ab + 6b^2 - 4bc + c^2 \\, .\\]",
+            1
+        ],
+        [
+            "Step 4: Note that the expression $a^2-4ab+6b^2-4bc+c^2$ resembles the square of a binomial $(a-2b+3c)^2 = a^2-4ab+6b^2-4bc+c^2$.\n$= (x^2-2y^2+3z^2)^2$",
+            1
+        ],
+        [
+            "Step 5:  Substitute back the expressions for $x$, $y$, and $z$ in terms of the original variables.\n\\[= (2007^2-2\\cdot2005^2+3\\cdot2003^2)^2\\]",
+            1
+        ],
+        [
+            "Step 6: \n\\[= (2007^2-2\\cdot2005^2+3\\cdot2003^2)^2 = (2007^2-4010^2+6010\\cdot2003) = (-4\\cdot2003^2+6010\\cdot2003) = (-4\\cdot2003+6010)\\cdot2003 = 6010\\cdot2003 - 4\\cdot2003^2\\]",
+            1
+        ],
+        [
+            "Step 7: Compute the value inside the parentheses:\n\\[ = (-4\\cdot2003+6010)^2 = (-80012+6010)^2 = -64002^2 = 4096000404 \\]",
+            1
+        ],
+        [
+            "Step 8: \\[= 4096000404 \\]",
+            1
+        ],
+        [
+            "Step 9:\n\\[= 4096000404 \\]",
+            1
+        ],
+        [
+            "Step 10:\n\\[= 4096000404\\]",
+            1
+        ]
+    ],
+    "time": 134.90866351127625,
+    "total_tokens": 8954,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

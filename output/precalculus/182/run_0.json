@@ -1,0 +1,26 @@
+{
+    "problem": "Let $x$, $y$, and $z$ be real numbers such that\n\\[\\cos x + \\cos y + \\cos z = \\sin x + \\sin y + \\sin z = 0.\\]Find the sum of all possible values of $\\cos (2x - y - z).$",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "Let $a = e^{ix}$, $b = e^{iy}$, and $c = e^{iz}$.  Then\n\\begin{align*}\na + b + c &= e^{ix} + e^{iy} + e^{iz} \\\\\n&= (\\cos x + \\cos y + \\cos z) + i (\\sin x + \\sin y + \\sin z) \\\\\n&= 0.\n\\end{align*}Also,\n\\begin{align*}\n\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} &= \\frac{1}{e^{ix}} + \\frac{1}{e^{iy}} + \\frac{1}{e^{iz}} \\\\\n&= e^{-ix} + e^{-iy} + e^{-iz} \\\\\n&= [\\cos (-x) + \\cos (-y) + \\cos (-z)] + i [\\sin (-x) + \\sin (-y) + \\sin (-z)] \\\\\n&= (\\cos x + \\cos y + \\cos z) - i (\\sin x + \\sin y + \\sin z) \\\\\n&= 0.\n\\end{align*}Hence,\n\\[abc \\left( \\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} \\right) = ab + ac + bc = 0.\\]Note that $\\cos (2x - y - z)$ is the real part of $e^{i (2 \\alpha - \\beta - \\gamma)},$ and\n\\begin{align*}\ne^{i (2 \\alpha - \\beta - \\gamma)} &= \\frac{a^2}{bc} \\\\\n&= \\frac{a \\cdot a}{-ab - ac} \\\\\n&= \\frac{a (-b - c)}{-ab - ac} \\\\\n&= 1.\n\\end{align*}Therefore, $\\cos (2x - y - z) = \\boxed{1}.$",
+    "is_solved": true,
+    "model_solution": "Step 1: Squaring and adding the given equations to eliminate the variables $x$, $y$, and $z$ and derive an equation involving $\\cos x$, $\\cos y$, $\\cos z$, $\\sin x$, $\\sin y$, and $\\sin z$.\nStep 2: Note that $2\\cos a\\cos b=\\cos(a+b)+\\cos(a-b)$, so $2(\\cos x\\cos y+\\cos x\\cos z+\\cos y\\cos z)=\\cos(x+y+z)+\\cos(x-y-z)+\\cos(y-z-x)+\\cos(y-z-x)+\\cos(z-x-y)+\\cos(z-x-y)=\\cos(x+y+z)+\\cos(x-y-z)+\\cos(x-y-z)+\\cos(x-y-z)=0$, because $x+y+z$ and $x-y-z$ are two distinct solutions of the equation $\\cos a + \\cos b + \\cos c=0$.\n\nThe final answer is: $\\boxed{0}$",
+    "steps": [
+        "Step 1: Squaring and adding the given equations to eliminate the variables $x$, $y$, and $z$ and derive an equation involving $\\cos x$, $\\cos y$, $\\cos z$, $\\sin x$, $\\sin y$, and $\\sin z$.",
+        "Step 2: Note that $2\\cos a\\cos b=\\cos(a+b)+\\cos(a-b)$, so $2(\\cos x\\cos y+\\cos x\\cos z+\\cos y\\cos z)=\\cos(x+y+z)+\\cos(x-y-z)+\\cos(y-z-x)+\\cos(y-z-x)+\\cos(z-x-y)+\\cos(z-x-y)=\\cos(x+y+z)+\\cos(x-y-z)+\\cos(x-y-z)+\\cos(x-y-z)=0$, because $x+y+z$ and $x-y-z$ are two distinct solutions of the equation $\\cos a + \\cos b + \\cos c=0$.\n\nThe final answer is: $\\boxed{0}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Squaring and adding the given equations to eliminate the variables $x$, $y$, and $z$ and derive an equation involving $\\cos x$, $\\cos y$, $\\cos z$, $\\sin x$, $\\sin y$, and $\\sin z$.",
+            1
+        ],
+        [
+            "Step 2: Note that $2\\cos a\\cos b=\\cos(a+b)+\\cos(a-b)$, so $2(\\cos x\\cos y+\\cos x\\cos z+\\cos y\\cos z)=\\cos(x+y+z)+\\cos(x-y-z)+\\cos(y-z-x)+\\cos(y-z-x)+\\cos(z-x-y)+\\cos(z-x-y)=\\cos(x+y+z)+\\cos(x-y-z)+\\cos(x-y-z)+\\cos(x-y-z)=0$, because $x+y+z$ and $x-y-z$ are two distinct solutions of the equation $\\cos a + \\cos b + \\cos c=0$.\n\nThe final answer is: $\\boxed{0}$",
+            1
+        ]
+    ],
+    "time": 28.821268558502197,
+    "total_tokens": 1030,
+    "final_answer_tokens": 332,
+    "model": "meta-llama/Llama-Vision-Free"
+}

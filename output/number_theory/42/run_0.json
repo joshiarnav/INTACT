@@ -1,0 +1,26 @@
+{
+    "problem": "What is the sum of the smallest and second-smallest positive integers $a$ satisfying the congruence $$27a\\equiv 17 \\pmod{40}~?$$",
+    "level": "Level 5",
+    "type": "Number Theory",
+    "solution": "Note that $27$ and $40$ are relatively prime, so $27$ has an inverse $\\pmod{40}$. Conveniently, the inverse of $27\\pmod{40}$ is easily found to be $3$, as we have $27\\cdot 3 = 81\\equiv 1\\pmod{40}$.\n\nTo solve the congruence $27a\\equiv 17\\pmod{40}$, we multiply both sides by $3$ and simplify: \\begin{align*}\n3\\cdot 27a &\\equiv 3\\cdot 17 \\pmod{40} \\\\\na &\\equiv 51 \\pmod{40} \\\\\na &\\equiv 11 \\pmod{40}\n\\end{align*}Each operation in this sequence is reversible, so the solution set is exactly the set of integers congruent to $11\\pmod{40}$. The smallest and second-smallest positive solutions are $11$ and $51$. Their sum is $\\boxed{62}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: Since $\\gcd(27,40)=1$, we can use the extended Euclidean algorithm to find the multiplicative inverse of $27$ modulo $40$.\n$27=40(0)+27$,\n$40=27(1)+13$,\n$27=13(2)+1$\n$13=1(13)+0$\nTherefore, we can express $1$ as a linear combination of $27$ and $40$:\n$1=27-13(2)$\n$=27-40(1)(2)$\n$=27-2(40)$\n\n$27\\cdot1\\equiv1\\pmod{40}$\nThis implies that the inverse of $27$ modulo $40$ is $1$.\nStep 2: \n$27\\cdot1\\equiv1\\pmod{40}$ implies $1\\equiv27^{-1}\\pmod{40}$, so we can multiply both sides of the given congruence by $27^{-1}$ to obtain $$a\\equiv17\\cdot27^{-1}\\equiv17\\cdot1\\equiv17\\pmod{40}.$$ Since we are interested in finding the smallest positive integers $a$ satisfying this congruence, we can add $40$ to $17$ to obtain the second smallest positive integer $a$ satisfying the congruence. Therefore, the smallest and second-smallest positive integers $a$ satisfying the congruence are $17$ and $17+40=57$, respectively. Final Answer: The final answer is 74.",
+    "steps": [
+        "Step 1: Since $\\gcd(27,40)=1$, we can use the extended Euclidean algorithm to find the multiplicative inverse of $27$ modulo $40$.\n$27=40(0)+27$,\n$40=27(1)+13$,\n$27=13(2)+1$\n$13=1(13)+0$\nTherefore, we can express $1$ as a linear combination of $27$ and $40$:\n$1=27-13(2)$\n$=27-40(1)(2)$\n$=27-2(40)$\n\n$27\\cdot1\\equiv1\\pmod{40}$\nThis implies that the inverse of $27$ modulo $40$ is $1$.",
+        "Step 2: \n$27\\cdot1\\equiv1\\pmod{40}$ implies $1\\equiv27^{-1}\\pmod{40}$, so we can multiply both sides of the given congruence by $27^{-1}$ to obtain $$a\\equiv17\\cdot27^{-1}\\equiv17\\cdot1\\equiv17\\pmod{40}.$$ Since we are interested in finding the smallest positive integers $a$ satisfying this congruence, we can add $40$ to $17$ to obtain the second smallest positive integer $a$ satisfying the congruence. Therefore, the smallest and second-smallest positive integers $a$ satisfying the congruence are $17$ and $17+40=57$, respectively. Final Answer: The final answer is 74."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Since $\\gcd(27,40)=1$, we can use the extended Euclidean algorithm to find the multiplicative inverse of $27$ modulo $40$.\n$27=40(0)+27$,\n$40=27(1)+13$,\n$27=13(2)+1$\n$13=1(13)+0$\nTherefore, we can express $1$ as a linear combination of $27$ and $40$:\n$1=27-13(2)$\n$=27-40(1)(2)$\n$=27-2(40)$\n\n$27\\cdot1\\equiv1\\pmod{40}$\nThis implies that the inverse of $27$ modulo $40$ is $1$.",
+            1
+        ],
+        [
+            "Step 2: \n$27\\cdot1\\equiv1\\pmod{40}$ implies $1\\equiv27^{-1}\\pmod{40}$, so we can multiply both sides of the given congruence by $27^{-1}$ to obtain $$a\\equiv17\\cdot27^{-1}\\equiv17\\cdot1\\equiv17\\pmod{40}.$$ Since we are interested in finding the smallest positive integers $a$ satisfying this congruence, we can add $40$ to $17$ to obtain the second smallest positive integer $a$ satisfying the congruence. Therefore, the smallest and second-smallest positive integers $a$ satisfying the congruence are $17$ and $17+40=57$, respectively. Final Answer: The final answer is 74.",
+            1
+        ]
+    ],
+    "time": 27.891138553619385,
+    "total_tokens": 1364,
+    "final_answer_tokens": 422,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,31 @@
+{
+    "problem": "What is the greatest positive integer $n$ such that $3^n$ is a factor of $200!$?",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "If we want the largest such $n$, we must count the number of factors of 3 in the prime factorization of $200!$. The number of multiples of 3 is $\\left\\lfloor \\frac{200}{3} \\right\\rfloor$.  (The notation $\\left\\lfloor x\\right\\rfloor$ means the greatest integer less than or equal to $x$, so basically, $\\left\\lfloor \\frac{200}{3}\\right\\rfloor$ means ``divide 200 by 3 and round down.\")   However, these are not the only factors of 3 in the product!  Multiples of 9 in the product contribute an extra factor of 3. There are $\\left\\lfloor \\frac{200}{9} \\right\\rfloor$ of these, so we add this number to the $\\left\\lfloor \\frac{200}{3}\\right\\rfloor$ factors of 3 we found from counting multiples of 3.  Similarly, we must add in multiples of 27 once and multiples of 81.\n\nThe sum is $\\left\\lfloor \\frac{200}{3} \\right\\rfloor + \\left\\lfloor \\frac{200}{9} \\right\\rfloor + \\left\\lfloor \\frac{200}{27} \\right\\rfloor + \\left\\lfloor \\frac{200}{81} \\right\\rfloor = 66 + 22 + 7 + 2 = \\boxed{97}$.",
+    "is_solved": true,
+    "model_solution": "Step 1:  To find the greatest positive integer $n$ such that $3^n$ is a factor of $200!$, we need to count the number of factors of $3$ in the prime factorization of $200!$.\nConsider the prime factorization of $200!$, which involves finding the powers of all prime numbers up to $200$.\n\nConsider the prime factorization of $200!$. We can use the fact that the number of factors of $p$ in $n!$ is given by $\\left\\lfloor \\frac{n}{p} \\right\\rfloor + \\left\\lfloor \\frac{n}{p^2} \\right\\rfloor + \\left\\lfloor \\frac{n}{p^3} \\right\\rfloor + \\ldots$\nStep 2:  We will use the formula to find the number of factors of $3$ in $200!$: $\\left\\lfloor \\frac{200}{3} \\right\\rfloor + \\left\\lfloor \\frac{200}{9} \\right\\rfloor + \\left\\lfloor \\frac{200}{27} \\right\\rfloor + \\left\\lfloor \\frac{200}{81} \\right\\rfloor$\nStep 3:  Evaluating each term: $\\left\\lfloor \\frac{200}{3} \\right\\rfloor = 66$, $\\left\\lfloor \\frac{200}{9} \\right\\rfloor = 22$, $\\left\\lfloor \\frac{200}{27} \\right\\rfloor = 7$, $\\left\\lfloor \\frac{200}{81} \\right\\rfloor = 2$\n\nFinal Answer: The final answer is: $\\boxed{97}$",
+    "steps": [
+        "Step 1:  To find the greatest positive integer $n$ such that $3^n$ is a factor of $200!$, we need to count the number of factors of $3$ in the prime factorization of $200!$.\nConsider the prime factorization of $200!$, which involves finding the powers of all prime numbers up to $200$.\n\nConsider the prime factorization of $200!$. We can use the fact that the number of factors of $p$ in $n!$ is given by $\\left\\lfloor \\frac{n}{p} \\right\\rfloor + \\left\\lfloor \\frac{n}{p^2} \\right\\rfloor + \\left\\lfloor \\frac{n}{p^3} \\right\\rfloor + \\ldots$",
+        "Step 2:  We will use the formula to find the number of factors of $3$ in $200!$: $\\left\\lfloor \\frac{200}{3} \\right\\rfloor + \\left\\lfloor \\frac{200}{9} \\right\\rfloor + \\left\\lfloor \\frac{200}{27} \\right\\rfloor + \\left\\lfloor \\frac{200}{81} \\right\\rfloor$",
+        "Step 3:  Evaluating each term: $\\left\\lfloor \\frac{200}{3} \\right\\rfloor = 66$, $\\left\\lfloor \\frac{200}{9} \\right\\rfloor = 22$, $\\left\\lfloor \\frac{200}{27} \\right\\rfloor = 7$, $\\left\\lfloor \\frac{200}{81} \\right\\rfloor = 2$\n\nFinal Answer: The final answer is: $\\boxed{97}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  To find the greatest positive integer $n$ such that $3^n$ is a factor of $200!$, we need to count the number of factors of $3$ in the prime factorization of $200!$.\nConsider the prime factorization of $200!$, which involves finding the powers of all prime numbers up to $200$.\n\nConsider the prime factorization of $200!$. We can use the fact that the number of factors of $p$ in $n!$ is given by $\\left\\lfloor \\frac{n}{p} \\right\\rfloor + \\left\\lfloor \\frac{n}{p^2} \\right\\rfloor + \\left\\lfloor \\frac{n}{p^3} \\right\\rfloor + \\ldots$",
+            1
+        ],
+        [
+            "Step 2:  We will use the formula to find the number of factors of $3$ in $200!$: $\\left\\lfloor \\frac{200}{3} \\right\\rfloor + \\left\\lfloor \\frac{200}{9} \\right\\rfloor + \\left\\lfloor \\frac{200}{27} \\right\\rfloor + \\left\\lfloor \\frac{200}{81} \\right\\rfloor$",
+            1
+        ],
+        [
+            "Step 3:  Evaluating each term: $\\left\\lfloor \\frac{200}{3} \\right\\rfloor = 66$, $\\left\\lfloor \\frac{200}{9} \\right\\rfloor = 22$, $\\left\\lfloor \\frac{200}{27} \\right\\rfloor = 7$, $\\left\\lfloor \\frac{200}{81} \\right\\rfloor = 2$\n\nFinal Answer: The final answer is: $\\boxed{97}$",
+            1
+        ]
+    ],
+    "time": 40.208688497543335,
+    "total_tokens": 2115,
+    "final_answer_tokens": 453,
+    "model": "meta-llama/Llama-Vision-Free"
+}

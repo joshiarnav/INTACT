@@ -1,0 +1,51 @@
+{
+    "problem": "Consider the six by six grid of unit squares below. How many rectangles of area 8 square units can be formed using only the line segments of the grid as the sides of the rectangles?\n\n[asy]unitsize(0.2inch);\ndraw((0,0)--(6,0)--(6,6)--(0,6)--cycle);\ndraw((1,0)--(1,6));\ndraw((2,0)--(2,6));\ndraw((3,0)--(3,6));\ndraw((4,0)--(4,6));\ndraw((5,0)--(5,6));\ndraw((0,1)--(6,1));\ndraw((0,2)--(6,2));\ndraw((0,3)--(6,3));\ndraw((0,4)--(6,4));\ndraw((0,5)--(6,5));\n\n[/asy]",
+    "level": "Level 3",
+    "type": "Counting & Probability",
+    "solution": "There are only two kinds of rectangles of area 8 square units which we can form on the grid: $2\\times4$ rectangles and $4\\times2$ rectangles. For $2\\times4$ rectangles, the upper left unit square of the rectangle must be in the left three columns and top five rows, giving 15 possible locations. Similarly, there are 15 possible locations for a $4\\times2$ rectangle. Therefore, the total number of rectangles of area 8 which can be formed is $\\boxed{30}$.",
+    "is_solved": true,
+    "model_solution": "Let $l$ be a side length of a rectangle. \n\nWe consider two cases: \n\nCase 1: $l=1$. \n\nCase 2: $l \\geq 2$.\nThere are 20 ways of choosing which two of the six vertical lines will be the left and right edges of the rectangle, and there are 20 ways of choosing which two of the six horizontal lines will be the top and bottom edges of the rectangle.\nFor the case of $l \\geq 2$, we want to find how many ways we can choose the horizontal and vertical sides of a rectangle of area $8$. The sides of the rectangle are of length $l$ and $\\frac{8}{l}$, where $l \\ge 2$, and $l, \\frac{8}{l} \\in \\{2,4,6\\}.$ We want to choose two horizontal and two vertical sides for the rectangle. For each value of $l$, there are $\\binom{6}{2} = 15$ ways to choose the two horizontal sides and $\\binom{6}{2} = 15$ ways to choose the two vertical sides.\nFor the case of $l \\geq 2$, we note that $l$ can only be $2$, $4$, or $6$.\nFor each value of $l$, there are $\\binom{6}{2} = 15$ ways to choose the two horizontal sides and $\\binom{6}{2} = 15$ ways to choose the two vertical sides.\n$\\binom{6}{2} = 15$ ways to choose the two horizontal sides and $\\binom{6}{2} = 15$ ways to choose the two vertical sides for each $l = 2, 4, 6.$\nThere are $3$ values of $l$ with $15 \\times 15 = 225$ ways to choose the sides for each $l$.\n\nNote: the next step will be the final answer.",
+    "steps": [
+        "Let $l$ be a side length of a rectangle. \n\nWe consider two cases: \n\nCase 1: $l=1$. \n\nCase 2: $l \\geq 2$.",
+        "There are 20 ways of choosing which two of the six vertical lines will be the left and right edges of the rectangle, and there are 20 ways of choosing which two of the six horizontal lines will be the top and bottom edges of the rectangle.",
+        "For the case of $l \\geq 2$, we want to find how many ways we can choose the horizontal and vertical sides of a rectangle of area $8$. The sides of the rectangle are of length $l$ and $\\frac{8}{l}$, where $l \\ge 2$, and $l, \\frac{8}{l} \\in \\{2,4,6\\}.$ We want to choose two horizontal and two vertical sides for the rectangle. For each value of $l$, there are $\\binom{6}{2} = 15$ ways to choose the two horizontal sides and $\\binom{6}{2} = 15$ ways to choose the two vertical sides.",
+        "For the case of $l \\geq 2$, we note that $l$ can only be $2$, $4$, or $6$.",
+        "For each value of $l$, there are $\\binom{6}{2} = 15$ ways to choose the two horizontal sides and $\\binom{6}{2} = 15$ ways to choose the two vertical sides.",
+        "$\\binom{6}{2} = 15$ ways to choose the two horizontal sides and $\\binom{6}{2} = 15$ ways to choose the two vertical sides for each $l = 2, 4, 6.$",
+        "There are $3$ values of $l$ with $15 \\times 15 = 225$ ways to choose the sides for each $l$.\n\nNote: the next step will be the final answer."
+    ],
+    "full_steps": [
+        [
+            "Let $l$ be a side length of a rectangle. \n\nWe consider two cases: \n\nCase 1: $l=1$. \n\nCase 2: $l \\geq 2$.",
+            1
+        ],
+        [
+            "There are 20 ways of choosing which two of the six vertical lines will be the left and right edges of the rectangle, and there are 20 ways of choosing which two of the six horizontal lines will be the top and bottom edges of the rectangle.",
+            1
+        ],
+        [
+            "For the case of $l \\geq 2$, we want to find how many ways we can choose the horizontal and vertical sides of a rectangle of area $8$. The sides of the rectangle are of length $l$ and $\\frac{8}{l}$, where $l \\ge 2$, and $l, \\frac{8}{l} \\in \\{2,4,6\\}.$ We want to choose two horizontal and two vertical sides for the rectangle. For each value of $l$, there are $\\binom{6}{2} = 15$ ways to choose the two horizontal sides and $\\binom{6}{2} = 15$ ways to choose the two vertical sides.",
+            1
+        ],
+        [
+            "For the case of $l \\geq 2$, we note that $l$ can only be $2$, $4$, or $6$.",
+            1
+        ],
+        [
+            "For each value of $l$, there are $\\binom{6}{2} = 15$ ways to choose the two horizontal sides and $\\binom{6}{2} = 15$ ways to choose the two vertical sides.",
+            1
+        ],
+        [
+            "$\\binom{6}{2} = 15$ ways to choose the two horizontal sides and $\\binom{6}{2} = 15$ ways to choose the two vertical sides for each $l = 2, 4, 6.$",
+            1
+        ],
+        [
+            "There are $3$ values of $l$ with $15 \\times 15 = 225$ ways to choose the sides for each $l$.\n\nNote: the next step will be the final answer.",
+            1
+        ]
+    ],
+    "time": 96.89339995384216,
+    "total_tokens": 7026,
+    "final_answer_tokens": 663,
+    "model": "meta-llama/Llama-Vision-Free"
+}

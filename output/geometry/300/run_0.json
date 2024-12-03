@@ -1,0 +1,36 @@
+{
+    "problem": "Given that $\\overline{MN}\\parallel\\overline{AB}$, how many units long is $\\overline{BN}$?\n\n[asy] pair A,B,M,N,C;\nM = 1.2*dir(255); N = dir(285);\nA = 3*M; B = 3*N;\ndraw(M--N--C--A--B--N);\nlabel(\"A\",A,W);label(\"M\",M,W);\nlabel(\"3\",C--M,W);label(\"5\",M--A,W);\nlabel(\"2.4\",C--N,E);label(\"N\",N,E);label(\"B\",B,E);\n[/asy]",
+    "level": "Level 2",
+    "type": "Geometry",
+    "solution": "First of all, let us label the tip of the triangle. [asy] pair A,B,M,N,C;\nM = 1.2*dir(255); N = dir(285);\nA = 3*M; B = 3*N;\ndraw(M--N--C--A--B--N);\nlabel(\"C\",C+(0,0.2));\nlabel(\"A\",A,W);label(\"M\",M,W);\nlabel(\"3\",C--M,W);label(\"5\",M--A,W);\nlabel(\"2.4\",C--N,E);label(\"N\",N,E);label(\"B\",B,E);\n[/asy] Since $MN \\parallel AB,$ we know that $\\angle CMN = \\angle CAB$ and $\\angle CNM = \\angle CBA.$ Therefore, by AA similarity, we have $\\triangle ABC \\sim MNC.$ Then, we find: \\begin{align*}\n\\frac{AC}{MC} &= \\frac{BC}{NC}\\\\\n\\frac{AM+MC}{MC} &= \\frac{BN+NC}{NC}\\\\\n1 + \\frac{AM}{MC} &= 1 + \\frac{BN}{NC}\\\\\n\\frac{5}{3} &= \\frac{BN}{2.4}.\n\\end{align*} Therefore, $BN = \\dfrac{5 \\cdot 2.4}{3} = \\boxed{4}.$",
+    "is_solved": false,
+    "model_solution": "Since $\\overline{MN}\\parallel\\overline{AB}$, we have $\\frac{AM}{AN}=\\frac{AB}{MN}$ so $\\frac{AM}{AN}=\\frac{AB}{MN}$ so $\\frac{5}{3+x}=\\frac{AB}{2.4}$\nSince $\\overline{MN}\\parallel\\overline{AB}$, we have $\\frac{AM}{AN}=\\frac{AB}{MN}$ so $\\frac{5}{3+x}=\\frac{AB}{2.4}$, so $AB=2.4\\cdot\\frac{5}{3+x}=12/(3+x)$\nSince $\\frac{AM}{AN}=\\frac{AB}{MN}$, we have $\\frac{8}{3+x} = \\frac{12}{2.4}$\n$\\frac{8}{3+x} = \\frac{12}{2.4}$, so $8\\cdot2.4 = 12(3+x)$",
+    "steps": [
+        "Since $\\overline{MN}\\parallel\\overline{AB}$, we have $\\frac{AM}{AN}=\\frac{AB}{MN}$ so $\\frac{AM}{AN}=\\frac{AB}{MN}$ so $\\frac{5}{3+x}=\\frac{AB}{2.4}$",
+        "Since $\\overline{MN}\\parallel\\overline{AB}$, we have $\\frac{AM}{AN}=\\frac{AB}{MN}$ so $\\frac{5}{3+x}=\\frac{AB}{2.4}$, so $AB=2.4\\cdot\\frac{5}{3+x}=12/(3+x)$",
+        "Since $\\frac{AM}{AN}=\\frac{AB}{MN}$, we have $\\frac{8}{3+x} = \\frac{12}{2.4}$",
+        "$\\frac{8}{3+x} = \\frac{12}{2.4}$, so $8\\cdot2.4 = 12(3+x)$"
+    ],
+    "full_steps": [
+        [
+            "Since $\\overline{MN}\\parallel\\overline{AB}$, we have $\\frac{AM}{AN}=\\frac{AB}{MN}$ so $\\frac{AM}{AN}=\\frac{AB}{MN}$ so $\\frac{5}{3+x}=\\frac{AB}{2.4}$",
+            1
+        ],
+        [
+            "Since $\\overline{MN}\\parallel\\overline{AB}$, we have $\\frac{AM}{AN}=\\frac{AB}{MN}$ so $\\frac{5}{3+x}=\\frac{AB}{2.4}$, so $AB=2.4\\cdot\\frac{5}{3+x}=12/(3+x)$",
+            1
+        ],
+        [
+            "Since $\\frac{AM}{AN}=\\frac{AB}{MN}$, we have $\\frac{8}{3+x} = \\frac{12}{2.4}$",
+            1
+        ],
+        [
+            "$\\frac{8}{3+x} = \\frac{12}{2.4}$, so $8\\cdot2.4 = 12(3+x)$",
+            1
+        ]
+    ],
+    "time": 56.56643033027649,
+    "total_tokens": 2799,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,66 @@
+{
+    "problem": "If $1 \\le a \\le 10$ and $1 \\le b \\le 36$, for how many ordered pairs of integers $(a, b)$ is $\\sqrt{a + \\sqrt{b}}$ an integer?",
+    "level": "Level 3",
+    "type": "Counting & Probability",
+    "solution": "If $\\sqrt{a+\\sqrt{b}}$ is an integer, then its square $a+\\sqrt{b}$ is also an integer.  Therefore, $\\sqrt{b}$ is an integer.  In other words, $b$ must be a perfect square.  If we define $c=\\sqrt{b}$, then the problem has asked us to find the number of ordered pairs $(a,c)$ for which $1\\leq a \\leq 10$, $1\\leq c\\leq 6$, and $a+c$ is a perfect square.  We check the 6 possibilities for $c$ separately.  If $c=1$, then $a$ is 3 or 8.  If $c=2$, then $a$ is 2 or 7.  If $c=3$, then $a$ is 1 or 6.  If $c=4$, then $a=5$, and if $c=5$, then $a=4$.  Finally, if $c=6$, then $a$ is either 10 or 3.  Altogether, there are $2+2+2+1+1+2=\\boxed{10}$ ordered pairs $(a,c)$ satisfying the given conditions.",
+    "is_solved": false,
+    "model_solution": "Step 1:  Consider the expression $\\sqrt{a + \\sqrt{b}}$ and set it equal to some integer, say $n$. This leads to the equation $a + \\sqrt{b} = n^{2}$.\nStep 2:  Rearrange the equation to solve for $\\sqrt{b}$, yielding $\\sqrt{b} = n^{2} - a$.\nStep 3:  Squaring both sides of the equation gives $b = (n^{2} - a)^{2}$.\nStep 4:  Since the value of $b$ is dependent on the value of $n$, we need to consider each possible value of $n$ to find corresponding values of $a$ that satisfy the given conditions.\n\nThe value of n can be determined by \n$n = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10$\nStep 5:  For $n = 1$, we get $b = (1^{2} - a)^{2}$, which simplifies to $b = (1 - a)^{2}$. Since $b$ must be at least $1$, we have $1 - a \\ge 1$, which is impossible because $a \\ge 1$.\n \nFor $n = 2$, we get $b = (2^{2} - a)^{2}$, which simplifies to $b = 4 - 4a + a^{2}$. Since $b$ must be at least $1$, we have $4 - 4a + a^{2} \\ge 1$, which simplifies to $a^{2} - 4a + 3 \\le 0$. Factoring this inequality gives $(a - 1)(a - 3) \\le 0$. Solving this inequality gives $1 \\le a \\le 3$.\n \nFor $n = 3$, we get $b = (3^{2} - a)^{2}$, which simplifies to $b = 9 - 6a + a\n$b = 36 - 12a + a^{2}$\n \nFor $n = 4$, we get $b = (4^{2} - a)^{2}$, which simplifies to $b = 16 - 8a + a^{2}$\nFor $n = 5$, we get $b = (5^{2} - a)^{2}$, which simplifies to $b = 25 - 10a + a^{2}$\nFor $n = 6$, we get $b = (6^2 - a)^2$, which simplifies to $b = 36 - 12a + a^2$\nStep 6:\nFor $n = 7$, we get $b = (7^{2} - a)^{2}$, which simplifies to $b = 49 - 14a + a^{2}$.\nFor $n = 8$, we get $b = (8^{2} - a)^{2}$, which simplifies to $b = 64 - 16a + a^{2}$.\nFor $n = 9$, we get $b = (9^{2} - a)^{2}$, which simplifies to $b = 81 - 18a + a^{2}$.\nFor $n = 10$, we get $b = (10^{2} - a)^{2}$, which simplifies to $b = 100 - 20a + a^{2}$.\nStep 7:\nFor $n = 7$, $(7^{2} - a)^{2} = 49 - 14a + a^{2}$ must be at least $1$, so $49 - 14a + a^{2} \\ge 1$, which simplifies to $a^{2} - 14a + 48 \\le 0$. Factoring this inequality gives $(a - 6)(a - 8) \\le 0$. Solving this inequality gives $6 \\le a \\le 8$.\nFor $n = 8$, $(8^{2} - a)^{2} = 64 - 16a + a^{2}$ must be at least $1$, so $64 - 16a + a^{2} \\ge 1$, which simplifies to $a^{2} - 16a + 63 \\le 0$. Factoring this inequality gives $(a - 7)(a - 9) \\le 0$. Solving this inequality gives $7 \\le a \\le 9$.\nFor $n = 9$, $(9^{2} - a)^{2} = 81 -\nFor $n = 9$, $(9^{2} - a)^{2} = 81 - 18a + a^{2}$ must be at least $1$, so $81 - 18a + a^{2} \\ge 1$, which simplifies to $a^{2} - 18a + 80 \\le 0$. Factoring this inequality gives $(a - 8)(a - 10) \\le 0$. Solving this inequality gives $8 \\le a \\le 10$.",
+    "steps": [
+        "Step 1:  Consider the expression $\\sqrt{a + \\sqrt{b}}$ and set it equal to some integer, say $n$. This leads to the equation $a + \\sqrt{b} = n^{2}$.\nStep 2:  Rearrange the equation to solve for $\\sqrt{b}$, yielding $\\sqrt{b} = n^{2} - a$.\nStep 3:  Squaring both sides of the equation gives $b = (n^{2} - a)^{2}$.\nStep 4:  Since the value of $b$ is dependent on the value of $n$, we need to consider each possible value of $n$ to find corresponding values of $a$ that satisfy the given conditions.\n\nThe value of n can be determined by \n$n = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10$",
+        "Step 5:  For $n = 1$, we get $b = (1^{2} - a)^{2}$, which simplifies to $b = (1 - a)^{2}$. Since $b$ must be at least $1$, we have $1 - a \\ge 1$, which is impossible because $a \\ge 1$.\n \nFor $n = 2$, we get $b = (2^{2} - a)^{2}$, which simplifies to $b = 4 - 4a + a^{2}$. Since $b$ must be at least $1$, we have $4 - 4a + a^{2} \\ge 1$, which simplifies to $a^{2} - 4a + 3 \\le 0$. Factoring this inequality gives $(a - 1)(a - 3) \\le 0$. Solving this inequality gives $1 \\le a \\le 3$.\n \nFor $n = 3$, we get $b = (3^{2} - a)^{2}$, which simplifies to $b = 9 - 6a + a",
+        "$b = 36 - 12a + a^{2}$\n \nFor $n = 4$, we get $b = (4^{2} - a)^{2}$, which simplifies to $b = 16 - 8a + a^{2}$",
+        "For $n = 5$, we get $b = (5^{2} - a)^{2}$, which simplifies to $b = 25 - 10a + a^{2}$",
+        "For $n = 6$, we get $b = (6^2 - a)^2$, which simplifies to $b = 36 - 12a + a^2$",
+        "Step 6:\nFor $n = 7$, we get $b = (7^{2} - a)^{2}$, which simplifies to $b = 49 - 14a + a^{2}$.",
+        "For $n = 8$, we get $b = (8^{2} - a)^{2}$, which simplifies to $b = 64 - 16a + a^{2}$.",
+        "For $n = 9$, we get $b = (9^{2} - a)^{2}$, which simplifies to $b = 81 - 18a + a^{2}$.\nFor $n = 10$, we get $b = (10^{2} - a)^{2}$, which simplifies to $b = 100 - 20a + a^{2}$.",
+        "Step 7:\nFor $n = 7$, $(7^{2} - a)^{2} = 49 - 14a + a^{2}$ must be at least $1$, so $49 - 14a + a^{2} \\ge 1$, which simplifies to $a^{2} - 14a + 48 \\le 0$. Factoring this inequality gives $(a - 6)(a - 8) \\le 0$. Solving this inequality gives $6 \\le a \\le 8$.\nFor $n = 8$, $(8^{2} - a)^{2} = 64 - 16a + a^{2}$ must be at least $1$, so $64 - 16a + a^{2} \\ge 1$, which simplifies to $a^{2} - 16a + 63 \\le 0$. Factoring this inequality gives $(a - 7)(a - 9) \\le 0$. Solving this inequality gives $7 \\le a \\le 9$.\nFor $n = 9$, $(9^{2} - a)^{2} = 81 -",
+        "For $n = 9$, $(9^{2} - a)^{2} = 81 - 18a + a^{2}$ must be at least $1$, so $81 - 18a + a^{2} \\ge 1$, which simplifies to $a^{2} - 18a + 80 \\le 0$. Factoring this inequality gives $(a - 8)(a - 10) \\le 0$. Solving this inequality gives $8 \\le a \\le 10$."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Consider the expression $\\sqrt{a + \\sqrt{b}}$ and set it equal to some integer, say $n$. This leads to the equation $a + \\sqrt{b} = n^{2}$.\nStep 2:  Rearrange the equation to solve for $\\sqrt{b}$, yielding $\\sqrt{b} = n^{2} - a$.\nStep 3:  Squaring both sides of the equation gives $b = (n^{2} - a)^{2}$.\nStep 4:  Since the value of $b$ is dependent on the value of $n$, we need to consider each possible value of $n$ to find corresponding values of $a$ that satisfy the given conditions.\n\nThe value of n can be determined by \n$n = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10$",
+            1
+        ],
+        [
+            "Step 5:  For $n = 1$, we get $b = (1^{2} - a)^{2}$, which simplifies to $b = (1 - a)^{2}$. Since $b$ must be at least $1$, we have $1 - a \\ge 1$, which is impossible because $a \\ge 1$.\n \nFor $n = 2$, we get $b = (2^{2} - a)^{2}$, which simplifies to $b = 4 - 4a + a^{2}$. Since $b$ must be at least $1$, we have $4 - 4a + a^{2} \\ge 1$, which simplifies to $a^{2} - 4a + 3 \\le 0$. Factoring this inequality gives $(a - 1)(a - 3) \\le 0$. Solving this inequality gives $1 \\le a \\le 3$.\n \nFor $n = 3$, we get $b = (3^{2} - a)^{2}$, which simplifies to $b = 9 - 6a + a",
+            1
+        ],
+        [
+            "$b = 36 - 12a + a^{2}$\n \nFor $n = 4$, we get $b = (4^{2} - a)^{2}$, which simplifies to $b = 16 - 8a + a^{2}$",
+            1
+        ],
+        [
+            "For $n = 5$, we get $b = (5^{2} - a)^{2}$, which simplifies to $b = 25 - 10a + a^{2}$",
+            1
+        ],
+        [
+            "For $n = 6$, we get $b = (6^2 - a)^2$, which simplifies to $b = 36 - 12a + a^2$",
+            1
+        ],
+        [
+            "Step 6:\nFor $n = 7$, we get $b = (7^{2} - a)^{2}$, which simplifies to $b = 49 - 14a + a^{2}$.",
+            1
+        ],
+        [
+            "For $n = 8$, we get $b = (8^{2} - a)^{2}$, which simplifies to $b = 64 - 16a + a^{2}$.",
+            1
+        ],
+        [
+            "For $n = 9$, we get $b = (9^{2} - a)^{2}$, which simplifies to $b = 81 - 18a + a^{2}$.\nFor $n = 10$, we get $b = (10^{2} - a)^{2}$, which simplifies to $b = 100 - 20a + a^{2}$.",
+            1
+        ],
+        [
+            "Step 7:\nFor $n = 7$, $(7^{2} - a)^{2} = 49 - 14a + a^{2}$ must be at least $1$, so $49 - 14a + a^{2} \\ge 1$, which simplifies to $a^{2} - 14a + 48 \\le 0$. Factoring this inequality gives $(a - 6)(a - 8) \\le 0$. Solving this inequality gives $6 \\le a \\le 8$.\nFor $n = 8$, $(8^{2} - a)^{2} = 64 - 16a + a^{2}$ must be at least $1$, so $64 - 16a + a^{2} \\ge 1$, which simplifies to $a^{2} - 16a + 63 \\le 0$. Factoring this inequality gives $(a - 7)(a - 9) \\le 0$. Solving this inequality gives $7 \\le a \\le 9$.\nFor $n = 9$, $(9^{2} - a)^{2} = 81 -",
+            1
+        ],
+        [
+            "For $n = 9$, $(9^{2} - a)^{2} = 81 - 18a + a^{2}$ must be at least $1$, so $81 - 18a + a^{2} \\ge 1$, which simplifies to $a^{2} - 18a + 80 \\le 0$. Factoring this inequality gives $(a - 8)(a - 10) \\le 0$. Solving this inequality gives $8 \\le a \\le 10$.",
+            1
+        ]
+    ],
+    "time": 136.87928295135498,
+    "total_tokens": 15273,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

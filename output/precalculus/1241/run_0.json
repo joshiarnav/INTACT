@@ -1,0 +1,26 @@
+{
+    "problem": "Let $\\omega = e^{2 \\pi i/1729}.$  Compute\n\\[\\sum_{k = 1}^{1728} \\frac{1}{1 + \\omega^k + \\omega^{2k} + \\omega^{3k}}.\\]",
+    "level": "Level 5",
+    "type": "Precalculus",
+    "solution": "Since $1 + \\omega^k + \\omega^{2k} + \\omega^{3k}$ with common ratio $\\omega^k \\neq 1,$ we can write\n\\[\\frac{1}{1 + \\omega^k + \\omega^{2k} + \\omega^{3k}} = \\frac{1 - \\omega^k}{1 - \\omega^{4k}}.\\]Since $\\omega^{1729} = e^{2 \\pi i} = 1,$\n\\[\\omega^k = \\omega^k \\cdot (\\omega^{1729})^3k = \\omega^{5188k},\\]so\n\\begin{align*}\n\\frac{1 - \\omega^k}{1 - \\omega^{4k}} &= \\frac{1 - \\omega^{5188k}}{1 - \\omega^{4k}} \\\\\n&= 1 + \\omega^{4k} + \\omega^{8k} + \\dots + \\omega^{5184k} \\\\\n&= \\sum_{j = 0}^{1296} \\omega^{4jk}.\n\\end{align*}Therefore,\n\\begin{align*}\n\\sum_{k = 1}^{1728} \\frac{1}{1 + \\omega^k + \\omega^{2k} + \\omega^{3k}} &= \\sum_{k = 1}^{1728} \\sum_{j = 0}^{1296} \\omega^{4jk} \\\\\n&= \\sum_{j = 0}^{1296} \\sum_{k = 1}^{1728} \\omega^{4jk} \\\\\n&= 1728 + \\sum_{j = 1}^{1296} \\sum_{k = 1}^{1728} \\omega^{4jk} \\\\\n&= 1728 + \\sum_{j = 1}^{1296} (\\omega^{4j} + \\omega^{8j} + \\dots + \\omega^{4 \\cdot 1728j}) \\\\\n&= 1728 + \\sum_{j = 1}^{1296} \\omega^{4j} (1 + \\omega^{4j} + \\dots + \\omega^{4 \\cdot 1727j}) \\\\\n&= 1728 + \\sum_{j = 1}^{1296} \\omega^{4j} \\cdot \\frac{1 - \\omega^{4 \\cdot 1728j}}{1 - \\omega^{4j}} \\\\\n&= 1728 + \\sum_{j = 1}^{1296} \\frac{\\omega^{4j} - \\omega^{4 \\cdot 1729j}}{1 - \\omega^{4j}} \\\\\n&= 1728 + \\sum_{j = 1}^{1296} \\frac{\\omega^{4j} - 1}{1 - \\omega^{4j}} \\\\\n&= 1728 + \\sum_{j = 1}^{1296} (-1) \\\\\n&= 1728 - 1296 = \\boxed{432}.\n\\end{align*}",
+    "is_solved": false,
+    "model_solution": "## Step 1:  We are given $\\omega = e^{2 \\pi i/1729}$ and asked to compute the sum $\\sum_{k = 1}^{1728} \\frac{1}{1 + \\omega^k + \\omega^{2k} + \\omega^{3k}}.$\n\n## Step 2:  To approach this problem, we first notice that the expression $\\frac{1}{1 + \\omega^k + \\omega^{2k} + \\omega^{3k}}$ can be factored as $\\frac{1}{\\omega^k + \\omega^{2k} + \\omega^{3k} + 1} = \\frac{1}{(\\omega^{k+1} + 1)(\\omega^k + 1)}.$\n\n## Step 3:  Let's define $\\alpha = \\omega + 1.$ We can rewrite $\\frac{1}{1 + \\omega^k + \\omega^{2k} + \\omega^{3k}}$ as $\\frac{1}{\\alpha^k + \\alpha^{k+1}}.$\n\n## Step 4:  We then rewrite the expression as $\\frac\n## Step 5:  $\\frac{1}{\\alpha^{k+1}} \\left( \\frac{1}{\\alpha^k} - \\frac{1}{\\alpha^{2k}} \\right).$",
+    "steps": [
+        "## Step 1:  We are given $\\omega = e^{2 \\pi i/1729}$ and asked to compute the sum $\\sum_{k = 1}^{1728} \\frac{1}{1 + \\omega^k + \\omega^{2k} + \\omega^{3k}}.$\n\n## Step 2:  To approach this problem, we first notice that the expression $\\frac{1}{1 + \\omega^k + \\omega^{2k} + \\omega^{3k}}$ can be factored as $\\frac{1}{\\omega^k + \\omega^{2k} + \\omega^{3k} + 1} = \\frac{1}{(\\omega^{k+1} + 1)(\\omega^k + 1)}.$\n\n## Step 3:  Let's define $\\alpha = \\omega + 1.$ We can rewrite $\\frac{1}{1 + \\omega^k + \\omega^{2k} + \\omega^{3k}}$ as $\\frac{1}{\\alpha^k + \\alpha^{k+1}}.$\n\n## Step 4:  We then rewrite the expression as $\\frac",
+        "## Step 5:  $\\frac{1}{\\alpha^{k+1}} \\left( \\frac{1}{\\alpha^k} - \\frac{1}{\\alpha^{2k}} \\right).$"
+    ],
+    "full_steps": [
+        [
+            "## Step 1:  We are given $\\omega = e^{2 \\pi i/1729}$ and asked to compute the sum $\\sum_{k = 1}^{1728} \\frac{1}{1 + \\omega^k + \\omega^{2k} + \\omega^{3k}}.$\n\n## Step 2:  To approach this problem, we first notice that the expression $\\frac{1}{1 + \\omega^k + \\omega^{2k} + \\omega^{3k}}$ can be factored as $\\frac{1}{\\omega^k + \\omega^{2k} + \\omega^{3k} + 1} = \\frac{1}{(\\omega^{k+1} + 1)(\\omega^k + 1)}.$\n\n## Step 3:  Let's define $\\alpha = \\omega + 1.$ We can rewrite $\\frac{1}{1 + \\omega^k + \\omega^{2k} + \\omega^{3k}}$ as $\\frac{1}{\\alpha^k + \\alpha^{k+1}}.$\n\n## Step 4:  We then rewrite the expression as $\\frac",
+            1
+        ],
+        [
+            "## Step 5:  $\\frac{1}{\\alpha^{k+1}} \\left( \\frac{1}{\\alpha^k} - \\frac{1}{\\alpha^{2k}} \\right).$",
+            1
+        ]
+    ],
+    "time": 27.562593698501587,
+    "total_tokens": 1568,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

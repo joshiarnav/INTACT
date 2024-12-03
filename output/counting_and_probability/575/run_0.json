@@ -1,0 +1,31 @@
+{
+    "problem": "Our club has $25$ members, and wishes to pick a president, secretary, and treasurer. In how many ways can we choose the officers, if individual members are allowed to hold $2,$ but not all $3,$ offices?",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "With no restriction, the president can be any of the $25$ members, the secretary can be any of the $25$ remaining members, and the treasurer can be any of the remaining $25$ members.\n\nIf the same member holds all three offices, it could be any of the $25$ members, so there are $25$ ways for this to happen. We must exclude these $25$ possibilities, so the answer is $25\\times 25\\times 25-25=\\boxed{15,600}.$",
+    "is_solved": true,
+    "model_solution": "Step 1: We consider the number of ways to choose the officers, depending on the number of offices held by each member.\n- (a) One member holds 2 offices, and the other 3 members hold 1 office each.\n- (b) Two members hold 2 offices each, and the other 3 members hold 1 office each.\n- (c) Three members hold 1 office each.\nStep 2:\n- (a) There are $\\binom{25}{1}=25$ ways to choose the member who holds $2$ offices. There are $3$ ways to choose which offices this member holds, and $\\binom{24}{3}=24\\cdot 23\\cdot 22$ ways to choose which offices the other $3$ members hold. Hence, there are $25\\cdot 3\\cdot 24\\cdot 23\\cdot 22$ ways to choose the officers for this case.\n- (b) There are $\\binom{25}{2}=300$ ways to choose the members who hold $2$ offices. There are $\\frac{3!}{2!1!}=3$ ways to choose which offices these members hold, and $\\binom{23}{1}=23$ ways to choose which office the remaining member holds. Hence, there are $300\\cdot 3\\cdot 23$ ways to choose the officers for this case.\n- (c) There are $\\binom{25}{3}=25\\cdot 24\\cdot 23$ ways to choose the members who hold $1$ office each. There are $3!$\nStep 3:\n- (c) There are $25\\cdot 24\\cdot 23\\cdot 3!$ ways to choose the officers for this case.\n\n\nFinal Answer: The final answer is  $ \\boxed{ 12,650}.$",
+    "steps": [
+        "Step 1: We consider the number of ways to choose the officers, depending on the number of offices held by each member.\n- (a) One member holds 2 offices, and the other 3 members hold 1 office each.\n- (b) Two members hold 2 offices each, and the other 3 members hold 1 office each.\n- (c) Three members hold 1 office each.",
+        "Step 2:\n- (a) There are $\\binom{25}{1}=25$ ways to choose the member who holds $2$ offices. There are $3$ ways to choose which offices this member holds, and $\\binom{24}{3}=24\\cdot 23\\cdot 22$ ways to choose which offices the other $3$ members hold. Hence, there are $25\\cdot 3\\cdot 24\\cdot 23\\cdot 22$ ways to choose the officers for this case.\n- (b) There are $\\binom{25}{2}=300$ ways to choose the members who hold $2$ offices. There are $\\frac{3!}{2!1!}=3$ ways to choose which offices these members hold, and $\\binom{23}{1}=23$ ways to choose which office the remaining member holds. Hence, there are $300\\cdot 3\\cdot 23$ ways to choose the officers for this case.\n- (c) There are $\\binom{25}{3}=25\\cdot 24\\cdot 23$ ways to choose the members who hold $1$ office each. There are $3!$",
+        "Step 3:\n- (c) There are $25\\cdot 24\\cdot 23\\cdot 3!$ ways to choose the officers for this case.\n\n\nFinal Answer: The final answer is  $ \\boxed{ 12,650}.$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: We consider the number of ways to choose the officers, depending on the number of offices held by each member.\n- (a) One member holds 2 offices, and the other 3 members hold 1 office each.\n- (b) Two members hold 2 offices each, and the other 3 members hold 1 office each.\n- (c) Three members hold 1 office each.",
+            1
+        ],
+        [
+            "Step 2:\n- (a) There are $\\binom{25}{1}=25$ ways to choose the member who holds $2$ offices. There are $3$ ways to choose which offices this member holds, and $\\binom{24}{3}=24\\cdot 23\\cdot 22$ ways to choose which offices the other $3$ members hold. Hence, there are $25\\cdot 3\\cdot 24\\cdot 23\\cdot 22$ ways to choose the officers for this case.\n- (b) There are $\\binom{25}{2}=300$ ways to choose the members who hold $2$ offices. There are $\\frac{3!}{2!1!}=3$ ways to choose which offices these members hold, and $\\binom{23}{1}=23$ ways to choose which office the remaining member holds. Hence, there are $300\\cdot 3\\cdot 23$ ways to choose the officers for this case.\n- (c) There are $\\binom{25}{3}=25\\cdot 24\\cdot 23$ ways to choose the members who hold $1$ office each. There are $3!$",
+            1
+        ],
+        [
+            "Step 3:\n- (c) There are $25\\cdot 24\\cdot 23\\cdot 3!$ ways to choose the officers for this case.\n\n\nFinal Answer: The final answer is  $ \\boxed{ 12,650}.$",
+            1
+        ]
+    ],
+    "time": 39.66870403289795,
+    "total_tokens": 2276,
+    "final_answer_tokens": 494,
+    "model": "meta-llama/Llama-Vision-Free"
+}

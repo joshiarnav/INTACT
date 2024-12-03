@@ -1,0 +1,31 @@
+{
+    "problem": "We have a triangle $\\triangle ABC$ where $AC = 17,$ $BC = 15,$ and $AB = 8.$ Let $M$ be the midpoint of $AB.$ What is the length of $CM$?",
+    "level": "Level 4",
+    "type": "Geometry",
+    "solution": "First, we notice that $8:15:17$ is a Pythagorean triple, so we have a right triangle. Let's draw a sketch: [asy]\npair A, B, C, M;\nA = (0, 8);\nB = (0, 0);\nC = (15, 0);\nM = 0.5 * A + 0.5 * B;\ndraw(A--B--C--cycle);\ndraw(C--M);\nlabel(\"$A$\", A, N);\nlabel(\"$B$\", B, SW);\nlabel(\"$C$\", C, SE);\nlabel(\"$M$\", M, NE);\nlabel(\"$8$\", A--B, W);\nlabel(\"$15$\", B--C, S);\nlabel(\"$17$\", A--C, NE);\ndraw(rightanglemark(A,B,C,20));\n[/asy] Since we know that $BM = \\frac{1}{2} \\cdot AB = 4,$ we simply apply the Pythagorean theorem to right triangle $\\triangle MBC.$ \\begin{align*}\nCM^2 &= BM^2 + BC^2\\\\\nCM^2 &= 4^2 + 15^2 = 241\\\\\nCM &= \\boxed{\\sqrt{241}}.\n\\end{align*}",
+    "is_solved": true,
+    "model_solution": "Step 1: Use the Pythagorean Theorem or the Law of Cosines to find the length of the altitude from $C$ to $AB$, and then use the midpoint formula to find the length of $CM$.\nStep 2: Calculate the length of the altitude from $C$ to $AB$ using Heron's Formula to find the area of $\\triangle ABC$ and then apply the formula $\\text{Area} = \\frac{1}{2} \\cdot \\text{base} \\cdot \\text{height}$ to find the height, which is the altitude from $C$ to $AB$.\nStep 2: Calculate the length of the altitude from $C$ to $AB$ using Heron's Formula to find the area of $\\triangle ABC$ and then apply the formula $\\text{Area} = \\frac{1}{2} \\cdot \\text{base} \\cdot \\text{height}$ to find the height, which is the altitude from $C$ to $AB$.",
+    "steps": [
+        "Step 1: Use the Pythagorean Theorem or the Law of Cosines to find the length of the altitude from $C$ to $AB$, and then use the midpoint formula to find the length of $CM$.",
+        "Step 2: Calculate the length of the altitude from $C$ to $AB$ using Heron's Formula to find the area of $\\triangle ABC$ and then apply the formula $\\text{Area} = \\frac{1}{2} \\cdot \\text{base} \\cdot \\text{height}$ to find the height, which is the altitude from $C$ to $AB$.",
+        "Step 2: Calculate the length of the altitude from $C$ to $AB$ using Heron's Formula to find the area of $\\triangle ABC$ and then apply the formula $\\text{Area} = \\frac{1}{2} \\cdot \\text{base} \\cdot \\text{height}$ to find the height, which is the altitude from $C$ to $AB$."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Use the Pythagorean Theorem or the Law of Cosines to find the length of the altitude from $C$ to $AB$, and then use the midpoint formula to find the length of $CM$.",
+            1
+        ],
+        [
+            "Step 2: Calculate the length of the altitude from $C$ to $AB$ using Heron's Formula to find the area of $\\triangle ABC$ and then apply the formula $\\text{Area} = \\frac{1}{2} \\cdot \\text{base} \\cdot \\text{height}$ to find the height, which is the altitude from $C$ to $AB$.",
+            1
+        ],
+        [
+            "Step 2: Calculate the length of the altitude from $C$ to $AB$ using Heron's Formula to find the area of $\\triangle ABC$ and then apply the formula $\\text{Area} = \\frac{1}{2} \\cdot \\text{base} \\cdot \\text{height}$ to find the height, which is the altitude from $C$ to $AB$.",
+            1
+        ]
+    ],
+    "time": 38.988548278808594,
+    "total_tokens": 1434,
+    "final_answer_tokens": 316,
+    "model": "meta-llama/Llama-Vision-Free"
+}

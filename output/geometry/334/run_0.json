@@ -1,0 +1,21 @@
+{
+    "problem": "In the diagram below, $WXYZ$ is a trapezoid such that $\\overline{WX}\\parallel \\overline{ZY}$ and $\\overline{WY}\\perp\\overline{ZY}$.  If $YZ = 12$, $\\tan Z = 1.5$, and $\\tan X = 3$, then what is the area of $WXYZ$?\n\n[asy]\npair WW,X,Y,Z;\nZ = (0,0);\nY = (12,0);\nWW = (12,18);\nX= (18,18);\ndraw(WW--X--Y--Z--WW);\nlabel(\"$W$\",WW,N);\nlabel(\"$X$\",X,N);\nlabel(\"$Y$\",Y,S);\nlabel(\"$Z$\",Z,S);\n[/asy]",
+    "level": "Level 4",
+    "type": "Geometry",
+    "solution": "In order to find the area of trapezoid $WXYZ$, we must find the lengths of both bases and the distance (height) between those bases.\n\n[asy]\npair WW,X,Y,Z;\nZ = (0,0);\nY = (12,0);\nWW = (12,18);\nX= (18,18);\ndraw(WW--Y);\ndraw(rightanglemark(WW,Y,Z,30));\ndraw(rightanglemark(Y,WW,X,30));\ndraw(WW--X--Y--Z--WW);\nlabel(\"$W$\",WW,N);\nlabel(\"$X$\",X,N);\nlabel(\"$Y$\",Y,S);\nlabel(\"$Z$\",Z,S);\nlabel(\"$12$\",Y/2,S);\n[/asy]\n\nWe add $\\overline{WY}$ to our diagram and note that because $\\overline{WX}\\parallel\\overline{ZY}$ and $\\overline{WY}\\perp\\overline{ZY}$, we have $\\overline{WY}\\perp\\overline{WX}$.  Therefore, triangles $WYX$ and $WYZ$ are right triangles.\n\nFrom right triangle $WYZ$, we have $\\tan Z = \\frac{WY}{ZY}$, so $WY = ZY\\cdot \\tan Z = 12\\cdot 1.5 = 18$.  From right triangle $WXY$, we have $\\tan X = \\frac{WY}{WX}$, so \\[WX = \\frac{WY}{\\tan X} = \\frac{18}{3} = 6.\\]Therefore, the area of $WXYZ$ is \\[\\frac{WX+YZ}{2}\\cdot WY = 9\\cdot 18 = \\boxed{162}.\\]",
+    "is_solved": true,
+    "model_solution": "Step 1:  To find the area of trapezoid $WXYZ$, we need to calculate the lengths of its bases and its height.\nStep 2:  Since $\\overline{WX}\\parallel \\overline{ZY}$, we can use the given information about the tangent of angles $Z$ and $X$ to find the lengths of the bases.\nStep 3:  We are given that $\\tan Z = 1.5$ and $YZ = 12$. Using the tangent of angle $Z$, we can find the length of the shorter base $\\overline{WY}$, which is the height of the trapezoid.\nStep 4:  Similarly, we know that $\\tan X = 3$, and we can use this to find the length of the longer base $\\overline{WX}$.\nStep 5:  Once we have the lengths of the bases and the height, we can use the formula for the area of a trapezoid to calculate the area of $WXYZ$.\n\nThe final answer is: $\\boxed{0}$",
+    "steps": [
+        "Step 1:  To find the area of trapezoid $WXYZ$, we need to calculate the lengths of its bases and its height.\nStep 2:  Since $\\overline{WX}\\parallel \\overline{ZY}$, we can use the given information about the tangent of angles $Z$ and $X$ to find the lengths of the bases.\nStep 3:  We are given that $\\tan Z = 1.5$ and $YZ = 12$. Using the tangent of angle $Z$, we can find the length of the shorter base $\\overline{WY}$, which is the height of the trapezoid.\nStep 4:  Similarly, we know that $\\tan X = 3$, and we can use this to find the length of the longer base $\\overline{WX}$.\nStep 5:  Once we have the lengths of the bases and the height, we can use the formula for the area of a trapezoid to calculate the area of $WXYZ$.\n\nThe final answer is: $\\boxed{0}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  To find the area of trapezoid $WXYZ$, we need to calculate the lengths of its bases and its height.\nStep 2:  Since $\\overline{WX}\\parallel \\overline{ZY}$, we can use the given information about the tangent of angles $Z$ and $X$ to find the lengths of the bases.\nStep 3:  We are given that $\\tan Z = 1.5$ and $YZ = 12$. Using the tangent of angle $Z$, we can find the length of the shorter base $\\overline{WY}$, which is the height of the trapezoid.\nStep 4:  Similarly, we know that $\\tan X = 3$, and we can use this to find the length of the longer base $\\overline{WX}$.\nStep 5:  Once we have the lengths of the bases and the height, we can use the formula for the area of a trapezoid to calculate the area of $WXYZ$.\n\nThe final answer is: $\\boxed{0}$",
+            1
+        ]
+    ],
+    "time": 12.839159965515137,
+    "total_tokens": 879,
+    "final_answer_tokens": 422,
+    "model": "meta-llama/Llama-Vision-Free"
+}

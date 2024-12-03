@@ -1,0 +1,41 @@
+{
+    "problem": "As shown, a square is constructed on the hypotenuse of a right triangle whose legs have lengths 3 units and 4 units. What is the area of the pentagon $ABCDE$, in square units?\n\n[asy]\npair a,b,c,d,e;\na=(3,7);\nb=(7,4);\nc=(4,0);\nd=(0,0);\ne=(0,3);\ndraw((0,0.5)--(0.5,0.5)--(0.5,0));\nlabel(\"4\",(2,0),S);\ndraw(a--b--c--e--d--c--e--a);\nlabel(\"3\",(0,1.5),W);\nlabel(\"$A$\",a,N);\nlabel(\"$B$\",b,E);\nlabel(\"$C$\",c,S);\nlabel(\"$D$\",d,S);\nlabel(\"$E$\",e,W);\n[/asy]",
+    "level": "Level 3",
+    "type": "Prealgebra",
+    "solution": "$\\triangle CDE$ is a 3-4-5 right triangle, so $CE = 5$, and square $ABCE$ has area $5^2 = 25$. The area of $\\triangle CDE$ is $(1/2)(3)(4) = 6$, so the area of the pentagon, which is the sum of the areas of the square and the triangle, is $25 + 6 = \\boxed{31}$ square units.",
+    "is_solved": false,
+    "model_solution": "First, find the length of the hypotenuse of the right triangle.\nThe Pythagorean Theorem states that $a^2+b^2=c^2$ for a right triangle with legs of length $a$ and $b$, and hypotenuse of length $c$.\nApplying the theorem to the triangle with legs of length 3 and 4, we have $3^2+4^2=c^2$, or $9+16=c^2$.\n$17=c^2$\nTake the square root of both sides of the equation to find the length of the hypotenuse: $c = \\sqrt{17}$.\nThe area of the square on the hypotenuse is $(\\sqrt{17})^2=(17)$ square units.\nFind the areas of the two triangles $\\triangle ABC$ and $\\triangle CDE$ in the figure, and then find the area of the pentagon $ABCDE$ by subtracting the sum of the areas of the two triangles from the area of the square.\n\nFinal Answer: The final answer is 23. I hope it is correct.",
+    "steps": [
+        "First, find the length of the hypotenuse of the right triangle.\nThe Pythagorean Theorem states that $a^2+b^2=c^2$ for a right triangle with legs of length $a$ and $b$, and hypotenuse of length $c$.\nApplying the theorem to the triangle with legs of length 3 and 4, we have $3^2+4^2=c^2$, or $9+16=c^2$.",
+        "$17=c^2$",
+        "Take the square root of both sides of the equation to find the length of the hypotenuse: $c = \\sqrt{17}$.",
+        "The area of the square on the hypotenuse is $(\\sqrt{17})^2=(17)$ square units.",
+        "Find the areas of the two triangles $\\triangle ABC$ and $\\triangle CDE$ in the figure, and then find the area of the pentagon $ABCDE$ by subtracting the sum of the areas of the two triangles from the area of the square.\n\nFinal Answer: The final answer is 23. I hope it is correct."
+    ],
+    "full_steps": [
+        [
+            "First, find the length of the hypotenuse of the right triangle.\nThe Pythagorean Theorem states that $a^2+b^2=c^2$ for a right triangle with legs of length $a$ and $b$, and hypotenuse of length $c$.\nApplying the theorem to the triangle with legs of length 3 and 4, we have $3^2+4^2=c^2$, or $9+16=c^2$.",
+            1
+        ],
+        [
+            "$17=c^2$",
+            1
+        ],
+        [
+            "Take the square root of both sides of the equation to find the length of the hypotenuse: $c = \\sqrt{17}$.",
+            1
+        ],
+        [
+            "The area of the square on the hypotenuse is $(\\sqrt{17})^2=(17)$ square units.",
+            1
+        ],
+        [
+            "Find the areas of the two triangles $\\triangle ABC$ and $\\triangle CDE$ in the figure, and then find the area of the pentagon $ABCDE$ by subtracting the sum of the areas of the two triangles from the area of the square.\n\nFinal Answer: The final answer is 23. I hope it is correct.",
+            1
+        ]
+    ],
+    "time": 65.21509528160095,
+    "total_tokens": 3924,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

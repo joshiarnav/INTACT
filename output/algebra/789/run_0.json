@@ -1,0 +1,66 @@
+{
+    "problem": "Anton has two species of ants, Species A and Species B, in his ant farm. The two species are identical in appearance, but Anton knows that every day, there are twice as many ants of Species A than before, while there are three times as many ants of Species B. On Day 0, Anton counts that there are 30 ants in his ant farm. On Day 5, Anton counts that there are 3281 ants in his ant farm. How many of these are of Species A?",
+    "level": "Level 5",
+    "type": "Algebra",
+    "solution": "Suppose that there are $a$ ants of Species A and $b$ ants of Species B on Day 0. We thus have that $a+b=30$. Notice that on Day 1, there will be $2a$ ants of Species A, on Day 2, there will be $2(2a) = 4a$ ants of Species A, and on Day 3, there will be $2(4a)=8a$ ants of Species A, etc. Following this line of reasoning, on Day 5, there will be $2^5a$ ants of Species A and $3^5b$ ants of Species B, meaning that $32a+243b=3281$. We now solve this system of linear equations. We have that $32a+32b=960$, so \\begin{align*}(32a+243b)-(32a+32b) &= 211b \\\\\n&= 3281-960 \\\\\n&= 2321.\\end{align*}We then have $b = \\frac{2321}{211} = 11$. This means that $a=30-11=19$, and there are $32\\cdot 19 = \\boxed{608}$ ants of Species A on Day 5.",
+    "is_solved": false,
+    "model_solution": "Let A be the number of ants of Species A and B be the number of ants of Species B on Day 0. A + B = 30\nSince the number of ants of Species A doubles every day, after 5 days, there are 32A ants of Species A. Since the number of ants of Species B triples every day, after 5 days, there are 243B ants of Species B. Therefore, 32A + 243B = 3281.\nSubstitute A = 30 - B from the first equation into the second equation to get 32(30 - B) + 243B = 3281.\n32(30 - B) + 243B = 3281 \u2192 960 - 32B + 243B = 3281 \u2192 211B = 2321\nDivide both sides by 211 to get B = 11.\nSubstitute B = 11 into the equation A = 30 - B to get A = 30 - 11 = 19.\nSince the number of ants of Species A doubles every day, and there were 19 ants of Species A on Day 0, there are 32(19) ants of Species A on Day 5.\n32(19) = 608\nThere are 608 ants of Species A on Day 5.\nSince the number of ants of Species A doubles every day, and there were 19 ants of Species A on Day 0, there are 32(19) ants of Species A on Day 5.",
+    "steps": [
+        "Let A be the number of ants of Species A and B be the number of ants of Species B on Day 0. A + B = 30",
+        "Since the number of ants of Species A doubles every day, after 5 days, there are 32A ants of Species A. Since the number of ants of Species B triples every day, after 5 days, there are 243B ants of Species B. Therefore, 32A + 243B = 3281.",
+        "Substitute A = 30 - B from the first equation into the second equation to get 32(30 - B) + 243B = 3281.",
+        "32(30 - B) + 243B = 3281 \u2192 960 - 32B + 243B = 3281 \u2192 211B = 2321",
+        "Divide both sides by 211 to get B = 11.",
+        "Substitute B = 11 into the equation A = 30 - B to get A = 30 - 11 = 19.",
+        "Since the number of ants of Species A doubles every day, and there were 19 ants of Species A on Day 0, there are 32(19) ants of Species A on Day 5.",
+        "32(19) = 608",
+        "There are 608 ants of Species A on Day 5.",
+        "Since the number of ants of Species A doubles every day, and there were 19 ants of Species A on Day 0, there are 32(19) ants of Species A on Day 5."
+    ],
+    "full_steps": [
+        [
+            "Let A be the number of ants of Species A and B be the number of ants of Species B on Day 0. A + B = 30",
+            1
+        ],
+        [
+            "Since the number of ants of Species A doubles every day, after 5 days, there are 32A ants of Species A. Since the number of ants of Species B triples every day, after 5 days, there are 243B ants of Species B. Therefore, 32A + 243B = 3281.",
+            1
+        ],
+        [
+            "Substitute A = 30 - B from the first equation into the second equation to get 32(30 - B) + 243B = 3281.",
+            1
+        ],
+        [
+            "32(30 - B) + 243B = 3281 \u2192 960 - 32B + 243B = 3281 \u2192 211B = 2321",
+            1
+        ],
+        [
+            "Divide both sides by 211 to get B = 11.",
+            1
+        ],
+        [
+            "Substitute B = 11 into the equation A = 30 - B to get A = 30 - 11 = 19.",
+            1
+        ],
+        [
+            "Since the number of ants of Species A doubles every day, and there were 19 ants of Species A on Day 0, there are 32(19) ants of Species A on Day 5.",
+            1
+        ],
+        [
+            "32(19) = 608",
+            1
+        ],
+        [
+            "There are 608 ants of Species A on Day 5.",
+            1
+        ],
+        [
+            "Since the number of ants of Species A doubles every day, and there were 19 ants of Species A on Day 0, there are 32(19) ants of Species A on Day 5.",
+            1
+        ]
+    ],
+    "time": 135.46056652069092,
+    "total_tokens": 7237,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

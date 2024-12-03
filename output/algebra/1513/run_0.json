@@ -1,0 +1,36 @@
+{
+    "problem": "For how many values of $a$ is it true that:\n(1) $a$ is a positive integer such that $a \\le 50$.\n(2) the quadratic equation $x^2 + (2a+1)x + a^2 = 0$ has two integer solutions?",
+    "level": "Level 5",
+    "type": "Algebra",
+    "solution": "If the quadratic equation $x^2 + (2a+1)x + a^2 = 0$ has two integer solutions, then $$x = \\frac{-2a-1 \\pm \\sqrt{(2a+1)^2 - 4a^2}}{2}$$is an integer, so it follows that the discriminant $(2a+1)^2 - 4a^2 = 4a + 1$ must be a perfect square. Also, $1 \\le a \\le 50$, so it follows that $5 \\le 4a+1 \\le 201$. Clearly $4a+1$ can only be the square of an odd integer; conversely, the square of any odd integer $(2n+1)^2$ is of the form $4n^2 + 4n+1 = 4(n^2 + n) + 1$ and so can be written as $4a+1$. The odd perfect squares from $5$ to $201$ are given by $9 = 3^2, 5^2, 7^2, 9^2, 11^2, 169 = 13^2$, so it follows that there are $\\boxed{6}$ such values of $a$.",
+    "is_solved": true,
+    "model_solution": "Step 1:  To find the values of $a$ for which the given quadratic equation has two integer solutions, we need to consider the discriminant, given by $\\Delta = b^2 - 4ac$.\n(1) $a$ is a positive integer such that $a \\le 50$.\n(2) $x^2 + (2a+1)x + a^2 = 0$ has two integer solutions.\nQuadratic formula: $x = \\frac{-b\\pm\\sqrt{\\Delta}}{2a}$\nFor the discriminant $\\Delta = (2a+1)^2 - 4a^2 = 4a + 1$, $\\Delta$ is a perfect square and $\\Delta = (2a+1)^2 - 4a^2 = (2a-2a+1)^2 = 1^2 = 1$\nStep 2:\n$\\Delta = 4a + 1$ must be a perfect square, so let $\\Delta = m^2$, where $m$ is an odd positive integer.\nThen $m^2 - 1 = 4a$, which implies $(m-1)(m+1) = 4a$, so $m-1$ and $m+1$ are two consecutive even numbers. \nIf $m-1 = 2a$ and $m+1 = 4a$, then $4a = 2a + 2$, which gives $a = 2$, so $m = 3$ and $\\Delta = 10$.\nIf $m-1 = 4a$ and $m+1 = 2a$, then $2a = 4a - 2$, which gives $a = \\frac{2}{2}$, a contradiction.\nTherefore, there are only two possible values for $a$, $2$.\nStep 3:\nThe possible values of $a$ are $2$ and $50$, $a$ cannot be $50$ because $\\Delta = 4(50) + 1 = 201 = 143^2$ so we check $a = 2$.\nThen $\\Delta = 4(2) + 1 = 9 = 3^2$.\nThe quadratic factors as $(x-1)(x-3) = 0$, so the two integer roots are $1$ and $3$.\n\nFinal Answer",
+    "steps": [
+        "Step 1:  To find the values of $a$ for which the given quadratic equation has two integer solutions, we need to consider the discriminant, given by $\\Delta = b^2 - 4ac$.\n(1) $a$ is a positive integer such that $a \\le 50$.\n(2) $x^2 + (2a+1)x + a^2 = 0$ has two integer solutions.\nQuadratic formula: $x = \\frac{-b\\pm\\sqrt{\\Delta}}{2a}$",
+        "For the discriminant $\\Delta = (2a+1)^2 - 4a^2 = 4a + 1$, $\\Delta$ is a perfect square and $\\Delta = (2a+1)^2 - 4a^2 = (2a-2a+1)^2 = 1^2 = 1$",
+        "Step 2:\n$\\Delta = 4a + 1$ must be a perfect square, so let $\\Delta = m^2$, where $m$ is an odd positive integer.\nThen $m^2 - 1 = 4a$, which implies $(m-1)(m+1) = 4a$, so $m-1$ and $m+1$ are two consecutive even numbers. \nIf $m-1 = 2a$ and $m+1 = 4a$, then $4a = 2a + 2$, which gives $a = 2$, so $m = 3$ and $\\Delta = 10$.\nIf $m-1 = 4a$ and $m+1 = 2a$, then $2a = 4a - 2$, which gives $a = \\frac{2}{2}$, a contradiction.\nTherefore, there are only two possible values for $a$, $2$.",
+        "Step 3:\nThe possible values of $a$ are $2$ and $50$, $a$ cannot be $50$ because $\\Delta = 4(50) + 1 = 201 = 143^2$ so we check $a = 2$.\nThen $\\Delta = 4(2) + 1 = 9 = 3^2$.\nThe quadratic factors as $(x-1)(x-3) = 0$, so the two integer roots are $1$ and $3$.\n\nFinal Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  To find the values of $a$ for which the given quadratic equation has two integer solutions, we need to consider the discriminant, given by $\\Delta = b^2 - 4ac$.\n(1) $a$ is a positive integer such that $a \\le 50$.\n(2) $x^2 + (2a+1)x + a^2 = 0$ has two integer solutions.\nQuadratic formula: $x = \\frac{-b\\pm\\sqrt{\\Delta}}{2a}$",
+            1
+        ],
+        [
+            "For the discriminant $\\Delta = (2a+1)^2 - 4a^2 = 4a + 1$, $\\Delta$ is a perfect square and $\\Delta = (2a+1)^2 - 4a^2 = (2a-2a+1)^2 = 1^2 = 1$",
+            1
+        ],
+        [
+            "Step 2:\n$\\Delta = 4a + 1$ must be a perfect square, so let $\\Delta = m^2$, where $m$ is an odd positive integer.\nThen $m^2 - 1 = 4a$, which implies $(m-1)(m+1) = 4a$, so $m-1$ and $m+1$ are two consecutive even numbers. \nIf $m-1 = 2a$ and $m+1 = 4a$, then $4a = 2a + 2$, which gives $a = 2$, so $m = 3$ and $\\Delta = 10$.\nIf $m-1 = 4a$ and $m+1 = 2a$, then $2a = 4a - 2$, which gives $a = \\frac{2}{2}$, a contradiction.\nTherefore, there are only two possible values for $a$, $2$.",
+            1
+        ],
+        [
+            "Step 3:\nThe possible values of $a$ are $2$ and $50$, $a$ cannot be $50$ because $\\Delta = 4(50) + 1 = 201 = 143^2$ so we check $a = 2$.\nThen $\\Delta = 4(2) + 1 = 9 = 3^2$.\nThe quadratic factors as $(x-1)(x-3) = 0$, so the two integer roots are $1$ and $3$.\n\nFinal Answer",
+            1
+        ]
+    ],
+    "time": 50.721627950668335,
+    "total_tokens": 3414,
+    "final_answer_tokens": 628,
+    "model": "meta-llama/Llama-Vision-Free"
+}

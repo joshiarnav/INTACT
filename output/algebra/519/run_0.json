@@ -1,0 +1,66 @@
+{
+    "problem": "Points $A$ and $B$ are on parabola $y=4x^2+7x-1$, and the origin is the midpoint of $\\overline{AB}$. Find the square of the length of $\\overline{AB}$.",
+    "level": "Level 5",
+    "type": "Algebra",
+    "solution": "The graph of the parabola is shown below:\n\n[asy]\nLabel f;\n\nf.p=fontsize(6);\n\nxaxis(-2.5,.75,Ticks(f, 1.0));\n\nyaxis(-5,8,Ticks(f, 2.0));\nreal f(real x)\n\n{\n\nreturn 4x^2+7x-1;\n\n}\n\ndraw(graph(f,-2.5,.75));\ndot((.5,3.5));\ndot((-.5,-3.5));\nlabel(\"$A$\", (.5,3.5), E);\nlabel(\"$B$\", (-.5,-3.5), E);\n[/asy]\n\nLet the coordinates of point $A$ be $(x,y)$. Then since the midpoint of $\\overline{AB}$ is the origin, the coordinates of $B$ are $(-x,-y)$. Both of these points must lie on the parabola, so we plug them into the equation for the parabola to get the equations \\begin{align*}\ny&=4x^2+7x-1,\\\\\n-y&=4(-x)^2+7(-x)-1 \\Rightarrow y=-4x^2+7x+1.\n\\end{align*}Setting the two equations equal to eliminate $y$, we have $4x^2+7x-1=-4x^2+7x+1$, or $8x^2=2\\Rightarrow x^2=\\frac{1}{4}$. So $x=\\frac{1}{2}$ (the negative alternative for $x$ gives the same answer) and $y=4\\left(\\frac{1}{2}\\right)^2+7\\left(\\frac{1}{2}\\right)-1=\\frac{7}{2}$. Thus, point $A$ is at $(1/2,7/2)$ and point $B$ is at $(-1/2,-7/2)$. The length of $\\overline{AB}$ is then $\\sqrt{\\left(-\\frac{1}{2}-\\frac{1}{2}\\right)^2+\\left(-\\frac{7}{2}-\\frac{7}{2}\\right)^2}=\\sqrt{50}$. Hence, $AB^2=\\boxed{50}$.",
+    "is_solved": false,
+    "model_solution": "Step 1: Let the coordinates of point A be (a, b) and the coordinates of point B be (-a, -b), since the origin is the midpoint of segment AB.\nStep 2: Since both points A and B lie on the parabola $y=4x^2+7x-1$, both their coordinates satisfy the equation of the parabola.\nTherefore, we can write two equations:\n$b = 4a^2 + 7a - 1$, and\n$-b = 4(-a)^2 + 7(-a) - 1$\nStep 3: \n$-b = 4a^2 - 7a - 1$\n$- (4a^2 + 7a - 1) = 4a^2 - 7a - 1$\n$-4a^2 - 7a + 1 = 4a^2 - 7a - 1$\n$-8a^2 = -2$\n$a^2 = \\frac{-2}{-8}$\n$a^2 = \\frac{1}{4}$\nStep 4: \n$8a^4+28a^2-4=0$\n$(4a^2-1)(2a^2+4)=0$\n$4a^2-1=0$\n$2a^2+4=0$\n$4a^2=1$\n$a^2=\\frac{1}{4}$\n$2a^2=-4$\n$a^2=\\frac{1}{2}$\n$a^2=0$\n$2a^2=0$\n$a^2=-1$\n$4a^4+28a^2-4=0$ has no solution for $a$\n$a^2=\\frac{1}{4}$\n$a= \\pm \\frac{1}{2}$\nStep 5: Substituting $a=\\pm \\frac{1}{2}$ into the equation $b=4a^2+7a-1$, we get $b=4a^2+7a-1 = 4(\\pm\\frac{1}{2})^2+7(\\pm\\frac{1}{2})-1$\n $b=4(\\pm\\frac{1}{2})^\nStep 6: \n$b=4(\\pm\\frac{1}{2})^2+7(\\pm\\frac{1}{2})-1$\n$b=4(\\frac{1}{4})+7(\\frac{1}{2})-1$\n$b=1+3.5-1$\n$b=3.5$\n$b=4(\\frac{1}{2})^2+7(\\frac{1}{2})-1$\n$b=4(\\frac{1}{4})+7(\\frac{1}{2})-1$\n$b=1+3.5-1$\n$b=3.5$\n$\\overline{AB} = \\sqrt{(a_2-a_1)^2 + (b_2-b_1)^2}$\n$\\overline{AB} = \\sqrt{(-a) - (a)}^2 + (-b) - (b)}^2$\n$\\overline{AB} = \\sqrt{(-2a)}^2 + (-2b)}^2$\n$\\overline{AB} = \\sqrt{4a^2 + 4b^2}$\n$\\overline{AB} = \\sqrt{4\n$\\overline{AB} = \\sqrt{4(\\frac{1}{4} + 3.5^2)}$\n$\\overline{AB} = \\sqrt{4(3.5^2 + \\frac{1}{4})}$\n$\\overline{AB} = \\sqrt{4(12.25+\\frac{1}{4})}$\n$\\overline{AB} = \\sqrt{4(\\frac{49}{4})}$\n$\\overline{AB} = \\sqrt{49}$\n$\\overline{AB} = 7$\n$\\overline{AB} = \\sqrt{4(\\frac{1}{4} + 3.5^2)}$\n$\\overline{AB} = \\sqrt{4(12.25+\\frac{1}{4})}$\n$\\overline{AB} = \\sqrt{4(12.25+\\frac{1}{4})}$",
+    "steps": [
+        "Step 1: Let the coordinates of point A be (a, b) and the coordinates of point B be (-a, -b), since the origin is the midpoint of segment AB.",
+        "Step 2: Since both points A and B lie on the parabola $y=4x^2+7x-1$, both their coordinates satisfy the equation of the parabola.\nTherefore, we can write two equations:\n$b = 4a^2 + 7a - 1$, and\n$-b = 4(-a)^2 + 7(-a) - 1$",
+        "Step 3: \n$-b = 4a^2 - 7a - 1$\n$- (4a^2 + 7a - 1) = 4a^2 - 7a - 1$\n$-4a^2 - 7a + 1 = 4a^2 - 7a - 1$\n$-8a^2 = -2$\n$a^2 = \\frac{-2}{-8}$\n$a^2 = \\frac{1}{4}$",
+        "Step 4: \n$8a^4+28a^2-4=0$\n$(4a^2-1)(2a^2+4)=0$\n$4a^2-1=0$\n$2a^2+4=0$\n$4a^2=1$\n$a^2=\\frac{1}{4}$\n$2a^2=-4$\n$a^2=\\frac{1}{2}$\n$a^2=0$\n$2a^2=0$\n$a^2=-1$\n$4a^4+28a^2-4=0$ has no solution for $a$\n$a^2=\\frac{1}{4}$\n$a= \\pm \\frac{1}{2}$\nStep 5: Substituting $a=\\pm \\frac{1}{2}$ into the equation $b=4a^2+7a-1$, we get $b=4a^2+7a-1 = 4(\\pm\\frac{1}{2})^2+7(\\pm\\frac{1}{2})-1$\n $b=4(\\pm\\frac{1}{2})^",
+        "Step 6: \n$b=4(\\pm\\frac{1}{2})^2+7(\\pm\\frac{1}{2})-1$\n$b=4(\\frac{1}{4})+7(\\frac{1}{2})-1$\n$b=1+3.5-1$\n$b=3.5$\n$b=4(\\frac{1}{2})^2+7(\\frac{1}{2})-1$\n$b=4(\\frac{1}{4})+7(\\frac{1}{2})-1$\n$b=1+3.5-1$\n$b=3.5$\n$\\overline{AB} = \\sqrt{(a_2-a_1)^2 + (b_2-b_1)^2}$\n$\\overline{AB} = \\sqrt{(-a) - (a)}^2 + (-b) - (b)}^2$\n$\\overline{AB} = \\sqrt{(-2a)}^2 + (-2b)}^2$\n$\\overline{AB} = \\sqrt{4a^2 + 4b^2}$\n$\\overline{AB} = \\sqrt{4",
+        "$\\overline{AB} = \\sqrt{4(\\frac{1}{4} + 3.5^2)}$\n$\\overline{AB} = \\sqrt{4(3.5^2 + \\frac{1}{4})}$",
+        "$\\overline{AB} = \\sqrt{4(12.25+\\frac{1}{4})}$\n$\\overline{AB} = \\sqrt{4(\\frac{49}{4})}$\n$\\overline{AB} = \\sqrt{49}$\n$\\overline{AB} = 7$",
+        "$\\overline{AB} = \\sqrt{4(\\frac{1}{4} + 3.5^2)}$",
+        "$\\overline{AB} = \\sqrt{4(12.25+\\frac{1}{4})}$",
+        "$\\overline{AB} = \\sqrt{4(12.25+\\frac{1}{4})}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Let the coordinates of point A be (a, b) and the coordinates of point B be (-a, -b), since the origin is the midpoint of segment AB.",
+            1
+        ],
+        [
+            "Step 2: Since both points A and B lie on the parabola $y=4x^2+7x-1$, both their coordinates satisfy the equation of the parabola.\nTherefore, we can write two equations:\n$b = 4a^2 + 7a - 1$, and\n$-b = 4(-a)^2 + 7(-a) - 1$",
+            1
+        ],
+        [
+            "Step 3: \n$-b = 4a^2 - 7a - 1$\n$- (4a^2 + 7a - 1) = 4a^2 - 7a - 1$\n$-4a^2 - 7a + 1 = 4a^2 - 7a - 1$\n$-8a^2 = -2$\n$a^2 = \\frac{-2}{-8}$\n$a^2 = \\frac{1}{4}$",
+            1
+        ],
+        [
+            "Step 4: \n$8a^4+28a^2-4=0$\n$(4a^2-1)(2a^2+4)=0$\n$4a^2-1=0$\n$2a^2+4=0$\n$4a^2=1$\n$a^2=\\frac{1}{4}$\n$2a^2=-4$\n$a^2=\\frac{1}{2}$\n$a^2=0$\n$2a^2=0$\n$a^2=-1$\n$4a^4+28a^2-4=0$ has no solution for $a$\n$a^2=\\frac{1}{4}$\n$a= \\pm \\frac{1}{2}$\nStep 5: Substituting $a=\\pm \\frac{1}{2}$ into the equation $b=4a^2+7a-1$, we get $b=4a^2+7a-1 = 4(\\pm\\frac{1}{2})^2+7(\\pm\\frac{1}{2})-1$\n $b=4(\\pm\\frac{1}{2})^",
+            1
+        ],
+        [
+            "Step 6: \n$b=4(\\pm\\frac{1}{2})^2+7(\\pm\\frac{1}{2})-1$\n$b=4(\\frac{1}{4})+7(\\frac{1}{2})-1$\n$b=1+3.5-1$\n$b=3.5$\n$b=4(\\frac{1}{2})^2+7(\\frac{1}{2})-1$\n$b=4(\\frac{1}{4})+7(\\frac{1}{2})-1$\n$b=1+3.5-1$\n$b=3.5$\n$\\overline{AB} = \\sqrt{(a_2-a_1)^2 + (b_2-b_1)^2}$\n$\\overline{AB} = \\sqrt{(-a) - (a)}^2 + (-b) - (b)}^2$\n$\\overline{AB} = \\sqrt{(-2a)}^2 + (-2b)}^2$\n$\\overline{AB} = \\sqrt{4a^2 + 4b^2}$\n$\\overline{AB} = \\sqrt{4",
+            1
+        ],
+        [
+            "$\\overline{AB} = \\sqrt{4(\\frac{1}{4} + 3.5^2)}$\n$\\overline{AB} = \\sqrt{4(3.5^2 + \\frac{1}{4})}$",
+            1
+        ],
+        [
+            "$\\overline{AB} = \\sqrt{4(12.25+\\frac{1}{4})}$\n$\\overline{AB} = \\sqrt{4(\\frac{49}{4})}$\n$\\overline{AB} = \\sqrt{49}$\n$\\overline{AB} = 7$",
+            1
+        ],
+        [
+            "$\\overline{AB} = \\sqrt{4(\\frac{1}{4} + 3.5^2)}$",
+            1
+        ],
+        [
+            "$\\overline{AB} = \\sqrt{4(12.25+\\frac{1}{4})}$",
+            1
+        ],
+        [
+            "$\\overline{AB} = \\sqrt{4(12.25+\\frac{1}{4})}$",
+            1
+        ]
+    ],
+    "time": 131.59891176223755,
+    "total_tokens": 14406,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

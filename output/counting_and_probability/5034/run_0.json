@@ -1,0 +1,36 @@
+{
+    "problem": "Let $n$ be the number of ordered quadruples $(x_1,x_2,x_3,x_4)$ of positive odd integers that satisfy $\\sum_{i = 1}^4 x_i = 98.$ Find $\\frac n{100}.$\n",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "Define $x_i = 2y_i - 1$. Then $2\\left(\\sum_{i = 1}^4 y_i\\right) - 4 = 98$, so $\\sum_{i = 1}^4 y_i = 51$.\nSo we want to find four natural numbers that sum up to 51; we can imagine this as trying to split up 51 on the number line into 4 ranges. This is equivalent to trying to place 3 markers on the numbers 1 through 50; thus the answer is $n = {50\\choose3} = \\frac{50 * 49 * 48}{3 * 2} = 19600$, and $\\frac n{100} = \\boxed{196}$.",
+    "is_solved": true,
+    "model_solution": "We will use generating functions to solve this problem.\nWe assign the variable $x_i = 2a_i + 1$, with $a_1, a_2, a_3, a_4 \\ge 0$.\nIn terms of $a_i$, the equation is $4a_1 + 4a_2 + 4a_3 + 4a_4 = 94$, which simplifies to $a_1 + a_2 + a_3 + a_4 = 23$\nNote that the generating function for this problem is $(1+x+x^2+...)(1+x+x^2+...)(1+x+x^2+...)(1+x+x^2+...)=(1-x)^{-4}$.\nFinal Answer:",
+    "steps": [
+        "We will use generating functions to solve this problem.",
+        "We assign the variable $x_i = 2a_i + 1$, with $a_1, a_2, a_3, a_4 \\ge 0$.",
+        "In terms of $a_i$, the equation is $4a_1 + 4a_2 + 4a_3 + 4a_4 = 94$, which simplifies to $a_1 + a_2 + a_3 + a_4 = 23$",
+        "Note that the generating function for this problem is $(1+x+x^2+...)(1+x+x^2+...)(1+x+x^2+...)(1+x+x^2+...)=(1-x)^{-4}$.\nFinal Answer:"
+    ],
+    "full_steps": [
+        [
+            "We will use generating functions to solve this problem.",
+            1
+        ],
+        [
+            "We assign the variable $x_i = 2a_i + 1$, with $a_1, a_2, a_3, a_4 \\ge 0$.",
+            1
+        ],
+        [
+            "In terms of $a_i$, the equation is $4a_1 + 4a_2 + 4a_3 + 4a_4 = 94$, which simplifies to $a_1 + a_2 + a_3 + a_4 = 23$",
+            1
+        ],
+        [
+            "Note that the generating function for this problem is $(1+x+x^2+...)(1+x+x^2+...)(1+x+x^2+...)(1+x+x^2+...)=(1-x)^{-4}$.\nFinal Answer:",
+            1
+        ]
+    ],
+    "time": 55.86854577064514,
+    "total_tokens": 1604,
+    "final_answer_tokens": 276,
+    "model": "meta-llama/Llama-Vision-Free"
+}

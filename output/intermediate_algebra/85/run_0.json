@@ -1,0 +1,56 @@
+{
+    "problem": "How many ordered triplets $(a,b,c)$ of rational numbers are there where $a,b,c$ are the roots of $x^3 + ax^2 + bx + c = 0?$",
+    "level": "Level 4",
+    "type": "Intermediate Algebra",
+    "solution": "Since $a,b,c$ are the roots of the cubic polynomial, Vieta's formulas give us:\n\n\\begin{align*}\n-(a+b+c) &= a \\tag{1}\\\\\nab+bc+ca &= b \\tag{2}\\\\\n-abc &= c\\tag{3}\n\\end{align*}Let's do this with casework.  Assume $c = 0.$  This satisfies equation (3).  Equation (1) translates to $2a + b = 0,$ and equation (2) translates to $ab = b.$  If $b = 0,$ then $a = 0.$  If $b \\neq 0,$ then $a = 1$ and $b = -2.$\n\nNow assume $c \\neq 0.$  Equation (3) then requires that\n\n\\begin{align*}\nab = -1. \\tag{4}\n\\end{align*}Equation (2) then becomes $-1 + c(a+b) = b.$\n\nLet $a + b = 0.$  Then (2) gives $b = -1, a = 1,$ and (1) then gives $c = -1.$  This is our third solution.\n\nIf $c \\neq 0$ and $a + b \\neq 0,$ then from the equation $-1 + c(a + b) = b$,\n\n$$c = \\frac{b+1}{a+b} = \\frac{a(b+1)}{a(a+b)}$$Using (4) to simplify:\n\n$$c = \\frac{-1 + a}{a^2 - 1} = \\frac{1}{a+1}$$Now (1) gives\n\n$$-\\left( a - \\frac{1}{a} + \\frac{1}{a+1} \\right) = a.$$Or $2a^3 + 2a^2 - 1 = 0.$  However, this has no rational roots (we can test $a = \\pm 1, \\pm 1/2$).  Therefore we have $\\boxed{3}$ solutions: $(0,0,0)$, $(1,-2,0)$, and $(1,-1,-1)$.",
+    "is_solved": true,
+    "model_solution": "Step 1:  According to Vieta's formulas, for a cubic equation of the form $x^3 + ax^2 + bx + c = 0$, the sum of the roots is equal to $-a$, the sum of the products of every possible pair of roots is equal to $b$, and the product of the roots is equal to $-c$.\nStep 2:  The equation $x^3 + ax^2 + bx + c = 0$ has rational roots, and since the coefficients $a$, $b$, and $c$ are rational, we can apply Vieta's formulas. The sum of the roots $a+b+c$ must be $-a$, which is rational.\nStep 2:  Since $a+b+c = -a$, we have $a+b+c+a=0$. Simplifying this, we get $2a+b+c=0$, which implies that $b+c=-2a$.\nStep 3:  Since $b+c=-2a$, it follows that $b$ and $c$ must have the same sign.\nStep 4:  Because $b$ and $c$ must have the same sign, we can express $a$ as the sum of two rational numbers. Therefore, $a$ is rational.\nStep 5:  We can express $a$ as $a = \\frac{p}{q}$ for some integers $p$ and $q$.\nStep 6:  From the equation $a+b+c=0$, we can also express $b$ as $b = -2a - c$ and $c$ as $c = -2a - b$.\nStep 7:  Since $a = \\frac{p}{q}$, we can substitute this into the equation $b = -2a - c$ to get $b = -2 \\cdot \\frac{p}{q} - c$. We can rearrange this to get $b = -\\frac{2p}{q} - c$.\n\nFinal Answer.",
+    "steps": [
+        "Step 1:  According to Vieta's formulas, for a cubic equation of the form $x^3 + ax^2 + bx + c = 0$, the sum of the roots is equal to $-a$, the sum of the products of every possible pair of roots is equal to $b$, and the product of the roots is equal to $-c$.",
+        "Step 2:  The equation $x^3 + ax^2 + bx + c = 0$ has rational roots, and since the coefficients $a$, $b$, and $c$ are rational, we can apply Vieta's formulas. The sum of the roots $a+b+c$ must be $-a$, which is rational.",
+        "Step 2:  Since $a+b+c = -a$, we have $a+b+c+a=0$. Simplifying this, we get $2a+b+c=0$, which implies that $b+c=-2a$.",
+        "Step 3:  Since $b+c=-2a$, it follows that $b$ and $c$ must have the same sign.",
+        "Step 4:  Because $b$ and $c$ must have the same sign, we can express $a$ as the sum of two rational numbers. Therefore, $a$ is rational.",
+        "Step 5:  We can express $a$ as $a = \\frac{p}{q}$ for some integers $p$ and $q$.",
+        "Step 6:  From the equation $a+b+c=0$, we can also express $b$ as $b = -2a - c$ and $c$ as $c = -2a - b$.",
+        "Step 7:  Since $a = \\frac{p}{q}$, we can substitute this into the equation $b = -2a - c$ to get $b = -2 \\cdot \\frac{p}{q} - c$. We can rearrange this to get $b = -\\frac{2p}{q} - c$.\n\nFinal Answer."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  According to Vieta's formulas, for a cubic equation of the form $x^3 + ax^2 + bx + c = 0$, the sum of the roots is equal to $-a$, the sum of the products of every possible pair of roots is equal to $b$, and the product of the roots is equal to $-c$.",
+            1
+        ],
+        [
+            "Step 2:  The equation $x^3 + ax^2 + bx + c = 0$ has rational roots, and since the coefficients $a$, $b$, and $c$ are rational, we can apply Vieta's formulas. The sum of the roots $a+b+c$ must be $-a$, which is rational.",
+            1
+        ],
+        [
+            "Step 2:  Since $a+b+c = -a$, we have $a+b+c+a=0$. Simplifying this, we get $2a+b+c=0$, which implies that $b+c=-2a$.",
+            1
+        ],
+        [
+            "Step 3:  Since $b+c=-2a$, it follows that $b$ and $c$ must have the same sign.",
+            1
+        ],
+        [
+            "Step 4:  Because $b$ and $c$ must have the same sign, we can express $a$ as the sum of two rational numbers. Therefore, $a$ is rational.",
+            1
+        ],
+        [
+            "Step 5:  We can express $a$ as $a = \\frac{p}{q}$ for some integers $p$ and $q$.",
+            1
+        ],
+        [
+            "Step 6:  From the equation $a+b+c=0$, we can also express $b$ as $b = -2a - c$ and $c$ as $c = -2a - b$.",
+            1
+        ],
+        [
+            "Step 7:  Since $a = \\frac{p}{q}$, we can substitute this into the equation $b = -2a - c$ to get $b = -2 \\cdot \\frac{p}{q} - c$. We can rearrange this to get $b = -\\frac{2p}{q} - c$.\n\nFinal Answer.",
+            1
+        ]
+    ],
+    "time": 110.45103788375854,
+    "total_tokens": 5698,
+    "final_answer_tokens": 527,
+    "model": "meta-llama/Llama-Vision-Free"
+}

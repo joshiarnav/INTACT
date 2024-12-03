@@ -1,0 +1,61 @@
+{
+    "problem": "How many increasing sequences of three distinct prime numbers have a sum of 20?",
+    "level": "Level 3",
+    "type": "Number Theory",
+    "solution": "List the primes up to 20 (2, 3, 5, 7, 11, 13, 17, 19) and note that the largest possible prime in the sum is 13 because no two primes add up to $20-17=3$ and of course 19 is too large as well. Also, observe that 2, the only even prime, must be in the sum, because the sum of three odd primes can never be 20. Starting with 2 and 3, we see that $20-(2+3)=15$ is not prime. Next, 2 and 5 give $20-(2+5)=13$, a prime, so one such increasing sequence is 2, 5, 13. Next, we take 2 and 7, and we see that $20-(2+7)=11$ is prime as well, giving us the second sequence 2, 7, 11. 11 and 13 are already included, so we are done. Thus, there are $\\boxed{2}$ increasing sequences of three distinct prime numbers that have a sum of 20.",
+    "is_solved": true,
+    "model_solution": "List all prime numbers less than 20: 2, 3, 5, 7, 11, 13, 17, 19.\nEliminate prime numbers greater than 11 from the list.\nList the remaining primes and their combinations that sum to 20: 2, 3, 5, 7; (2, 3, 5), (2, 3, 7), (2, 5, 7), (3, 5, 7)\nCount the number of sequences.\nThere are 4 sequences.\nCheck if the sequences are increasing.\nCheck if each sequence is indeed increasing and has distinct numbers.\nCheck if each sequence is indeed increasing and has distinct numbers: (2, 3, 5) is increasing and distinct, (2, 3, 7) is increasing and distinct, (2, 5, 7) is increasing and distinct, (3, 5, 7) is increasing and distinct.\nFinal Answer: The final answer is 4.",
+    "steps": [
+        "List all prime numbers less than 20: 2, 3, 5, 7, 11, 13, 17, 19.",
+        "Eliminate prime numbers greater than 11 from the list.",
+        "List the remaining primes and their combinations that sum to 20: 2, 3, 5, 7; (2, 3, 5), (2, 3, 7), (2, 5, 7), (3, 5, 7)",
+        "Count the number of sequences.",
+        "There are 4 sequences.",
+        "Check if the sequences are increasing.",
+        "Check if each sequence is indeed increasing and has distinct numbers.",
+        "Check if each sequence is indeed increasing and has distinct numbers: (2, 3, 5) is increasing and distinct, (2, 3, 7) is increasing and distinct, (2, 5, 7) is increasing and distinct, (3, 5, 7) is increasing and distinct.",
+        "Final Answer: The final answer is 4."
+    ],
+    "full_steps": [
+        [
+            "List all prime numbers less than 20: 2, 3, 5, 7, 11, 13, 17, 19.",
+            1
+        ],
+        [
+            "Eliminate prime numbers greater than 11 from the list.",
+            1
+        ],
+        [
+            "List the remaining primes and their combinations that sum to 20: 2, 3, 5, 7; (2, 3, 5), (2, 3, 7), (2, 5, 7), (3, 5, 7)",
+            1
+        ],
+        [
+            "Count the number of sequences.",
+            1
+        ],
+        [
+            "There are 4 sequences.",
+            1
+        ],
+        [
+            "Check if the sequences are increasing.",
+            1
+        ],
+        [
+            "Check if each sequence is indeed increasing and has distinct numbers.",
+            1
+        ],
+        [
+            "Check if each sequence is indeed increasing and has distinct numbers: (2, 3, 5) is increasing and distinct, (2, 3, 7) is increasing and distinct, (2, 5, 7) is increasing and distinct, (3, 5, 7) is increasing and distinct.",
+            1
+        ],
+        [
+            "Final Answer: The final answer is 4.",
+            1
+        ]
+    ],
+    "time": 122.9954981803894,
+    "total_tokens": 3629,
+    "final_answer_tokens": 289,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,66 @@
+{
+    "problem": "The same eight people sit in a certain church pew every week, but not always in the same order. Every week, each person hugs the people immediately to his or her left and right. How many weeks does it take (at a minimum) for every pair of people to hug at least once?",
+    "level": "Level 5",
+    "type": "Prealgebra",
+    "solution": "There are $8$ people, each of whom has $7$ others to hug, making $8\\cdot 7$ pairs. However, this counts each pair twice (once for each ordering of the two people). Since order doesn't matter, the actual number of hugs that must take place is $(8\\cdot 7)/2,$ which is $28.$\n\nEvery week, $7$ different hugs take place, since there are $7$ positions where two people are side-by-side. So, we know it will take at least $28/7 = \\boxed{4}$ weeks for every pair to hug at least once. Here's one possible way they can sit so that every pair is side-by-side once: $$\\begin{array}{r l}\n\\text{Week 1:} & \\text{A B C D E F G H} \\\\\n&\\\\\n\\text{Week 2:} & \\text{B D F H A C E G} \\\\\n&\\\\\n\\text{Week 3:} & \\text{C H E B G D A F} \\\\\n&\\\\\n\\text{Week 4:} & \\text{D H B F C G A E}\n\\end{array}$$",
+    "is_solved": false,
+    "model_solution": "Step 1: Label the eight people A, B, C, D, E, F, G, and H, and arrange them in a circle so that A to H represents the order of the people in the pew from left to right.\nStep 2: On the first week, A hugs B and C; B hugs A and D; C hugs B and D; D hugs C, E, and F; E hugs D and F; F hugs E, G, and H; G hugs F and H; H hugs G.\nStep 3: \nA hugs B, C, D, E, F, G, and H; \nB hugs A, C, D, E, F, G, and H; \nC hugs A, B, D, E, F, G, and H; \nD hugs A, B, C, E, F, G, and H; \nE hugs A, B, C, D, F, G, and H; \nF hugs A, B, C, D, E, G, and H; \nG hugs A, B, C, D, E, F, and H; \nH hugs A, B, C, D, E, F, and G\nStep 4: \nA hugs B, C, D, E, F, G, and H; \nB hugs A, C, D, E, F, G; \nC hugs A, B, D, E, F, G, H; \nD hugs A, B, C, E, F, G, H; \nE hugs A, B, C, D, F, G, H; \nF hugs A, B, C, D, E, G, H; \nG hugs A, B, C, D, E, F, H; \nH hugs A, B, C, D, E, F, G\nStep 5:\nA hugs B, C, D, E, F, G; \nB hugs A, C, D, E, F, G, H; \nC hugs A, B, D, E, F, G, H; \nD hugs A, B, C, E, F, G, H; \nE hugs A, B, C, D, F, G, H; \nF hugs A, B, C, D, E, G, H; \nG hugs A, B, C, D, E, F, H; \nH hugs A, B, C, D, E, F, G\nA hugs B, C, D, E, F; \nB hugs A, C, D, E, F, G; \nC hugs A, B, D, E, F, G, H; \nD hugs A, B, C, E, F, G, H; \nE hugs A, B, C, D, F, G, H; \nF hugs A, B, C, D, E, G, H; \nG hugs A, B, C, D, E, F, H; \nH hugs A, B, C, D, E, F, G\nA hugs B, C, D, E; \nB hugs A, C, D, E, F; \nC hugs A, B, D, E, F, G; \nD hugs A, B, C, E, F, G, H; \nE hugs A, B, C, D, F, G, H; \nF hugs A, B, C, D, E, G, H; \nG hugs A, B, C, D, E, F, H; \nH hugs A, B, C, D, E, F, G\nA hugs B, C, D; \nB hugs A, C, D, E; \nC hugs A, B, D, E, F; \nD hugs A, B, C, E, F, G; \nE hugs A, B, C, D, F, G, H; \nF hugs A, B, C, D, E, G, H; \nG hugs A, B, C, D, E, F, H; \nH hugs A, B, C, D, E, F, G\nA hugs B, C; \nB hugs A, D; \nC hugs A, B, D; \nD hugs B, C, E; \nE hugs D, F; \nF hugs E, G; \nG hugs F, H; \nH hugs G\nA hugs B, C; \nB hugs A, D; \nC hugs A, B; \nD hugs B, E; \nE hugs D, F; \nF hugs E, G; \nG hugs F, H; \nH hugs G",
+    "steps": [
+        "Step 1: Label the eight people A, B, C, D, E, F, G, and H, and arrange them in a circle so that A to H represents the order of the people in the pew from left to right.",
+        "Step 2: On the first week, A hugs B and C; B hugs A and D; C hugs B and D; D hugs C, E, and F; E hugs D and F; F hugs E, G, and H; G hugs F and H; H hugs G.",
+        "Step 3: \nA hugs B, C, D, E, F, G, and H; \nB hugs A, C, D, E, F, G, and H; \nC hugs A, B, D, E, F, G, and H; \nD hugs A, B, C, E, F, G, and H; \nE hugs A, B, C, D, F, G, and H; \nF hugs A, B, C, D, E, G, and H; \nG hugs A, B, C, D, E, F, and H; \nH hugs A, B, C, D, E, F, and G",
+        "Step 4: \nA hugs B, C, D, E, F, G, and H; \nB hugs A, C, D, E, F, G; \nC hugs A, B, D, E, F, G, H; \nD hugs A, B, C, E, F, G, H; \nE hugs A, B, C, D, F, G, H; \nF hugs A, B, C, D, E, G, H; \nG hugs A, B, C, D, E, F, H; \nH hugs A, B, C, D, E, F, G",
+        "Step 5:\nA hugs B, C, D, E, F, G; \nB hugs A, C, D, E, F, G, H; \nC hugs A, B, D, E, F, G, H; \nD hugs A, B, C, E, F, G, H; \nE hugs A, B, C, D, F, G, H; \nF hugs A, B, C, D, E, G, H; \nG hugs A, B, C, D, E, F, H; \nH hugs A, B, C, D, E, F, G",
+        "A hugs B, C, D, E, F; \nB hugs A, C, D, E, F, G; \nC hugs A, B, D, E, F, G, H; \nD hugs A, B, C, E, F, G, H; \nE hugs A, B, C, D, F, G, H; \nF hugs A, B, C, D, E, G, H; \nG hugs A, B, C, D, E, F, H; \nH hugs A, B, C, D, E, F, G",
+        "A hugs B, C, D, E; \nB hugs A, C, D, E, F; \nC hugs A, B, D, E, F, G; \nD hugs A, B, C, E, F, G, H; \nE hugs A, B, C, D, F, G, H; \nF hugs A, B, C, D, E, G, H; \nG hugs A, B, C, D, E, F, H; \nH hugs A, B, C, D, E, F, G",
+        "A hugs B, C, D; \nB hugs A, C, D, E; \nC hugs A, B, D, E, F; \nD hugs A, B, C, E, F, G; \nE hugs A, B, C, D, F, G, H; \nF hugs A, B, C, D, E, G, H; \nG hugs A, B, C, D, E, F, H; \nH hugs A, B, C, D, E, F, G",
+        "A hugs B, C; \nB hugs A, D; \nC hugs A, B, D; \nD hugs B, C, E; \nE hugs D, F; \nF hugs E, G; \nG hugs F, H; \nH hugs G",
+        "A hugs B, C; \nB hugs A, D; \nC hugs A, B; \nD hugs B, E; \nE hugs D, F; \nF hugs E, G; \nG hugs F, H; \nH hugs G"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Label the eight people A, B, C, D, E, F, G, and H, and arrange them in a circle so that A to H represents the order of the people in the pew from left to right.",
+            1
+        ],
+        [
+            "Step 2: On the first week, A hugs B and C; B hugs A and D; C hugs B and D; D hugs C, E, and F; E hugs D and F; F hugs E, G, and H; G hugs F and H; H hugs G.",
+            1
+        ],
+        [
+            "Step 3: \nA hugs B, C, D, E, F, G, and H; \nB hugs A, C, D, E, F, G, and H; \nC hugs A, B, D, E, F, G, and H; \nD hugs A, B, C, E, F, G, and H; \nE hugs A, B, C, D, F, G, and H; \nF hugs A, B, C, D, E, G, and H; \nG hugs A, B, C, D, E, F, and H; \nH hugs A, B, C, D, E, F, and G",
+            1
+        ],
+        [
+            "Step 4: \nA hugs B, C, D, E, F, G, and H; \nB hugs A, C, D, E, F, G; \nC hugs A, B, D, E, F, G, H; \nD hugs A, B, C, E, F, G, H; \nE hugs A, B, C, D, F, G, H; \nF hugs A, B, C, D, E, G, H; \nG hugs A, B, C, D, E, F, H; \nH hugs A, B, C, D, E, F, G",
+            1
+        ],
+        [
+            "Step 5:\nA hugs B, C, D, E, F, G; \nB hugs A, C, D, E, F, G, H; \nC hugs A, B, D, E, F, G, H; \nD hugs A, B, C, E, F, G, H; \nE hugs A, B, C, D, F, G, H; \nF hugs A, B, C, D, E, G, H; \nG hugs A, B, C, D, E, F, H; \nH hugs A, B, C, D, E, F, G",
+            1
+        ],
+        [
+            "A hugs B, C, D, E, F; \nB hugs A, C, D, E, F, G; \nC hugs A, B, D, E, F, G, H; \nD hugs A, B, C, E, F, G, H; \nE hugs A, B, C, D, F, G, H; \nF hugs A, B, C, D, E, G, H; \nG hugs A, B, C, D, E, F, H; \nH hugs A, B, C, D, E, F, G",
+            1
+        ],
+        [
+            "A hugs B, C, D, E; \nB hugs A, C, D, E, F; \nC hugs A, B, D, E, F, G; \nD hugs A, B, C, E, F, G, H; \nE hugs A, B, C, D, F, G, H; \nF hugs A, B, C, D, E, G, H; \nG hugs A, B, C, D, E, F, H; \nH hugs A, B, C, D, E, F, G",
+            1
+        ],
+        [
+            "A hugs B, C, D; \nB hugs A, C, D, E; \nC hugs A, B, D, E, F; \nD hugs A, B, C, E, F, G; \nE hugs A, B, C, D, F, G, H; \nF hugs A, B, C, D, E, G, H; \nG hugs A, B, C, D, E, F, H; \nH hugs A, B, C, D, E, F, G",
+            1
+        ],
+        [
+            "A hugs B, C; \nB hugs A, D; \nC hugs A, B, D; \nD hugs B, C, E; \nE hugs D, F; \nF hugs E, G; \nG hugs F, H; \nH hugs G",
+            1
+        ],
+        [
+            "A hugs B, C; \nB hugs A, D; \nC hugs A, B; \nD hugs B, E; \nE hugs D, F; \nF hugs E, G; \nG hugs F, H; \nH hugs G",
+            1
+        ]
+    ],
+    "time": 134.7682228088379,
+    "total_tokens": 13818,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

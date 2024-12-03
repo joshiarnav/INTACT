@@ -1,0 +1,31 @@
+{
+    "problem": "Link is coloring a triforce, which consists of four equilateral triangles and is depicted below. He has three colors to use: gold, black, and green. So that it remains recognizable, he doesn't want to color any two triangles the same color if they share a side. How many different ways can he color the triforce? (Two colorings that differ by rotation are considered distinct.) [asy]\nsize(50);\ndraw((0,0)--(2,0)--(1,1.732)--cycle);\ndraw((1,0)--(1.5,.866)--(.5,.866)--cycle);\n[/asy]",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "There are 3 ways to choose a color for the center.  Once the center color is chosen, for each of the remaining triangles there are 2 ways to choose a color (any color except the center color).  Therefore, there are $3\\times 2\\times 2\\times 2 = \\boxed{24}$ ways to color the triforce.",
+    "is_solved": false,
+    "model_solution": "There are four equilateral triangles and three colors to use.\nWe first notice that the central triangle is shared by the other three triangles, and therefore cannot be colored with the same color as any of them to avoid violating the condition that no two adjacent triangles are the same color.\nWe count the number of ways to color one of the three outer triangles and then multiply by $3$ to account for the other two outer triangles.",
+    "steps": [
+        "There are four equilateral triangles and three colors to use.",
+        "We first notice that the central triangle is shared by the other three triangles, and therefore cannot be colored with the same color as any of them to avoid violating the condition that no two adjacent triangles are the same color.",
+        "We count the number of ways to color one of the three outer triangles and then multiply by $3$ to account for the other two outer triangles."
+    ],
+    "full_steps": [
+        [
+            "There are four equilateral triangles and three colors to use.",
+            1
+        ],
+        [
+            "We first notice that the central triangle is shared by the other three triangles, and therefore cannot be colored with the same color as any of them to avoid violating the condition that no two adjacent triangles are the same color.",
+            1
+        ],
+        [
+            "We count the number of ways to color one of the three outer triangles and then multiply by $3$ to account for the other two outer triangles.",
+            1
+        ]
+    ],
+    "time": 41.84701728820801,
+    "total_tokens": 1459,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

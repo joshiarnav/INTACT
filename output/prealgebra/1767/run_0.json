@@ -1,0 +1,26 @@
+{
+    "problem": "The trisectors of angles $B$ and $C$ of scalene triangle $ABC$ meet at points $P$ and $Q$, as shown. Angle $A$ measures 39 degrees and angle $QBP$ measures 14 degrees. What is the measure of angle $BPC$?\n\n[asy]unitsize(2cm);\nlabel(\"$B$\",(0,0),W);\n\nlabel(\"$A$\",(1.2,1.5),N);\nlabel(\"$C$\",(1,0),E);\nlabel(\"$Q$\",(.8,.6),N);\nlabel(\"$P$\",(.7,.2),N);\n\ndraw((0,0)--(1.2,1.5)--(1,0)--cycle,linewidth(1));\ndraw((0,0)--(.8,.6)--(1,0),linewidth(1));\ndraw((0,0)--(.7,.2)--(1,0),linewidth(1));\n[/asy]",
+    "level": "Level 5",
+    "type": "Prealgebra",
+    "solution": "Since $\\angle QBP$ is created by trisecting $\\angle ABC$, we have that $m\\angle ABC=3\\cdot 14=42$ degrees.  Thus, the measure of $\\angle ACB=180-42-39=99$ degrees.  By the trisector information given, we have that $\\angle PCB=99/3=33$ degrees and $\\angle PBC=14$ degrees.  Looking just at triangle $PBC$, the measure of $\\angle BPC=180-14-33=\\boxed{133}$ degrees.",
+    "is_solved": false,
+    "model_solution": "Since angle $C$ is the supplement of angle $A$, angle $C$ measures 180\u00b0 - 39\u00b0 = 141\u00b0.\n\nSupplementary angle pairs are equal to 180\u00b0\n180\u00b0 - 39\u00b0 - 14\u00b0 = 127\u00b0\n127\u00b0\nAngle $QBP$ and angle $BPC$ are supplementary, so angle $BPC$ measures 127\u00b0 - 14\u00b0.",
+    "steps": [
+        "Since angle $C$ is the supplement of angle $A$, angle $C$ measures 180\u00b0 - 39\u00b0 = 141\u00b0.\n\nSupplementary angle pairs are equal to 180\u00b0\n180\u00b0 - 39\u00b0 - 14\u00b0 = 127\u00b0\n127\u00b0",
+        "Angle $QBP$ and angle $BPC$ are supplementary, so angle $BPC$ measures 127\u00b0 - 14\u00b0."
+    ],
+    "full_steps": [
+        [
+            "Since angle $C$ is the supplement of angle $A$, angle $C$ measures 180\u00b0 - 39\u00b0 = 141\u00b0.\n\nSupplementary angle pairs are equal to 180\u00b0\n180\u00b0 - 39\u00b0 - 14\u00b0 = 127\u00b0\n127\u00b0",
+            1
+        ],
+        [
+            "Angle $QBP$ and angle $BPC$ are supplementary, so angle $BPC$ measures 127\u00b0 - 14\u00b0.",
+            1
+        ]
+    ],
+    "time": 27.24049186706543,
+    "total_tokens": 1333,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

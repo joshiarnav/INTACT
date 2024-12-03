@@ -1,0 +1,56 @@
+{
+    "problem": "Let\n\\[a_n = \\sqrt{1 + \\left( 1 + \\frac{1}{n} \\right)^2} + \\sqrt{1 + \\left( 1 - \\frac{1}{n} \\right)^2}.\\]Compute\n\\[\\frac{1}{a_1} + \\frac{1}{a_2} + \\frac{1}{a_3} + \\dots + \\frac{1}{a_{100}}.\\]",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "We have that\n\\begin{align*}\n\\frac{1}{a_n} &= \\frac{1}{\\sqrt{1 + \\left( 1 + \\frac{1}{n} \\right)^2} + \\sqrt{1 + \\left( 1 - \\frac{1}{n} \\right)^2}} \\\\\n&= \\frac{\\sqrt{1 + \\left( 1 + \\frac{1}{n} \\right)^2} - \\sqrt{1 + \\left( 1 - \\frac{1}{n} \\right)^2}}{\\left( \\sqrt{1 + \\left( 1 + \\frac{1}{n} \\right)^2} + \\sqrt{1 + \\left( 1 - \\frac{1}{n} \\right)^2} \\right) \\left( \\sqrt{1 + \\left( 1 + \\frac{1}{n} \\right)^2} - \\sqrt{1 + \\left( 1 - \\frac{1}{n} \\right)^2} \\right)} \\\\\n&= \\frac{\\sqrt{1 + \\left( 1 + \\frac{1}{n} \\right)^2} - \\sqrt{1 + \\left( 1 - \\frac{1}{n} \\right)^2}}{1 + (1 + \\frac{1}{n})^2 - 1 - (1 - \\frac{1}{n})^2} \\\\\n&= \\frac{\\sqrt{1 + \\left( 1 + \\frac{1}{n} \\right)^2} - \\sqrt{1 + \\left( 1 - \\frac{1}{n} \\right)^2}}{\\frac{4}{n}} \\\\\n&= \\frac{n \\left( \\sqrt{1 + \\left( 1 + \\frac{1}{n} \\right)^2} - \\sqrt{1 + \\left( 1 - \\frac{1}{n} \\right)^2} \\right)}{4} \\\\\n&= \\frac{\\sqrt{n^2 + (n + 1)^2} - \\sqrt{n^2 + (n - 1)^2}}{4},\n\\end{align*}so\n\\[\\frac{1}{a_n} = \\frac{\\sqrt{n^2 + (n + 1)^2} - \\sqrt{(n - 1)^2 + n^2}}{4}.\\]Hence,\n\\begin{align*}\n&\\frac{1}{a_1} + \\frac{1}{a_2} + \\frac{1}{a_3} + \\dots + \\frac{1}{a_{100}} \\\\\n&= \\frac{\\sqrt{1^2 + 2^2} - \\sqrt{0^2 + 1^2}}{4} + \\frac{\\sqrt{2^2 + 3^2} - \\sqrt{1^2 + 2^2}}{4} + \\frac{\\sqrt{3^2 + 4^2} - \\sqrt{2^2 + 3^2}}{4} \\\\\n&\\quad + \\dots + \\frac{\\sqrt{100^2 + 101^2} - \\sqrt{99^2 + 100^2}}{4} \\\\\n&= \\boxed{\\frac{\\sqrt{20201} - 1}{4}}.\n\\end{align*}",
+    "is_solved": true,
+    "model_solution": "## Step 1: We simplify the expression for $a_n$\n\\[a_n = \\sqrt{1 + \\left( 1 + \\frac{1}{n} \\right)^2} + \\sqrt{1 + \\left( 1 - \\frac{1}{n} \\right)^2}\\]\n\n## Step 2: We simplify the expression under the square roots\n\\[a_n = \\sqrt{1 + 1 + \\frac{2}{n} + \\frac{1}{n^2}} + \\sqrt{1 + 1 - \\frac{2}{n} + \\frac{1}{n^2}}\\]\n\n## Step 3: We simplify the expression under the square roots further\n\\[a_n = \\sqrt{\\left(1 + \\frac{1}{n^2}\\right) + \\frac{2}{n}} + \\sqrt{\\left(1 + \\frac{1}{n^2}\\right) - \\frac{2}{n}}\\]\n\n## Step 4: We factor out the common term from the expression under the square roots\n\\[a_n = \\sqrt{\\left(1 + \\frac{1}{n^2}\\\n## Step 5: We simplify the expression for $a_n$ further\n\\[a_n = \\sqrt{\\left( 1 + \\frac{1}{n^2} \\right)} \\left( \\sqrt{1 + \\frac{2}{n}} + \\sqrt{1 - \\frac{2}{n}} \\right)\\]\n## Step 6: We compute the limit of $a_n$ as $n$ approaches infinity\n\\[\\lim_{n \\rightarrow \\infty} a_n = \\sqrt{2} + \\sqrt{2}\\]\n## Step 7: Compute the value of $1/a_n$ for large $n$\n\\[\\frac{1}{a_n} = \\frac{1}{\\sqrt{2} + \\sqrt{2} + \\frac{2}{n}}\\]\n## Step 8: Simplify $\\frac{1}{a_n}$\n\\[\\frac{1}{a_n} = \\frac{1}{2 \\sqrt{2} + \\frac{2}{n}}\\]\n## Step 9: Compute the limit of $1/a_n$ as $n$ approaches infinity\n\\[\\lim_{n \\rightarrow \\infty} \\frac{1}{a_n} = \\frac{1}{2 \\sqrt{2}}\\]\n## Step 10: Compute the sum\n\\[\\frac{1}{a_1} + \\frac{1}{a_2} + \\frac{1}{a_3} + \\dots + \\frac{1}{a_{100}} = \\frac{1}{a_1} + \\frac{1}{a_2} + \\frac{1}{a_3} + \\dots + \\frac{1}{a_{99}} + \\frac{1}{a_{100}}\\]\n## Step 11: Since the limit as $n$ approaches infinity is $\\frac{1}{2\\sqrt{2}}$, the sum will be approximately equal to $100 \\cdot \\frac{1}{2\\sqrt{2}}$.\n\nThe final answer is: $\\boxed{\\frac{50}{\\sqrt{2}}}$",
+    "steps": [
+        "## Step 1: We simplify the expression for $a_n$\n\\[a_n = \\sqrt{1 + \\left( 1 + \\frac{1}{n} \\right)^2} + \\sqrt{1 + \\left( 1 - \\frac{1}{n} \\right)^2}\\]\n\n## Step 2: We simplify the expression under the square roots\n\\[a_n = \\sqrt{1 + 1 + \\frac{2}{n} + \\frac{1}{n^2}} + \\sqrt{1 + 1 - \\frac{2}{n} + \\frac{1}{n^2}}\\]\n\n## Step 3: We simplify the expression under the square roots further\n\\[a_n = \\sqrt{\\left(1 + \\frac{1}{n^2}\\right) + \\frac{2}{n}} + \\sqrt{\\left(1 + \\frac{1}{n^2}\\right) - \\frac{2}{n}}\\]\n\n## Step 4: We factor out the common term from the expression under the square roots\n\\[a_n = \\sqrt{\\left(1 + \\frac{1}{n^2}\\",
+        "## Step 5: We simplify the expression for $a_n$ further\n\\[a_n = \\sqrt{\\left( 1 + \\frac{1}{n^2} \\right)} \\left( \\sqrt{1 + \\frac{2}{n}} + \\sqrt{1 - \\frac{2}{n}} \\right)\\]",
+        "## Step 6: We compute the limit of $a_n$ as $n$ approaches infinity\n\\[\\lim_{n \\rightarrow \\infty} a_n = \\sqrt{2} + \\sqrt{2}\\]",
+        "## Step 7: Compute the value of $1/a_n$ for large $n$\n\\[\\frac{1}{a_n} = \\frac{1}{\\sqrt{2} + \\sqrt{2} + \\frac{2}{n}}\\]",
+        "## Step 8: Simplify $\\frac{1}{a_n}$\n\\[\\frac{1}{a_n} = \\frac{1}{2 \\sqrt{2} + \\frac{2}{n}}\\]",
+        "## Step 9: Compute the limit of $1/a_n$ as $n$ approaches infinity\n\\[\\lim_{n \\rightarrow \\infty} \\frac{1}{a_n} = \\frac{1}{2 \\sqrt{2}}\\]",
+        "## Step 10: Compute the sum\n\\[\\frac{1}{a_1} + \\frac{1}{a_2} + \\frac{1}{a_3} + \\dots + \\frac{1}{a_{100}} = \\frac{1}{a_1} + \\frac{1}{a_2} + \\frac{1}{a_3} + \\dots + \\frac{1}{a_{99}} + \\frac{1}{a_{100}}\\]",
+        "## Step 11: Since the limit as $n$ approaches infinity is $\\frac{1}{2\\sqrt{2}}$, the sum will be approximately equal to $100 \\cdot \\frac{1}{2\\sqrt{2}}$.\n\nThe final answer is: $\\boxed{\\frac{50}{\\sqrt{2}}}$"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: We simplify the expression for $a_n$\n\\[a_n = \\sqrt{1 + \\left( 1 + \\frac{1}{n} \\right)^2} + \\sqrt{1 + \\left( 1 - \\frac{1}{n} \\right)^2}\\]\n\n## Step 2: We simplify the expression under the square roots\n\\[a_n = \\sqrt{1 + 1 + \\frac{2}{n} + \\frac{1}{n^2}} + \\sqrt{1 + 1 - \\frac{2}{n} + \\frac{1}{n^2}}\\]\n\n## Step 3: We simplify the expression under the square roots further\n\\[a_n = \\sqrt{\\left(1 + \\frac{1}{n^2}\\right) + \\frac{2}{n}} + \\sqrt{\\left(1 + \\frac{1}{n^2}\\right) - \\frac{2}{n}}\\]\n\n## Step 4: We factor out the common term from the expression under the square roots\n\\[a_n = \\sqrt{\\left(1 + \\frac{1}{n^2}\\",
+            1
+        ],
+        [
+            "## Step 5: We simplify the expression for $a_n$ further\n\\[a_n = \\sqrt{\\left( 1 + \\frac{1}{n^2} \\right)} \\left( \\sqrt{1 + \\frac{2}{n}} + \\sqrt{1 - \\frac{2}{n}} \\right)\\]",
+            1
+        ],
+        [
+            "## Step 6: We compute the limit of $a_n$ as $n$ approaches infinity\n\\[\\lim_{n \\rightarrow \\infty} a_n = \\sqrt{2} + \\sqrt{2}\\]",
+            1
+        ],
+        [
+            "## Step 7: Compute the value of $1/a_n$ for large $n$\n\\[\\frac{1}{a_n} = \\frac{1}{\\sqrt{2} + \\sqrt{2} + \\frac{2}{n}}\\]",
+            1
+        ],
+        [
+            "## Step 8: Simplify $\\frac{1}{a_n}$\n\\[\\frac{1}{a_n} = \\frac{1}{2 \\sqrt{2} + \\frac{2}{n}}\\]",
+            1
+        ],
+        [
+            "## Step 9: Compute the limit of $1/a_n$ as $n$ approaches infinity\n\\[\\lim_{n \\rightarrow \\infty} \\frac{1}{a_n} = \\frac{1}{2 \\sqrt{2}}\\]",
+            1
+        ],
+        [
+            "## Step 10: Compute the sum\n\\[\\frac{1}{a_1} + \\frac{1}{a_2} + \\frac{1}{a_3} + \\dots + \\frac{1}{a_{100}} = \\frac{1}{a_1} + \\frac{1}{a_2} + \\frac{1}{a_3} + \\dots + \\frac{1}{a_{99}} + \\frac{1}{a_{100}}\\]",
+            1
+        ],
+        [
+            "## Step 11: Since the limit as $n$ approaches infinity is $\\frac{1}{2\\sqrt{2}}$, the sum will be approximately equal to $100 \\cdot \\frac{1}{2\\sqrt{2}}$.\n\nThe final answer is: $\\boxed{\\frac{50}{\\sqrt{2}}}$",
+            1
+        ]
+    ],
+    "time": 109.10393834114075,
+    "total_tokens": 10061,
+    "final_answer_tokens": 862,
+    "model": "meta-llama/Llama-Vision-Free"
+}

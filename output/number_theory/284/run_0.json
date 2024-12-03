@@ -1,0 +1,66 @@
+{
+    "problem": "What positive two-digit integer is exactly twice the sum of its digits?",
+    "level": "Level 2",
+    "type": "Number Theory",
+    "solution": "Let the tens digit of the two-digit integer be $a$ and let its units digit be $b$.  The equation \\[\n10a+b=2(a+b)\n\\] is given.  Distributing on the right-hand side and subtracting $2a+b$ from both sides gives $8a=b$.  Since $8a>9$ for any digit $a>1$, we have $a=1$, $b=8$, and $10a+b=\\boxed{18}$.",
+    "is_solved": false,
+    "model_solution": "Let x be the desired number. \nx = 10a + b\nwhere a and b are the digits of the number x.\na + b = x/2\n10a + b = 2(a + b)\n10a + b = 2(10a + b) implies 10a + b = 20a + 2b \nThus, 9a + 3b = 0.\n9a = -3b\n9a = -3b \u2192 a = -b/3\nSince a and b are digits, they are non-negative integers, so a cannot equal -b/3. Therefore, the equation 9a = -3b has no integer solutions. Since x is a two-digit integer, this implies x is not defined.\n9a + 3b \u2260 0 is a contradiction, but what if 9a = b?\n10a + b = 2(10a + b) implies 10a + b = 20a + 2b \nThus, 9a + b = 2a + 2b \nThus, 7a = b\n7a = b \u2192 a = b/7",
+    "steps": [
+        "Let x be the desired number. \nx = 10a + b\nwhere a and b are the digits of the number x.",
+        "a + b = x/2",
+        "10a + b = 2(a + b)",
+        "10a + b = 2(10a + b) implies 10a + b = 20a + 2b \nThus, 9a + 3b = 0.",
+        "9a = -3b",
+        "9a = -3b \u2192 a = -b/3",
+        "Since a and b are digits, they are non-negative integers, so a cannot equal -b/3. Therefore, the equation 9a = -3b has no integer solutions. Since x is a two-digit integer, this implies x is not defined.",
+        "9a + 3b \u2260 0 is a contradiction, but what if 9a = b?",
+        "10a + b = 2(10a + b) implies 10a + b = 20a + 2b \nThus, 9a + b = 2a + 2b \nThus, 7a = b",
+        "7a = b \u2192 a = b/7"
+    ],
+    "full_steps": [
+        [
+            "Let x be the desired number. \nx = 10a + b\nwhere a and b are the digits of the number x.",
+            1
+        ],
+        [
+            "a + b = x/2",
+            1
+        ],
+        [
+            "10a + b = 2(a + b)",
+            1
+        ],
+        [
+            "10a + b = 2(10a + b) implies 10a + b = 20a + 2b \nThus, 9a + 3b = 0.",
+            1
+        ],
+        [
+            "9a = -3b",
+            1
+        ],
+        [
+            "9a = -3b \u2192 a = -b/3",
+            1
+        ],
+        [
+            "Since a and b are digits, they are non-negative integers, so a cannot equal -b/3. Therefore, the equation 9a = -3b has no integer solutions. Since x is a two-digit integer, this implies x is not defined.",
+            1
+        ],
+        [
+            "9a + 3b \u2260 0 is a contradiction, but what if 9a = b?",
+            1
+        ],
+        [
+            "10a + b = 2(10a + b) implies 10a + b = 20a + 2b \nThus, 9a + b = 2a + 2b \nThus, 7a = b",
+            1
+        ],
+        [
+            "7a = b \u2192 a = b/7",
+            1
+        ]
+    ],
+    "time": 133.93660283088684,
+    "total_tokens": 4032,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

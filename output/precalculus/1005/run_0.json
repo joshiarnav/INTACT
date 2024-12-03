@@ -1,0 +1,66 @@
+{
+    "problem": "Let $S$ be the set of all points $(x,y)$ in the coordinate plane such that $0\\leq x\\leq \\frac{\\pi}{2}$ and $0\\leq y\\leq\n\\frac{\\pi}{2}$. What is the area of the subset of $S$ for which \\[\n\\sin^2 x -\\sin x \\sin y +\\sin^2 y \\leq\\frac{3}{4}\\,?\n\\]",
+    "level": "Level 3",
+    "type": "Precalculus",
+    "solution": "For a fixed value of $y$, the values of $\\sin x$ for which $\\sin^2 x-\\sin x\\sin y+\\sin^2 y=\\frac{3}{4}$ can be determined by the quadratic formula. Namely, \\[\n\\sin x=\\frac{\\sin y\\pm\\sqrt{\\sin^2 y-4(\\sin^2 y-\\frac{3}{4})}}{2}\n=\\frac{1}{2}\\sin y\\pm\\frac{\\sqrt{3}}{2}\\cos y.\n\\]Because $\\cos \\displaystyle\\left(\\frac{\\pi}{3}\\displaystyle\\right) = \\frac{1}{2}$ and $\\sin \\displaystyle\\left(\\frac{\\pi}{3}\\displaystyle\\right) = \\frac{\\sqrt{3}}{2}$, this implies that \\[\n\\sin x=\\cos\\displaystyle\\left(\\frac{\\pi}{3}\\displaystyle\\right)\\sin y\\pm\\sin \\displaystyle\\left(\\frac{\\pi}{3}\\displaystyle\\right)\\cos y=\\sin\\displaystyle\\left(y\\pm\\frac{\\pi}{3}\\displaystyle\\right).\n\\]Within $S$, $\\sin x=\\sin(y-\\frac{\\pi}{3})$ implies $x=y-\\frac{\\pi}{3}$. However, the case $\\sin\nx=\\sin(y+\\frac{\\pi}{3})$ implies $x=y+\\frac{\\pi}{3}$ when $y\\leq\\frac{\\pi}{6}$, and $x=-y+\\frac{2\\pi}{3}$ when $y\\geq\\frac{\\pi}{6}$. Those three lines divide the region $S$ into four subregions, within each of which the truth value of the inequality is constant. Testing the points $(0,0)$, $(\\frac{\\pi}{2},0)$, $(0,\\frac{\\pi}{2})$, and $(\\frac{\\pi}{2},\\frac{\\pi}{2})$ shows that the inequality is true only in the shaded subregion. The area of this subregion is \\[\n\\displaystyle\\left(\\frac{\\pi}{2}\\displaystyle\\right)^2-\\frac{1}{2}\\cdot\\displaystyle\\left(\\frac{\\pi}{3}\\displaystyle\\right)^2-\n2\\cdot\\frac{1}{2}\\cdot\\displaystyle\\left(\\frac{\\pi}{6}\\displaystyle\\right)^2=\\boxed{\\frac{\\pi^2}{6}}.\n\\][asy]\nunitsize(3cm);\ndraw((0,0)--(1,0)--(1,1)--(0,1)--cycle,dashed);\nfill((0,0.66)--(0.33,1)--(1,0.33)--(0.66,0)--(0,0)--cycle,gray(0.7));\ndot((0,0));\n\ndot((0,1));\ndot((1,1));\ndot((1,0));\ndot((0.66,0));\ndot((0,0.66));\ndot((0.33,1));\ndot((1,0.33));\ndraw((0,0.66)--(0.33,1)--(1,0.33)--(0.66,0),linewidth(0.7));\nlabel(\"$(0,0)$\",(0,0),W);\nlabel(\"$(0,\\frac{\\pi}{2})$\",(0,1),W);\nlabel(\"$(\\frac{\\pi}{2},0)$\",(1,0),E);\nlabel(\"$(\\frac{\\pi}{2}, \\frac{\\pi}{2})$\",(1,1),E);\ndraw((1.1,0.43)--(0.56,-0.1),linewidth(0.7));\ndraw((1.1,0.23)--(0.23,1.1),linewidth(0.7));\ndraw((-0.1,0.56)--(0.43,1.1),linewidth(0.7));\nlabel(\"$x=y+\\frac{\\pi}{3}$\",(1.1,0.43),E);\nlabel(\"$x=y-\\frac{\\pi}{3}$\",(0.43,1.1),NE);\nlabel(\"$x=-y+\\frac{2\\pi}{3}$\",(0.23,1.1),NW);\n[/asy]",
+    "is_solved": false,
+    "model_solution": "Step 1: We begin by manipulating the given inequality to obtain a form that is easier to work with. We can rewrite $\\sin^2 x -\\sin x \\sin y +\\sin^2 y$ as $\\left( \\sin x - \\sin y \\right)^2.$\nStep 2: By definition, the inequality $\\left( \\sin x - \\sin y \\right)^2 \\leq \\frac{3}{4}$ implies that $| \\sin x - \\sin y | \\leq \\frac{\\sqrt{3}}{2}.$\nStep 3: The inequality $|\\sin x-\\sin y|\\le \\frac{\\sqrt{3}}{2}$ is equivalent to the two inequalities $\\sin x-\\sin y\\le \\frac{\\sqrt{3}}{2}$ and $-\\left(\\sin x-\\sin y\\right)\\le \\frac{\\sqrt{3}}{2}.$\nStep 4: The inequality $\\sin x - \\sin y \\leq \\frac{\\sqrt{3}}{2}$ is equivalent to the inequality $\\sin x \\leq \\frac{\\sqrt{3}}{2} + \\sin y.$\nStep 5: Let $f(y)=\\frac{\\sqrt{3}}{2}+\\sin y$ and let $A_{y}$ be the area between the lines $x=0$ and $x=\\frac{\\pi}{2}$, the line $x=f(y)$, and the $x$-axis.\nStep 6: The area of the set for which $\\sin x - \\sin y \\leq \\frac{\\sqrt{3}}{2}$ is true is the area of $A_y$ with respect to $y$, which is $\\int_{0}^{\\pi/2}\\left(\\frac{\\sqrt{3}}{2}+\\sin y\\right)dy.$\nStep 7:\n$\\int_{0}^{\\pi/2}\\left(\\frac{\\sqrt{3}}{2}+\\sin y\\right)dy = \\left[\\frac{\\sqrt{3}y}{2}-\\cos y\\right]_{0}^{\\pi/2} = \\frac{\\sqrt{3}\\pi}{4} + 1.$\nStep 8: \nThe area of the set for which $-\\left(\\sin x-\\sin y \\right)\\le \\frac{\\sqrt{3}}{2}$ is true is the area of $A_y$ with respect to $y$, which is $\\int_{0}^{\\pi/2}-\\left(\\frac{\\sqrt{3}}{2}+\\sin y\\right)dy.$\n$\\int_{0}^{\\pi/2}-\\left(\\frac{\\sqrt{3}}{2}+\\sin y\\right)dy = \\left[-\\frac{\\sqrt{3}y}{2}+\\cos y\\right]_{0}^{\\pi/2} = -\\frac{\\sqrt{3}\\pi}{4} + 1.$\n$\\frac{\\sqrt{3}\\pi}{4} + 1-\\frac{\\sqrt{3}\\pi}{4} + 1 = 2$",
+    "steps": [
+        "Step 1: We begin by manipulating the given inequality to obtain a form that is easier to work with. We can rewrite $\\sin^2 x -\\sin x \\sin y +\\sin^2 y$ as $\\left( \\sin x - \\sin y \\right)^2.$",
+        "Step 2: By definition, the inequality $\\left( \\sin x - \\sin y \\right)^2 \\leq \\frac{3}{4}$ implies that $| \\sin x - \\sin y | \\leq \\frac{\\sqrt{3}}{2}.$",
+        "Step 3: The inequality $|\\sin x-\\sin y|\\le \\frac{\\sqrt{3}}{2}$ is equivalent to the two inequalities $\\sin x-\\sin y\\le \\frac{\\sqrt{3}}{2}$ and $-\\left(\\sin x-\\sin y\\right)\\le \\frac{\\sqrt{3}}{2}.$",
+        "Step 4: The inequality $\\sin x - \\sin y \\leq \\frac{\\sqrt{3}}{2}$ is equivalent to the inequality $\\sin x \\leq \\frac{\\sqrt{3}}{2} + \\sin y.$",
+        "Step 5: Let $f(y)=\\frac{\\sqrt{3}}{2}+\\sin y$ and let $A_{y}$ be the area between the lines $x=0$ and $x=\\frac{\\pi}{2}$, the line $x=f(y)$, and the $x$-axis.",
+        "Step 6: The area of the set for which $\\sin x - \\sin y \\leq \\frac{\\sqrt{3}}{2}$ is true is the area of $A_y$ with respect to $y$, which is $\\int_{0}^{\\pi/2}\\left(\\frac{\\sqrt{3}}{2}+\\sin y\\right)dy.$",
+        "Step 7:\n$\\int_{0}^{\\pi/2}\\left(\\frac{\\sqrt{3}}{2}+\\sin y\\right)dy = \\left[\\frac{\\sqrt{3}y}{2}-\\cos y\\right]_{0}^{\\pi/2} = \\frac{\\sqrt{3}\\pi}{4} + 1.$",
+        "Step 8: \nThe area of the set for which $-\\left(\\sin x-\\sin y \\right)\\le \\frac{\\sqrt{3}}{2}$ is true is the area of $A_y$ with respect to $y$, which is $\\int_{0}^{\\pi/2}-\\left(\\frac{\\sqrt{3}}{2}+\\sin y\\right)dy.$",
+        "$\\int_{0}^{\\pi/2}-\\left(\\frac{\\sqrt{3}}{2}+\\sin y\\right)dy = \\left[-\\frac{\\sqrt{3}y}{2}+\\cos y\\right]_{0}^{\\pi/2} = -\\frac{\\sqrt{3}\\pi}{4} + 1.$",
+        "$\\frac{\\sqrt{3}\\pi}{4} + 1-\\frac{\\sqrt{3}\\pi}{4} + 1 = 2$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: We begin by manipulating the given inequality to obtain a form that is easier to work with. We can rewrite $\\sin^2 x -\\sin x \\sin y +\\sin^2 y$ as $\\left( \\sin x - \\sin y \\right)^2.$",
+            1
+        ],
+        [
+            "Step 2: By definition, the inequality $\\left( \\sin x - \\sin y \\right)^2 \\leq \\frac{3}{4}$ implies that $| \\sin x - \\sin y | \\leq \\frac{\\sqrt{3}}{2}.$",
+            1
+        ],
+        [
+            "Step 3: The inequality $|\\sin x-\\sin y|\\le \\frac{\\sqrt{3}}{2}$ is equivalent to the two inequalities $\\sin x-\\sin y\\le \\frac{\\sqrt{3}}{2}$ and $-\\left(\\sin x-\\sin y\\right)\\le \\frac{\\sqrt{3}}{2}.$",
+            1
+        ],
+        [
+            "Step 4: The inequality $\\sin x - \\sin y \\leq \\frac{\\sqrt{3}}{2}$ is equivalent to the inequality $\\sin x \\leq \\frac{\\sqrt{3}}{2} + \\sin y.$",
+            1
+        ],
+        [
+            "Step 5: Let $f(y)=\\frac{\\sqrt{3}}{2}+\\sin y$ and let $A_{y}$ be the area between the lines $x=0$ and $x=\\frac{\\pi}{2}$, the line $x=f(y)$, and the $x$-axis.",
+            1
+        ],
+        [
+            "Step 6: The area of the set for which $\\sin x - \\sin y \\leq \\frac{\\sqrt{3}}{2}$ is true is the area of $A_y$ with respect to $y$, which is $\\int_{0}^{\\pi/2}\\left(\\frac{\\sqrt{3}}{2}+\\sin y\\right)dy.$",
+            1
+        ],
+        [
+            "Step 7:\n$\\int_{0}^{\\pi/2}\\left(\\frac{\\sqrt{3}}{2}+\\sin y\\right)dy = \\left[\\frac{\\sqrt{3}y}{2}-\\cos y\\right]_{0}^{\\pi/2} = \\frac{\\sqrt{3}\\pi}{4} + 1.$",
+            1
+        ],
+        [
+            "Step 8: \nThe area of the set for which $-\\left(\\sin x-\\sin y \\right)\\le \\frac{\\sqrt{3}}{2}$ is true is the area of $A_y$ with respect to $y$, which is $\\int_{0}^{\\pi/2}-\\left(\\frac{\\sqrt{3}}{2}+\\sin y\\right)dy.$",
+            1
+        ],
+        [
+            "$\\int_{0}^{\\pi/2}-\\left(\\frac{\\sqrt{3}}{2}+\\sin y\\right)dy = \\left[-\\frac{\\sqrt{3}y}{2}+\\cos y\\right]_{0}^{\\pi/2} = -\\frac{\\sqrt{3}\\pi}{4} + 1.$",
+            1
+        ],
+        [
+            "$\\frac{\\sqrt{3}\\pi}{4} + 1-\\frac{\\sqrt{3}\\pi}{4} + 1 = 2$",
+            1
+        ]
+    ],
+    "time": 134.1084852218628,
+    "total_tokens": 10687,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

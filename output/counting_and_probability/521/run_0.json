@@ -1,0 +1,66 @@
+{
+    "problem": "Two different positive integers less than 100 are randomly chosen and multiplied together. What is the probability that the resulting product is a multiple of 3?",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "We can choose two numbers in $\\binom{99}{2}=4851$ ways. Two numbers will have a product which is a multiple of 3 if at least one of them is a multiple of 3. We can more easily count the number of ways for the product to not be a multiple of 3: this happens when neither of the numbers is a multiple of 3. There are $\\frac{99}{3}=33$ multiples of 3 less than 100, and $99-33=66$ numbers which aren't multiples of 3. The number of ways to choose two of these numbers is $\\binom{66}{2}=2145$, so the number of way to choose two numbers where at least one is a multiple of 3 is $4851-2145=2706$. The final probability is $\\frac{2706}{4851}=\\boxed{\\frac{82}{147}}$.",
+    "is_solved": false,
+    "model_solution": "Step 1:  List all the positive integers less than 100 that are multiples of 3.\n  The multiples of 3 less than 100 are: 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 54, 57, 60, 63, 66, 69, 72, 75, 78, 81, 84, 87, 90, 93, 96, 99.\nStep 2:  Find the total number of pairs of different integers less than 100 that can be chosen.\nStep 3:  To find the probability that the product is a multiple of 3, we need to count the number of pairs whose product is a multiple of 3.\nStep 4:  The product of two integers is a multiple of 3 if and only if at least one of the integers is a multiple of 3.\nStep 5:  \nThere are 33 multiples of 3 less than 100. We need to count the number of pairs that can be formed from these 33 multiples without regard to order, and the number of pairs that can be formed from the remaining 66 non-multiples of 3.\nStep 6:\nThe number of ways to choose 2 integers from the 33 multiples of 3 is $\\binom{33}{2}$, and the number of ways to choose 2 integers from the 66 non-multiples of 3 is $\\binom{66}{2}$.\nStep 7:\n$\\binom{33}{2}=528$ and $\\binom{66}{2}=2016$, so the probability that the product of two integers chosen from the 99 integers less than 100 is a multiple of 3 is $\\frac{528+2016}{\\binom{99}{2}}$.\n$\\binom{99}{2} = \\frac{99 \\times 98}{2} = 4851$, so the probability that the product of two integers chosen from the 99 integers less than 100 is a multiple of 3 is $\\frac{528+2016}{4851}$.\nCalculate $\\frac{528+2016}{4851}$.\n$\\frac{2544}{4851}$",
+    "steps": [
+        "Step 1:  List all the positive integers less than 100 that are multiples of 3.\n  The multiples of 3 less than 100 are: 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 54, 57, 60, 63, 66, 69, 72, 75, 78, 81, 84, 87, 90, 93, 96, 99.",
+        "Step 2:  Find the total number of pairs of different integers less than 100 that can be chosen.",
+        "Step 3:  To find the probability that the product is a multiple of 3, we need to count the number of pairs whose product is a multiple of 3.",
+        "Step 4:  The product of two integers is a multiple of 3 if and only if at least one of the integers is a multiple of 3.",
+        "Step 5:  \nThere are 33 multiples of 3 less than 100. We need to count the number of pairs that can be formed from these 33 multiples without regard to order, and the number of pairs that can be formed from the remaining 66 non-multiples of 3.",
+        "Step 6:\nThe number of ways to choose 2 integers from the 33 multiples of 3 is $\\binom{33}{2}$, and the number of ways to choose 2 integers from the 66 non-multiples of 3 is $\\binom{66}{2}$.",
+        "Step 7:\n$\\binom{33}{2}=528$ and $\\binom{66}{2}=2016$, so the probability that the product of two integers chosen from the 99 integers less than 100 is a multiple of 3 is $\\frac{528+2016}{\\binom{99}{2}}$.",
+        "$\\binom{99}{2} = \\frac{99 \\times 98}{2} = 4851$, so the probability that the product of two integers chosen from the 99 integers less than 100 is a multiple of 3 is $\\frac{528+2016}{4851}$.",
+        "Calculate $\\frac{528+2016}{4851}$.",
+        "$\\frac{2544}{4851}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  List all the positive integers less than 100 that are multiples of 3.\n  The multiples of 3 less than 100 are: 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 54, 57, 60, 63, 66, 69, 72, 75, 78, 81, 84, 87, 90, 93, 96, 99.",
+            1
+        ],
+        [
+            "Step 2:  Find the total number of pairs of different integers less than 100 that can be chosen.",
+            1
+        ],
+        [
+            "Step 3:  To find the probability that the product is a multiple of 3, we need to count the number of pairs whose product is a multiple of 3.",
+            1
+        ],
+        [
+            "Step 4:  The product of two integers is a multiple of 3 if and only if at least one of the integers is a multiple of 3.",
+            1
+        ],
+        [
+            "Step 5:  \nThere are 33 multiples of 3 less than 100. We need to count the number of pairs that can be formed from these 33 multiples without regard to order, and the number of pairs that can be formed from the remaining 66 non-multiples of 3.",
+            1
+        ],
+        [
+            "Step 6:\nThe number of ways to choose 2 integers from the 33 multiples of 3 is $\\binom{33}{2}$, and the number of ways to choose 2 integers from the 66 non-multiples of 3 is $\\binom{66}{2}$.",
+            1
+        ],
+        [
+            "Step 7:\n$\\binom{33}{2}=528$ and $\\binom{66}{2}=2016$, so the probability that the product of two integers chosen from the 99 integers less than 100 is a multiple of 3 is $\\frac{528+2016}{\\binom{99}{2}}$.",
+            1
+        ],
+        [
+            "$\\binom{99}{2} = \\frac{99 \\times 98}{2} = 4851$, so the probability that the product of two integers chosen from the 99 integers less than 100 is a multiple of 3 is $\\frac{528+2016}{4851}$.",
+            1
+        ],
+        [
+            "Calculate $\\frac{528+2016}{4851}$.",
+            1
+        ],
+        [
+            "$\\frac{2544}{4851}$",
+            1
+        ]
+    ],
+    "time": 135.53652238845825,
+    "total_tokens": 8345,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

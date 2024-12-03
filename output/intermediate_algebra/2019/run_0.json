@@ -1,0 +1,66 @@
+{
+    "problem": "A hyperbola has one of its foci at $(3, 2),$ and the vertex of the hyperbola closer to this focus is at $(4, 2).$ One of the asymptotes of the hyperbola has slope $\\frac{\\sqrt2}{2}.$ Find the $x-$coordinate of the center of the hyperbola.",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "The center of the hyperbola must lie at the point $(t, 2),$ for some $t > 4.$ Then the distance from the center to each vertex is $a = t -4,$ and the distance from the center to each focus is $c = t-3.$ Therefore, we have \\[b = \\sqrt{c^2 - a^2} = \\sqrt{(t-3)^2 - (t-4)^2} = \\sqrt{2t-7}.\\]The equation for the hyperbola can be written in standard form as \\[\\frac{(x-t)^2}{a^2} - \\frac{(y-2)^2}{b^2} = 1.\\]Then the equations of the asymptotes are $\\frac{x-t}{a} = \\pm \\frac{y-2}{b},$ or $y = 2 \\pm \\frac{b}{a} (x-t).$ Thus, the slopes of the asymptotes are $\\pm \\frac{b}{a}.$ Since $a>0$ and $b>0,$ we must have $\\frac{b}{a} = \\frac{\\sqrt2}2,$ or $b\\sqrt{2} = a.$ Thus, \\[ \\sqrt{2t-7} \\cdot \\sqrt{2} = t-4.\\]Squaring both sides of this equation gives \\[2(2t-7) = (t-4)^2,\\]or $t^2 - 12t + 30 = 0.$ By the quadratic formula, \\[t = \\frac{12 \\pm \\sqrt{12^2 - 4 \\cdot 30}}{2} = 6 \\pm \\sqrt{6}.\\]Because $t > 4$ and $6 - \\sqrt{6} < 6 - 2 = 4,$ we must have $t = \\boxed{6+\\sqrt6}.$ [asy]\nvoid axes(real x0, real x1, real y0, real y1)\n{\n\tdraw((x0,0)--(x1,0),EndArrow);\n    draw((0,y0)--(0,y1),EndArrow);\n    label(\"$x$\",(x1,0),E);\n    label(\"$y$\",(0,y1),N);\n    for (int i=floor(x0)+1; i<x1; ++i)\n    \tdraw((i,.1)--(i,-.1));\n    for (int i=floor(y0)+1; i<y1; ++i)\n    \tdraw((.1,i)--(-.1,i));\n}\npath[] yh(real a, real b, real h, real k, real x0, real x1, bool upper=true, bool lower=true, pen color=black)\n{\n\treal f(real x) { return k + a / b * sqrt(b^2 + (x-h)^2); }\n    real g(real x) { return k - a / b * sqrt(b^2 + (x-h)^2); }\n    if (upper) { draw(graph(f, x0, x1),color,  Arrows); }\n    if (lower) { draw(graph(g, x0, x1),color,  Arrows); }\n    path [] arr = {graph(f, x0, x1), graph(g, x0, x1)};\n    return arr;\n}\nvoid xh(real a, real b, real h, real k, real y0, real y1, bool right=true, bool left=true, pen color=black)\n{\n\tpath [] arr = yh(a, b, k, h, y0, y1, false, false);\n    if (right) draw(reflect((0,0),(1,1))*arr[0],color,  Arrows);\n    if (left) draw(reflect((0,0),(1,1))*arr[1],color,  Arrows);\n}\nvoid e(real a, real b, real h, real k)\n{\n\tdraw(shift((h,k))*scale(a,b)*unitcircle);\n}\nsize(8cm);\naxes(-1,17,-3, 8);\nreal t = 6 + sqrt(6);\nreal a =t-4, b=sqrt(2*t-7);\nxh(a,b,t,2,-2,6);\ndot((3,2)^^(4,2));\nreal f(real x) { return 2 + 1/sqrt(2) * (x-t); }\nreal g(real x) { return 2 - 1/sqrt(2) * (x-t); }\ndraw(graph(f, 2, 15) ^^ graph(g, 2, 15),dashed);\n[/asy]",
+    "is_solved": false,
+    "model_solution": "Step 1: The asymptotes of a hyperbola have slopes $m=\\pm \\frac{b}{a}.$ Since one of the asymptotes has slope $\\frac{\\sqrt{2}}{2},$ we can write that $\\frac{b}{a}=\\frac{\\sqrt{2}}{2}$ or $\\frac{b}{a}=-\\frac{\\sqrt{2}}{2}.$\nStep 2: Since the vertex of the hyperbola closer to the focus is at $(4,2),$ the hyperbola has a horizontal axis, which means the center has the same $x-$coordinate as this vertex.\nStep 3: The hyperbola also has a center halfway between its foci. Thus, the $x-$coordinate of the center of the hyperbola is $$\\frac{3+4}{2}.$$\nSince the $x-$coordinate of the center of the hyperbola is the average of the $x-$coordinates of the foci, the $x-$coordinate of the center of the hyperbola is the same as that found in Step 3. Thus, the $x-$coordinate of the center of the hyperbola is $\\frac{3+4}{2}=3.5$\nStep 4: The slope of the asymptote is $\\frac{b}{a}=\\frac{\\sqrt{2}}{2},$ which means that $b=\\frac{a\\sqrt{2}}{2}.$ We can also express the coordinates of the foci in terms of $a,$ and the center in terms of $a,$ to derive an equation for the $x-$coordinate of the center of the hyperbola: $\\frac{3+c}{2}=\\frac{3+4}{2}=c=\\frac{7}{2}.$\nStep 5: Using the fact that $c^2=a^2+b^2$ and substituting $b=\\frac{a\\sqrt{2}}{2},$ we have that $c^2=a^2+\\left(\\frac{a\\sqrt{2}}{2}\\right)^2.$ Since the center of the hyperbola is at $(\\frac{7}{2},2),$ we can also express $c$ as $c=\\frac{7}{2}-3=\\frac{1}{2}.$ Solving for a in the equation $c^2=a^2+\\left(\\frac{a\\sqrt{2}}{2}\\right)^2$ gives us $a=\\frac{2}{\\sqrt2}=\\sqrt2.$\nStep 6: We can use the equation $\\frac{b}{a}=\\frac{\\sqrt{2}}{2}$ to find the value of b: $b=\\frac{a\\sqrt{2}}{2}=\\frac{\\sqrt{2}\\cdot \\sqrt{2}}{2}=\\frac{2}{2}=1.$ Now, we can use the equation $c^2=a^2+b^2$, where $c=\\frac{1}{2}$ and $b=1$, to solve for a: $\\left(\\frac{1}{2}\\right)^2=a^2+1^2$, so $a^2=\\frac{1}{4}-1=-\\frac{3}{4}.$ Since a cannot be imaginary, the given information is inconsistent.\nStep 7: The equation for the center is xy-coordinate midway between the foci: $\\frac{x_1+x_2}{2}=\\frac{3+4}{2}=3.5.$\nStep 8: Since the given information is inconsistent, we re-examine the steps. We find that the $x-$coordinate of the center of the hyperbola is indeed $\\frac{3+4}{2}=3.5$, as found in Steps 2 and 3.\nStep 9: The $x-$coordinate of the center of the hyperbola is $\\frac{3+4}{2}=3.5.$",
+    "steps": [
+        "Step 1: The asymptotes of a hyperbola have slopes $m=\\pm \\frac{b}{a}.$ Since one of the asymptotes has slope $\\frac{\\sqrt{2}}{2},$ we can write that $\\frac{b}{a}=\\frac{\\sqrt{2}}{2}$ or $\\frac{b}{a}=-\\frac{\\sqrt{2}}{2}.$",
+        "Step 2: Since the vertex of the hyperbola closer to the focus is at $(4,2),$ the hyperbola has a horizontal axis, which means the center has the same $x-$coordinate as this vertex.",
+        "Step 3: The hyperbola also has a center halfway between its foci. Thus, the $x-$coordinate of the center of the hyperbola is $$\\frac{3+4}{2}.$$",
+        "Since the $x-$coordinate of the center of the hyperbola is the average of the $x-$coordinates of the foci, the $x-$coordinate of the center of the hyperbola is the same as that found in Step 3. Thus, the $x-$coordinate of the center of the hyperbola is $\\frac{3+4}{2}=3.5$",
+        "Step 4: The slope of the asymptote is $\\frac{b}{a}=\\frac{\\sqrt{2}}{2},$ which means that $b=\\frac{a\\sqrt{2}}{2}.$ We can also express the coordinates of the foci in terms of $a,$ and the center in terms of $a,$ to derive an equation for the $x-$coordinate of the center of the hyperbola: $\\frac{3+c}{2}=\\frac{3+4}{2}=c=\\frac{7}{2}.$",
+        "Step 5: Using the fact that $c^2=a^2+b^2$ and substituting $b=\\frac{a\\sqrt{2}}{2},$ we have that $c^2=a^2+\\left(\\frac{a\\sqrt{2}}{2}\\right)^2.$ Since the center of the hyperbola is at $(\\frac{7}{2},2),$ we can also express $c$ as $c=\\frac{7}{2}-3=\\frac{1}{2}.$ Solving for a in the equation $c^2=a^2+\\left(\\frac{a\\sqrt{2}}{2}\\right)^2$ gives us $a=\\frac{2}{\\sqrt2}=\\sqrt2.$",
+        "Step 6: We can use the equation $\\frac{b}{a}=\\frac{\\sqrt{2}}{2}$ to find the value of b: $b=\\frac{a\\sqrt{2}}{2}=\\frac{\\sqrt{2}\\cdot \\sqrt{2}}{2}=\\frac{2}{2}=1.$ Now, we can use the equation $c^2=a^2+b^2$, where $c=\\frac{1}{2}$ and $b=1$, to solve for a: $\\left(\\frac{1}{2}\\right)^2=a^2+1^2$, so $a^2=\\frac{1}{4}-1=-\\frac{3}{4}.$ Since a cannot be imaginary, the given information is inconsistent.",
+        "Step 7: The equation for the center is xy-coordinate midway between the foci: $\\frac{x_1+x_2}{2}=\\frac{3+4}{2}=3.5.$",
+        "Step 8: Since the given information is inconsistent, we re-examine the steps. We find that the $x-$coordinate of the center of the hyperbola is indeed $\\frac{3+4}{2}=3.5$, as found in Steps 2 and 3.",
+        "Step 9: The $x-$coordinate of the center of the hyperbola is $\\frac{3+4}{2}=3.5.$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: The asymptotes of a hyperbola have slopes $m=\\pm \\frac{b}{a}.$ Since one of the asymptotes has slope $\\frac{\\sqrt{2}}{2},$ we can write that $\\frac{b}{a}=\\frac{\\sqrt{2}}{2}$ or $\\frac{b}{a}=-\\frac{\\sqrt{2}}{2}.$",
+            1
+        ],
+        [
+            "Step 2: Since the vertex of the hyperbola closer to the focus is at $(4,2),$ the hyperbola has a horizontal axis, which means the center has the same $x-$coordinate as this vertex.",
+            1
+        ],
+        [
+            "Step 3: The hyperbola also has a center halfway between its foci. Thus, the $x-$coordinate of the center of the hyperbola is $$\\frac{3+4}{2}.$$",
+            1
+        ],
+        [
+            "Since the $x-$coordinate of the center of the hyperbola is the average of the $x-$coordinates of the foci, the $x-$coordinate of the center of the hyperbola is the same as that found in Step 3. Thus, the $x-$coordinate of the center of the hyperbola is $\\frac{3+4}{2}=3.5$",
+            1
+        ],
+        [
+            "Step 4: The slope of the asymptote is $\\frac{b}{a}=\\frac{\\sqrt{2}}{2},$ which means that $b=\\frac{a\\sqrt{2}}{2}.$ We can also express the coordinates of the foci in terms of $a,$ and the center in terms of $a,$ to derive an equation for the $x-$coordinate of the center of the hyperbola: $\\frac{3+c}{2}=\\frac{3+4}{2}=c=\\frac{7}{2}.$",
+            1
+        ],
+        [
+            "Step 5: Using the fact that $c^2=a^2+b^2$ and substituting $b=\\frac{a\\sqrt{2}}{2},$ we have that $c^2=a^2+\\left(\\frac{a\\sqrt{2}}{2}\\right)^2.$ Since the center of the hyperbola is at $(\\frac{7}{2},2),$ we can also express $c$ as $c=\\frac{7}{2}-3=\\frac{1}{2}.$ Solving for a in the equation $c^2=a^2+\\left(\\frac{a\\sqrt{2}}{2}\\right)^2$ gives us $a=\\frac{2}{\\sqrt2}=\\sqrt2.$",
+            1
+        ],
+        [
+            "Step 6: We can use the equation $\\frac{b}{a}=\\frac{\\sqrt{2}}{2}$ to find the value of b: $b=\\frac{a\\sqrt{2}}{2}=\\frac{\\sqrt{2}\\cdot \\sqrt{2}}{2}=\\frac{2}{2}=1.$ Now, we can use the equation $c^2=a^2+b^2$, where $c=\\frac{1}{2}$ and $b=1$, to solve for a: $\\left(\\frac{1}{2}\\right)^2=a^2+1^2$, so $a^2=\\frac{1}{4}-1=-\\frac{3}{4}.$ Since a cannot be imaginary, the given information is inconsistent.",
+            1
+        ],
+        [
+            "Step 7: The equation for the center is xy-coordinate midway between the foci: $\\frac{x_1+x_2}{2}=\\frac{3+4}{2}=3.5.$",
+            1
+        ],
+        [
+            "Step 8: Since the given information is inconsistent, we re-examine the steps. We find that the $x-$coordinate of the center of the hyperbola is indeed $\\frac{3+4}{2}=3.5$, as found in Steps 2 and 3.",
+            1
+        ],
+        [
+            "Step 9: The $x-$coordinate of the center of the hyperbola is $\\frac{3+4}{2}=3.5.$",
+            1
+        ]
+    ],
+    "time": 136.69327926635742,
+    "total_tokens": 12127,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,41 @@
+{
+    "problem": "How many zeros are at the end of (100!)(200!)(300!) when multiplied out?",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "The number of zeros at the end of a number is equivalent to the number of factors of 10 that number has. Since there are more factors of 2 than there are of 5 in a factorial, this is determined by the number of factors of 5. So, we go about computing this for each factorial separately.\n\nTo count the number of zeroes at the end of $100!$, we must count the number of factors of 5 in the product.  There are $\\left\\lfloor \\frac{100}{5}\\right\\rfloor$ multiples of 5 from 1 to 100. (The notation $\\left\\lfloor x\\right\\rfloor$ means the greatest integer less than or equal to $x$, so basically, $\\left\\lfloor \\frac{100}{5}\\right\\rfloor$ means \"divide 100 by 5 and round down.\")  This gives us 20 multiples of 5.  But the multiples of 25 contribute an additional factor of 5, so we have to add in the total number of multiples of 25, which gives us a total number of factors of 5 of $\\left\\lfloor \\frac{100}{5} \\right\\rfloor + \\left\\lfloor \\frac{100}{25} \\right\\rfloor = 20+ 4 = 24$.\n\nSimilarly, for $200!$ the contributed zeros total $\\left\\lfloor \\frac{200}{5} \\right\\rfloor + \\left\\lfloor \\frac{200}{25} \\right\\rfloor + \\left\\lfloor \\frac{200}{125} \\right\\rfloor = 40 + 8 + 1 = 49$; and for $300!$, $\\left\\lfloor \\frac{300}{5} \\right\\rfloor + \\left\\lfloor \\frac{300}{25} \\right\\rfloor + \\left\\lfloor \\frac{300}{125} \\right\\rfloor = 60 + 12 + 2 = 74$. So, our answer is $24 + 49 + 74 = \\boxed{147}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: Determine the prime factorization of the number 10, which is 10 = 2 \u00d7 5.\nStep 2: To count the number of trailing zeros in the product of (100!)(200!)(300!), we need to count the number of factors of 5 in the prime factorization of each factorial, since 5 is the limiting factor in forming 10s.\nStep 3: To find the number of factors of 5 in the prime factorization of 100!, we divide 100 by powers of 5 and sum the results: (100/5) + (100/25) + (100/125) = 20 + 4 + 0 = 24. We repeat this process for 200!: (200/5) + (200/25) + (200/125) = 40 + 8 + 1 = 49. We repeat this process for 300!: (300/5) + (300/25) + (300/125) = 60 + 12 + 2 = 74.\nStep 4: The total number of factors of 5 in the prime factorization of (100!)(200!)(300!) is the sum of the number of factors of 5 in each factorial: 24 + 49 + 74 = 147.\nStep 5: Since the number of factors of 2 in the prime factorization of (100!)(200!)(300!) is greater than the number of factors of 5, the total number of factors of 10 (and thus the number of trailing zeros) is equal to the number of factors of 5: 147. Final Answer",
+    "steps": [
+        "Step 1: Determine the prime factorization of the number 10, which is 10 = 2 \u00d7 5.",
+        "Step 2: To count the number of trailing zeros in the product of (100!)(200!)(300!), we need to count the number of factors of 5 in the prime factorization of each factorial, since 5 is the limiting factor in forming 10s.",
+        "Step 3: To find the number of factors of 5 in the prime factorization of 100!, we divide 100 by powers of 5 and sum the results: (100/5) + (100/25) + (100/125) = 20 + 4 + 0 = 24. We repeat this process for 200!: (200/5) + (200/25) + (200/125) = 40 + 8 + 1 = 49. We repeat this process for 300!: (300/5) + (300/25) + (300/125) = 60 + 12 + 2 = 74.",
+        "Step 4: The total number of factors of 5 in the prime factorization of (100!)(200!)(300!) is the sum of the number of factors of 5 in each factorial: 24 + 49 + 74 = 147.",
+        "Step 5: Since the number of factors of 2 in the prime factorization of (100!)(200!)(300!) is greater than the number of factors of 5, the total number of factors of 10 (and thus the number of trailing zeros) is equal to the number of factors of 5: 147. Final Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Determine the prime factorization of the number 10, which is 10 = 2 \u00d7 5.",
+            1
+        ],
+        [
+            "Step 2: To count the number of trailing zeros in the product of (100!)(200!)(300!), we need to count the number of factors of 5 in the prime factorization of each factorial, since 5 is the limiting factor in forming 10s.",
+            1
+        ],
+        [
+            "Step 3: To find the number of factors of 5 in the prime factorization of 100!, we divide 100 by powers of 5 and sum the results: (100/5) + (100/25) + (100/125) = 20 + 4 + 0 = 24. We repeat this process for 200!: (200/5) + (200/25) + (200/125) = 40 + 8 + 1 = 49. We repeat this process for 300!: (300/5) + (300/25) + (300/125) = 60 + 12 + 2 = 74.",
+            1
+        ],
+        [
+            "Step 4: The total number of factors of 5 in the prime factorization of (100!)(200!)(300!) is the sum of the number of factors of 5 in each factorial: 24 + 49 + 74 = 147.",
+            1
+        ],
+        [
+            "Step 5: Since the number of factors of 2 in the prime factorization of (100!)(200!)(300!) is greater than the number of factors of 5, the total number of factors of 10 (and thus the number of trailing zeros) is equal to the number of factors of 5: 147. Final Answer",
+            1
+        ]
+    ],
+    "time": 68.38257336616516,
+    "total_tokens": 2767,
+    "final_answer_tokens": 429,
+    "model": "meta-llama/Llama-Vision-Free"
+}

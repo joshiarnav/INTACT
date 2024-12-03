@@ -1,0 +1,66 @@
+{
+    "problem": "Integers $a$, $b$, $c$, and $d$, not necessarily distinct, are chosen independently and at random from 0 to 2007, inclusive. What is the probability that $ad-bc$ is even?",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "The number $ad-bc$ is even if and only if $ad$ and $bc$ are both odd or are both even.  Each of $ad$ and $bc$ is odd if both of its factors are odd, and even otherwise. Exactly half of the integers from 0 to 2007 are odd, so  each of $ad$ and $bc$ is odd with probability $(1/2)\\cdot(1/2) = 1/4$ and are even with probability $3/4$. Hence the probability that $ad-bc$ is even is \\[\n\\frac{1}{4}\\cdot \\frac{1}{4} + \\frac{3}{4}\\cdot \\frac{3}{4} =\\boxed{\\frac{5}{8}}.\n\\]",
+    "is_solved": false,
+    "model_solution": "Step 1: The expression $ad-bc$ is even if and only if $ad$ and $bc$ have the same parity.\nStep 2: Let's analyze the possible cases for the parities of $a$, $b$, $c$, and $d$. There are four cases: all integers are even, three integers are even, two integers are even, and one integer is even.\nStep 3: When all integers are even, the probability is $\\left(\\frac{1}{2}\\right)^4=\\frac{1}{16}$.\nStep 4: When three integers are even, the probability is $\\frac{4}{5}\\cdot \\frac{1}{2}\\cdot \\frac{1}{2}\\cdot \\frac{1}{2}=\\frac{1}{20}.$\nStep 5: When two integers are even, the probability is $2 \\cdot \\frac{4}{5} \\cdot \\frac{3}{5} \\cdot \\frac{1}{2} = \\frac{12}{25}.$\nStep 6: When one integer is even, the probability is $\\frac{4}{5}\\cdot \\frac{3}{5}\\cdot \\frac{3}{5}\\cdot \\frac{4}{5}=\\frac{144}{625}$.\nStep 7:  When none of the integers are even, the probability is $\\frac{3}{5}\\cdot\\frac{2}{5}\\cdot\\frac{2}{5}\\cdot\\frac{2}{5}=\\frac{24}{625}$.\nStep 8: The probability that $ad-bc$ is even is $1$ minus the probability that $ad-bc$ is odd. The probability that $ad-bc$ is odd is the probability that $ad$ and $bc$ have different parities, which is the sum of the probabilities that $ad$ is even and $bc$ is odd and $ad$ is odd and $bc$ is even. The probability that $ad$ is even is $\\frac{4}{5}$, and the probability that $bc$ is odd is $\\frac{3}{5}$, so the probability that $ad$ is even and $bc$ is odd is $\\frac{4}{5} \\cdot \\frac{3}{5} = \\frac{12}{25}$. Similarly, the probability that $bc$ is even and $ad$ is odd is also $\\frac{12}{25}$. The probability that $ad-bc$ is odd is the sum of these two probabilities, which is $\\frac{12}{25} + \\frac{12}{25} = \\frac{24}{25}$. Therefore, the probability that $ad-bc$ is even is $1-\\\n$1 - \\frac{24}{25} = \\frac{1}{25}$.\nStep 9: The final answer is: $\\boxed{\\frac{1}{25}}$",
+    "steps": [
+        "Step 1: The expression $ad-bc$ is even if and only if $ad$ and $bc$ have the same parity.",
+        "Step 2: Let's analyze the possible cases for the parities of $a$, $b$, $c$, and $d$. There are four cases: all integers are even, three integers are even, two integers are even, and one integer is even.",
+        "Step 3: When all integers are even, the probability is $\\left(\\frac{1}{2}\\right)^4=\\frac{1}{16}$.",
+        "Step 4: When three integers are even, the probability is $\\frac{4}{5}\\cdot \\frac{1}{2}\\cdot \\frac{1}{2}\\cdot \\frac{1}{2}=\\frac{1}{20}.$",
+        "Step 5: When two integers are even, the probability is $2 \\cdot \\frac{4}{5} \\cdot \\frac{3}{5} \\cdot \\frac{1}{2} = \\frac{12}{25}.$",
+        "Step 6: When one integer is even, the probability is $\\frac{4}{5}\\cdot \\frac{3}{5}\\cdot \\frac{3}{5}\\cdot \\frac{4}{5}=\\frac{144}{625}$.",
+        "Step 7:  When none of the integers are even, the probability is $\\frac{3}{5}\\cdot\\frac{2}{5}\\cdot\\frac{2}{5}\\cdot\\frac{2}{5}=\\frac{24}{625}$.",
+        "Step 8: The probability that $ad-bc$ is even is $1$ minus the probability that $ad-bc$ is odd. The probability that $ad-bc$ is odd is the probability that $ad$ and $bc$ have different parities, which is the sum of the probabilities that $ad$ is even and $bc$ is odd and $ad$ is odd and $bc$ is even. The probability that $ad$ is even is $\\frac{4}{5}$, and the probability that $bc$ is odd is $\\frac{3}{5}$, so the probability that $ad$ is even and $bc$ is odd is $\\frac{4}{5} \\cdot \\frac{3}{5} = \\frac{12}{25}$. Similarly, the probability that $bc$ is even and $ad$ is odd is also $\\frac{12}{25}$. The probability that $ad-bc$ is odd is the sum of these two probabilities, which is $\\frac{12}{25} + \\frac{12}{25} = \\frac{24}{25}$. Therefore, the probability that $ad-bc$ is even is $1-\\",
+        "$1 - \\frac{24}{25} = \\frac{1}{25}$.",
+        "Step 9: The final answer is: $\\boxed{\\frac{1}{25}}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: The expression $ad-bc$ is even if and only if $ad$ and $bc$ have the same parity.",
+            1
+        ],
+        [
+            "Step 2: Let's analyze the possible cases for the parities of $a$, $b$, $c$, and $d$. There are four cases: all integers are even, three integers are even, two integers are even, and one integer is even.",
+            1
+        ],
+        [
+            "Step 3: When all integers are even, the probability is $\\left(\\frac{1}{2}\\right)^4=\\frac{1}{16}$.",
+            1
+        ],
+        [
+            "Step 4: When three integers are even, the probability is $\\frac{4}{5}\\cdot \\frac{1}{2}\\cdot \\frac{1}{2}\\cdot \\frac{1}{2}=\\frac{1}{20}.$",
+            1
+        ],
+        [
+            "Step 5: When two integers are even, the probability is $2 \\cdot \\frac{4}{5} \\cdot \\frac{3}{5} \\cdot \\frac{1}{2} = \\frac{12}{25}.$",
+            1
+        ],
+        [
+            "Step 6: When one integer is even, the probability is $\\frac{4}{5}\\cdot \\frac{3}{5}\\cdot \\frac{3}{5}\\cdot \\frac{4}{5}=\\frac{144}{625}$.",
+            1
+        ],
+        [
+            "Step 7:  When none of the integers are even, the probability is $\\frac{3}{5}\\cdot\\frac{2}{5}\\cdot\\frac{2}{5}\\cdot\\frac{2}{5}=\\frac{24}{625}$.",
+            1
+        ],
+        [
+            "Step 8: The probability that $ad-bc$ is even is $1$ minus the probability that $ad-bc$ is odd. The probability that $ad-bc$ is odd is the probability that $ad$ and $bc$ have different parities, which is the sum of the probabilities that $ad$ is even and $bc$ is odd and $ad$ is odd and $bc$ is even. The probability that $ad$ is even is $\\frac{4}{5}$, and the probability that $bc$ is odd is $\\frac{3}{5}$, so the probability that $ad$ is even and $bc$ is odd is $\\frac{4}{5} \\cdot \\frac{3}{5} = \\frac{12}{25}$. Similarly, the probability that $bc$ is even and $ad$ is odd is also $\\frac{12}{25}$. The probability that $ad-bc$ is odd is the sum of these two probabilities, which is $\\frac{12}{25} + \\frac{12}{25} = \\frac{24}{25}$. Therefore, the probability that $ad-bc$ is even is $1-\\",
+            1
+        ],
+        [
+            "$1 - \\frac{24}{25} = \\frac{1}{25}$.",
+            1
+        ],
+        [
+            "Step 9: The final answer is: $\\boxed{\\frac{1}{25}}$",
+            1
+        ]
+    ],
+    "time": 136.84558129310608,
+    "total_tokens": 8260,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

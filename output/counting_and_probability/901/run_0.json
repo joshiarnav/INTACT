@@ -1,0 +1,66 @@
+{
+    "problem": "In how many ways can a President, Vice-President, and Treasurer be chosen from a group of $4$ guys and $4$ girls and at least one girl and at least one guy holds at least one of those three positions? One person cannot serve in more than one position.",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "We have $8$ choices for president, $7$ choices for vice-president, and $6$ choices for treasurer, for a total of $8\\times7\\times6 = 336$ choices. Now we have to subtract the number of choices that don't satisfy the requirement, where the $3$ officers are all boys or all girls. For either case, we have $4$ choices for president, $3$ choices of vice-president, and $2$ choices for treasurer, a total of $4\\times3\\times2 = 24$ choices. So we have $2\\times 24 = 48$ total choices that don't satisfy the requirement.\n\nThus, there are $336-48=\\boxed{288}$ good choices.",
+    "is_solved": false,
+    "model_solution": "Step 1: Since at least one guy and at least one girl must be chosen for the positions of President, Vice-President, and Treasurer, there are two possible scenarios: \n(i) One guy and two girls are chosen. \n(ii) Two guys and one girl are chosen.\nStep 2:\n(i) For the scenario (i) where one guy and two girls are chosen, there are $\\binom{4}{1}\\binom{4}{2}$ ways to choose the individuals, and $3!$ ways to assign the positions, so the number of possibilities for scenario (i) is $\\binom{4}{1}\\binom{4}{2}\\cdot 3!$ \n(ii) For the scenario (ii) where two guys and one girl are chosen, there are $\\binom{4}{2}\\binom{4}{1}$ ways to choose the individuals, and $3!$ ways to assign the positions, so the number of possibilities for scenario (ii) is $\\binom{4}{2}\\binom{4}{1}\\cdot 3!$.\nStep 3:\nThe total number of ways to choose the individuals and assign the positions for both scenarios is $\\binom{4}{1}\\binom{4}{2}\\cdot 3! + \\binom{4}{2}\\binom{4}{1}\\cdot 3!$, so the number of ways is $\\binom{4}{1}\\binom{4}{2}\\cdot 3! + \\binom{4}{2}\\binom{4}{1}\\cdot 3! = 6\\cdot 12 + 6\\cdot 12 = 144$.\n$\\binom{4}{1}\\binom{4}{2}\\cdot 3! + \\binom{4}{2}\\binom{4}{1}\\cdot 3!= 6\\cdot 12 + 6\\cdot 12 = 144$\nStep 4:\n$= 6\\cdot 12\\cdot 2 = 144$\n$= 144$\n$= 6\\cdot 12\\cdot 2 = 144$\nStep 5: \n$\\binom{4}{1}\\binom{4}{2}\\cdot 3! + \\binom{4}{2}\\binom{4}{1}\\cdot 3!= 6\\cdot 12 + 6\\cdot 12 = 144$\n$\\binom{4}{1}\\binom{4}{2}\\cdot 3! + \\binom{4}{2}\\binom{4}{1}\\cdot 3! = 6\\cdot 12 + 6\\cdot 12 = 144$\n$= \\boxed{144}$",
+    "steps": [
+        "Step 1: Since at least one guy and at least one girl must be chosen for the positions of President, Vice-President, and Treasurer, there are two possible scenarios: \n(i) One guy and two girls are chosen. \n(ii) Two guys and one girl are chosen.",
+        "Step 2:\n(i) For the scenario (i) where one guy and two girls are chosen, there are $\\binom{4}{1}\\binom{4}{2}$ ways to choose the individuals, and $3!$ ways to assign the positions, so the number of possibilities for scenario (i) is $\\binom{4}{1}\\binom{4}{2}\\cdot 3!$ \n(ii) For the scenario (ii) where two guys and one girl are chosen, there are $\\binom{4}{2}\\binom{4}{1}$ ways to choose the individuals, and $3!$ ways to assign the positions, so the number of possibilities for scenario (ii) is $\\binom{4}{2}\\binom{4}{1}\\cdot 3!$.",
+        "Step 3:\nThe total number of ways to choose the individuals and assign the positions for both scenarios is $\\binom{4}{1}\\binom{4}{2}\\cdot 3! + \\binom{4}{2}\\binom{4}{1}\\cdot 3!$, so the number of ways is $\\binom{4}{1}\\binom{4}{2}\\cdot 3! + \\binom{4}{2}\\binom{4}{1}\\cdot 3! = 6\\cdot 12 + 6\\cdot 12 = 144$.",
+        "$\\binom{4}{1}\\binom{4}{2}\\cdot 3! + \\binom{4}{2}\\binom{4}{1}\\cdot 3!= 6\\cdot 12 + 6\\cdot 12 = 144$",
+        "Step 4:\n$= 6\\cdot 12\\cdot 2 = 144$",
+        "$= 144$",
+        "$= 6\\cdot 12\\cdot 2 = 144$",
+        "Step 5: \n$\\binom{4}{1}\\binom{4}{2}\\cdot 3! + \\binom{4}{2}\\binom{4}{1}\\cdot 3!= 6\\cdot 12 + 6\\cdot 12 = 144$",
+        "$\\binom{4}{1}\\binom{4}{2}\\cdot 3! + \\binom{4}{2}\\binom{4}{1}\\cdot 3! = 6\\cdot 12 + 6\\cdot 12 = 144$",
+        "$= \\boxed{144}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Since at least one guy and at least one girl must be chosen for the positions of President, Vice-President, and Treasurer, there are two possible scenarios: \n(i) One guy and two girls are chosen. \n(ii) Two guys and one girl are chosen.",
+            1
+        ],
+        [
+            "Step 2:\n(i) For the scenario (i) where one guy and two girls are chosen, there are $\\binom{4}{1}\\binom{4}{2}$ ways to choose the individuals, and $3!$ ways to assign the positions, so the number of possibilities for scenario (i) is $\\binom{4}{1}\\binom{4}{2}\\cdot 3!$ \n(ii) For the scenario (ii) where two guys and one girl are chosen, there are $\\binom{4}{2}\\binom{4}{1}$ ways to choose the individuals, and $3!$ ways to assign the positions, so the number of possibilities for scenario (ii) is $\\binom{4}{2}\\binom{4}{1}\\cdot 3!$.",
+            1
+        ],
+        [
+            "Step 3:\nThe total number of ways to choose the individuals and assign the positions for both scenarios is $\\binom{4}{1}\\binom{4}{2}\\cdot 3! + \\binom{4}{2}\\binom{4}{1}\\cdot 3!$, so the number of ways is $\\binom{4}{1}\\binom{4}{2}\\cdot 3! + \\binom{4}{2}\\binom{4}{1}\\cdot 3! = 6\\cdot 12 + 6\\cdot 12 = 144$.",
+            1
+        ],
+        [
+            "$\\binom{4}{1}\\binom{4}{2}\\cdot 3! + \\binom{4}{2}\\binom{4}{1}\\cdot 3!= 6\\cdot 12 + 6\\cdot 12 = 144$",
+            1
+        ],
+        [
+            "Step 4:\n$= 6\\cdot 12\\cdot 2 = 144$",
+            1
+        ],
+        [
+            "$= 144$",
+            1
+        ],
+        [
+            "$= 6\\cdot 12\\cdot 2 = 144$",
+            1
+        ],
+        [
+            "Step 5: \n$\\binom{4}{1}\\binom{4}{2}\\cdot 3! + \\binom{4}{2}\\binom{4}{1}\\cdot 3!= 6\\cdot 12 + 6\\cdot 12 = 144$",
+            1
+        ],
+        [
+            "$\\binom{4}{1}\\binom{4}{2}\\cdot 3! + \\binom{4}{2}\\binom{4}{1}\\cdot 3! = 6\\cdot 12 + 6\\cdot 12 = 144$",
+            1
+        ],
+        [
+            "$= \\boxed{144}$",
+            1
+        ]
+    ],
+    "time": 134.54145741462708,
+    "total_tokens": 10436,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

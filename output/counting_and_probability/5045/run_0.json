@@ -1,0 +1,36 @@
+{
+    "problem": "Each of the $2001$ students at a high school studies either Spanish or French, and some study both. The number who study Spanish is between $80$ percent and $85$ percent of the school population, and the number who study French is between $30$ percent and $40$ percent. Let $m$ be the smallest number of students who could study both languages, and let $M$ be the largest number of students who could study both languages. Find $M-m$.\n",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "Let $S$ be the percent of people who study Spanish, $F$ be the number of people who study French, and let $S \\cup F$ be the number of students who study both. Then $\\left\\lceil 80\\% \\cdot 2001 \\right\\rceil = 1601 \\le S \\le \\left\\lfloor 85\\% \\cdot 2001 \\right\\rfloor = 1700$, and $\\left\\lceil 30\\% \\cdot 2001 \\right\\rceil = 601 \\le F \\le \\left\\lfloor 40\\% \\cdot 2001 \\right\\rfloor = 800$. By the Principle of Inclusion-Exclusion,\n\\[S+F- S \\cap F = S \\cup F = 2001\\]\nFor $m = S \\cap F$ to be smallest, $S$ and $F$ must be minimized.\n\\[1601 + 601 - m = 2001 \\Longrightarrow m = 201\\]\nFor $M = S \\cap F$ to be largest, $S$ and $F$ must be maximized.\n\\[1700 + 800 - M = 2001 \\Longrightarrow M = 499\\]\nTherefore, the answer is $M - m = 499 - 201 = \\boxed{298}$.",
+    "is_solved": true,
+    "model_solution": "Let $S$ be the number of students studying Spanish, $F$ be the number of students studying French, and $S\\cap F$ be the number of students studying both languages.\n\n$0.8 \\times 2001 \\le S \\le 0.85 \\times 2001$ \n$601.8 \\le S \\le 1700.85$\n$602 \\le S \\le 1700$\n\n$0.3 \\times 2001 \\le F \\le 0.4 \\times 2001$\n$601 \\le F \\le 800.4$\n$601 \\le F \\le 800$\nLet $x = |S\\cap F|.$ Then $S = x + (S - S \\cap F)$ and $F = x + (F - S \\cap F)$.\n\nNote: The original problem can be solved in one more step.\n$S - S\\cap F \\le 1700 - 601 = 1099$ and $F - S \\cap F \\le 800 - 601 = 199$\nSince $S - S\\cap F \\le 1099$ and $F - S \\cap F \\le 199$, we have $x \\ge S + F - 1099 - 199 = 1700 + 800 - 1099 - 199 = 1202$.\n\nFinal Answer.",
+    "steps": [
+        "Let $S$ be the number of students studying Spanish, $F$ be the number of students studying French, and $S\\cap F$ be the number of students studying both languages.\n\n$0.8 \\times 2001 \\le S \\le 0.85 \\times 2001$ \n$601.8 \\le S \\le 1700.85$\n$602 \\le S \\le 1700$\n\n$0.3 \\times 2001 \\le F \\le 0.4 \\times 2001$\n$601 \\le F \\le 800.4$\n$601 \\le F \\le 800$",
+        "Let $x = |S\\cap F|.$ Then $S = x + (S - S \\cap F)$ and $F = x + (F - S \\cap F)$.\n\nNote: The original problem can be solved in one more step.",
+        "$S - S\\cap F \\le 1700 - 601 = 1099$ and $F - S \\cap F \\le 800 - 601 = 199$",
+        "Since $S - S\\cap F \\le 1099$ and $F - S \\cap F \\le 199$, we have $x \\ge S + F - 1099 - 199 = 1700 + 800 - 1099 - 199 = 1202$.\n\nFinal Answer."
+    ],
+    "full_steps": [
+        [
+            "Let $S$ be the number of students studying Spanish, $F$ be the number of students studying French, and $S\\cap F$ be the number of students studying both languages.\n\n$0.8 \\times 2001 \\le S \\le 0.85 \\times 2001$ \n$601.8 \\le S \\le 1700.85$\n$602 \\le S \\le 1700$\n\n$0.3 \\times 2001 \\le F \\le 0.4 \\times 2001$\n$601 \\le F \\le 800.4$\n$601 \\le F \\le 800$",
+            1
+        ],
+        [
+            "Let $x = |S\\cap F|.$ Then $S = x + (S - S \\cap F)$ and $F = x + (F - S \\cap F)$.\n\nNote: The original problem can be solved in one more step.",
+            1
+        ],
+        [
+            "$S - S\\cap F \\le 1700 - 601 = 1099$ and $F - S \\cap F \\le 800 - 601 = 199$",
+            1
+        ],
+        [
+            "Since $S - S\\cap F \\le 1099$ and $F - S \\cap F \\le 199$, we have $x \\ge S + F - 1099 - 199 = 1700 + 800 - 1099 - 199 = 1202$.\n\nFinal Answer.",
+            1
+        ]
+    ],
+    "time": 56.77186155319214,
+    "total_tokens": 2997,
+    "final_answer_tokens": 453,
+    "model": "meta-llama/Llama-Vision-Free"
+}

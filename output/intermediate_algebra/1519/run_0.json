@@ -1,0 +1,41 @@
+{
+    "problem": "Let $x,$ $y,$ and $z$ be positive real numbers such that $xy + xz + yz = 1.$  Find the minimum value of $10x^2 + 10y^2 + z^2.$",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "Suppose equality occurs when $(x,y,z) = (x_0,y_0,z_0).$  To find and prove the minimum value, it looks like we're going to have to put together some inequalities like\n\\[x^2 + y^2 \\ge 2xy.\\]Remembering that equality occurs when $x = x_0$ and $y = y_0,$ or $\\frac{x}{x_0} = \\frac{y}{y_0} = 1,$ we form the inequality\n\\[\\frac{x^2}{x_0^2} + \\frac{y^2}{y_0^2} \\ge \\frac{2xy}{x_0 y_0}.\\]Then\n\\[\\frac{y_0}{2x_0} \\cdot x^2 + \\frac{x_0}{2y_0} \\cdot y^2 \\ge xy.\\]Similarly,\n\\begin{align*}\n\\frac{z_0}{2x_0} \\cdot x^2 + \\frac{x_0}{2z_0} \\cdot z^2 \\ge xz, \\\\\n\\frac{z_0}{2y_0} \\cdot y^2 + \\frac{y_0}{2z_0} \\cdot z^2 \\ge xz.\n\\end{align*}Adding these, we get\n\\[\\frac{y_0 + z_0}{2x_0} \\cdot x^2 + \\frac{x_0 + z_0}{2y_0} \\cdot y^2 + \\frac{x_0 + y_0}{2z_0} \\cdot z^2 \\ge xy + xz + yz.\\]We want to maximize $10x^2 + 10y^2 + z^2,$ so we want $x_0,$ $y_0,$ and $z_0$ to satisfy\n\\[\\frac{y_0 + z_0}{x_0} : \\frac{x_0 + z_0}{y_0} : \\frac{x_0 + y_0}{z_0} = 10:10:1.\\]Let\n\\begin{align*}\ny_0 + z_0 &= 10kx_0, \\\\\nx_0 + z_0 &= 10ky_0, \\\\\nx_0 + y_0 &= kz_0.\n\\end{align*}Then\n\\begin{align*}\nx_0 + y_0 + z_0 &= (10k + 1) x_0, \\\\\nx_0 + y_0 + z_0 &= (10k + 1) y_0, \\\\\nx_0 + y_0 + z_0 &= (k + 1) z_0.\n\\end{align*}Let $t = x_0 + y_0 + z_0.$  Then $x_0 = \\frac{t}{10k + 1},$ $y_0 = \\frac{t}{10k + 1},$ and $z_0 = \\frac{t}{k + 1},$ so\n\\[\\frac{t}{10k + 1} + \\frac{t}{10k + 1} + \\frac{t}{k + 1} = t.\\]Hence,\n\\[\\frac{1}{10k + 1} + \\frac{1}{10k + 1} + \\frac{1}{k + 1} = 1.\\]This simplifies to $10k^2 - k - 2 = 0,$ which factors as $(2k - 1)(5k + 2) = 0.$  Since $k$ is positive, $k = \\frac{1}{2}.$\n\nThen $x_0 = \\frac{t}{6},$ $y_0 = \\frac{t}{6},$ and $z_0 = \\frac{2t}{3}.$  Substituting into $xy + xz + yz = 1,$ we get\n\\[\\frac{t^2}{36} + \\frac{t^2}{9} + \\frac{t^2}{9} = 1.\\]Solving, we find $t = 2,$ and the minimum value of $10x^2 + 10y^2 + z^2$ is\n\\[10 \\cdot \\frac{t^2}{36} + 10 \\cdot \\frac{t^2}{36} + \\frac{4t^2}{9} = t^2 = \\boxed{4}.\\]",
+    "is_solved": true,
+    "model_solution": "## Step 1: Understand the given problem and constraints.\nThe problem asks for the minimum value of the expression $10x^2 + 10y^2 + z^2$ given that $x,$ $y,$ and $z$ are positive real numbers such that $xy + xz + yz = 1.$\n\n## Step 2: Apply the Cauchy-Schwarz inequality to the expression $10x^2 + 10y^2 + z^2.$\nBy Cauchy-Schwarz, we have $(2x^2 + 2y^2)(5) + z^2 \\ge (2x^2 + 2y^2 + z^2)^{2/3} (5^{3/2}).$\n\n## Step 3: Use the constraint $xy + xz + yz = 1$ to obtain a lower bound for $x^2 + y^2 + z^2.$\nFrom the given constraint $xy + xz + yz = 1,$ we can obtain a lower bound for $x^2 + y^2 + z^2.$\n\n## Step 4:  Derive the inequality $\n## Step 5: Derive the inequality $x^2 + y^2 + z^2 \\ge \\frac{1}{3}.$\nUsing the given constraint, we obtain $(x+y+z)^2 \\ge 3(xy+xz+yz) = 3,$ which implies $x^2 + y^2 + z^2 + 2(xy+xz+yz) \\ge 3.$ Since $xy+xz+yz = 1,$ we have $x^2 + y^2 + z^2 \\ge 1.$ On the other hand, the inequality $(x+y+z)^2 \\ge 3(xy+xz+yz)$ is always true, so $x^2 + y^2 + z^2 \\ge \\frac{1}{3}.$\n## Step 6: Plug in the inequality for $x^2 + y^2 + z^2$ into the Cauchy-Schwarz inequality to find a lower bound for $10x^2 + 10y^2 + z^2.$\n$(2x^2 + 2y^2)(5) + z^2 \\ge (2x^2 + 2y^2 + z^2)^{2/3} (5^{3/2}) \\ge \\left( \\frac{1}{3} \\right)^{1} (5^{3/2}) = \\frac{5 \\sqrt{5}}{3}.$\n## Step 7: Calculate the minimum value of $10x^2 + 10y^2 + z^2.$\n$10x^2 + 10y^2 + z^2 \\ge \\frac{5 \\sqrt{5}}{3}.$\n## Step 8: The equality condition is met when $x = y = \\frac{1}{\\sqrt{10}}$ and $z = \\frac{1}{\\sqrt{5}}.$\nThe final answer is: $\\boxed{\\frac{5 \\sqrt{5}}{3}}$",
+    "steps": [
+        "## Step 1: Understand the given problem and constraints.\nThe problem asks for the minimum value of the expression $10x^2 + 10y^2 + z^2$ given that $x,$ $y,$ and $z$ are positive real numbers such that $xy + xz + yz = 1.$\n\n## Step 2: Apply the Cauchy-Schwarz inequality to the expression $10x^2 + 10y^2 + z^2.$\nBy Cauchy-Schwarz, we have $(2x^2 + 2y^2)(5) + z^2 \\ge (2x^2 + 2y^2 + z^2)^{2/3} (5^{3/2}).$\n\n## Step 3: Use the constraint $xy + xz + yz = 1$ to obtain a lower bound for $x^2 + y^2 + z^2.$\nFrom the given constraint $xy + xz + yz = 1,$ we can obtain a lower bound for $x^2 + y^2 + z^2.$\n\n## Step 4:  Derive the inequality $",
+        "## Step 5: Derive the inequality $x^2 + y^2 + z^2 \\ge \\frac{1}{3}.$\nUsing the given constraint, we obtain $(x+y+z)^2 \\ge 3(xy+xz+yz) = 3,$ which implies $x^2 + y^2 + z^2 + 2(xy+xz+yz) \\ge 3.$ Since $xy+xz+yz = 1,$ we have $x^2 + y^2 + z^2 \\ge 1.$ On the other hand, the inequality $(x+y+z)^2 \\ge 3(xy+xz+yz)$ is always true, so $x^2 + y^2 + z^2 \\ge \\frac{1}{3}.$",
+        "## Step 6: Plug in the inequality for $x^2 + y^2 + z^2$ into the Cauchy-Schwarz inequality to find a lower bound for $10x^2 + 10y^2 + z^2.$\n$(2x^2 + 2y^2)(5) + z^2 \\ge (2x^2 + 2y^2 + z^2)^{2/3} (5^{3/2}) \\ge \\left( \\frac{1}{3} \\right)^{1} (5^{3/2}) = \\frac{5 \\sqrt{5}}{3}.$",
+        "## Step 7: Calculate the minimum value of $10x^2 + 10y^2 + z^2.$\n$10x^2 + 10y^2 + z^2 \\ge \\frac{5 \\sqrt{5}}{3}.$",
+        "## Step 8: The equality condition is met when $x = y = \\frac{1}{\\sqrt{10}}$ and $z = \\frac{1}{\\sqrt{5}}.$\nThe final answer is: $\\boxed{\\frac{5 \\sqrt{5}}{3}}$"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Understand the given problem and constraints.\nThe problem asks for the minimum value of the expression $10x^2 + 10y^2 + z^2$ given that $x,$ $y,$ and $z$ are positive real numbers such that $xy + xz + yz = 1.$\n\n## Step 2: Apply the Cauchy-Schwarz inequality to the expression $10x^2 + 10y^2 + z^2.$\nBy Cauchy-Schwarz, we have $(2x^2 + 2y^2)(5) + z^2 \\ge (2x^2 + 2y^2 + z^2)^{2/3} (5^{3/2}).$\n\n## Step 3: Use the constraint $xy + xz + yz = 1$ to obtain a lower bound for $x^2 + y^2 + z^2.$\nFrom the given constraint $xy + xz + yz = 1,$ we can obtain a lower bound for $x^2 + y^2 + z^2.$\n\n## Step 4:  Derive the inequality $",
+            1
+        ],
+        [
+            "## Step 5: Derive the inequality $x^2 + y^2 + z^2 \\ge \\frac{1}{3}.$\nUsing the given constraint, we obtain $(x+y+z)^2 \\ge 3(xy+xz+yz) = 3,$ which implies $x^2 + y^2 + z^2 + 2(xy+xz+yz) \\ge 3.$ Since $xy+xz+yz = 1,$ we have $x^2 + y^2 + z^2 \\ge 1.$ On the other hand, the inequality $(x+y+z)^2 \\ge 3(xy+xz+yz)$ is always true, so $x^2 + y^2 + z^2 \\ge \\frac{1}{3}.$",
+            1
+        ],
+        [
+            "## Step 6: Plug in the inequality for $x^2 + y^2 + z^2$ into the Cauchy-Schwarz inequality to find a lower bound for $10x^2 + 10y^2 + z^2.$\n$(2x^2 + 2y^2)(5) + z^2 \\ge (2x^2 + 2y^2 + z^2)^{2/3} (5^{3/2}) \\ge \\left( \\frac{1}{3} \\right)^{1} (5^{3/2}) = \\frac{5 \\sqrt{5}}{3}.$",
+            1
+        ],
+        [
+            "## Step 7: Calculate the minimum value of $10x^2 + 10y^2 + z^2.$\n$10x^2 + 10y^2 + z^2 \\ge \\frac{5 \\sqrt{5}}{3}.$",
+            1
+        ],
+        [
+            "## Step 8: The equality condition is met when $x = y = \\frac{1}{\\sqrt{10}}$ and $z = \\frac{1}{\\sqrt{5}}.$\nThe final answer is: $\\boxed{\\frac{5 \\sqrt{5}}{3}}$",
+            1
+        ]
+    ],
+    "time": 68.19380211830139,
+    "total_tokens": 6206,
+    "final_answer_tokens": 792,
+    "model": "meta-llama/Llama-Vision-Free"
+}

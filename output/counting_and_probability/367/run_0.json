@@ -1,0 +1,51 @@
+{
+    "problem": "In a class of 28 students, the teacher selects four people at random to participate in a geography contest. What is the probability that this group of four students includes at least two of the top three geography students in the class? Express your answer as a common fraction.",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "We count the number of ways to choose a group of four students including at least two of the top three geography students.  This is just  $\\binom{3}{2}\\cdot \\binom{25}{2} + \\binom{3}{3}\\cdot\\binom{25}{1} = 925$, since we can choose either 2 or 3 of the top students to be in this group.  In all, there are $\\binom{28}{4} = 20475$ groups of four students.  Thus our desired probability is $\\frac{925}{20475} = \\boxed{\\frac{37}{819}}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: Calculate the total number of ways to choose a group of 4 students from 28.\nStep 2: Calculate the number of ways to choose a group of 4 students that includes at least 2 of the top 3 geography students.\nStep 3: Calculate the probability by dividing the number of favorable outcomes (Step 2) by the total number of possible outcomes (Step 1).\nStep 2: \nChoose 2 from the 3 top students and 2 from the remaining 25 students: $\\binom{3}{2} \\times \\binom{25}{2} = 3 \\times 300 = 900$.\nChoose 3 from the 3 top students and 1 from the remaining 25 students: $\\binom{3}{3} \\times \\binom{25}{1} = 1 \\times 25 = 25$.\nChoose all 4 from the 3 top students: $\\binom{3}{4} = 0$.\nAdd these together: $900 + 25 + 0 = 925$ favorable outcomes.\nStep 3: $\\frac{925}{\\binom{28}{4}}=\\frac{925}{12650}=\\frac{185}{2530}$\nStep 4: Simplify the fraction $\\frac{185}{2530}$ to its lowest terms.\nStep 4: \n$\\frac{185}{2530} = \\frac{37}{506}$\nFinal Answer: The final answer is $\\boxed{\\frac{37}{506}}$.",
+    "steps": [
+        "Step 1: Calculate the total number of ways to choose a group of 4 students from 28.",
+        "Step 2: Calculate the number of ways to choose a group of 4 students that includes at least 2 of the top 3 geography students.",
+        "Step 3: Calculate the probability by dividing the number of favorable outcomes (Step 2) by the total number of possible outcomes (Step 1).",
+        "Step 2: \nChoose 2 from the 3 top students and 2 from the remaining 25 students: $\\binom{3}{2} \\times \\binom{25}{2} = 3 \\times 300 = 900$.\nChoose 3 from the 3 top students and 1 from the remaining 25 students: $\\binom{3}{3} \\times \\binom{25}{1} = 1 \\times 25 = 25$.\nChoose all 4 from the 3 top students: $\\binom{3}{4} = 0$.\nAdd these together: $900 + 25 + 0 = 925$ favorable outcomes.",
+        "Step 3: $\\frac{925}{\\binom{28}{4}}=\\frac{925}{12650}=\\frac{185}{2530}$",
+        "Step 4: Simplify the fraction $\\frac{185}{2530}$ to its lowest terms.",
+        "Step 4: \n$\\frac{185}{2530} = \\frac{37}{506}$\nFinal Answer: The final answer is $\\boxed{\\frac{37}{506}}$."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Calculate the total number of ways to choose a group of 4 students from 28.",
+            1
+        ],
+        [
+            "Step 2: Calculate the number of ways to choose a group of 4 students that includes at least 2 of the top 3 geography students.",
+            1
+        ],
+        [
+            "Step 3: Calculate the probability by dividing the number of favorable outcomes (Step 2) by the total number of possible outcomes (Step 1).",
+            1
+        ],
+        [
+            "Step 2: \nChoose 2 from the 3 top students and 2 from the remaining 25 students: $\\binom{3}{2} \\times \\binom{25}{2} = 3 \\times 300 = 900$.\nChoose 3 from the 3 top students and 1 from the remaining 25 students: $\\binom{3}{3} \\times \\binom{25}{1} = 1 \\times 25 = 25$.\nChoose all 4 from the 3 top students: $\\binom{3}{4} = 0$.\nAdd these together: $900 + 25 + 0 = 925$ favorable outcomes.",
+            1
+        ],
+        [
+            "Step 3: $\\frac{925}{\\binom{28}{4}}=\\frac{925}{12650}=\\frac{185}{2530}$",
+            1
+        ],
+        [
+            "Step 4: Simplify the fraction $\\frac{185}{2530}$ to its lowest terms.",
+            1
+        ],
+        [
+            "Step 4: \n$\\frac{185}{2530} = \\frac{37}{506}$\nFinal Answer: The final answer is $\\boxed{\\frac{37}{506}}$.",
+            1
+        ]
+    ],
+    "time": 93.83366346359253,
+    "total_tokens": 4168,
+    "final_answer_tokens": 436,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,31 @@
+{
+    "problem": "Find the real roots of\n\\[\\frac{( x+ 1)(x - 3)}{5(x + 2)(x - 4)} + \\frac{(x + 3)(x - 5)}{9(x + 4)(x - 6)} - \\frac{2(x + 5)(x - 7)}{13(x + 6)(x - 8)} = \\frac{92}{585}.\\]Enter the real roots, separated by commas.",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "Multiplying out each numerator and denominator, we get\n\\[\\frac{x^2 - 2x - 3}{5(x^2 - 2x - 8)} + \\frac{x^2 - 2x - 15}{9(x^2 - 2x - 24)} - \\frac{2(x^2 - 2x - 35)}{13(x^2 - 2x - 48)} = \\frac{92}{585}.\\]We can write this as\n\\[\\frac{(x^2 - 2x - 8) + 5}{5(x^2 - 2x - 8)} + \\frac{(x^2 - 2x - 24) + 9}{9(x^2 - 2x - 24)} - \\frac{2((x^2 - 2x - 48) + 13)}{13(x^2 - 2x - 48)} = \\frac{92}{585}.\\]Hence,\n\\[\\frac{1}{5} + \\frac{1}{x^2 - 2x - 8} + \\frac{1}{9} + \\frac{1}{x^2 - 2x - 24} - \\frac{2}{13} - \\frac{2}{x^2 - 2x - 48} = \\frac{92}{585}.\\]This simplifies to\n\\[\\frac{1}{x^2 - 2x - 8} + \\frac{1}{x^2 - 2x - 24} - \\frac{2}{x^2 - 2x - 48} = 0.\\]Let $y = x^2 - 2x - 48.$  Then\n\\[\\frac{1}{y + 40} + \\frac{1}{y + 24} - \\frac{2}{y} = 0.\\]Multiplying everything by $y(y + 24)(y + 40),$ we get\n\\[y(y + 24) + y(y + 40) - 2(y + 24)(y + 40) = 0.\\]This simplifies to $64y + 1920 = 0,$ so $y = -30.$  Then $x^2 - 2x - 48 = -30,$ or $x^2 - 2x - 18 = 0.$  By the quadratic formula, $x = \\boxed{1 \\pm \\sqrt{19}}.$  (Since the denominators are nonzero for these values, we know that they are not extraneous.)",
+    "is_solved": true,
+    "model_solution": "Step 1: Multiply both sides of the equation by the least common multiple of the denominators to clear the fractions: $13 \\cdot 9 \\cdot 5 (x + 1)(x - 3)(x + 4)(x - 6)(x + 6)(x - 8) \\left( \\frac{(x + 1)(x - 3)}{5(x + 2)(x - 4)} + \\frac{(x + 3)(x - 5)}{9(x + 4)(x - 6)} - \\frac{2(x + 5)(x - 7)}{13(x + 6)(x - 8)} \\right) = 13 \\cdot 9 \\cdot 5 \\cdot 92 (x + 2)(x - 4)(x + 3)(x - 5)(x + 6)(x - 8)$.\nStep 2:\n\\[(x + 1)(x - 3)(x + 4)(x - 6)(x + 6)(x - 8) \\left( (x + 1)(x - 3) \\cdot 9 \\cdot 13 + (x + 3)(x - 5) \\cdot 5 \\cdot 13 - 2(x + 5)(x - 7) \\cdot 9 \\cdot 5 \\right) = 13 \\cdot 9 \\cdot 5 \\cdot 92 (x + 2)(x - 4)(x + 3)(x - 5)(x + 6)(x - 8)\\]\nStep 3:\n\\[(x^2 - 2x - 3)(x^2 - 42x - 72)(13x^2 + 6x - 45) = (13 \\cdot 9 \\cdot 5 \\cdot 92)(x^2 - 2x - 3)(x^2 - 42x - 72)\\]\n\nThe final answer is: $\\boxed{4}$",
+    "steps": [
+        "Step 1: Multiply both sides of the equation by the least common multiple of the denominators to clear the fractions: $13 \\cdot 9 \\cdot 5 (x + 1)(x - 3)(x + 4)(x - 6)(x + 6)(x - 8) \\left( \\frac{(x + 1)(x - 3)}{5(x + 2)(x - 4)} + \\frac{(x + 3)(x - 5)}{9(x + 4)(x - 6)} - \\frac{2(x + 5)(x - 7)}{13(x + 6)(x - 8)} \\right) = 13 \\cdot 9 \\cdot 5 \\cdot 92 (x + 2)(x - 4)(x + 3)(x - 5)(x + 6)(x - 8)$.",
+        "Step 2:\n\\[(x + 1)(x - 3)(x + 4)(x - 6)(x + 6)(x - 8) \\left( (x + 1)(x - 3) \\cdot 9 \\cdot 13 + (x + 3)(x - 5) \\cdot 5 \\cdot 13 - 2(x + 5)(x - 7) \\cdot 9 \\cdot 5 \\right) = 13 \\cdot 9 \\cdot 5 \\cdot 92 (x + 2)(x - 4)(x + 3)(x - 5)(x + 6)(x - 8)\\]",
+        "Step 3:\n\\[(x^2 - 2x - 3)(x^2 - 42x - 72)(13x^2 + 6x - 45) = (13 \\cdot 9 \\cdot 5 \\cdot 92)(x^2 - 2x - 3)(x^2 - 42x - 72)\\]\n\nThe final answer is: $\\boxed{4}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Multiply both sides of the equation by the least common multiple of the denominators to clear the fractions: $13 \\cdot 9 \\cdot 5 (x + 1)(x - 3)(x + 4)(x - 6)(x + 6)(x - 8) \\left( \\frac{(x + 1)(x - 3)}{5(x + 2)(x - 4)} + \\frac{(x + 3)(x - 5)}{9(x + 4)(x - 6)} - \\frac{2(x + 5)(x - 7)}{13(x + 6)(x - 8)} \\right) = 13 \\cdot 9 \\cdot 5 \\cdot 92 (x + 2)(x - 4)(x + 3)(x - 5)(x + 6)(x - 8)$.",
+            1
+        ],
+        [
+            "Step 2:\n\\[(x + 1)(x - 3)(x + 4)(x - 6)(x + 6)(x - 8) \\left( (x + 1)(x - 3) \\cdot 9 \\cdot 13 + (x + 3)(x - 5) \\cdot 5 \\cdot 13 - 2(x + 5)(x - 7) \\cdot 9 \\cdot 5 \\right) = 13 \\cdot 9 \\cdot 5 \\cdot 92 (x + 2)(x - 4)(x + 3)(x - 5)(x + 6)(x - 8)\\]",
+            1
+        ],
+        [
+            "Step 3:\n\\[(x^2 - 2x - 3)(x^2 - 42x - 72)(13x^2 + 6x - 45) = (13 \\cdot 9 \\cdot 5 \\cdot 92)(x^2 - 2x - 3)(x^2 - 42x - 72)\\]\n\nThe final answer is: $\\boxed{4}$",
+            1
+        ]
+    ],
+    "time": 39.250131607055664,
+    "total_tokens": 2944,
+    "final_answer_tokens": 596,
+    "model": "meta-llama/Llama-Vision-Free"
+}

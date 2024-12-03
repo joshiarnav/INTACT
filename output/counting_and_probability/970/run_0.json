@@ -1,0 +1,56 @@
+{
+    "problem": "Let $S$ be the set of points $(a,b)$ in the coordinate plane, where each of $a$ and $b$ may be $-1$, 0, or 1. How many distinct lines pass through at least two members of $S$?",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "There are $\\binom{9}{2}=36$ pairs of points in $S$, and each pair determines a line. However, there are three horizontal, three vertical, and two diagonal lines that pass through three points of $S$, and these lines are each determined by three different pairs of points in $S$. Thus the number of distinct lines is $36 - 2 \\cdot 8= \\boxed{20}$.",
+    "is_solved": true,
+    "model_solution": "Step 1:  List all possible pairs of distinct points from set $S$.\nStep 2:  For each pair of points, find the slope of the line that passes through them. Count the number of distinct slopes obtained.\nStep 2:  List all possible pairs of distinct points from set $S$ and for each pair of points, find the slope of the line that passes through them. Count the number of distinct slopes obtained.\nStep 2:  (1,0), (1,1), (1,-1), (0,1), (0,0), (0,-1), (-1,1), (-1,0), (-1,-1)\nStep 2:  22 pairs of points:\n  1. (1,0) and (1,1)\n  2. (1,0) and (1,-1)\n  3. (1,0) and (0,1)\n  4. (1,0) and (0,0)\n  5. (1,0) and (0,-1)\n  6. (1,0) and (-1,1)\n  7. (1,0) and (-1,0)\n  8. (1,0) and (-1,-1)\n  9. (1,1) and (1,-1)\n  10. (1,1) and (0,1)\n  11. (1,1) and (0,0)\n  12. (1,1) and (0,-1)\n  13. (1,1) and (-1,1)\n  14. (1,1) and (-1,0)\n  15. (1,1) and (-1,-1)\n  16. (1,-1) and (0,1\nStep 3: Determine the number of distinct slopes obtained from all the pairs of points, considering the different cases of slopes (positive, zero, and negative).\nStep 4: \nDistinct slopes:\n- Positive slopes: $\\frac{1}{2}$, $\\frac{1}{4}$, $\\frac{1}{6}$, $\\frac{1}{8}$, $\\frac{1}{10}$, $\\frac{1}{12}$, $\\frac{3}{4}$, $\\frac{3}{6}$, $\\frac{3}{8}$, $\\frac{3}{10}$, $\\frac{3}{12}$, $\\frac{5}{4}$, $\\frac{5}{6}$, $\\frac{5}{8}$, $\\frac{5}{10}$, $\\frac{5}{12}$, $\\frac{7}{4}$, $\\frac{7}{6}$, $\\frac{7}{8}$, $\\frac{7}{10}$, $\\frac{7}{12}$.\n- Zero slope: None\n- Negative slopes: $-\\frac{1}{2}$, $-\\frac{1}{4}$, $-\\frac{1}{6}$, $-\\frac{1}{8}$, $-\\frac{1}{10}$, $-\\frac{1}{12}$, $-\\frac{3}{\nStep 4: Count the total number of distinct slopes, excluding the zero slope, and multiply it by 2, then add 1 to get the final answer.",
+    "steps": [
+        "Step 1:  List all possible pairs of distinct points from set $S$.",
+        "Step 2:  For each pair of points, find the slope of the line that passes through them. Count the number of distinct slopes obtained.",
+        "Step 2:  List all possible pairs of distinct points from set $S$ and for each pair of points, find the slope of the line that passes through them. Count the number of distinct slopes obtained.",
+        "Step 2:  (1,0), (1,1), (1,-1), (0,1), (0,0), (0,-1), (-1,1), (-1,0), (-1,-1)",
+        "Step 2:  22 pairs of points:\n  1. (1,0) and (1,1)\n  2. (1,0) and (1,-1)\n  3. (1,0) and (0,1)\n  4. (1,0) and (0,0)\n  5. (1,0) and (0,-1)\n  6. (1,0) and (-1,1)\n  7. (1,0) and (-1,0)\n  8. (1,0) and (-1,-1)\n  9. (1,1) and (1,-1)\n  10. (1,1) and (0,1)\n  11. (1,1) and (0,0)\n  12. (1,1) and (0,-1)\n  13. (1,1) and (-1,1)\n  14. (1,1) and (-1,0)\n  15. (1,1) and (-1,-1)\n  16. (1,-1) and (0,1",
+        "Step 3: Determine the number of distinct slopes obtained from all the pairs of points, considering the different cases of slopes (positive, zero, and negative).",
+        "Step 4: \nDistinct slopes:\n- Positive slopes: $\\frac{1}{2}$, $\\frac{1}{4}$, $\\frac{1}{6}$, $\\frac{1}{8}$, $\\frac{1}{10}$, $\\frac{1}{12}$, $\\frac{3}{4}$, $\\frac{3}{6}$, $\\frac{3}{8}$, $\\frac{3}{10}$, $\\frac{3}{12}$, $\\frac{5}{4}$, $\\frac{5}{6}$, $\\frac{5}{8}$, $\\frac{5}{10}$, $\\frac{5}{12}$, $\\frac{7}{4}$, $\\frac{7}{6}$, $\\frac{7}{8}$, $\\frac{7}{10}$, $\\frac{7}{12}$.\n- Zero slope: None\n- Negative slopes: $-\\frac{1}{2}$, $-\\frac{1}{4}$, $-\\frac{1}{6}$, $-\\frac{1}{8}$, $-\\frac{1}{10}$, $-\\frac{1}{12}$, $-\\frac{3}{",
+        "Step 4: Count the total number of distinct slopes, excluding the zero slope, and multiply it by 2, then add 1 to get the final answer."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  List all possible pairs of distinct points from set $S$.",
+            1
+        ],
+        [
+            "Step 2:  For each pair of points, find the slope of the line that passes through them. Count the number of distinct slopes obtained.",
+            1
+        ],
+        [
+            "Step 2:  List all possible pairs of distinct points from set $S$ and for each pair of points, find the slope of the line that passes through them. Count the number of distinct slopes obtained.",
+            1
+        ],
+        [
+            "Step 2:  (1,0), (1,1), (1,-1), (0,1), (0,0), (0,-1), (-1,1), (-1,0), (-1,-1)",
+            1
+        ],
+        [
+            "Step 2:  22 pairs of points:\n  1. (1,0) and (1,1)\n  2. (1,0) and (1,-1)\n  3. (1,0) and (0,1)\n  4. (1,0) and (0,0)\n  5. (1,0) and (0,-1)\n  6. (1,0) and (-1,1)\n  7. (1,0) and (-1,0)\n  8. (1,0) and (-1,-1)\n  9. (1,1) and (1,-1)\n  10. (1,1) and (0,1)\n  11. (1,1) and (0,0)\n  12. (1,1) and (0,-1)\n  13. (1,1) and (-1,1)\n  14. (1,1) and (-1,0)\n  15. (1,1) and (-1,-1)\n  16. (1,-1) and (0,1",
+            1
+        ],
+        [
+            "Step 3: Determine the number of distinct slopes obtained from all the pairs of points, considering the different cases of slopes (positive, zero, and negative).",
+            1
+        ],
+        [
+            "Step 4: \nDistinct slopes:\n- Positive slopes: $\\frac{1}{2}$, $\\frac{1}{4}$, $\\frac{1}{6}$, $\\frac{1}{8}$, $\\frac{1}{10}$, $\\frac{1}{12}$, $\\frac{3}{4}$, $\\frac{3}{6}$, $\\frac{3}{8}$, $\\frac{3}{10}$, $\\frac{3}{12}$, $\\frac{5}{4}$, $\\frac{5}{6}$, $\\frac{5}{8}$, $\\frac{5}{10}$, $\\frac{5}{12}$, $\\frac{7}{4}$, $\\frac{7}{6}$, $\\frac{7}{8}$, $\\frac{7}{10}$, $\\frac{7}{12}$.\n- Zero slope: None\n- Negative slopes: $-\\frac{1}{2}$, $-\\frac{1}{4}$, $-\\frac{1}{6}$, $-\\frac{1}{8}$, $-\\frac{1}{10}$, $-\\frac{1}{12}$, $-\\frac{3}{",
+            1
+        ],
+        [
+            "Step 4: Count the total number of distinct slopes, excluding the zero slope, and multiply it by 2, then add 1 to get the final answer.",
+            1
+        ]
+    ],
+    "time": 108.78226351737976,
+    "total_tokens": 6910,
+    "final_answer_tokens": 823,
+    "model": "meta-llama/Llama-Vision-Free"
+}

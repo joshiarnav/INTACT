@@ -1,0 +1,31 @@
+{
+    "problem": "Find the matrix $\\mathbf{M}$ that swaps the rows of a matrix.  In other words,\n\\[\\mathbf{M} \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} = \\begin{pmatrix} c & d \\\\ a & b \\end{pmatrix}.\\]If no such matrix $\\mathbf{M}$ exists, then enter the zero matrix.",
+    "level": "Level 3",
+    "type": "Precalculus",
+    "solution": "Let $\\mathbf{M} = \\begin{pmatrix} p & q \\\\ r & s \\end{pmatrix}.$  Then\n\\[\\mathbf{M} \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} = \\begin{pmatrix} p & q \\\\ r & s \\end{pmatrix} \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} = \\begin{pmatrix} pa + qc & pb + qd \\\\ ra + sc & rb + sd \\end{pmatrix}.\\]We want this to be equal to $\\begin{pmatrix} c & d \\\\ a & b \\end{pmatrix}.$  We can achieve this by taking $p = 0,$ $q = 1,$ $r = 1,$ and $s = 0,$ so $\\mathbf{M} = \\boxed{\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}}.$",
+    "is_solved": true,
+    "model_solution": "Step 1:  We start by expressing the matrix $\\mathbf{M}$ as $\\begin{pmatrix} p & q \\\\ r & s \\end{pmatrix}$.\n\\[\\begin{pmatrix} p & q \\\\ r & s \\end{pmatrix} \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} = \\begin{pmatrix} pa + qc & pb + qd \\\\ ra + sc & rb + sd \\end{pmatrix}.\\]\nStep 2:  Now, we aim to find a matrix $\\mathbf{M}$ that, when multiplied by $\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}$, results in $\\begin{pmatrix} c & d \\\\ a & b \\end{pmatrix}.$\n\\[\\begin{pmatrix} pa + qc & pb + qd \\\\ ra + sc & rb + sd \\end{pmatrix} = \\begin{pmatrix} c & d \\\\ a & b \\end{pmatrix}\\]\nStep 3: \n\\[\\begin{cases} pa + qc = c\\\\ pb + qd = d\\\\ ra + sc = a\\\\ rb + sd = b\\end{cases}\\]\n\n\\[\\begin{cases} pa = c\\\\ qb = d\\\\ ra = a\\\\ sc = b\\end{cases}\\]\n\n\\[\\begin{cases} p = \\frac{c}{a}\\\\ q = \\frac{d}{b}\\\\ r = \\frac{a}{a}\\\\ s = \\frac{b}{b}\\end{cases}\\]\n\nHowever, it is impossible for $a$ and $b$ to be both $0$ and nonzero, so we must have $a=0$ and $b=0$.\n\nFinal Answer: $\\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix}$",
+    "steps": [
+        "Step 1:  We start by expressing the matrix $\\mathbf{M}$ as $\\begin{pmatrix} p & q \\\\ r & s \\end{pmatrix}$.\n\\[\\begin{pmatrix} p & q \\\\ r & s \\end{pmatrix} \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} = \\begin{pmatrix} pa + qc & pb + qd \\\\ ra + sc & rb + sd \\end{pmatrix}.\\]",
+        "Step 2:  Now, we aim to find a matrix $\\mathbf{M}$ that, when multiplied by $\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}$, results in $\\begin{pmatrix} c & d \\\\ a & b \\end{pmatrix}.$\n\\[\\begin{pmatrix} pa + qc & pb + qd \\\\ ra + sc & rb + sd \\end{pmatrix} = \\begin{pmatrix} c & d \\\\ a & b \\end{pmatrix}\\]",
+        "Step 3: \n\\[\\begin{cases} pa + qc = c\\\\ pb + qd = d\\\\ ra + sc = a\\\\ rb + sd = b\\end{cases}\\]\n\n\\[\\begin{cases} pa = c\\\\ qb = d\\\\ ra = a\\\\ sc = b\\end{cases}\\]\n\n\\[\\begin{cases} p = \\frac{c}{a}\\\\ q = \\frac{d}{b}\\\\ r = \\frac{a}{a}\\\\ s = \\frac{b}{b}\\end{cases}\\]\n\nHowever, it is impossible for $a$ and $b$ to be both $0$ and nonzero, so we must have $a=0$ and $b=0$.\n\nFinal Answer: $\\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  We start by expressing the matrix $\\mathbf{M}$ as $\\begin{pmatrix} p & q \\\\ r & s \\end{pmatrix}$.\n\\[\\begin{pmatrix} p & q \\\\ r & s \\end{pmatrix} \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} = \\begin{pmatrix} pa + qc & pb + qd \\\\ ra + sc & rb + sd \\end{pmatrix}.\\]",
+            1
+        ],
+        [
+            "Step 2:  Now, we aim to find a matrix $\\mathbf{M}$ that, when multiplied by $\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}$, results in $\\begin{pmatrix} c & d \\\\ a & b \\end{pmatrix}.$\n\\[\\begin{pmatrix} pa + qc & pb + qd \\\\ ra + sc & rb + sd \\end{pmatrix} = \\begin{pmatrix} c & d \\\\ a & b \\end{pmatrix}\\]",
+            1
+        ],
+        [
+            "Step 3: \n\\[\\begin{cases} pa + qc = c\\\\ pb + qd = d\\\\ ra + sc = a\\\\ rb + sd = b\\end{cases}\\]\n\n\\[\\begin{cases} pa = c\\\\ qb = d\\\\ ra = a\\\\ sc = b\\end{cases}\\]\n\n\\[\\begin{cases} p = \\frac{c}{a}\\\\ q = \\frac{d}{b}\\\\ r = \\frac{a}{a}\\\\ s = \\frac{b}{b}\\end{cases}\\]\n\nHowever, it is impossible for $a$ and $b$ to be both $0$ and nonzero, so we must have $a=0$ and $b=0$.\n\nFinal Answer: $\\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix}$",
+            1
+        ]
+    ],
+    "time": 43.3818519115448,
+    "total_tokens": 2369,
+    "final_answer_tokens": 550,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,41 @@
+{
+    "problem": "What is the area, in square units, of the square with the four vertices at $A\\ (0, 0)$, $B\\ (-5, -1)$, $C\\ (-4, -6)$ and $D\\ (1, -5)$?",
+    "level": "Level 3",
+    "type": "Algebra",
+    "solution": "Plot the four points to find a pair of adjacent vertices.  Line segment $AB$ is one of the sides of the square, so the area of the square is $AB^2$.  By the Pythagorean theorem, $AB^2=(-5-0)^2+(-1-0)^2=\\boxed{26}$ square units.\n\n\n[asy]\nunitsize(2mm);\ndefaultpen(linewidth(.7pt)+fontsize(8pt));\ndotfactor=3;\n\npair A = (0,0), B = (-5,-1), C = (-4,-6), D = (1,-5);\n\npair[] dots = {A,B,C,D};\n\ndot(dots);\n\ndraw((-8,0)--(8,0),Arrows(4));\ndraw((0,-8)--(0,8),Arrows(4));\n\ndraw(A--B--C--D--cycle,linetype(\"4 4\"));\n\nlabel(\"$A$\",A,NE);\nlabel(\"$B$\",B,W);\nlabel(\"$C$\",C,SW);\nlabel(\"$D$\",D,SE);[/asy]",
+    "is_solved": true,
+    "model_solution": "Step 1: Calculate the length of one side of the square.\nTo find the length of one side of the square, we can use the distance formula to find the distance between any two adjacent vertices, such as A and B. The distance between two points (x1, y1) and (x2, y2) is given by the formula d = sqrt((x2 - x1)^2 + (y2 - y1)^2).\nStep 2: \nd = sqrt((-5 - 0)^2 + (-1 - 0)^2)\nd = sqrt((-5)^2 + (-1)^2) \n= sqrt(25 + 1)\n= sqrt(26)\nStep 3:\nArea = side^2 = (\u221a26)^2\n= 26\nArea = side^2 = (\u221a26)^2\n= 26 Final Answer",
+    "steps": [
+        "Step 1: Calculate the length of one side of the square.\nTo find the length of one side of the square, we can use the distance formula to find the distance between any two adjacent vertices, such as A and B. The distance between two points (x1, y1) and (x2, y2) is given by the formula d = sqrt((x2 - x1)^2 + (y2 - y1)^2).",
+        "Step 2: \nd = sqrt((-5 - 0)^2 + (-1 - 0)^2)",
+        "d = sqrt((-5)^2 + (-1)^2) \n= sqrt(25 + 1)\n= sqrt(26)",
+        "Step 3:\nArea = side^2 = (\u221a26)^2\n= 26",
+        "Area = side^2 = (\u221a26)^2\n= 26 Final Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Calculate the length of one side of the square.\nTo find the length of one side of the square, we can use the distance formula to find the distance between any two adjacent vertices, such as A and B. The distance between two points (x1, y1) and (x2, y2) is given by the formula d = sqrt((x2 - x1)^2 + (y2 - y1)^2).",
+            1
+        ],
+        [
+            "Step 2: \nd = sqrt((-5 - 0)^2 + (-1 - 0)^2)",
+            1
+        ],
+        [
+            "d = sqrt((-5)^2 + (-1)^2) \n= sqrt(25 + 1)\n= sqrt(26)",
+            1
+        ],
+        [
+            "Step 3:\nArea = side^2 = (\u221a26)^2\n= 26",
+            1
+        ],
+        [
+            "Area = side^2 = (\u221a26)^2\n= 26 Final Answer",
+            1
+        ]
+    ],
+    "time": 65.76323103904724,
+    "total_tokens": 2598,
+    "final_answer_tokens": 296,
+    "model": "meta-llama/Llama-Vision-Free"
+}

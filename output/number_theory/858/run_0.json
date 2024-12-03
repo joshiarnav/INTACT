@@ -1,0 +1,66 @@
+{
+    "problem": "Wendy noticed when she stacked her quarters in piles of 5 she had 3 left over and when she stacked them in piles of 7 she had 5 left over. If she has less than ten dollars worth of quarters, how many quarters does she have?",
+    "level": "Level 2",
+    "type": "Number Theory",
+    "solution": "Let $a$ be the number of quarters. We know that \\begin{align*}\na\\equiv 3\\pmod 5\\\\\na\\equiv 5\\pmod 7\n\\end{align*} Congruence $(1)$ means that there exists a non-negative integer $n$ such that $a=3+5n$. Substituting this into $(b)$ gives \\[3+5n\\equiv 5\\pmod 7\\implies n\\equiv 6\\pmod 7\\] So $n$ has a lower bound of $6$. Then $n\\ge 6\\implies a=3+5n\\ge 33$. $33$ happens to satisfy both congruences, so it is the smallest common solution. Since she has less than $10$ dollars worth of quarters, she has less than $40$ quarters. If $b$ is a common solution, subtracting $33$ from both sides of both congruences gives \\begin{align*}\nb-33\\equiv -30\\equiv 0\\pmod 5\\nonumber\\\\\nb-33\\equiv -28\\equiv 0\\pmod 7\\nonumber\n\\end{align*} Since $\\gcd(5,7)=1$, we have $b-33\\equiv 0\\pmod{5\\cdot 7}$, that is, $b\\equiv 33\\pmod {35}$. The first couple of positive solutions of this are $33,68$. Thus, there exists only one positive solution less than $40$, which we found earlier to be $\\boxed{33}$.",
+    "is_solved": false,
+    "model_solution": "Let $n$ be the number of quarters. \n\nStep 1: Find two equations that represent the situation:\n$n \\equiv 3 \\pmod{5}$\n$n \\equiv 5 \\pmod{7}$\nStep 2: Rewrite the first congruence in terms of $n=5k+3$, where $k$ is an integer.\nStep 3: Rewrite the second congruence in terms of $n=7j+5$, where $j$ is an integer.\nStep 4: Since $n=5k+3$, we can substitute this into the second equation to get $5k+3 \\equiv 5 \\pmod{7}$\nStep 5: \n$5k+3 \\equiv 5 \\pmod{7}$\n$5k \\equiv 2 \\pmod{7}$\n$3k \\equiv 4 \\pmod{7}$\n$9k \\equiv 12 \\pmod{7}$\n$k \\equiv 5 \\pmod{7}$\n$k = 7m + 5$, where $m$ is an integer\nSubstitute $k = 7m + 5$ into $n = 5k + 3$ to get $n = 5(7m + 5) + 3$.\n$n = 5(7m + 5) + 3$\n$n = 35m + 25 + 3$\n$n = 35m + 28$\n$n = 7(5m + 4)$\n$n \\equiv 0 \\pmod{7}$\nStep 6: \n$n \\equiv 0 \\pmod{7}$\nSince $n \\equiv 0 \\pmod{7}$, we can write $n=7t$, where $t$ is an integer.\n$n = 7t$\nSince $n \\equiv 3 \\pmod{5}$, we can substitute $n=7t$ into the first congruence to get $7t \\equiv 3 \\pmod{5}$\n$2t \\equiv 3 \\pmod{5}$\n$4t \\equiv 1 \\pmod{5}$\n$t \\equiv 4 \\pmod{5}$\n$t = 5v + 4$, where $v$ is an integer\nSubstitute $t = 5v + 4$ into $n = 7t$ to get $n = 7(5v + 4)$.\n$n = 7(5v + 4)$\n$n = 35v + 28$\n$n = 35v + 28$\n$n \\equiv 28 \\pmod{35}$\n$n \\equiv 28 \\pmod{35}$",
+    "steps": [
+        "Let $n$ be the number of quarters. \n\nStep 1: Find two equations that represent the situation:\n$n \\equiv 3 \\pmod{5}$\n$n \\equiv 5 \\pmod{7}$",
+        "Step 2: Rewrite the first congruence in terms of $n=5k+3$, where $k$ is an integer.",
+        "Step 3: Rewrite the second congruence in terms of $n=7j+5$, where $j$ is an integer.",
+        "Step 4: Since $n=5k+3$, we can substitute this into the second equation to get $5k+3 \\equiv 5 \\pmod{7}$",
+        "Step 5: \n$5k+3 \\equiv 5 \\pmod{7}$\n$5k \\equiv 2 \\pmod{7}$\n$3k \\equiv 4 \\pmod{7}$\n$9k \\equiv 12 \\pmod{7}$\n$k \\equiv 5 \\pmod{7}$\n$k = 7m + 5$, where $m$ is an integer",
+        "Substitute $k = 7m + 5$ into $n = 5k + 3$ to get $n = 5(7m + 5) + 3$.",
+        "$n = 5(7m + 5) + 3$\n$n = 35m + 25 + 3$\n$n = 35m + 28$\n$n = 7(5m + 4)$",
+        "$n \\equiv 0 \\pmod{7}$",
+        "Step 6: \n$n \\equiv 0 \\pmod{7}$\nSince $n \\equiv 0 \\pmod{7}$, we can write $n=7t$, where $t$ is an integer.\n$n = 7t$\nSince $n \\equiv 3 \\pmod{5}$, we can substitute $n=7t$ into the first congruence to get $7t \\equiv 3 \\pmod{5}$\n$2t \\equiv 3 \\pmod{5}$\n$4t \\equiv 1 \\pmod{5}$\n$t \\equiv 4 \\pmod{5}$\n$t = 5v + 4$, where $v$ is an integer\nSubstitute $t = 5v + 4$ into $n = 7t$ to get $n = 7(5v + 4)$.\n$n = 7(5v + 4)$\n$n = 35v + 28$",
+        "$n = 35v + 28$\n$n \\equiv 28 \\pmod{35}$\n$n \\equiv 28 \\pmod{35}$"
+    ],
+    "full_steps": [
+        [
+            "Let $n$ be the number of quarters. \n\nStep 1: Find two equations that represent the situation:\n$n \\equiv 3 \\pmod{5}$\n$n \\equiv 5 \\pmod{7}$",
+            1
+        ],
+        [
+            "Step 2: Rewrite the first congruence in terms of $n=5k+3$, where $k$ is an integer.",
+            1
+        ],
+        [
+            "Step 3: Rewrite the second congruence in terms of $n=7j+5$, where $j$ is an integer.",
+            1
+        ],
+        [
+            "Step 4: Since $n=5k+3$, we can substitute this into the second equation to get $5k+3 \\equiv 5 \\pmod{7}$",
+            1
+        ],
+        [
+            "Step 5: \n$5k+3 \\equiv 5 \\pmod{7}$\n$5k \\equiv 2 \\pmod{7}$\n$3k \\equiv 4 \\pmod{7}$\n$9k \\equiv 12 \\pmod{7}$\n$k \\equiv 5 \\pmod{7}$\n$k = 7m + 5$, where $m$ is an integer",
+            1
+        ],
+        [
+            "Substitute $k = 7m + 5$ into $n = 5k + 3$ to get $n = 5(7m + 5) + 3$.",
+            1
+        ],
+        [
+            "$n = 5(7m + 5) + 3$\n$n = 35m + 25 + 3$\n$n = 35m + 28$\n$n = 7(5m + 4)$",
+            1
+        ],
+        [
+            "$n \\equiv 0 \\pmod{7}$",
+            1
+        ],
+        [
+            "Step 6: \n$n \\equiv 0 \\pmod{7}$\nSince $n \\equiv 0 \\pmod{7}$, we can write $n=7t$, where $t$ is an integer.\n$n = 7t$\nSince $n \\equiv 3 \\pmod{5}$, we can substitute $n=7t$ into the first congruence to get $7t \\equiv 3 \\pmod{5}$\n$2t \\equiv 3 \\pmod{5}$\n$4t \\equiv 1 \\pmod{5}$\n$t \\equiv 4 \\pmod{5}$\n$t = 5v + 4$, where $v$ is an integer\nSubstitute $t = 5v + 4$ into $n = 7t$ to get $n = 7(5v + 4)$.\n$n = 7(5v + 4)$\n$n = 35v + 28$",
+            1
+        ],
+        [
+            "$n = 35v + 28$\n$n \\equiv 28 \\pmod{35}$\n$n \\equiv 28 \\pmod{35}$",
+            1
+        ]
+    ],
+    "time": 133.89485812187195,
+    "total_tokens": 7703,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

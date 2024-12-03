@@ -1,0 +1,66 @@
+{
+    "problem": "In how many ways can $7$ people sit around a round table if no two of the $3$ people Pierre, Rosa, and Thomas can sit next to each other? (Seating arrangements which are rotations of each other are treated as the same.)",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "After Pierre sits, we can place Rosa either two seats from Pierre (that is, with one seat between them) or three seats from Pierre. We tackle these two cases separately:\n\nCase 1: Rosa is two seats from Pierre. There are $2$ such seats. For either of these, there are then four empty seats in a row, and one empty seat between Rosa and Pierre. Thomas can sit in either of the middle two of the four empty seats in a row. So, there are $2\\cdot 2 = 4$ ways to seat Rosa and Thomas in this case. There are then $4$ seats left, which the others can take in $4! = 24$ ways. So, there are $4\\cdot 24 = 96$ seatings in this case.\n\nCase 2: Rosa is three seats from Pierre (that is, there are $2$ seats between them). There are $2$ such seats. Thomas can't sit in either of the $2$ seats directly between them, but after Rosa sits, there are $3$ empty seats in a row still, and Thomas can only sit in the middle seat of these three. Once again, there are $4$ empty seats remaining, and the $4$ remaining people can sit in them in $4! = 24$ ways. So, we have $2\\cdot 24 = 48$ seatings in this case.\n\nPutting our two cases together gives a total of $96+48 = \\boxed{144}$ seatings.",
+    "is_solved": false,
+    "model_solution": "Step 1:  First, let's consider the total number of ways 7 people can sit around a round table without any restrictions. This can be calculated using the formula for circular permutations, which is given by $(n-1)!$, where $n$ is the number of people. In this case, we have 7 people, so the total number of ways to arrange them around the round table is $(7-1)!=6!$.\nStep 2:  Let's consider the 3 people who cannot sit next to each other - Pierre, Rosa, and Thomas. We can treat them as a single block while calculating the total number of arrangements. There are now 5 entities (the block of 3 and the 4 other people) that can be arranged around the table in $(5-1)!=4!$ ways.\nStep 3: \n- The block of three can be arranged among themselves in $3!$ ways.\n- For the $4!$ arrangements of the block and the other people, we can insert the block of three into any of the $5$ chairs (since there are $5$ people) in $4$ different ways (since the block is treated as one entity).\nStep 4: $4!\\times3!\\times4$\nStep 5: Calculate $4!\\times3!\\times4$ to find the final number of ways.\n$4!\\times3!\\times4 = 24\\times 6\\times 4 = 576$\nStep 6: \n$576$\nCalculate $4!\\times3!\\times4$ to find the final number of ways.\n$4!\\times3!\\times4 = 24\\times 6\\times 4 = 576$\n$576$\nFinal Answer: The final answer is 576.",
+    "steps": [
+        "Step 1:  First, let's consider the total number of ways 7 people can sit around a round table without any restrictions. This can be calculated using the formula for circular permutations, which is given by $(n-1)!$, where $n$ is the number of people. In this case, we have 7 people, so the total number of ways to arrange them around the round table is $(7-1)!=6!$.",
+        "Step 2:  Let's consider the 3 people who cannot sit next to each other - Pierre, Rosa, and Thomas. We can treat them as a single block while calculating the total number of arrangements. There are now 5 entities (the block of 3 and the 4 other people) that can be arranged around the table in $(5-1)!=4!$ ways.",
+        "Step 3: \n- The block of three can be arranged among themselves in $3!$ ways.\n- For the $4!$ arrangements of the block and the other people, we can insert the block of three into any of the $5$ chairs (since there are $5$ people) in $4$ different ways (since the block is treated as one entity).",
+        "Step 4: $4!\\times3!\\times4$",
+        "Step 5: Calculate $4!\\times3!\\times4$ to find the final number of ways.",
+        "$4!\\times3!\\times4 = 24\\times 6\\times 4 = 576$",
+        "Step 6: \n$576$",
+        "Calculate $4!\\times3!\\times4$ to find the final number of ways.\n$4!\\times3!\\times4 = 24\\times 6\\times 4 = 576$",
+        "$576$",
+        "Final Answer: The final answer is 576."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  First, let's consider the total number of ways 7 people can sit around a round table without any restrictions. This can be calculated using the formula for circular permutations, which is given by $(n-1)!$, where $n$ is the number of people. In this case, we have 7 people, so the total number of ways to arrange them around the round table is $(7-1)!=6!$.",
+            1
+        ],
+        [
+            "Step 2:  Let's consider the 3 people who cannot sit next to each other - Pierre, Rosa, and Thomas. We can treat them as a single block while calculating the total number of arrangements. There are now 5 entities (the block of 3 and the 4 other people) that can be arranged around the table in $(5-1)!=4!$ ways.",
+            1
+        ],
+        [
+            "Step 3: \n- The block of three can be arranged among themselves in $3!$ ways.\n- For the $4!$ arrangements of the block and the other people, we can insert the block of three into any of the $5$ chairs (since there are $5$ people) in $4$ different ways (since the block is treated as one entity).",
+            1
+        ],
+        [
+            "Step 4: $4!\\times3!\\times4$",
+            1
+        ],
+        [
+            "Step 5: Calculate $4!\\times3!\\times4$ to find the final number of ways.",
+            1
+        ],
+        [
+            "$4!\\times3!\\times4 = 24\\times 6\\times 4 = 576$",
+            1
+        ],
+        [
+            "Step 6: \n$576$",
+            1
+        ],
+        [
+            "Calculate $4!\\times3!\\times4$ to find the final number of ways.\n$4!\\times3!\\times4 = 24\\times 6\\times 4 = 576$",
+            1
+        ],
+        [
+            "$576$",
+            1
+        ],
+        [
+            "Final Answer: The final answer is 576.",
+            1
+        ]
+    ],
+    "time": 129.43329167366028,
+    "total_tokens": 7881,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

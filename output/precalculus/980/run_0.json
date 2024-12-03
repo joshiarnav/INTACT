@@ -1,0 +1,51 @@
+{
+    "problem": "Let $\\mathbf{a}$ and $\\mathbf{b}$ be orthogonal vectors.  If $\\operatorname{proj}_{\\mathbf{a}} \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix} = \\begin{pmatrix} 6 \\\\ 4 \\end{pmatrix},$ then find $\\operatorname{proj}_{\\mathbf{b}} \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix}.$",
+    "level": "Level 5",
+    "type": "Precalculus",
+    "solution": "Since $\\begin{pmatrix} 6 \\\\ 4 \\end{pmatrix}$ is the projection of $\\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix}$ onto $\\mathbf{a},$\n\\[\\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix} - \\begin{pmatrix} 6 \\\\ 4 \\end{pmatrix} = \\begin{pmatrix} -6 \\\\ 9 \\end{pmatrix}\\]is orthogonal to $\\mathbf{a}.$  But since $\\mathbf{a}$ and $\\mathbf{b}$ are orthogonal, $\\begin{pmatrix} -6 \\\\ 9 \\end{pmatrix}$ is a scalar multiple of $\\mathbf{b}.$\n\n[asy]\nusepackage(\"amsmath\");\n\nunitsize(0.4 cm);\n\npair A, B, O, P, Q, V;\n\nA = (3,2);\nB = (2,-3);\nO = (0,0);\nV = (0,13);\nP = (V + reflect(O,A)*(V))/2;\n\ndraw(O--V,Arrow(6));\ndraw(O--P,Arrow(6));\ndraw(P--V,Arrow(6));\ndraw((-1,0)--(7,0));\ndraw((0,-1)--(0,15));\n\nlabel(\"$\\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix}$\", V, W);\nlabel(\"$\\begin{pmatrix} 6 \\\\ 4 \\end{pmatrix}$\", P, E);\n[/asy]\n\nFurthermore,\n\\[\\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix} - \\begin{pmatrix} -6 \\\\ 9 \\end{pmatrix} = \\begin{pmatrix} 6 \\\\ 4 \\end{pmatrix}\\]is a scalar multiple of $\\mathbf{a},$ and therefore orthogonal to $\\mathbf{b}.$  Hence, $\\operatorname{proj}_{\\mathbf{b}} \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix} = \\boxed{\\begin{pmatrix} -6 \\\\ 9 \\end{pmatrix}}.$",
+    "is_solved": true,
+    "model_solution": "Step 1: Since $\\mathbf{a}$ and $\\mathbf{b}$ are orthogonal vectors, we know that $\\mathbf{a} \\cdot \\mathbf{b} = 0.$\nStep 2: We can use the formula $\\operatorname{proj}_{\\mathbf{a}} \\mathbf{v} = \\frac{\\mathbf{a} \\cdot \\mathbf{v}}{\\mathbf{a} \\cdot \\mathbf{a}} \\mathbf{a}$ to rewrite the given information, and then use the fact that the vector $\\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix}$ can be expressed as the sum of its projections onto $\\mathbf{a}$ and $\\mathbf{b}.$\nStep 3: \n$\\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix} = \\operatorname{proj}_{\\mathbf{a}} \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix} + \\operatorname{proj}_{\\mathbf{b}} \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix} = \\begin{pmatrix} 6 \\\\ 4 \\end{pmatrix} + \\operatorname{proj}_{\\mathbf{b}} \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix}.$\nWe can find $\\operatorname{proj}_{\\mathbf{b}} \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix}$ by subtracting $\\operatorname{proj}_{\\mathbf{a}} \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix}$ from $\\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix}.$\nStep 4:\n$\\operatorname{proj}_{\\mathbf{b}} \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix} = \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix} - \\begin{pmatrix} 6 \\\\ 4 \\end{pmatrix} = \\boxed{\\begin{pmatrix} -6 \\\\ 9 \\end{pmatrix}}.$\n$\\operatorname{proj}_{\\mathbf{b}} \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix} = \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix} - \\begin{pmatrix} 6 \\\\ 4 \\end{pmatrix} = \\begin{pmatrix} -6 \\\\ 9 \\end{pmatrix}$\n$\\operatorname{proj}_{\\mathbf{b}} \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix} = \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix} - \\begin{pmatrix} 6 \\\\ 4 \\end{pmatrix} = \\begin{pmatrix} -6 \\\\ 9 \\end{pmatrix}$",
+    "steps": [
+        "Step 1: Since $\\mathbf{a}$ and $\\mathbf{b}$ are orthogonal vectors, we know that $\\mathbf{a} \\cdot \\mathbf{b} = 0.$",
+        "Step 2: We can use the formula $\\operatorname{proj}_{\\mathbf{a}} \\mathbf{v} = \\frac{\\mathbf{a} \\cdot \\mathbf{v}}{\\mathbf{a} \\cdot \\mathbf{a}} \\mathbf{a}$ to rewrite the given information, and then use the fact that the vector $\\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix}$ can be expressed as the sum of its projections onto $\\mathbf{a}$ and $\\mathbf{b}.$",
+        "Step 3: \n$\\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix} = \\operatorname{proj}_{\\mathbf{a}} \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix} + \\operatorname{proj}_{\\mathbf{b}} \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix} = \\begin{pmatrix} 6 \\\\ 4 \\end{pmatrix} + \\operatorname{proj}_{\\mathbf{b}} \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix}.$",
+        "We can find $\\operatorname{proj}_{\\mathbf{b}} \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix}$ by subtracting $\\operatorname{proj}_{\\mathbf{a}} \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix}$ from $\\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix}.$",
+        "Step 4:\n$\\operatorname{proj}_{\\mathbf{b}} \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix} = \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix} - \\begin{pmatrix} 6 \\\\ 4 \\end{pmatrix} = \\boxed{\\begin{pmatrix} -6 \\\\ 9 \\end{pmatrix}}.$",
+        "$\\operatorname{proj}_{\\mathbf{b}} \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix} = \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix} - \\begin{pmatrix} 6 \\\\ 4 \\end{pmatrix} = \\begin{pmatrix} -6 \\\\ 9 \\end{pmatrix}$",
+        "$\\operatorname{proj}_{\\mathbf{b}} \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix} = \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix} - \\begin{pmatrix} 6 \\\\ 4 \\end{pmatrix} = \\begin{pmatrix} -6 \\\\ 9 \\end{pmatrix}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Since $\\mathbf{a}$ and $\\mathbf{b}$ are orthogonal vectors, we know that $\\mathbf{a} \\cdot \\mathbf{b} = 0.$",
+            1
+        ],
+        [
+            "Step 2: We can use the formula $\\operatorname{proj}_{\\mathbf{a}} \\mathbf{v} = \\frac{\\mathbf{a} \\cdot \\mathbf{v}}{\\mathbf{a} \\cdot \\mathbf{a}} \\mathbf{a}$ to rewrite the given information, and then use the fact that the vector $\\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix}$ can be expressed as the sum of its projections onto $\\mathbf{a}$ and $\\mathbf{b}.$",
+            1
+        ],
+        [
+            "Step 3: \n$\\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix} = \\operatorname{proj}_{\\mathbf{a}} \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix} + \\operatorname{proj}_{\\mathbf{b}} \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix} = \\begin{pmatrix} 6 \\\\ 4 \\end{pmatrix} + \\operatorname{proj}_{\\mathbf{b}} \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix}.$",
+            1
+        ],
+        [
+            "We can find $\\operatorname{proj}_{\\mathbf{b}} \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix}$ by subtracting $\\operatorname{proj}_{\\mathbf{a}} \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix}$ from $\\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix}.$",
+            1
+        ],
+        [
+            "Step 4:\n$\\operatorname{proj}_{\\mathbf{b}} \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix} = \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix} - \\begin{pmatrix} 6 \\\\ 4 \\end{pmatrix} = \\boxed{\\begin{pmatrix} -6 \\\\ 9 \\end{pmatrix}}.$",
+            1
+        ],
+        [
+            "$\\operatorname{proj}_{\\mathbf{b}} \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix} = \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix} - \\begin{pmatrix} 6 \\\\ 4 \\end{pmatrix} = \\begin{pmatrix} -6 \\\\ 9 \\end{pmatrix}$",
+            1
+        ],
+        [
+            "$\\operatorname{proj}_{\\mathbf{b}} \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix} = \\begin{pmatrix} 0 \\\\ 13 \\end{pmatrix} - \\begin{pmatrix} 6 \\\\ 4 \\end{pmatrix} = \\begin{pmatrix} -6 \\\\ 9 \\end{pmatrix}$",
+            1
+        ]
+    ],
+    "time": 89.98570799827576,
+    "total_tokens": 7396,
+    "final_answer_tokens": 797,
+    "model": "meta-llama/Llama-Vision-Free"
+}

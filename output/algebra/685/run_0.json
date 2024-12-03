@@ -1,0 +1,66 @@
+{
+    "problem": "The graph of the parabola defined by the equation $y=(x-2)^2+3$ is rotated 180 degrees about its vertex, then shifted 3 units to the left, then shifted 2 units down. The resulting parabola has zeros at $x=a$ and $x=b$. What is $a+b$?",
+    "level": "Level 5",
+    "type": "Algebra",
+    "solution": "The graph of the original parabola ($A$) and its final image ($A'$) after rotation and translation is shown below:\n\n[asy]\nLabel f;\n\nf.p=fontsize(4);\n\nxaxis(-3,4,Ticks(f, 2.0));\n\nyaxis(-3,7,Ticks(f, 2.0));\nreal f(real x)\n\n{\n\nreturn (x-2)^2+3;\n\n}\n\ndraw(\"$A$\", graph(f,0,4), linewidth(1));\nreal g(real x)\n\n{\n\nreturn -(x+1)^2+1;\n\n}\n\ndraw(\"$A'$\", graph(g,-3,1), linewidth(1));\n[/asy]\n\nRotating the original parabola 180 degrees changes its equation to $y=-(x-2)^2+3$. Shifting this last parabola to the left changes its equation to $y=-(x+1)^2+3$. Shifting it down changes its equation to $y=-(x+1)^2+1$. So the equation of $A'$ is $y=-(x+1)^2+1$. To find the zeros of this parabola, we set $y=0$ to get $0=-(x+1)^2+1$. Expanding the right hand side gives $0=-x^2-2x$. Dividing through by $-1$ and factoring out an $x$ from the right hand side, we get $0=x(x+2)$, so either $x=0$ or $x+2=0$. Thus, $a=0$ and $b=-2$, so $a+b=\\boxed{-2}$.",
+    "is_solved": false,
+    "model_solution": "Step 1: The original parabola is $y=(x-2)^2+3$, which is shifted 3 units to the left to become $y=(x+1)^2+3$.\nStep 2: The parabola is shifted 2 units down to become $y=(x+1)^2+1$.\nSince the parabola is rotated 180 degrees about its vertex, its equation must be negated: $y=-(x+1)^2-1$.\nStep 3: To find the zeros of the parabola, we need to set the equation equal to $0$ and solve for $x$: $0=-(x+1)^2-1$.\nStep 4: Distribute the negative sign: $0=-(x^2+2x+1)-1$, then combine like terms to get $0=-x^2-2x-2$.\nStep 5: Factor out the negative sign and rewrite the equation as $0=-(x^2+2x+2)$, then distribute the negative sign to get $0=-x^2-2x-2$.\nStep 6: Factor the quadratic equation: $0=-(x^2+2x+2)$ becomes $0=-(x+1)^2-1$, then $0=(x+1)^2+1$, then $(x+1)^2=-1$.\nStep 7: Since $(x+1)^2=-1$, taking the square root of both sides yields $x+1=\\pm i$.\nStep 8: Since $x+1=\\pm i$, subtract 1 from both sides to get $x=1\\pm i$.\nStep 9: The expression $1\\pm i$ is not a real number, so this quadratic equation has no real solutions, or zeros, for the parabola.",
+    "steps": [
+        "Step 1: The original parabola is $y=(x-2)^2+3$, which is shifted 3 units to the left to become $y=(x+1)^2+3$.",
+        "Step 2: The parabola is shifted 2 units down to become $y=(x+1)^2+1$.",
+        "Since the parabola is rotated 180 degrees about its vertex, its equation must be negated: $y=-(x+1)^2-1$.",
+        "Step 3: To find the zeros of the parabola, we need to set the equation equal to $0$ and solve for $x$: $0=-(x+1)^2-1$.",
+        "Step 4: Distribute the negative sign: $0=-(x^2+2x+1)-1$, then combine like terms to get $0=-x^2-2x-2$.",
+        "Step 5: Factor out the negative sign and rewrite the equation as $0=-(x^2+2x+2)$, then distribute the negative sign to get $0=-x^2-2x-2$.",
+        "Step 6: Factor the quadratic equation: $0=-(x^2+2x+2)$ becomes $0=-(x+1)^2-1$, then $0=(x+1)^2+1$, then $(x+1)^2=-1$.",
+        "Step 7: Since $(x+1)^2=-1$, taking the square root of both sides yields $x+1=\\pm i$.",
+        "Step 8: Since $x+1=\\pm i$, subtract 1 from both sides to get $x=1\\pm i$.",
+        "Step 9: The expression $1\\pm i$ is not a real number, so this quadratic equation has no real solutions, or zeros, for the parabola."
+    ],
+    "full_steps": [
+        [
+            "Step 1: The original parabola is $y=(x-2)^2+3$, which is shifted 3 units to the left to become $y=(x+1)^2+3$.",
+            1
+        ],
+        [
+            "Step 2: The parabola is shifted 2 units down to become $y=(x+1)^2+1$.",
+            1
+        ],
+        [
+            "Since the parabola is rotated 180 degrees about its vertex, its equation must be negated: $y=-(x+1)^2-1$.",
+            1
+        ],
+        [
+            "Step 3: To find the zeros of the parabola, we need to set the equation equal to $0$ and solve for $x$: $0=-(x+1)^2-1$.",
+            1
+        ],
+        [
+            "Step 4: Distribute the negative sign: $0=-(x^2+2x+1)-1$, then combine like terms to get $0=-x^2-2x-2$.",
+            1
+        ],
+        [
+            "Step 5: Factor out the negative sign and rewrite the equation as $0=-(x^2+2x+2)$, then distribute the negative sign to get $0=-x^2-2x-2$.",
+            1
+        ],
+        [
+            "Step 6: Factor the quadratic equation: $0=-(x^2+2x+2)$ becomes $0=-(x+1)^2-1$, then $0=(x+1)^2+1$, then $(x+1)^2=-1$.",
+            1
+        ],
+        [
+            "Step 7: Since $(x+1)^2=-1$, taking the square root of both sides yields $x+1=\\pm i$.",
+            1
+        ],
+        [
+            "Step 8: Since $x+1=\\pm i$, subtract 1 from both sides to get $x=1\\pm i$.",
+            1
+        ],
+        [
+            "Step 9: The expression $1\\pm i$ is not a real number, so this quadratic equation has no real solutions, or zeros, for the parabola.",
+            1
+        ]
+    ],
+    "time": 136.7935447692871,
+    "total_tokens": 7089,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

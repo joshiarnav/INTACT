@@ -1,0 +1,66 @@
+{
+    "problem": "Three mutually tangent spheres of radius 1 rest on a horizontal plane.  A sphere of radius 2 rests on them.  What is the distance from the plane to the top of the larger sphere?",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "Let $A,B,C$ and $E$ be  the centers of the three small spheres and the large sphere, respectively. Then $\\triangle ABC$ is equilateral with side length 2. If $D$ is the intersection of the medians of $\\triangle ABC$, then $E$ is directly above $D$. Because $AE=3$ and $AD=2\\sqrt{3}/3$, it follows that \\[\nDE= \\sqrt{3^{2}-\\left(\\frac{2\\sqrt{3}}{3}\\right)^{2}}= \\frac{\\sqrt{69}}{3}.\n\\]Because $D$ is 1 unit above the plane and the top of the larger sphere is 2 units above $E$, the distance from the plane to the top of the larger sphere is \\[\n\\boxed{3+ \\frac{\\sqrt{69}}{3}}.\n\\][asy]\npair A,B,C,D;\nA=(10,0);\nB=(0,0);\nC=(5,8.7);\nD=(5,2.9);\ndraw(Circle(A,5),linewidth(0.7));\ndraw(Circle(B,5),linewidth(0.7));\ndraw(Circle(C,5),linewidth(0.7));\ndraw(A--B--C--cycle,linewidth(0.7));\ndraw(C--D--B,linewidth(0.7));\ndraw(D--A,linewidth(0.7));\nlabel(\"1\",(2.5,0),S);\nlabel(\"1\",(7.5,0),S);\nlabel(\"$A$\",(10,0),SE);\nlabel(\"$B$\",(0,0),SW);\nlabel(\"$C$\",(5,8.7),N);\nlabel(\"$D$\",(3,4),S);\n[/asy]",
+    "is_solved": false,
+    "model_solution": "Draw the right triangle formed by the center of the large sphere, the point where the large sphere touches the small spheres, and the center of the small spheres.\nDetermine the height of the larger sphere above the horizontal plane as the sum of the radius of the larger sphere and the height of the center of the equilateral triangle formed by the centers of the three smaller spheres above the horizontal plane.\nDrop a perpendicular from the center of the larger sphere to the center of the equilateral triangle formed by the centers of the three smaller spheres.\nSince the triangle formed by the centers of the smaller spheres is an equilateral triangle, the perpendicular from the center of the larger sphere to the plane bisects the triangle.\nDrop the perpendicular from the center of the larger sphere to the plane.\nLet the distance from the center of the equilateral triangle to the center of the larger sphere be x.  Then the right triangle formed by the center of the large sphere, the center of the equilateral triangle, and the point where the large sphere touches the small spheres has legs of length x and 1, and hypotenuse of length 1.\nUsing the Pythagorean Theorem, find the length of the hypotenuse of the right triangle formed by the center of the large sphere, the center of the equilateral triangle, and the point where the large sphere touches the small spheres.\nFind the length of the hypotenuse of the right triangle formed by the center of the large sphere, the center of the equilateral triangle, and the point where the large sphere touches the small spheres, which is $\\sqrt{x^2+1^2}$, and set it equal to 1.\nSolve the equation from the previous step for x and substitute the value of x into the equation for the distance from the center of the equilateral triangle to the center of the larger sphere, which is $\\frac{2\\sqrt{3}}{3}+\\sqrt{x^2+1}$, and simplify.\nDrop a perpendicular from the center of the large sphere to the point where it touches the small spheres.",
+    "steps": [
+        "Draw the right triangle formed by the center of the large sphere, the point where the large sphere touches the small spheres, and the center of the small spheres.",
+        "Determine the height of the larger sphere above the horizontal plane as the sum of the radius of the larger sphere and the height of the center of the equilateral triangle formed by the centers of the three smaller spheres above the horizontal plane.",
+        "Drop a perpendicular from the center of the larger sphere to the center of the equilateral triangle formed by the centers of the three smaller spheres.",
+        "Since the triangle formed by the centers of the smaller spheres is an equilateral triangle, the perpendicular from the center of the larger sphere to the plane bisects the triangle.",
+        "Drop the perpendicular from the center of the larger sphere to the plane.",
+        "Let the distance from the center of the equilateral triangle to the center of the larger sphere be x.  Then the right triangle formed by the center of the large sphere, the center of the equilateral triangle, and the point where the large sphere touches the small spheres has legs of length x and 1, and hypotenuse of length 1.",
+        "Using the Pythagorean Theorem, find the length of the hypotenuse of the right triangle formed by the center of the large sphere, the center of the equilateral triangle, and the point where the large sphere touches the small spheres.",
+        "Find the length of the hypotenuse of the right triangle formed by the center of the large sphere, the center of the equilateral triangle, and the point where the large sphere touches the small spheres, which is $\\sqrt{x^2+1^2}$, and set it equal to 1.",
+        "Solve the equation from the previous step for x and substitute the value of x into the equation for the distance from the center of the equilateral triangle to the center of the larger sphere, which is $\\frac{2\\sqrt{3}}{3}+\\sqrt{x^2+1}$, and simplify.",
+        "Drop a perpendicular from the center of the large sphere to the point where it touches the small spheres."
+    ],
+    "full_steps": [
+        [
+            "Draw the right triangle formed by the center of the large sphere, the point where the large sphere touches the small spheres, and the center of the small spheres.",
+            1
+        ],
+        [
+            "Determine the height of the larger sphere above the horizontal plane as the sum of the radius of the larger sphere and the height of the center of the equilateral triangle formed by the centers of the three smaller spheres above the horizontal plane.",
+            1
+        ],
+        [
+            "Drop a perpendicular from the center of the larger sphere to the center of the equilateral triangle formed by the centers of the three smaller spheres.",
+            1
+        ],
+        [
+            "Since the triangle formed by the centers of the smaller spheres is an equilateral triangle, the perpendicular from the center of the larger sphere to the plane bisects the triangle.",
+            1
+        ],
+        [
+            "Drop the perpendicular from the center of the larger sphere to the plane.",
+            1
+        ],
+        [
+            "Let the distance from the center of the equilateral triangle to the center of the larger sphere be x.  Then the right triangle formed by the center of the large sphere, the center of the equilateral triangle, and the point where the large sphere touches the small spheres has legs of length x and 1, and hypotenuse of length 1.",
+            1
+        ],
+        [
+            "Using the Pythagorean Theorem, find the length of the hypotenuse of the right triangle formed by the center of the large sphere, the center of the equilateral triangle, and the point where the large sphere touches the small spheres.",
+            1
+        ],
+        [
+            "Find the length of the hypotenuse of the right triangle formed by the center of the large sphere, the center of the equilateral triangle, and the point where the large sphere touches the small spheres, which is $\\sqrt{x^2+1^2}$, and set it equal to 1.",
+            1
+        ],
+        [
+            "Solve the equation from the previous step for x and substitute the value of x into the equation for the distance from the center of the equilateral triangle to the center of the larger sphere, which is $\\frac{2\\sqrt{3}}{3}+\\sqrt{x^2+1}$, and simplify.",
+            1
+        ],
+        [
+            "Drop a perpendicular from the center of the large sphere to the point where it touches the small spheres.",
+            1
+        ]
+    ],
+    "time": 141.1548056602478,
+    "total_tokens": 6474,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,66 @@
+{
+    "problem": "The product of the digits of 3214 is 24. How many distinct four-digit positive integers are such that the product of their digits equals 12?",
+    "level": "Level 3",
+    "type": "Counting & Probability",
+    "solution": "We first have to figure out the different groups of 4 one-digit numbers whose product is 12.  We obviously can't use 12 as one of the numbers, nor can we use 9, 8, or 7 (none divides 12).  We can use 6, in which case one of the other numbers is 2 and the other two are 1s.  So, we can have the number 6211, or any number we can form by reordering these digits.  There are $4!$ ways to order these four numbers, but we have to divide by $2!$ because the two 1s are the same, so $4!$ counts each possible number twice.  That gives us $4!/2!=12$ numbers that consist of 6, 2, and two 1s.\n\nNext, we note that we can't have a 5, so we think about 4.  If we have a 4, then the other three numbers are 3, 1, 1.  Just as there are 12 ways to order the digits in 6211, there are 12 ways to order the digits in 4311.  Finally, we check if there are any ways to get a product of 12 with digits that are 3 or less.  There's only one such group, the digits in 3221.  As with 6211 and 4311, there are 12 distinct ways to order the digits in 3221.\n\nCombining our three cases, we have $12+12+12=\\boxed{36}$ possible integers.",
+    "is_solved": false,
+    "model_solution": "Step 1: List the distinct factorizations of 12.\n12 = 1 * 1 * 2 * 6\n12 = 1 * 1 * 3 * 4\n12 = 1 * 2 * 2 * 3\n12 = 2 * 2 * 3 * 1\nStep 2:\nConsider the last factorization of 12. Since it starts with 2 * 2, the first two digits of the number must be 2 or 4. We'll consider these cases and list the distinct possibilities.\nStep 3: \nFor the factorization 2 * 2 * 3 * 1, if the first two digits are 2, the last two digits can be 3 * 1 and 1 * 3. If the first two digits are 4, the last two digits can be only 3 * 1.\nStep 4:\nFor the first case, if the first two digits are 2, the last two digits can be 31 or 13. For the second case, if the first two digits are 4, the last two digits can be 32 or 23.\nStep 5:\nList the distinct possibilities for each case. \nFor the first case: 23 13, 32 31, 23 31, 13 32 \nFor the second case: 43 12, 24 13, 42 31, 24 31, 43 31, 12 43\nStep 6: \nDelete any instances of numbers that appear in reverse order (e.g. 23 is the same as 32), and count the number of remaining possibilities. \nFor the first case: 23, 13, 23, 31\nFor the second case: 43 12, 24 13, 24 31, 43 31\nStep 7: \nDelete any instances of numbers that appear in reverse order (e.g. 43 is the same as 34), and count the number of remaining possibilities. \nFor the first case: 23, 13, 31 \nFor the second case: 43 12, 24 13, 24 31, 31 43\nStep 8: Combine the remaining possibilities from both cases and count the total number of distinct possibilities. \n23, 13, 31, 43 12, 24 13, 24 31, 31 43\nStep 9:\nCount the total number of distinct possibilities from the combined list. \n23, 13, 31, 43 12, 24 13, 24 31, 31 43\nStep 10: Count the total number of distinct possibilities from the combined list. \n23, 13, 31, 43 12, 24 13, 24 31, 31 43",
+    "steps": [
+        "Step 1: List the distinct factorizations of 12.\n12 = 1 * 1 * 2 * 6\n12 = 1 * 1 * 3 * 4\n12 = 1 * 2 * 2 * 3\n12 = 2 * 2 * 3 * 1",
+        "Step 2:\nConsider the last factorization of 12. Since it starts with 2 * 2, the first two digits of the number must be 2 or 4. We'll consider these cases and list the distinct possibilities.",
+        "Step 3: \nFor the factorization 2 * 2 * 3 * 1, if the first two digits are 2, the last two digits can be 3 * 1 and 1 * 3. If the first two digits are 4, the last two digits can be only 3 * 1.",
+        "Step 4:\nFor the first case, if the first two digits are 2, the last two digits can be 31 or 13. For the second case, if the first two digits are 4, the last two digits can be 32 or 23.",
+        "Step 5:\nList the distinct possibilities for each case. \nFor the first case: 23 13, 32 31, 23 31, 13 32 \nFor the second case: 43 12, 24 13, 42 31, 24 31, 43 31, 12 43",
+        "Step 6: \nDelete any instances of numbers that appear in reverse order (e.g. 23 is the same as 32), and count the number of remaining possibilities. \nFor the first case: 23, 13, 23, 31\nFor the second case: 43 12, 24 13, 24 31, 43 31",
+        "Step 7: \nDelete any instances of numbers that appear in reverse order (e.g. 43 is the same as 34), and count the number of remaining possibilities. \nFor the first case: 23, 13, 31 \nFor the second case: 43 12, 24 13, 24 31, 31 43",
+        "Step 8: Combine the remaining possibilities from both cases and count the total number of distinct possibilities. \n23, 13, 31, 43 12, 24 13, 24 31, 31 43",
+        "Step 9:\nCount the total number of distinct possibilities from the combined list. \n23, 13, 31, 43 12, 24 13, 24 31, 31 43",
+        "Step 10: Count the total number of distinct possibilities from the combined list. \n23, 13, 31, 43 12, 24 13, 24 31, 31 43"
+    ],
+    "full_steps": [
+        [
+            "Step 1: List the distinct factorizations of 12.\n12 = 1 * 1 * 2 * 6\n12 = 1 * 1 * 3 * 4\n12 = 1 * 2 * 2 * 3\n12 = 2 * 2 * 3 * 1",
+            1
+        ],
+        [
+            "Step 2:\nConsider the last factorization of 12. Since it starts with 2 * 2, the first two digits of the number must be 2 or 4. We'll consider these cases and list the distinct possibilities.",
+            1
+        ],
+        [
+            "Step 3: \nFor the factorization 2 * 2 * 3 * 1, if the first two digits are 2, the last two digits can be 3 * 1 and 1 * 3. If the first two digits are 4, the last two digits can be only 3 * 1.",
+            1
+        ],
+        [
+            "Step 4:\nFor the first case, if the first two digits are 2, the last two digits can be 31 or 13. For the second case, if the first two digits are 4, the last two digits can be 32 or 23.",
+            1
+        ],
+        [
+            "Step 5:\nList the distinct possibilities for each case. \nFor the first case: 23 13, 32 31, 23 31, 13 32 \nFor the second case: 43 12, 24 13, 42 31, 24 31, 43 31, 12 43",
+            1
+        ],
+        [
+            "Step 6: \nDelete any instances of numbers that appear in reverse order (e.g. 23 is the same as 32), and count the number of remaining possibilities. \nFor the first case: 23, 13, 23, 31\nFor the second case: 43 12, 24 13, 24 31, 43 31",
+            1
+        ],
+        [
+            "Step 7: \nDelete any instances of numbers that appear in reverse order (e.g. 43 is the same as 34), and count the number of remaining possibilities. \nFor the first case: 23, 13, 31 \nFor the second case: 43 12, 24 13, 24 31, 31 43",
+            1
+        ],
+        [
+            "Step 8: Combine the remaining possibilities from both cases and count the total number of distinct possibilities. \n23, 13, 31, 43 12, 24 13, 24 31, 31 43",
+            1
+        ],
+        [
+            "Step 9:\nCount the total number of distinct possibilities from the combined list. \n23, 13, 31, 43 12, 24 13, 24 31, 31 43",
+            1
+        ],
+        [
+            "Step 10: Count the total number of distinct possibilities from the combined list. \n23, 13, 31, 43 12, 24 13, 24 31, 31 43",
+            1
+        ]
+    ],
+    "time": 134.88632583618164,
+    "total_tokens": 8933,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

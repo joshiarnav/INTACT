@@ -1,0 +1,56 @@
+{
+    "problem": "Consider two positive even integers less than $15$ (not necessarily distinct). When the sum of these two numbers is added to their product, how many different possible values may result?",
+    "level": "Level 5",
+    "type": "Algebra",
+    "solution": "Let $p$ and $q$ be the two integers; then $p,q \\in \\{2,4,6,8,10,12,14\\}$, giving $7 \\times 7 = 49$ total possible pairs $(p,q)$. The question asks for the number of different values of $pq + p + q$. Notice that by Simon's Favorite Factoring Trick, $$pq + p + q = (p+1)(q+1) - 1,$$so it suffices to find the number of different possible values of $(p+1)(q+1)$. Here, $p+1,q+1 \\in \\{3,5,7,9,11,13,15\\}$.\n\nThere are $7$ pairs $(p,q)$ where $p+1$ is equal to $q+1$; by symmetry, half of the $42$ remaining pairs correspond to swapping the values of $p$ and $q$, leaving $42/2 = 21$ pairs $(p,q)$. Since most of the possible values of $p+1$ and $q+1$ are prime factors that do not divide into any of the other numbers, we note that most of the values of $(p+1)(q+1)$ will be distinct. The exception are the numbers divisible by $3$ and $5$: $p+1,q+1 \\in \\{3,5,9,15\\}$; then, if $(p+1,q+1) = (3,15)$ or $(5,9)$, then $(p+1)(q+1) = 45$.\n\nHence, there are exactly $21-1+7 = \\boxed{27}$ distinct possible values of $pq + p + q$.",
+    "is_solved": true,
+    "model_solution": "Step 1: List the possible even numbers less than 15: 2, 4, 6, 8, 10, 12, 14.\nStep 2: Calculate the sum of the two numbers added to their product for each pair of even numbers from the list, and then determine the number of different results obtained.\nStep 3:\n\\[\\begin{array}{|l|l|l|} \\hline 2 & 4 & 6 \\\\ \\hline 4+2+2\\cdot4=18 & 4+4+4\\cdot4=24 & 6+4+2\\cdot4=18 \\\\ \\hline 6 & 8 & 10 \\\\ \\hline 4+6+2\\cdot6=20 & 8+6+2\\cdot6=26 & 6+8+2\\cdot8=26 \\\\ \\hline 8 & 10 & 12 \\\\ \\hline 8+8+2\\cdot8=28 & 10+8+2\\cdot8=32 & 10+10+2\\cdot10=30 \\\\ \\hline 10 & 12 & 14 \\\\ \\hline 12+10+2\\cdot10=42 & 12+12+2\\cdot12=48 & 12+14+2\\cdot14=50 \\\\ \\hline 14 &  &  \\\\ \\hline 14+14+2\\cdot14=54 &  &  \\\\ \\\nCount the number of unique values obtained in the table.\nStep 4: Count the unique results from the table above.\nStep 4:\n$18, 20, 24, 26, 28, 30, 32, 42, 48, 50, 54$\nStep 5:\nThere are 11 unique results possible.\nStep 6: \nFinal Answer: The final answer is 11.",
+    "steps": [
+        "Step 1: List the possible even numbers less than 15: 2, 4, 6, 8, 10, 12, 14.",
+        "Step 2: Calculate the sum of the two numbers added to their product for each pair of even numbers from the list, and then determine the number of different results obtained.",
+        "Step 3:\n\\[\\begin{array}{|l|l|l|} \\hline 2 & 4 & 6 \\\\ \\hline 4+2+2\\cdot4=18 & 4+4+4\\cdot4=24 & 6+4+2\\cdot4=18 \\\\ \\hline 6 & 8 & 10 \\\\ \\hline 4+6+2\\cdot6=20 & 8+6+2\\cdot6=26 & 6+8+2\\cdot8=26 \\\\ \\hline 8 & 10 & 12 \\\\ \\hline 8+8+2\\cdot8=28 & 10+8+2\\cdot8=32 & 10+10+2\\cdot10=30 \\\\ \\hline 10 & 12 & 14 \\\\ \\hline 12+10+2\\cdot10=42 & 12+12+2\\cdot12=48 & 12+14+2\\cdot14=50 \\\\ \\hline 14 &  &  \\\\ \\hline 14+14+2\\cdot14=54 &  &  \\\\ \\",
+        "Count the number of unique values obtained in the table.",
+        "Step 4: Count the unique results from the table above.",
+        "Step 4:\n$18, 20, 24, 26, 28, 30, 32, 42, 48, 50, 54$",
+        "Step 5:\nThere are 11 unique results possible.",
+        "Step 6: \nFinal Answer: The final answer is 11."
+    ],
+    "full_steps": [
+        [
+            "Step 1: List the possible even numbers less than 15: 2, 4, 6, 8, 10, 12, 14.",
+            1
+        ],
+        [
+            "Step 2: Calculate the sum of the two numbers added to their product for each pair of even numbers from the list, and then determine the number of different results obtained.",
+            1
+        ],
+        [
+            "Step 3:\n\\[\\begin{array}{|l|l|l|} \\hline 2 & 4 & 6 \\\\ \\hline 4+2+2\\cdot4=18 & 4+4+4\\cdot4=24 & 6+4+2\\cdot4=18 \\\\ \\hline 6 & 8 & 10 \\\\ \\hline 4+6+2\\cdot6=20 & 8+6+2\\cdot6=26 & 6+8+2\\cdot8=26 \\\\ \\hline 8 & 10 & 12 \\\\ \\hline 8+8+2\\cdot8=28 & 10+8+2\\cdot8=32 & 10+10+2\\cdot10=30 \\\\ \\hline 10 & 12 & 14 \\\\ \\hline 12+10+2\\cdot10=42 & 12+12+2\\cdot12=48 & 12+14+2\\cdot14=50 \\\\ \\hline 14 &  &  \\\\ \\hline 14+14+2\\cdot14=54 &  &  \\\\ \\",
+            1
+        ],
+        [
+            "Count the number of unique values obtained in the table.",
+            1
+        ],
+        [
+            "Step 4: Count the unique results from the table above.",
+            1
+        ],
+        [
+            "Step 4:\n$18, 20, 24, 26, 28, 30, 32, 42, 48, 50, 54$",
+            1
+        ],
+        [
+            "Step 5:\nThere are 11 unique results possible.",
+            1
+        ],
+        [
+            "Step 6: \nFinal Answer: The final answer is 11.",
+            1
+        ]
+    ],
+    "time": 107.4346432685852,
+    "total_tokens": 6156,
+    "final_answer_tokens": 502,
+    "model": "meta-llama/Llama-Vision-Free"
+}

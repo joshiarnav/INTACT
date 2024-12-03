@@ -1,0 +1,31 @@
+{
+    "problem": "Roslyn has ten boxes. Five of the boxes contain pencils, four of the boxes contain pens, and two of the boxes contain both pens and pencils. How many boxes contain neither pens nor pencils?",
+    "level": "Level 1",
+    "type": "Counting & Probability",
+    "solution": "Of the 5 boxes with pencils, 2 have pens also, so $5-2=3$ have pencils only.  Similarly, $4-2 =2$ of the boxes have pens only:\n\n\n[asy]\nunitsize(0.05cm);\nlabel(\"Pencils\", (2,74));\nlabel(\"Pens\", (80,74));\ndraw(Circle((30,45), 22));\ndraw(Circle((58, 45), 22));\nlabel(\"$2$\", (44, 45));\nlabel(scale(0.8)*\"$3$\",(28,58));\nlabel(scale(0.8)*\"$2$\",(63,58));\n[/asy]\n\nThat gives us $3+2+2=7$ boxes with pens, pencils, or both.  This leaves $10-7 = \\boxed{3}$ with neither.",
+    "is_solved": true,
+    "model_solution": "Step 1: Identify the total number of boxes with pens, pencils, and both: 5 (pencils) + 4 (pens) + 2 (both)\nStep 2: Subtract the total number of boxes with pens, pencils, or both from the total number of boxes: 10 - (5 + 4 + 2)\nStep 3: Calculate the total number of boxes with pens, pencils, or both: 5 + 4 + 2 = 11\nFinal Answer",
+    "steps": [
+        "Step 1: Identify the total number of boxes with pens, pencils, and both: 5 (pencils) + 4 (pens) + 2 (both)",
+        "Step 2: Subtract the total number of boxes with pens, pencils, or both from the total number of boxes: 10 - (5 + 4 + 2)",
+        "Step 3: Calculate the total number of boxes with pens, pencils, or both: 5 + 4 + 2 = 11\nFinal Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Identify the total number of boxes with pens, pencils, and both: 5 (pencils) + 4 (pens) + 2 (both)",
+            1
+        ],
+        [
+            "Step 2: Subtract the total number of boxes with pens, pencils, or both from the total number of boxes: 10 - (5 + 4 + 2)",
+            1
+        ],
+        [
+            "Step 3: Calculate the total number of boxes with pens, pencils, or both: 5 + 4 + 2 = 11\nFinal Answer",
+            1
+        ]
+    ],
+    "time": 42.345781326293945,
+    "total_tokens": 1052,
+    "final_answer_tokens": 204,
+    "model": "meta-llama/Llama-Vision-Free"
+}

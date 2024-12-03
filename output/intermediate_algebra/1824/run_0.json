@@ -1,0 +1,41 @@
+{
+    "problem": "The points $P = (x_1,y_1)$ and $Q = (x_2,y_2)$ are the intersections of the parabola $y^2 = 4ax,$ where $a > 0,$ and a line passing through the focus of the parabola.  Then the distance $PQ$ can be expressed in the form $c_1 x_1 + c_2 x_2 + c_3 a,$ where $c_1,$ $c_2,$ and $c_3$ are constants.  Compute $c_1 + c_2 + c_3.$",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "The focus of the parabola $y^2 = 4ax$ is $F = (a,0),$ and the directrix is $x = -a.$  Then\n\\[PQ = PF + QF.\\][asy]\nunitsize(0.8 cm);\n\nreal y;\npair F, P, Q;\n\nF = (1,0);\n\npath parab = ((-4)^2/4,-4);\n\nfor (y = -4; y <= 4; y = y + 0.01) {\n  parab = parab--(y^2/4,y);\n}\n\nP = intersectionpoint(F--(F + 5*(1,2)),parab);\nQ = intersectionpoint(F--(F - 5*(1,2)),parab);\n\ndraw(parab,red);\ndraw((-2,0)--(4^2/4,0));\ndraw((0,-4)--(0,4));\ndraw((-1,-4)--(-1,4),dashed);\ndraw(P--Q);\ndraw(P--(-1,P.y));\ndraw(Q--(-1,Q.y));\n\nlabel(\"$x = -a$\", (-1,-4), S);\n\ndot(\"$F$\", F, SE);\ndot(\"$P$\", P, SE);\ndot(\"$Q$\", Q, S);\ndot((-1,P.y));\ndot((-1,Q.y));\n[/asy]\n\nSince $P$ lies on the parabola, $PF$ is equal to the distance from $P$ to the directrix, which is $x_1 + a.$  Similarly, $QF$ is equal to the distance from $Q$ to the directrix, which is $x_2 + a.$  Therefore,\n\\[PQ = x_1 + x_2 + 2a.\\]Hence, $c_1 + c_2 + c_3 = 1 + 1 + 2 = \\boxed{4}.$",
+    "is_solved": true,
+    "model_solution": "Step 1: The parabola $y^2 = 4ax$ has its focus at the point $\\left(\\frac{a}{2},0\\right),$ and its directrix is the horizontal line $y = -\\frac{a}{2}.$\nStep 2:  Let the line passing through the focus $\\left(\\frac{a}{2},0\\right)$ have equation $y = m(x - a/2),$ so its intercepts with the $x$ and $y$ axes are $\\left(2/a, 0\\right)$ and $\\left(0, -am/2\\right),$ respectively.\nStep 3:  By symmetry, $x_1 + x_2 = a$ and $y_1^2 = 4ax_1, y_2^2 = 4ax_2.$ By substituting $y_1^2, y_2^2$ into the equation for the line, we get a quadratic equation for $x_1$ and $x_2$.\nSubstituting $y_1^2 = 4ax_1$ and $y_2^2 = 4ax_2$ into the equation $y = m(x - a/2)$ gives $y_1^2 = 4a\\left(\\frac{1}{m}y_1 + \\frac{a}{2}\\right)$ and $y_2^2 = 4a\\left(\\frac{1}{m}y_2 + \\frac{a}{2}\\right).$\nSubstituting $y_1^2 = 4ax_1$ and $y_2^2 = 4ax_2$ into the equation $y = m(x - a/2)$ gives $y_1^2 = 4a\\left(\\frac{1}{m}y_1 + \\frac{a}{2}\\right)$ and $y_2^2 = 4a\\left(\\frac{1}{m}y_2 + \\frac{a}{2}\\right).$ Therefore, $y_1^2 - 4a \\cdot \\frac{1}{m}y_1 - 2a^2 = 0$ and $y_2^2 - 4a \\cdot \\frac{1}{m}y_2 - 2a^2 = 0.$\nFinal Answer",
+    "steps": [
+        "Step 1: The parabola $y^2 = 4ax$ has its focus at the point $\\left(\\frac{a}{2},0\\right),$ and its directrix is the horizontal line $y = -\\frac{a}{2}.$",
+        "Step 2:  Let the line passing through the focus $\\left(\\frac{a}{2},0\\right)$ have equation $y = m(x - a/2),$ so its intercepts with the $x$ and $y$ axes are $\\left(2/a, 0\\right)$ and $\\left(0, -am/2\\right),$ respectively.",
+        "Step 3:  By symmetry, $x_1 + x_2 = a$ and $y_1^2 = 4ax_1, y_2^2 = 4ax_2.$ By substituting $y_1^2, y_2^2$ into the equation for the line, we get a quadratic equation for $x_1$ and $x_2$.",
+        "Substituting $y_1^2 = 4ax_1$ and $y_2^2 = 4ax_2$ into the equation $y = m(x - a/2)$ gives $y_1^2 = 4a\\left(\\frac{1}{m}y_1 + \\frac{a}{2}\\right)$ and $y_2^2 = 4a\\left(\\frac{1}{m}y_2 + \\frac{a}{2}\\right).$",
+        "Substituting $y_1^2 = 4ax_1$ and $y_2^2 = 4ax_2$ into the equation $y = m(x - a/2)$ gives $y_1^2 = 4a\\left(\\frac{1}{m}y_1 + \\frac{a}{2}\\right)$ and $y_2^2 = 4a\\left(\\frac{1}{m}y_2 + \\frac{a}{2}\\right).$ Therefore, $y_1^2 - 4a \\cdot \\frac{1}{m}y_1 - 2a^2 = 0$ and $y_2^2 - 4a \\cdot \\frac{1}{m}y_2 - 2a^2 = 0.$\nFinal Answer"
+    ],
+    "full_steps": [
+        [
+            "Step 1: The parabola $y^2 = 4ax$ has its focus at the point $\\left(\\frac{a}{2},0\\right),$ and its directrix is the horizontal line $y = -\\frac{a}{2}.$",
+            1
+        ],
+        [
+            "Step 2:  Let the line passing through the focus $\\left(\\frac{a}{2},0\\right)$ have equation $y = m(x - a/2),$ so its intercepts with the $x$ and $y$ axes are $\\left(2/a, 0\\right)$ and $\\left(0, -am/2\\right),$ respectively.",
+            1
+        ],
+        [
+            "Step 3:  By symmetry, $x_1 + x_2 = a$ and $y_1^2 = 4ax_1, y_2^2 = 4ax_2.$ By substituting $y_1^2, y_2^2$ into the equation for the line, we get a quadratic equation for $x_1$ and $x_2$.",
+            1
+        ],
+        [
+            "Substituting $y_1^2 = 4ax_1$ and $y_2^2 = 4ax_2$ into the equation $y = m(x - a/2)$ gives $y_1^2 = 4a\\left(\\frac{1}{m}y_1 + \\frac{a}{2}\\right)$ and $y_2^2 = 4a\\left(\\frac{1}{m}y_2 + \\frac{a}{2}\\right).$",
+            1
+        ],
+        [
+            "Substituting $y_1^2 = 4ax_1$ and $y_2^2 = 4ax_2$ into the equation $y = m(x - a/2)$ gives $y_1^2 = 4a\\left(\\frac{1}{m}y_1 + \\frac{a}{2}\\right)$ and $y_2^2 = 4a\\left(\\frac{1}{m}y_2 + \\frac{a}{2}\\right).$ Therefore, $y_1^2 - 4a \\cdot \\frac{1}{m}y_1 - 2a^2 = 0$ and $y_2^2 - 4a \\cdot \\frac{1}{m}y_2 - 2a^2 = 0.$\nFinal Answer",
+            1
+        ]
+    ],
+    "time": 66.1799168586731,
+    "total_tokens": 4453,
+    "final_answer_tokens": 701,
+    "model": "meta-llama/Llama-Vision-Free"
+}

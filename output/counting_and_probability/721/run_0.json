@@ -1,0 +1,66 @@
+{
+    "problem": "Bin $A$ has one white ball and four black balls.  Bin $B$ has three balls labeled $\\$1$ and one ball labeled $\\$7$.  Bin $W$ has five balls labeled $\\$8$ and one ball labeled $\\$500$.  A game is played as follows: a ball is randomly selected from bin $A$.  If it is black, then a ball is randomly selected from bin $B$; otherwise, if the original ball is white, then a ball is randomly selected from bin $W$.  You win the amount printed on the second ball selected.  What is your expected win?",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "Since Bin $A$ has one white ball and four black balls, the money ball has a $\\dfrac{1}{5}$ chance of coming from Bin $W$ and a $\\dfrac{4}{5}$ chance of coming from Bin $B$.  The total expected value therefore is $E = \\dfrac{1}{5}E_W + \\dfrac{4}{5}E_B$, where $E_W$ and $E_B$ are the expected values of a ball drawn from bins $W$ and $B$, respectively.  Since Bin $W$ has five 8 dollar balls and one 500 dollar ball, its expected value is \\[ E_W = \\frac{5}{6}\\times\\$8 + \\frac{1}{6}\\times\\$500 = \\$90. \\]Since Bin $B$ has three 1 dollar balls and one 7 dollar ball, its expected value is \\[ E_B = \\frac{3}{4} \\times \\$1 + \\frac{1}{4} \\times \\$7 = \\$2.5. \\]Therefore \\[ E = \\frac{1}{5}E_W + \\frac{4}{5}E_B = \\frac{1}{5}(\\$90) + \\frac{4}{5}(\\$2.5) = \\boxed{\\$20}. \\]",
+    "is_solved": false,
+    "model_solution": "Step 1:  Given bin A has 1 white ball and 4 black balls, and the game is played by randomly selecting a ball from bin A, we calculate the probability of selecting a white or black ball from bin A.\n  - The probability of selecting a white ball from bin A is 1/5.\n  - The probability of selecting a black ball from bin A is 4/5.\nStep 2:  We need to calculate the probability of each type of ball being selected from bin B and bin W, given the selection from bin A.\n  - The probability of selecting a $\\$1$ ball from bin B given a black ball from bin A is $\\frac{4}{5} \\times \\frac{3}{4} = \\frac{3}{5}$.\n  - The probability of selecting a $\\$7$ ball from bin B given a black ball from bin A is $\\frac{4}{5} \\times \\frac{1}{4} = \\frac{1}{5}$.\n  - The probability of selecting a $\\$8$ ball from bin W given a white ball from bin A is $\\frac{1}{5} \\times \\frac{5}{6} = \\frac{1}{6}$.\n  - The probability of selecting a $\\$500$ ball from bin W given a white ball from bin A is $\\frac{1}{5} \\times \\frac{1}{6} = \\frac{1}{30}$.\nStep 3: \n$\\frac{1}{5} \\times\\frac{1}{6}\\times\\$8 + \\frac{1}{5} \\times\\frac{1}{30}\\times\\$500 + \\frac{3}{5} \\times \\frac{3}{4} \\times \\$1 + \\frac{3}{5} \\times \\frac{1}{4} \\times \\$7$\n$\\frac{1}{30} \\times 8 + \\frac{1}{30} \\times 500 + \\frac{9}{20} + \\frac{3}{20} \\times 7$\n$\\frac{1}{30} \\times 8 + \\frac{1}{30} \\times 500 + \\frac{9}{20} + \\frac{3}{20} \\times 7 = \\frac{8}{30} + \\frac{500}{30} + \\frac{9}{20} + \\frac{21}{20}$\n$\\frac{8}{30} + \\frac{500}{30} + \\frac{9}{20} + \\frac{21}{20}$\n$=\\frac{8}{30}+\\frac{500}{30}+\\frac{9}{20}+\\frac{21}{20}$\n$=\\frac{8}{30}+\\frac{500}{30}+\\frac{9}{20}+\\frac{21}{20}$\n$=\\frac{8}{30}+\\frac{500}{30}+\\frac{9}{20}+\\frac{21}{20}$\n$= \\frac{8}{30} + \\frac{500}{30} + \\frac{9}{20} + \\frac{21}{20}$\n$= \\frac{8}{30} + \\frac{500}{30} + \\frac{9}{20} + \\frac{21}{20}$\n$= \\frac{1}{15} + \\frac{50}{3} + \\frac{9}{20} + \\frac{21}{20}$\n$= \\frac{1}{15} + \\frac{50}{3} + \\frac{9}{20} +\n$\\frac{1}{15} + \\frac{50}{3} + \\frac{9}{20} + \\frac{21}{20} = \\frac{4}{60}+\\frac{2000}{60}+\\frac{27}{60}+\\frac{63}{60}$\n$= \\frac{4}{60}+\\frac{2000}{60}+\\frac{27}{60}+\\frac{63}{60}$\n$= \\frac{1994}{60}$\n$\\frac{1994}{60} \\approx 33.23$\n$\\frac{1}{15} + \\frac{50}{3} + \\frac{9}{20} + \\frac{21}{20}$\nStep 4:\n$\\frac{1}{15} + \\frac{50}{3} + \\frac{9}{20} + \\frac{21}{20} = \\frac{4}{60}+\\frac{2000}{60}+\\frac{27}{60}+\\frac{63}{60}$",
+    "steps": [
+        "Step 1:  Given bin A has 1 white ball and 4 black balls, and the game is played by randomly selecting a ball from bin A, we calculate the probability of selecting a white or black ball from bin A.\n  - The probability of selecting a white ball from bin A is 1/5.\n  - The probability of selecting a black ball from bin A is 4/5.",
+        "Step 2:  We need to calculate the probability of each type of ball being selected from bin B and bin W, given the selection from bin A.\n  - The probability of selecting a $\\$1$ ball from bin B given a black ball from bin A is $\\frac{4}{5} \\times \\frac{3}{4} = \\frac{3}{5}$.\n  - The probability of selecting a $\\$7$ ball from bin B given a black ball from bin A is $\\frac{4}{5} \\times \\frac{1}{4} = \\frac{1}{5}$.\n  - The probability of selecting a $\\$8$ ball from bin W given a white ball from bin A is $\\frac{1}{5} \\times \\frac{5}{6} = \\frac{1}{6}$.\n  - The probability of selecting a $\\$500$ ball from bin W given a white ball from bin A is $\\frac{1}{5} \\times \\frac{1}{6} = \\frac{1}{30}$.",
+        "Step 3: \n$\\frac{1}{5} \\times\\frac{1}{6}\\times\\$8 + \\frac{1}{5} \\times\\frac{1}{30}\\times\\$500 + \\frac{3}{5} \\times \\frac{3}{4} \\times \\$1 + \\frac{3}{5} \\times \\frac{1}{4} \\times \\$7$",
+        "$\\frac{1}{30} \\times 8 + \\frac{1}{30} \\times 500 + \\frac{9}{20} + \\frac{3}{20} \\times 7$",
+        "$\\frac{1}{30} \\times 8 + \\frac{1}{30} \\times 500 + \\frac{9}{20} + \\frac{3}{20} \\times 7 = \\frac{8}{30} + \\frac{500}{30} + \\frac{9}{20} + \\frac{21}{20}$",
+        "$\\frac{8}{30} + \\frac{500}{30} + \\frac{9}{20} + \\frac{21}{20}$\n$=\\frac{8}{30}+\\frac{500}{30}+\\frac{9}{20}+\\frac{21}{20}$\n$=\\frac{8}{30}+\\frac{500}{30}+\\frac{9}{20}+\\frac{21}{20}$\n$=\\frac{8}{30}+\\frac{500}{30}+\\frac{9}{20}+\\frac{21}{20}$\n$= \\frac{8}{30} + \\frac{500}{30} + \\frac{9}{20} + \\frac{21}{20}$\n$= \\frac{8}{30} + \\frac{500}{30} + \\frac{9}{20} + \\frac{21}{20}$\n$= \\frac{1}{15} + \\frac{50}{3} + \\frac{9}{20} + \\frac{21}{20}$\n$= \\frac{1}{15} + \\frac{50}{3} + \\frac{9}{20} +",
+        "$\\frac{1}{15} + \\frac{50}{3} + \\frac{9}{20} + \\frac{21}{20} = \\frac{4}{60}+\\frac{2000}{60}+\\frac{27}{60}+\\frac{63}{60}$\n$= \\frac{4}{60}+\\frac{2000}{60}+\\frac{27}{60}+\\frac{63}{60}$\n$= \\frac{1994}{60}$",
+        "$\\frac{1994}{60} \\approx 33.23$",
+        "$\\frac{1}{15} + \\frac{50}{3} + \\frac{9}{20} + \\frac{21}{20}$",
+        "Step 4:\n$\\frac{1}{15} + \\frac{50}{3} + \\frac{9}{20} + \\frac{21}{20} = \\frac{4}{60}+\\frac{2000}{60}+\\frac{27}{60}+\\frac{63}{60}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1:  Given bin A has 1 white ball and 4 black balls, and the game is played by randomly selecting a ball from bin A, we calculate the probability of selecting a white or black ball from bin A.\n  - The probability of selecting a white ball from bin A is 1/5.\n  - The probability of selecting a black ball from bin A is 4/5.",
+            1
+        ],
+        [
+            "Step 2:  We need to calculate the probability of each type of ball being selected from bin B and bin W, given the selection from bin A.\n  - The probability of selecting a $\\$1$ ball from bin B given a black ball from bin A is $\\frac{4}{5} \\times \\frac{3}{4} = \\frac{3}{5}$.\n  - The probability of selecting a $\\$7$ ball from bin B given a black ball from bin A is $\\frac{4}{5} \\times \\frac{1}{4} = \\frac{1}{5}$.\n  - The probability of selecting a $\\$8$ ball from bin W given a white ball from bin A is $\\frac{1}{5} \\times \\frac{5}{6} = \\frac{1}{6}$.\n  - The probability of selecting a $\\$500$ ball from bin W given a white ball from bin A is $\\frac{1}{5} \\times \\frac{1}{6} = \\frac{1}{30}$.",
+            1
+        ],
+        [
+            "Step 3: \n$\\frac{1}{5} \\times\\frac{1}{6}\\times\\$8 + \\frac{1}{5} \\times\\frac{1}{30}\\times\\$500 + \\frac{3}{5} \\times \\frac{3}{4} \\times \\$1 + \\frac{3}{5} \\times \\frac{1}{4} \\times \\$7$",
+            1
+        ],
+        [
+            "$\\frac{1}{30} \\times 8 + \\frac{1}{30} \\times 500 + \\frac{9}{20} + \\frac{3}{20} \\times 7$",
+            1
+        ],
+        [
+            "$\\frac{1}{30} \\times 8 + \\frac{1}{30} \\times 500 + \\frac{9}{20} + \\frac{3}{20} \\times 7 = \\frac{8}{30} + \\frac{500}{30} + \\frac{9}{20} + \\frac{21}{20}$",
+            1
+        ],
+        [
+            "$\\frac{8}{30} + \\frac{500}{30} + \\frac{9}{20} + \\frac{21}{20}$\n$=\\frac{8}{30}+\\frac{500}{30}+\\frac{9}{20}+\\frac{21}{20}$\n$=\\frac{8}{30}+\\frac{500}{30}+\\frac{9}{20}+\\frac{21}{20}$\n$=\\frac{8}{30}+\\frac{500}{30}+\\frac{9}{20}+\\frac{21}{20}$\n$= \\frac{8}{30} + \\frac{500}{30} + \\frac{9}{20} + \\frac{21}{20}$\n$= \\frac{8}{30} + \\frac{500}{30} + \\frac{9}{20} + \\frac{21}{20}$\n$= \\frac{1}{15} + \\frac{50}{3} + \\frac{9}{20} + \\frac{21}{20}$\n$= \\frac{1}{15} + \\frac{50}{3} + \\frac{9}{20} +",
+            1
+        ],
+        [
+            "$\\frac{1}{15} + \\frac{50}{3} + \\frac{9}{20} + \\frac{21}{20} = \\frac{4}{60}+\\frac{2000}{60}+\\frac{27}{60}+\\frac{63}{60}$\n$= \\frac{4}{60}+\\frac{2000}{60}+\\frac{27}{60}+\\frac{63}{60}$\n$= \\frac{1994}{60}$",
+            1
+        ],
+        [
+            "$\\frac{1994}{60} \\approx 33.23$",
+            1
+        ],
+        [
+            "$\\frac{1}{15} + \\frac{50}{3} + \\frac{9}{20} + \\frac{21}{20}$",
+            1
+        ],
+        [
+            "Step 4:\n$\\frac{1}{15} + \\frac{50}{3} + \\frac{9}{20} + \\frac{21}{20} = \\frac{4}{60}+\\frac{2000}{60}+\\frac{27}{60}+\\frac{63}{60}$",
+            1
+        ]
+    ],
+    "time": 131.30540347099304,
+    "total_tokens": 16189,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

@@ -1,0 +1,66 @@
+{
+    "problem": "Find the minimum possible value of\n\\[\\sqrt{58 - 42x} + \\sqrt{149 - 140 \\sqrt{1 - x^2}}\\]where $-1 \\le x \\le 1.$",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "Since $-1 \\le x \\le 1,$ there exists an angle $\\theta,$ $0^\\circ \\le \\theta \\le 180^\\circ,$ such that $\\cos \\theta = x.$  Then $\\sqrt{1 - x^2} = \\sin \\theta.$\n\n[asy]\nunitsize(1 cm);\n\npair O, X, Y, Z;\n\nO = (0,0);\nX = (10,0);\nY = (0,3);\nZ = 7*dir(40);\n\ndraw(O--X--Z--Y--cycle);\ndraw(O--Z);\n\nlabel(\"$O$\", O, SW);\nlabel(\"$X$\", X, E);\nlabel(\"$Y$\", Y, NW);\nlabel(\"$Z$\", Z, N);\nlabel(\"$10$\", (O + X)/2, S);\nlabel(\"$3$\", (O + Y)/2, W);\nlabel(\"$7$\",(O + Z)/2, SE);\nlabel(\"$90^\\circ - \\theta$\", (1.5,0.4));\nlabel(\"$\\theta$\", (0.3,0.6));\n[/asy]\n\nConstruct triangles $OXZ$ and $OYZ$ so that $OX = 10,$ $OY = 3,$ $OZ = 7,$ $\\angle YOZ = \\theta$ and $\\angle XOZ = 90^\\circ - \\theta.$  Then $\\angle XOY = 90^\\circ.$\n\nAlso, by the Law of Cosines on triangle $YOZ,$\n\\[YZ = \\sqrt{3^2 + 7^2 - 2 \\cdot 3 \\cdot 7 \\cos \\theta} = \\sqrt{58 - 42x}.\\]By the Law of Cosines on triangle $XOZ,$\n\\begin{align*}\nXZ &= \\sqrt{7^2 + 10^2 - 2 \\cdot 7 \\cdot 10 \\cos (90^\\circ - \\theta)} \\\\\n&= \\sqrt{149 - 140 \\sin \\theta} \\\\\n&= \\sqrt{149 - 140 \\sqrt{1 - x^2}}.\n\\end{align*}Thus, the expression we want to minimize is $YZ + XZ.$  By the Triangle Inequality, $YZ + XZ \\ge XY = \\sqrt{109}.$  Equality occurs when $Z$ is the point on $\\overline{XY}$ such that $OZ = 7,$ so the minimum value is $\\boxed{\\sqrt{109}}.$",
+    "is_solved": false,
+    "model_solution": "Step 1:  To find the minimum possible value of the given expression, we first make the substitution $y = \\sqrt{1-x^2}$, which leads to $\\sqrt{1-y^2} = \\sqrt{1-\\left(\\sqrt{1-x^2}\\right)^2} = \\sqrt{1-(\\sqrt{1-x^2})^2} = \\sqrt{1-x^2} = y.$\nStep 2:  This allows us to rewrite the expression in terms of $y$, giving us $\\sqrt{58 - 42y} + \\sqrt{149 - 140y}.$\nStep 3:  We then define $f(y) = \\sqrt{58 - 42y} + \\sqrt{149 - 140y},$ which simplifies to $f(y) = \\sqrt{58 - 42y} + \\sqrt{149 - 140y}.$\nStep 4:\nIf $y \\le \\tfrac{58}{42} = \\tfrac{29}{21},$ then $\\sqrt{149 - 140y} \\ge \\sqrt{149 - 140\\left(\\tfrac{29}{21}\\right)} = 12,$ which leads to $f(y) \\ge \\sqrt{58 - 42y} + 12.$\nDefine $g(y) = \\sqrt{58 - 42y}.$\nTo find the minimum value of $g(y),$ we differentiate $g(y)$ with respect to $y$ and set the derivative equal to $0.$\n\nLet $g'(y) = \\frac{d}{dy} \\left(\\sqrt{58 - 42y}\\right)$\nBy the chain rule, we have\n\\begin{align*} \ng'(y) &= \\frac{d}{dy} \\left( \\sqrt{58 - 42y} \\right) \\\\\n&= \\frac{d}{d(58 - 42y)} \\left( \\sqrt{58 - 42y} \\right) \\cdot \\frac{d}{dy} (58 - 42y) \\\\\n&= \\frac{1}{2\\sqrt{58 - 42y}} \\cdot (-42) \\\\\n&= -\\frac{21}{\\sqrt{58 - 42y}} \n\\end{align*}\n\nSetting the derivative equal to $0,$ we have $g'(y) = -\\frac{21}{\\sqrt{58 - 42y}} = 0.$ However, this is only possible if the denominator is equal to $0,$ which leads to\nStep 5:\nTo find the minimum value of $g(y),$ we set $g'(y) = -\\frac{21}{\\sqrt{58 - 42y}} = 0.$ However, we see that this is only possible if $\\sqrt{58 - 42y} = 0.$ Since the square root of a number can only be zero if the number itself is zero, we have $58 - 42y = 0.$ Solving for $y,$ we have $y = \\frac{58}{42} = \\frac{29}{21}.$\nWe have $y = \\frac{29}{21}$.\nSince $y \\le \\tfrac{29}{21},$ the expression $\\sqrt{58 - 42y} + \\sqrt{149 - 140y}$ attains its minimum value at $y = \\tfrac{29}{21},$ so we must have $\\sqrt{58 - 42y} = \\sqrt{58 - 42\\left(\\tfrac{29}{21}\\right)} = \\sqrt{8} = 2\\sqrt{2}.$\n$\\sqrt{149 - 140y} = \\sqrt{149 - 140\\left(\\frac{29}{21}\\right)} = \\sqrt{8} = 2\\sqrt{2}$\nStep 6:\n$2\\sqrt{2} + 2\\sqrt{2} = 4\\sqrt{2}$\nStep 7:\nTherefore, the minimum possible value of $\\sqrt{58 - 42x} + \\sqrt{149 - 140 \\sqrt{1 - x^2}}$ is $\\boxed{4\\sqrt{2}}$.",
+    "steps": [
+        "Step 1:  To find the minimum possible value of the given expression, we first make the substitution $y = \\sqrt{1-x^2}$, which leads to $\\sqrt{1-y^2} = \\sqrt{1-\\left(\\sqrt{1-x^2}\\right)^2} = \\sqrt{1-(\\sqrt{1-x^2})^2} = \\sqrt{1-x^2} = y.$\nStep 2:  This allows us to rewrite the expression in terms of $y$, giving us $\\sqrt{58 - 42y} + \\sqrt{149 - 140y}.$\nStep 3:  We then define $f(y) = \\sqrt{58 - 42y} + \\sqrt{149 - 140y},$ which simplifies to $f(y) = \\sqrt{58 - 42y} + \\sqrt{149 - 140y}.$",
+        "Step 4:\nIf $y \\le \\tfrac{58}{42} = \\tfrac{29}{21},$ then $\\sqrt{149 - 140y} \\ge \\sqrt{149 - 140\\left(\\tfrac{29}{21}\\right)} = 12,$ which leads to $f(y) \\ge \\sqrt{58 - 42y} + 12.$",
+        "Define $g(y) = \\sqrt{58 - 42y}.$",
+        "To find the minimum value of $g(y),$ we differentiate $g(y)$ with respect to $y$ and set the derivative equal to $0.$\n\nLet $g'(y) = \\frac{d}{dy} \\left(\\sqrt{58 - 42y}\\right)$\nBy the chain rule, we have\n\\begin{align*} \ng'(y) &= \\frac{d}{dy} \\left( \\sqrt{58 - 42y} \\right) \\\\\n&= \\frac{d}{d(58 - 42y)} \\left( \\sqrt{58 - 42y} \\right) \\cdot \\frac{d}{dy} (58 - 42y) \\\\\n&= \\frac{1}{2\\sqrt{58 - 42y}} \\cdot (-42) \\\\\n&= -\\frac{21}{\\sqrt{58 - 42y}} \n\\end{align*}\n\nSetting the derivative equal to $0,$ we have $g'(y) = -\\frac{21}{\\sqrt{58 - 42y}} = 0.$ However, this is only possible if the denominator is equal to $0,$ which leads to",
+        "Step 5:\nTo find the minimum value of $g(y),$ we set $g'(y) = -\\frac{21}{\\sqrt{58 - 42y}} = 0.$ However, we see that this is only possible if $\\sqrt{58 - 42y} = 0.$ Since the square root of a number can only be zero if the number itself is zero, we have $58 - 42y = 0.$ Solving for $y,$ we have $y = \\frac{58}{42} = \\frac{29}{21}.$",
+        "We have $y = \\frac{29}{21}$.",
+        "Since $y \\le \\tfrac{29}{21},$ the expression $\\sqrt{58 - 42y} + \\sqrt{149 - 140y}$ attains its minimum value at $y = \\tfrac{29}{21},$ so we must have $\\sqrt{58 - 42y} = \\sqrt{58 - 42\\left(\\tfrac{29}{21}\\right)} = \\sqrt{8} = 2\\sqrt{2}.$",
+        "$\\sqrt{149 - 140y} = \\sqrt{149 - 140\\left(\\frac{29}{21}\\right)} = \\sqrt{8} = 2\\sqrt{2}$",
+        "Step 6:\n$2\\sqrt{2} + 2\\sqrt{2} = 4\\sqrt{2}$",
+        "Step 7:\nTherefore, the minimum possible value of $\\sqrt{58 - 42x} + \\sqrt{149 - 140 \\sqrt{1 - x^2}}$ is $\\boxed{4\\sqrt{2}}$."
+    ],
+    "full_steps": [
+        [
+            "Step 1:  To find the minimum possible value of the given expression, we first make the substitution $y = \\sqrt{1-x^2}$, which leads to $\\sqrt{1-y^2} = \\sqrt{1-\\left(\\sqrt{1-x^2}\\right)^2} = \\sqrt{1-(\\sqrt{1-x^2})^2} = \\sqrt{1-x^2} = y.$\nStep 2:  This allows us to rewrite the expression in terms of $y$, giving us $\\sqrt{58 - 42y} + \\sqrt{149 - 140y}.$\nStep 3:  We then define $f(y) = \\sqrt{58 - 42y} + \\sqrt{149 - 140y},$ which simplifies to $f(y) = \\sqrt{58 - 42y} + \\sqrt{149 - 140y}.$",
+            1
+        ],
+        [
+            "Step 4:\nIf $y \\le \\tfrac{58}{42} = \\tfrac{29}{21},$ then $\\sqrt{149 - 140y} \\ge \\sqrt{149 - 140\\left(\\tfrac{29}{21}\\right)} = 12,$ which leads to $f(y) \\ge \\sqrt{58 - 42y} + 12.$",
+            1
+        ],
+        [
+            "Define $g(y) = \\sqrt{58 - 42y}.$",
+            1
+        ],
+        [
+            "To find the minimum value of $g(y),$ we differentiate $g(y)$ with respect to $y$ and set the derivative equal to $0.$\n\nLet $g'(y) = \\frac{d}{dy} \\left(\\sqrt{58 - 42y}\\right)$\nBy the chain rule, we have\n\\begin{align*} \ng'(y) &= \\frac{d}{dy} \\left( \\sqrt{58 - 42y} \\right) \\\\\n&= \\frac{d}{d(58 - 42y)} \\left( \\sqrt{58 - 42y} \\right) \\cdot \\frac{d}{dy} (58 - 42y) \\\\\n&= \\frac{1}{2\\sqrt{58 - 42y}} \\cdot (-42) \\\\\n&= -\\frac{21}{\\sqrt{58 - 42y}} \n\\end{align*}\n\nSetting the derivative equal to $0,$ we have $g'(y) = -\\frac{21}{\\sqrt{58 - 42y}} = 0.$ However, this is only possible if the denominator is equal to $0,$ which leads to",
+            1
+        ],
+        [
+            "Step 5:\nTo find the minimum value of $g(y),$ we set $g'(y) = -\\frac{21}{\\sqrt{58 - 42y}} = 0.$ However, we see that this is only possible if $\\sqrt{58 - 42y} = 0.$ Since the square root of a number can only be zero if the number itself is zero, we have $58 - 42y = 0.$ Solving for $y,$ we have $y = \\frac{58}{42} = \\frac{29}{21}.$",
+            1
+        ],
+        [
+            "We have $y = \\frac{29}{21}$.",
+            1
+        ],
+        [
+            "Since $y \\le \\tfrac{29}{21},$ the expression $\\sqrt{58 - 42y} + \\sqrt{149 - 140y}$ attains its minimum value at $y = \\tfrac{29}{21},$ so we must have $\\sqrt{58 - 42y} = \\sqrt{58 - 42\\left(\\tfrac{29}{21}\\right)} = \\sqrt{8} = 2\\sqrt{2}.$",
+            1
+        ],
+        [
+            "$\\sqrt{149 - 140y} = \\sqrt{149 - 140\\left(\\frac{29}{21}\\right)} = \\sqrt{8} = 2\\sqrt{2}$",
+            1
+        ],
+        [
+            "Step 6:\n$2\\sqrt{2} + 2\\sqrt{2} = 4\\sqrt{2}$",
+            1
+        ],
+        [
+            "Step 7:\nTherefore, the minimum possible value of $\\sqrt{58 - 42x} + \\sqrt{149 - 140 \\sqrt{1 - x^2}}$ is $\\boxed{4\\sqrt{2}}$.",
+            1
+        ]
+    ],
+    "time": 135.84026050567627,
+    "total_tokens": 14381,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}
