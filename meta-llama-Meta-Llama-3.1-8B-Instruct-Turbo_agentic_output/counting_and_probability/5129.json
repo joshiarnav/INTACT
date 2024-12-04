@@ -1,0 +1,36 @@
+{
+    "problem": "A paperboy delivers newspapers to 10 houses along Main Street. Wishing to save effort, he doesn't always deliver to every house, but to avoid being fired he never misses three consecutive houses. Compute the number of ways the paperboy could deliver papers in this manner.\n",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "We can find a recursion. Let $D_n$ be the number of legal delivery sequences for $n$ houses. If a sequence ends with a delivery, we simply append one to $D_{n - 1}$. If it ends in $1$ nondelivery, we append a nondelivery and a delivery to $D_{n - 2}$. If it ends in $2$ nondeliveries, we append them and a delivery to $D_{n - 3}$. So\n$D_n = D_{n - 1} + D_{n - 2} + D_{n - 3}$.\nThus, since clearly $D_1 = 2$, $D_2 = 4$, $D_3 = 7$, we have $D_4 = 13$, $D_5 = 24$, $D_6 = 44$, $D_7 = 81$, $D_8 = 149$, $D_9 = 274$, $D_{10} = \\boxed{504}$.",
+    "is_solved": true,
+    "model_solution": "To solve this problem, we can use dynamic programming. \n\nLet's define a recursive function: \n\n- F(n) = number of ways to deliver papers to n houses without missing three consecutive houses.\n\nStep 1: Base cases\n- F(1) = 2 (either deliver or not deliver)\n- F(2) = 4 (deliver to house 1 or not, and deliver to house 2 or not)\n- F(3) = 7 (seven possibilities: deliver to all, miss the first house, miss the second house, miss the third house, deliver to the first house and miss the second and third, deliver to the second house and miss the first and third, or deliver to the third house and miss the first and second)\nStep 2: Recursive relationship\n- F(n) = F(n-1) + F(n-2) + F(n-3) because the paperboy can either:\n  - Deliver to the nth house and deliver to the previous houses (F(n-1) ways),\n  - Deliver to the nth house and miss the (n-1)th house, and deliver to the (n-2)th house (F(n-2) ways),\n  - Deliver to the nth house and miss the (n-1)th and (n-2)th houses (F(n-3) ways).\nStep 3: Utilize the recursive relationship to find the number of ways the paperboy could deliver papers to 10 houses.\n\nF(4) = F(3) + F(2) + F(1) = 7 + 4 + 2 = 13\nF(5) = F(4) + F(3) + F(2) = 13 + 7 + 4 = 24\nF(6) = F(5) + F(4) + F(3) = 24 + 13 + 7 = 44\nF(7) = F(6) + F(5) + F(4) = 44 + 24 + 13 = 81\nF(8) = F(7) + F(6) + F(5) = 81 + 44 + 24 = 149\nF(9) = F(8) + F(7) + F(6) = 149 + 81 + 44 = 274\nF(10) = F(9) + F(8) + F(7) = 274 + 149 + 81 = 504\nStep 4: The final step is to identify the number of ways the paperboy could deliver papers to 10 houses, which is already calculated in the previous step.\n\n$\\boxed{504}$",
+    "steps": [
+        "To solve this problem, we can use dynamic programming. \n\nLet's define a recursive function: \n\n- F(n) = number of ways to deliver papers to n houses without missing three consecutive houses.\n\nStep 1: Base cases\n- F(1) = 2 (either deliver or not deliver)\n- F(2) = 4 (deliver to house 1 or not, and deliver to house 2 or not)\n- F(3) = 7 (seven possibilities: deliver to all, miss the first house, miss the second house, miss the third house, deliver to the first house and miss the second and third, deliver to the second house and miss the first and third, or deliver to the third house and miss the first and second)",
+        "Step 2: Recursive relationship\n- F(n) = F(n-1) + F(n-2) + F(n-3) because the paperboy can either:\n  - Deliver to the nth house and deliver to the previous houses (F(n-1) ways),\n  - Deliver to the nth house and miss the (n-1)th house, and deliver to the (n-2)th house (F(n-2) ways),\n  - Deliver to the nth house and miss the (n-1)th and (n-2)th houses (F(n-3) ways).",
+        "Step 3: Utilize the recursive relationship to find the number of ways the paperboy could deliver papers to 10 houses.\n\nF(4) = F(3) + F(2) + F(1) = 7 + 4 + 2 = 13\nF(5) = F(4) + F(3) + F(2) = 13 + 7 + 4 = 24\nF(6) = F(5) + F(4) + F(3) = 24 + 13 + 7 = 44\nF(7) = F(6) + F(5) + F(4) = 44 + 24 + 13 = 81\nF(8) = F(7) + F(6) + F(5) = 81 + 44 + 24 = 149\nF(9) = F(8) + F(7) + F(6) = 149 + 81 + 44 = 274\nF(10) = F(9) + F(8) + F(7) = 274 + 149 + 81 = 504",
+        "Step 4: The final step is to identify the number of ways the paperboy could deliver papers to 10 houses, which is already calculated in the previous step.\n\n$\\boxed{504}$"
+    ],
+    "full_steps": [
+        [
+            "To solve this problem, we can use dynamic programming. \n\nLet's define a recursive function: \n\n- F(n) = number of ways to deliver papers to n houses without missing three consecutive houses.\n\nStep 1: Base cases\n- F(1) = 2 (either deliver or not deliver)\n- F(2) = 4 (deliver to house 1 or not, and deliver to house 2 or not)\n- F(3) = 7 (seven possibilities: deliver to all, miss the first house, miss the second house, miss the third house, deliver to the first house and miss the second and third, deliver to the second house and miss the first and third, or deliver to the third house and miss the first and second)",
+            1
+        ],
+        [
+            "Step 2: Recursive relationship\n- F(n) = F(n-1) + F(n-2) + F(n-3) because the paperboy can either:\n  - Deliver to the nth house and deliver to the previous houses (F(n-1) ways),\n  - Deliver to the nth house and miss the (n-1)th house, and deliver to the (n-2)th house (F(n-2) ways),\n  - Deliver to the nth house and miss the (n-1)th and (n-2)th houses (F(n-3) ways).",
+            1
+        ],
+        [
+            "Step 3: Utilize the recursive relationship to find the number of ways the paperboy could deliver papers to 10 houses.\n\nF(4) = F(3) + F(2) + F(1) = 7 + 4 + 2 = 13\nF(5) = F(4) + F(3) + F(2) = 13 + 7 + 4 = 24\nF(6) = F(5) + F(4) + F(3) = 24 + 13 + 7 = 44\nF(7) = F(6) + F(5) + F(4) = 44 + 24 + 13 = 81\nF(8) = F(7) + F(6) + F(5) = 81 + 44 + 24 = 149\nF(9) = F(8) + F(7) + F(6) = 149 + 81 + 44 = 274\nF(10) = F(9) + F(8) + F(7) = 274 + 149 + 81 = 504",
+            1
+        ],
+        [
+            "Step 4: The final step is to identify the number of ways the paperboy could deliver papers to 10 houses, which is already calculated in the previous step.\n\n$\\boxed{504}$",
+            1
+        ]
+    ],
+    "time": 18.266886234283447,
+    "total_tokens": 4186,
+    "final_answer_tokens": 699,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

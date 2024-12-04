@@ -1,0 +1,8 @@
+{
+    "problem": "For a positive constant $c,$ in spherical coordinates $(\\rho,\\theta,\\phi),$ find the shape described by the equation\n\\[\\rho = c.\\](A) Line\n(B) Circle\n(C) Plane\n(D) Sphere\n(E) Cylinder\n(F) Cone\n\nEnter the letter of the correct option.",
+    "solution": "In spherical coordinates, $\\rho$ is the distance from a point to the origin.  So if this distance is fixed, then we obtain a sphere.  The answer is $\\boxed{\\text{(D)}}.$\n\n[asy]\nimport three;\nimport solids;\n\nsize(180);\ncurrentprojection = perspective(6,3,2);\n\ncurrentlight = (1,0,1);\n\ndraw((-1,0,0)--(-2,0,0));\ndraw((0,-1,0)--(0,-2,0));\ndraw((0,0,-1)--(0,0,-2));\ndraw((1,0,0)--(2,0,0));\ndraw((0,1,0)--(0,2,0));\ndraw((0,0,1)--(0,0,2));\ndraw(surface(sphere(1)),gray(0.8));\n\nlabel(\"$\\rho = c$\", (1,1.2,-0.6));\n[/asy]",
+    "total_tokens": 233,
+    "time_taken": 2.051848888397217,
+    "file_name": "./MATH_subsample_uniform/precalculus/520.json",
+    "model_solution": "To understand the equation, let's break down the spherical coordinates. $\\rho$ represents the radius or distance from the origin, $\\theta$ is the azimuthal angle, and $\\phi$ is the polar angle.\n\nThe given equation is $\\rho = c.$\n\nSince $\\rho$ represents the distance from the origin, setting it to a constant $c$ means that every point on the shape is at a fixed distance $c$ from the origin.\n\nTherefore, the shape described by this equation is a sphere with radius $c.$\n\nSo, the answer is $\\boxed{(D)}.$"
+}

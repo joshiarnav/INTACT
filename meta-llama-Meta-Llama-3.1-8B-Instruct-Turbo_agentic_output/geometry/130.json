@@ -1,0 +1,51 @@
+{
+    "problem": "The sides of triangle $PQR$ are tangent to a circle with center $C$ as shown. Given that $\\angle PQR = 63^\\circ$ and $\\angle QPR = 59^\\circ$, find $\\angle QRC$, in degrees.\n\n[asy]\n\nunitsize(1.0 cm);\n\npair Q, P, R, C;\n\nQ = (2.43,3.46);\n\nP = (0,0);\n\nR = (4.43,0);\n\nC = incenter(Q,P,R);\n\ndraw(Q--P--R--cycle);\n\ndraw(incircle(Q,P,R));\n\ndraw(R--C);\n\nlabel(\"$Q$\", Q, N);\n\nlabel(\"$P$\", P, SW);\n\nlabel(\"$R$\", R, SE);\n\nlabel(\"$C$\", C, N);\n\n[/asy]",
+    "level": "Level 2",
+    "type": "Geometry",
+    "solution": "The circle with center $C$ is the incircle of $\\triangle PQR$. So, any segment from a vertex of the triangle to $C$ is an angle bisector.\n\nThe sum of the measures of the internal angles of a triangle is $180^\\circ$, so\n\n\\begin{align*}\n\\angle QRP &= 180^\\circ - \\angle PQR - \\angle QPR \\\\\n&= 180^\\circ - 63^\\circ - 59^\\circ\\\\\n&= 58^\\circ.\n\\end{align*}Since $\\overline{RC}$ bisects $\\angle QRP$, we have $\\angle QRC = \\frac{58^\\circ}{2} = \\boxed{29^\\circ}$.",
+    "is_solved": true,
+    "model_solution": "Since $\\angle PQR$ and $\\angle QPR$ are given, the first step is to find $\\angle QRP$, which is the third angle of triangle $PQR$. This can be calculated using the fact that the sum of the angles in a triangle is $180^\\circ$: $\\angle QRP = 180^\\circ - \\angle PQR - \\angle QPR$.\nSince $\\angle QRP = 180^\\circ - \\angle PQR - \\angle QPR$, we find that $\\angle QRP = 180^\\circ - 63^\\circ - 59^\\circ = 58^\\circ$.\nSince $C$ is the incenter of triangle $PQR$, the line segment $RC$ bisects $\\angle QRP$. Therefore, $\\angle QRC = \\frac{1}{2} \\angle QRP = \\frac{1}{2} \\cdot 58^\\circ = 29^\\circ.$\nSince $RC$ bisects $\\angle QRP$, the line segment $QC$ also bisects $\\angle QRP$. Therefore, $\\angle QRC = \\angle CRQ = \\frac{1}{2} \\angle QRP$.\nSince $C$ is the incenter of triangle $PQR$, $\\angle QRC$ is also an inscribed angle and $\\angle PRQ$ is the central angle that subtends the same arc as $\\angle QRC$, so they are congruent. Therefore, $\\angle QRC = \\frac{1}{2} \\angle PRQ = \\frac{1}{2}(180^\\circ - 63^\\circ - 59^\\circ)$.\nSince $\\angle QRC = \\frac{1}{2} \\angle PRQ = \\frac{1}{2}(180^\\circ - 63^\\circ - 59^\\circ)$, we can now calculate the value of $\\angle QRC$.\n \n$\\frac{1}{2}(180^\\circ - 63^\\circ - 59^\\circ) = \\frac{1}{2}(58^\\circ) = \\boxed{29}.$\nSince $\\angle QRC = \\frac{1}{2} \\angle PRQ = \\frac{1}{2}(180^\\circ - 63^\\circ - 59^\\circ)$, we can now calculate the value of $\\angle QRC$.\n\nFinal Answer: $\\boxed{29}$",
+    "steps": [
+        "Since $\\angle PQR$ and $\\angle QPR$ are given, the first step is to find $\\angle QRP$, which is the third angle of triangle $PQR$. This can be calculated using the fact that the sum of the angles in a triangle is $180^\\circ$: $\\angle QRP = 180^\\circ - \\angle PQR - \\angle QPR$.",
+        "Since $\\angle QRP = 180^\\circ - \\angle PQR - \\angle QPR$, we find that $\\angle QRP = 180^\\circ - 63^\\circ - 59^\\circ = 58^\\circ$.",
+        "Since $C$ is the incenter of triangle $PQR$, the line segment $RC$ bisects $\\angle QRP$. Therefore, $\\angle QRC = \\frac{1}{2} \\angle QRP = \\frac{1}{2} \\cdot 58^\\circ = 29^\\circ.$",
+        "Since $RC$ bisects $\\angle QRP$, the line segment $QC$ also bisects $\\angle QRP$. Therefore, $\\angle QRC = \\angle CRQ = \\frac{1}{2} \\angle QRP$.",
+        "Since $C$ is the incenter of triangle $PQR$, $\\angle QRC$ is also an inscribed angle and $\\angle PRQ$ is the central angle that subtends the same arc as $\\angle QRC$, so they are congruent. Therefore, $\\angle QRC = \\frac{1}{2} \\angle PRQ = \\frac{1}{2}(180^\\circ - 63^\\circ - 59^\\circ)$.",
+        "Since $\\angle QRC = \\frac{1}{2} \\angle PRQ = \\frac{1}{2}(180^\\circ - 63^\\circ - 59^\\circ)$, we can now calculate the value of $\\angle QRC$.\n \n$\\frac{1}{2}(180^\\circ - 63^\\circ - 59^\\circ) = \\frac{1}{2}(58^\\circ) = \\boxed{29}.$",
+        "Since $\\angle QRC = \\frac{1}{2} \\angle PRQ = \\frac{1}{2}(180^\\circ - 63^\\circ - 59^\\circ)$, we can now calculate the value of $\\angle QRC$.\n\nFinal Answer: $\\boxed{29}$"
+    ],
+    "full_steps": [
+        [
+            "Since $\\angle PQR$ and $\\angle QPR$ are given, the first step is to find $\\angle QRP$, which is the third angle of triangle $PQR$. This can be calculated using the fact that the sum of the angles in a triangle is $180^\\circ$: $\\angle QRP = 180^\\circ - \\angle PQR - \\angle QPR$.",
+            1
+        ],
+        [
+            "Since $\\angle QRP = 180^\\circ - \\angle PQR - \\angle QPR$, we find that $\\angle QRP = 180^\\circ - 63^\\circ - 59^\\circ = 58^\\circ$.",
+            1
+        ],
+        [
+            "Since $C$ is the incenter of triangle $PQR$, the line segment $RC$ bisects $\\angle QRP$. Therefore, $\\angle QRC = \\frac{1}{2} \\angle QRP = \\frac{1}{2} \\cdot 58^\\circ = 29^\\circ.$",
+            1
+        ],
+        [
+            "Since $RC$ bisects $\\angle QRP$, the line segment $QC$ also bisects $\\angle QRP$. Therefore, $\\angle QRC = \\angle CRQ = \\frac{1}{2} \\angle QRP$.",
+            1
+        ],
+        [
+            "Since $C$ is the incenter of triangle $PQR$, $\\angle QRC$ is also an inscribed angle and $\\angle PRQ$ is the central angle that subtends the same arc as $\\angle QRC$, so they are congruent. Therefore, $\\angle QRC = \\frac{1}{2} \\angle PRQ = \\frac{1}{2}(180^\\circ - 63^\\circ - 59^\\circ)$.",
+            1
+        ],
+        [
+            "Since $\\angle QRC = \\frac{1}{2} \\angle PRQ = \\frac{1}{2}(180^\\circ - 63^\\circ - 59^\\circ)$, we can now calculate the value of $\\angle QRC$.\n \n$\\frac{1}{2}(180^\\circ - 63^\\circ - 59^\\circ) = \\frac{1}{2}(58^\\circ) = \\boxed{29}.$",
+            1
+        ],
+        [
+            "Since $\\angle QRC = \\frac{1}{2} \\angle PRQ = \\frac{1}{2}(180^\\circ - 63^\\circ - 59^\\circ)$, we can now calculate the value of $\\angle QRC$.\n\nFinal Answer: $\\boxed{29}$",
+            1
+        ]
+    ],
+    "time": 102.81855010986328,
+    "total_tokens": 7335,
+    "final_answer_tokens": 734,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

@@ -1,0 +1,51 @@
+{
+    "problem": "What is the sum of all values of $k$ such that the equation $2x^2-kx+8=0$ has two distinct integer solutions?",
+    "level": "Level 5",
+    "type": "Algebra",
+    "solution": "We use the fact that the sum and product of the roots of a quadratic equation $ax^2+bx+c=0$ are given by $-b/a$ and $c/a$, respectively. Let the two roots of the equation be $p$ and $q$. Then $p+q=k/2$. However the only other restriction on $p$ and $q$ is that $pq = 4$ and that $p$ and $q$ are distinct integers. For each such possibility $(p,q)$, we also have the possibility $(-p,-q)$ since $(-p)(-q) = pq = 4$. This gives two values of $k$: $k=2(p+q)$ and $k=2(-p-q)$. Since these occur in such pairs, the sum of all possible values of $k$ is $\\boxed{0}$.\n\nAlternatively, one can note that the only way to factor 4 into 2 distinct integer factors is $4\\cdot1$ and $(-4)(-1)$, so that the two possible values of $k$ are $10$ and $-10$, given a sum of $0$.",
+    "is_solved": true,
+    "model_solution": "To find the values of $k$ for which the given quadratic equation has two distinct integer solutions, we first need to use Vieta's formulas. Vieta's formulas state that for a quadratic equation of the form $ax^2+bx+c=0$ with roots $r_1$ and $r_2$, the following relationships hold:\n\n- $r_1+r_2 = \\frac{-b}{a}$ \n- $r_1 \\cdot r_2 = \\frac{c}{a}$ \n\nIn our equation, $2x^2-kx+8=0$, $a=2$, $b=-k$, and $c=8$.\nUsing Vieta's formulas, we know that $r_1 + r_2 = \\frac{-(-k)}{2} = \\frac{k}{2}$ and $r_1 \\cdot r_2 = \\frac{8}{2} = 4$. Since we are looking for two distinct integer solutions, $r_1$ and $r_2$ must be integers with a product of 4.\nThe next step is to list all the pairs of distinct integers $(r_1,r_2)$ whose product is $4$, and use the fact that their sum is $\\frac{k}{2}$ to find the corresponding values of $k$. The pairs of distinct integers with a product of $4$ are $(1,4)$, $(-1,-4)$, $(2,2)$, and $(-2,-2)$. However, since $(2,2)$ and $(-2,-2)$ do not give distinct roots, we can disregard them.\nSince the only valid pairs of distinct integers with a product of 4 are $(1,4)$, $(-1,-4)$, $(2,2)$, and $(-2,-2)$, we can disregard $(2,2)$ and $(-2,-2)$. Now, we can use the fact that $r_1 + r_2 = \\frac{k}{2}$ for each pair to find the corresponding values of $k$.\n\nFor $(1,4)$, $1 + 4 = 5 = \\frac{k}{2}$, so $k = 10$.\n\nFor $(-1,-4)$, $-1 + (-4) = -5 = \\frac{k}{2}$, so $k = -10$.\n\nThe next step is to find the sum of all valid values of $k$.\nSince we found the values of $k$ for the pairs $(1,4)$ and $(-1,-4)$, we can now find the sum of these values. The sum of all valid values of $k$ is $10 + (-10) = 0$.\nThe final step is to confirm that this is indeed the sum of all values of $k$ for which the equation has two distinct integer solutions, as we have exhausted all possible pairs of distinct integers with a product of 4.\nThe final step is to confirm that this is indeed the sum of all values of $k$ for which the equation has two distinct integer solutions, as we have exhausted all possible pairs of distinct integers with a product of 4. By inspection, we can see that we have indeed considered all possible pairs, and our solution is complete. The final answer is $\\boxed{0}$.",
+    "steps": [
+        "To find the values of $k$ for which the given quadratic equation has two distinct integer solutions, we first need to use Vieta's formulas. Vieta's formulas state that for a quadratic equation of the form $ax^2+bx+c=0$ with roots $r_1$ and $r_2$, the following relationships hold:\n\n- $r_1+r_2 = \\frac{-b}{a}$ \n- $r_1 \\cdot r_2 = \\frac{c}{a}$ \n\nIn our equation, $2x^2-kx+8=0$, $a=2$, $b=-k$, and $c=8$.",
+        "Using Vieta's formulas, we know that $r_1 + r_2 = \\frac{-(-k)}{2} = \\frac{k}{2}$ and $r_1 \\cdot r_2 = \\frac{8}{2} = 4$. Since we are looking for two distinct integer solutions, $r_1$ and $r_2$ must be integers with a product of 4.",
+        "The next step is to list all the pairs of distinct integers $(r_1,r_2)$ whose product is $4$, and use the fact that their sum is $\\frac{k}{2}$ to find the corresponding values of $k$. The pairs of distinct integers with a product of $4$ are $(1,4)$, $(-1,-4)$, $(2,2)$, and $(-2,-2)$. However, since $(2,2)$ and $(-2,-2)$ do not give distinct roots, we can disregard them.",
+        "Since the only valid pairs of distinct integers with a product of 4 are $(1,4)$, $(-1,-4)$, $(2,2)$, and $(-2,-2)$, we can disregard $(2,2)$ and $(-2,-2)$. Now, we can use the fact that $r_1 + r_2 = \\frac{k}{2}$ for each pair to find the corresponding values of $k$.\n\nFor $(1,4)$, $1 + 4 = 5 = \\frac{k}{2}$, so $k = 10$.\n\nFor $(-1,-4)$, $-1 + (-4) = -5 = \\frac{k}{2}$, so $k = -10$.\n\nThe next step is to find the sum of all valid values of $k$.",
+        "Since we found the values of $k$ for the pairs $(1,4)$ and $(-1,-4)$, we can now find the sum of these values. The sum of all valid values of $k$ is $10 + (-10) = 0$.",
+        "The final step is to confirm that this is indeed the sum of all values of $k$ for which the equation has two distinct integer solutions, as we have exhausted all possible pairs of distinct integers with a product of 4.",
+        "The final step is to confirm that this is indeed the sum of all values of $k$ for which the equation has two distinct integer solutions, as we have exhausted all possible pairs of distinct integers with a product of 4. By inspection, we can see that we have indeed considered all possible pairs, and our solution is complete. The final answer is $\\boxed{0}$."
+    ],
+    "full_steps": [
+        [
+            "To find the values of $k$ for which the given quadratic equation has two distinct integer solutions, we first need to use Vieta's formulas. Vieta's formulas state that for a quadratic equation of the form $ax^2+bx+c=0$ with roots $r_1$ and $r_2$, the following relationships hold:\n\n- $r_1+r_2 = \\frac{-b}{a}$ \n- $r_1 \\cdot r_2 = \\frac{c}{a}$ \n\nIn our equation, $2x^2-kx+8=0$, $a=2$, $b=-k$, and $c=8$.",
+            1
+        ],
+        [
+            "Using Vieta's formulas, we know that $r_1 + r_2 = \\frac{-(-k)}{2} = \\frac{k}{2}$ and $r_1 \\cdot r_2 = \\frac{8}{2} = 4$. Since we are looking for two distinct integer solutions, $r_1$ and $r_2$ must be integers with a product of 4.",
+            1
+        ],
+        [
+            "The next step is to list all the pairs of distinct integers $(r_1,r_2)$ whose product is $4$, and use the fact that their sum is $\\frac{k}{2}$ to find the corresponding values of $k$. The pairs of distinct integers with a product of $4$ are $(1,4)$, $(-1,-4)$, $(2,2)$, and $(-2,-2)$. However, since $(2,2)$ and $(-2,-2)$ do not give distinct roots, we can disregard them.",
+            1
+        ],
+        [
+            "Since the only valid pairs of distinct integers with a product of 4 are $(1,4)$, $(-1,-4)$, $(2,2)$, and $(-2,-2)$, we can disregard $(2,2)$ and $(-2,-2)$. Now, we can use the fact that $r_1 + r_2 = \\frac{k}{2}$ for each pair to find the corresponding values of $k$.\n\nFor $(1,4)$, $1 + 4 = 5 = \\frac{k}{2}$, so $k = 10$.\n\nFor $(-1,-4)$, $-1 + (-4) = -5 = \\frac{k}{2}$, so $k = -10$.\n\nThe next step is to find the sum of all valid values of $k$.",
+            1
+        ],
+        [
+            "Since we found the values of $k$ for the pairs $(1,4)$ and $(-1,-4)$, we can now find the sum of these values. The sum of all valid values of $k$ is $10 + (-10) = 0$.",
+            1
+        ],
+        [
+            "The final step is to confirm that this is indeed the sum of all values of $k$ for which the equation has two distinct integer solutions, as we have exhausted all possible pairs of distinct integers with a product of 4.",
+            1
+        ],
+        [
+            "The final step is to confirm that this is indeed the sum of all values of $k$ for which the equation has two distinct integer solutions, as we have exhausted all possible pairs of distinct integers with a product of 4. By inspection, we can see that we have indeed considered all possible pairs, and our solution is complete. The final answer is $\\boxed{0}$.",
+            1
+        ]
+    ],
+    "time": 117.86957287788391,
+    "total_tokens": 7881,
+    "final_answer_tokens": 804,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

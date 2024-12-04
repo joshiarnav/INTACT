@@ -1,0 +1,8 @@
+{
+    "problem": "When two fair 6-sided dice are tossed, the numbers $a$ and $b$ are obtained. What is the probability that the two digit number $ab$ (where $a$ and $b$ are digits) and $a$ and $b$ are all divisible by 3?",
+    "solution": "$ab$ (where $a$ and $b$ are digits) is divisible by 3 only when $a+b$ is divisible by 3. Since 3 divides both $a$ and $a+b$, 3 must divide $b$. Therefore, $a$ and $b$ can equal 3 or 6. The probability that $a$ equals 3 or 6 is $\\frac26 = \\frac13$. The probability that $b$ equals 3 or 6 is $\\frac26 = \\frac13$. Therefore, The probability that both $a$ and $b$ equal 3 or 6 is $\\left(\\frac13\\right)^2 = \\boxed{\\frac19}$.",
+    "total_tokens": 358,
+    "time_taken": 3.6767189502716064,
+    "file_name": "./MATH_subsample_uniform/counting_and_probability/931.json",
+    "model_solution": "When two 6-sided dice are tossed, there are 36 possible outcomes. \n\nFor the two digit number $ab$ and $a$, $b$ to be divisible by 3, $a$ and $b$ must be either 3 or 6. \n\nLet's list the cases where this happens:\n\n- When $a=3$ and $b=3$, the outcome is (3,3).\n- When $a=3$ and $b=6$, the outcomes are (3,6) and (6,3).\n- When $a=3$ and $b=3$ is counted only once above, but it can be written as (3,3) however (3,3) does also count for a=6, b=3 which has been counted already as (6 3)  so there's no need to write the reverse.\n- When $a=6$ and $b=3$, the outcome is (6,3).\n- When $a=6$ and $b=6$, the outcome is (6,6).\n\nThe number of successful outcomes is 5.\n\nTherefore, the probability is $\\boxed{\\frac{5}{36}}$."
+}

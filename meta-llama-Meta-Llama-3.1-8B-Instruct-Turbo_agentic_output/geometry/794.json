@@ -1,0 +1,66 @@
+{
+    "problem": "In triangle $ABC$, $\\angle C=90^\\circ$, $AC=6$ and $BC=8$. Points $D$ and $E$ are on $\\overline{AB}$ and $\\overline{BC}$, respectively, and $\\angle BED=90^\\circ$. If $DE=4$, then what is the length of $BD$? [asy]\nimport olympiad; import geometry; size(150); defaultpen(linewidth(0.8));\ndraw(origin--(6,0)--(6,8)--cycle);\ndraw((2,8/3)--(6,8/3));\ndot(\"$A$\",origin,SW); dot(\"$B$\",(6,8),NE); dot(\"$C$\",(6,0),SE); dot(\"$D$\",(2,8/3),W); dot(\"$E$\",(6,8/3),E);\ndraw(rightanglemark((6,8),(6,8/3),(2,8/3),12));\ndraw(rightanglemark((6,8),(6,0),(origin),12));\n[/asy]",
+    "level": "Level 3",
+    "type": "Geometry",
+    "solution": "Applying the Pythagorean Theorem to triangle $ABC$ gives $BA=10$. Since $\\triangle DBE\\sim\\triangle ABC$, $$\\frac{BD}{BA}=\\frac{DE}{AC}.\\qquad{\\rm So}\\qquad\nBD=\\frac{DE}{AC}(BA)=\\frac 46(10)=\\boxed{\\frac{20}{3}}.$$",
+    "is_solved": false,
+    "model_solution": "First step:  Use the Pythagorean Theorem to find the length of side $AB$ in triangle $ABC$. This is done by calculating $AB = \\sqrt{AC^2 + BC^2}$.\nSecond step:  Since $\\triangle DBE$ is similar to $\\triangle ABC$ by Angle-Angle Similarity, we can set up a proportion $\\frac{BD}{BA} = \\frac{DE}{AC}$. \n\nWe've already found that $AC=6$ and $DE=4$. We also know $AB = \\sqrt{AC^2 + BC^2}$, so let's find the value of $AB$.\nSince we found $AB = \\sqrt{AC^2 + BC^2}$, and we know that $AC=6$ and $BC=8$, we can substitute these values in. \n\nThe next step is to plug in the known values into the equation for $AB$, calculate it, and then use that value in the proportion $\\frac{BD}{BA} = \\frac{DE}{AC}$. \n\n$AB = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10.$\nUsing the proportion $\\frac{BD}{BA} = \\frac{DE}{AC}$, and plugging in the known values ($AC=6$, $DE=4$, and $AB=10$) gives $\\frac{BD}{10} = \\frac{4}{6}$. Solving for $BD$, we get $BD = \\frac{4}{6} \\times 10 = \\frac{40}{6} = \\frac{20}{3}$.\nNow that we have the value of $BD$ as $\\frac{20}{3}$, we can verify our solution by checking if the lengths of the sides in $\\triangle DBE$ satisfy the Pythagorean Theorem.\nNow that we know $BD = \\frac{20}{3}$, we can verify our solution by checking if the lengths of the sides in $\\triangle DBE$ satisfy the Pythagorean Theorem: $DE^2 + BD^2 = BE^2$. We know $DE=4$ and $BD=\\frac{20}{3}$, so $BE^2 = 4^2 + \\left(\\frac{20}{3}\\right)^2 = 16 + \\frac{400}{9} = \\frac{144 + 400}{9} = \\frac{544}{9}$. To complete the Pythagorean Theorem check, we must find the value of $BE$.\nTo complete the Pythagorean Theorem check, take the square root of $\\frac{544}{9}$. This gives us $BE = \\sqrt{\\frac{544}{9}} = \\frac{\\sqrt{544}}{3} = \\frac{\\sqrt{16 \\times 34}}{3} = \\frac{4\\sqrt{34}}{3}$.\nGiven the lengths of $DE$ and $BE$, we need to find the length of $BE$ to complete the Pythagorean Theorem check. We have $BE = \\frac{4\\sqrt{34}}{3}$. Now we can proceed to the Pythagorean Theorem check. To complete the Pythagorean Theorem check, we need to find the length of $BE$ and compare it with the value of $\\frac{4\\sqrt{34}}{3}$. We have the following Pythagorean Theorem check: $DE^2 + BD^2 = BE^2$. We know $DE=4$, $BD=\\frac{20}{3}$, and $BE=\\frac{4\\sqrt{34}}{3}$. So, we can write the check as: $4^2 + \\left(\\frac{20}{3}\\right)^2 = \\left(\\frac{4\\sqrt{34}}{3}\\right)^2$. We can simplify this equation to verify if our solution is correct.\nWe can simplify the equation by evaluating each side separately: \n$4^2 + \\left(\\frac{20}{3}\\right)^2 = \\left(\\frac{4\\sqrt{34}}{3}\\right)^2$. \nEvaluating the left side, we get $16 + \\frac{400}{9}$. \nEvaluating the right side, we get $\\frac{16 \\times 34}{9} = \\frac{544}{9}$.\nSince $\\frac{16 + 400}{9} = \\frac{416}{9}$ and $\\frac{544}{9}$ are not equal, we must have made a mistake.\nSince $16 + \\frac{400}{9}$ and $\\frac{544}{9}$ are not equal, the given solution contains a mistake. However, we initially found $BD = \\frac{4}{6} \\times 10 = \\frac{40}{6} = \\frac{20}{3}$. To correct the mistake, we can re-evaluate the proportion $\\frac{BD}{BA} = \\frac{DE}{AC}$ with $AB=10$, $AC=6$, and $DE=4$. We have $\\frac{BD}{10} = \\frac{4}{6}$. Solving for $BD$, we get $BD = \\frac{4}{6} \\times 10 = \\frac{40}{6} = \\frac{20}{3}$.",
+    "steps": [
+        "First step:  Use the Pythagorean Theorem to find the length of side $AB$ in triangle $ABC$. This is done by calculating $AB = \\sqrt{AC^2 + BC^2}$.",
+        "Second step:  Since $\\triangle DBE$ is similar to $\\triangle ABC$ by Angle-Angle Similarity, we can set up a proportion $\\frac{BD}{BA} = \\frac{DE}{AC}$. \n\nWe've already found that $AC=6$ and $DE=4$. We also know $AB = \\sqrt{AC^2 + BC^2}$, so let's find the value of $AB$.",
+        "Since we found $AB = \\sqrt{AC^2 + BC^2}$, and we know that $AC=6$ and $BC=8$, we can substitute these values in. \n\nThe next step is to plug in the known values into the equation for $AB$, calculate it, and then use that value in the proportion $\\frac{BD}{BA} = \\frac{DE}{AC}$. \n\n$AB = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10.$",
+        "Using the proportion $\\frac{BD}{BA} = \\frac{DE}{AC}$, and plugging in the known values ($AC=6$, $DE=4$, and $AB=10$) gives $\\frac{BD}{10} = \\frac{4}{6}$. Solving for $BD$, we get $BD = \\frac{4}{6} \\times 10 = \\frac{40}{6} = \\frac{20}{3}$.",
+        "Now that we have the value of $BD$ as $\\frac{20}{3}$, we can verify our solution by checking if the lengths of the sides in $\\triangle DBE$ satisfy the Pythagorean Theorem.",
+        "Now that we know $BD = \\frac{20}{3}$, we can verify our solution by checking if the lengths of the sides in $\\triangle DBE$ satisfy the Pythagorean Theorem: $DE^2 + BD^2 = BE^2$. We know $DE=4$ and $BD=\\frac{20}{3}$, so $BE^2 = 4^2 + \\left(\\frac{20}{3}\\right)^2 = 16 + \\frac{400}{9} = \\frac{144 + 400}{9} = \\frac{544}{9}$. To complete the Pythagorean Theorem check, we must find the value of $BE$.",
+        "To complete the Pythagorean Theorem check, take the square root of $\\frac{544}{9}$. This gives us $BE = \\sqrt{\\frac{544}{9}} = \\frac{\\sqrt{544}}{3} = \\frac{\\sqrt{16 \\times 34}}{3} = \\frac{4\\sqrt{34}}{3}$.",
+        "Given the lengths of $DE$ and $BE$, we need to find the length of $BE$ to complete the Pythagorean Theorem check. We have $BE = \\frac{4\\sqrt{34}}{3}$. Now we can proceed to the Pythagorean Theorem check. To complete the Pythagorean Theorem check, we need to find the length of $BE$ and compare it with the value of $\\frac{4\\sqrt{34}}{3}$. We have the following Pythagorean Theorem check: $DE^2 + BD^2 = BE^2$. We know $DE=4$, $BD=\\frac{20}{3}$, and $BE=\\frac{4\\sqrt{34}}{3}$. So, we can write the check as: $4^2 + \\left(\\frac{20}{3}\\right)^2 = \\left(\\frac{4\\sqrt{34}}{3}\\right)^2$. We can simplify this equation to verify if our solution is correct.",
+        "We can simplify the equation by evaluating each side separately: \n$4^2 + \\left(\\frac{20}{3}\\right)^2 = \\left(\\frac{4\\sqrt{34}}{3}\\right)^2$. \nEvaluating the left side, we get $16 + \\frac{400}{9}$. \nEvaluating the right side, we get $\\frac{16 \\times 34}{9} = \\frac{544}{9}$.\nSince $\\frac{16 + 400}{9} = \\frac{416}{9}$ and $\\frac{544}{9}$ are not equal, we must have made a mistake.",
+        "Since $16 + \\frac{400}{9}$ and $\\frac{544}{9}$ are not equal, the given solution contains a mistake. However, we initially found $BD = \\frac{4}{6} \\times 10 = \\frac{40}{6} = \\frac{20}{3}$. To correct the mistake, we can re-evaluate the proportion $\\frac{BD}{BA} = \\frac{DE}{AC}$ with $AB=10$, $AC=6$, and $DE=4$. We have $\\frac{BD}{10} = \\frac{4}{6}$. Solving for $BD$, we get $BD = \\frac{4}{6} \\times 10 = \\frac{40}{6} = \\frac{20}{3}$."
+    ],
+    "full_steps": [
+        [
+            "First step:  Use the Pythagorean Theorem to find the length of side $AB$ in triangle $ABC$. This is done by calculating $AB = \\sqrt{AC^2 + BC^2}$.",
+            1
+        ],
+        [
+            "Second step:  Since $\\triangle DBE$ is similar to $\\triangle ABC$ by Angle-Angle Similarity, we can set up a proportion $\\frac{BD}{BA} = \\frac{DE}{AC}$. \n\nWe've already found that $AC=6$ and $DE=4$. We also know $AB = \\sqrt{AC^2 + BC^2}$, so let's find the value of $AB$.",
+            1
+        ],
+        [
+            "Since we found $AB = \\sqrt{AC^2 + BC^2}$, and we know that $AC=6$ and $BC=8$, we can substitute these values in. \n\nThe next step is to plug in the known values into the equation for $AB$, calculate it, and then use that value in the proportion $\\frac{BD}{BA} = \\frac{DE}{AC}$. \n\n$AB = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10.$",
+            1
+        ],
+        [
+            "Using the proportion $\\frac{BD}{BA} = \\frac{DE}{AC}$, and plugging in the known values ($AC=6$, $DE=4$, and $AB=10$) gives $\\frac{BD}{10} = \\frac{4}{6}$. Solving for $BD$, we get $BD = \\frac{4}{6} \\times 10 = \\frac{40}{6} = \\frac{20}{3}$.",
+            1
+        ],
+        [
+            "Now that we have the value of $BD$ as $\\frac{20}{3}$, we can verify our solution by checking if the lengths of the sides in $\\triangle DBE$ satisfy the Pythagorean Theorem.",
+            1
+        ],
+        [
+            "Now that we know $BD = \\frac{20}{3}$, we can verify our solution by checking if the lengths of the sides in $\\triangle DBE$ satisfy the Pythagorean Theorem: $DE^2 + BD^2 = BE^2$. We know $DE=4$ and $BD=\\frac{20}{3}$, so $BE^2 = 4^2 + \\left(\\frac{20}{3}\\right)^2 = 16 + \\frac{400}{9} = \\frac{144 + 400}{9} = \\frac{544}{9}$. To complete the Pythagorean Theorem check, we must find the value of $BE$.",
+            1
+        ],
+        [
+            "To complete the Pythagorean Theorem check, take the square root of $\\frac{544}{9}$. This gives us $BE = \\sqrt{\\frac{544}{9}} = \\frac{\\sqrt{544}}{3} = \\frac{\\sqrt{16 \\times 34}}{3} = \\frac{4\\sqrt{34}}{3}$.",
+            1
+        ],
+        [
+            "Given the lengths of $DE$ and $BE$, we need to find the length of $BE$ to complete the Pythagorean Theorem check. We have $BE = \\frac{4\\sqrt{34}}{3}$. Now we can proceed to the Pythagorean Theorem check. To complete the Pythagorean Theorem check, we need to find the length of $BE$ and compare it with the value of $\\frac{4\\sqrt{34}}{3}$. We have the following Pythagorean Theorem check: $DE^2 + BD^2 = BE^2$. We know $DE=4$, $BD=\\frac{20}{3}$, and $BE=\\frac{4\\sqrt{34}}{3}$. So, we can write the check as: $4^2 + \\left(\\frac{20}{3}\\right)^2 = \\left(\\frac{4\\sqrt{34}}{3}\\right)^2$. We can simplify this equation to verify if our solution is correct.",
+            1
+        ],
+        [
+            "We can simplify the equation by evaluating each side separately: \n$4^2 + \\left(\\frac{20}{3}\\right)^2 = \\left(\\frac{4\\sqrt{34}}{3}\\right)^2$. \nEvaluating the left side, we get $16 + \\frac{400}{9}$. \nEvaluating the right side, we get $\\frac{16 \\times 34}{9} = \\frac{544}{9}$.\nSince $\\frac{16 + 400}{9} = \\frac{416}{9}$ and $\\frac{544}{9}$ are not equal, we must have made a mistake.",
+            1
+        ],
+        [
+            "Since $16 + \\frac{400}{9}$ and $\\frac{544}{9}$ are not equal, the given solution contains a mistake. However, we initially found $BD = \\frac{4}{6} \\times 10 = \\frac{40}{6} = \\frac{20}{3}$. To correct the mistake, we can re-evaluate the proportion $\\frac{BD}{BA} = \\frac{DE}{AC}$ with $AB=10$, $AC=6$, and $DE=4$. We have $\\frac{BD}{10} = \\frac{4}{6}$. Solving for $BD$, we get $BD = \\frac{4}{6} \\times 10 = \\frac{40}{6} = \\frac{20}{3}$.",
+            1
+        ]
+    ],
+    "time": 65.38909792900085,
+    "total_tokens": 17018,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

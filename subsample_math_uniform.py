@@ -9,7 +9,7 @@ random.seed(42)
 # Define paths
 source_dir = "MATH/train"
 target_dir = "MATH_subsample_uniform"
-target_per_category = 143  # 1000 / 7 ≈ 142.857, rounded up to 143
+target_per_category = 72  # 1000 / 7 ≈ 142.857, rounded up to 143
 
 # Remove target directory if it exists and create a new one
 shutil.rmtree(target_dir, ignore_errors=True)

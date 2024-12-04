@@ -1,0 +1,66 @@
+{
+    "problem": "The graph of $y = f(x)$ is shown below.\n\n[asy]\nunitsize(0.3 cm);\n\nreal func(real x) {\n  real y;\n  if (x >= -3 && x <= 0) {y = -2 - x;}\n  if (x >= 0 && x <= 2) {y = sqrt(4 - (x - 2)^2) - 2;}\n  if (x >= 2 && x <= 3) {y = 2*(x - 2);}\n  return(y);\n}\n\nint i, n;\n\nfor (i = -8; i <= 8; ++i) {\n  draw((i,-8)--(i,8),gray(0.7));\n  draw((-8,i)--(8,i),gray(0.7));\n}\n\ndraw((-8,0)--(8,0),Arrows(6));\ndraw((0,-8)--(0,8),Arrows(6));\n\nlabel(\"$x$\", (8,0), E);\nlabel(\"$y$\", (0,8), N);\n\ndraw(graph(func,-3,3),red);\n\nlabel(\"$y = f(x)$\", (4,-3), UnFill);\n[/asy]\n\nFor certain constants $a,$ $b,$ and $c,$\n\\[g(x) = af(bx) + c.\\]The graph of $y = g(x)$ is shown below.\n\n[asy]\nunitsize(0.3 cm);\n\nreal func(real x) {\n  real y;\n  if (x >= -3 && x <= 0) {y = -2 - x;}\n  if (x >= 0 && x <= 2) {y = sqrt(4 - (x - 2)^2) - 2;}\n  if (x >= 2 && x <= 3) {y = 2*(x - 2);}\n  return(y);\n}\n\nreal gunc(real x) {\n  return(func(x/2) - 4);\n}\n\nint i, n;\n\nfor (i = -8; i <= 8; ++i) {\n  draw((i,-8)--(i,8),gray(0.7));\n  draw((-8,i)--(8,i),gray(0.7));\n}\n\ndraw((-8,0)--(8,0),Arrows(6));\ndraw((0,-8)--(0,8),Arrows(6));\n\nlabel(\"$x$\", (8,0), E);\nlabel(\"$y$\", (0,8), N);\n\ndraw(graph(gunc,-6,6),red);\n\nlabel(\"$y = g(x)$\", (5,-6), UnFill);\n[/asy]\n\nEnter the ordered triple $(a,b,c).$",
+    "level": "Level 4",
+    "type": "Intermediate Algebra",
+    "solution": "We can obtain the graph of $y = g(x)$ by taking the graph of $y = f(x)$ and stretching it horizontally by a factor of 2, then shifting it down by 4 units.  Therefore, $g(x) = f \\left( \\frac{x}{2} \\right) - 4.$  This means $(a,b,c) = \\boxed{\\left( 1, \\frac{1}{2}, -4 \\right)}.$\n\nMore generally, for $c > 1,$ the graph of $y = f \\left( \\frac{x}{c} \\right)$ is obtained by stretching the graph of $y = f(x)$ horizontally by factor of $c.$",
+    "is_solved": false,
+    "model_solution": "First Step: \nTo find the values of $a,$ $b,$ and $c,$ we need to analyze the transformation from the graph of $y = f(x)$ to the graph of $y = g(x).$ Since the graph of $y = g(x)$ is a scaled and shifted version of the graph of $y = f(x),$ we can determine the values of $a,$ $b,$ and $c$ based on the transformations observed in the graphs.\nSecond Step: \nThe graph of $y = g(x)$ is obtained by horizontally stretching the graph of $y = f(x)$ by a factor of 2 and then shifting it down by 4 units. This implies that $b = \\frac{1}{2}$ and $c = -4.$ We now need to find the value of $a$ that determines how the graph is scaled vertically.\nThird Step: \nWe observe that the graph of $y = g(x)$ is not reflected or stretched vertically, which implies that the value of $a$ is 1. Therefore, the ordered triple $(a,b,c) = \\boxed{(1, \\frac{1}{2}, -4)}$.\nFourth Step: \nSince the graph of $y = g(x)$ is a scaled and shifted version of the graph of $y = f(x),$ the equation for $g(x)$ is $g(x) = af(bx) + c.$ We must compare this equation to the equation of $g(x)$ given to us, $g(x) = \\text{func}(x/2) - 4.$ By comparing these two equations, we confirm that our values for $a,$ $b,$ and $c$ are correct.\nFourth Step: \nBy comparing the equation $g(x) = af(bx) + c$ to the given equation $g(x) = \\text{func}(x/2) - 4,$ we can confirm that $b = \\frac{1}{2}$ and $c = -4$ were correctly identified, and $a = 1$ was also correctly identified.\nFourth Step: \nBy comparing the equation $g(x) = af(bx) + c$ to the given equation $g(x) = \\text{func}(x/2) - 4,$ we confirm that our values for $a,$ $b,$ and $c$ are correct.\nFifth Step: \nSince the graph of $y = g(x)$ is a scaled and shifted version of the graph of $y = f(x),$ we can now conclude that the ordered triple $(a,b,c) = (1, \\frac{1}{2}, -4).$\nFinal Step: \nSince we have correctly identified the values of $a,$ $b,$ and $c$ and confirmed them by comparing the equation $g(x) = af(bx) + c$ to the given equation $g(x) = \\text{func}(x/2) - 4,$ we have now found the ordered triple $(a,b,c) = \\boxed{(1, \\frac{1}{2}, -4)}$.\nFourth Step: \nBy comparing the equation $g(x) = af(bx) + c$ to the given equation $g(x) = \\text{func}(x/2) - 4,$ we confirm that $b = \\frac{1}{2}$ and $c = -4$ were correctly identified, and $a = 1$ was also correctly identified.\nThe equation for $g(x)$ is $g(x) = af(bx) + c.$ We must compare this equation to the equation of $g(x)$ given to us, $g(x) = \\text{func}(x/2) - 4.$ By comparing these two equations, we can confirm that our values for $a,$ $b,$ and $c$ are correct.",
+    "steps": [
+        "First Step: \nTo find the values of $a,$ $b,$ and $c,$ we need to analyze the transformation from the graph of $y = f(x)$ to the graph of $y = g(x).$ Since the graph of $y = g(x)$ is a scaled and shifted version of the graph of $y = f(x),$ we can determine the values of $a,$ $b,$ and $c$ based on the transformations observed in the graphs.",
+        "Second Step: \nThe graph of $y = g(x)$ is obtained by horizontally stretching the graph of $y = f(x)$ by a factor of 2 and then shifting it down by 4 units. This implies that $b = \\frac{1}{2}$ and $c = -4.$ We now need to find the value of $a$ that determines how the graph is scaled vertically.",
+        "Third Step: \nWe observe that the graph of $y = g(x)$ is not reflected or stretched vertically, which implies that the value of $a$ is 1. Therefore, the ordered triple $(a,b,c) = \\boxed{(1, \\frac{1}{2}, -4)}$.",
+        "Fourth Step: \nSince the graph of $y = g(x)$ is a scaled and shifted version of the graph of $y = f(x),$ the equation for $g(x)$ is $g(x) = af(bx) + c.$ We must compare this equation to the equation of $g(x)$ given to us, $g(x) = \\text{func}(x/2) - 4.$ By comparing these two equations, we confirm that our values for $a,$ $b,$ and $c$ are correct.",
+        "Fourth Step: \nBy comparing the equation $g(x) = af(bx) + c$ to the given equation $g(x) = \\text{func}(x/2) - 4,$ we can confirm that $b = \\frac{1}{2}$ and $c = -4$ were correctly identified, and $a = 1$ was also correctly identified.",
+        "Fourth Step: \nBy comparing the equation $g(x) = af(bx) + c$ to the given equation $g(x) = \\text{func}(x/2) - 4,$ we confirm that our values for $a,$ $b,$ and $c$ are correct.",
+        "Fifth Step: \nSince the graph of $y = g(x)$ is a scaled and shifted version of the graph of $y = f(x),$ we can now conclude that the ordered triple $(a,b,c) = (1, \\frac{1}{2}, -4).$",
+        "Final Step: \nSince we have correctly identified the values of $a,$ $b,$ and $c$ and confirmed them by comparing the equation $g(x) = af(bx) + c$ to the given equation $g(x) = \\text{func}(x/2) - 4,$ we have now found the ordered triple $(a,b,c) = \\boxed{(1, \\frac{1}{2}, -4)}$.",
+        "Fourth Step: \nBy comparing the equation $g(x) = af(bx) + c$ to the given equation $g(x) = \\text{func}(x/2) - 4,$ we confirm that $b = \\frac{1}{2}$ and $c = -4$ were correctly identified, and $a = 1$ was also correctly identified.",
+        "The equation for $g(x)$ is $g(x) = af(bx) + c.$ We must compare this equation to the equation of $g(x)$ given to us, $g(x) = \\text{func}(x/2) - 4.$ By comparing these two equations, we can confirm that our values for $a,$ $b,$ and $c$ are correct."
+    ],
+    "full_steps": [
+        [
+            "First Step: \nTo find the values of $a,$ $b,$ and $c,$ we need to analyze the transformation from the graph of $y = f(x)$ to the graph of $y = g(x).$ Since the graph of $y = g(x)$ is a scaled and shifted version of the graph of $y = f(x),$ we can determine the values of $a,$ $b,$ and $c$ based on the transformations observed in the graphs.",
+            1
+        ],
+        [
+            "Second Step: \nThe graph of $y = g(x)$ is obtained by horizontally stretching the graph of $y = f(x)$ by a factor of 2 and then shifting it down by 4 units. This implies that $b = \\frac{1}{2}$ and $c = -4.$ We now need to find the value of $a$ that determines how the graph is scaled vertically.",
+            1
+        ],
+        [
+            "Third Step: \nWe observe that the graph of $y = g(x)$ is not reflected or stretched vertically, which implies that the value of $a$ is 1. Therefore, the ordered triple $(a,b,c) = \\boxed{(1, \\frac{1}{2}, -4)}$.",
+            1
+        ],
+        [
+            "Fourth Step: \nSince the graph of $y = g(x)$ is a scaled and shifted version of the graph of $y = f(x),$ the equation for $g(x)$ is $g(x) = af(bx) + c.$ We must compare this equation to the equation of $g(x)$ given to us, $g(x) = \\text{func}(x/2) - 4.$ By comparing these two equations, we confirm that our values for $a,$ $b,$ and $c$ are correct.",
+            1
+        ],
+        [
+            "Fourth Step: \nBy comparing the equation $g(x) = af(bx) + c$ to the given equation $g(x) = \\text{func}(x/2) - 4,$ we can confirm that $b = \\frac{1}{2}$ and $c = -4$ were correctly identified, and $a = 1$ was also correctly identified.",
+            1
+        ],
+        [
+            "Fourth Step: \nBy comparing the equation $g(x) = af(bx) + c$ to the given equation $g(x) = \\text{func}(x/2) - 4,$ we confirm that our values for $a,$ $b,$ and $c$ are correct.",
+            1
+        ],
+        [
+            "Fifth Step: \nSince the graph of $y = g(x)$ is a scaled and shifted version of the graph of $y = f(x),$ we can now conclude that the ordered triple $(a,b,c) = (1, \\frac{1}{2}, -4).$",
+            1
+        ],
+        [
+            "Final Step: \nSince we have correctly identified the values of $a,$ $b,$ and $c$ and confirmed them by comparing the equation $g(x) = af(bx) + c$ to the given equation $g(x) = \\text{func}(x/2) - 4,$ we have now found the ordered triple $(a,b,c) = \\boxed{(1, \\frac{1}{2}, -4)}$.",
+            1
+        ],
+        [
+            "Fourth Step: \nBy comparing the equation $g(x) = af(bx) + c$ to the given equation $g(x) = \\text{func}(x/2) - 4,$ we confirm that $b = \\frac{1}{2}$ and $c = -4$ were correctly identified, and $a = 1$ was also correctly identified.",
+            1
+        ],
+        [
+            "The equation for $g(x)$ is $g(x) = af(bx) + c.$ We must compare this equation to the equation of $g(x)$ given to us, $g(x) = \\text{func}(x/2) - 4.$ By comparing these two equations, we can confirm that our values for $a,$ $b,$ and $c$ are correct.",
+            1
+        ]
+    ],
+    "time": 17.080133199691772,
+    "total_tokens": 22085,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

@@ -1,0 +1,41 @@
+{
+    "problem": "The solution of $8x+1\\equiv 5 \\pmod{12}$ is $x\\equiv a\\pmod{m}$ for some positive integers $m\\geq 2$ and $a<m$. Find $a+m$.",
+    "level": "Level 5",
+    "type": "Number Theory",
+    "solution": "Subtract 1 from both sides to obtain $8x \\equiv 4 \\pmod{12}$. Add 12 to the right-hand side to get $8x \\equiv 16 \\pmod{12}$. Now divide both sides by 8, remembering to divide 12 by the greatest common factor of 12 and 8, thus obtaining $x \\equiv 2\\pmod{3}$. This gives $a+m = 2 + 3 = \\boxed{5}$. Here we have used the fact that $ad \\equiv bd\\pmod{m}$ if and only if $a\\equiv b \\pmod{m/\\text{gcd}(m,d)}$, for integers $m\\geq 2$ and $a$, $b$, and $d$.",
+    "is_solved": true,
+    "model_solution": "Subtract 1 from both sides of the congruence to obtain $8x \\equiv 4 \\pmod{12}$.\nNext step: Since 8 and 12 are not coprime, we need to find the greatest common divisor (GCD) of 8 and 12, which is 4. Divide both sides and 12 by 4 to obtain $2x \\equiv 1 \\pmod{3}$.\nTo solve $2x \\equiv 1 \\pmod{3}$, multiply both sides by the multiplicative inverse of 2 modulo 3, which is 2 itself (since 2*2 \u2261 1 (mod 3)), to obtain $x \\equiv 2 \\pmod{3}$.\nSince $x \\equiv 2 \\pmod{3}$, we see that $a = 2$ and $m = 3$. So, $a + m = 2 + 3 = 5$.\nTo solve $2x \\equiv 1 \\pmod{3}$, multiply both sides by the multiplicative inverse of 2 modulo 3, which is 2 itself (since 2*2 \u2261 1 (mod 3)), to obtain $x \\equiv 2 \\pmod{3}$.",
+    "steps": [
+        "Subtract 1 from both sides of the congruence to obtain $8x \\equiv 4 \\pmod{12}$.",
+        "Next step: Since 8 and 12 are not coprime, we need to find the greatest common divisor (GCD) of 8 and 12, which is 4. Divide both sides and 12 by 4 to obtain $2x \\equiv 1 \\pmod{3}$.",
+        "To solve $2x \\equiv 1 \\pmod{3}$, multiply both sides by the multiplicative inverse of 2 modulo 3, which is 2 itself (since 2*2 \u2261 1 (mod 3)), to obtain $x \\equiv 2 \\pmod{3}$.",
+        "Since $x \\equiv 2 \\pmod{3}$, we see that $a = 2$ and $m = 3$. So, $a + m = 2 + 3 = 5$.",
+        "To solve $2x \\equiv 1 \\pmod{3}$, multiply both sides by the multiplicative inverse of 2 modulo 3, which is 2 itself (since 2*2 \u2261 1 (mod 3)), to obtain $x \\equiv 2 \\pmod{3}$."
+    ],
+    "full_steps": [
+        [
+            "Subtract 1 from both sides of the congruence to obtain $8x \\equiv 4 \\pmod{12}$.",
+            1
+        ],
+        [
+            "Next step: Since 8 and 12 are not coprime, we need to find the greatest common divisor (GCD) of 8 and 12, which is 4. Divide both sides and 12 by 4 to obtain $2x \\equiv 1 \\pmod{3}$.",
+            1
+        ],
+        [
+            "To solve $2x \\equiv 1 \\pmod{3}$, multiply both sides by the multiplicative inverse of 2 modulo 3, which is 2 itself (since 2*2 \u2261 1 (mod 3)), to obtain $x \\equiv 2 \\pmod{3}$.",
+            1
+        ],
+        [
+            "Since $x \\equiv 2 \\pmod{3}$, we see that $a = 2$ and $m = 3$. So, $a + m = 2 + 3 = 5$.",
+            1
+        ],
+        [
+            "To solve $2x \\equiv 1 \\pmod{3}$, multiply both sides by the multiplicative inverse of 2 modulo 3, which is 2 itself (since 2*2 \u2261 1 (mod 3)), to obtain $x \\equiv 2 \\pmod{3}$.",
+            1
+        ]
+    ],
+    "time": 86.7242980003357,
+    "total_tokens": 2867,
+    "final_answer_tokens": 397,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

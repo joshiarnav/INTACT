@@ -1,0 +1,66 @@
+{
+    "problem": "Let $P$ be a point in coordinate space, where all the coordinates of $P$ are positive.  The line between the origin and $P$ is drawn.  The angle between this line and the $x$-, $y$-, and $z$-axis are $\\alpha,$ $\\beta,$ and $\\gamma,$ respectively.  If $\\cos \\alpha = \\frac{1}{3}$ and $\\cos \\beta = \\frac{1}{5},$ then determine $\\cos \\gamma.$\n\n[asy]\nimport three;\n\nsize(180);\ncurrentprojection = perspective(6,3,2);\n\ntriple I = (1,0,0), J = (0,1,0), K = (0,0,1), O = (0,0,0);\ntriple V = (3,2,2), P;\n\nP = (2.5*I + 2.5*V/abs(V))/2;\ndraw(1.1*I..1.5*P/abs(P)..1.5*V/abs(V));\nlabel(\"$\\alpha$\", 1.5*P/abs(P), NW);\nP = (2.5*J + 2.5*V/abs(V))/2;\ndraw(1.5*J..1.5*P/abs(P)..1.5*V/abs(V));\nlabel(\"$\\beta$\", 1.5*P/abs(P), NE);\nP = (2.5*K + 2.5*V/abs(V))/2;\ndraw(1.5*K..1.5*P/abs(P)..1.5*V/abs(V));\nlabel(\"$\\gamma$\", 1.5*P/abs(P), E);\n\ndraw(O--5.5*V/abs(V));\ndraw(O--3*I, Arrow3(6));\ndraw(O--3*J, Arrow3(6));\ndraw(O--3*K, Arrow3(6));\n\nlabel(\"$x$\", 3.2*I);\nlabel(\"$y$\", 3.2*J);\nlabel(\"$z$\", 3.2*K);\ndot(\"$P$\", 5.5*V/abs(V), NE);\n[/asy]",
+    "level": "Level 5",
+    "type": "Precalculus",
+    "solution": "Let $O$ be the origin, and let $P = (x,y,z).$  Let $X$ be the foot of the perpendicular from $P$ to the $x$-axis.  Then $\\angle POX = \\alpha,$ $OP = \\sqrt{x^2 + y^2 + z^2},$ and $OX = x,$ so\n\\[\\cos \\alpha = \\frac{x}{\\sqrt{x^2 + y^2 + z^2}}.\\][asy]\nunitsize(1 cm);\n\ndraw((0,0)--(3,0)--(3,2)--cycle);\n\nlabel(\"$P = (x,y,z)$\", (3,2), NE);\nlabel(\"$x$\", (3,1), E, red);\nlabel(\"$\\sqrt{x^2 + y^2 + z^2}$\", (3/2,1), NW, red);\nlabel(\"$\\alpha$\", (0.9,0.3));\nlabel(\"$O$\", (0,0), SW);\nlabel(\"$X$\", (3,0), SE);\n[/asy]\n\nSimilarly, $\\cos \\beta = \\frac{y}{\\sqrt{x^2 + y^2 + z^2}}$ and $\\cos \\gamma = \\frac{z}{\\sqrt{x^2 + y^2 + z^2}}.$  Hence,\n\\[\\cos^2 \\alpha + \\cos^2 \\beta + \\cos^2 \\gamma = 1.\\]Since $\\cos \\alpha = \\frac{1}{3}$ and $\\cos \\beta = \\frac{1}{5},$\n\\[\\cos^2 \\gamma = 1 - \\cos^2 \\alpha - \\cos^2 \\beta = \\frac{191}{225}.\\]Since $\\gamma$ is acute, $\\cos \\gamma = \\boxed{\\frac{\\sqrt{191}}{15}}.$",
+    "is_solved": false,
+    "model_solution": "To solve the problem, we first take the dot product of the unit vectors along the three axes, which equals the cosine of the angle between the two vectors.  This gives us the following equations:\n\n$\\cos \\alpha = \\frac{x}{\\sqrt{x^2 + y^2 + z^2}}$ \n$\\cos \\beta = \\frac{y}{\\sqrt{x^2 + y^2 + z^2}}$\n$\\cos \\gamma = \\frac{z}{\\sqrt{x^2 + y^2 + z^2}}$\n\nWe can use these equations to eliminate the expression $\\sqrt{x^2 + y^2 + z^2}$ in the following step.\nTo eliminate the expression $\\sqrt{x^2 + y^2 + z^2}$, we can square each of the three equations, then add them together to obtain:\n\n$\\cos^2 \\alpha + \\cos^2 \\beta + \\cos^2 \\gamma = \\frac{x^2}{x^2 + y^2 + z^2} + \\frac{y^2}{x^2 + y^2 + z^2} + \\frac{z^2}{x^2 + y^2 + z^2} = \\frac{x^2 + y^2 + z^2}{x^2 + y^2 + z^2} = 1$\n\nWe can then use the given values of $\\cos \\alpha$ and $\\cos \\beta$ to substitute into this equation.\nWe can substitute $\\cos \\alpha = \\frac{1}{3}$ and $\\cos \\beta = \\frac{1}{5}$ into the equation to get:\n\n$\\cos^2 \\alpha + \\cos^2 \\beta + \\cos^2 \\ gamma = \\left(\\frac{1}{3}\\right)^2 + \\left(\\frac{1}{5}\\right)^2 + \\cos^2 \\gamma = \\frac{1}{9} + \\frac{1}{25} + \\cos^2 \\gamma = 1$\nNow, we can solve for $\\cos^2 \\gamma$. Subtracting the known values from both sides gives us:\n\n$\\cos^2 \\gamma = 1 - \\left(\\frac{1}{9}\\right) - \\left(\\frac{1}{25}\\right)$\n$= 1 - \\frac{25}{225} - \\frac{9}{225}$\n$= 1 - \\frac{34}{225}$\n$= \\frac{225 - 34}{225}$\n$= \\frac{191}{225}$\nNow, we can solve for $\\cos \\gamma$ by taking the square root of both sides, remembering that the cosine of an angle is positive if the angle is acute (since all coordinates of $P$ are positive).\n\n$\\cos \\gamma = \\sqrt{\\frac{191}{225}}$\nNext step: \nWe know that $\\cos \\gamma = \\sqrt{\\frac{191}{225}}$. Since all the coordinates of $P$ are positive, $\\gamma$ must be acute, so we can take the positive square root. \n\nHowever, as the original problem asked for the cosine of the angle, we don't need to further simplify the expression to get $\\cos \\gamma = \\boxed{\\frac{\\sqrt{191}}{15}}$.\nThe final step is to simplify the expression for $\\cos \\gamma$ to obtain a numerical answer. \n\nGiven that $\\cos \\gamma = \\sqrt{\\frac{191}{225}}$, we can rewrite it as $\\cos \\gamma = \\frac{\\sqrt{191}}{\\sqrt{225}} = \\frac{\\sqrt{191}}{15}$\nWe can rewrite $\\cos \\gamma = \\sqrt{\\frac{191}{225}}$ as $\\cos \\gamma = \\frac{\\sqrt{191}}{\\sqrt{225}} = \\frac{\\sqrt{191}}{15}$\nWe can rewrite $\\cos \\gamma = \\sqrt{\\frac{191}{225}}$ as $\\cos \\gamma = \\frac{\\sqrt{191}}{\\sqrt{225}} = \\frac{\\sqrt{191}}{15}$.\nWe can rewrite $\\cos \\gamma = \\sqrt{\\frac{191}{225}}$ as $\\cos \\gamma = \\frac{\\sqrt{191}}{\\sqrt{225}} = \\frac{\\sqrt{191}}{15}$.",
+    "steps": [
+        "To solve the problem, we first take the dot product of the unit vectors along the three axes, which equals the cosine of the angle between the two vectors.  This gives us the following equations:\n\n$\\cos \\alpha = \\frac{x}{\\sqrt{x^2 + y^2 + z^2}}$ \n$\\cos \\beta = \\frac{y}{\\sqrt{x^2 + y^2 + z^2}}$\n$\\cos \\gamma = \\frac{z}{\\sqrt{x^2 + y^2 + z^2}}$\n\nWe can use these equations to eliminate the expression $\\sqrt{x^2 + y^2 + z^2}$ in the following step.",
+        "To eliminate the expression $\\sqrt{x^2 + y^2 + z^2}$, we can square each of the three equations, then add them together to obtain:\n\n$\\cos^2 \\alpha + \\cos^2 \\beta + \\cos^2 \\gamma = \\frac{x^2}{x^2 + y^2 + z^2} + \\frac{y^2}{x^2 + y^2 + z^2} + \\frac{z^2}{x^2 + y^2 + z^2} = \\frac{x^2 + y^2 + z^2}{x^2 + y^2 + z^2} = 1$\n\nWe can then use the given values of $\\cos \\alpha$ and $\\cos \\beta$ to substitute into this equation.",
+        "We can substitute $\\cos \\alpha = \\frac{1}{3}$ and $\\cos \\beta = \\frac{1}{5}$ into the equation to get:\n\n$\\cos^2 \\alpha + \\cos^2 \\beta + \\cos^2 \\ gamma = \\left(\\frac{1}{3}\\right)^2 + \\left(\\frac{1}{5}\\right)^2 + \\cos^2 \\gamma = \\frac{1}{9} + \\frac{1}{25} + \\cos^2 \\gamma = 1$",
+        "Now, we can solve for $\\cos^2 \\gamma$. Subtracting the known values from both sides gives us:\n\n$\\cos^2 \\gamma = 1 - \\left(\\frac{1}{9}\\right) - \\left(\\frac{1}{25}\\right)$\n$= 1 - \\frac{25}{225} - \\frac{9}{225}$\n$= 1 - \\frac{34}{225}$\n$= \\frac{225 - 34}{225}$\n$= \\frac{191}{225}$",
+        "Now, we can solve for $\\cos \\gamma$ by taking the square root of both sides, remembering that the cosine of an angle is positive if the angle is acute (since all coordinates of $P$ are positive).\n\n$\\cos \\gamma = \\sqrt{\\frac{191}{225}}$",
+        "Next step: \nWe know that $\\cos \\gamma = \\sqrt{\\frac{191}{225}}$. Since all the coordinates of $P$ are positive, $\\gamma$ must be acute, so we can take the positive square root. \n\nHowever, as the original problem asked for the cosine of the angle, we don't need to further simplify the expression to get $\\cos \\gamma = \\boxed{\\frac{\\sqrt{191}}{15}}$.",
+        "The final step is to simplify the expression for $\\cos \\gamma$ to obtain a numerical answer. \n\nGiven that $\\cos \\gamma = \\sqrt{\\frac{191}{225}}$, we can rewrite it as $\\cos \\gamma = \\frac{\\sqrt{191}}{\\sqrt{225}} = \\frac{\\sqrt{191}}{15}$",
+        "We can rewrite $\\cos \\gamma = \\sqrt{\\frac{191}{225}}$ as $\\cos \\gamma = \\frac{\\sqrt{191}}{\\sqrt{225}} = \\frac{\\sqrt{191}}{15}$",
+        "We can rewrite $\\cos \\gamma = \\sqrt{\\frac{191}{225}}$ as $\\cos \\gamma = \\frac{\\sqrt{191}}{\\sqrt{225}} = \\frac{\\sqrt{191}}{15}$.",
+        "We can rewrite $\\cos \\gamma = \\sqrt{\\frac{191}{225}}$ as $\\cos \\gamma = \\frac{\\sqrt{191}}{\\sqrt{225}} = \\frac{\\sqrt{191}}{15}$."
+    ],
+    "full_steps": [
+        [
+            "To solve the problem, we first take the dot product of the unit vectors along the three axes, which equals the cosine of the angle between the two vectors.  This gives us the following equations:\n\n$\\cos \\alpha = \\frac{x}{\\sqrt{x^2 + y^2 + z^2}}$ \n$\\cos \\beta = \\frac{y}{\\sqrt{x^2 + y^2 + z^2}}$\n$\\cos \\gamma = \\frac{z}{\\sqrt{x^2 + y^2 + z^2}}$\n\nWe can use these equations to eliminate the expression $\\sqrt{x^2 + y^2 + z^2}$ in the following step.",
+            1
+        ],
+        [
+            "To eliminate the expression $\\sqrt{x^2 + y^2 + z^2}$, we can square each of the three equations, then add them together to obtain:\n\n$\\cos^2 \\alpha + \\cos^2 \\beta + \\cos^2 \\gamma = \\frac{x^2}{x^2 + y^2 + z^2} + \\frac{y^2}{x^2 + y^2 + z^2} + \\frac{z^2}{x^2 + y^2 + z^2} = \\frac{x^2 + y^2 + z^2}{x^2 + y^2 + z^2} = 1$\n\nWe can then use the given values of $\\cos \\alpha$ and $\\cos \\beta$ to substitute into this equation.",
+            1
+        ],
+        [
+            "We can substitute $\\cos \\alpha = \\frac{1}{3}$ and $\\cos \\beta = \\frac{1}{5}$ into the equation to get:\n\n$\\cos^2 \\alpha + \\cos^2 \\beta + \\cos^2 \\ gamma = \\left(\\frac{1}{3}\\right)^2 + \\left(\\frac{1}{5}\\right)^2 + \\cos^2 \\gamma = \\frac{1}{9} + \\frac{1}{25} + \\cos^2 \\gamma = 1$",
+            1
+        ],
+        [
+            "Now, we can solve for $\\cos^2 \\gamma$. Subtracting the known values from both sides gives us:\n\n$\\cos^2 \\gamma = 1 - \\left(\\frac{1}{9}\\right) - \\left(\\frac{1}{25}\\right)$\n$= 1 - \\frac{25}{225} - \\frac{9}{225}$\n$= 1 - \\frac{34}{225}$\n$= \\frac{225 - 34}{225}$\n$= \\frac{191}{225}$",
+            1
+        ],
+        [
+            "Now, we can solve for $\\cos \\gamma$ by taking the square root of both sides, remembering that the cosine of an angle is positive if the angle is acute (since all coordinates of $P$ are positive).\n\n$\\cos \\gamma = \\sqrt{\\frac{191}{225}}$",
+            1
+        ],
+        [
+            "Next step: \nWe know that $\\cos \\gamma = \\sqrt{\\frac{191}{225}}$. Since all the coordinates of $P$ are positive, $\\gamma$ must be acute, so we can take the positive square root. \n\nHowever, as the original problem asked for the cosine of the angle, we don't need to further simplify the expression to get $\\cos \\gamma = \\boxed{\\frac{\\sqrt{191}}{15}}$.",
+            1
+        ],
+        [
+            "The final step is to simplify the expression for $\\cos \\gamma$ to obtain a numerical answer. \n\nGiven that $\\cos \\gamma = \\sqrt{\\frac{191}{225}}$, we can rewrite it as $\\cos \\gamma = \\frac{\\sqrt{191}}{\\sqrt{225}} = \\frac{\\sqrt{191}}{15}$",
+            1
+        ],
+        [
+            "We can rewrite $\\cos \\gamma = \\sqrt{\\frac{191}{225}}$ as $\\cos \\gamma = \\frac{\\sqrt{191}}{\\sqrt{225}} = \\frac{\\sqrt{191}}{15}$",
+            1
+        ],
+        [
+            "We can rewrite $\\cos \\gamma = \\sqrt{\\frac{191}{225}}$ as $\\cos \\gamma = \\frac{\\sqrt{191}}{\\sqrt{225}} = \\frac{\\sqrt{191}}{15}$.",
+            1
+        ],
+        [
+            "We can rewrite $\\cos \\gamma = \\sqrt{\\frac{191}{225}}$ as $\\cos \\gamma = \\frac{\\sqrt{191}}{\\sqrt{225}} = \\frac{\\sqrt{191}}{15}$.",
+            1
+        ]
+    ],
+    "time": 37.270334243774414,
+    "total_tokens": 23083,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

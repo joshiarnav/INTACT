@@ -6,6 +6,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from tenacity import retry, stop_after_attempt, wait_exponential
 from together import Together
 import threading
+import random
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -37,9 +38,11 @@ class RateLimiter:
                 self.last_update = current
 
 # Initialize the Together client and rate limiter
-MODEL = "meta-llama/Llama-Vision-Free"
+# MODEL = "meta-llama/Llama-Vision-Free"
+MODEL = "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
 thread_local = threading.local()
-rate_limiter = RateLimiter(rate=1/6.1)  # 10 requests per minute
+# rate_limiter = RateLimiter(rate=1/6.1)  # 10 requests per minute
+rate_limiter = RateLimiter(rate=9.9)
 
 def get_client():
     """
@@ -52,22 +55,13 @@ def get_client():
 @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=4, max=10))
 def solve_problem(problem, data, output_path, model=MODEL):
     """
-    Solve the problem using chain of thought prompting and save the output.
+    Solve the problem using a single model call and save the output.
     """
     try:
         start_time = time.time()
         
-        # Create chain of thought prompt
-        prompt = (
-            f"Let's solve this step by step:\n\n"
-            f"Problem: {problem}\n\n"
-            f"Let's approach this systematically:\n"
-            f"1) First, let's understand what we're given and what we need to find.\n"
-            f"2) Then, let's identify the key concepts and formulas we need.\n"
-            f"3) Next, we'll solve the problem step by step.\n"
-            f"4) Finally, we'll verify our answer and express it in the required format.\n\n"
-            f"Solution:\n"
-        )
+        # Create prompt
+        prompt = problem + " Ensure your answer is in the format $\\boxed{answer}$. Let's think step by step:"
         messages = [{"role": "user", "content": prompt}]
         
         # Acquire rate limit token before making API call
@@ -78,6 +72,7 @@ def solve_problem(problem, data, output_path, model=MODEL):
         response = client.chat.completions.create(
             model=model,
             messages=messages,
+            # max_tokens=250,
             temperature=0.7,
         )
         
@@ -96,22 +91,29 @@ def solve_problem(problem, data, output_path, model=MODEL):
             "file_name": data.get("file_name", ""),
             "model_solution": solution,
         }
-        
-        # Create output directory if it doesn't exist
-        os.makedirs(os.path.dirname(output_path), exist_ok=True)
-        
+
+        # logger.info(path_parts)
+        path_parts = data["file_name"].split(os.sep)
+        problem_type = path_parts[-2]  # Assumes structure like .../subject/problem.json
+
+        subject_path = os.path.join(output_path, problem_type)
+        problem_number = os.path.splitext(os.path.basename(data["file_name"]))[0]
+        os.makedirs(subject_path, exist_ok=True)
+        output_file = os.path.join(subject_path, f"{problem_number}.json")
+        logger.info(output_file)
+
         # Save output
-        with open(output_path, "w") as f:
+        with open(output_file, "w") as f:
             json.dump(output_data, f, indent=4)
             
-        logger.info(f"Saved output to {output_path}")
+        logger.info(f"Saved output to {output_file}")
         return output_data
         
     except Exception as e:
         logger.error(f"Error solving problem: {str(e)}")
         raise
 
-def solve_problems(problem_files, output_path, model=MODEL, max_workers=8):
+def solve_problems(problem_files, output_path, model=MODEL, max_workers=1):
     """
     Solve problems in parallel using a thread pool.
     """
@@ -119,16 +121,20 @@ def solve_problems(problem_files, output_path, model=MODEL, max_workers=8):
     
     def process_problem(problem_file):
         try:
+            # Check if output already exists
+            if check_existing_runs(problem_file, output_path):
+                return None
+                
             with open(problem_file, 'r') as f:
                 data = json.load(f)
             
             problem = data['problem']
             filename = os.path.basename(problem_file)
             data['file_name'] = problem_file
-            output_file = os.path.join(output_path, filename)
+            # output_file = os.path.join(output_path, filename)
             
             logger.info(f"Processing problem: {filename}")
-            return solve_problem(problem, data, output_file, model)
+            return solve_problem(problem, data, output_path, model)
         except Exception as e:
             logger.error(f"Error processing {problem_file}: {str(e)}")
             return None
@@ -156,11 +162,34 @@ def all_problem_files(data_dir):
                 problem_files.append(os.path.join(root, file))
     return problem_files
 
+def check_existing_runs(problem_file, output_path):
+    """
+    Check if an output file exists for a given problem file.
+    Returns True if output exists, False otherwise.
+    """
+    try:
+        # Get problem type from file path
+        path_parts = problem_file.split(os.sep)
+        problem_type = path_parts[-2]  # Assumes structure like .../subject/problem.json
+        problem_filename = os.path.basename(problem_file)
+        output_file = os.path.join(output_path, problem_type, problem_filename)
+        
+        # Check if output file exists
+        if os.path.exists(output_file):
+            logger.info(f"Skipping {problem_file} - output file already exists")
+            return True
+        return False
+    except Exception as e:
+        logger.error(f"Error checking existing output for {problem_file}: {str(e)}")
+        return False
+
 def main():
-    data_dir = "./MATH"
+    data_dir = "./MATH_subsample_uniform"
     file_safe_model_name = MODEL.replace("/", "-")
-    output_dir = f"{file_safe_model_name}_cot_output"
+    output_dir = f"{file_safe_model_name}_cot_formatted_output"
     problem_files = all_problem_files(data_dir)
+    random.seed(42)
+    random.shuffle(problem_files)
     solve_problems(problem_files, output_dir, max_workers=8)
 
 if __name__ == "__main__":

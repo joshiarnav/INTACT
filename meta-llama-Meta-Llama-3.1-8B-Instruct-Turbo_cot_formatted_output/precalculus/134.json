@@ -1,0 +1,8 @@
+{
+    "problem": "The matrix\n\\[\\begin{pmatrix} 3 & -1 \\\\ c & d \\end{pmatrix}\\]is its own inverse.  Enter the ordered pair $(c,d).$",
+    "solution": "Since $\\begin{pmatrix} 3 & -1 \\\\ c & d \\end{pmatrix}$ is its own inverse,\n\\[\\begin{pmatrix} 3 & -1 \\\\ c & d \\end{pmatrix}^2 = \\begin{pmatrix} 3 & -1 \\\\ c & d \\end{pmatrix} \\begin{pmatrix} 3 & -1 \\\\ c & d \\end{pmatrix} = \\mathbf{I}.\\]This gives us\n\\[\\begin{pmatrix} 9 - c & -d - 3 \\\\ cd + 3c & d^2 - c \\end{pmatrix} = \\mathbf{I}.\\]Then $9 - c = 1,$ $-d - 3 = 0,$ $cd + 3c = 0,$ and $d^2 - c = 1.$  Solving, we find $(c,d) = \\boxed{(8,-3)}.$",
+    "total_tokens": 432,
+    "time_taken": 2.317596912384033,
+    "file_name": "./MATH_subsample_uniform/precalculus/134.json",
+    "model_solution": "To solve this problem, we need to find the inverse of the given matrix and equate it to the original matrix.\n\nThe inverse of a 2x2 matrix \\[\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}\\] is given by\n\n\\[\\frac{1}{ad-bc}\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}.\\]\n\nSince the given matrix is its own inverse, we have\n\n\\[\\begin{pmatrix} 3 & -1 \\\\ c & d \\end{pmatrix} = \\frac{1}{3d-(-1)c}\\begin{pmatrix} d & 1 \\\\ -c & 3 \\end{pmatrix}.\\]\n\nEquating the elements of the two matrices, we get the following equations:\n\n\\[3 = \\frac{d}{3d+c},\\]\n\\[-1 = \\frac{1}{3d+c},\\]\n\\[c = \\frac{-c}{3d+c},\\]\n\\[d = \\frac{3}{3d+c}.\\]\n\nSolving the second equation, we get\n\n\\[3d+c=-1.\\]\n\nSubstituting this into the first equation, we get\n\n\\[3 = \\frac{d}{-4}.\\]\n\nThis gives us\n\n\\[d=-12.\\]\n\nSubstituting $d=-12$ into the equation $3d+c=-1$, we get\n\n\\[c=-1-3(-12)=35.\\]\n\nTherefore, the ordered pair $(c,d)$ is $\\boxed{(35,-12)}$."
+}

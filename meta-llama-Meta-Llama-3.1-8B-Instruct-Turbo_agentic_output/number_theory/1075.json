@@ -1,0 +1,36 @@
+{
+    "problem": "Convert $199_{10}$ to base 2. Let $x$ be the number of zeros and $y$ be the number of ones in base 2. What is the value of $y-x?$",
+    "level": "Level 3",
+    "type": "Number Theory",
+    "solution": "The largest power of 2 that divides $199$ is $2^7$, which equals 128. Since $(1\\cdot 2^7)=128<199<(2\\cdot 2^7)=256$, the digit in the $2^7$ place is $1$. We know that $199-128=71$, and that $71$ can be expressed as $64+4+2+1$, or $(1\\cdot 2^6)+(1\\cdot 2^2)+(1\\cdot 2^1)+(1\\cdot 2^0)$. This means that $199_{10}=11000111_2$. Therefore, $x=3$ and $y=5$; and $y-x=5-3=\\boxed{2}$.",
+    "is_solved": true,
+    "model_solution": "To convert $199_{10}$ to base 2, divide 199 by 2 and note the remainder. \n\n199 \u00f7 2 = 99 remainder 1\n99 \u00f7 2 = 49 remainder 1.\n99 \u00f7 2 = 49 remainder 1.\n49 \u00f7 2 = 24 remainder 1.\n24 \u00f7 2 = 12 remainder 0.\n12 \u00f7 2 = 6 remainder 0.\n6 \u00f7 2 = 3 remainder 0.\n3 \u00f7 2 = 1 remainder 1.\n1 \u00f7 2 = 0 remainder 1.\n\nNow, write down the remainders in reverse order to get the base 2 representation of 199: 11000111.\nCount the number of zeros ($x$) and the number of ones ($y$) in the base 2 representation of 199: 11000111. \n\n$x$ = 3 (number of zeros) \n$y$ = 5 (number of ones) \n\nThe value of $y-x$ is $5-3$ = $\\boxed{2}$",
+    "steps": [
+        "To convert $199_{10}$ to base 2, divide 199 by 2 and note the remainder. \n\n199 \u00f7 2 = 99 remainder 1",
+        "99 \u00f7 2 = 49 remainder 1.",
+        "99 \u00f7 2 = 49 remainder 1.\n49 \u00f7 2 = 24 remainder 1.\n24 \u00f7 2 = 12 remainder 0.\n12 \u00f7 2 = 6 remainder 0.\n6 \u00f7 2 = 3 remainder 0.\n3 \u00f7 2 = 1 remainder 1.\n1 \u00f7 2 = 0 remainder 1.\n\nNow, write down the remainders in reverse order to get the base 2 representation of 199: 11000111.",
+        "Count the number of zeros ($x$) and the number of ones ($y$) in the base 2 representation of 199: 11000111. \n\n$x$ = 3 (number of zeros) \n$y$ = 5 (number of ones) \n\nThe value of $y-x$ is $5-3$ = $\\boxed{2}$"
+    ],
+    "full_steps": [
+        [
+            "To convert $199_{10}$ to base 2, divide 199 by 2 and note the remainder. \n\n199 \u00f7 2 = 99 remainder 1",
+            1
+        ],
+        [
+            "99 \u00f7 2 = 49 remainder 1.",
+            1
+        ],
+        [
+            "99 \u00f7 2 = 49 remainder 1.\n49 \u00f7 2 = 24 remainder 1.\n24 \u00f7 2 = 12 remainder 0.\n12 \u00f7 2 = 6 remainder 0.\n6 \u00f7 2 = 3 remainder 0.\n3 \u00f7 2 = 1 remainder 1.\n1 \u00f7 2 = 0 remainder 1.\n\nNow, write down the remainders in reverse order to get the base 2 representation of 199: 11000111.",
+            1
+        ],
+        [
+            "Count the number of zeros ($x$) and the number of ones ($y$) in the base 2 representation of 199: 11000111. \n\n$x$ = 3 (number of zeros) \n$y$ = 5 (number of ones) \n\nThe value of $y-x$ is $5-3$ = $\\boxed{2}$",
+            1
+        ]
+    ],
+    "time": 7.518809795379639,
+    "total_tokens": 1965,
+    "final_answer_tokens": 351,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

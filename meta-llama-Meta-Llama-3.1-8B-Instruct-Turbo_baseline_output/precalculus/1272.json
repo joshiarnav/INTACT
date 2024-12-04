@@ -1,0 +1,8 @@
+{
+    "problem": "Let $a,$ $b,$ $c$ be the roots of $x^3 + px + q = 0.$  Express\n\\[\\begin{vmatrix} 1 + a & 1 & 1 \\\\ 1 & 1 + b & 1 \\\\ 1 & 1 & 1 + c \\end{vmatrix}\\]in terms of $p$ and $q.$",
+    "solution": "We can expand the determinant as follows:\n\\begin{align*}\n\\begin{vmatrix} 1 + a & 1 & 1 \\\\ 1 & 1 + b & 1 \\\\ 1 & 1 & 1 + c \\end{vmatrix} &= (1 + a) \\begin{vmatrix} 1 + b & 1 \\\\ 1 & 1 + c \\end{vmatrix} - \\begin{vmatrix} 1 & 1 \\\\ 1 & 1 + c \\end{vmatrix} + \\begin{vmatrix} 1 & 1 + b \\\\ 1 & 1 \\end{vmatrix} \\\\\n&= (1 + a)((1 + b)(1 + c) - 1) - ((1)(1 + c) - 1) + (1 - (1 + b)) \\\\\n&= abc + ab + ac + bc.\n\\end{align*}By Vieta's formulas, $ab + ac + bc = p$ and $abc = -q,$ so\n\\[abc + ab + ac + bc = \\boxed{p - q}.\\]",
+    "total_tokens": 346,
+    "time_taken": 10.954240083694458,
+    "file_name": "./MATH_subsample_uniform/precalculus/1272.json",
+    "model_solution": "We have that\n\n\\begin{align*}\n\\begin{vmatrix} 1 + a & 1 & 1 \\\\ 1 & 1 + b & 1 \\\\ 1 & 1 & 1 + c \\end{vmatrix} &= (1+a) (1+b)(1+c)-1(1+c)-1(1+b)-1(1+a) +1\\\\\n&=(1+a)(1+b)(1+c)-1-(a+b+c)-abc\\\\\n&=(1+a+b+c+ab+bc+ca+a+b+c+abc)-1-(a+b+c)-abc\\\\\n&=(ab+bc+ca+abc)+a+b+c.\n\\end{align*}By Vieta's formulas, we know that $a+b+c =0$, and $ab+bc+ca = p$. Additionally, we have that $-abc = -(-q) = q.$  Therefore, \\begin{align*}\n(ab+bc+ca+abc)+a+b+c &= p + q.\n\\end{align*}"
+}

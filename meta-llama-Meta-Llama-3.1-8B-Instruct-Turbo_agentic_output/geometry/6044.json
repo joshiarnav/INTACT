@@ -1,0 +1,46 @@
+{
+    "problem": "The inscribed circle of triangle $ABC$ is tangent to $\\overline{AB}$ at $P,$ and its radius is $21$. Given that $AP=23$ and $PB=27,$ find the perimeter of the triangle.\n",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "[asy] pathpen = black + linewidth(0.65); pointpen = black; pair A=(0,0),B=(50,0),C=IP(circle(A,23+245/2),circle(B,27+245/2)), I=incenter(A,B,C); path P = incircle(A,B,C); D(MP(\"A\",A)--MP(\"B\",B)--MP(\"C\",C,N)--cycle);D(P); D(MP(\"P\",IP(A--B,P))); pair Q=IP(C--A,P),R=IP(B--C,P); D(MP(\"R\",R,NE));D(MP(\"Q\",Q,NW)); MP(\"23\",(A+Q)/2,W);MP(\"27\",(B+R)/2,E); [/asy]\nLet $Q$ be the tangency point on $\\overline{AC}$, and $R$ on $\\overline{BC}$. By the Two Tangent Theorem, $AP = AQ = 23$, $BP = BR = 27$, and $CQ = CR = x$. Using $rs = A$, where $s = \\frac{27 \\cdot 2 + 23 \\cdot 2 + x \\cdot 2}{2} = 50 + x$, we get $(21)(50 + x) = A$. By Heron's formula, $A = \\sqrt{s(s-a)(s-b)(s-c)} = \\sqrt{(50+x)(x)(23)(27)}$. Equating and squaring both sides,\n\\begin{eqnarray*}  [21(50+x)]^2 &=& (50+x)(x)(621)\\\\ 441(50+x) &=& 621x\\\\ 180x = 441 \\cdot 50 &\\Longrightarrow & x = \\frac{245}{2}   \\end{eqnarray*}\nWe want the perimeter, which is $2s = 2\\left(50 + \\frac{245}{2}\\right) = \\boxed{345}$.",
+    "is_solved": true,
+    "model_solution": "Let's denote the points where the inscribed circle is tangent to sides $AC$ and $BC$ as $Q$ and $R$ respectively. Since the inscribed circle is tangent to all three sides of the triangle, the lengths of $AQ$, $QC$, $BR$, and $RC$ are equal to the radius of 21.\nSince the inscribed circle is tangent to all three sides, the lengths of $AQ$, $QC$, $BR$, and $RC$ are equal to the radius of 21, and the perimeter of the triangle is given by the sum of the lengths of its sides: $AP + PB + AQ + QR + RC + CA$. We can substitute $AP = 23$, $PB = 27$, and $AQ = QR = RC = 21$ into this expression and find the length of $CA$ using the Pythagorean Theorem: $CA^2 = (AQ + QC)^2 = (21 + (AP - PB))^2 = (23 - 27 + 21)^2 = (17)^2 = 289$, so $CA = 17$.\nThe perimeter of the triangle is $AP + PB + AQ + QR + RC + CA = 23 + 27 + 21 + 21 + 21 + 17 = 129$.\nNow, we can calculate the perimeter of the triangle by adding the lengths of all sides: $AP + PB + AQ + QR + RC + CA = 23 + 27 + 21 + 21 + 21 + 17$.\nSince we've already found $AP + PB + AQ + QR + RC + CA = 23 + 27 + 21 + 21 + 21 + 17 = 129$, we can conclude that the perimeter of the triangle is $129$.\nSince we've already found the perimeter of the triangle to be $129$, we have concluded the solution.\n\n$\\boxed{129}$",
+    "steps": [
+        "Let's denote the points where the inscribed circle is tangent to sides $AC$ and $BC$ as $Q$ and $R$ respectively. Since the inscribed circle is tangent to all three sides of the triangle, the lengths of $AQ$, $QC$, $BR$, and $RC$ are equal to the radius of 21.",
+        "Since the inscribed circle is tangent to all three sides, the lengths of $AQ$, $QC$, $BR$, and $RC$ are equal to the radius of 21, and the perimeter of the triangle is given by the sum of the lengths of its sides: $AP + PB + AQ + QR + RC + CA$. We can substitute $AP = 23$, $PB = 27$, and $AQ = QR = RC = 21$ into this expression and find the length of $CA$ using the Pythagorean Theorem: $CA^2 = (AQ + QC)^2 = (21 + (AP - PB))^2 = (23 - 27 + 21)^2 = (17)^2 = 289$, so $CA = 17$.",
+        "The perimeter of the triangle is $AP + PB + AQ + QR + RC + CA = 23 + 27 + 21 + 21 + 21 + 17 = 129$.",
+        "Now, we can calculate the perimeter of the triangle by adding the lengths of all sides: $AP + PB + AQ + QR + RC + CA = 23 + 27 + 21 + 21 + 21 + 17$.",
+        "Since we've already found $AP + PB + AQ + QR + RC + CA = 23 + 27 + 21 + 21 + 21 + 17 = 129$, we can conclude that the perimeter of the triangle is $129$.",
+        "Since we've already found the perimeter of the triangle to be $129$, we have concluded the solution.\n\n$\\boxed{129}$"
+    ],
+    "full_steps": [
+        [
+            "Let's denote the points where the inscribed circle is tangent to sides $AC$ and $BC$ as $Q$ and $R$ respectively. Since the inscribed circle is tangent to all three sides of the triangle, the lengths of $AQ$, $QC$, $BR$, and $RC$ are equal to the radius of 21.",
+            1
+        ],
+        [
+            "Since the inscribed circle is tangent to all three sides, the lengths of $AQ$, $QC$, $BR$, and $RC$ are equal to the radius of 21, and the perimeter of the triangle is given by the sum of the lengths of its sides: $AP + PB + AQ + QR + RC + CA$. We can substitute $AP = 23$, $PB = 27$, and $AQ = QR = RC = 21$ into this expression and find the length of $CA$ using the Pythagorean Theorem: $CA^2 = (AQ + QC)^2 = (21 + (AP - PB))^2 = (23 - 27 + 21)^2 = (17)^2 = 289$, so $CA = 17$.",
+            1
+        ],
+        [
+            "The perimeter of the triangle is $AP + PB + AQ + QR + RC + CA = 23 + 27 + 21 + 21 + 21 + 17 = 129$.",
+            1
+        ],
+        [
+            "Now, we can calculate the perimeter of the triangle by adding the lengths of all sides: $AP + PB + AQ + QR + RC + CA = 23 + 27 + 21 + 21 + 21 + 17$.",
+            1
+        ],
+        [
+            "Since we've already found $AP + PB + AQ + QR + RC + CA = 23 + 27 + 21 + 21 + 21 + 17 = 129$, we can conclude that the perimeter of the triangle is $129$.",
+            1
+        ],
+        [
+            "Since we've already found the perimeter of the triangle to be $129$, we have concluded the solution.\n\n$\\boxed{129}$",
+            1
+        ]
+    ],
+    "time": 16.968011140823364,
+    "total_tokens": 4960,
+    "final_answer_tokens": 525,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

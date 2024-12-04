@@ -1,0 +1,36 @@
+{
+    "problem": "Find the curve defined by the equation\n\\[r = \\frac{1}{1 - \\cos \\theta}.\\](A) Line\n(B) Circle\n(C) Parabola\n(D) Ellipse\n(E) Hyperbola\n\nEnter the letter of the correct option.",
+    "level": "Level 2",
+    "type": "Precalculus",
+    "solution": "From $r = \\frac{1}{1 - \\cos \\theta},$\n\\[r - r \\cos \\theta = 1.\\]Then $r = 1 + r \\cos \\theta = x + 1,$ so\n\\[r^2 = (x + 1)^2 = x^2 + 2x + 1.\\]Hence, $x^2 + y^2 = x^2 + 2x + 1,$ so\n\\[y^2 = 2x + 1.\\]This represents the graph of a parabola, so the answer is $\\boxed{\\text{(C)}}.$\n\n[asy]\nunitsize(0.5 cm);\n\npair moo (real t) {\n  real r = 1/(1 - Cos(t));\n  return (r*Cos(t), r*Sin(t));\n}\n\npath foo = moo(1);\nreal t;\n\nfor (t = 1; t <= 359; t = t + 0.1) {\n  foo = foo--moo(t);\n}\n\ndraw(foo,red);\n\ndraw((-4,0)--(4,0));\ndraw((0,-4)--(0,4));\n\nlimits((-4,-4),(4,4),Crop);\n\nlabel(\"$r = \\frac{1}{1 - \\cos \\theta}$\", (6.5,1.5), red);\n[/asy]",
+    "is_solved": true,
+    "model_solution": "To solve the problem, we can start by rewriting the equation in terms of Cartesian coordinates.\n\nStep 1: Rewrite the equation in terms of Cartesian coordinates using the trigonometric identity $\\cos \\theta = \\frac{x}{r}$ and $\\sin \\theta = \\frac{y}{r}$.\n\n\\[r = \\frac{1}{1 - \\cos \\theta}\\]\n\\[r = \\frac{1}{1 - \\frac{x}{r}}\\]\nStep 2: Multiply both sides of the equation by $r(1 - \\frac{x}{r})$ to eliminate the fraction, and simplify the equation using $r^2 = x^2 + y^2$.\n\n\\[r = \\frac{r}{r - x}\\]\n\\[r(r - x) = r\\]\n\\[r^2 - rx = r\\]\n\\[x^2 + y^2 - rx = r\\]\n\\[x^2 - rx + y^2 = r\\]\nStep 3: Rearrange the equation to form a quadratic equation in terms of x by completing the square, and express the equation in the standard form for a curve.\n\n\\[x^2 - rx + y^2 = r\\]\n\\[x^2 - rx = r - y^2\\]\n\\[-x^2 + rx = y^2 - r\\]\n\\[x^2 - 2 \\cdot \\frac{r}{2}x + \\left(\\frac{r}{2}\\right)^2 = y^2 - r + \\left(\\frac{r}{2}\\right)^2\\]\n\\[\\left(x - \\frac{r}{2}\\right)^2 = y^2 - r + \\frac{r^2}{4}\\]\n\\[\\left(x - \\frac{r}{2}\\right)^2 = y^2 - \\frac{3r}{4}\\]\n\nSince the equation is not a circle, line, or any other specific option, our equation, however, strongly resembles the equation for a hyperbola, but in polar coordinates.\nStep 4: Express the equation in terms of x and y without r by using the relation $r^2 = x^2 + y^2$. \n\nSince $r^2 = x^2 + y^2$, we have $r = \\sqrt{x^2 + y^2}$. Substituting this into the equation, we get:\n\n\\[\\left(x - \\frac{\\sqrt{x^2 + y^2}}{2}\\right)^2 = y^2 - \\frac{3\\sqrt{x^2 + y^2}}{4}\\]\n\nThe final answer is: $\\boxed{(E)}$",
+    "steps": [
+        "To solve the problem, we can start by rewriting the equation in terms of Cartesian coordinates.\n\nStep 1: Rewrite the equation in terms of Cartesian coordinates using the trigonometric identity $\\cos \\theta = \\frac{x}{r}$ and $\\sin \\theta = \\frac{y}{r}$.\n\n\\[r = \\frac{1}{1 - \\cos \\theta}\\]\n\\[r = \\frac{1}{1 - \\frac{x}{r}}\\]",
+        "Step 2: Multiply both sides of the equation by $r(1 - \\frac{x}{r})$ to eliminate the fraction, and simplify the equation using $r^2 = x^2 + y^2$.\n\n\\[r = \\frac{r}{r - x}\\]\n\\[r(r - x) = r\\]\n\\[r^2 - rx = r\\]\n\\[x^2 + y^2 - rx = r\\]\n\\[x^2 - rx + y^2 = r\\]",
+        "Step 3: Rearrange the equation to form a quadratic equation in terms of x by completing the square, and express the equation in the standard form for a curve.\n\n\\[x^2 - rx + y^2 = r\\]\n\\[x^2 - rx = r - y^2\\]\n\\[-x^2 + rx = y^2 - r\\]\n\\[x^2 - 2 \\cdot \\frac{r}{2}x + \\left(\\frac{r}{2}\\right)^2 = y^2 - r + \\left(\\frac{r}{2}\\right)^2\\]\n\\[\\left(x - \\frac{r}{2}\\right)^2 = y^2 - r + \\frac{r^2}{4}\\]\n\\[\\left(x - \\frac{r}{2}\\right)^2 = y^2 - \\frac{3r}{4}\\]\n\nSince the equation is not a circle, line, or any other specific option, our equation, however, strongly resembles the equation for a hyperbola, but in polar coordinates.",
+        "Step 4: Express the equation in terms of x and y without r by using the relation $r^2 = x^2 + y^2$. \n\nSince $r^2 = x^2 + y^2$, we have $r = \\sqrt{x^2 + y^2}$. Substituting this into the equation, we get:\n\n\\[\\left(x - \\frac{\\sqrt{x^2 + y^2}}{2}\\right)^2 = y^2 - \\frac{3\\sqrt{x^2 + y^2}}{4}\\]\n\nThe final answer is: $\\boxed{(E)}$"
+    ],
+    "full_steps": [
+        [
+            "To solve the problem, we can start by rewriting the equation in terms of Cartesian coordinates.\n\nStep 1: Rewrite the equation in terms of Cartesian coordinates using the trigonometric identity $\\cos \\theta = \\frac{x}{r}$ and $\\sin \\theta = \\frac{y}{r}$.\n\n\\[r = \\frac{1}{1 - \\cos \\theta}\\]\n\\[r = \\frac{1}{1 - \\frac{x}{r}}\\]",
+            1
+        ],
+        [
+            "Step 2: Multiply both sides of the equation by $r(1 - \\frac{x}{r})$ to eliminate the fraction, and simplify the equation using $r^2 = x^2 + y^2$.\n\n\\[r = \\frac{r}{r - x}\\]\n\\[r(r - x) = r\\]\n\\[r^2 - rx = r\\]\n\\[x^2 + y^2 - rx = r\\]\n\\[x^2 - rx + y^2 = r\\]",
+            1
+        ],
+        [
+            "Step 3: Rearrange the equation to form a quadratic equation in terms of x by completing the square, and express the equation in the standard form for a curve.\n\n\\[x^2 - rx + y^2 = r\\]\n\\[x^2 - rx = r - y^2\\]\n\\[-x^2 + rx = y^2 - r\\]\n\\[x^2 - 2 \\cdot \\frac{r}{2}x + \\left(\\frac{r}{2}\\right)^2 = y^2 - r + \\left(\\frac{r}{2}\\right)^2\\]\n\\[\\left(x - \\frac{r}{2}\\right)^2 = y^2 - r + \\frac{r^2}{4}\\]\n\\[\\left(x - \\frac{r}{2}\\right)^2 = y^2 - \\frac{3r}{4}\\]\n\nSince the equation is not a circle, line, or any other specific option, our equation, however, strongly resembles the equation for a hyperbola, but in polar coordinates.",
+            1
+        ],
+        [
+            "Step 4: Express the equation in terms of x and y without r by using the relation $r^2 = x^2 + y^2$. \n\nSince $r^2 = x^2 + y^2$, we have $r = \\sqrt{x^2 + y^2}$. Substituting this into the equation, we get:\n\n\\[\\left(x - \\frac{\\sqrt{x^2 + y^2}}{2}\\right)^2 = y^2 - \\frac{3\\sqrt{x^2 + y^2}}{4}\\]\n\nThe final answer is: $\\boxed{(E)}$",
+            1
+        ]
+    ],
+    "time": 18.48796796798706,
+    "total_tokens": 3701,
+    "final_answer_tokens": 690,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

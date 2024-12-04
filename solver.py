@@ -22,14 +22,21 @@ def check_problems(filepaths):
             model_solution = data["model_solution"]
             solution = data["solution"]
             total_tokens += data["total_tokens"]
+
             # Find the part of the solution that is within the $\\boxed{}$ section.
-            boxed_solution = solution[solution.find("$\\boxed{") + len("$\\boxed{"):solution.find("}$")]
-            problem_to_correctness[filepath] = boxed_solution in model_solution
+            # boxed_solution = solution[solution.find("\\boxed{") + len("\\boxed{"):solution.find("}")]
+            boxed_solution = solution.split("\\boxed{")[1].split("}")[0]
+            boxed_solution_with_box = "\\boxed{" + boxed_solution + "}"
+            if boxed_solution_with_box not in model_solution:
+                print("Filepath:", filepath)
+                print("Boxed solution not in model solution:", boxed_solution_with_box)
+                print("Model solution:", model_solution)
+            problem_to_correctness[filepath] = boxed_solution_with_box in model_solution
 
     return problem_to_correctness, total_tokens
 
 def main():
-    data_dir = "./output"
+    data_dir = "./meta-llama-Meta-Llama-3.1-8B-Instruct-Turbo_agentic_output"
     problem_files = all_solution_files(data_dir)
     problem_to_correctness, total_tokens = check_problems(problem_files)
     # Save filenames of problems that were solved correctly.

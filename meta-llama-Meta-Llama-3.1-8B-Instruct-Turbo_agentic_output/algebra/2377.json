@@ -1,0 +1,66 @@
+{
+    "problem": "What is the smallest positive value of $m$ so that the equation $10x^2 - mx + 420 = 0$ has integral solutions?",
+    "level": "Level 5",
+    "type": "Algebra",
+    "solution": "Let $p$ and $q$ be the solutions the the equation $10x^2 - mx + 420 = 0$. We use the fact that the sum and product of the roots of a quadratic equation $ax^2+bx+c = 0$ are given by $-b/a$ and $c/a$, respectively, so $p+q = m/10$ and $pq = 420/10 = 42$. Since $m = 10(p+q)$, we minimize $m$ by minimizing the sum $p+q$. Since $p$ and $q$ are integers and multiply to 42, the possible values of $(p,q)$ are $(1,42),(2,21),(3,14),(6,7),(7,6),(14,3),(21,2),(42,1)$. (Note that if $p$ and $q$ are both negative, then $p+q$ is negative, so $m$ would be negative, which is excluded by the problem.) The sum $p+q$ is minimized when $(p,q) = (6,7)$ or $(7,6)$. In either case, $m = 10(p+q) = 10(6+7) = \\boxed{130}.$",
+    "is_solved": false,
+    "model_solution": "To find the smallest positive value of $m$ for the given equation, we will first use the discriminant to find the condition for integral solutions. The discriminant is given by $\\Delta = b^2 - 4ac$, where $a = 10$, $b = -m$, and $c = 420$.\n\nSo, $\\Delta = (-m)^2 - 4(10)(420) = m^2 - 16800$.\n\nFor the equation to have integral solutions, $\\Delta$ must be a perfect square.\nTo find the smallest positive value of $m$ for which $\\Delta = m^2 - 16800$ is a perfect square, we will set $\\Delta = n^2$ for some non-negative integer $n$, giving us the equation $m^2 - 16800 = n^2$. \n\nThis equation can be rewritten as $m^2 - n^2 = 16800$, and factored as $(m + n)(m - n) = 16800$.\nWe know that $16800 = 2^6 \\cdot 3 \\cdot 5^2 \\cdot 7$. To find the smallest positive value of $m$, we need to find the smallest possible values for $(m + n)$ and $(m - n)$ such that their product is $16800$. Since $m$ is positive, $m + n$ must be greater than $m - n$.\nTo find the smallest possible values for $(m + n)$ and $(m - n)$, we can start by considering the prime factorization of $16800$. Since $16800 = 2^6 \\cdot 3 \\cdot 5^2 \\cdot 7$, we can try setting $(m + n)$ and $(m - n)$ to be as close as possible to each other while still being a product of these primes. \n\nA good starting point is to set $(m + n) = 2^6 \\cdot 5^2$ and $(m - n) = 3 \\cdot 7$. This satisfies the condition that $m + n > m - n$ and their product is $16800$. \n\nWe can then solve for $m$ using the equations $(m + n) = 2^6 \\cdot 5^2 = 400$ and $(m - n) = 3 \\cdot 7 = 21$.\nWe can now solve for $m$ by adding the equations $(m + n) = 400$ and $(m - n) = 21$ to get $2m = 421$, and then divide both sides by 2 to get $m = 210.5$. \n\nHowever, this is not an integer, so this is not a valid solution.\nSince the previous attempt resulted in a non-integer value of $m$, we need to find the next possible pair of factors of 16800 that are closer together than 400 and 21. We can try setting $(m + n) = 2^5 \\cdot 5^2$ and $(m - n) = 2 \\cdot 3 \\cdot 7$, which gives us $(m + n) = 400$ and $(m - n) = 42$.\nWe can now solve for $m$ by adding the equations $(m + n) = 400$ and $(m - n) = 42$ to get $2m = 442$, and then divide both sides by 2 to get $m = 221$. \n\nHowever, this is not the smallest possible value of $m$, so we need to continue searching for the next possible pair of factors of 16800 that are closer together than 400 and 42.\n\nWe can try setting $(m + n) = 2^6 \\cdot 5$ and $(m - n) = 2 \\cdot 3 \\cdot 7$, which gives us $(m + n) = 320$ and $(m - n) = 42$.\nWe can now solve for $m$ by adding the equations $(m + n) = 320$ and $(m - n) = 42$ to get $2m = 362$, and then divide both sides by 2 to get $m = 181$.\nWe can try setting $(m + n) = 2^5 \\cdot 5$ and $(m - n) = 2 \\cdot 3 \\cdot 7$, which gives us $(m + n) = 160$ and $(m - n) = 42$. \n\nWe can now solve for $m$ by adding the equations $(m + n) = 160$ and $(m - n) = 42$ to get $2m = 202$, and then divide both sides by 2 to get $m = 101$.\nNext, we can try setting $(m + n) = 2^4 \\cdot 5$ and $(m - n) = 2 \\cdot 3 \\cdot 7$. This gives us $(m + n) = 80$ and $(m - n) = 42$. \n\nWe can now solve for $m$ by adding the equations $(m + n) = 80$ and $(m - n) = 42$ to get $2m = 122$, and then divide both sides by 2 to get $m = 61$.",
+    "steps": [
+        "To find the smallest positive value of $m$ for the given equation, we will first use the discriminant to find the condition for integral solutions. The discriminant is given by $\\Delta = b^2 - 4ac$, where $a = 10$, $b = -m$, and $c = 420$.\n\nSo, $\\Delta = (-m)^2 - 4(10)(420) = m^2 - 16800$.\n\nFor the equation to have integral solutions, $\\Delta$ must be a perfect square.",
+        "To find the smallest positive value of $m$ for which $\\Delta = m^2 - 16800$ is a perfect square, we will set $\\Delta = n^2$ for some non-negative integer $n$, giving us the equation $m^2 - 16800 = n^2$. \n\nThis equation can be rewritten as $m^2 - n^2 = 16800$, and factored as $(m + n)(m - n) = 16800$.",
+        "We know that $16800 = 2^6 \\cdot 3 \\cdot 5^2 \\cdot 7$. To find the smallest positive value of $m$, we need to find the smallest possible values for $(m + n)$ and $(m - n)$ such that their product is $16800$. Since $m$ is positive, $m + n$ must be greater than $m - n$.",
+        "To find the smallest possible values for $(m + n)$ and $(m - n)$, we can start by considering the prime factorization of $16800$. Since $16800 = 2^6 \\cdot 3 \\cdot 5^2 \\cdot 7$, we can try setting $(m + n)$ and $(m - n)$ to be as close as possible to each other while still being a product of these primes. \n\nA good starting point is to set $(m + n) = 2^6 \\cdot 5^2$ and $(m - n) = 3 \\cdot 7$. This satisfies the condition that $m + n > m - n$ and their product is $16800$. \n\nWe can then solve for $m$ using the equations $(m + n) = 2^6 \\cdot 5^2 = 400$ and $(m - n) = 3 \\cdot 7 = 21$.",
+        "We can now solve for $m$ by adding the equations $(m + n) = 400$ and $(m - n) = 21$ to get $2m = 421$, and then divide both sides by 2 to get $m = 210.5$. \n\nHowever, this is not an integer, so this is not a valid solution.",
+        "Since the previous attempt resulted in a non-integer value of $m$, we need to find the next possible pair of factors of 16800 that are closer together than 400 and 21. We can try setting $(m + n) = 2^5 \\cdot 5^2$ and $(m - n) = 2 \\cdot 3 \\cdot 7$, which gives us $(m + n) = 400$ and $(m - n) = 42$.",
+        "We can now solve for $m$ by adding the equations $(m + n) = 400$ and $(m - n) = 42$ to get $2m = 442$, and then divide both sides by 2 to get $m = 221$. \n\nHowever, this is not the smallest possible value of $m$, so we need to continue searching for the next possible pair of factors of 16800 that are closer together than 400 and 42.\n\nWe can try setting $(m + n) = 2^6 \\cdot 5$ and $(m - n) = 2 \\cdot 3 \\cdot 7$, which gives us $(m + n) = 320$ and $(m - n) = 42$.",
+        "We can now solve for $m$ by adding the equations $(m + n) = 320$ and $(m - n) = 42$ to get $2m = 362$, and then divide both sides by 2 to get $m = 181$.",
+        "We can try setting $(m + n) = 2^5 \\cdot 5$ and $(m - n) = 2 \\cdot 3 \\cdot 7$, which gives us $(m + n) = 160$ and $(m - n) = 42$. \n\nWe can now solve for $m$ by adding the equations $(m + n) = 160$ and $(m - n) = 42$ to get $2m = 202$, and then divide both sides by 2 to get $m = 101$.",
+        "Next, we can try setting $(m + n) = 2^4 \\cdot 5$ and $(m - n) = 2 \\cdot 3 \\cdot 7$. This gives us $(m + n) = 80$ and $(m - n) = 42$. \n\nWe can now solve for $m$ by adding the equations $(m + n) = 80$ and $(m - n) = 42$ to get $2m = 122$, and then divide both sides by 2 to get $m = 61$."
+    ],
+    "full_steps": [
+        [
+            "To find the smallest positive value of $m$ for the given equation, we will first use the discriminant to find the condition for integral solutions. The discriminant is given by $\\Delta = b^2 - 4ac$, where $a = 10$, $b = -m$, and $c = 420$.\n\nSo, $\\Delta = (-m)^2 - 4(10)(420) = m^2 - 16800$.\n\nFor the equation to have integral solutions, $\\Delta$ must be a perfect square.",
+            1
+        ],
+        [
+            "To find the smallest positive value of $m$ for which $\\Delta = m^2 - 16800$ is a perfect square, we will set $\\Delta = n^2$ for some non-negative integer $n$, giving us the equation $m^2 - 16800 = n^2$. \n\nThis equation can be rewritten as $m^2 - n^2 = 16800$, and factored as $(m + n)(m - n) = 16800$.",
+            1
+        ],
+        [
+            "We know that $16800 = 2^6 \\cdot 3 \\cdot 5^2 \\cdot 7$. To find the smallest positive value of $m$, we need to find the smallest possible values for $(m + n)$ and $(m - n)$ such that their product is $16800$. Since $m$ is positive, $m + n$ must be greater than $m - n$.",
+            1
+        ],
+        [
+            "To find the smallest possible values for $(m + n)$ and $(m - n)$, we can start by considering the prime factorization of $16800$. Since $16800 = 2^6 \\cdot 3 \\cdot 5^2 \\cdot 7$, we can try setting $(m + n)$ and $(m - n)$ to be as close as possible to each other while still being a product of these primes. \n\nA good starting point is to set $(m + n) = 2^6 \\cdot 5^2$ and $(m - n) = 3 \\cdot 7$. This satisfies the condition that $m + n > m - n$ and their product is $16800$. \n\nWe can then solve for $m$ using the equations $(m + n) = 2^6 \\cdot 5^2 = 400$ and $(m - n) = 3 \\cdot 7 = 21$.",
+            1
+        ],
+        [
+            "We can now solve for $m$ by adding the equations $(m + n) = 400$ and $(m - n) = 21$ to get $2m = 421$, and then divide both sides by 2 to get $m = 210.5$. \n\nHowever, this is not an integer, so this is not a valid solution.",
+            1
+        ],
+        [
+            "Since the previous attempt resulted in a non-integer value of $m$, we need to find the next possible pair of factors of 16800 that are closer together than 400 and 21. We can try setting $(m + n) = 2^5 \\cdot 5^2$ and $(m - n) = 2 \\cdot 3 \\cdot 7$, which gives us $(m + n) = 400$ and $(m - n) = 42$.",
+            1
+        ],
+        [
+            "We can now solve for $m$ by adding the equations $(m + n) = 400$ and $(m - n) = 42$ to get $2m = 442$, and then divide both sides by 2 to get $m = 221$. \n\nHowever, this is not the smallest possible value of $m$, so we need to continue searching for the next possible pair of factors of 16800 that are closer together than 400 and 42.\n\nWe can try setting $(m + n) = 2^6 \\cdot 5$ and $(m - n) = 2 \\cdot 3 \\cdot 7$, which gives us $(m + n) = 320$ and $(m - n) = 42$.",
+            1
+        ],
+        [
+            "We can now solve for $m$ by adding the equations $(m + n) = 320$ and $(m - n) = 42$ to get $2m = 362$, and then divide both sides by 2 to get $m = 181$.",
+            1
+        ],
+        [
+            "We can try setting $(m + n) = 2^5 \\cdot 5$ and $(m - n) = 2 \\cdot 3 \\cdot 7$, which gives us $(m + n) = 160$ and $(m - n) = 42$. \n\nWe can now solve for $m$ by adding the equations $(m + n) = 160$ and $(m - n) = 42$ to get $2m = 202$, and then divide both sides by 2 to get $m = 101$.",
+            1
+        ],
+        [
+            "Next, we can try setting $(m + n) = 2^4 \\cdot 5$ and $(m - n) = 2 \\cdot 3 \\cdot 7$. This gives us $(m + n) = 80$ and $(m - n) = 42$. \n\nWe can now solve for $m$ by adding the equations $(m + n) = 80$ and $(m - n) = 42$ to get $2m = 122$, and then divide both sides by 2 to get $m = 61$.",
+            1
+        ]
+    ],
+    "time": 25.392597913742065,
+    "total_tokens": 14836,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

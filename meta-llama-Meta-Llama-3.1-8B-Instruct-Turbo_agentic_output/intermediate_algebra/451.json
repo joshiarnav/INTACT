@@ -1,0 +1,51 @@
+{
+    "problem": "Compute $\\displaystyle \\sum_{n=2}^\\infty \\sum_{k=1}^{n-1} \\frac{k}{2^{n+k}}$.",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "The sum is taken over all positive integers $n$ and $k$ such that $k \\le n - 1,$ or $n \\ge k + 1.$  Thus, we can change the order of summation:\n\\begin{align*}\n\\sum_{n=2}^\\infty \\sum_{k=1}^{n-1} \\frac{k}{2^{n+k}} &= \\sum_{k = 1}^\\infty \\sum_{n = k + 1}^\\infty \\frac{k}{2^{n + k}} \\\\\n&= \\sum_{k=1}^\\infty \\frac{k}{2^k} \\sum_{n=k+1}^\\infty \\frac{1}{2^n} \\\\\n&= \\sum_{k = 1}^\\infty \\frac{k}{2^k} \\left( \\frac{1}{2^{k + 1}} + \\frac{1}{2^{k + 2}} + \\dotsb \\right) \\\\\n&= \\sum_{k = 1}^\\infty \\frac{k}{2^k} \\cdot \\frac{1}{2^k} \\\\\n&= \\sum_{k=1}^\\infty \\frac{k}{4^k}.\n\\end{align*}Let\n\\[S = \\sum_{k = 1}^\\infty \\frac{k}{4^k} = \\frac{1}{4} + \\frac{2}{4^2} + \\frac{3}{4^3} + \\dotsb.\\]Then\n\\[4S = 1 + \\frac{2}{4} + \\frac{3}{4^2} + \\frac{4}{3^3} + \\dotsb.\\]Subtracting these equations, we get\n\\[3S = 1 + \\frac{1}{4} + \\frac{1}{4^2} + \\dotsb = \\frac{4}{3},\\]so $S = \\boxed{\\frac{4}{9}}.$",
+    "is_solved": true,
+    "model_solution": "To solve the problem, we first interchange the order of summation:\n\n$\\displaystyle \\sum_{n=2}^\\infty \\sum_{k=1}^{n-1} \\frac{k}{2^{n+k}} = \\sum_{k=1}^\\infty \\sum_{n=k+1}^\\infty \\frac{k}{2^{n+k}}$\nWe can now factor out the constant term k from the inner sum and then evaluate the inner sum as a geometric series:\n\n$\\displaystyle \\sum_{k=1}^\\infty \\sum_{n=k+1}  \\frac{k}{2^{n+k}} = \\sum_{k=1}^\\infty k \\cdot \\frac{1}{2^{2k}} \\cdot \\sum_{n=k+1}^\\infty \\left(\\frac{1}{2}\\right)^{n-k}$\nNow, we evaluate the inner sum as a geometric series with first term $a = \\frac{1}{2}$ and common ratio $r = \\frac{1}{2}$. \n\nThe sum of an infinite geometric series with $|r| < 1$ is given by $\\frac{a}{1 - r}$. Therefore, \n\n$\\displaystyle \\sum_{n=k+1}^\\infty \\left(\\frac{1}{2}\\right)^{n-k} = \\frac{\\frac{1}{2}}{1 - \\frac{1}{2}} = \\frac{\\frac{1}{2}}{\\frac{1}{2}} = 1$\nNow, we can substitute the evaluated inner sum back into the original expression:\n\n$\\displaystyle \\sum_{k=1}^\\infty \\sum_{n=k+1}  \\frac{k}{2^{n+k}} = \\sum_{k=1}^\\infty k \\cdot \\frac{1}{2^{2k}} \\cdot 1$\n\nSimplifying, we get:\n\n$\\displaystyle \\sum_{k=1}^\\infty k \\cdot \\frac{1}{2^{2k}}$\nWe can now evaluate the sum as a power series, by observing that $\\sum_{k=1}^\\infty k \\cdot x^k = \\frac{x}{(1-x)^2}$ for $|x| < 1$. In our case, $x = \\frac{1}{4}$, so we have:\n\n$\\displaystyle \\sum_{k=1}^\\infty k \\cdot \\frac{1}{2^{2k}} = \\sum_{k=1}^\\infty k \\cdot \\left(\\frac{1}{4}\\right)^k = \\frac{\\frac{1}{4}}{\\left(1 - \\frac{1}{4}\\right)^2} = \\frac{\\frac{1}{4}}{\\left(\\frac{3}{4}\\right)^2}$\nWe can now simplify the expression:\n\n$\\displaystyle \\frac{\\frac{1}{4}}{\\left(\\frac{3}{4}\\right)^2} = \\frac{\\frac{1}{4}}{\\frac{9}{16}} = \\frac{1}{4} \\cdot \\frac{16}{9} = \\frac{4}{9}$\nThe final expression $\\displaystyle \\frac{4}{9}$ can be simplified to a single value as the solution. \n\n$\\boxed{\\frac{4}{9}}$",
+    "steps": [
+        "To solve the problem, we first interchange the order of summation:\n\n$\\displaystyle \\sum_{n=2}^\\infty \\sum_{k=1}^{n-1} \\frac{k}{2^{n+k}} = \\sum_{k=1}^\\infty \\sum_{n=k+1}^\\infty \\frac{k}{2^{n+k}}$",
+        "We can now factor out the constant term k from the inner sum and then evaluate the inner sum as a geometric series:\n\n$\\displaystyle \\sum_{k=1}^\\infty \\sum_{n=k+1}  \\frac{k}{2^{n+k}} = \\sum_{k=1}^\\infty k \\cdot \\frac{1}{2^{2k}} \\cdot \\sum_{n=k+1}^\\infty \\left(\\frac{1}{2}\\right)^{n-k}$",
+        "Now, we evaluate the inner sum as a geometric series with first term $a = \\frac{1}{2}$ and common ratio $r = \\frac{1}{2}$. \n\nThe sum of an infinite geometric series with $|r| < 1$ is given by $\\frac{a}{1 - r}$. Therefore, \n\n$\\displaystyle \\sum_{n=k+1}^\\infty \\left(\\frac{1}{2}\\right)^{n-k} = \\frac{\\frac{1}{2}}{1 - \\frac{1}{2}} = \\frac{\\frac{1}{2}}{\\frac{1}{2}} = 1$",
+        "Now, we can substitute the evaluated inner sum back into the original expression:\n\n$\\displaystyle \\sum_{k=1}^\\infty \\sum_{n=k+1}  \\frac{k}{2^{n+k}} = \\sum_{k=1}^\\infty k \\cdot \\frac{1}{2^{2k}} \\cdot 1$\n\nSimplifying, we get:\n\n$\\displaystyle \\sum_{k=1}^\\infty k \\cdot \\frac{1}{2^{2k}}$",
+        "We can now evaluate the sum as a power series, by observing that $\\sum_{k=1}^\\infty k \\cdot x^k = \\frac{x}{(1-x)^2}$ for $|x| < 1$. In our case, $x = \\frac{1}{4}$, so we have:\n\n$\\displaystyle \\sum_{k=1}^\\infty k \\cdot \\frac{1}{2^{2k}} = \\sum_{k=1}^\\infty k \\cdot \\left(\\frac{1}{4}\\right)^k = \\frac{\\frac{1}{4}}{\\left(1 - \\frac{1}{4}\\right)^2} = \\frac{\\frac{1}{4}}{\\left(\\frac{3}{4}\\right)^2}$",
+        "We can now simplify the expression:\n\n$\\displaystyle \\frac{\\frac{1}{4}}{\\left(\\frac{3}{4}\\right)^2} = \\frac{\\frac{1}{4}}{\\frac{9}{16}} = \\frac{1}{4} \\cdot \\frac{16}{9} = \\frac{4}{9}$",
+        "The final expression $\\displaystyle \\frac{4}{9}$ can be simplified to a single value as the solution. \n\n$\\boxed{\\frac{4}{9}}$"
+    ],
+    "full_steps": [
+        [
+            "To solve the problem, we first interchange the order of summation:\n\n$\\displaystyle \\sum_{n=2}^\\infty \\sum_{k=1}^{n-1} \\frac{k}{2^{n+k}} = \\sum_{k=1}^\\infty \\sum_{n=k+1}^\\infty \\frac{k}{2^{n+k}}$",
+            1
+        ],
+        [
+            "We can now factor out the constant term k from the inner sum and then evaluate the inner sum as a geometric series:\n\n$\\displaystyle \\sum_{k=1}^\\infty \\sum_{n=k+1}  \\frac{k}{2^{n+k}} = \\sum_{k=1}^\\infty k \\cdot \\frac{1}{2^{2k}} \\cdot \\sum_{n=k+1}^\\infty \\left(\\frac{1}{2}\\right)^{n-k}$",
+            1
+        ],
+        [
+            "Now, we evaluate the inner sum as a geometric series with first term $a = \\frac{1}{2}$ and common ratio $r = \\frac{1}{2}$. \n\nThe sum of an infinite geometric series with $|r| < 1$ is given by $\\frac{a}{1 - r}$. Therefore, \n\n$\\displaystyle \\sum_{n=k+1}^\\infty \\left(\\frac{1}{2}\\right)^{n-k} = \\frac{\\frac{1}{2}}{1 - \\frac{1}{2}} = \\frac{\\frac{1}{2}}{\\frac{1}{2}} = 1$",
+            1
+        ],
+        [
+            "Now, we can substitute the evaluated inner sum back into the original expression:\n\n$\\displaystyle \\sum_{k=1}^\\infty \\sum_{n=k+1}  \\frac{k}{2^{n+k}} = \\sum_{k=1}^\\infty k \\cdot \\frac{1}{2^{2k}} \\cdot 1$\n\nSimplifying, we get:\n\n$\\displaystyle \\sum_{k=1}^\\infty k \\cdot \\frac{1}{2^{2k}}$",
+            1
+        ],
+        [
+            "We can now evaluate the sum as a power series, by observing that $\\sum_{k=1}^\\infty k \\cdot x^k = \\frac{x}{(1-x)^2}$ for $|x| < 1$. In our case, $x = \\frac{1}{4}$, so we have:\n\n$\\displaystyle \\sum_{k=1}^\\infty k \\cdot \\frac{1}{2^{2k}} = \\sum_{k=1}^\\infty k \\cdot \\left(\\frac{1}{4}\\right)^k = \\frac{\\frac{1}{4}}{\\left(1 - \\frac{1}{4}\\right)^2} = \\frac{\\frac{1}{4}}{\\left(\\frac{3}{4}\\right)^2}$",
+            1
+        ],
+        [
+            "We can now simplify the expression:\n\n$\\displaystyle \\frac{\\frac{1}{4}}{\\left(\\frac{3}{4}\\right)^2} = \\frac{\\frac{1}{4}}{\\frac{9}{16}} = \\frac{1}{4} \\cdot \\frac{16}{9} = \\frac{4}{9}$",
+            1
+        ],
+        [
+            "The final expression $\\displaystyle \\frac{4}{9}$ can be simplified to a single value as the solution. \n\n$\\boxed{\\frac{4}{9}}$",
+            1
+        ]
+    ],
+    "time": 132.8100507259369,
+    "total_tokens": 7783,
+    "final_answer_tokens": 829,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

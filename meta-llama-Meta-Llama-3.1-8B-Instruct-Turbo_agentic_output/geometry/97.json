@@ -1,0 +1,46 @@
+{
+    "problem": "The side length of the regular hexagon is 10 cm. What is the number of square centimeters in the area of the shaded region? Express your answer in simplest radical form.\n\n[asy]\nsize(100);\n\npair A,B,C,D,E,F;\nA = dir(0); B = dir(60); C = dir(120); D = dir(180); E = dir(240); F = dir(300);\n\nfill(B--C--E--F--cycle,heavycyan);\n\ndraw(A--B--C--D--E--F--A);\n[/asy]",
+    "level": "Level 3",
+    "type": "Geometry",
+    "solution": "Label points $A$, $B$, $C$ as shown below, and let $H$ be the foot of the perpendicular from $B$ to $AC$. [asy]\n\nsize(120);\npair A,B,C,D,E,F;\nA = dir(0); B = dir(60); C = dir(120); D = dir(180); E = dir(240); F = dir(300);\n\nfill(B--C--E--F--cycle,heavycyan); pair H=(E+C)/2; draw(D--H); draw(E--C); label(\"$A$\",C,NW);label(\"$B$\",D,W);label(\"$C$\",E,SW);label(\"$H$\",H,ESE);\ndraw(A--B--C--D--E--F--A);\n[/asy] Since the hexagon is regular, $\\angle ABC = 120^\\circ$ and $\\angle ABH = \\angle CBH = 120^\\circ / 2 = 60^\\circ$.  Thus, $\\triangle ABH$ and $\\triangle CBH$ are congruent $30^\\circ - 60^\\circ - 90^\\circ$ triangles.  These triangles are each half an equilateral triangle, so their short leg is half as long as their hypotenuse.\n\nSince $AB=BC=10$, we have $BH = AB/2 = 5$ and $AH = CH = \\sqrt{10^2-5^2} = \\sqrt{75} = 5\\sqrt{3}$.  (Notice that this value is $\\sqrt{3}$ times the length of $BH$, the short leg.  In general, the ratio of the sides in a $30^\\circ - 60^\\circ - 90^\\circ$ is $1:\\sqrt{3}:2$, which can be shown by the Pythagorean Theorem.)  Then, $AC = 2\\cdot 5\\sqrt{3} = 10\\sqrt{3}$.\n\nThe shaded region is a rectangle with base length $10$ and height length $10\\sqrt{3}$; its area is $10\\cdot 10\\sqrt{3} = \\boxed{100\\sqrt{3}}$ square cm.",
+    "is_solved": true,
+    "model_solution": "To solve the problem, first divide the regular hexagon into six equilateral triangles by drawing lines from the center to each vertex. This creates six congruent triangles and allows us to focus on the area of a single triangle to find the area of the shaded region.\nThe area of the shaded region is the area of three of the six equilateral triangles. The formula for the area of an equilateral triangle with side length $s$ is $\\frac{s^2 \\sqrt{3}}{4}$. Multiply this by 3 to find the area of the shaded region: $3 \\cdot \\frac{(10)^2 \\sqrt{3}}{4} = \\frac{300 \\sqrt{3}}{4}$.\nTo find the final answer, simplify the expression $\\frac{300 \\sqrt{3}}{4}$ by dividing both the numerator and the denominator by 4.\nTo simplify the expression, divide both the numerator and the denominator by 4 to get $\\frac{300\\sqrt{3}}{4} = \\frac{75\\sqrt{3}}{1} = 75\\sqrt{3}$.\nSince the expression $\\frac{300 \\sqrt{3}}{4}$ has been simplified to $75\\sqrt{3}$, no further simplification is needed, and this is the final answer.\nTo find the final answer, we have already simplified the expression to $75\\sqrt{3}$. Therefore, the final answer is $\\boxed{75\\sqrt{3}}$.",
+    "steps": [
+        "To solve the problem, first divide the regular hexagon into six equilateral triangles by drawing lines from the center to each vertex. This creates six congruent triangles and allows us to focus on the area of a single triangle to find the area of the shaded region.",
+        "The area of the shaded region is the area of three of the six equilateral triangles. The formula for the area of an equilateral triangle with side length $s$ is $\\frac{s^2 \\sqrt{3}}{4}$. Multiply this by 3 to find the area of the shaded region: $3 \\cdot \\frac{(10)^2 \\sqrt{3}}{4} = \\frac{300 \\sqrt{3}}{4}$.",
+        "To find the final answer, simplify the expression $\\frac{300 \\sqrt{3}}{4}$ by dividing both the numerator and the denominator by 4.",
+        "To simplify the expression, divide both the numerator and the denominator by 4 to get $\\frac{300\\sqrt{3}}{4} = \\frac{75\\sqrt{3}}{1} = 75\\sqrt{3}$.",
+        "Since the expression $\\frac{300 \\sqrt{3}}{4}$ has been simplified to $75\\sqrt{3}$, no further simplification is needed, and this is the final answer.",
+        "To find the final answer, we have already simplified the expression to $75\\sqrt{3}$. Therefore, the final answer is $\\boxed{75\\sqrt{3}}$."
+    ],
+    "full_steps": [
+        [
+            "To solve the problem, first divide the regular hexagon into six equilateral triangles by drawing lines from the center to each vertex. This creates six congruent triangles and allows us to focus on the area of a single triangle to find the area of the shaded region.",
+            1
+        ],
+        [
+            "The area of the shaded region is the area of three of the six equilateral triangles. The formula for the area of an equilateral triangle with side length $s$ is $\\frac{s^2 \\sqrt{3}}{4}$. Multiply this by 3 to find the area of the shaded region: $3 \\cdot \\frac{(10)^2 \\sqrt{3}}{4} = \\frac{300 \\sqrt{3}}{4}$.",
+            1
+        ],
+        [
+            "To find the final answer, simplify the expression $\\frac{300 \\sqrt{3}}{4}$ by dividing both the numerator and the denominator by 4.",
+            1
+        ],
+        [
+            "To simplify the expression, divide both the numerator and the denominator by 4 to get $\\frac{300\\sqrt{3}}{4} = \\frac{75\\sqrt{3}}{1} = 75\\sqrt{3}$.",
+            1
+        ],
+        [
+            "Since the expression $\\frac{300 \\sqrt{3}}{4}$ has been simplified to $75\\sqrt{3}$, no further simplification is needed, and this is the final answer.",
+            1
+        ],
+        [
+            "To find the final answer, we have already simplified the expression to $75\\sqrt{3}$. Therefore, the final answer is $\\boxed{75\\sqrt{3}}$.",
+            1
+        ]
+    ],
+    "time": 14.87343692779541,
+    "total_tokens": 4864,
+    "final_answer_tokens": 505,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

@@ -1,0 +1,66 @@
+{
+    "problem": "Find the integer that is closest to $1000\\sum_{n=3}^{10000}\\frac1{n^2-4}$.",
+    "level": "Level 4",
+    "type": "Intermediate Algebra",
+    "solution": "Note that\n\\[\\frac{1}{n^2-4} = \\frac{1}{(n-2)(n+2)} = \\frac{1}{4}\\left(\\frac{1}{n-2} - \\frac{1}{n+2}\\right).\\]Thus, the given sum telescopes: \\[\\begin{aligned} 1000\\sum_{n=3}^{10000}\\frac1{n^2-4} &= 1000 \\cdot \\frac{1}{4} \\sum_{n=3}^{10000} \\left(\\frac{1}{n-2} - \\frac{1}{n+2}\\right) \\\\ & = 250 \\left(\\frac{1}{1} + \\frac{1}{2} + \\frac{1}{3} + \\frac{1}{4} - \\frac{1}{9999} - \\frac{1}{10000} - \\frac{1}{10001} - \\frac{1}{10002}\\right) \\\\ &= 250 + 125 + 83.\\overline{3} + 62.5 - \\varepsilon \\end{aligned}\\]where $\\varepsilon = 250\\left(\\tfrac{1}{9999}+\\tfrac{1}{10000}+\\tfrac{1}{10001}+\\tfrac{1}{10002}\\right)$. This simplifies to $520.8\\overline{3} - \\varepsilon$, and so the answer is $\\boxed{521}.$\n\n(To check that $\\varepsilon$ is small enough to not affect the answer, we can write $\\varepsilon < 250 \\cdot 4 \\cdot \\frac{1}{5000} = 0.2$. This shows that the sum lies between $520.8\\overline{3}$ and $520.6\\overline{3}$, and so the closest integer is indeed $521$, as stated before.)",
+    "is_solved": false,
+    "model_solution": "To find the integer closest to $1000\\sum_{n=3}^{10000}\\frac{1}{n^2-4}$, first decompose the fraction using partial fraction decomposition:\n\n$\\frac{1}{n^2-4} = \\frac{1}{(n-2)(n+2)} = \\frac{A}{n-2} + \\frac{B}{n+2}$\n\nSolve for A and B.\n\nThis will make the summation easier to evaluate.\nTo find the values of A and B, multiply both sides by $(n-2)(n+2)$ and equate the numerators:\n\n$1 = A(n+2) + B(n-2)$\n\nSetting $n=2$ gives $A = \\frac{1}{4}$, and setting $n=-2$ gives $B = -\\frac{1}{4}$.\nNow that the fraction is decomposed, substitute the partial fractions into the summation:\n\n$1000\\sum_{n=3}^{10000}\\frac{1}{n^2-4} = 1000\\sum_{n=3}^{10000} \\left( \\frac{1/4}{n-2} - \\frac{1/4}{n+2} \\right)$\n\nThis will allow us to simplify the summation by canceling out terms.\nThe next step is to expand the summation and cancel out the terms. The summation will telescope, allowing most of the terms to cancel out:\n\n$1000\\sum_{n=3}^{10000} \\left( \\frac{1/4}{n-2} - \\frac{1/4}{n+2} \\right) = \\frac{1000}{4} \\left( \\frac{1}{1} - \\frac{1}{5} + \\frac{1}{2} - \\frac{1}{6} + \\frac{1}{3} - \\frac{1}{7} + ... + \\frac{1}{9998} - \\frac{1}{10002} \\right)$\nNow that the summation has been simplified and most of the terms have canceled out, evaluate the remaining terms to find the value of the summation. \n\nSince all terms except the first four and the last three will cancel out, we are left with:\n\n$\\frac{1000}{4} \\left( \\frac{1}{1} - \\frac{1}{5} + \\frac{1}{2} - \\frac{1}{6} + \\frac{1}{3} - \\frac{1}{7} + \\frac{1}{4} - \\frac{1}{8} + \\frac{1}{9999} - \\frac{1}{10001} + \\frac{1}{10000} - \\frac{1}{10002} \\right)$\n\nCombine like terms and simplify to find the value of the expression.\n\nThe next step would be to find the decimal value of this expression and round to the nearest integer.\nNow that the expression has been simplified, evaluate it to find the decimal value. \n\n$\\frac{1000}{4} \\left( \\frac{1}{1} - \\frac{1}{5} + \\frac{1}{2} - \\frac{1}{6} + \\frac{1}{3} - \\frac{1}{7} + \\frac{1}{4} - \\frac{1}{8} + \\frac{1}{9999} - \\frac{1}{10001} + \\frac{1}{10000} - \\frac{1}{10002} \\right)$\n\n$= 250 \\left( 1 - \\frac{1}{5} + \\frac{1}{2} - \\frac{1}{6} + \\frac{1}{3} - \\frac{1}{7} + \\frac{1}{4} - \\frac{1}{8} + \\frac{1}{9999} - \\frac{1}{10001} + \\frac{1}{10000} - \\frac{1}{10002} \\right)$\n\n$= 250 \\left( \\frac{1200 -\nNow, evaluate the expression:\n\n$= 250 \\left( \\frac{1200 - 240 - 150 - 100 + 400 - 171 + 300 - 75 + \\frac{1}{9999} - \\frac{1}{10001} + \\frac{1}{10000} - \\frac{1}{10002}}{1200} \\right)$\n\n$= 250 \\left( \\frac{1010 - \\frac{27199}{10002} + \\frac{1}{9999} - \\frac{1}{10001} + \\frac{1}{10000} - \\frac{1}{10002}}{1200} \\right)$\n\n$= 250 \\left( \\frac{1010 - 2.718}{1200} + \\frac{\\frac{1}{9999} - \\frac{1}{10001} + \\frac{1}{10000} - \\frac{1}{10002}}{1200} \\right)$\n\n$= 250 \\left( \\frac{1007.282}{1200} + \\frac{\\frac{1}{9999} - \\frac{1\nNow, simplify the expression by evaluating the fractions and perform the arithmetic operations:\n\n$= 250 \\left( \\frac{1007.282}{1200} + \\frac{\\frac{1}{9999} - \\frac{1}{10001} + \\frac{1}{10000} - \\frac{1}{10002}}{1200} \\right)$\n\n$= 250 \\left( 0.83859 + \\frac{\\frac{1}{9999} - \\frac{1}{10001} + \\frac{1}{10000} - \\frac{1}{10002}}{1200} \\right)$\n\n$= 250 \\left( 0.83859 + 0.00000000000000000001 \\right)$\n\n$= 250 \\times 0.83859$\n\n$\\approx 209.647$\nNow that the decimal value has been found, round it to the nearest integer to find the solution to the problem.\n\n$209.647 \\approx \\boxed{210}$\nThe next step is to round the decimal value of $209.647$ to the nearest integer to find the solution to the problem.",
+    "steps": [
+        "To find the integer closest to $1000\\sum_{n=3}^{10000}\\frac{1}{n^2-4}$, first decompose the fraction using partial fraction decomposition:\n\n$\\frac{1}{n^2-4} = \\frac{1}{(n-2)(n+2)} = \\frac{A}{n-2} + \\frac{B}{n+2}$\n\nSolve for A and B.\n\nThis will make the summation easier to evaluate.",
+        "To find the values of A and B, multiply both sides by $(n-2)(n+2)$ and equate the numerators:\n\n$1 = A(n+2) + B(n-2)$\n\nSetting $n=2$ gives $A = \\frac{1}{4}$, and setting $n=-2$ gives $B = -\\frac{1}{4}$.",
+        "Now that the fraction is decomposed, substitute the partial fractions into the summation:\n\n$1000\\sum_{n=3}^{10000}\\frac{1}{n^2-4} = 1000\\sum_{n=3}^{10000} \\left( \\frac{1/4}{n-2} - \\frac{1/4}{n+2} \\right)$\n\nThis will allow us to simplify the summation by canceling out terms.",
+        "The next step is to expand the summation and cancel out the terms. The summation will telescope, allowing most of the terms to cancel out:\n\n$1000\\sum_{n=3}^{10000} \\left( \\frac{1/4}{n-2} - \\frac{1/4}{n+2} \\right) = \\frac{1000}{4} \\left( \\frac{1}{1} - \\frac{1}{5} + \\frac{1}{2} - \\frac{1}{6} + \\frac{1}{3} - \\frac{1}{7} + ... + \\frac{1}{9998} - \\frac{1}{10002} \\right)$",
+        "Now that the summation has been simplified and most of the terms have canceled out, evaluate the remaining terms to find the value of the summation. \n\nSince all terms except the first four and the last three will cancel out, we are left with:\n\n$\\frac{1000}{4} \\left( \\frac{1}{1} - \\frac{1}{5} + \\frac{1}{2} - \\frac{1}{6} + \\frac{1}{3} - \\frac{1}{7} + \\frac{1}{4} - \\frac{1}{8} + \\frac{1}{9999} - \\frac{1}{10001} + \\frac{1}{10000} - \\frac{1}{10002} \\right)$\n\nCombine like terms and simplify to find the value of the expression.\n\nThe next step would be to find the decimal value of this expression and round to the nearest integer.",
+        "Now that the expression has been simplified, evaluate it to find the decimal value. \n\n$\\frac{1000}{4} \\left( \\frac{1}{1} - \\frac{1}{5} + \\frac{1}{2} - \\frac{1}{6} + \\frac{1}{3} - \\frac{1}{7} + \\frac{1}{4} - \\frac{1}{8} + \\frac{1}{9999} - \\frac{1}{10001} + \\frac{1}{10000} - \\frac{1}{10002} \\right)$\n\n$= 250 \\left( 1 - \\frac{1}{5} + \\frac{1}{2} - \\frac{1}{6} + \\frac{1}{3} - \\frac{1}{7} + \\frac{1}{4} - \\frac{1}{8} + \\frac{1}{9999} - \\frac{1}{10001} + \\frac{1}{10000} - \\frac{1}{10002} \\right)$\n\n$= 250 \\left( \\frac{1200 -",
+        "Now, evaluate the expression:\n\n$= 250 \\left( \\frac{1200 - 240 - 150 - 100 + 400 - 171 + 300 - 75 + \\frac{1}{9999} - \\frac{1}{10001} + \\frac{1}{10000} - \\frac{1}{10002}}{1200} \\right)$\n\n$= 250 \\left( \\frac{1010 - \\frac{27199}{10002} + \\frac{1}{9999} - \\frac{1}{10001} + \\frac{1}{10000} - \\frac{1}{10002}}{1200} \\right)$\n\n$= 250 \\left( \\frac{1010 - 2.718}{1200} + \\frac{\\frac{1}{9999} - \\frac{1}{10001} + \\frac{1}{10000} - \\frac{1}{10002}}{1200} \\right)$\n\n$= 250 \\left( \\frac{1007.282}{1200} + \\frac{\\frac{1}{9999} - \\frac{1",
+        "Now, simplify the expression by evaluating the fractions and perform the arithmetic operations:\n\n$= 250 \\left( \\frac{1007.282}{1200} + \\frac{\\frac{1}{9999} - \\frac{1}{10001} + \\frac{1}{10000} - \\frac{1}{10002}}{1200} \\right)$\n\n$= 250 \\left( 0.83859 + \\frac{\\frac{1}{9999} - \\frac{1}{10001} + \\frac{1}{10000} - \\frac{1}{10002}}{1200} \\right)$\n\n$= 250 \\left( 0.83859 + 0.00000000000000000001 \\right)$\n\n$= 250 \\times 0.83859$\n\n$\\approx 209.647$",
+        "Now that the decimal value has been found, round it to the nearest integer to find the solution to the problem.\n\n$209.647 \\approx \\boxed{210}$",
+        "The next step is to round the decimal value of $209.647$ to the nearest integer to find the solution to the problem."
+    ],
+    "full_steps": [
+        [
+            "To find the integer closest to $1000\\sum_{n=3}^{10000}\\frac{1}{n^2-4}$, first decompose the fraction using partial fraction decomposition:\n\n$\\frac{1}{n^2-4} = \\frac{1}{(n-2)(n+2)} = \\frac{A}{n-2} + \\frac{B}{n+2}$\n\nSolve for A and B.\n\nThis will make the summation easier to evaluate.",
+            1
+        ],
+        [
+            "To find the values of A and B, multiply both sides by $(n-2)(n+2)$ and equate the numerators:\n\n$1 = A(n+2) + B(n-2)$\n\nSetting $n=2$ gives $A = \\frac{1}{4}$, and setting $n=-2$ gives $B = -\\frac{1}{4}$.",
+            1
+        ],
+        [
+            "Now that the fraction is decomposed, substitute the partial fractions into the summation:\n\n$1000\\sum_{n=3}^{10000}\\frac{1}{n^2-4} = 1000\\sum_{n=3}^{10000} \\left( \\frac{1/4}{n-2} - \\frac{1/4}{n+2} \\right)$\n\nThis will allow us to simplify the summation by canceling out terms.",
+            1
+        ],
+        [
+            "The next step is to expand the summation and cancel out the terms. The summation will telescope, allowing most of the terms to cancel out:\n\n$1000\\sum_{n=3}^{10000} \\left( \\frac{1/4}{n-2} - \\frac{1/4}{n+2} \\right) = \\frac{1000}{4} \\left( \\frac{1}{1} - \\frac{1}{5} + \\frac{1}{2} - \\frac{1}{6} + \\frac{1}{3} - \\frac{1}{7} + ... + \\frac{1}{9998} - \\frac{1}{10002} \\right)$",
+            1
+        ],
+        [
+            "Now that the summation has been simplified and most of the terms have canceled out, evaluate the remaining terms to find the value of the summation. \n\nSince all terms except the first four and the last three will cancel out, we are left with:\n\n$\\frac{1000}{4} \\left( \\frac{1}{1} - \\frac{1}{5} + \\frac{1}{2} - \\frac{1}{6} + \\frac{1}{3} - \\frac{1}{7} + \\frac{1}{4} - \\frac{1}{8} + \\frac{1}{9999} - \\frac{1}{10001} + \\frac{1}{10000} - \\frac{1}{10002} \\right)$\n\nCombine like terms and simplify to find the value of the expression.\n\nThe next step would be to find the decimal value of this expression and round to the nearest integer.",
+            1
+        ],
+        [
+            "Now that the expression has been simplified, evaluate it to find the decimal value. \n\n$\\frac{1000}{4} \\left( \\frac{1}{1} - \\frac{1}{5} + \\frac{1}{2} - \\frac{1}{6} + \\frac{1}{3} - \\frac{1}{7} + \\frac{1}{4} - \\frac{1}{8} + \\frac{1}{9999} - \\frac{1}{10001} + \\frac{1}{10000} - \\frac{1}{10002} \\right)$\n\n$= 250 \\left( 1 - \\frac{1}{5} + \\frac{1}{2} - \\frac{1}{6} + \\frac{1}{3} - \\frac{1}{7} + \\frac{1}{4} - \\frac{1}{8} + \\frac{1}{9999} - \\frac{1}{10001} + \\frac{1}{10000} - \\frac{1}{10002} \\right)$\n\n$= 250 \\left( \\frac{1200 -",
+            1
+        ],
+        [
+            "Now, evaluate the expression:\n\n$= 250 \\left( \\frac{1200 - 240 - 150 - 100 + 400 - 171 + 300 - 75 + \\frac{1}{9999} - \\frac{1}{10001} + \\frac{1}{10000} - \\frac{1}{10002}}{1200} \\right)$\n\n$= 250 \\left( \\frac{1010 - \\frac{27199}{10002} + \\frac{1}{9999} - \\frac{1}{10001} + \\frac{1}{10000} - \\frac{1}{10002}}{1200} \\right)$\n\n$= 250 \\left( \\frac{1010 - 2.718}{1200} + \\frac{\\frac{1}{9999} - \\frac{1}{10001} + \\frac{1}{10000} - \\frac{1}{10002}}{1200} \\right)$\n\n$= 250 \\left( \\frac{1007.282}{1200} + \\frac{\\frac{1}{9999} - \\frac{1",
+            1
+        ],
+        [
+            "Now, simplify the expression by evaluating the fractions and perform the arithmetic operations:\n\n$= 250 \\left( \\frac{1007.282}{1200} + \\frac{\\frac{1}{9999} - \\frac{1}{10001} + \\frac{1}{10000} - \\frac{1}{10002}}{1200} \\right)$\n\n$= 250 \\left( 0.83859 + \\frac{\\frac{1}{9999} - \\frac{1}{10001} + \\frac{1}{10000} - \\frac{1}{10002}}{1200} \\right)$\n\n$= 250 \\left( 0.83859 + 0.00000000000000000001 \\right)$\n\n$= 250 \\times 0.83859$\n\n$\\approx 209.647$",
+            1
+        ],
+        [
+            "Now that the decimal value has been found, round it to the nearest integer to find the solution to the problem.\n\n$209.647 \\approx \\boxed{210}$",
+            1
+        ],
+        [
+            "The next step is to round the decimal value of $209.647$ to the nearest integer to find the solution to the problem.",
+            1
+        ]
+    ],
+    "time": 36.605615854263306,
+    "total_tokens": 17817,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

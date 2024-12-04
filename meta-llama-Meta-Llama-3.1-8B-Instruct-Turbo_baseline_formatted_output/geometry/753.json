@@ -1,0 +1,8 @@
+{
+    "problem": "How many different triangles can be formed having a perimeter of 7 units if each side must have integral length?",
+    "solution": "Let $a,b,$ and $c$ represent the three side lengths of the triangle. The perimeter is $a+b+c=7,$ so $b+c=7-a$. We know by the Triangle Inequality that the sum of two side lengths of a triangle must be greater than the third side length. If we focus on the variable $a$, we have\n\\[b+c>a\\quad\\Rightarrow \\quad 7-a>a\\quad\\Rightarrow \\quad 3.5>a.\\]We could easily replace $a$ with $b$ or $c$, so the maximum length of any of the three sides is $3$. If $a=3$, then $b+c=4$ and $b$ and $c$ could be $1$ and $3$ in some order or $2$ and $2$ in some order. If we let $a=2$ or $a=1$ and the maximum side length is $3$, we'll still end up with triangles of side lengths $(1,3,3)$ or $(2,2,3)$. There are $\\boxed{2}$ different triangles.",
+    "total_tokens": 204,
+    "time_taken": 3.8234381675720215,
+    "file_name": "./MATH_subsample_uniform/geometry/753.json",
+    "model_solution": "To form a triangle, the sum of the lengths of any two sides must be greater than the length of the third side. \n\nLet's list out the possible combinations of integral side lengths that add up to 7 units:\n\n1. (1,1,5) - This combination doesn't work because 1+1 is not greater than 5.\n2. (1,2,4) - This combination works.\n3. (1,3,3) - This combination works.\n4. (2,2,3) - This combination works.\n\nThere are three different combinations that satisfy the triangle inequality and have a perimeter of 7 units."
+}

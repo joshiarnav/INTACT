@@ -1,0 +1,8 @@
+{
+    "problem": "Convert $199_{10}$ to base 2. Let $x$ be the number of zeros and $y$ be the number of ones in base 2. What is the value of $y-x?$",
+    "solution": "The largest power of 2 that divides $199$ is $2^7$, which equals 128. Since $(1\\cdot 2^7)=128<199<(2\\cdot 2^7)=256$, the digit in the $2^7$ place is $1$. We know that $199-128=71$, and that $71$ can be expressed as $64+4+2+1$, or $(1\\cdot 2^6)+(1\\cdot 2^2)+(1\\cdot 2^1)+(1\\cdot 2^0)$. This means that $199_{10}=11000111_2$. Therefore, $x=3$ and $y=5$; and $y-x=5-3=\\boxed{2}$.",
+    "total_tokens": 381,
+    "time_taken": 8.848570823669434,
+    "file_name": "./MATH_subsample_uniform/number_theory/1075.json",
+    "model_solution": "To convert $199_{10}$ to base 2, we will perform repeated division by 2 until we reach 0. \n\n1. Divide 199 by 2: 199 \u00f7 2 = 99 remainder 1\n2. Divide 99 by 2: 99 \u00f7 2 = 49 remainder 1\n3. Divide 49 by 2: 49 \u00f7 2 = 24 remainder 1\n4. Divide 24 by 2: 24 \u00f7 2 = 12 remainder 0\n5. Divide 12 by 2: 12 \u00f7 2 = 6 remainder 0\n6. Divide 6 by 2: 6 \u00f7 2 = 3 remainder 0\n7. Divide 3 by 2: 3 \u00f7 2 = 1 remainder 1\n8. Divide 1 by 2: 1 \u00f7 2 = 0 remainder 1\n\nNow, let's write the remainders in reverse order to get the base 2 representation of 199: 11000111.\n\nThe number of zeros (x) is 3 and the number of ones (y) is 5. \n\nSo, the value of y - x is 5 - 3 = 2.\n\nTherefore, the answer is $\\boxed{2}$."
+}

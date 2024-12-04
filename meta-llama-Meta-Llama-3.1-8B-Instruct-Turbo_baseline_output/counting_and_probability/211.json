@@ -1,0 +1,8 @@
+{
+    "problem": "Suppose 5 different integers are randomly chosen from between 20 and 69, inclusive.  What is the probability that they each have a different tens digit?",
+    "solution": "In this set of integers, there are 5 tens digits: {2, 3, 4, 5, 6}.  If 5 integers all have different tens digits, then there must be exactly one integer among the 5 with each tens digit.  Since there are 10 different integers for each tens digit, the number of ways to pick, without regard to order, 5 different integers with different tens digits is $10^5$.  The total number of combinations of 5 integers is $\\binom{50}{5}$.  So the probability that 5 integers drawn all have the different tens digits is $$ \\frac{10^5}{\\binom{50}{5}} = \\frac{100000}{2118760} = \\boxed{\\frac{2500}{52969}}. $$",
+    "total_tokens": 293,
+    "time_taken": 2.033980131149292,
+    "file_name": "./MATH_subsample_uniform/counting_and_probability/211.json",
+    "model_solution": "There are 50 integers between 20 and 69 inclusive. The tens digits are 2, 3, 4, 5, and 6, which gives us 5 possible tens digits. \n\nWe are choosing 5 different integers, so in order for all 5 to have different tens digits, we must choose one number from each tens group.\n\nThere are 10 numbers between 20 and 69 that have 2 as the tens digit, 10 numbers that have 3 as the tens digit, and so on.\n\nSince we need to choose one number from each tens group, the number of ways to choose 5 numbers with different tens digits is 10*10*10*10*10 = 100000.\n\nThe number of ways to choose 5 different integers between 20 and 69 inclusive is 50*49*48*47*46 = 3, 920, 648.\n\nSo, the probability that they each have a different tens digit is 100000/3920648 = 100000/3920648 = 25/97961."
+}

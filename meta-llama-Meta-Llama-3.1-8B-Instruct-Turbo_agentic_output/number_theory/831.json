@@ -1,0 +1,31 @@
+{
+    "problem": "Let $S = 1 - 2 + 3 - 4 + \\cdots + 2009 - 2010$. What is the residue of $S$, modulo 2010?",
+    "level": "Level 4",
+    "type": "Number Theory",
+    "solution": "Note that $x + 2010 \\equiv x \\pmod{2010}$. Add 2010 to every negative summand and rearrange the terms to find $S \\equiv 0 + 1 + 2 + 3 + \\cdots + 2008 + 2009 \\pmod{2010}$. The right-hand side is the sum of the integers from 1 to 2010, so $S \\equiv \\frac{2010 \\cdot 2011}{2} \\equiv 1005 \\cdot 2011 \\equiv 1005 \\cdot 1 \\equiv \\boxed{1005} \\pmod{2010}$.",
+    "is_solved": true,
+    "model_solution": "To find the residue of S modulo 2010, pair the terms as follows:\n\nS = (1 - 2) + (3 - 4) + ... + (2009 - 2010).\n\nEach pair sums to -1.\nThere are 1005 pairs in S. Multiply both sides by -1 and calculate the sum of the pair sums: \n\n-1 * 1005 = -1005.\nThe next step is to find the residue of -1005 modulo 2010. \n\nSince finding the residue directly is complex, we can simplify by adding 2010 to -1005, which doesn't change its residue class: \n\n-1005 + 2010 = 1005.\n\nThe residue of 1005 modulo 2010 is the same as the residue of -1005 modulo 2010.\n\nTherefore, the residue of -1005 modulo 2010 is 1005, and the final answer is $\\boxed{1005}$.",
+    "steps": [
+        "To find the residue of S modulo 2010, pair the terms as follows:\n\nS = (1 - 2) + (3 - 4) + ... + (2009 - 2010).\n\nEach pair sums to -1.",
+        "There are 1005 pairs in S. Multiply both sides by -1 and calculate the sum of the pair sums: \n\n-1 * 1005 = -1005.",
+        "The next step is to find the residue of -1005 modulo 2010. \n\nSince finding the residue directly is complex, we can simplify by adding 2010 to -1005, which doesn't change its residue class: \n\n-1005 + 2010 = 1005.\n\nThe residue of 1005 modulo 2010 is the same as the residue of -1005 modulo 2010.\n\nTherefore, the residue of -1005 modulo 2010 is 1005, and the final answer is $\\boxed{1005}$."
+    ],
+    "full_steps": [
+        [
+            "To find the residue of S modulo 2010, pair the terms as follows:\n\nS = (1 - 2) + (3 - 4) + ... + (2009 - 2010).\n\nEach pair sums to -1.",
+            1
+        ],
+        [
+            "There are 1005 pairs in S. Multiply both sides by -1 and calculate the sum of the pair sums: \n\n-1 * 1005 = -1005.",
+            1
+        ],
+        [
+            "The next step is to find the residue of -1005 modulo 2010. \n\nSince finding the residue directly is complex, we can simplify by adding 2010 to -1005, which doesn't change its residue class: \n\n-1005 + 2010 = 1005.\n\nThe residue of 1005 modulo 2010 is the same as the residue of -1005 modulo 2010.\n\nTherefore, the residue of -1005 modulo 2010 is 1005, and the final answer is $\\boxed{1005}$.",
+            1
+        ]
+    ],
+    "time": 6.556751012802124,
+    "total_tokens": 1413,
+    "final_answer_tokens": 314,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

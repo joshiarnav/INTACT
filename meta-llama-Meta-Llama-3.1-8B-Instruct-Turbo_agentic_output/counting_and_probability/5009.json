@@ -1,0 +1,61 @@
+{
+    "problem": "Let $A$, $B$, $C$ and $D$ be the vertices of a regular tetrahedron each of whose edges measures 1 meter. A bug, starting from vertex $A$, observes the following rule: at each vertex it chooses one of the three edges meeting at that vertex, each edge being equally likely to be chosen, and crawls along that edge to the vertex at its opposite end. Let $p = \\frac n{729}$ be the probability that the bug is at vertex $A$ when it has crawled exactly 7 meters. Find the value of $n$.\n",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "Let $P(n)$ denote the probability that the bug is at $A$ after it has crawled $n$ meters. Since the bug can only be at vertex $A$ if it just left a vertex which is not $A$, we have $P(n + 1) = \\frac13 (1 - P(n))$. We also know $P(0) = 1$, so we can quickly compute $P(1)=0$, $P(2) = \\frac 13$, $P(3) = \\frac29$, $P(4) = \\frac7{27}$, $P(5) = \\frac{20}{81}$, $P(6) = \\frac{61}{243}$ and $P(7) = \\frac{182}{729}$, so the answer is $\\boxed{182}$. One can solve this recursion fairly easily to determine a closed-form expression for $P(n)$.",
+    "is_solved": true,
+    "model_solution": "To solve the problem, let's define $P(n)$ as the probability that the bug is at vertex $A$ after crawling $n$ meters. \n\nFor the bug to be at vertex $A$ after crawling $n+1$ meters, it must have been at one of the other vertices ($B$, $C$, or $D$) after crawling $n$ meters. Since the bug chooses each edge with equal probability, the probability of crawling from any of the other vertices to vertex $A$ in the next step is $\\frac{1}{3}$. Therefore, we have the recursive relation $P(n+1) = \\frac{1}{3}(1 - P(n))$.\nTo find the value of $P(7)$, we need to start with the base case where $P(0) = 1$, since the bug starts at vertex $A$. We then use the recursive relation $P(n+1) = \\frac{1}{3}(1 - P(n))$ to find $P(1), P(2), P(3), P(4), P(5), P(6)$, and $P(7)$.\nTo find $P(1)$, we use the recursive relation with $n = 0$.\n$P(1) = \\frac{1}{3}(1 - P(0)) = \\frac{1}{3}(1 - 1) = 0$\nTo find $P(2)$, we use the recursive relation with $n = 1$.\n$P(2) = \\frac{1}{3}(1 - P(1)) = \\frac{1}{3}(1 - 0) = \\frac{1}{3}$.\nTo find $P(3)$, we use the recursive relation with $n = 2$.\n$P(3) = \\frac{1}{3}(1 - P(2)) = \\frac{1}{3}(1 - \\frac{1}{3}) = \\frac{2}{9}$\nTo find $P(4)$, we use the recursive relation with $n = 3$.\n$P(4) = \\frac{1}{3}(1 - P(3)) = \\frac{1}{3}(1 - \\frac{2}{9}) = \\frac{7}{27}$\nTo find $P(5)$, we use the recursive relation with $n = 4$.\n$P(5) = \\frac{1}{3}(1 - P(4)) = \\frac{1}{3}(1 - \\frac{7}{27}) = \\frac{20}{81}$\nTo find $P(6)$, we use the recursive relation with $n = 5$.\n$P(6) = \\frac{1}{3}(1 - P(5)) = \\frac{1}{3}(1 - \\frac{20}{81}) = \\frac{61}{243}$\nTo find $P(7)$, we use the recursive relation with $n = 6$.\n$P(7) = \\frac{1}{3}(1 - P(6)) = \\frac{1}{3}(1 - \\frac{61}{243}) = \\frac{182}{729}$\n\nThe final answer is: $\\boxed{182}$",
+    "steps": [
+        "To solve the problem, let's define $P(n)$ as the probability that the bug is at vertex $A$ after crawling $n$ meters. \n\nFor the bug to be at vertex $A$ after crawling $n+1$ meters, it must have been at one of the other vertices ($B$, $C$, or $D$) after crawling $n$ meters. Since the bug chooses each edge with equal probability, the probability of crawling from any of the other vertices to vertex $A$ in the next step is $\\frac{1}{3}$. Therefore, we have the recursive relation $P(n+1) = \\frac{1}{3}(1 - P(n))$.",
+        "To find the value of $P(7)$, we need to start with the base case where $P(0) = 1$, since the bug starts at vertex $A$. We then use the recursive relation $P(n+1) = \\frac{1}{3}(1 - P(n))$ to find $P(1), P(2), P(3), P(4), P(5), P(6)$, and $P(7)$.",
+        "To find $P(1)$, we use the recursive relation with $n = 0$.\n$P(1) = \\frac{1}{3}(1 - P(0)) = \\frac{1}{3}(1 - 1) = 0$",
+        "To find $P(2)$, we use the recursive relation with $n = 1$.\n$P(2) = \\frac{1}{3}(1 - P(1)) = \\frac{1}{3}(1 - 0) = \\frac{1}{3}$.",
+        "To find $P(3)$, we use the recursive relation with $n = 2$.\n$P(3) = \\frac{1}{3}(1 - P(2)) = \\frac{1}{3}(1 - \\frac{1}{3}) = \\frac{2}{9}$",
+        "To find $P(4)$, we use the recursive relation with $n = 3$.\n$P(4) = \\frac{1}{3}(1 - P(3)) = \\frac{1}{3}(1 - \\frac{2}{9}) = \\frac{7}{27}$",
+        "To find $P(5)$, we use the recursive relation with $n = 4$.\n$P(5) = \\frac{1}{3}(1 - P(4)) = \\frac{1}{3}(1 - \\frac{7}{27}) = \\frac{20}{81}$",
+        "To find $P(6)$, we use the recursive relation with $n = 5$.\n$P(6) = \\frac{1}{3}(1 - P(5)) = \\frac{1}{3}(1 - \\frac{20}{81}) = \\frac{61}{243}$",
+        "To find $P(7)$, we use the recursive relation with $n = 6$.\n$P(7) = \\frac{1}{3}(1 - P(6)) = \\frac{1}{3}(1 - \\frac{61}{243}) = \\frac{182}{729}$\n\nThe final answer is: $\\boxed{182}$"
+    ],
+    "full_steps": [
+        [
+            "To solve the problem, let's define $P(n)$ as the probability that the bug is at vertex $A$ after crawling $n$ meters. \n\nFor the bug to be at vertex $A$ after crawling $n+1$ meters, it must have been at one of the other vertices ($B$, $C$, or $D$) after crawling $n$ meters. Since the bug chooses each edge with equal probability, the probability of crawling from any of the other vertices to vertex $A$ in the next step is $\\frac{1}{3}$. Therefore, we have the recursive relation $P(n+1) = \\frac{1}{3}(1 - P(n))$.",
+            1
+        ],
+        [
+            "To find the value of $P(7)$, we need to start with the base case where $P(0) = 1$, since the bug starts at vertex $A$. We then use the recursive relation $P(n+1) = \\frac{1}{3}(1 - P(n))$ to find $P(1), P(2), P(3), P(4), P(5), P(6)$, and $P(7)$.",
+            1
+        ],
+        [
+            "To find $P(1)$, we use the recursive relation with $n = 0$.\n$P(1) = \\frac{1}{3}(1 - P(0)) = \\frac{1}{3}(1 - 1) = 0$",
+            1
+        ],
+        [
+            "To find $P(2)$, we use the recursive relation with $n = 1$.\n$P(2) = \\frac{1}{3}(1 - P(1)) = \\frac{1}{3}(1 - 0) = \\frac{1}{3}$.",
+            1
+        ],
+        [
+            "To find $P(3)$, we use the recursive relation with $n = 2$.\n$P(3) = \\frac{1}{3}(1 - P(2)) = \\frac{1}{3}(1 - \\frac{1}{3}) = \\frac{2}{9}$",
+            1
+        ],
+        [
+            "To find $P(4)$, we use the recursive relation with $n = 3$.\n$P(4) = \\frac{1}{3}(1 - P(3)) = \\frac{1}{3}(1 - \\frac{2}{9}) = \\frac{7}{27}$",
+            1
+        ],
+        [
+            "To find $P(5)$, we use the recursive relation with $n = 4$.\n$P(5) = \\frac{1}{3}(1 - P(4)) = \\frac{1}{3}(1 - \\frac{7}{27}) = \\frac{20}{81}$",
+            1
+        ],
+        [
+            "To find $P(6)$, we use the recursive relation with $n = 5$.\n$P(6) = \\frac{1}{3}(1 - P(5)) = \\frac{1}{3}(1 - \\frac{20}{81}) = \\frac{61}{243}$",
+            1
+        ],
+        [
+            "To find $P(7)$, we use the recursive relation with $n = 6$.\n$P(7) = \\frac{1}{3}(1 - P(6)) = \\frac{1}{3}(1 - \\frac{61}{243}) = \\frac{182}{729}$\n\nThe final answer is: $\\boxed{182}$",
+            1
+        ]
+    ],
+    "time": 23.445871829986572,
+    "total_tokens": 11473,
+    "final_answer_tokens": 900,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

@@ -1,0 +1,56 @@
+{
+    "problem": "A mother purchases 5 blue plates, 2 red plates, 2 green plates, and 1 orange plate. How many ways are there for her to arrange these plates for dinner around her circular table if she doesn't want the 2 green plates to be adjacent?\n",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "We apply the complement principle: we find the total number of cases in which the 2 green places are adjacent, and subtract from the total number of cases.\nThere are $\\frac{10!}{5!2!2!1!} = 7560$ ways to arrange the plates in a linear fashion. However, since the plates are arranged in a circle, there are $10$ ways to rotate the plates, and so there are $7560/10 = 756$ ways to arrange the plates in a circular fashion (consider, for example, fixing the orange plate at the top of the table).\nIf the two green plates are adjacent, we may think of them as a single entity, so that there are now $9$ objects to be placed around the table in a circular fashion. Using the same argument, there are $\\frac{9!}{5!2!1!1!} = 1512$ ways to arrange the objects in a linear fashion, and $1512/9 = 168$ ways in a circular fashion.\nThus, the answer is $756 - 168 = \\boxed{588}$.",
+    "is_solved": true,
+    "model_solution": "To solve this problem, we will use the concept of circular permutations and the exclusion-exclusion principle. \n\nStep 1: Calculate the total number of ways to arrange all the plates in a linear fashion, disregarding the condition about the green plates. \n\nIn this case, we have a total of 10 plates. The total number of linear arrangements is given by 10! / (5! * 2! * 2! * 1!).\nStep 2: To find the number of circular arrangements, we divide the total number of linear arrangements by the number of rotations in a circular arrangement, which is equal to the total number of plates, 10. However, we must also account for the fact that a circular arrangement is equivalent to 9 other rotations of the same arrangement. \n\nWe will calculate the number of linear arrangements first: \n10! / (5! * 2! * 2! * 1!) = 7560.\n\nNext, we divide this number by 10 to account for the circular permutations: \n7560 / 10 = 756.\n\nHowever, the original problem asks for arrangements that do not have the 2 green plates adjacent, so we need to exclude cases where they are adjacent. \n\nWe will calculate the total number of linear arrangements where the 2 green plates are adjacent next.\nStep 3: \nTo find the number of linear arrangements where the 2 green plates are adjacent, we can consider the two green plates as one entity. This gives us a total of 9 entities (the 5 blue plates, the 2 combined green plates, the 2 red plates, the orange plate). The number of linear arrangements is then given by 9! / (5! * 2! * 1! * 1!). Next, we'll divide this number by 9 to account for the circular permutations.\nStep 4: \nTo find the number of circular arrangements where the 2 green plates are adjacent, we divide the number of linear arrangements where the green plates are adjacent by 9, which is the total number of plates if we consider the 2 green plates as one entity. \n\nWe will calculate this number: \n(9! / (5! * 2! * 1! * 1!)) / 9 = (362,880 / (120 * 2 * 1 * 1)) / 9 = 362,880 / 240 / 9 = 1440 / 9 = 160.\n\nNow, we need to subtract the number of circular arrangements with adjacent green plates from the total number of circular arrangements to find the final answer.\nStep 5: \nTo find the number of circular arrangements where the 2 green plates are not adjacent, we subtract the number of circular arrangements with adjacent green plates from the total number of circular arrangements:\n756 - 160.\nStep 6: \nTo find the final answer, we perform the subtraction:\n756 - 160 = 596.\nStep 7: \nThe total number of ways to arrange the plates around the circular table, with the condition that the 2 green plates are not adjacent, is 596.\nThe final step is simply to confirm the final answer based on the previous steps:\n\n$\\boxed{596}$",
+    "steps": [
+        "To solve this problem, we will use the concept of circular permutations and the exclusion-exclusion principle. \n\nStep 1: Calculate the total number of ways to arrange all the plates in a linear fashion, disregarding the condition about the green plates. \n\nIn this case, we have a total of 10 plates. The total number of linear arrangements is given by 10! / (5! * 2! * 2! * 1!).",
+        "Step 2: To find the number of circular arrangements, we divide the total number of linear arrangements by the number of rotations in a circular arrangement, which is equal to the total number of plates, 10. However, we must also account for the fact that a circular arrangement is equivalent to 9 other rotations of the same arrangement. \n\nWe will calculate the number of linear arrangements first: \n10! / (5! * 2! * 2! * 1!) = 7560.\n\nNext, we divide this number by 10 to account for the circular permutations: \n7560 / 10 = 756.\n\nHowever, the original problem asks for arrangements that do not have the 2 green plates adjacent, so we need to exclude cases where they are adjacent. \n\nWe will calculate the total number of linear arrangements where the 2 green plates are adjacent next.",
+        "Step 3: \nTo find the number of linear arrangements where the 2 green plates are adjacent, we can consider the two green plates as one entity. This gives us a total of 9 entities (the 5 blue plates, the 2 combined green plates, the 2 red plates, the orange plate). The number of linear arrangements is then given by 9! / (5! * 2! * 1! * 1!). Next, we'll divide this number by 9 to account for the circular permutations.",
+        "Step 4: \nTo find the number of circular arrangements where the 2 green plates are adjacent, we divide the number of linear arrangements where the green plates are adjacent by 9, which is the total number of plates if we consider the 2 green plates as one entity. \n\nWe will calculate this number: \n(9! / (5! * 2! * 1! * 1!)) / 9 = (362,880 / (120 * 2 * 1 * 1)) / 9 = 362,880 / 240 / 9 = 1440 / 9 = 160.\n\nNow, we need to subtract the number of circular arrangements with adjacent green plates from the total number of circular arrangements to find the final answer.",
+        "Step 5: \nTo find the number of circular arrangements where the 2 green plates are not adjacent, we subtract the number of circular arrangements with adjacent green plates from the total number of circular arrangements:\n756 - 160.",
+        "Step 6: \nTo find the final answer, we perform the subtraction:\n756 - 160 = 596.",
+        "Step 7: \nThe total number of ways to arrange the plates around the circular table, with the condition that the 2 green plates are not adjacent, is 596.",
+        "The final step is simply to confirm the final answer based on the previous steps:\n\n$\\boxed{596}$"
+    ],
+    "full_steps": [
+        [
+            "To solve this problem, we will use the concept of circular permutations and the exclusion-exclusion principle. \n\nStep 1: Calculate the total number of ways to arrange all the plates in a linear fashion, disregarding the condition about the green plates. \n\nIn this case, we have a total of 10 plates. The total number of linear arrangements is given by 10! / (5! * 2! * 2! * 1!).",
+            1
+        ],
+        [
+            "Step 2: To find the number of circular arrangements, we divide the total number of linear arrangements by the number of rotations in a circular arrangement, which is equal to the total number of plates, 10. However, we must also account for the fact that a circular arrangement is equivalent to 9 other rotations of the same arrangement. \n\nWe will calculate the number of linear arrangements first: \n10! / (5! * 2! * 2! * 1!) = 7560.\n\nNext, we divide this number by 10 to account for the circular permutations: \n7560 / 10 = 756.\n\nHowever, the original problem asks for arrangements that do not have the 2 green plates adjacent, so we need to exclude cases where they are adjacent. \n\nWe will calculate the total number of linear arrangements where the 2 green plates are adjacent next.",
+            1
+        ],
+        [
+            "Step 3: \nTo find the number of linear arrangements where the 2 green plates are adjacent, we can consider the two green plates as one entity. This gives us a total of 9 entities (the 5 blue plates, the 2 combined green plates, the 2 red plates, the orange plate). The number of linear arrangements is then given by 9! / (5! * 2! * 1! * 1!). Next, we'll divide this number by 9 to account for the circular permutations.",
+            1
+        ],
+        [
+            "Step 4: \nTo find the number of circular arrangements where the 2 green plates are adjacent, we divide the number of linear arrangements where the green plates are adjacent by 9, which is the total number of plates if we consider the 2 green plates as one entity. \n\nWe will calculate this number: \n(9! / (5! * 2! * 1! * 1!)) / 9 = (362,880 / (120 * 2 * 1 * 1)) / 9 = 362,880 / 240 / 9 = 1440 / 9 = 160.\n\nNow, we need to subtract the number of circular arrangements with adjacent green plates from the total number of circular arrangements to find the final answer.",
+            1
+        ],
+        [
+            "Step 5: \nTo find the number of circular arrangements where the 2 green plates are not adjacent, we subtract the number of circular arrangements with adjacent green plates from the total number of circular arrangements:\n756 - 160.",
+            1
+        ],
+        [
+            "Step 6: \nTo find the final answer, we perform the subtraction:\n756 - 160 = 596.",
+            1
+        ],
+        [
+            "Step 7: \nThe total number of ways to arrange the plates around the circular table, with the condition that the 2 green plates are not adjacent, is 596.",
+            1
+        ],
+        [
+            "The final step is simply to confirm the final answer based on the previous steps:\n\n$\\boxed{596}$",
+            1
+        ]
+    ],
+    "time": 28.35443377494812,
+    "total_tokens": 9824,
+    "final_answer_tokens": 796,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

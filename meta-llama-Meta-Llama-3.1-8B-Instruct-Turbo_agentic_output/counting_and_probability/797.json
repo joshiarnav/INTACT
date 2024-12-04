@@ -1,0 +1,46 @@
+{
+    "problem": "A math conference is presenting a lecture series with six different lecturers. If Dr. Smith's lecture depends on Dr. Jones's lecture, so that Dr. Smith must be scheduled at some time after Dr. Jones, in how many orders can the six lecturers be scheduled?",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "There are a total of $6!$ ways to order the 6 lectures with no restriction. By symmetry, exactly half of these will have Dr. Jones's lecture before Dr. Smith's lecture. Thus there are $6!/2 = \\boxed{360}$ ways to schedule the conference.",
+    "is_solved": true,
+    "model_solution": "First, consider the total number of ways to arrange the 6 lecturers without any restrictions. This can be calculated using the permutation formula: 6! (6 factorial), since there are 6 choices for the first position, 5 for the second, and so on, until there is only 1 choice for the last position.\n\n6! = 6 \u00d7 5 \u00d7 4 \u00d7 3 \u00d7 2 \u00d7 1 = 720\nThe next step is to account for the restriction that Dr. Smith must be scheduled after Dr. Jones. Consider Dr. Jones as a fixed point (since his position is determined) and move Dr. Smith to any position after Dr. Jones. This effectively creates a new sequence of 5 positions (one for Dr. Jones and 5 for the remaining lecturers) that can be arranged in 5! ways.\n\nHowever, Dr. Smith's position can be any of the 5 positions, so for each of the 5! arrangements, there are 5 possible positions for Dr. Smith. This results in a total of 5 * 5! arrangements.\nThe next step is to find the total number of ways to arrange the 6 lecturers with the restriction that Dr. Smith must be scheduled after Dr. Jones. This is given by:\n\n5 * 5! = 5 * (5 \u00d7 4 \u00d7 3 \u00d7 2 \u00d7 1) \n= 5 * 120 \n= 600 \n\nHowever, this is still not the total number of arrangements, because Dr. Jones can also be in any of the 6 positions. So, for each of the 600 arrangements, Dr. Jones can be in any of the 6 positions.\nThe next step is to consider Dr. Jones's position. Since Dr. Jones can be in any of the 6 positions, for each of the 600 arrangements, there are 6 possible positions for Dr. Jones. This results in a total of 6 * 600 arrangements.\n\n6 * 600 = 3600\nThe condition that Dr. Smith must be scheduled after Dr. Jones effectively halves the number of arrangements, since for each valid arrangement, there is an invalid arrangement with Dr. Smith and Dr. Jones in the opposite order. Therefore, the total number of arrangements with the given restriction is:\n\n3600 / 2 = 1800\nThe condition that Dr. Smith must be scheduled after Dr. Jones effectively halves the number of arrangements, since for each valid arrangement, there is an invalid arrangement with Dr. Smith and Dr. Jones in the opposite order. Therefore, the total number of arrangements with the given restriction is:\n\n3600 / 2 = 1800",
+    "steps": [
+        "First, consider the total number of ways to arrange the 6 lecturers without any restrictions. This can be calculated using the permutation formula: 6! (6 factorial), since there are 6 choices for the first position, 5 for the second, and so on, until there is only 1 choice for the last position.\n\n6! = 6 \u00d7 5 \u00d7 4 \u00d7 3 \u00d7 2 \u00d7 1 = 720",
+        "The next step is to account for the restriction that Dr. Smith must be scheduled after Dr. Jones. Consider Dr. Jones as a fixed point (since his position is determined) and move Dr. Smith to any position after Dr. Jones. This effectively creates a new sequence of 5 positions (one for Dr. Jones and 5 for the remaining lecturers) that can be arranged in 5! ways.\n\nHowever, Dr. Smith's position can be any of the 5 positions, so for each of the 5! arrangements, there are 5 possible positions for Dr. Smith. This results in a total of 5 * 5! arrangements.",
+        "The next step is to find the total number of ways to arrange the 6 lecturers with the restriction that Dr. Smith must be scheduled after Dr. Jones. This is given by:\n\n5 * 5! = 5 * (5 \u00d7 4 \u00d7 3 \u00d7 2 \u00d7 1) \n= 5 * 120 \n= 600 \n\nHowever, this is still not the total number of arrangements, because Dr. Jones can also be in any of the 6 positions. So, for each of the 600 arrangements, Dr. Jones can be in any of the 6 positions.",
+        "The next step is to consider Dr. Jones's position. Since Dr. Jones can be in any of the 6 positions, for each of the 600 arrangements, there are 6 possible positions for Dr. Jones. This results in a total of 6 * 600 arrangements.\n\n6 * 600 = 3600",
+        "The condition that Dr. Smith must be scheduled after Dr. Jones effectively halves the number of arrangements, since for each valid arrangement, there is an invalid arrangement with Dr. Smith and Dr. Jones in the opposite order. Therefore, the total number of arrangements with the given restriction is:\n\n3600 / 2 = 1800",
+        "The condition that Dr. Smith must be scheduled after Dr. Jones effectively halves the number of arrangements, since for each valid arrangement, there is an invalid arrangement with Dr. Smith and Dr. Jones in the opposite order. Therefore, the total number of arrangements with the given restriction is:\n\n3600 / 2 = 1800"
+    ],
+    "full_steps": [
+        [
+            "First, consider the total number of ways to arrange the 6 lecturers without any restrictions. This can be calculated using the permutation formula: 6! (6 factorial), since there are 6 choices for the first position, 5 for the second, and so on, until there is only 1 choice for the last position.\n\n6! = 6 \u00d7 5 \u00d7 4 \u00d7 3 \u00d7 2 \u00d7 1 = 720",
+            1
+        ],
+        [
+            "The next step is to account for the restriction that Dr. Smith must be scheduled after Dr. Jones. Consider Dr. Jones as a fixed point (since his position is determined) and move Dr. Smith to any position after Dr. Jones. This effectively creates a new sequence of 5 positions (one for Dr. Jones and 5 for the remaining lecturers) that can be arranged in 5! ways.\n\nHowever, Dr. Smith's position can be any of the 5 positions, so for each of the 5! arrangements, there are 5 possible positions for Dr. Smith. This results in a total of 5 * 5! arrangements.",
+            1
+        ],
+        [
+            "The next step is to find the total number of ways to arrange the 6 lecturers with the restriction that Dr. Smith must be scheduled after Dr. Jones. This is given by:\n\n5 * 5! = 5 * (5 \u00d7 4 \u00d7 3 \u00d7 2 \u00d7 1) \n= 5 * 120 \n= 600 \n\nHowever, this is still not the total number of arrangements, because Dr. Jones can also be in any of the 6 positions. So, for each of the 600 arrangements, Dr. Jones can be in any of the 6 positions.",
+            1
+        ],
+        [
+            "The next step is to consider Dr. Jones's position. Since Dr. Jones can be in any of the 6 positions, for each of the 600 arrangements, there are 6 possible positions for Dr. Jones. This results in a total of 6 * 600 arrangements.\n\n6 * 600 = 3600",
+            1
+        ],
+        [
+            "The condition that Dr. Smith must be scheduled after Dr. Jones effectively halves the number of arrangements, since for each valid arrangement, there is an invalid arrangement with Dr. Smith and Dr. Jones in the opposite order. Therefore, the total number of arrangements with the given restriction is:\n\n3600 / 2 = 1800",
+            1
+        ],
+        [
+            "The condition that Dr. Smith must be scheduled after Dr. Jones effectively halves the number of arrangements, since for each valid arrangement, there is an invalid arrangement with Dr. Smith and Dr. Jones in the opposite order. Therefore, the total number of arrangements with the given restriction is:\n\n3600 / 2 = 1800",
+            1
+        ]
+    ],
+    "time": 24.10346508026123,
+    "total_tokens": 5932,
+    "final_answer_tokens": 680,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

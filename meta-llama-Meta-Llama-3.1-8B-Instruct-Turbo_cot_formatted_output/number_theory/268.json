@@ -1,0 +1,8 @@
+{
+    "problem": "What is the smallest positive integer that satisfies the congruence $4x \\equiv 13 \\pmod{27}$?",
+    "solution": "Observing that $4 \\cdot 7 = 28 = 27 + 1,$ we multiply both sides of the given congruence by 7 to find $28x \\equiv 91 \\pmod{27}$. Since $28x\\equiv x\\pmod{27}$ and $91\\equiv10 \\pmod{27}$, we conclude that $x\\equiv 10\\pmod{27}$. Therefore, $\\boxed{10}$ is the smallest positive integer satisfying the given congruence.",
+    "total_tokens": 404,
+    "time_taken": 4.118650197982788,
+    "file_name": "./MATH_subsample_uniform/number_theory/268.json",
+    "model_solution": "To solve the congruence, we need to find an integer x that makes 4x - 13 a multiple of 27. \n\nWe can start by rewriting the congruence as $4x \\equiv 13 \\pmod{27}$. \n\nSince 27 is not divisible by 4, we can multiply both sides by the modular inverse of 4 modulo 27, which is the number that when multiplied by 4 gives 1 modulo 27. \n\nTo find the modular inverse, we need to find a number a such that $4a \\equiv 1 \\pmod{27}$. \n\nWe can use the Extended Euclidean Algorithm to find the modular inverse, but in this case, we can also try multiplying 4 by different numbers modulo 27 until we get 1.\n\nAfter trying different numbers, we find that $4 \\times 7 \\equiv 28 \\equiv 1 \\pmod{27}$. \n\nSo, the modular inverse of 4 modulo 27 is 4 * 7 = 28 % 27 = 7.\n\nNow, we can multiply both sides of the original congruence by 7:\n\n4x \u2261 13 (mod 27)\n\nMultiplying both sides by 7:\n\n7 * 4x \u2261 7 * 13 (mod 27)\n\nx \u2261 91 (mod 27)\n\nx \u2261 10 (mod 27)\n\nTherefore, the smallest positive integer that satisfies the congruence is 10.\n\nSo the answer is $\\boxed{10}$."
+}
