@@ -1,0 +1,8 @@
+{
+    "problem": "A Senate committee has 5 Democrats, 5 Republicans, and 1 Independent.  In how many ways can they sit around a circular table if all the members of each party all sit next to each other?  (Two seatings are considered equivalent if one is a rotation of the other.)",
+    "solution": "Choose any seat in which to place the Independent -- it doesn't matter which seat that we choose, since we can rotate the table. Once the Independent's seat has been chosen, either all the Democrats sit to their left and all the Republicans sit to their right, or the other way around. Either way, there are $5!$ ways to put the Democrats in their seats, and $5!$ ways to put the Republicans in their seats. So, the total number of ways to seat the people around the table is $2\\cdot5!\\cdot5!=2\\cdot120\\cdot120=\\boxed{28800}$.",
+    "total_tokens": 215,
+    "time_taken": 46.76053309440613,
+    "file_name": "./MATH/test/counting_and_probability/159.json",
+    "model_solution": "There are three entities that will sit together; namely, the Democrats, the Republicans and the Independent.  We can arrange these entities in a circular fashion in (3 - 1) = 2 ways (the table is circular, so we must divide by the number of rotations).\nThere are $5!$ ways for the Democrats to sit together, $5!$ ways for the Republicans to sit together, and 1 way for the Independent to sit with the Democrats and the Republicans.\nTherefore, by the rules of counting, there are $(2)(5!)(5!)(1) = 2880$ ways for the committee members to sit around the circular table."
+}

@@ -14,22 +14,24 @@ def all_solution_files(data_dir):
 
 def check_problems(filepaths):
     problem_to_correctness = {}
+    total_tokens = 0
     for filepath in filepaths:
         with open(filepath, "r") as f:
             # Check if the part of the JSON marked "model_solution" contains the section in the part of the JSON marked "solution" within the $\\boxed{}$ section.
             data = json.load(f)
             model_solution = data["model_solution"]
             solution = data["solution"]
+            total_tokens += data["total_tokens"]
             # Find the part of the solution that is within the $\\boxed{}$ section.
             boxed_solution = solution[solution.find("$\\boxed{") + len("$\\boxed{"):solution.find("}$")]
             problem_to_correctness[filepath] = boxed_solution in model_solution
 
-    return problem_to_correctness
+    return problem_to_correctness, total_tokens
 
 def main():
     data_dir = "./output"
     problem_files = all_solution_files(data_dir)
-    problem_to_correctness = check_problems(problem_files)
+    problem_to_correctness, total_tokens = check_problems(problem_files)
     # Save filenames of problems that were solved correctly.
     with(open("correct_problems.txt", "w")) as f:
         for problem, correctness in problem_to_correctness.items():
@@ -44,6 +46,7 @@ def main():
     print(f"Incorrect: {num_incorrect}")
     print(f"Total: {total}")
     print(f"Percentage: {num_correct / total * 100:.2f}%")
+    print(f"Total tokens: {total_tokens}")
 
 
 if __name__ == "__main__":
