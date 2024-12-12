@@ -1,0 +1,26 @@
+{
+    "problem": "The sides of triangle $PQR$ are tangent to a circle with center $C$ as shown. Given that $\\angle PQR = 63^\\circ$ and $\\angle QPR = 59^\\circ$, find $\\angle QRC$, in degrees.\n\n[asy]\n\nunitsize(1.0 cm);\n\npair Q, P, R, C;\n\nQ = (2.43,3.46);\n\nP = (0,0);\n\nR = (4.43,0);\n\nC = incenter(Q,P,R);\n\ndraw(Q--P--R--cycle);\n\ndraw(incircle(Q,P,R));\n\ndraw(R--C);\n\nlabel(\"$Q$\", Q, N);\n\nlabel(\"$P$\", P, SW);\n\nlabel(\"$R$\", R, SE);\n\nlabel(\"$C$\", C, N);\n\n[/asy]",
+    "level": "Level 2",
+    "type": "Geometry",
+    "solution": "The circle with center $C$ is the incircle of $\\triangle PQR$. So, any segment from a vertex of the triangle to $C$ is an angle bisector.\n\nThe sum of the measures of the internal angles of a triangle is $180^\\circ$, so\n\n\\begin{align*}\n\\angle QRP &= 180^\\circ - \\angle PQR - \\angle QPR \\\\\n&= 180^\\circ - 63^\\circ - 59^\\circ\\\\\n&= 58^\\circ.\n\\end{align*}Since $\\overline{RC}$ bisects $\\angle QRP$, we have $\\angle QRC = \\frac{58^\\circ}{2} = \\boxed{29^\\circ}$.",
+    "is_solved": true,
+    "model_solution": "Since the sides of triangle $PQR$ are tangent to a circle with center $C$, $C$ is the incenter of triangle $PQR$. \n\nThe angle bisector of the angle at $C$ in triangle $PQR$ is the line $RC$.\n\nNow, let's consider the angles in triangle $PQR$: $\\angle PQR = 63^\\circ$ and $\\angle QPR = 59^\\circ$. \n\nWe can find $\\angle PRQ$ by subtracting the sum of these two angles from 180 degrees, since a triangle has three interior angles that add up to 180 degrees.\n\n$\\angle PRQ = 180^\\circ - \\angle PQR - \\angle QPR$\n\n$\\angle PRQ = 180^\\circ - 63^\\circ - 59^\\circ$\n\n$\\angle PRQ = 58^\\circ$\n\nSince the line $RC$ is the angle bisector of the angle at $C$, we know that the angle $\\angle QRC$ is half of $\\angle PRQ$.\n\nWe can now write the equation to find $\\angle QRC$.\n\n$\\angle QRC = \\frac{1}{2} \\angle PRQ$\n\n$\\angle Q\nTo find the angle $\\angle QRC$, we need to substitute the value of $\\angle PRQ$ that we found earlier.\n\n$\\angle PRQ = 58^\\circ$\n\n$\\angle QRC = \\frac{1}{2} \\angle PRQ$\n\n$\\angle QRC = \\frac{1}{2} \\times 58^\\circ$\n\n$\\angle QRC = 29^\\circ$\n\n$\\boxed{29}$",
+    "steps": [
+        "Since the sides of triangle $PQR$ are tangent to a circle with center $C$, $C$ is the incenter of triangle $PQR$. \n\nThe angle bisector of the angle at $C$ in triangle $PQR$ is the line $RC$.\n\nNow, let's consider the angles in triangle $PQR$: $\\angle PQR = 63^\\circ$ and $\\angle QPR = 59^\\circ$. \n\nWe can find $\\angle PRQ$ by subtracting the sum of these two angles from 180 degrees, since a triangle has three interior angles that add up to 180 degrees.\n\n$\\angle PRQ = 180^\\circ - \\angle PQR - \\angle QPR$\n\n$\\angle PRQ = 180^\\circ - 63^\\circ - 59^\\circ$\n\n$\\angle PRQ = 58^\\circ$\n\nSince the line $RC$ is the angle bisector of the angle at $C$, we know that the angle $\\angle QRC$ is half of $\\angle PRQ$.\n\nWe can now write the equation to find $\\angle QRC$.\n\n$\\angle QRC = \\frac{1}{2} \\angle PRQ$\n\n$\\angle Q",
+        "To find the angle $\\angle QRC$, we need to substitute the value of $\\angle PRQ$ that we found earlier.\n\n$\\angle PRQ = 58^\\circ$\n\n$\\angle QRC = \\frac{1}{2} \\angle PRQ$\n\n$\\angle QRC = \\frac{1}{2} \\times 58^\\circ$\n\n$\\angle QRC = 29^\\circ$\n\n$\\boxed{29}$"
+    ],
+    "full_steps": [
+        [
+            "Since the sides of triangle $PQR$ are tangent to a circle with center $C$, $C$ is the incenter of triangle $PQR$. \n\nThe angle bisector of the angle at $C$ in triangle $PQR$ is the line $RC$.\n\nNow, let's consider the angles in triangle $PQR$: $\\angle PQR = 63^\\circ$ and $\\angle QPR = 59^\\circ$. \n\nWe can find $\\angle PRQ$ by subtracting the sum of these two angles from 180 degrees, since a triangle has three interior angles that add up to 180 degrees.\n\n$\\angle PRQ = 180^\\circ - \\angle PQR - \\angle QPR$\n\n$\\angle PRQ = 180^\\circ - 63^\\circ - 59^\\circ$\n\n$\\angle PRQ = 58^\\circ$\n\nSince the line $RC$ is the angle bisector of the angle at $C$, we know that the angle $\\angle QRC$ is half of $\\angle PRQ$.\n\nWe can now write the equation to find $\\angle QRC$.\n\n$\\angle QRC = \\frac{1}{2} \\angle PRQ$\n\n$\\angle Q",
+            1
+        ],
+        [
+            "To find the angle $\\angle QRC$, we need to substitute the value of $\\angle PRQ$ that we found earlier.\n\n$\\angle PRQ = 58^\\circ$\n\n$\\angle QRC = \\frac{1}{2} \\angle PRQ$\n\n$\\angle QRC = \\frac{1}{2} \\times 58^\\circ$\n\n$\\angle QRC = 29^\\circ$\n\n$\\boxed{29}$",
+            1
+        ]
+    ],
+    "time": 3.138723850250244,
+    "total_tokens": 2135,
+    "final_answer_tokens": 562,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

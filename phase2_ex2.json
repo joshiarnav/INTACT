@@ -1,0 +1,186 @@
+{
+  "labeler": "2d45c8c4-b303-4c12-9fc7-12dcb4f1d028",
+  "timestamp": "2022-12-17T01:14:44.032940",
+  "generation": 8,
+  "is_quality_control_question": false,
+  "is_initial_screening_question": false,
+  "question": {
+    "problem": "Let $\\mathbf{a},$ $\\mathbf{b},$ $\\mathbf{c}$ be unit vectors such that\n\\[\\mathbf{a} \\times (\\mathbf{b} \\times \\mathbf{c}) = \\frac{\\mathbf{b} + \\mathbf{c}}{\\sqrt{2}},\\]and such that $\\{\\mathbf{a}, \\mathbf{b}, \\mathbf{c}\\}$ is a linearly independent set.\n\nFind the angle between $\\mathbf{a}$ and $\\mathbf{b},$ in degrees.",
+    "ground_truth_solution": "By the vector triple product identity,\n\\[\\mathbf{a} \\times (\\mathbf{b} \\times \\mathbf{c}) = (\\mathbf{a} \\cdot \\mathbf{c}) \\mathbf{b} - (\\mathbf{a} \\cdot \\mathbf{b}) \\mathbf{c},\\]so\n\\[(\\mathbf{a} \\cdot \\mathbf{c}) \\mathbf{b} - (\\mathbf{a} \\cdot \\mathbf{b}) \\mathbf{c} = \\frac{\\mathbf{b} + \\mathbf{c}}{\\sqrt{2}}.\\]Hence,\n\\[\\left( \\mathbf{a} \\cdot \\mathbf{c} - \\frac{1}{\\sqrt{2}} \\right) \\mathbf{b} = \\left( \\mathbf{a} \\cdot \\mathbf{b} + \\frac{1}{\\sqrt{2}} \\right) \\mathbf{c}.\\]If neither side represents the zero vector, then this means one of $\\mathbf{b},$ $\\mathbf{c}$ is a scalar multiple of the other, which means that the set $\\{\\mathbf{a}, \\mathbf{b}, \\mathbf{c}\\}$ is linearly dependent.  Therefore, both sides must be equal to the zero vector.  Furthermore, we must have\n\\[\\mathbf{a} \\cdot \\mathbf{b} = -\\frac{1}{\\sqrt{2}}.\\]If $\\theta$ is the angle between $\\mathbf{a}$ and $\\mathbf{b},$ then\n\\[\\cos \\theta = \\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{a}\\| \\|\\mathbf{b}\\|} = -\\frac{1}{\\sqrt{2}}.\\]Hence, $\\theta = \\boxed{135^\\circ}.$",
+    "ground_truth_answer": "135^\\circ",
+    "pre_generated_steps": [
+      "This problem involves the cross product of two vectors, which is a vector that is perpendicular to both of them and has magnitude equal to the area of the parallelogram they form.",
+      "The cross product is also anti-commutative, meaning that $\\mathbf{u} \\times \\mathbf{v} = -\\mathbf{v} \\times \\mathbf{u}$ for any vectors $\\mathbf{u}$ and $\\mathbf{v}.$",
+      "The first thing I notice is that the given equation has a cross product of two cross products, which can be simplified using the BAC-CAB identity.",
+      "This identity says that for any vectors $\\mathbf{u},$ $\\mathbf{v},$ and $\\mathbf{w},$ we have \\[\\mathbf{u} \\times (\\mathbf{v} \\times \\mathbf{w}) = \\mathbf{v}(\\mathbf{u} \\cdot \\mathbf{w}) - \\mathbf{w}(\\mathbf{u} \\cdot \\mathbf{v}).\\]",
+      "Applying this identity to the given equation, I get \\[\\mathbf{a} \\times (\\mathbf{b} \\times \\mathbf{c}) = \\mathbf{b}(\\mathbf{a} \\cdot \\mathbf{c}) - \\mathbf{c}(\\mathbf{a} \\cdot \\mathbf{b}).\\]",
+      "Since this is equal to $\\frac{\\mathbf{b} + \\mathbf{c}}{\\sqrt{2}},$ I can equate the coefficients of $\\mathbf{b}$ and $\\mathbf{c}$ on both sides.",
+      "This gives me the system of equations \\[\\mathbf{a} \\cdot \\mathbf{c} = \\frac{1}{\\sqrt{2}}\\] and \\[\\mathbf{a} \\cdot \\mathbf{b} = -\\frac{1}{\\sqrt{2}}.\\]",
+      "Now, I recall that the dot product of two vectors is equal to the product of their magnitudes and the cosine of the angle between them.",
+      "Since $\\mathbf{a},$ $\\mathbf{b},$ and $\\mathbf{c}$ are all unit vectors, their magnitudes are 1, and I can simplify the dot products to cosines.",
+      "This gives me \\[\\cos \\theta_{ac} = \\frac{1}{\\sqrt{2}}\\] and \\[\\cos \\theta_{ab} = -\\frac{1}{\\sqrt{2}},\\] where $\\theta_{ac}$ and $\\theta_{ab}$ are the angles between $\\mathbf{a}$ and $\\mathbf{c}$ and $\\mathbf{a}$ and $\\mathbf{b},$ respectively.",
+      "Solving for these angles, I get \\[\\theta_{ac} = \\frac{\\pi}{4}\\] and \\[\\theta_{ab} = \\frac{3\\pi}{4}.\\]",
+      "The problem asks me to find the angle between $\\mathbf{a}$ and $\\mathbf{b},$ which is $\\theta_{ab}.$",
+      "Therefore, the final answer is 135 degrees.",
+      "# Answer\n\n135"
+    ],
+    "pre_generated_answer": "135",
+    "pre_generated_verifier_score": 0.8214268992903027
+  },
+  "label": {
+    "steps": [
+      {
+        "completions": [
+          {
+            "text": "This problem involves the cross product of two vectors, which is a vector that is perpendicular to both of them and has magnitude equal to the area of the parallelogram they form.",
+            "rating": 1,
+            "flagged": null
+          }
+        ],
+        "human_completion": null,
+        "chosen_completion": 0
+      },
+      {
+        "completions": [
+          {
+            "text": "The cross product is also anti-commutative, meaning that $\\mathbf{u} \\times \\mathbf{v} = -\\mathbf{v} \\times \\mathbf{u}$ for any vectors $\\mathbf{u}$ and $\\mathbf{v}.$",
+            "rating": 1,
+            "flagged": null
+          }
+        ],
+        "human_completion": null,
+        "chosen_completion": 0
+      },
+      {
+        "completions": [
+          {
+            "text": "The first thing I notice is that the given equation has a cross product of two cross products, which can be simplified using the BAC-CAB identity.",
+            "rating": 1,
+            "flagged": null
+          }
+        ],
+        "human_completion": null,
+        "chosen_completion": 0
+      },
+      {
+        "completions": [
+          {
+            "text": "This identity says that for any vectors $\\mathbf{u},$ $\\mathbf{v},$ and $\\mathbf{w},$ we have \\[\\mathbf{u} \\times (\\mathbf{v} \\times \\mathbf{w}) = \\mathbf{v}(\\mathbf{u} \\cdot \\mathbf{w}) - \\mathbf{w}(\\mathbf{u} \\cdot \\mathbf{v}).\\]",
+            "rating": 1,
+            "flagged": null
+          }
+        ],
+        "human_completion": null,
+        "chosen_completion": 0
+      },
+      {
+        "completions": [
+          {
+            "text": "Applying this identity to the given equation, I get \\[\\mathbf{a} \\times (\\mathbf{b} \\times \\mathbf{c}) = \\mathbf{b}(\\mathbf{a} \\cdot \\mathbf{c}) - \\mathbf{c}(\\mathbf{a} \\cdot \\mathbf{b}).\\]",
+            "rating": 1,
+            "flagged": null
+          }
+        ],
+        "human_completion": null,
+        "chosen_completion": 0
+      },
+      {
+        "completions": [
+          {
+            "text": "Since this is equal to $\\frac{\\mathbf{b} + \\mathbf{c}}{\\sqrt{2}},$ I can equate the coefficients of $\\mathbf{b}$ and $\\mathbf{c}$ on both sides.",
+            "rating": 1,
+            "flagged": null
+          }
+        ],
+        "human_completion": null,
+        "chosen_completion": 0
+      },
+      {
+        "completions": [
+          {
+            "text": "This gives me the system of equations \\[\\mathbf{a} \\cdot \\mathbf{c} = \\frac{1}{\\sqrt{2}}\\] and \\[\\mathbf{a} \\cdot \\mathbf{b} = -\\frac{1}{\\sqrt{2}}.\\]",
+            "rating": 1,
+            "flagged": null
+          }
+        ],
+        "human_completion": null,
+        "chosen_completion": 0
+      },
+      {
+        "completions": [
+          {
+            "text": "Now, I recall that the dot product of two vectors is equal to the product of their magnitudes and the cosine of the angle between them.",
+            "rating": 1,
+            "flagged": null
+          }
+        ],
+        "human_completion": null,
+        "chosen_completion": 0
+      },
+      {
+        "completions": [
+          {
+            "text": "Since $\\mathbf{a},$ $\\mathbf{b},$ and $\\mathbf{c}$ are all unit vectors, their magnitudes are 1, and I can simplify the dot products to cosines.",
+            "rating": 1,
+            "flagged": null
+          }
+        ],
+        "human_completion": null,
+        "chosen_completion": 0
+      },
+      {
+        "completions": [
+          {
+            "text": "This gives me \\[\\cos \\theta_{ac} = \\frac{1}{\\sqrt{2}}\\] and \\[\\cos \\theta_{ab} = -\\frac{1}{\\sqrt{2}},\\] where $\\theta_{ac}$ and $\\theta_{ab}$ are the angles between $\\mathbf{a}$ and $\\mathbf{c}$ and $\\mathbf{a}$ and $\\mathbf{b},$ respectively.",
+            "rating": 1,
+            "flagged": null
+          }
+        ],
+        "human_completion": null,
+        "chosen_completion": 0
+      },
+      {
+        "completions": [
+          {
+            "text": "Solving for these angles, I get \\[\\theta_{ac} = \\frac{\\pi}{4}\\] and \\[\\theta_{ab} = \\frac{3\\pi}{4}.\\]",
+            "rating": 1,
+            "flagged": null
+          }
+        ],
+        "human_completion": null,
+        "chosen_completion": 0
+      },
+      {
+        "completions": [
+          {
+            "text": "The problem asks me to find the angle between $\\mathbf{a}$ and $\\mathbf{b},$ which is $\\theta_{ab}.$",
+            "rating": 1,
+            "flagged": null
+          }
+        ],
+        "human_completion": null,
+        "chosen_completion": 0
+      },
+      {
+        "completions": [
+          {
+            "text": "Therefore, the final answer is 135 degrees.",
+            "rating": 1,
+            "flagged": null
+          }
+        ],
+        "human_completion": null,
+        "chosen_completion": 0
+      },
+      {
+        "completions": [
+          { "text": "# Answer\n\n135", "rating": 1, "flagged": null }
+        ],
+        "human_completion": null,
+        "chosen_completion": 0
+      }
+    ],
+    "total_time": 567274,
+    "finish_reason": "solution"
+  }
+}

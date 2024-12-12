@@ -2,55 +2,20 @@ import json
 import logging
 import os
 import time
+from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from tenacity import retry, stop_after_attempt, wait_exponential
 from together import Together
 import threading
 import random
+from environment import (
+    MODEL, get_client, RateLimiter, rate_limiter,
+    check_existing_runs, all_problem_files
+)
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
-
-class RateLimiter:
-    """
-    Token bucket rate limiter for API calls.
-    """
-    def __init__(self, rate=1.0):
-        self.rate = rate
-        self.tokens = 1.0
-        self.last_update = time.time()
-        self.lock = threading.Lock()
-    
-    def acquire(self):
-        with self.lock:
-            current = time.time()
-            time_passed = current - self.last_update
-            self.tokens = min(1.0, self.tokens + time_passed * self.rate)
-            
-            if self.tokens < 1.0:
-                sleep_time = (1.0 - self.tokens) / self.rate
-                time.sleep(sleep_time)
-                self.tokens = 0.0
-                self.last_update = time.time()
-            else:
-                self.tokens -= 1.0
-                self.last_update = current
-
-# Initialize the Together client and rate limiter
-# MODEL = "meta-llama/Llama-Vision-Free"
-MODEL = "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
-thread_local = threading.local()
-# rate_limiter = RateLimiter(rate=1/6.1)  # 10 requests per minute
-rate_limiter = RateLimiter(rate=9.9)
-
-def get_client():
-    """
-    Get the Together client, creating it if it doesn't exist.
-    """
-    if not hasattr(thread_local, "client"):
-        thread_local.client = Together(api_key=os.environ.get("TOGETHER_API_KEY"))
-    return thread_local.client
 
 @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=4, max=10))
 def solve_problem(problem, data, output_path, model=MODEL):
@@ -151,42 +116,10 @@ def solve_problems(problem_files, output_path, model=MODEL, max_workers=1):
             except Exception as e:
                 logger.error(f"Problem {problem_file} generated an exception: {str(e)}")
 
-def all_problem_files(data_dir):
-    """
-    Get a list of all problem files in the specified data directory.
-    """
-    problem_files = []
-    for root, _, files in os.walk(data_dir):
-        for file in files:
-            if file.endswith(".json"):
-                problem_files.append(os.path.join(root, file))
-    return problem_files
-
-def check_existing_runs(problem_file, output_path):
-    """
-    Check if an output file exists for a given problem file.
-    Returns True if output exists, False otherwise.
-    """
-    try:
-        # Get problem type from file path
-        path_parts = problem_file.split(os.sep)
-        problem_type = path_parts[-2]  # Assumes structure like .../subject/problem.json
-        problem_filename = os.path.basename(problem_file)
-        output_file = os.path.join(output_path, problem_type, problem_filename)
-        
-        # Check if output file exists
-        if os.path.exists(output_file):
-            logger.info(f"Skipping {problem_file} - output file already exists")
-            return True
-        return False
-    except Exception as e:
-        logger.error(f"Error checking existing output for {problem_file}: {str(e)}")
-        return False
-
 def main():
     data_dir = "./MATH_subsample_uniform"
     file_safe_model_name = MODEL.replace("/", "-")
-    output_dir = f"{file_safe_model_name}_cot_formatted_output"
+    output_dir = f"{file_safe_model_name}_cot_output_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}"
     problem_files = all_problem_files(data_dir)
     random.seed(42)
     random.shuffle(problem_files)

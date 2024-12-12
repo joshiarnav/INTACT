@@ -1,0 +1,31 @@
+{
+    "problem": "Find the maximum value of\n\\[\\frac{x + 2y + 3}{\\sqrt{x^2 + y^2 + 1}}\\]over all real numbers $x$ and $y.$",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "Because we want to find the maximum value of the expression, we can assume that both $x$ and $y$ are positive; if not, then replacing $x$ and $y$ with $|x|$ and $|y|$ would strictly increase the value of the expression.\n\nBy Cauchy-Schwarz,\n\\[(1^2 + 2^2 + 3^2)(x^2 + y^2 + 1) \\ge (x + 2y + 3)^2,\\]or $14(x^2 + y^2 + 1) \\ge (x + 2y + 3)^2.$  Hence,\n\\[\\frac{x + 2y + 3}{\\sqrt{x^2 + y^2 + 1}} \\le \\sqrt{14}.\\]Equality occurs when $x = \\frac{y}{2} = \\frac{1}{3},$ so the minimum value is $\\boxed{\\sqrt{14}}.$",
+    "is_solved": true,
+    "model_solution": "To find the maximum value, we can start by using the Cauchy-Schwarz inequality, which states that for any real numbers $a_i$, $b_i$, and positive real numbers $c_i$, the following inequality holds:\n\n\\[(a_1^2 + a_2^2 + ... + a_n^2)(c_1^2 + c_2^2 + ... + c_n^2) \\geq (a_1c_1 + a_2c_2 + ... + a_nc_n)^2\\]\n\nWe can rewrite the given expression as follows:\n\n\\[\\frac{x + 2y + 3}{\\sqrt{x^2 + y^2 + 1}} = \\frac{1x + 2y + 3}{\\sqrt{x^2 + y^2 + 1}}\\]\n\nNow, we can apply the Cauchy-Schwarz inequality by setting $a_i = 1$, $2$, $3$ and $c_i = x$, $y$, $\\frac{1}{\\sqrt{1}}$.\nTo apply the Cauchy-Schwarz inequality, we set $a_1 = 1$, $a_2 = 2$, $a_3 = 3$ and $c_1 = x$, $c_2 = y$, $c_3 = 1$. \n\nWe can now write the Cauchy-Schwarz inequality as:\n\n\\[(1^2 + 2^2 + 3^2)(x^2 + y^2 + 1) \\geq (1x + 2y + 3)^2\\]\n\nSimplifying the left-hand side, we get:\n\n\\[14(x^2 + y^2 + 1) \\geq (x + 2y + 3)^2\\]\n\nNow, we take the square root of both sides:\n\n\\[\\sqrt{14(x^2 + y^2 + 1)} \\geq |x + 2y + 3|\\]\n\nWe can now divide by the square root of the denominator of the original expression:\n\n\\[\\frac{\\sqrt{14(x^2 + y^2 + 1)}}{\\sqrt{x^2 + y^2 + 1}} \\geq\nNow, we can simplify the left-hand side of the inequality by canceling out the common term $\\sqrt{x^2 + y^2 + 1}$ in the numerator and the denominator:\n\n\\[\\sqrt{14} \\geq \\frac{|x + 2y + 3|}{\\sqrt{x^2 + y^2 + 1}}\\]\n\nNow, we can write the final inequality by multiplying both sides by -1 (if the fraction is negative) so the fraction is positive on the right-hand side:\n\n\\[\\frac{|x + 2y + 3|}{\\sqrt{x^2 + y^2 + 1}} \\leq \\sqrt{14}\\]\n\nThe maximum value of the expression is $\\sqrt{14}$, so we can write the final answer as:\n\n$\\boxed{\\sqrt{14}}$",
+    "steps": [
+        "To find the maximum value, we can start by using the Cauchy-Schwarz inequality, which states that for any real numbers $a_i$, $b_i$, and positive real numbers $c_i$, the following inequality holds:\n\n\\[(a_1^2 + a_2^2 + ... + a_n^2)(c_1^2 + c_2^2 + ... + c_n^2) \\geq (a_1c_1 + a_2c_2 + ... + a_nc_n)^2\\]\n\nWe can rewrite the given expression as follows:\n\n\\[\\frac{x + 2y + 3}{\\sqrt{x^2 + y^2 + 1}} = \\frac{1x + 2y + 3}{\\sqrt{x^2 + y^2 + 1}}\\]\n\nNow, we can apply the Cauchy-Schwarz inequality by setting $a_i = 1$, $2$, $3$ and $c_i = x$, $y$, $\\frac{1}{\\sqrt{1}}$.",
+        "To apply the Cauchy-Schwarz inequality, we set $a_1 = 1$, $a_2 = 2$, $a_3 = 3$ and $c_1 = x$, $c_2 = y$, $c_3 = 1$. \n\nWe can now write the Cauchy-Schwarz inequality as:\n\n\\[(1^2 + 2^2 + 3^2)(x^2 + y^2 + 1) \\geq (1x + 2y + 3)^2\\]\n\nSimplifying the left-hand side, we get:\n\n\\[14(x^2 + y^2 + 1) \\geq (x + 2y + 3)^2\\]\n\nNow, we take the square root of both sides:\n\n\\[\\sqrt{14(x^2 + y^2 + 1)} \\geq |x + 2y + 3|\\]\n\nWe can now divide by the square root of the denominator of the original expression:\n\n\\[\\frac{\\sqrt{14(x^2 + y^2 + 1)}}{\\sqrt{x^2 + y^2 + 1}} \\geq",
+        "Now, we can simplify the left-hand side of the inequality by canceling out the common term $\\sqrt{x^2 + y^2 + 1}$ in the numerator and the denominator:\n\n\\[\\sqrt{14} \\geq \\frac{|x + 2y + 3|}{\\sqrt{x^2 + y^2 + 1}}\\]\n\nNow, we can write the final inequality by multiplying both sides by -1 (if the fraction is negative) so the fraction is positive on the right-hand side:\n\n\\[\\frac{|x + 2y + 3|}{\\sqrt{x^2 + y^2 + 1}} \\leq \\sqrt{14}\\]\n\nThe maximum value of the expression is $\\sqrt{14}$, so we can write the final answer as:\n\n$\\boxed{\\sqrt{14}}$"
+    ],
+    "full_steps": [
+        [
+            "To find the maximum value, we can start by using the Cauchy-Schwarz inequality, which states that for any real numbers $a_i$, $b_i$, and positive real numbers $c_i$, the following inequality holds:\n\n\\[(a_1^2 + a_2^2 + ... + a_n^2)(c_1^2 + c_2^2 + ... + c_n^2) \\geq (a_1c_1 + a_2c_2 + ... + a_nc_n)^2\\]\n\nWe can rewrite the given expression as follows:\n\n\\[\\frac{x + 2y + 3}{\\sqrt{x^2 + y^2 + 1}} = \\frac{1x + 2y + 3}{\\sqrt{x^2 + y^2 + 1}}\\]\n\nNow, we can apply the Cauchy-Schwarz inequality by setting $a_i = 1$, $2$, $3$ and $c_i = x$, $y$, $\\frac{1}{\\sqrt{1}}$.",
+            1
+        ],
+        [
+            "To apply the Cauchy-Schwarz inequality, we set $a_1 = 1$, $a_2 = 2$, $a_3 = 3$ and $c_1 = x$, $c_2 = y$, $c_3 = 1$. \n\nWe can now write the Cauchy-Schwarz inequality as:\n\n\\[(1^2 + 2^2 + 3^2)(x^2 + y^2 + 1) \\geq (1x + 2y + 3)^2\\]\n\nSimplifying the left-hand side, we get:\n\n\\[14(x^2 + y^2 + 1) \\geq (x + 2y + 3)^2\\]\n\nNow, we take the square root of both sides:\n\n\\[\\sqrt{14(x^2 + y^2 + 1)} \\geq |x + 2y + 3|\\]\n\nWe can now divide by the square root of the denominator of the original expression:\n\n\\[\\frac{\\sqrt{14(x^2 + y^2 + 1)}}{\\sqrt{x^2 + y^2 + 1}} \\geq",
+            1
+        ],
+        [
+            "Now, we can simplify the left-hand side of the inequality by canceling out the common term $\\sqrt{x^2 + y^2 + 1}$ in the numerator and the denominator:\n\n\\[\\sqrt{14} \\geq \\frac{|x + 2y + 3|}{\\sqrt{x^2 + y^2 + 1}}\\]\n\nNow, we can write the final inequality by multiplying both sides by -1 (if the fraction is negative) so the fraction is positive on the right-hand side:\n\n\\[\\frac{|x + 2y + 3|}{\\sqrt{x^2 + y^2 + 1}} \\leq \\sqrt{14}\\]\n\nThe maximum value of the expression is $\\sqrt{14}$, so we can write the final answer as:\n\n$\\boxed{\\sqrt{14}}$",
+            1
+        ]
+    ],
+    "time": 11.729188203811646,
+    "total_tokens": 3445,
+    "final_answer_tokens": 758,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

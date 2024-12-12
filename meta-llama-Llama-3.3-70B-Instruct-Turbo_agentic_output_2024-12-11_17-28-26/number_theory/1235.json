@@ -1,0 +1,26 @@
+{
+    "problem": "A number is divisible by $9$ if the sum of its digits is divisible by $9.$ For example, the number $19\\,836$ is divisible by $9$ but $19\\,825$ is not.\n\nIf $D\\,767\\,E89$ is divisible by $9,$ where $D$ and $E$ each represent a single digit, what is the sum of all possible values of the sum $D+E?$",
+    "level": "Level 5",
+    "type": "Number Theory",
+    "solution": "For $D\\,767\\,E89$ to be divisible by $9,$ we must have $$D+7+6+7+E+8+9 = 37+D+E$$ divisible by $9.$ Since $D$ and $E$ are each a single digit, we know each is between $0$ and $9.$ Therefore, $D+E$ is between $0$ and $18.$ Therefore, $37+D+E$ is between $37$ and $55.$ The numbers between $37$ and $55$ that are divisible by $9$ are $45$ and $54.$\n\nIf $37+D+E=45,$ then $D+E=8.$\n\nIf $37+D+E=54,$ then $D+E=17.$\n\nTherefore, the possible values of $D+E$ are $8$ and $17.$ Our answer is then $8+17=\\boxed{25}.$",
+    "is_solved": true,
+    "model_solution": "To find the possible values of $D+E$, we need to first determine the condition for $D\\,767\\,E89$ to be divisible by $9$. According to the given rule, a number is divisible by $9$ if the sum of its digits is divisible by $9$. Therefore, we can write the equation: $D + 7 + 6 + 7 + E + 8 + 9 \\equiv 0 \\pmod{9}$.\n\nSimplifying the equation, we get: $D + E + 37 \\equiv 0 \\pmod{9}$. Since $37 \\equiv 1 \\pmod{9}$, the equation becomes: $D + E + 1 \\equiv 0 \\pmod{9}$, or $D + E \\equiv 8 \\pmod{9}$. \n\nThis means that $D + E$ must leave a remainder of $8$ when divided by $9$. The possible values of $D + E$ can be $8, 17, 26, ...$ but since $D$ and $E$ are single digits, $D + E$ cannot exceed $18$. Therefore, the possible\nThe possible values of $D + E$ are $8$ and $17$, as these are the only values that satisfy the condition $D + E \\equiv 8 \\pmod{9}$ and do not exceed $18$. \n\nTo find the sum of all possible values of $D+E$, we simply add these two values together: $8 + 17 = 25$.\n\nTherefore, the sum of all possible values of the sum $D+E$ is $\\boxed{25}$.",
+    "steps": [
+        "To find the possible values of $D+E$, we need to first determine the condition for $D\\,767\\,E89$ to be divisible by $9$. According to the given rule, a number is divisible by $9$ if the sum of its digits is divisible by $9$. Therefore, we can write the equation: $D + 7 + 6 + 7 + E + 8 + 9 \\equiv 0 \\pmod{9}$.\n\nSimplifying the equation, we get: $D + E + 37 \\equiv 0 \\pmod{9}$. Since $37 \\equiv 1 \\pmod{9}$, the equation becomes: $D + E + 1 \\equiv 0 \\pmod{9}$, or $D + E \\equiv 8 \\pmod{9}$. \n\nThis means that $D + E$ must leave a remainder of $8$ when divided by $9$. The possible values of $D + E$ can be $8, 17, 26, ...$ but since $D$ and $E$ are single digits, $D + E$ cannot exceed $18$. Therefore, the possible",
+        "The possible values of $D + E$ are $8$ and $17$, as these are the only values that satisfy the condition $D + E \\equiv 8 \\pmod{9}$ and do not exceed $18$. \n\nTo find the sum of all possible values of $D+E$, we simply add these two values together: $8 + 17 = 25$.\n\nTherefore, the sum of all possible values of the sum $D+E$ is $\\boxed{25}$."
+    ],
+    "full_steps": [
+        [
+            "To find the possible values of $D+E$, we need to first determine the condition for $D\\,767\\,E89$ to be divisible by $9$. According to the given rule, a number is divisible by $9$ if the sum of its digits is divisible by $9$. Therefore, we can write the equation: $D + 7 + 6 + 7 + E + 8 + 9 \\equiv 0 \\pmod{9}$.\n\nSimplifying the equation, we get: $D + E + 37 \\equiv 0 \\pmod{9}$. Since $37 \\equiv 1 \\pmod{9}$, the equation becomes: $D + E + 1 \\equiv 0 \\pmod{9}$, or $D + E \\equiv 8 \\pmod{9}$. \n\nThis means that $D + E$ must leave a remainder of $8$ when divided by $9$. The possible values of $D + E$ can be $8, 17, 26, ...$ but since $D$ and $E$ are single digits, $D + E$ cannot exceed $18$. Therefore, the possible",
+            1
+        ],
+        [
+            "The possible values of $D + E$ are $8$ and $17$, as these are the only values that satisfy the condition $D + E \\equiv 8 \\pmod{9}$ and do not exceed $18$. \n\nTo find the sum of all possible values of $D+E$, we simply add these two values together: $8 + 17 = 25$.\n\nTherefore, the sum of all possible values of the sum $D+E$ is $\\boxed{25}$.",
+            1
+        ]
+    ],
+    "time": 5.636157989501953,
+    "total_tokens": 1881,
+    "final_answer_tokens": 506,
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo"
+}

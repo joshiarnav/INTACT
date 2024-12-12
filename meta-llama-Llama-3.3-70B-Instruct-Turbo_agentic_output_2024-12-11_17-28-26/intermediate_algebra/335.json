@@ -1,0 +1,21 @@
+{
+    "problem": "Find the maximum value of\n\\[\\frac{x + 2y + 3}{\\sqrt{x^2 + y^2 + 1}}\\]over all real numbers $x$ and $y.$",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "Because we want to find the maximum value of the expression, we can assume that both $x$ and $y$ are positive; if not, then replacing $x$ and $y$ with $|x|$ and $|y|$ would strictly increase the value of the expression.\n\nBy Cauchy-Schwarz,\n\\[(1^2 + 2^2 + 3^2)(x^2 + y^2 + 1) \\ge (x + 2y + 3)^2,\\]or $14(x^2 + y^2 + 1) \\ge (x + 2y + 3)^2.$  Hence,\n\\[\\frac{x + 2y + 3}{\\sqrt{x^2 + y^2 + 1}} \\le \\sqrt{14}.\\]Equality occurs when $x = \\frac{y}{2} = \\frac{1}{3},$ so the minimum value is $\\boxed{\\sqrt{14}}.$",
+    "is_solved": false,
+    "model_solution": "## Step 1: Apply the Cauchy-Schwarz Inequality\nThe Cauchy-Schwarz Inequality states that for any real numbers $a_1, a_2, a_3$ and $b_1, b_2, b_3$, the following inequality holds: $(a_1^2 + a_2^2 + a_3^2)(b_1^2 + b_2^2 + b_3^2) \\ge (a_1b_1 + a_2b_2 + a_3b_3)^2$. We can recognize that the given expression resembles the form where the Cauchy-Schwarz Inequality can be applied. Let's set $a_1 = x$, $a_2 = y$, $a_3 = 1$, and $b_1 = 1$, $b_2 = 2$, $b_3 = 3$. Then, applying the Cauchy-Schwarz Inequality, we have $(x^2 + y^2 + 1)(1^2 + 2^2 + 3^2) \\ge (x*1 + y*",
+    "steps": [
+        "## Step 1: Apply the Cauchy-Schwarz Inequality\nThe Cauchy-Schwarz Inequality states that for any real numbers $a_1, a_2, a_3$ and $b_1, b_2, b_3$, the following inequality holds: $(a_1^2 + a_2^2 + a_3^2)(b_1^2 + b_2^2 + b_3^2) \\ge (a_1b_1 + a_2b_2 + a_3b_3)^2$. We can recognize that the given expression resembles the form where the Cauchy-Schwarz Inequality can be applied. Let's set $a_1 = x$, $a_2 = y$, $a_3 = 1$, and $b_1 = 1$, $b_2 = 2$, $b_3 = 3$. Then, applying the Cauchy-Schwarz Inequality, we have $(x^2 + y^2 + 1)(1^2 + 2^2 + 3^2) \\ge (x*1 + y*"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Apply the Cauchy-Schwarz Inequality\nThe Cauchy-Schwarz Inequality states that for any real numbers $a_1, a_2, a_3$ and $b_1, b_2, b_3$, the following inequality holds: $(a_1^2 + a_2^2 + a_3^2)(b_1^2 + b_2^2 + b_3^2) \\ge (a_1b_1 + a_2b_2 + a_3b_3)^2$. We can recognize that the given expression resembles the form where the Cauchy-Schwarz Inequality can be applied. Let's set $a_1 = x$, $a_2 = y$, $a_3 = 1$, and $b_1 = 1$, $b_2 = 2$, $b_3 = 3$. Then, applying the Cauchy-Schwarz Inequality, we have $(x^2 + y^2 + 1)(1^2 + 2^2 + 3^2) \\ge (x*1 + y*",
+            1
+        ]
+    ],
+    "time": 2.109790086746216,
+    "total_tokens": 735,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo"
+}

@@ -1,0 +1,31 @@
+{
+    "problem": "Cara is sitting at a circular table with her five friends as shown below. How many different possible pairs of people could Cara be sitting between?\n\n[asy]\ndraw(circle((0,0),1));\nlabel(\"$\\_$\",1.5dir(0));\nlabel(\"$\\_$\",1.5dir(60));\nlabel(\"Cara\",1.5dir(120));\nlabel(\"$\\_$\",1.5dir(180));\nlabel(\"$\\_$\",1.5dir(240));\nlabel(\"$\\_$\",1.5dir(300));\n[/asy]",
+    "level": "Level 3",
+    "type": "Counting & Probability",
+    "solution": "The number of pairs of neighbors for Cara actually has nothing to do with the shape of the table she is sitting at. That is, all that matters is that she has 5 friends and two of them will be her neighbors. There are ${5 \\choose 2} = \\boxed{10}$ pairs of friends that she can thus sit between.",
+    "is_solved": true,
+    "model_solution": "To find the number of possible pairs of people Cara could be sitting between, we need to consider the total number of people (Cara included) at the table and how many of them can be her neighbors. \n\nThere are a total of 6 people at the table. Since the table is circular, the neighbors to the left and right of Cara are the two people we are trying to find the pairs for. \n\nStep 1: Determine the total number of people at the table. \nTotal number of people = 6 \n\nStep 2: \nFor the next step, we will determine how many ways we can choose 2 people from a group of 6.\nStep 3: We can find the number of ways to choose 2 people from a group of 6 using the combination formula:\n\nnCr = n! / (r!(n-r)!)\n\nwhere:\n- n is the total number of people (6)\n- r is the number of people we want to choose (2)\n\nPlugging in the values, we get:\n6C2 = 6! / (2!(6-2)!)\n= 6! / (2!4!)\n= (6 * 5 * 4 * 3 * 2 * 1) / ((2 * 1)(4 * 3 * 2 * 1))\n= (6 * 5) / (2 * 1)\n= 15\n\nHowever, the people we are choosing from are the 5 friends, not the total of 6 people. Therefore, we must find the number of combinations of 2 from 5.\n\n5C2 = 5! / (2!(5-2)!)\n= 5! / (2!3!)\n= (5 * 4 * 3 * 2 * 1) / ((2 * 1)(3 * 2 *\nLet's continue with the calculation.\n\n5C2 = 5! / (2!(5-2)!)\n= (5 * 4 * 3 * 2 * 1) / ((2 * 1)(3 * 2 * 1))\n= (5 * 4) / (2 * 1)\n= 10\n\nHowever, this is the number of ways to choose 2 people from 5, but we are looking for the number of pairs of people that can be Cara's neighbors. Since the table is circular, the choice of one neighbor determines the other neighbor (because the other 4 people will then be in a different order). Therefore, we do not need to multiply by 2.\n\nThe final answer is: $\\boxed{10}$",
+    "steps": [
+        "To find the number of possible pairs of people Cara could be sitting between, we need to consider the total number of people (Cara included) at the table and how many of them can be her neighbors. \n\nThere are a total of 6 people at the table. Since the table is circular, the neighbors to the left and right of Cara are the two people we are trying to find the pairs for. \n\nStep 1: Determine the total number of people at the table. \nTotal number of people = 6 \n\nStep 2: \nFor the next step, we will determine how many ways we can choose 2 people from a group of 6.",
+        "Step 3: We can find the number of ways to choose 2 people from a group of 6 using the combination formula:\n\nnCr = n! / (r!(n-r)!)\n\nwhere:\n- n is the total number of people (6)\n- r is the number of people we want to choose (2)\n\nPlugging in the values, we get:\n6C2 = 6! / (2!(6-2)!)\n= 6! / (2!4!)\n= (6 * 5 * 4 * 3 * 2 * 1) / ((2 * 1)(4 * 3 * 2 * 1))\n= (6 * 5) / (2 * 1)\n= 15\n\nHowever, the people we are choosing from are the 5 friends, not the total of 6 people. Therefore, we must find the number of combinations of 2 from 5.\n\n5C2 = 5! / (2!(5-2)!)\n= 5! / (2!3!)\n= (5 * 4 * 3 * 2 * 1) / ((2 * 1)(3 * 2 *",
+        "Let's continue with the calculation.\n\n5C2 = 5! / (2!(5-2)!)\n= (5 * 4 * 3 * 2 * 1) / ((2 * 1)(3 * 2 * 1))\n= (5 * 4) / (2 * 1)\n= 10\n\nHowever, this is the number of ways to choose 2 people from 5, but we are looking for the number of pairs of people that can be Cara's neighbors. Since the table is circular, the choice of one neighbor determines the other neighbor (because the other 4 people will then be in a different order). Therefore, we do not need to multiply by 2.\n\nThe final answer is: $\\boxed{10}$"
+    ],
+    "full_steps": [
+        [
+            "To find the number of possible pairs of people Cara could be sitting between, we need to consider the total number of people (Cara included) at the table and how many of them can be her neighbors. \n\nThere are a total of 6 people at the table. Since the table is circular, the neighbors to the left and right of Cara are the two people we are trying to find the pairs for. \n\nStep 1: Determine the total number of people at the table. \nTotal number of people = 6 \n\nStep 2: \nFor the next step, we will determine how many ways we can choose 2 people from a group of 6.",
+            1
+        ],
+        [
+            "Step 3: We can find the number of ways to choose 2 people from a group of 6 using the combination formula:\n\nnCr = n! / (r!(n-r)!)\n\nwhere:\n- n is the total number of people (6)\n- r is the number of people we want to choose (2)\n\nPlugging in the values, we get:\n6C2 = 6! / (2!(6-2)!)\n= 6! / (2!4!)\n= (6 * 5 * 4 * 3 * 2 * 1) / ((2 * 1)(4 * 3 * 2 * 1))\n= (6 * 5) / (2 * 1)\n= 15\n\nHowever, the people we are choosing from are the 5 friends, not the total of 6 people. Therefore, we must find the number of combinations of 2 from 5.\n\n5C2 = 5! / (2!(5-2)!)\n= 5! / (2!3!)\n= (5 * 4 * 3 * 2 * 1) / ((2 * 1)(3 * 2 *",
+            1
+        ],
+        [
+            "Let's continue with the calculation.\n\n5C2 = 5! / (2!(5-2)!)\n= (5 * 4 * 3 * 2 * 1) / ((2 * 1)(3 * 2 * 1))\n= (5 * 4) / (2 * 1)\n= 10\n\nHowever, this is the number of ways to choose 2 people from 5, but we are looking for the number of pairs of people that can be Cara's neighbors. Since the table is circular, the choice of one neighbor determines the other neighbor (because the other 4 people will then be in a different order). Therefore, we do not need to multiply by 2.\n\nThe final answer is: $\\boxed{10}$",
+            1
+        ]
+    ],
+    "time": 5.516130208969116,
+    "total_tokens": 3280,
+    "final_answer_tokens": 719,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

@@ -1,0 +1,26 @@
+{
+    "problem": "What is the number of degrees in the smaller angle formed by the hour and minute hands of a clock at 8:15? Express your answer as a decimal to the nearest tenth.\n[asy]\nsize(200);\ndraw(Circle((0,0),5),linewidth(1.2));\npair[] mins;\nfor(int i = 0; i < 60; ++i){\n\nmins[i] = 4.5*dir(-6*i + 90);\n\ndot(mins[i]);\n}\nfor(int i = 1; i <= 12; ++i){\n\nlabel((string)i,mins[5*i % 60],dir(-30*i - 90));\n}\n\nfill(Circle((0,0),0.25));\n[/asy]",
+    "level": "Level 2",
+    "type": "Geometry",
+    "solution": "At 8:00, the hour hand is in the 8 o'clock position and the minute hand is in the 12 o'clock position.  The angle between the two hands is two-thirds of a full revolution, which is $\\frac{2}{3}(360^\\circ)=240$ degrees.  Every minute, the minute hand goes $\\frac{1}{60}(360^\\circ)=6$ degrees and the hour hand goes $\\frac{1}{60}\\cdot\\frac{1}{12} (360^\\circ)=0.5$ degrees.  Therefore, the angle between the hands decreases at a rate of 5.5 degrees per minute.  After 15 minutes, the angle between the hands has decreased to $240^\\circ-5.5^\\circ\\cdot 15=\\boxed{157.5}$ degrees.",
+    "is_solved": false,
+    "model_solution": "## Step 1: Calculate the position of the hour hand at 8:15\nTo find the position of the hour hand, we first note that it moves 360 degrees in 12 hours, which means it moves 30 degrees per hour. Since it's 8:15, the hour hand has moved 8 hours and a quarter of an hour. In 8 hours, it moves 8 * 30 = 240 degrees. In 15 minutes, it moves (15/60) * 30 = 7.5 degrees. So, the total movement of the hour hand is 240 + 7.5 = 247.5 degrees.\n\n## Step 2: Calculate the position of the minute hand at 8:15\nThe minute hand moves 360 degrees in 60 minutes, which means it moves 6 degrees per minute. At 15 minutes past the hour, the minute hand has moved 15 * 6 = 90 degrees.\n\n## Step 3: Find the smaller angle between the hour and minute hands\nTo find the smaller angle between the two hands, we need to subtract the position of the minute hand from the position of the hour hand. smaller_angle = |247.\n## Step 4: Calculate the absolute difference between the positions of the hour and minute hands to find the smaller angle.\nsmaller_angle = |247.5 - 90| = |157.5| = 157.5 degrees.\n\nThe final answer is: $\\boxed{157.5}$",
+    "steps": [
+        "## Step 1: Calculate the position of the hour hand at 8:15\nTo find the position of the hour hand, we first note that it moves 360 degrees in 12 hours, which means it moves 30 degrees per hour. Since it's 8:15, the hour hand has moved 8 hours and a quarter of an hour. In 8 hours, it moves 8 * 30 = 240 degrees. In 15 minutes, it moves (15/60) * 30 = 7.5 degrees. So, the total movement of the hour hand is 240 + 7.5 = 247.5 degrees.\n\n## Step 2: Calculate the position of the minute hand at 8:15\nThe minute hand moves 360 degrees in 60 minutes, which means it moves 6 degrees per minute. At 15 minutes past the hour, the minute hand has moved 15 * 6 = 90 degrees.\n\n## Step 3: Find the smaller angle between the hour and minute hands\nTo find the smaller angle between the two hands, we need to subtract the position of the minute hand from the position of the hour hand. smaller_angle = |247.",
+        "## Step 4: Calculate the absolute difference between the positions of the hour and minute hands to find the smaller angle.\nsmaller_angle = |247.5 - 90| = |157.5| = 157.5 degrees.\n\nThe final answer is: $\\boxed{157.5}$"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Calculate the position of the hour hand at 8:15\nTo find the position of the hour hand, we first note that it moves 360 degrees in 12 hours, which means it moves 30 degrees per hour. Since it's 8:15, the hour hand has moved 8 hours and a quarter of an hour. In 8 hours, it moves 8 * 30 = 240 degrees. In 15 minutes, it moves (15/60) * 30 = 7.5 degrees. So, the total movement of the hour hand is 240 + 7.5 = 247.5 degrees.\n\n## Step 2: Calculate the position of the minute hand at 8:15\nThe minute hand moves 360 degrees in 60 minutes, which means it moves 6 degrees per minute. At 15 minutes past the hour, the minute hand has moved 15 * 6 = 90 degrees.\n\n## Step 3: Find the smaller angle between the hour and minute hands\nTo find the smaller angle between the two hands, we need to subtract the position of the minute hand from the position of the hour hand. smaller_angle = |247.",
+            1
+        ],
+        [
+            "## Step 4: Calculate the absolute difference between the positions of the hour and minute hands to find the smaller angle.\nsmaller_angle = |247.5 - 90| = |157.5| = 157.5 degrees.\n\nThe final answer is: $\\boxed{157.5}$",
+            1
+        ]
+    ],
+    "time": 5.1114301681518555,
+    "total_tokens": 2042,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo"
+}

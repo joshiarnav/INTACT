@@ -4,72 +4,24 @@ import os
 import threading
 import time
 import random
+from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from tenacity import retry, stop_after_attempt, wait_exponential
 from together import Together
+from environment import (
+    MODEL, get_client, RateLimiter, rate_limiter, 
+    check_existing_runs, all_problem_files, type_to_filepath
+)
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-class RateLimiter:
-    """
-    Token bucket rate limiter for API calls.
-    """
-    def __init__(self, rate=1.0):  # rate is in requests per second
-        self.rate = rate
-        self.tokens = 1.0  # Start with one token
-        self.last_update = time.time()
-        self.lock = threading.Lock()
-    
-    def acquire(self):
-        """
-        Acquire a token, blocking if necessary.
-        """
-        with self.lock:
-            current = time.time()
-            # Add new tokens based on time elapsed
-            time_passed = current - self.last_update
-            self.tokens = min(1.0, self.tokens + time_passed * self.rate)
-            
-            if self.tokens < 1.0:
-                # Need to wait
-                sleep_time = (1.0 - self.tokens) / self.rate
-                time.sleep(sleep_time)
-                self.tokens = 0.0
-                self.last_update = time.time()
-            else:
-                # Consume one token
-                self.tokens -= 1.0
-                self.last_update = current
-
 # Initialize the Together client and rate limiter
 client = Together(api_key=os.environ.get("TOGETHER_API_KEY"))
-# MODEL = "meta-llama/Llama-Vision-Free"
-MODEL = "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
-type_to_filepath = {"Algebra": "algebra",
-                    "Counting & Probability": "counting_and_probability",
-                    "Geometry": "geometry",
-                    "Number Theory": "number_theory",
-                    "Intermediate Algebra": "intermediate_algebra",
-                    "Precalculus": "precalculus",
-                    "Prealgebra": "prealgebra",}
 
 # Thread-local storage for API client
 thread_local = threading.local()
-
-# Global rate limiter shared across all threads
-# rate_limiter = RateLimiter(rate=1/6.1)  # 10 requests per minute = 1 request per 6 seconds
-# rate_limiter = RateLimiter(rate=0.95)
-rate_limiter = RateLimiter(rate=9.5)
-
-def get_client():
-    """
-    Get the Together client, creating it if it doesn't exist.
-    """
-    if not hasattr(thread_local, "client"):
-        thread_local.client = Together(api_key=os.environ.get("TOGETHER_API_KEY"))
-    return thread_local.client
 
 @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=4, max=10))
 def generate_step(problem, previous_steps, verbosity=False, model=MODEL):
@@ -77,12 +29,12 @@ def generate_step(problem, previous_steps, verbosity=False, model=MODEL):
     Generate a reasoning step using the primary model with retry logic.
     """
     try:
-        prompt = f"Problem: {problem}\n"
+        prompt = f"Solve this step-by-step:\n{problem}\n"
         if previous_steps:
-            prompt += "Steps so far:\n" + "\n".join(previous_steps) + "\n\n"
-            prompt += "Generate only the next step in solving the problem. Be succinct. If this is the final step, format your final answer as $\\boxed{answer}$."
+            prompt += "Previous steps:\n" + "\n".join(previous_steps) + "\n\n"
+            prompt += "Next step (if final step use $\\boxed{answer}$):"
         else:
-            prompt += "Generate only the first step in solving the problem. Be succinct. Do not give the final answer."
+            prompt += "First step only:"
         messages = [{"role": "user", "content": prompt}]
 
         # Acquire rate limit token before making API call using global rate limiter
@@ -106,7 +58,7 @@ def generate_step(problem, previous_steps, verbosity=False, model=MODEL):
         raise
 
 @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=4, max=10))
-def critique_step(problem, step, previous_steps, verbosity=False, model=MODEL):
+def critique_step(problem, step, previous_steps, verbosity=False, model=MODEL, temperature=0.7):
     """
     Use the critique model to assess the current step's correctness with retry logic.
     """
@@ -131,7 +83,7 @@ def critique_step(problem, step, previous_steps, verbosity=False, model=MODEL):
             model=model,
             messages=messages,
             max_tokens=5,
-            temperature=0.7,
+            temperature=temperature,
         )
         critique = response.choices[0].message.content.strip()
         total_tokens = response.usage.total_tokens
@@ -166,19 +118,18 @@ def solve_problem(problem, data, output_path, verbosity=False, model=MODEL, max_
             if verbosity:
                 logger.info("Problem unsolved: maximum number of steps reached. Stopping.")
             break
-
-        if "correct" in critique.lower():
-            # if "final answer" in new_step.lower() or len(set(steps)) < len(steps):
-            if "$\\boxed" in new_step or len(set(steps)) < len(steps):
-                is_solved = True
-                final_answer_tokens = step_tokens
-                if verbosity:
-                    logger.info("Final answer reached.")
-        elif "incorrect" in critique.lower():
+        if "incorrect" in critique.lower():
             steps.pop()
             full_steps[-1] = (new_step, 0)
             if verbosity:
                 logger.info("Correction required based on critique. Revising step.")
+        elif "correct" in critique.lower():
+            # if "final answer" in new_step.lower() or len(set(steps)) < len(steps):
+            if "\\boxed" in new_step or len(set(steps)) < len(steps):
+                is_solved = True
+                final_answer_tokens = step_tokens
+                if verbosity:
+                    logger.info("Final answer reached.")
         else:
             if verbosity:
                 logger.info("Unknown critique response. Stopping.")
@@ -213,28 +164,6 @@ def solve_problem(problem, data, output_path, verbosity=False, model=MODEL, max_
 
     if verbosity:
         logger.info(f"Saved output to {output_file}")
-
-def check_existing_runs(problem_file, output_path):
-    """
-    Check if an output file exists for a given problem file.
-    Returns True if output exists, False otherwise.
-    """
-    try:
-        # Get problem type from file path
-        path_parts = problem_file.split(os.sep)
-        # logger.info(path_parts)
-        problem_type = path_parts[-2]  # Assumes structure like .../subject/problem.json
-        problem_filename = os.path.basename(problem_file)
-        output_file = os.path.join(output_path, problem_type, problem_filename)
-        
-        # Check if output file exists
-        if os.path.exists(output_file):
-            logger.info(f"Skipping {problem_file} - output file already exists")
-            return True
-        return False
-    except Exception as e:
-        logger.error(f"Error checking existing output for {problem_file}: {str(e)}")
-        return False
 
 def solve_problems(problem_files, output_path="./output", verbosity=False, model=MODEL, max_workers=2, skip_existing=True):
     """
@@ -274,20 +203,13 @@ def solve_problems(problem_files, output_path="./output", verbosity=False, model
             except Exception as e:
                 logger.error(f"Problem {problem_file} generated an exception: {str(e)}")
 
-def all_problem_files(data_dir):
-    """
-    Get a list of all problem files in the specified data directory.
-    """
-    problem_files = []
-    for root, _, files in os.walk(data_dir):
-        for file in files:
-            if file.endswith(".json"):
-                problem_files.append(os.path.join(root, file))
-    return problem_files
+def main():
+    all_files = all_problem_files("./MATH_subsample_uniform")
+    random.seed(42)
+    random.shuffle(all_files)
+    file_safe_model_name = MODEL.replace("/", "-")
+    output_path = f"{file_safe_model_name}_agentic_output_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}"
+    solve_problems(all_files, output_path=output_path, verbosity=True, model=MODEL, max_workers=8)
 
-all_files = all_problem_files("./MATH_subsample_uniform")
-random.seed(42)
-random.shuffle(all_files)
-file_safe_model_name = MODEL.replace("/", "-")
-output_path = f"{file_safe_model_name}_agentic_output"
-solve_problems(all_files, output_path=output_path, verbosity=True, model=MODEL, max_workers=8)
+if __name__ == "__main__":
+    main()
