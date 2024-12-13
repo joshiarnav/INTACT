@@ -1,0 +1,42 @@
+{
+    "problem": "Find the maximum value of\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix},\\]as $\\theta$ ranges over all angles.",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "We can expand the determinant as follows:\n\\begin{align*}\n\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} &= \\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} - \\begin{vmatrix} 1 & 1 \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix} + \\begin{vmatrix} 1 & 1 + \\sin \\theta \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix} \\\\\n&= ((1 + \\sin \\theta) - 1) - (1 - (1 + \\cos \\theta)) + (1 - (1 + \\sin \\theta)(1 + \\cos \\theta)) \\\\\n&= -\\cos \\theta \\sin \\theta = -\\frac{2 \\cos \\theta \\sin \\theta}{2} = -\\frac{\\sin 2 \\theta}{2}.\n\\end{align*}The maximum value of the determinant is then $\\boxed{\\frac{1}{2}}.$",
+    "is_solved": false,
+    "model_solution": "To find the maximum value of the given determinant, we start by expanding the determinant using the first row.\n\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = 1 \\cdot \\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} - 1 \\cdot \\begin{vmatrix} 1 & 1 \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix} + 1 \\cdot \\begin{vmatrix} 1 & 1 + \\sin \\theta \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix}\\]\n\nThis gives us the first step to simplify the expression, which is to evaluate the 2x2 determinants.\nExpanding the 2x2 determinant in the first term, we get:\n\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = (1 + \\sin \\theta - 1) - (-1 + 1 + \\cos \\theta) + \\begin{vmatrix} 1 & 1 + \\sin \\theta \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix}\\]\n\nSimplifying the first two terms, we get:\n\n\\[= \\sin \\theta + \\cos \\theta + \\begin{vmatrix} 1 & 1 + \\sin \\theta \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix}\\]\n\nNow, we need to expand the remaining 2x2 determinant in the expression.",
+    "steps": [
+        "To find the maximum value of the given determinant, we start by expanding the determinant using the first row.\n\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = 1 \\cdot \\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} - 1 \\cdot \\begin{vmatrix} 1 & 1 \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix} + 1 \\cdot \\begin{vmatrix} 1 & 1 + \\sin \\theta \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix}\\]\n\nThis gives us the first step to simplify the expression, which is to evaluate the 2x2 determinants.",
+        "Expanding the 2x2 determinant in the first term, we get:\n\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = (1 + \\sin \\theta - 1) - (-1 + 1 + \\cos \\theta) + \\begin{vmatrix} 1 & 1 + \\sin \\theta \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix}\\]\n\nSimplifying the first two terms, we get:\n\n\\[= \\sin \\theta + \\cos \\theta + \\begin{vmatrix} 1 & 1 + \\sin \\theta \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix}\\]\n\nNow, we need to expand the remaining 2x2 determinant in the expression."
+    ],
+    "full_steps": [
+        [
+            "To find the maximum value of the given determinant, we first expand the determinant along the first row. \n\nThe determinant of a 3x3 matrix A can be found using the formula:\n\\[\\begin{vmatrix} a_{11} & a_{12} & a_{13} \\\\ a_{21} & a_{22} & a_{23} \\\\ a_{31} & a_{32} & a_{33} \\end{vmatrix} = a_{11}\\begin{vmatrix} a_{22} & a_{23} \\\\ a_{32} & a_{33} \\end{vmatrix} - a_{12}\\begin{vmatrix} a_{21} & a_{23} \\\\ a_{31} & a_{33} \\end{vmatrix} + a_{13}\\begin{vmatrix} a_{21} & a_{22} \\\\ a_{31} & a_{32} \\end{vmatrix}.\\]\n\nIn this case, we have:\n- $a_{11} = 1$, $\\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} = \\sin \\theta$\n- $a_{12} = 1$, $\\begin{vmatrix} 1 & 1 \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix} = -\\cos \\theta$\n- $a_{13} = 1$, $\\begin{vmatrix} 1 & 1 + \\sin \\theta \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix} = -\\sin \\theta - \\cos",
+            0
+        ],
+        [
+            "To find the maximum value of the given determinant, we start by expanding the determinant using the first row.\n\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = 1 \\cdot \\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} - 1 \\cdot \\begin{vmatrix} 1 & 1 \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix} + 1 \\cdot \\begin{vmatrix} 1 & 1 + \\sin \\theta \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix}\\]\n\nThis gives us the first step to simplify the expression, which is to evaluate the 2x2 determinants.",
+            1
+        ],
+        [
+            "Expanding the 2x2 determinant in the first term, we get:\n\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = (1 + \\sin \\theta - 1) - (-1 + 1 + \\cos \\theta) + \\begin{vmatrix} 1 & 1 + \\sin \\theta \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix}\\]\n\nSimplifying the first two terms, we get:\n\n\\[= \\sin \\theta + \\cos \\theta + \\begin{vmatrix} 1 & 1 + \\sin \\theta \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix}\\]\n\nNow, we need to expand the remaining 2x2 determinant in the expression.",
+            1
+        ],
+        [
+            "We expand the remaining 2x2 determinant by evaluating the product of the diagonals and the product of the anti-diagonals, then subtracting the product of the diagonals from the product of the anti-diagonals:\n\n\\[\\begin{vmatrix} 1 & 1 + \\sin \\theta \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix} = (1 \\cdot 1) - ((1 + \\cos \\theta) \\cdot (1 + \\sin \\theta))\\]",
+            0
+        ],
+        [
+            "Expanding the 2x2 determinant in the expression, we get:\n\n\\[\\begin{vmatrix} 1 & 1 + \\sin \\theta \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix} = 1 \\cdot (1) - (1 + \\sin \\theta) \\cdot (1 + \\cos \\theta)\\]\n\n\\[= 1 - (1 + \\sin \\theta + \\cos \\theta + \\sin \\theta \\cos \\theta)\\]\n\n\\[= -\\sin \\theta - \\cos \\theta - \\sin \\theta \\cos \\theta\\]\n\nSubstituting this back into the expression, we get:\n\n\\[= \\sin \\theta + \\cos \\theta - \\sin \\theta - \\cos \\theta - \\sin \\theta \\cos \\theta\\]\n\n\\[= -\\sin \\theta \\cos \\theta\\]\n\nSo the expression simplifies to $-\\sin \\theta \\cos \\theta$.",
+            0
+        ],
+        [
+            "Expanding the 2x2 determinant in the expression, we get:\n\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = \\sin \\theta + \\cos \\theta + (1 - (1 + \\sin \\theta)(1 + \\cos \\theta))\\]\n\nSimplifying the expression, we get:\n\n\\[= \\sin \\theta + \\cos \\theta + 1 - (1 + \\sin \\theta + \\cos \\theta + \\sin \\theta \\cos \\theta)\\]\n\n\\[= \\sin \\theta + \\cos \\theta + 1 - 1 - \\sin \\theta - \\cos \\theta - \\sin \\theta \\cos \\theta\\]\n\n\\[= - \\sin \\theta \\cos \\theta\\]\n\n\\[= -\\frac{1}{2}\\sin 2\\theta\\]",
+            0
+        ]
+    ],
+    "time": 64.83765983581543,
+    "total_tokens": 7027,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

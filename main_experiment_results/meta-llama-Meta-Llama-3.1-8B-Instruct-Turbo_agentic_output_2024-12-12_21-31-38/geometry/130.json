@@ -1,0 +1,72 @@
+{
+    "problem": "The sides of triangle $PQR$ are tangent to a circle with center $C$ as shown. Given that $\\angle PQR = 63^\\circ$ and $\\angle QPR = 59^\\circ$, find $\\angle QRC$, in degrees.\n\n[asy]\n\nunitsize(1.0 cm);\n\npair Q, P, R, C;\n\nQ = (2.43,3.46);\n\nP = (0,0);\n\nR = (4.43,0);\n\nC = incenter(Q,P,R);\n\ndraw(Q--P--R--cycle);\n\ndraw(incircle(Q,P,R));\n\ndraw(R--C);\n\nlabel(\"$Q$\", Q, N);\n\nlabel(\"$P$\", P, SW);\n\nlabel(\"$R$\", R, SE);\n\nlabel(\"$C$\", C, N);\n\n[/asy]",
+    "level": "Level 2",
+    "type": "Geometry",
+    "solution": "The circle with center $C$ is the incircle of $\\triangle PQR$. So, any segment from a vertex of the triangle to $C$ is an angle bisector.\n\nThe sum of the measures of the internal angles of a triangle is $180^\\circ$, so\n\n\\begin{align*}\n\\angle QRP &= 180^\\circ - \\angle PQR - \\angle QPR \\\\\n&= 180^\\circ - 63^\\circ - 59^\\circ\\\\\n&= 58^\\circ.\n\\end{align*}Since $\\overline{RC}$ bisects $\\angle QRP$, we have $\\angle QRC = \\frac{58^\\circ}{2} = \\boxed{29^\\circ}$.",
+    "is_solved": false,
+    "model_solution": "Since the sides of triangle $PQR$ are tangent to the circle with center $C$, the center $C$ lies on the angle bisectors of triangle $PQR$. Therefore, the angles formed at $C$, which are $\\angle PRQ$ and $\\angle QRP$, are half the measures of their respective opposite angles. \n\nStep 1: Calculate the measure of $\\angle PRQ$ and $\\angle QRP$.\nSince the angles formed at $C$ are half the measures of their respective opposite angles, we can find the measures of $\\angle PRQ$ and $\\angle QRP$. \n\nGiven that $\\angle PQR = 63^\\circ$, then $\\angle PRQ = \\frac{1}{2}\\cdot 63^\\circ = 31.5^\\circ$. \n\nGiven that $\\angle QPR = 59^\\circ$, then $\\angle QRP = \\frac{1}{2}\\cdot 59^\\circ = 29.5^\\circ$.\nThe measure of $\\angle PRQ$ and $\\angle QRP$ are known. In triangle $QRC$, $\\angle QRC$ and $\\angle CRQ$ are supplementary angles, and since $C$ lies on the angle bisector of $\\angle QRP$, then $\\angle CRQ$ is equal to $\\angle QRP$. We can use this information to find the measure of $\\angle QRC$.\nSince $\\angle CRQ$ is equal to $\\angle QRP$, and $\\angle QRP = 29.5^\\circ$, then $\\angle CRQ = 29.5^\\circ$. \n\nWe know that $\\angle QRC$ and $\\angle CRQ$ are supplementary angles, which means their sum is $180^\\circ$. We can set up the following equation to solve for $\\angle QRC$: \n\n$\\angle QRC + \\angle CRQ = 180^\\circ$\n\nSubstituting the known value for $\\angle CRQ$: \n\n$\\angle QRC + 29.5^\\circ = 180^\\circ$\n\nNow, subtract $29.5^\\circ$ from both sides of the equation: \n\n$\\angle QRC = 180^\\circ - 29.5^\\circ$\n\n$\\angle QRC = 150.5^\\circ$",
+    "steps": [
+        "Since the sides of triangle $PQR$ are tangent to the circle with center $C$, the center $C$ lies on the angle bisectors of triangle $PQR$. Therefore, the angles formed at $C$, which are $\\angle PRQ$ and $\\angle QRP$, are half the measures of their respective opposite angles. \n\nStep 1: Calculate the measure of $\\angle PRQ$ and $\\angle QRP$.",
+        "Since the angles formed at $C$ are half the measures of their respective opposite angles, we can find the measures of $\\angle PRQ$ and $\\angle QRP$. \n\nGiven that $\\angle PQR = 63^\\circ$, then $\\angle PRQ = \\frac{1}{2}\\cdot 63^\\circ = 31.5^\\circ$. \n\nGiven that $\\angle QPR = 59^\\circ$, then $\\angle QRP = \\frac{1}{2}\\cdot 59^\\circ = 29.5^\\circ$.",
+        "The measure of $\\angle PRQ$ and $\\angle QRP$ are known. In triangle $QRC$, $\\angle QRC$ and $\\angle CRQ$ are supplementary angles, and since $C$ lies on the angle bisector of $\\angle QRP$, then $\\angle CRQ$ is equal to $\\angle QRP$. We can use this information to find the measure of $\\angle QRC$.",
+        "Since $\\angle CRQ$ is equal to $\\angle QRP$, and $\\angle QRP = 29.5^\\circ$, then $\\angle CRQ = 29.5^\\circ$. \n\nWe know that $\\angle QRC$ and $\\angle CRQ$ are supplementary angles, which means their sum is $180^\\circ$. We can set up the following equation to solve for $\\angle QRC$: \n\n$\\angle QRC + \\angle CRQ = 180^\\circ$\n\nSubstituting the known value for $\\angle CRQ$: \n\n$\\angle QRC + 29.5^\\circ = 180^\\circ$\n\nNow, subtract $29.5^\\circ$ from both sides of the equation: \n\n$\\angle QRC = 180^\\circ - 29.5^\\circ$\n\n$\\angle QRC = 150.5^\\circ$"
+    ],
+    "full_steps": [
+        [
+            "Since the sides of triangle $PQR$ are tangent to the circle with center $C$, the center $C$ lies on the angle bisectors of triangle $PQR$. Therefore, the angles formed at $C$, which are $\\angle PRQ$ and $\\angle QRP$, are half the measures of their respective opposite angles. \n\nStep 1: Calculate the measure of $\\angle PRQ$ and $\\angle QRP$.",
+            1
+        ],
+        [
+            "Since the angles formed at $C$ are half the measures of their respective opposite angles, we can find the measures of $\\angle PRQ$ and $\\angle QRP$. \n\nGiven that $\\angle PQR = 63^\\circ$, then $\\angle PRQ = \\frac{1}{2}\\cdot 63^\\circ = 31.5^\\circ$. \n\nGiven that $\\angle QPR = 59^\\circ$, then $\\angle QRP = \\frac{1}{2}\\cdot 59^\\circ = 29.5^\\circ$.",
+            1
+        ],
+        [
+            "The measure of $\\angle PRQ$ and $\\angle QRP$ are known. In triangle $QRC$, $\\angle QRC$ and $\\angle CRQ$ are supplementary angles, and since $C$ lies on the angle bisector of $\\angle QRP$, then $\\angle CRQ$ is equal to $\\angle QRP$. We can use this information to find the measure of $\\angle QRC$.",
+            1
+        ],
+        [
+            "Since $\\angle QRC$ and $\\angle CRQ$ are supplementary angles, we have $\\angle QRC + \\angle CRQ = 180^\\circ$. We know that $\\angle CRQ = \\angle QRP = 29.5^\\circ$. Therefore, we can substitute this value into the equation to get $\\angle QRC + 29.5^\\circ = 180^\\circ$. Solving for $\\angle QRC$, we have $\\angle QRC = 180^\\circ - 29.5^\\circ = 150.5^\\circ$.",
+            0
+        ],
+        [
+            "Since $C$ lies on the angle bisector of $\\angle QRP$ and $\\angle CRQ$ is equal to $\\angle QRP$, we have $\\angle CRQ = 29.5^\\circ$. As $\\angle QRC$ and $\\angle CRQ$ are supplementary angles, we can find the measure of $\\angle QRC$ as follows: $\\angle QRC = 180^\\circ - \\angle CRQ = 180^\\circ - 29.5^\\circ$.",
+            1
+        ],
+        [
+            "Since $\\angle QRC$ and $\\angle CRQ$ are supplementary angles, we can find the measure of $\\angle QRC$ as follows: $\\angle QRC = 180^\\circ - \\angle CRQ = 180^\\circ - 29.5^\\circ = 150.5^\\circ$.",
+            0
+        ],
+        [
+            "Since $C$ lies on the angle bisector of $\\angle QRP$ and $\\angle CRQ$ is equal to $\\angle QRP$, we have $\\angle CRQ = 29.5^\\circ$. As $\\angle QRC$ and $\\angle CRQ$ are supplementary angles, we can find the measure of $\\angle QRC$ as follows: $\\angle QRC = 180^\\circ - \\angle CRQ = 180^\\circ - 29.5^\\circ = 150.5^\\circ$.",
+            0
+        ],
+        [
+            "Step 2: Find the measure of $\\angle QRC$.\nSince $\\angle QRC$ and $\\angle CRQ$ are supplementary angles, their sum is $180^\\circ$. We already know that $\\angle CRQ = 29.5^\\circ$. So, we can find the measure of $\\angle QRC$ as $180^\\circ - 29.5^\\circ = 150.5^\\circ$.",
+            0
+        ],
+        [
+            "Since $\\angle QRC$ and $\\angle CRQ$ are supplementary angles, their sum is $180^\\circ$. We also know that $\\angle CRQ = \\angle QRP = 29.5^\\circ$. We can use this information to find the measure of $\\angle QRC$. \n\nTherefore, $\\angle QRC + \\angle CRQ = 180^\\circ$ \n$\\angle QRC + 29.5^\\circ = 180^\\circ$ \n$\\angle QRC = 180^\\circ - 29.5^\\circ$ \n$\\angle QRC = 150.5^\\circ$",
+            0
+        ],
+        [
+            "Since $\\angle PRQ$ and $\\angle QRP$ are known, and $\\angle QRC$ and $\\angle CRQ$ are supplementary angles, we have: \n\n$\\angle QRC + \\angle CRQ = 180^\\circ$. Given that $\\angle CRQ = 29.5^\\circ$, we can substitute the value of $\\angle CRQ$ and solve for $\\angle QRC$.",
+            1
+        ],
+        [
+            "$\\angle QRC + 29.5^\\circ = 180^\\circ$. \n\n$\\angle QRC = 180^\\circ - 29.5^\\circ$\n\n$\\angle QRC = 150.5^\\circ$",
+            0
+        ],
+        [
+            "Since $\\angle QRC$ and $\\angle CRQ$ are supplementary angles, we have: \n\n$\\angle QRC + \\angle CRQ = 180^\\circ$. Given that $\\angle CRQ = 29.5^\\circ$, we can substitute the value of $\\angle CRQ$ and solve for $\\angle QRC$.\n\nSubtracting $\\angle CRQ$ from both sides of the equation, we get: $\\angle QRC = 180^\\circ - \\angle CRQ = 180^\\circ - 29.5^\\circ = 150.5^\\circ$.",
+            0
+        ],
+        [
+            "Since $\\angle CRQ$ is equal to $\\angle QRP$, and $\\angle QRP = 29.5^\\circ$, then $\\angle CRQ = 29.5^\\circ$. \n\nWe know that $\\angle QRC$ and $\\angle CRQ$ are supplementary angles, which means their sum is $180^\\circ$. We can set up the following equation to solve for $\\angle QRC$: \n\n$\\angle QRC + \\angle CRQ = 180^\\circ$\n\nSubstituting the known value for $\\angle CRQ$: \n\n$\\angle QRC + 29.5^\\circ = 180^\\circ$\n\nNow, subtract $29.5^\\circ$ from both sides of the equation: \n\n$\\angle QRC = 180^\\circ - 29.5^\\circ$\n\n$\\angle QRC = 150.5^\\circ$",
+            1
+        ]
+    ],
+    "time": 71.30639004707336,
+    "total_tokens": 18838,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

@@ -1,0 +1,86 @@
+{
+    "problem": "Find the maximum value of\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix},\\]as $\\theta$ ranges over all angles.",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "We can expand the determinant as follows:\n\\begin{align*}\n\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} &= \\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} - \\begin{vmatrix} 1 & 1 \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix} + \\begin{vmatrix} 1 & 1 + \\sin \\theta \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix} \\\\\n&= ((1 + \\sin \\theta) - 1) - (1 - (1 + \\cos \\theta)) + (1 - (1 + \\sin \\theta)(1 + \\cos \\theta)) \\\\\n&= -\\cos \\theta \\sin \\theta = -\\frac{2 \\cos \\theta \\sin \\theta}{2} = -\\frac{\\sin 2 \\theta}{2}.\n\\end{align*}The maximum value of the determinant is then $\\boxed{\\frac{1}{2}}.$",
+    "is_solved": false,
+    "model_solution": "To solve this problem, we first apply the operation $R_1 \\rightarrow R_1 -1$ to the given determinant. This operation involves subtracting row 1 from each of the other rows. The new matrix will be:\n\n\\[\n\\begin{vmatrix} 1 & 1 & 1 \\\\ 0 & \\sin \\theta & 0 \\\\ \\cos \\theta & 0 & 0 \\end{vmatrix}\n\\]\n\nThis is the first step in solving the problem.\nNext step: To simplify the determinant further, we can apply the operation $C_2 \\rightarrow C_2 - C_3$ to eliminate the 0 in the second row, second column.\nNext step: \nWe can apply the operation $C_2 \\rightarrow C_2 - C_3$ to eliminate the 0 in the second row, second column. \n\nThis results in the matrix:\n\\[\n\\begin{vmatrix} 1 & 1 & 1 \\\\ 0 & \\sin \\theta & 0 \\\\ \\cos \\theta & -\\cos \\theta & 0 \\end{vmatrix}\n\\]\nNow we will expand the determinant along the first row.\nNext step: We will expand the determinant along the first row. This means we will calculate the determinant as follows:\n\\[1 \\cdot \\begin{vmatrix} \\sin \\theta & 0 \\\\ -\\cos \\theta & 0 \\end{vmatrix} - 1 \\cdot \\begin{vmatrix} 0 & 0 \\\\ \\cos \\theta & -\\cos \\theta \\end{vmatrix} + 1 \\cdot \\begin{vmatrix} 0 & \\sin \\theta \\\\ \\cos \\theta & -\\cos \\theta \\end{vmatrix}.\\]\nTo simplify the determinant, we can now expand it along the first row. This means we will calculate the determinant as follows:\n\\[1 \\cdot \\begin{vmatrix} \\sin \\theta & 0 \\\\ -\\cos \\theta & 0 \\end{vmatrix} - 1 \\cdot \\begin{vmatrix} 0 & 0 \\\\ \\cos \\theta & -\\cos \\theta \\end{vmatrix} + 1 \\cdot \\begin{vmatrix} 0 & \\sin \\theta \\\\ \\cos \\theta & -\\cos \\theta \\end{vmatrix}.\\]\nNext step: Expanding each of the 2x2 determinants in the expression, we get:\n\\[1 \\cdot (\\sin \\theta \\cdot 0 - 0 \\cdot -\\cos \\theta) - 1 \\cdot (0 \\cdot -\\cos \\theta - 0 \\cdot \\cos \\theta) + 1 \\cdot (0 \\cdot -\\cos \\theta - \\sin \\theta \\cdot \\cos \\theta)\\]\nWe can simplify this expression to obtain: \n\\[1 \\cdot (0) - 1 \\cdot (0) + 1 \\cdot (-\\sin \\theta \\cdot \\cos \\theta)\\]\nSimplifying further, we get:\n\\[-\\sin \\theta \\cdot \\cos \\theta\\]\nTo simplify the expression further, we can use the fact that $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$. This gives us:\n\n\\[-\\sin \\theta \\cdot \\cos \\theta = -\\frac{1}{2}\\sin(2\\theta).\\]\nWe can simplify the expression further to obtain the maximum value of the given determinant. \n\nUsing the fact that $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$, we can simplify the expression as:\n\n\\[-\\sin \\theta \\cdot \\cos \\theta = -\\frac{1}{2}\\sin(2\\theta).\\]\n\nThe maximum value of $\\sin(2\\theta)$ is 1, which occurs when $2\\theta = \\frac{\\pi}{2} + 2k\\pi$ for some integer $k$. Therefore, the maximum value of the determinant is:\n\n\\[-\\frac{1}{2} \\cdot 1 = -\\frac{1}{2}.\\]\nTo simplify the expression further to obtain the maximum value of the given determinant, we can rewrite the expression as follows:\n\n\\[-\\frac{1}{2}\\sin(2\\theta)\\]\n\nThis is a simplified expression for the determinant.\nNext step: We can find the maximum value of the determinant by finding the maximum value of $\\sin(2\\theta)$ and multiplying it by $-\\frac{1}{2}$. \n\nThe maximum value of $\\sin(2\\theta)$ is 1, which occurs when $2\\theta = \\frac{\\pi}{2} + 2k\\pi$ for some integer $k$. Therefore, the maximum value of the determinant is:\n\n\\[-\\frac{1}{2} \\cdot 1 = -\\frac{1}{2}.\\]",
+    "steps": [
+        "To solve this problem, we first apply the operation $R_1 \\rightarrow R_1 -1$ to the given determinant. This operation involves subtracting row 1 from each of the other rows. The new matrix will be:\n\n\\[\n\\begin{vmatrix} 1 & 1 & 1 \\\\ 0 & \\sin \\theta & 0 \\\\ \\cos \\theta & 0 & 0 \\end{vmatrix}\n\\]\n\nThis is the first step in solving the problem.",
+        "Next step: To simplify the determinant further, we can apply the operation $C_2 \\rightarrow C_2 - C_3$ to eliminate the 0 in the second row, second column.",
+        "Next step: \nWe can apply the operation $C_2 \\rightarrow C_2 - C_3$ to eliminate the 0 in the second row, second column. \n\nThis results in the matrix:\n\\[\n\\begin{vmatrix} 1 & 1 & 1 \\\\ 0 & \\sin \\theta & 0 \\\\ \\cos \\theta & -\\cos \\theta & 0 \\end{vmatrix}\n\\]\nNow we will expand the determinant along the first row.",
+        "Next step: We will expand the determinant along the first row. This means we will calculate the determinant as follows:\n\\[1 \\cdot \\begin{vmatrix} \\sin \\theta & 0 \\\\ -\\cos \\theta & 0 \\end{vmatrix} - 1 \\cdot \\begin{vmatrix} 0 & 0 \\\\ \\cos \\theta & -\\cos \\theta \\end{vmatrix} + 1 \\cdot \\begin{vmatrix} 0 & \\sin \\theta \\\\ \\cos \\theta & -\\cos \\theta \\end{vmatrix}.\\]",
+        "To simplify the determinant, we can now expand it along the first row. This means we will calculate the determinant as follows:\n\\[1 \\cdot \\begin{vmatrix} \\sin \\theta & 0 \\\\ -\\cos \\theta & 0 \\end{vmatrix} - 1 \\cdot \\begin{vmatrix} 0 & 0 \\\\ \\cos \\theta & -\\cos \\theta \\end{vmatrix} + 1 \\cdot \\begin{vmatrix} 0 & \\sin \\theta \\\\ \\cos \\theta & -\\cos \\theta \\end{vmatrix}.\\]",
+        "Next step: Expanding each of the 2x2 determinants in the expression, we get:\n\\[1 \\cdot (\\sin \\theta \\cdot 0 - 0 \\cdot -\\cos \\theta) - 1 \\cdot (0 \\cdot -\\cos \\theta - 0 \\cdot \\cos \\theta) + 1 \\cdot (0 \\cdot -\\cos \\theta - \\sin \\theta \\cdot \\cos \\theta)\\]\nWe can simplify this expression to obtain: \n\\[1 \\cdot (0) - 1 \\cdot (0) + 1 \\cdot (-\\sin \\theta \\cdot \\cos \\theta)\\]\nSimplifying further, we get:\n\\[-\\sin \\theta \\cdot \\cos \\theta\\]",
+        "To simplify the expression further, we can use the fact that $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$. This gives us:\n\n\\[-\\sin \\theta \\cdot \\cos \\theta = -\\frac{1}{2}\\sin(2\\theta).\\]",
+        "We can simplify the expression further to obtain the maximum value of the given determinant. \n\nUsing the fact that $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$, we can simplify the expression as:\n\n\\[-\\sin \\theta \\cdot \\cos \\theta = -\\frac{1}{2}\\sin(2\\theta).\\]\n\nThe maximum value of $\\sin(2\\theta)$ is 1, which occurs when $2\\theta = \\frac{\\pi}{2} + 2k\\pi$ for some integer $k$. Therefore, the maximum value of the determinant is:\n\n\\[-\\frac{1}{2} \\cdot 1 = -\\frac{1}{2}.\\]",
+        "To simplify the expression further to obtain the maximum value of the given determinant, we can rewrite the expression as follows:\n\n\\[-\\frac{1}{2}\\sin(2\\theta)\\]\n\nThis is a simplified expression for the determinant.",
+        "Next step: We can find the maximum value of the determinant by finding the maximum value of $\\sin(2\\theta)$ and multiplying it by $-\\frac{1}{2}$. \n\nThe maximum value of $\\sin(2\\theta)$ is 1, which occurs when $2\\theta = \\frac{\\pi}{2} + 2k\\pi$ for some integer $k$. Therefore, the maximum value of the determinant is:\n\n\\[-\\frac{1}{2} \\cdot 1 = -\\frac{1}{2}.\\]"
+    ],
+    "full_steps": [
+        [
+            "To solve this problem, we first apply the operation $R_1 \\rightarrow R_1 -1$ to the given determinant. This operation involves subtracting row 1 from each of the other rows. The new matrix will be:\n\n\\[\n\\begin{vmatrix} 1 & 1 & 1 \\\\ 0 & \\sin \\theta & 0 \\\\ \\cos \\theta & 0 & 0 \\end{vmatrix}\n\\]\n\nThis is the first step in solving the problem.",
+            1
+        ],
+        [
+            "Next step: To simplify the determinant further, we can apply the operation $C_2 \\rightarrow C_2 - C_3$ to eliminate the 0 in the second row, second column.",
+            1
+        ],
+        [
+            "Next step: \nTo expand the determinant along the third row, we can apply the operation $C_1 \\rightarrow C_1 - C_3$ to eliminate the $\\cos \\theta$ in the first row, first column.",
+            0
+        ],
+        [
+            "Next step: \nWe can apply the operation $C_2 \\rightarrow C_2 - C_3$ to eliminate the 0 in the second row, second column. \n\nThis results in the matrix:\n\\[\n\\begin{vmatrix} 1 & 1 & 1 \\\\ 0 & \\sin \\theta & 0 \\\\ \\cos \\theta & -\\cos \\theta & 0 \\end{vmatrix}\n\\]\nNow we will expand the determinant along the first row.",
+            1
+        ],
+        [
+            "Next step: \nExpanding the determinant along the first row, we get:\n\\[\n\\begin{vmatrix} 1 & 1 & 1 \\\\ 0 & \\sin \\theta & 0 \\\\ \\cos \\theta & -\\cos \\theta & 0 \\end{vmatrix} = 1 \\begin{vmatrix} \\sin \\theta & 0 \\\\ -\\cos \\theta & 0 \\end{vmatrix} - 1 \\begin{vmatrix} 0 & 0 \\\\ \\cos \\theta & 0 \\end{vmatrix} + 1 \\begin{vmatrix} 0 & \\sin \\theta \\\\ \\cos \\theta & -\\cos \\theta \\end{vmatrix}\n\\]\nThis simplifies to:\n\\[\n1(0 - 0) - 1(0 - 0) + 1(-\\cos \\theta \\sin \\theta - 0)\n\\]",
+            0
+        ],
+        [
+            "Next step: We will expand the determinant along the first row. This means we will calculate the determinant as follows:\n\\[1 \\cdot \\begin{vmatrix} \\sin \\theta & 0 \\\\ -\\cos \\theta & 0 \\end{vmatrix} - 1 \\cdot \\begin{vmatrix} 0 & 0 \\\\ \\cos \\theta & -\\cos \\theta \\end{vmatrix} + 1 \\cdot \\begin{vmatrix} 0 & \\sin \\theta \\\\ \\cos \\theta & -\\cos \\theta \\end{vmatrix}.\\]",
+            1
+        ],
+        [
+            "To simplify the determinant, we can now expand it along the first row. This means we will calculate the determinant as follows:\n\\[1 \\cdot \\begin{vmatrix} \\sin \\theta & 0 \\\\ -\\cos \\theta & 0 \\end{vmatrix} - 1 \\cdot \\begin{vmatrix} 0 & 0 \\\\ \\cos \\theta & -\\cos \\theta \\end{vmatrix} + 1 \\cdot \\begin{vmatrix} 0 & \\sin \\theta \\\\ \\cos \\theta & -\\cos \\theta \\end{vmatrix}.\\]",
+            1
+        ],
+        [
+            "Next step: Expanding each of the 2x2 determinants in the expression, we get:\n\\[1 \\cdot (\\sin \\theta \\cdot 0 - 0 \\cdot -\\cos \\theta) - 1 \\cdot (0 \\cdot -\\cos \\theta - 0 \\cdot \\cos \\theta) + 1 \\cdot (0 \\cdot -\\cos \\theta - \\sin \\theta \\cdot \\cos \\theta)\\]\nWe can simplify this expression to obtain: \n\\[1 \\cdot (0) - 1 \\cdot (0) + 1 \\cdot (-\\sin \\theta \\cdot \\cos \\theta)\\]\nSimplifying further, we get:\n\\[-\\sin \\theta \\cdot \\cos \\theta\\]",
+            1
+        ],
+        [
+            "To simplify the expression further, we can use the fact that $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$. This gives us:\n\n\\[-\\sin \\theta \\cdot \\cos \\theta = -\\frac{1}{2}\\sin(2\\theta).\\]",
+            1
+        ],
+        [
+            "We can simplify the expression further to obtain the maximum value of the given determinant. \n\nUsing the fact that $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$, we can simplify the expression as:\n\n\\[-\\sin \\theta \\cdot \\cos \\theta = -\\frac{1}{2}\\sin(2\\theta).\\]\n\nThe maximum value of $\\sin(2\\theta)$ is 1, which occurs when $2\\theta = \\frac{\\pi}{2} + 2k\\pi$ for some integer $k$. Therefore, the maximum value of the determinant is:\n\n\\[-\\frac{1}{2} \\cdot 1 = -\\frac{1}{2}.\\]",
+            1
+        ],
+        [
+            "Using the fact that $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$, we can simplify the expression as:\n\n\\[-\\sin \\theta \\cdot \\cos \\theta = -\\frac{1}{2}\\sin(2\\theta).\\]\n\nThe maximum value of $\\sin(2\\theta)$ is 1, which occurs when $2\\theta = \\frac{\\pi}{2} + 2k\\pi$ for some integer $k$. Therefore, the maximum value of the determinant is:\n\n\\[-\\frac{1}{2} \\cdot 1 = -\\frac{1}{2}.\\]",
+            0
+        ],
+        [
+            "We can simplify the expression further to obtain the maximum value of the given determinant. \n\nUsing the fact that $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$, we can simplify the expression as:\n\n\\[-\\sin \\theta \\cdot \\cos \\theta = -\\frac{1}{2}\\sin(2\\theta).\\]\n\nThe maximum value of $\\sin(2\\theta)$ is 1, which occurs when $2\\theta = \\frac{\\pi}{2} + 2k\\pi$ for some integer $k$. Therefore, the maximum value of the determinant is:\n\n\\[-\\frac{1}{2} \\cdot 1 = -\\frac{1}{2}.\\]",
+            0
+        ],
+        [
+            "Using the fact that $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$, we can simplify the expression as:\n\n\\[-\\sin \\theta \\cdot \\cos \\theta = -\\frac{1}{2}\\sin(2\\theta).\\]\n\nThe maximum value of $\\sin(2\\theta)$ is 1, which occurs when $2\\theta = \\frac{\\pi}{2} + 2k\\pi$ for some integer $k$. Therefore, the maximum value of the determinant is:\n\n\\[-\\frac{1}{2} \\cdot 1 = -\\frac{1}{2}.\\]\n\nSince the problem asks for the maximum value of the determinant, the final step is to provide the maximum value, which is:\n\n\\boxed{-\\frac{1}{2}}",
+            0
+        ],
+        [
+            "To simplify the expression further to obtain the maximum value of the given determinant, we can rewrite the expression as follows:\n\n\\[-\\frac{1}{2}\\sin(2\\theta)\\]\n\nThis is a simplified expression for the determinant.",
+            1
+        ],
+        [
+            "Next step: We can find the maximum value of the determinant by finding the maximum value of $\\sin(2\\theta)$ and multiplying it by $-\\frac{1}{2}$. \n\nThe maximum value of $\\sin(2\\theta)$ is 1, which occurs when $2\\theta = \\frac{\\pi}{2} + 2k\\pi$ for some integer $k$. Therefore, the maximum value of the determinant is:\n\n\\[-\\frac{1}{2} \\cdot 1 = -\\frac{1}{2}.\\]",
+            1
+        ]
+    ],
+    "time": 46.36805295944214,
+    "total_tokens": 23070,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

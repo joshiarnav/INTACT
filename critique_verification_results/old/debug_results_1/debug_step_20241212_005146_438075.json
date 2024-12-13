@@ -1,0 +1,39 @@
+{
+  "timestamp": "2024-12-12T00:51:46.438052",
+  "problem": "A quadrilateral that has consecutive sides of lengths $70,90,130$ and $110$ is inscribed in a circle and also has a circle inscribed in it. The point of tangency of the inscribed circle to the side of length 130 divides that side into segments of length $x$ and $y$. Find $|x-y|$.\n$\\text{(A) } 12\\quad \\text{(B) } 13\\quad \\text{(C) } 14\\quad \\text{(D) } 15\\quad \\text{(E) } 16$",
+  "step": {
+    "text": "We can multiply both sides of the equation by $4$ to get $4n^2-160n=9\\cdot1001$.",
+    "previous_steps": [
+      "We first find the area of the quadrilateral.",
+      "To do that we can use Brahmagupta's Formula, which is $A=\\sqrt{(s-a)(s-b)(s-c)(s-d)}$ where $s$ is the semiperimeter and $a,b,c,d$ are the side lengths.",
+      "The semiperimeter is $s=\\frac{70+90+130+110}{2}=200$.",
+      "So we have $A=\\sqrt{(200-70)(200-90)(200-130)(200-110)}$.",
+      "Simplifying that gives $A=\\sqrt{(130)(110)(70)(90)}$.",
+      "We can simplify further by factoring out a $10$ from each of the terms inside the square root, which gives $A=\\sqrt{(13\\cdot10)(11\\cdot10)(7\\cdot10)(9\\cdot10)}$.",
+      "So the area is $A=\\sqrt{(13\\cdot11\\cdot7\\cdot9)\\cdot(10\\cdot10\\cdot10\\cdot10)}$.",
+      "So $A=\\sqrt{13\\cdot11\\cdot7\\cdot9\\cdot10000}$.",
+      "And $A=\\sqrt{13\\cdot11\\cdot7\\cdot9}\\cdot100$.",
+      "And $A=\\sqrt{9009}\\cdot100$.",
+      "Right, and $\\sqrt{9009}$ is $3\\cdot3\\cdot1001$.",
+      "So, we have that the area of $ABCD$ is $300\\sqrt{1001}$.",
+      "Now we find the radius of the inscribed circle.",
+      "We can use the formula $A=rs$ where $A$ is the area, $r$ is the radius of the inscribed circle, and $s$ is the semiperimeter.",
+      "We found the area and semiperimeter earlier.",
+      "So, we have $r=\\frac{300\\sqrt{1001}}{200}$.",
+      "And that simplifies to $r=\\frac{3\\sqrt{1001}}{2}$.",
+      "Let $O$ be the center of the incircle and $X,Y,Z$ and $W$ the points of tangency on $AB, BC, CD$ and $DA$ repectively. Now, it's easy to see that quadrilaterals $AXOW$ and $OYCZ$ are similar. Let's use this.",
+      "From this, we have $\\frac{CY}{OX}=\\frac{OY}{AX}$.",
+      "Let $CZ$ have length $n$. Then we can find that $AX=AW=n-40$.",
+      "Right. Also, since $OX$ is a radius of the circle, it has length $r$.",
+      "$CY = CZ$, so we have $\\frac{n}{r}=\\frac{r}{n-40}$.",
+      "So $n^2-40n=r^2$. We can plug in the value of $r$ we found earlier.",
+      "$n^2-40n=\\left(\\frac{3\\sqrt{1001}}{2}\\right)^2$.",
+      "And this simplifies to $n^2-40n=\\frac{9\\cdot1001}{4}$."
+    ]
+  },
+  "evaluation": {
+    "model_judgment": true,
+    "ground_truth": true,
+    "rating": 1
+  }
+}

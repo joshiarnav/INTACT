@@ -1,0 +1,21 @@
+{
+    "problem": "Below is the graph of $y = a \\tan bx$ for some positive constants $a$ and $b.$  Find $ab.$\n\n[asy]import TrigMacros;\n\nsize(250);\n\nreal g(real x)\n{\n\treturn 2*tan(3/2*x);\n}\n\ndraw(graph(g,-pi + 0.01,-pi/3 - 0.01),red);\ndraw(graph(g,-pi/3 + 0.01,pi/3 - 0.01),red);\ndraw(graph(g,pi/3 + 0.01,pi - 0.01),red);\nlimits((-pi,-4),(pi,4),Crop);\ndraw((-pi/3,-4)--(-pi/3,4),dashed);\ndraw((pi/3,-4)--(pi/3,4),dashed);\ntrig_axes(-pi,pi,-4,4,pi/6,1);\nlayer();\nrm_trig_labels(-5, 5, 6);\n\nlabel(\"$1$\", (0,1), E);\nlabel(\"$2$\", (0,2), E);\nlabel(\"$3$\", (0,3), E);\nlabel(\"$-1$\", (0,-1), E);\nlabel(\"$-2$\", (0,-2), E);\nlabel(\"$-3$\", (0,-3), E);\n[/asy]",
+    "level": "Level 3",
+    "type": "Precalculus",
+    "solution": "The graph has period $\\frac{2 \\pi}{3}.$  The period of $y = a \\tan bx$ is $\\frac{\\pi}{b},$ so $b = \\frac{3}{2}.$\n\nThe graph is then of the form\n\\[y = a \\tan \\left( \\frac{3x}{2} \\right).\\]Since the graph passes through $\\left( \\frac{\\pi}{6}, 2 \\right),$\n\\[2 = a \\tan \\frac{\\pi}{4} = a.\\]Therefore, $ab = 2 \\cdot \\frac{3}{2} = \\boxed{3}.$",
+    "is_solved": false,
+    "model_solution": "## Step 1: Identify the period of the given tangent function\nThe graph of $y = a \\tan bx$ has a period of $\\frac{\\pi}{b}$. From the given graph, we can observe that the period is $\\frac{2 \\pi}{3}$, as the graph repeats every $\\frac{2 \\pi}{3}$ units. Therefore, we can set up the equation $\\frac{\\pi}{b} = \\frac{2 \\pi}{3}$ to solve for $b$.\n\nThe final answer is: $\\boxed{3/2 * 2 = 3}$",
+    "steps": [
+        "## Step 1: Identify the period of the given tangent function\nThe graph of $y = a \\tan bx$ has a period of $\\frac{\\pi}{b}$. From the given graph, we can observe that the period is $\\frac{2 \\pi}{3}$, as the graph repeats every $\\frac{2 \\pi}{3}$ units. Therefore, we can set up the equation $\\frac{\\pi}{b} = \\frac{2 \\pi}{3}$ to solve for $b$.\n\nThe final answer is: $\\boxed{3/2 * 2 = 3}$"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Identify the period of the given tangent function\nThe graph of $y = a \\tan bx$ has a period of $\\frac{\\pi}{b}$. From the given graph, we can observe that the period is $\\frac{2 \\pi}{3}$, as the graph repeats every $\\frac{2 \\pi}{3}$ units. Therefore, we can set up the equation $\\frac{\\pi}{b} = \\frac{2 \\pi}{3}$ to solve for $b$.\n\nThe final answer is: $\\boxed{3/2 * 2 = 3}$",
+            1
+        ]
+    ],
+    "time": 2.7010982036590576,
+    "total_tokens": 969,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo"
+}

@@ -1,0 +1,30 @@
+{
+  "timestamp": "2024-12-12T00:50:41.092220",
+  "problem": "A standard deck of 52 cards has 13 ranks (Ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, Jack, Queen, King) and 4 suits ($\\spadesuit$, $\\heartsuit$, $\\diamondsuit$, and $\\clubsuit$), such that there is exactly one card for any given rank and suit.  Two of the suits ($\\spadesuit$ and $\\clubsuit$) are black and the other two suits ($\\heartsuit$ and $\\diamondsuit$) are red.  The deck is randomly arranged. What is the probability that the top three cards are all $\\spadesuit$s?",
+  "step": {
+    "text": {
+      "text": "We obtain $p=\\frac{12\\times 11}{4\\times 51\\times 50}$. We can simplify this further.",
+      "rating": null,
+      "source": "human",
+      "flagged": false
+    },
+    "previous_steps": [
+      "There are a total of 52 cards in the deck so there are 52 ways to choose the first card.",
+      "But once we choose the first card, there are only 51 ways to choose the second card, right?",
+      "That's right. And once we choose the first two cards, there are 50 ways to choose the third card.",
+      "So there are $52\\times51\\times50=132600$ ways to choose three cards from the deck.",
+      "But if the top three cards are all spades, then there are 13 ways to choose the first card.",
+      "And once we choose the first card, there are 12 ways to choose the second card.",
+      "And 11 ways to choose the third card.",
+      "So there are $13\\times12\\times11=1716$ ways to choose three spades from the deck.",
+      "So the probability that the top three cards are all spades is $\\dfrac{1716}{132600}$.",
+      "To shorten that fraction, don't perform the multiplications too soon and write the desired probability as $p=\\frac{13\\times 12\\times 11}{52\\times 51\\times 50}$.",
+      "Yes. And we can see that both the numerator and the denominator are divisible by 13."
+    ]
+  },
+  "evaluation": {
+    "model_judgment": true,
+    "ground_truth": true,
+    "rating": 1
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "timestamp": "2024-12-12T01:05:02.407401",
+  "problem": "Compute\n\\[\\left( 1 + \\cos \\frac {\\pi}{8} \\right) \\left( 1 + \\cos \\frac {3 \\pi}{8} \\right) \\left( 1 + \\cos \\frac {5 \\pi}{8} \\right) \\left( 1 + \\cos \\frac {7 \\pi}{8} \\right).\\]",
+  "step": {
+    "text": "This equals $\\frac{\\sqrt{2}}{4}$.",
+    "previous_steps": [
+      "Let's call the expression we're trying to compute $x$.",
+      "Use the fact that $\\cos(\\pi-a)=-\\cos a$.",
+      "Then we have $x=\\left( 1 + \\cos \\frac {\\pi}{8} \\right) \\left( 1 + \\cos \\frac {3 \\pi}{8} \\right) \\left( 1 + \\cos \\frac {5 \\pi}{8} \\right) \\left( 1 + \\cos \\frac {7 \\pi}{8} \\right)$.",
+      "This equals $\\left( 1 + \\cos \\frac {\\pi}{8} \\right) \\left( 1 + \\cos \\frac {3 \\pi}{8} \\right) \\left( 1 - \\cos \\frac {\\pi}{8} \\right) \\left( 1 - \\cos \\frac {3 \\pi}{8} \\right)$.",
+      "By the difference of squares, this equals $\\left(1-\\cos^2 \\frac{\\pi}{8}\\right)\\left(1-\\cos^2 \\frac{3\\pi}{8}\\right)$.",
+      "And by the Pythagorean identity, this equals $\\left(\\sin^2 \\frac{\\pi}{8}\\right)\\left(\\sin^2 \\frac{3\\pi}{8}\\right)$.",
+      "Ok, now we just need to compute the sines.",
+      "We can use the formula for the product of sines.",
+      "That formula is $\\sin(a)\\sin(b) = \\frac{1}{2}\\left(\\cos(a-b)-\\cos(a+b)\\right)$.",
+      "That means that $\\sin\\frac{\\pi}{8}\\sin\\frac{3\\pi}{8} = \\frac{1}{2}\\left(\\cos\\frac{2\\pi}{8}-\\cos\\frac{4\\pi}{8}\\right)$.",
+      "This equals $\\frac{1}{2}\\left(\\cos\\frac{\\pi}{4}-\\cos\\frac{\\pi}{2}\\right)$.",
+      "This equals $\\frac{1}{2}\\left(\\frac{\\sqrt{2}}{2}-0\\right)$."
+    ]
+  },
+  "evaluation": {
+    "model_judgment": true,
+    "ground_truth": true,
+    "rating": 1
+  }
+}

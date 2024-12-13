@@ -1,0 +1,69 @@
+{
+    "problem": "Compute $\\displaystyle \\sum_{n=2}^\\infty \\sum_{k=1}^{n-1} \\frac{k}{2^{n+k}}$.",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "The sum is taken over all positive integers $n$ and $k$ such that $k \\le n - 1,$ or $n \\ge k + 1.$  Thus, we can change the order of summation:\n\\begin{align*}\n\\sum_{n=2}^\\infty \\sum_{k=1}^{n-1} \\frac{k}{2^{n+k}} &= \\sum_{k = 1}^\\infty \\sum_{n = k + 1}^\\infty \\frac{k}{2^{n + k}} \\\\\n&= \\sum_{k=1}^\\infty \\frac{k}{2^k} \\sum_{n=k+1}^\\infty \\frac{1}{2^n} \\\\\n&= \\sum_{k = 1}^\\infty \\frac{k}{2^k} \\left( \\frac{1}{2^{k + 1}} + \\frac{1}{2^{k + 2}} + \\dotsb \\right) \\\\\n&= \\sum_{k = 1}^\\infty \\frac{k}{2^k} \\cdot \\frac{1}{2^k} \\\\\n&= \\sum_{k=1}^\\infty \\frac{k}{4^k}.\n\\end{align*}Let\n\\[S = \\sum_{k = 1}^\\infty \\frac{k}{4^k} = \\frac{1}{4} + \\frac{2}{4^2} + \\frac{3}{4^3} + \\dotsb.\\]Then\n\\[4S = 1 + \\frac{2}{4} + \\frac{3}{4^2} + \\frac{4}{3^3} + \\dotsb.\\]Subtracting these equations, we get\n\\[3S = 1 + \\frac{1}{4} + \\frac{1}{4^2} + \\dotsb = \\frac{4}{3},\\]so $S = \\boxed{\\frac{4}{9}}.$",
+    "is_solved": true,
+    "stop_reason": "final_answer",
+    "model_solution": "To compute the double sum, we can start by changing the order of summation. \n\nLet's swap the order of summation, starting with the inner sum (sum over $k$). \n\nThe new expression becomes:\n\n$$\\sum_{k=1}^\\infty \\sum_{n=k+1}^\\infty \\frac{k}{2^{n+k}}$$\nWe can factor out $\\frac{k}{2^k}$ from the inner sum:\n\n$$\\sum_{k=1}^\\infty \\frac{k}{2^k} \\sum_{n=k+1}^\\infty \\frac{1}{2^n}$$\nWe can evaluate the inner sum with respect to $n$ as a geometric series, $\\displaystyle \\sum_{n=k+1}^\\infty \\frac{1}{2^n} = \\frac{1}{2^{k+1}} + \\frac{1}{2^{k+2}} + \\cdots = \\frac{1}{2^{k+1}}\\left(1 + \\frac{1}{2} + \\frac{1}{2^2} + \\cdots \\right) = \\frac{1}{2^{k+1}}\\cdot 1 = \\frac{1}{2^k}$.\n\nSo, the expression simplifes to:\n\n$$\\sum_{k=1}^\\infty \\frac{k}{2^k} \\cdot \\frac{1}{2^k} = \\sum_{k=1}^\\infty \\frac{k}{4^k}$$\nDefine a function $f(x) = \\sum_{k=1}^\\infty kx^k$. \n\nWe can differentiate the geometric series $\\displaystyle \\sum_{k=0}^\\infty x^k = \\frac{1}{1-x}$ with respect to $x$ to obtain:\n\n$\\displaystyle \\sum_{k=1}^\\infty kx^{k-1} = \\frac{1}{(1-x)^2}$\n\nMultiplying both sides by $x$, we get:\n\n$\\displaystyle \\sum_{k=1}^\\infty kx^k = \\frac{x}{(1-x)^2}$\n\nTherefore, substituting $x=\\frac{1}{4}$ into the equation gives us:\n\n$\\displaystyle \\sum_{k=1}^\\infty k \\cdot \\frac{1}{4^k} = \\frac{\\frac{1}{4}}{\\left(1-\\frac{1}{4}\\right)^2}$\nSimplify the expression by performing the calculation:\n\n$$\\displaystyle \\sum_{k=1}^\\infty k \\cdot \\frac{1}{4^k} = \\frac{\\frac{1}{4}}{\\left(1-\\frac{1}{4}\\right)^2}$$\n\n$$= \\frac{\\frac{1}{4}}{\\left(\\frac{3}{4}\\right)^2}$$\n\n$$= \\frac{\\frac{1}{4}}{\\frac{9}{16}}$$\n\n$$= \\frac{1}{4} \\times \\frac{16}{9}$$\n\n$$= \\frac{4}{9}$$\nNow that we have found the value of $\\sum_{k=1}^\\infty \\frac{k}{4^k}$, we can substitute this value back into our original expression. \n\nRecall that $\\sum_{k=1}^\\infty \\frac{k}{4^k} = \\frac{4}{9}$. \n\nThen, we have:\n\n$$\\sum_{k=1}^\\infty \\frac{k}{2^k} \\cdot \\frac{1}{2^k} = \\sum_{k=1}^\\infty \\frac{k}{4^k}$$\n\n$$= \\frac{4}{9}$$\nSince we have found that $\\sum_{k=1}^\\infty \\frac{k}{2^k} \\cdot \\frac{1}{2^k} = \\frac{4}{9}$, we can substitute this value back into our original expression, which is $\\sum_{k=1}^\\infty \\frac{k}{2^k} \\sum_{n=k+1}^\\infty \\frac{1}{2^n}$ to get: \n\n$\\sum_{k=1}^\\infty \\frac{k}{2^k} \\sum_{n=k+1}^\\infty \\frac{1}{2^n}$ \n\n$= \\left( \\sum_{k=1}^\\infty \\frac{k}{4^k} \\right)$ \n\n$= \\frac{4}{9}$\nWe have found that $\\sum_{k=1}^\\infty \\frac{k}{2^k} \\sum_{n=k+1}^\\infty \\frac{1}{2^n} = \\frac{4}{9}$. Since this expression is equal to $\\displaystyle \\sum_{n=2}^\\infty \\sum_{k=1}^{n-1} \\frac{k}{2^{n+k}}$, we have found the value of the original double sum.\n\nThe value of the original double sum is: $\\boxed{\\frac{4}{9}}$.",
+    "steps": [
+        "To compute the double sum, we can start by changing the order of summation. \n\nLet's swap the order of summation, starting with the inner sum (sum over $k$). \n\nThe new expression becomes:\n\n$$\\sum_{k=1}^\\infty \\sum_{n=k+1}^\\infty \\frac{k}{2^{n+k}}$$",
+        "We can factor out $\\frac{k}{2^k}$ from the inner sum:\n\n$$\\sum_{k=1}^\\infty \\frac{k}{2^k} \\sum_{n=k+1}^\\infty \\frac{1}{2^n}$$",
+        "We can evaluate the inner sum with respect to $n$ as a geometric series, $\\displaystyle \\sum_{n=k+1}^\\infty \\frac{1}{2^n} = \\frac{1}{2^{k+1}} + \\frac{1}{2^{k+2}} + \\cdots = \\frac{1}{2^{k+1}}\\left(1 + \\frac{1}{2} + \\frac{1}{2^2} + \\cdots \\right) = \\frac{1}{2^{k+1}}\\cdot 1 = \\frac{1}{2^k}$.\n\nSo, the expression simplifes to:\n\n$$\\sum_{k=1}^\\infty \\frac{k}{2^k} \\cdot \\frac{1}{2^k} = \\sum_{k=1}^\\infty \\frac{k}{4^k}$$",
+        "Define a function $f(x) = \\sum_{k=1}^\\infty kx^k$. \n\nWe can differentiate the geometric series $\\displaystyle \\sum_{k=0}^\\infty x^k = \\frac{1}{1-x}$ with respect to $x$ to obtain:\n\n$\\displaystyle \\sum_{k=1}^\\infty kx^{k-1} = \\frac{1}{(1-x)^2}$\n\nMultiplying both sides by $x$, we get:\n\n$\\displaystyle \\sum_{k=1}^\\infty kx^k = \\frac{x}{(1-x)^2}$\n\nTherefore, substituting $x=\\frac{1}{4}$ into the equation gives us:\n\n$\\displaystyle \\sum_{k=1}^\\infty k \\cdot \\frac{1}{4^k} = \\frac{\\frac{1}{4}}{\\left(1-\\frac{1}{4}\\right)^2}$",
+        "Simplify the expression by performing the calculation:\n\n$$\\displaystyle \\sum_{k=1}^\\infty k \\cdot \\frac{1}{4^k} = \\frac{\\frac{1}{4}}{\\left(1-\\frac{1}{4}\\right)^2}$$\n\n$$= \\frac{\\frac{1}{4}}{\\left(\\frac{3}{4}\\right)^2}$$\n\n$$= \\frac{\\frac{1}{4}}{\\frac{9}{16}}$$\n\n$$= \\frac{1}{4} \\times \\frac{16}{9}$$\n\n$$= \\frac{4}{9}$$",
+        "Now that we have found the value of $\\sum_{k=1}^\\infty \\frac{k}{4^k}$, we can substitute this value back into our original expression. \n\nRecall that $\\sum_{k=1}^\\infty \\frac{k}{4^k} = \\frac{4}{9}$. \n\nThen, we have:\n\n$$\\sum_{k=1}^\\infty \\frac{k}{2^k} \\cdot \\frac{1}{2^k} = \\sum_{k=1}^\\infty \\frac{k}{4^k}$$\n\n$$= \\frac{4}{9}$$",
+        "Since we have found that $\\sum_{k=1}^\\infty \\frac{k}{2^k} \\cdot \\frac{1}{2^k} = \\frac{4}{9}$, we can substitute this value back into our original expression, which is $\\sum_{k=1}^\\infty \\frac{k}{2^k} \\sum_{n=k+1}^\\infty \\frac{1}{2^n}$ to get: \n\n$\\sum_{k=1}^\\infty \\frac{k}{2^k} \\sum_{n=k+1}^\\infty \\frac{1}{2^n}$ \n\n$= \\left( \\sum_{k=1}^\\infty \\frac{k}{4^k} \\right)$ \n\n$= \\frac{4}{9}$",
+        "We have found that $\\sum_{k=1}^\\infty \\frac{k}{2^k} \\sum_{n=k+1}^\\infty \\frac{1}{2^n} = \\frac{4}{9}$. Since this expression is equal to $\\displaystyle \\sum_{n=2}^\\infty \\sum_{k=1}^{n-1} \\frac{k}{2^{n+k}}$, we have found the value of the original double sum.\n\nThe value of the original double sum is: $\\boxed{\\frac{4}{9}}$."
+    ],
+    "full_steps": [
+        [
+            "To compute the double sum, we can start by changing the order of summation. \n\nLet's swap the order of summation, starting with the inner sum (sum over $k$). \n\nThe new expression becomes:\n\n$$\\sum_{k=1}^\\infty \\sum_{n=k+1}^\\infty \\frac{k}{2^{n+k}}$$",
+            1
+        ],
+        [
+            "We can factor out $\\frac{k}{2^k}$ from the inner sum:\n\n$$\\sum_{k=1}^\\infty \\frac{k}{2^k} \\sum_{n=k+1}^\\infty \\frac{1}{2^n}$$",
+            1
+        ],
+        [
+            "We can evaluate the inner sum with respect to $n$ as a geometric series, $\\displaystyle \\sum_{n=k+1}^\\infty \\frac{1}{2^n} = \\frac{1}{2^{k+1}} + \\frac{1}{2^{k+2}} + \\cdots = \\frac{1}{2^{k+1}}\\left(1 + \\frac{1}{2} + \\frac{1}{2^2} + \\cdots \\right) = \\frac{1}{2^{k+1}}\\cdot 1 = \\frac{1}{2^k}$.\n\nSo, the expression simplifes to:\n\n$$\\sum_{k=1}^\\infty \\frac{k}{2^k} \\cdot \\frac{1}{2^k} = \\sum_{k=1}^\\infty \\frac{k}{4^k}$$",
+            1
+        ],
+        [
+            "Define a function $f(x) = \\sum_{k=1}^\\infty kx^k$. \n\nWe can differentiate the geometric series $\\displaystyle \\sum_{k=0}^\\infty x^k = \\frac{1}{1-x}$ with respect to $x$ to obtain:\n\n$\\displaystyle \\sum_{k=1}^\\infty kx^{k-1} = \\frac{1}{(1-x)^2}$\n\nMultiplying both sides by $x$, we get:\n\n$\\displaystyle \\sum_{k=1}^\\infty kx^k = \\frac{x}{(1-x)^2}$\n\nTherefore, substituting $x=\\frac{1}{4}$ into the equation gives us:\n\n$\\displaystyle \\sum_{k=1}^\\infty k \\cdot \\frac{1}{4^k} = \\frac{\\frac{1}{4}}{\\left(1-\\frac{1}{4}\\right)^2}$",
+            1
+        ],
+        [
+            "Simplify the expression by performing the calculation:\n\n$$\\displaystyle \\sum_{k=1}^\\infty k \\cdot \\frac{1}{4^k} = \\frac{\\frac{1}{4}}{\\left(1-\\frac{1}{4}\\right)^2}$$\n\n$$= \\frac{\\frac{1}{4}}{\\left(\\frac{3}{4}\\right)^2}$$\n\n$$= \\frac{\\frac{1}{4}}{\\frac{9}{16}}$$\n\n$$= \\frac{1}{4} \\times \\frac{16}{9}$$\n\n$$= \\frac{4}{9}$$",
+            1
+        ],
+        [
+            "Now that we have found the value of $\\sum_{k=1}^\\infty \\frac{k}{4^k}$, we can substitute this value back into our original expression. \n\nRecall that $\\sum_{k=1}^\\infty \\frac{k}{4^k} = \\frac{4}{9}$. \n\nThen, we have:\n\n$$\\sum_{k=1}^\\infty \\frac{k}{2^k} \\cdot \\frac{1}{2^k} = \\sum_{k=1}^\\infty \\frac{k}{4^k}$$\n\n$$= \\frac{4}{9}$$",
+            1
+        ],
+        [
+            "Since we have found that $\\sum_{k=1}^\\infty \\frac{k}{2^k} \\cdot \\frac{1}{2^k} = \\frac{4}{9}$, we can substitute this value back into our original expression, which is $\\sum_{k=1}^\\infty \\frac{k}{2^k} \\sum_{n=k+1}^\\infty \\frac{1}{2^n}$ to get: \n\n$\\sum_{k=1}^\\infty \\frac{k}{2^k} \\sum_{n=k+1}^\\infty \\frac{1}{2^n}$ \n\n$= \\left( \\sum_{k=1}^\\infty \\frac{k}{4^k} \\right)$ \n\n$= \\frac{4}{9}$",
+            1
+        ],
+        [
+            "$\\sum_{k=1}^\\infty \\frac{k}{2^k} \\sum_{n=k+1}^\\infty \\frac{1}{2^n}$ = $\\sum_{k=1}^\\infty \\frac{4}{9k}$.",
+            0
+        ],
+        [
+            "Now that we have found the value of $\\sum_{k=1}^\\infty \\frac{k}{4^k}$, we can substitute this value into the new expression:\n\n$$\\sum_{k=1}^\\infty \\frac{k}{2^k}\\sum_{n=k+1}^\\infty \\frac{1}{2^n} = \\sum_{k=1}^\\infty \\frac{4}{9}\\cdot \\frac{1}{2^{k}}$$\n\nTo evaluate this expression, we can factor out $\\frac{1}{2^k}$ from the sum:",
+            0
+        ],
+        [
+            "Now that we have found that $\\displaystyle \\sum_{k=1}^\\infty \\frac{k}{4^k} = \\frac{4}{9}$, we can substitute this value back into our original expression. \n\nRecall that $\\displaystyle \\sum_{k=1}^\\infty \\frac{k}{2^k} = \\sum_{k=1}^\\infty k \\cdot \\frac{1}{4^k}$. We have already found that $\\displaystyle \\sum_{k=1}^\\infty \\frac{k}{4^k} = \\frac{4}{9}$.\n\nTo find the final value, we can rewrite the original expression in terms of the expression we found:\n\n$$\\displaystyle \\sum_{k=1}^\\infty \\frac{k}{2^k} \\sum_{n=k+1}^\\infty \\frac{1}{2^n}$$\n\n$$= \\sum_{k=1}^\\infty \\frac{k}{4^k}$$\n\n$$= \\frac{4}{9}$$\n\nHowever, since the inner sum is not equal to $\\frac{1}{4}$, but $\\frac{1}{2^k}$, then the total expression is different. In order to keep going, we will multiply $\\frac{4}{9}$ by $\\frac{1}{2}$ which is the value of the inner sum.",
+            0
+        ],
+        [
+            "We have found that $\\sum_{k=1}^\\infty \\frac{k}{2^k} \\sum_{n=k+1}^\\infty \\frac{1}{2^n} = \\frac{4}{9}$. Since this expression is equal to $\\displaystyle \\sum_{n=2}^\\infty \\sum_{k=1}^{n-1} \\frac{k}{2^{n+k}}$, we have found the value of the original double sum.\n\nThe value of the original double sum is: $\\boxed{\\frac{4}{9}}$.",
+            1
+        ]
+    ],
+    "time": 23.860849142074585,
+    "total_tokens": 18716,
+    "final_answer_tokens": 1202,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

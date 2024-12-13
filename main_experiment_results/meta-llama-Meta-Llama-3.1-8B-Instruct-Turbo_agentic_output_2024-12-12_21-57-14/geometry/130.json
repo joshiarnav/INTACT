@@ -1,0 +1,130 @@
+{
+    "problem": "The sides of triangle $PQR$ are tangent to a circle with center $C$ as shown. Given that $\\angle PQR = 63^\\circ$ and $\\angle QPR = 59^\\circ$, find $\\angle QRC$, in degrees.\n\n[asy]\n\nunitsize(1.0 cm);\n\npair Q, P, R, C;\n\nQ = (2.43,3.46);\n\nP = (0,0);\n\nR = (4.43,0);\n\nC = incenter(Q,P,R);\n\ndraw(Q--P--R--cycle);\n\ndraw(incircle(Q,P,R));\n\ndraw(R--C);\n\nlabel(\"$Q$\", Q, N);\n\nlabel(\"$P$\", P, SW);\n\nlabel(\"$R$\", R, SE);\n\nlabel(\"$C$\", C, N);\n\n[/asy]",
+    "level": "Level 2",
+    "type": "Geometry",
+    "solution": "The circle with center $C$ is the incircle of $\\triangle PQR$. So, any segment from a vertex of the triangle to $C$ is an angle bisector.\n\nThe sum of the measures of the internal angles of a triangle is $180^\\circ$, so\n\n\\begin{align*}\n\\angle QRP &= 180^\\circ - \\angle PQR - \\angle QPR \\\\\n&= 180^\\circ - 63^\\circ - 59^\\circ\\\\\n&= 58^\\circ.\n\\end{align*}Since $\\overline{RC}$ bisects $\\angle QRP$, we have $\\angle QRC = \\frac{58^\\circ}{2} = \\boxed{29^\\circ}$.",
+    "is_solved": false,
+    "stop_reason": "generation_max",
+    "model_solution": "Since the circle's center $C$ lies on the angle bisector of $\\angle PQR$, we know that $\\angle PQC = \\frac{1}{2}\\angle PQR = \\frac{1}{2}(63^\\circ)$.\nSince the circle's center $C$ lies on the angle bisector of $\\angle PQR$, we know that $\\angle PQC = \\frac{1}{2}\\angle PQR = \\frac{1}{2}(63^\\circ) = 31.5^\\circ$. The sum of the angles in a triangle is $180^\\circ$, so $\\angle QPR + \\angle QPC + \\angle PQC = 180^\\circ$.\nSince the sum of the angles in a triangle is $180^\\circ$, we have that $\\angle QPR + \\angle QPC + \\angle PQC = 180^\\circ$. Given that $\\angle QPR = 59^\\circ$ and $\\angle PQC = 31.5^\\circ$, we can solve for $\\angle QPC$: $59^\\circ + \\angle QPC + 31.5^\\circ = 180^\\circ$.\nSubtract 90.5\u00b0 from both sides of the equation to solve for angle QPC: $\\angle QPC = 180^\\circ - 59^\\circ - 31.5^\\circ$.\n$\\angle QPC = 180^\\circ - 59^\\circ - 31.5^\\circ = 89.5^\\circ$. \n\nHowever, the question asks for $\\angle QRC$. Recall that $\\angle QRC + \\angle QPC = 180^\\circ$ because $C$ lies on the angle bisector of $\\angle PQR$.",
+    "steps": [
+        "Since the circle's center $C$ lies on the angle bisector of $\\angle PQR$, we know that $\\angle PQC = \\frac{1}{2}\\angle PQR = \\frac{1}{2}(63^\\circ)$.",
+        "Since the circle's center $C$ lies on the angle bisector of $\\angle PQR$, we know that $\\angle PQC = \\frac{1}{2}\\angle PQR = \\frac{1}{2}(63^\\circ) = 31.5^\\circ$. The sum of the angles in a triangle is $180^\\circ$, so $\\angle QPR + \\angle QPC + \\angle PQC = 180^\\circ$.",
+        "Since the sum of the angles in a triangle is $180^\\circ$, we have that $\\angle QPR + \\angle QPC + \\angle PQC = 180^\\circ$. Given that $\\angle QPR = 59^\\circ$ and $\\angle PQC = 31.5^\\circ$, we can solve for $\\angle QPC$: $59^\\circ + \\angle QPC + 31.5^\\circ = 180^\\circ$.",
+        "Subtract 90.5\u00b0 from both sides of the equation to solve for angle QPC: $\\angle QPC = 180^\\circ - 59^\\circ - 31.5^\\circ$.",
+        "$\\angle QPC = 180^\\circ - 59^\\circ - 31.5^\\circ = 89.5^\\circ$. \n\nHowever, the question asks for $\\angle QRC$. Recall that $\\angle QRC + \\angle QPC = 180^\\circ$ because $C$ lies on the angle bisector of $\\angle PQR$."
+    ],
+    "full_steps": [
+        [
+            "Since the circle is tangent to the sides of triangle PQR, the center C of the circle is the incenter of triangle PQR. \n\nStep 1:  Draw the incenter C so that the line segments QC, PC, and RC bisect the angles \u2220PQR, \u2220PQR, and \u2220PQR, respectively.",
+            0
+        ],
+        [
+            "Since the sides of triangle $PQR$ are tangent to a circle with center $C$, the lines $PC$, $QC$, and $RC$ bisect the angles $\\angle PQR$, $\\angle QPR$, and $\\angle QRP$ respectively. We know that $\\angle PQR = 63^\\circ$.",
+            1
+        ],
+        [
+            "Since the angle bisectors of a triangle intersect at the incenter (point C in this case), we have that $\\angle QRC$ is formed by the bisectors of angles $\\angle PQR$ and $\\angle QRP$. \n\nSince the sum of angles in a triangle is 180 degrees, $\\angle QRP = 180 - \\angle QPR - \\angle PQR = 180 - 59 - 63 = 58^\\circ$.",
+            0
+        ],
+        [
+            "Since $\\angle QPR = 59^\\circ$, we can use the fact that $\\angle QPR = \\angle RQC$ since $RC$ bisects $\\angle QRP$. Therefore, $\\angle RQC = 59^\\circ$.",
+            0
+        ],
+        [
+            "Since lines $PC$, $QC$, and $RC$ bisect the angles of triangle $PQR$, we can use this information to determine the measure of $\\angle QRP$. Because the sum of angles in a triangle is $180^\\circ$, we can calculate $\\angle QRP$ as $180 - \\angle QPR - \\angle PQR = 180 - 59 - 63 = 58^\\circ$.",
+            1
+        ],
+        [
+            "Since lines $PC$, $QC$, and $RC$ bisect the angles of triangle $PQR$, and we already have $\\angle PQR$ and $\\angle QPR$, we now need to find $\\angle QRP$.",
+            0
+        ],
+        [
+            "Since $PC$, $QC$, and $RC$ bisect the angles of triangle $PQR$, we can determine the measure of $\\angle QRP$ and use it to find $\\angle QRC$. Since we already calculated that $\\angle QRP = 58^\\circ$ and it is bisected by the line $RC$, we can find $\\angle QRC$ as $\\frac{180 - \\angle QRP}{2} = \\frac{180 - 58}{2} = 61^\\circ$.",
+            0
+        ],
+        [
+            "Since the lines $PC$, $QC$, and $RC$ bisect the angles of triangle $PQR$, $\\angle QRC = \\frac{1}{2}\\angle QRP$, and we found that $\\angle QRP = 58^\\circ$.",
+            0
+        ],
+        [
+            "The bisector of $\\angle PQR$ is line $QC$ and it bisects $\\angle PQR$ into two equal angles, so $\\angle QCR = \\angle QCP = \\frac{1}{2} \\cdot 63^\\circ = 31.5^\\circ$.",
+            0
+        ],
+        [
+            "Since the lines $PC$, $QC$, and $RC$ bisect the angles $\\angle PQR$, $\\angle QPR$, and $\\angle QRP$ respectively, we have that $\\angle QRP$ is bisected into two equal angles. Given that $\\angle QPR = 59^\\circ$, then the sum of these two equal angles is equal to $180^\\circ - 59^\\circ - \\frac{63^\\circ}{2}$, or $180^\\circ - 59^\\circ - 31.5^\\circ$, which is $89.5^\\circ$.",
+            0
+        ],
+        [
+            "Since the line $QC$ bisects the angle $\\angle QPR$, and we know that $\\angle QPR = 59^\\circ$, we have $\\angle QQC = \\angle QCQ = \\frac{1}{2} \\angle QPR = \\frac{1}{2}(59^\\circ) = 29.5^\\circ$.",
+            0
+        ],
+        [
+            "Since the circle's center $C$ lies on the angle bisector of $\\angle PQR$, we know that $\\angle PQC = \\frac{1}{2}\\angle PQR = \\frac{1}{2}(63^\\circ)$.",
+            1
+        ],
+        [
+            "Since the circle's center $C$ lies on the angle bisector of $\\angle PQR$, we know that $\\angle PQC = \\frac{1}{2}\\angle PQR = \\frac{1}{2}(63^\\circ)$. \n\nNow, we find the measure of $\\angle PCR$: Since $C$ is the center of the circle, $CR$ is a radius and therefore perpendicular to tangent $PR$. Thus, $\\triangle PCR$ is a right triangle with $\\angle PRC = 90^\\circ$.",
+            0
+        ],
+        [
+            "Since the circle's center $C$ lies on the angle bisector of $\\angle PQR$, we know that $\\angle PQC = \\frac{1}{2}\\angle PQR = \\frac{1}{2}(63^\\circ)$. Therefore, $\\angle PQC = 31.5^\\circ$. The sum of the interior angles of a triangle is $180^\\circ$, so we can calculate $\\angle QCR$, which is the supplement to $\\angle PQC$ and $\\angle QPR$, and this yields: $\\angle QCR = 180^\\circ - \\angle PQC - \\angle QPR = 180^\\circ - 31.5^\\circ - 59^\\circ$. Calculating this yields: $\\angle QCR = 89.5^\\circ$. The measure of an angle $\\angle QRC$ will be half of this, due to angle bisector. This yields: $\\angle QRC = \\frac{1}{2}\\angle QCR = \\frac{1}{2}(89.5^\\circ)$.",
+            0
+        ],
+        [
+            "Since the circle's center $C$ lies on the angle bisector of $\\angle PQR$, we know that $\\angle PQC = \\frac{1}{2}\\angle PQR = \\frac{1}{2}(63^\\circ) = 31.5^\\circ$. The sum of the angles in a triangle is $180^\\circ$, so $\\angle QPR + \\angle QPC + \\angle PQC = 180^\\circ$.",
+            1
+        ],
+        [
+            "Since the sum of the angles in a triangle is $180^\\circ$, we have that $\\angle QPR + \\angle QPC + \\angle PQC = 180^\\circ$. Given that $\\angle QPR = 59^\\circ$ and $\\angle PQC = 31.5^\\circ$, we can solve for $\\angle QPC$: $59^\\circ + \\angle QPC + 31.5^\\circ = 180^\\circ$.",
+            1
+        ],
+        [
+            "$59^\\circ + \\angle QPC + 31.5^\\circ = 180^\\circ$. Subtracting $90.5^\\circ$ from both sides, we get $\\angle QPC = 89.5^\\circ$.",
+            0
+        ],
+        [
+            "Subtract 90.5\u00b0 from both sides of the equation to solve for angle QPC: $\\angle QPC = 180^\\circ - 59^\\circ - 31.5^\\circ$.",
+            1
+        ],
+        [
+            "$\\angle QPC = 180^\\circ - 59^\\circ - 31.5^\\circ = 89.5^\\circ.$",
+            0
+        ],
+        [
+            "Substitute the values and calculate the angle QPC: $\\angle QPC = 180^\\circ - 59^\\circ - 31.5^\\circ = 89.5^\\circ$.\n\n[Note: Since the triangle's incenter (C) bisects $\\angle PQR$ and lies on its angle bisector, $\\angle QRC = \\frac{1}{2}(\\angle QRP + \\angle QRC)$ is incorrect. Since we're not supposed to refer to QRP, we can find $\\angle QPR$ and use it to find $\\angle QRC$ in the next step.]",
+            0
+        ],
+        [
+            "$\\angle QPC = 180^\\circ - 59^\\circ - 31.5^\\circ = 89.5^\\circ$",
+            1
+        ],
+        [
+            "Since $\\angle QPC$ and $\\angle QRC$ are angles on the same arc of the circle, they must be congruent.",
+            0
+        ],
+        [
+            "Since $\\angle QPC$ is an angle in the triangle $QPC$, the sum of the angles in this triangle must be $180^\\circ$, so $\\angle QCP + \\angle QPC + \\angle PQC = 180^\\circ$.",
+            0
+        ],
+        [
+            "Since $\\angle PRC \\cong \\angle QPC$, and we know that $\\angle QPC = 89.5^\\circ$, we have that $\\angle PRC = 89.5^\\circ$. The sum of the angles in a triangle is $180^\\circ$, so $\\angle QRC + \\angle PRC + \\angle PRQ = 180^\\circ$.",
+            0
+        ],
+        [
+            "$180^\\circ - 90.5^\\circ = 89.5^\\circ$, so we have $\\angle QPC = 89.5^\\circ$.",
+            0
+        ],
+        [
+            "Subtract 90.5\u00b0 from both sides of the equation to solve for angle QPC: \n$180^\\circ - 59^\\circ - 31.5^\\circ = 89.5^\\circ$.\n\nNow, $\\angle QPC$ is the supplement of $\\angle QRC$, so $\\angle QRC = 180^\\circ - \\angle QPC$.\n\nNote: Since $C$ is the incenter of triangle $PQR$, it lies on the bisectors of the angles of the triangle. Therefore, $\\angle QRC$ is equal to half of the supplement of $\\angle QPR$, i.e., $\\angle QRC = \\frac{1}{2}(180^\\circ - \\angle QPR)$.\n\nSo, $\\angle QRC = \\frac{1}{2}(180^\\circ - \\angle QPR)$.",
+            0
+        ],
+        [
+            "$\\angle QPC = 180^\\circ - 59^\\circ - 31.5^\\circ = 89.5^\\circ$. \n\nHowever, the question asks for $\\angle QRC$. Recall that $\\angle QRC + \\angle QPC = 180^\\circ$ because $C$ lies on the angle bisector of $\\angle PQR$.",
+            1
+        ]
+    ],
+    "time": 68.48545408248901,
+    "total_tokens": 29111,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

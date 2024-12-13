@@ -1,0 +1,46 @@
+{
+  "timestamp": "2024-12-12T01:18:12.390596",
+  "problem": "The parabola $y = x^2+2$ and the hyperbola $y^2 - mx^2 = 1$ are tangent. Find $m.$",
+  "step": {
+    "text": {
+      "text": "This is $m=\\frac{6\\pm\\sqrt{48}}{2}$, but we can ignore the negative solution as it wouldn't result in a hyperbola.",
+      "rating": null,
+      "source": "human",
+      "flagged": false,
+      "corrected_rating": -1
+    },
+    "previous_steps": [
+      "So first we should find the vertex of the parabola $y=x^2+2$.",
+      "Right, so that means $x=0$.",
+      "And plugging that into the equation, we get that the vertex is at $(0,2)$.",
+      "Now let's find the center of the hyperbola.",
+      "Ok, so we know that the center is at $(0,0)$.",
+      "Now let's find the slope of the parabola at the vertex.",
+      "Right, so the derivative of the parabola is $2x$, so the slope is $0$ at the vertex.",
+      "Now let's find the slope of the hyperbola.",
+      "The $y>0$ branch of the hyperbola has equation $y=\\sqrt{1+mx^2}$.",
+      "The derivative of that is $\\frac{mx}{\\sqrt{1+mx^2}}$.",
+      "And plugging in $x=0$ we get that the slope is $0$ as well.",
+      "So parabola and hyperbola are tangent at the vertex if they intersect at that point.",
+      "So we need to find $m$ such that the point $(0,2)$ is on the hyperbola.",
+      "However, this doesn't work because $mx^2$ is always $0$ at $x=0$. Let's calculate the intersection points by plugging in the equation for the parabola into that for the hyperbola.",
+      "Ok, doing that we get $x^4+4x^2+4-mx^2=1$.",
+      "This can be simplified to $x^4+3x^2+3-mx^2=0$.",
+      "We can further simplify this to $x^4+(3-m)x^2+3=0$.",
+      "So the equation for the intersection points is $x^4+(3-m)x^2+3=0$.",
+      "Now let's use the quadratic formula to solve for $x^2$ in this equation.",
+      "Ok, so $x^2=\\frac{m-3\\pm\\sqrt{(3-m)^2-4\\cdot1\\cdot3}}{2}$.",
+      "This equation can be simplified to $x^2=\\frac{m-3\\pm\\sqrt{m^2-6m+9-12}}{2}$.",
+      "And further simplified to $x^2=\\frac{m-3\\pm\\sqrt{m^2-6m-3}}{2}$.",
+      "The intersection points are tangent if the discriminant vanishes.",
+      "Right, so $m^2-6m-3=0$.",
+      "We can solve this equation using the quadratic formula as well.",
+      "Ok, so $m=\\frac{6\\pm\\sqrt{6^2-4\\cdot1\\cdot-3}}{2}$."
+    ]
+  },
+  "evaluation": {
+    "model_judgment": true,
+    "ground_truth": true,
+    "rating": 1
+  }
+}

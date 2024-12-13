@@ -1,0 +1,38 @@
+{
+    "problem": "Find the largest three-digit integer that is divisible by each of its distinct, non-zero digits.",
+    "level": "Level 5",
+    "type": "Number Theory",
+    "solution": "We first try a hundreds digit of $9$. Since the number is then divisible by $9$, the sum of the digits must be divisible by $9$, and so the sum of the remaining two digits must be divisible by $9$. If the tens digit is even (and non-zero), then the last digit must be the difference from $9$ of the tens digit and thus odd, but then the number is not divisible by the tens digit. Thus, the tens digit is odd. Trying the possibilities one by one, we see that $7 \\nmid 972, 5 \\nmid 954$, but $3$ and $6$ both divide into $\\boxed{936}$.",
+    "is_solved": false,
+    "model_solution": "To find the largest three-digit integer that is divisible by each of its distinct, non-zero digits, we'll start by identifying the possible hundreds digits. \n\nSince we want the largest possible number, we'll start with the largest hundreds digit, which is 9.\nThe next step is to consider the tens and ones digits. Since the number must be divisible by each of its distinct, non-zero digits, the tens digit must be a divisor of the ones digit. We should start by checking the largest possible divisor of the ones digit, which will be 9. To simplify the search, we can consider the ones digit to be 9 or a multiple of 9.",
+    "steps": [
+        "To find the largest three-digit integer that is divisible by each of its distinct, non-zero digits, we'll start by identifying the possible hundreds digits. \n\nSince we want the largest possible number, we'll start with the largest hundreds digit, which is 9.",
+        "The next step is to consider the tens and ones digits. Since the number must be divisible by each of its distinct, non-zero digits, the tens digit must be a divisor of the ones digit. We should start by checking the largest possible divisor of the ones digit, which will be 9. To simplify the search, we can consider the ones digit to be 9 or a multiple of 9."
+    ],
+    "full_steps": [
+        [
+            "To find the largest three-digit integer that is divisible by each of its distinct, non-zero digits, we'll start by identifying the possible hundreds digits. \n\nSince we want the largest possible number, we'll start with the largest hundreds digit, which is 9.",
+            1
+        ],
+        [
+            "The next step is to consider the tens and ones digits. Since the number must be divisible by each of its distinct, non-zero digits, the tens digit must be a divisor of the ones digit. We should start by checking the largest possible divisor of the ones digit, which will be 9. To simplify the search, we can consider the ones digit to be 9 or a multiple of 9.",
+            1
+        ],
+        [
+            "Since we want the largest possible number and have started with the largest hundreds digit (9), we now consider the ones digit to be 9 or a multiple of 9. The largest multiple of 9 that is less than 100 is 99, but we cannot have a 1 as the tens digit because then it would not be a distinct, non-zero digit. \n\nHowever, 99 is possible because it has a 1 and a 9 as digits that are not distinct, but in this case, we must exclude it from our search. Also, multiples of 9 like 90 are not candidates because they have a repeated digit. \n\nThe next possible number to check is 99 - 9 = 90  is eliminated and 99 is 1 below 99 - 9  which is 90  1 below 90.",
+            0
+        ],
+        [
+            "If the ones digit is 9 or a multiple of 9, the tens digit must be 3 or a multiple of 3, but since the number must be a three-digit integer and distinct from the hundreds digit, the tens digit cannot be 9. \n\nThus, we consider the ones digit to be 9 and the tens digit to be 3. In this case, the number would be 993, but it is not divisible by the hundreds digit 9 (since 993 \u00f7 9 = 110 with remainder 3).",
+            0
+        ],
+        [
+            "Given that the hundreds digit is 9, we need to find the largest possible tens and ones digits that are both distinct, non-zero, and divisors of each other. Since the ones digit can be 9 or a multiple of 9, let's consider 99 as the starting point. However, 99 is not divisible by 9, so we need to consider 81 as the next possible candidate, where 9 is divisible by 1.",
+            0
+        ]
+    ],
+    "time": 18.382040977478027,
+    "total_tokens": 2915,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

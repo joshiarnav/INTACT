@@ -1,0 +1,48 @@
+{
+    "problem": "Find the maximum value of\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix},\\]as $\\theta$ ranges over all angles.",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "We can expand the determinant as follows:\n\\begin{align*}\n\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} &= \\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} - \\begin{vmatrix} 1 & 1 \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix} + \\begin{vmatrix} 1 & 1 + \\sin \\theta \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix} \\\\\n&= ((1 + \\sin \\theta) - 1) - (1 - (1 + \\cos \\theta)) + (1 - (1 + \\sin \\theta)(1 + \\cos \\theta)) \\\\\n&= -\\cos \\theta \\sin \\theta = -\\frac{2 \\cos \\theta \\sin \\theta}{2} = -\\frac{\\sin 2 \\theta}{2}.\n\\end{align*}The maximum value of the determinant is then $\\boxed{\\frac{1}{2}}.$",
+    "is_solved": true,
+    "model_solution": "To find the maximum value of the given determinant, we'll start by expanding it along the first row. \n\nStep 1: \nPerform row operations to simplify the determinant.\nTo simplify the determinant, we'll perform row operations. Subtract the first row from the second and third rows.\n\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = \\begin{vmatrix} 1 & 1 & 1 \\\\ 0 & \\sin \\theta & 0 \\\\ \\cos \\theta & 0 & 0 \\end{vmatrix}.\\]\n\nNext, we'll expand the determinant along the second column.\nSince we've already expanded the determinant along the second column, we can now express the determinant as:\n\n\\[1 \\cdot \\begin{vmatrix} \\sin \\theta & 0 \\\\ \\cos \\theta & 0 \\end{vmatrix} - 1 \\cdot \\begin{vmatrix} 0 & 0 \\\\ \\cos \\theta & 0 \\end{vmatrix} + 1 \\cdot \\begin{vmatrix} 0 & \\sin \\theta \\\\ \\cos \\theta & 0 \\end{vmatrix}.\\]\n\nThis simplifies to \\(-\\sin \\theta \\cos \\theta = -\\frac{1}{2} \\sin (2\\theta).\\]\nThe maximum value of \\(-\\frac{1}{2} \\sin (2\\theta)\\) occurs when \\(\\sin (2\\theta) = -1\\), which happens at \\(2\\theta = 3\\pi\\) or \\(\\theta = \\frac{3\\pi}{2}\\). \n\nThus, the maximum value of the determinant is \\(\\boxed{\\frac{1}{2}}\\).",
+    "steps": [
+        "To find the maximum value of the given determinant, we'll start by expanding it along the first row. \n\nStep 1: \nPerform row operations to simplify the determinant.",
+        "To simplify the determinant, we'll perform row operations. Subtract the first row from the second and third rows.\n\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = \\begin{vmatrix} 1 & 1 & 1 \\\\ 0 & \\sin \\theta & 0 \\\\ \\cos \\theta & 0 & 0 \\end{vmatrix}.\\]\n\nNext, we'll expand the determinant along the second column.",
+        "Since we've already expanded the determinant along the second column, we can now express the determinant as:\n\n\\[1 \\cdot \\begin{vmatrix} \\sin \\theta & 0 \\\\ \\cos \\theta & 0 \\end{vmatrix} - 1 \\cdot \\begin{vmatrix} 0 & 0 \\\\ \\cos \\theta & 0 \\end{vmatrix} + 1 \\cdot \\begin{vmatrix} 0 & \\sin \\theta \\\\ \\cos \\theta & 0 \\end{vmatrix}.\\]\n\nThis simplifies to \\(-\\sin \\theta \\cos \\theta = -\\frac{1}{2} \\sin (2\\theta).\\]",
+        "The maximum value of \\(-\\frac{1}{2} \\sin (2\\theta)\\) occurs when \\(\\sin (2\\theta) = -1\\), which happens at \\(2\\theta = 3\\pi\\) or \\(\\theta = \\frac{3\\pi}{2}\\). \n\nThus, the maximum value of the determinant is \\(\\boxed{\\frac{1}{2}}\\)."
+    ],
+    "full_steps": [
+        [
+            "To find the maximum value of the given determinant, we'll start by expanding it along the first row. \n\nStep 1: \nPerform row operations to simplify the determinant.",
+            1
+        ],
+        [
+            "To simplify the determinant, we'll perform row operations. Subtract the first row from the second and third rows.\n\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = \\begin{vmatrix} 1 & 1 & 1 \\\\ 0 & \\sin \\theta & 0 \\\\ \\cos \\theta & 0 & 0 \\end{vmatrix}.\\]\n\nNext, we'll expand the determinant along the second column.",
+            1
+        ],
+        [
+            "Since we've expanded the determinant along the second column, the determinant can be expressed as \n\\[1 \\cdot \\begin{vmatrix} \\sin \\theta & 0 \\\\ \\cos \\theta & 0 \\end{vmatrix} - 1 \\cdot \\begin{vmatrix} 0 & 0 \\\\ \\cos \\theta & 0 \\end{vmatrix} + 0 \\cdot \\begin{vmatrix} 0 & 0 \\\\ \\cos \\theta & 0 \\end{vmatrix} = 1 \\cdot 0 - 1 \\cdot 0 + 0 \\cdot 0.\\]\nHowever, this seems incorrect given the context, the next step should instead be to expand the determinant along the second row.",
+            0
+        ],
+        [
+            "Since we've already expanded the determinant along the second column, we can now express the determinant as:\n\n\\[1 \\cdot \\begin{vmatrix} \\sin \\theta & 0 \\\\ \\cos \\theta & 0 \\end{vmatrix} - 1 \\cdot \\begin{vmatrix} 0 & 0 \\\\ \\cos \\theta & 0 \\end{vmatrix} + 1 \\cdot \\begin{vmatrix} 0 & \\sin \\theta \\\\ \\cos \\theta & 0 \\end{vmatrix}.\\]\n\nThis simplifies to \\(-\\sin \\theta \\cos \\theta = -\\frac{1}{2} \\sin (2\\theta).\\]",
+            1
+        ],
+        [
+            "We need to analyze the maximum value of the function $-\\frac{1}{2} \\sin (2\\theta)$. \n\nThe maximum value of $\\sin (2\\theta)$ is $1$, so the maximum value of $-\\frac{1}{2} \\sin (2\\theta)$ will be $-\\frac{1}{2} \\cdot 1 = -\\frac{1}{2}$.\n\nHowever, the problem asks for the maximum value of the determinant, not its minimum. Therefore, we need to consider the maximum value of the function $-\\frac{1}{2} \\sin (2\\theta)$ and then negate it.\n\nThe function $-\\frac{1}{2} \\sin (2\\theta)$ attains its maximum value when $2\\theta = -\\frac{\\pi}{2} + 2\\pi n$, for any integer $n$.",
+            0
+        ],
+        [
+            "The next step is to find the maximum value of $-\\frac{1}{2} \\sin (2\\theta)$ as $\\theta$ ranges over all angles. \n\nSince the sine function is bounded above by 1, the maximum value of $\\sin (2\\theta)$ is 1. Therefore, the maximum value of $-\\frac{1}{2} \\sin (2\\theta)$ is $\\boxed{-\\frac{1}{2}}$.",
+            0
+        ],
+        [
+            "The maximum value of \\(-\\frac{1}{2} \\sin (2\\theta)\\) occurs when \\(\\sin (2\\theta) = -1\\), which happens at \\(2\\theta = 3\\pi\\) or \\(\\theta = \\frac{3\\pi}{2}\\). \n\nThus, the maximum value of the determinant is \\(\\boxed{\\frac{1}{2}}\\).",
+            1
+        ]
+    ],
+    "time": 18.76674222946167,
+    "total_tokens": 6254,
+    "final_answer_tokens": 520,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

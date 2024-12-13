@@ -1,0 +1,31 @@
+{
+    "problem": "Find the residue of $182\\cdot 12 - 15\\cdot 7 + 3\\pmod{14}$.",
+    "level": "Level 3",
+    "type": "Number Theory",
+    "solution": "Since $182$ is divisible by 14, the first term does not affect the residue of the whole expression, modulo 14. Since $15\\cdot 7$ is divisible by 7 but not by 14 (since it isn't even), it has a residue of 7. So the residue of the sum is  $$\n182\\cdot 12 - 15\\cdot 7 + 3 \\equiv 0 - 7 + 3 \\equiv -4 \\equiv \\boxed{10} \\pmod{14}.\n$$",
+    "is_solved": true,
+    "stop_reason": "final_answer",
+    "model_solution": "First step: \nWe multiply 182 by 12, 15 by 7, and add 3 to get the expression in a simpler form before taking the modulus. The expression becomes: \n$182 \\cdot 12 - 15 \\cdot 7 + 3$ = $2184 - 105 + 3$ = $2082$.\nNow we need to find the residue of $2082 \\pmod{14}$. To do this, we divide $2082$ by $14$ and take the remainder.\n\n$2082 \\div 14 = 148$ remainder $10$.\n\nSo, the residue is $\\boxed{10}$.",
+    "steps": [
+        "First step: \nWe multiply 182 by 12, 15 by 7, and add 3 to get the expression in a simpler form before taking the modulus. The expression becomes: \n$182 \\cdot 12 - 15 \\cdot 7 + 3$ = $2184 - 105 + 3$ = $2082$.",
+        "Now we need to find the residue of $2082 \\pmod{14}$. To do this, we divide $2082$ by $14$ and take the remainder.\n\n$2082 \\div 14 = 148$ remainder $10$.\n\nSo, the residue is $\\boxed{10}$."
+    ],
+    "full_steps": [
+        [
+            "First step: \nWe multiply 182 by 12, 15 by 7, and add 3 to get the expression in a simpler form before taking the modulus. The expression becomes: \n$182 \\cdot 12 - 15 \\cdot 7 + 3$ = $2184 - 105 + 3$ = $2082$.",
+            1
+        ],
+        [
+            "Since we have the expression 2082, we need to find the residue of 2082 (mod 14).\n\nNext step: \nTo find the residue, we divide 2082 by 14 and find the remainder: \n$2082 = 14 \\cdot 148 + 2$.",
+            0
+        ],
+        [
+            "Now we need to find the residue of $2082 \\pmod{14}$. To do this, we divide $2082$ by $14$ and take the remainder.\n\n$2082 \\div 14 = 148$ remainder $10$.\n\nSo, the residue is $\\boxed{10}$.",
+            1
+        ]
+    ],
+    "time": 5.890236854553223,
+    "total_tokens": 1323,
+    "final_answer_tokens": 225,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

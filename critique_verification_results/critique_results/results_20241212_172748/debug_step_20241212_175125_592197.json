@@ -1,0 +1,44 @@
+{
+  "timestamp": "2024-12-12T17:51:25.592164",
+  "problem": "Compute the smallest positive value of $x,$ in degrees, for which the function\n\\[f(x) = \\sin \\frac{x}{3} + \\sin \\frac{x}{11}\\]achieves its maximum value.",
+  "step": {
+    "text": "This means the smallest value of $x$ that satisfies the equation is $990 + 3960m = 990 + 3960*2 = 8910$.",
+    "previous_steps": [
+      "We can combine the terms using the sum to product identity",
+      "Which is $\\sin(x)+\\sin(y)=2\\sin(\\frac{x+y}{2})\\cos(\\frac{x-y}{2})$",
+      "So $f(x)=\\sin \\frac{x}{3} + \\sin \\frac{x}{11}=2\\sin(\\frac{\\frac{x}{3}+\\frac{x}{11}}{2})\\cos(\\frac{\\frac{x}{3}-\\frac{x}{11}}{2})$",
+      "$f(x)=2\\sin(\\frac{7x}{33})\\cos(\\frac{4x}{33})$",
+      "Since $\\cos \\frac{4x}{33} \\leq 1$, $f(x) \\leq 2\\sin(\\frac{7x}{33})$",
+      "The maximum value of the sine function is 1 so the maximum value of $\\sin(\\frac{7x}{33})$ is 1.",
+      "That means the maximum value of $f(x)$ is $2\\sin(\\frac{7x}{33})$ and since the maximum value of $\\sin(\\frac{7x}{33})$ is 1, the maximum value of $f(x)$ is 2.",
+      "So the maximum value of $f(x)$ is 2.",
+      "If $f(x)= \\sin \\frac{x}{3} + \\sin \\frac{x}{11}$ attains this maximum value then both $\\sin \\frac{x}{3}$ and $\\sin \\frac{x}{11}$ must be equal to 1",
+      "Since the maximum value of the sine function is 1.",
+      "Working in degrees, $\\sin \\frac{x}{3}$ attains the maximum value at $\\frac{x}{3} = 90 + 360n$",
+      "Where n is an integer.",
+      "So $x = 270 + 1080n$",
+      "And $\\sin \\frac{x}{11}$ attains the maximum value at $\\frac{x}{11} = 90 + 360m$",
+      "Where m is an integer.",
+      "So $x = 990 + 3960m$.",
+      "If $x$ is the smallest positive value where $f(x)$ attains the maximum value then $x$ must be the smallest positive solution to the equation $270 + 1080n = 990 + 3960m$.",
+      "Subtracting $270$ from both sides we have $1080n = 720 + 3960m$.",
+      "Dividing both sides by $360$, we have $3n = 2 + 11m$.",
+      "Since $n$ and $m$ are integers, this implies $3$ divides $2+11m$.",
+      "We can write this as $2+11m \\equiv 0 \\pmod{3}$.",
+      "Subtracting $2$ from both sides we have $11m \\equiv -2 \\pmod{3}$.",
+      "We want the smallest $m$ that satisfies this equation",
+      "So we want the smallest $m$ where $11m$ is equivalent to $-2$ modulo 3.",
+      "We check for the smallest positive integer values for $m$",
+      "If $m=1$ then $11m = 11$ which is not equivalent to $-2$ modulo 3.",
+      "-2 modulo 3 is equivalent to 1 modulo 3",
+      "And 11 is not equivalent to 1 modulo 3.",
+      "But if $m=2$, then $11m = 22$ which is equivalent to 1 modulo 3.",
+      "So the smallest value of $m$ that satisfies the equation is 2."
+    ]
+  },
+  "evaluation": {
+    "model_judgment": true,
+    "ground_truth": true,
+    "rating": 1
+  }
+}

@@ -1,0 +1,32 @@
+{
+    "problem": "Find the maximum value of\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix},\\]as $\\theta$ ranges over all angles.",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "We can expand the determinant as follows:\n\\begin{align*}\n\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} &= \\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} - \\begin{vmatrix} 1 & 1 \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix} + \\begin{vmatrix} 1 & 1 + \\sin \\theta \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix} \\\\\n&= ((1 + \\sin \\theta) - 1) - (1 - (1 + \\cos \\theta)) + (1 - (1 + \\sin \\theta)(1 + \\cos \\theta)) \\\\\n&= -\\cos \\theta \\sin \\theta = -\\frac{2 \\cos \\theta \\sin \\theta}{2} = -\\frac{\\sin 2 \\theta}{2}.\n\\end{align*}The maximum value of the determinant is then $\\boxed{\\frac{1}{2}}.$",
+    "is_solved": true,
+    "stop_reason": "final_answer",
+    "model_solution": "To find the maximum value of the determinant, we'll start by expanding it using cofactor expansion. We'll expand along the first column. This gives us:\n\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = 1 \\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} - 1 \\begin{vmatrix} 1 & 1 \\\\ 1 & 1 \\end{vmatrix} + (1 + \\cos \\theta) \\begin{vmatrix} 1 & 1 \\\\ 1 + \\sin \\theta & 1 \\end{vmatrix}\\]\n\nNow, let's compute the individual 2x2 determinants.\nTo continue, we compute the individual 2x2 determinants:\n\n\\[\\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} = (1 + \\sin \\theta)(1) - (1)(1) = \\sin \\theta\\]\n\n\\[\\begin{vmatrix} 1 & 1 \\\\ 1 & 1 \\end{vmatrix} = (1)(1) - (1)(1) = 0\\]\n\n\\[\\begin{vmatrix} 1 & 1 \\\\ 1 + \\sin \\theta & 1 \\end{vmatrix} = (1)(1) - (1)(1 + \\sin \\theta) = -\\sin \\theta\\]\n\nSubstituting these values back into our expression for the determinant gives us:\n\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = 1(\\sin \\theta) - 1(0) + (1 + \\cos \\theta)(-\\sin \\theta)\\]\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = \\sin \\theta - (1 + \\cos \\theta)(\\sin \\theta)\\]\n\\[= \\sin \\theta - \\sin \\theta - \\cos \\theta \\sin \\theta\\]\n\\[= -\\cos \\theta \\sin \\theta\\]\n\\[= -\\frac{1}{2} \\sin 2 \\theta\\]\nThe determinant simplifies to  $\\boxed{-\\frac{1}{2} \\sin 2 \\theta.}$",
+    "steps": [
+        "To find the maximum value of the determinant, we'll start by expanding it using cofactor expansion. We'll expand along the first column. This gives us:\n\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = 1 \\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} - 1 \\begin{vmatrix} 1 & 1 \\\\ 1 & 1 \\end{vmatrix} + (1 + \\cos \\theta) \\begin{vmatrix} 1 & 1 \\\\ 1 + \\sin \\theta & 1 \\end{vmatrix}\\]\n\nNow, let's compute the individual 2x2 determinants.",
+        "To continue, we compute the individual 2x2 determinants:\n\n\\[\\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} = (1 + \\sin \\theta)(1) - (1)(1) = \\sin \\theta\\]\n\n\\[\\begin{vmatrix} 1 & 1 \\\\ 1 & 1 \\end{vmatrix} = (1)(1) - (1)(1) = 0\\]\n\n\\[\\begin{vmatrix} 1 & 1 \\\\ 1 + \\sin \\theta & 1 \\end{vmatrix} = (1)(1) - (1)(1 + \\sin \\theta) = -\\sin \\theta\\]\n\nSubstituting these values back into our expression for the determinant gives us:\n\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = 1(\\sin \\theta) - 1(0) + (1 + \\cos \\theta)(-\\sin \\theta)\\]",
+        "\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = \\sin \\theta - (1 + \\cos \\theta)(\\sin \\theta)\\]\n\\[= \\sin \\theta - \\sin \\theta - \\cos \\theta \\sin \\theta\\]\n\\[= -\\cos \\theta \\sin \\theta\\]\n\\[= -\\frac{1}{2} \\sin 2 \\theta\\]\nThe determinant simplifies to  $\\boxed{-\\frac{1}{2} \\sin 2 \\theta.}$"
+    ],
+    "full_steps": [
+        [
+            "To find the maximum value of the determinant, we'll start by expanding it using cofactor expansion. We'll expand along the first column. This gives us:\n\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = 1 \\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} - 1 \\begin{vmatrix} 1 & 1 \\\\ 1 & 1 \\end{vmatrix} + (1 + \\cos \\theta) \\begin{vmatrix} 1 & 1 \\\\ 1 + \\sin \\theta & 1 \\end{vmatrix}\\]\n\nNow, let's compute the individual 2x2 determinants.",
+            1
+        ],
+        [
+            "To continue, we compute the individual 2x2 determinants:\n\n\\[\\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} = (1 + \\sin \\theta)(1) - (1)(1) = \\sin \\theta\\]\n\n\\[\\begin{vmatrix} 1 & 1 \\\\ 1 & 1 \\end{vmatrix} = (1)(1) - (1)(1) = 0\\]\n\n\\[\\begin{vmatrix} 1 & 1 \\\\ 1 + \\sin \\theta & 1 \\end{vmatrix} = (1)(1) - (1)(1 + \\sin \\theta) = -\\sin \\theta\\]\n\nSubstituting these values back into our expression for the determinant gives us:\n\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = 1(\\sin \\theta) - 1(0) + (1 + \\cos \\theta)(-\\sin \\theta)\\]",
+            1
+        ],
+        [
+            "\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = \\sin \\theta - (1 + \\cos \\theta)(\\sin \\theta)\\]\n\\[= \\sin \\theta - \\sin \\theta - \\cos \\theta \\sin \\theta\\]\n\\[= -\\cos \\theta \\sin \\theta\\]\n\\[= -\\frac{1}{2} \\sin 2 \\theta\\]\nThe determinant simplifies to  $\\boxed{-\\frac{1}{2} \\sin 2 \\theta.}$",
+            1
+        ]
+    ],
+    "time": 16.29174017906189,
+    "total_tokens": 3311,
+    "final_answer_tokens": 716,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

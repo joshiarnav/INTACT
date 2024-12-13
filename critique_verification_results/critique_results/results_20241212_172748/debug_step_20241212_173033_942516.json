@@ -1,0 +1,33 @@
+{
+  "timestamp": "2024-12-12T17:30:33.942494",
+  "problem": "For some positive integers $p$, there is a quadrilateral $ABCD$ with positive integer side lengths, perimeter $p$, right angles at $B$ and $C$, $AB=2$, and $CD=AD$. How many different values of $p<2015$ are possible?\n$\\textbf{(A) }30\\qquad\\textbf{(B) }31\\qquad\\textbf{(C) }61\\qquad\\textbf{(D) }62\\qquad\\textbf{(E) }63$",
+  "step": {
+    "text": "Then we have $y = 32^2 + 1 = 1025$.",
+    "previous_steps": [
+      "Let's call the length of $BC$ $x$ and the length of $AD$ $y$.",
+      "The perimeter of the quadrilateral is just $2+x+2y$.",
+      "Right, so we want to find all values of $2+x+2y$ that are less than 2015 and $x,y$ are both positive integers.",
+      "We can rewrite the equation as $x+2y=p-2$.",
+      "Let's construct a point $E$ such that $AE$ is perpendicular to $CD$.",
+      "Then $AE$ is equal to $x$.",
+      "In the triangle $ADC$, we have that $x = AE$ is one leg, $y=AD$ is the hypothenuse and $y-2=DE$ is the other leg. Let's apply the Pythagorean theorem there.",
+      "We get $x^2+(y-2)^2=y^2$.",
+      "Which is the same as $x^2=4y-4$.",
+      "And we know that $p = 2+x+2y=2+2\\sqrt{y-1} + 2y$ must be less than 2015.",
+      "So $2\\sqrt{y-1}+2y<2013$.",
+      "$y=1$ doesn't work, since $x$ must be a positive integer.",
+      "But $y=2$ does work.",
+      "From the equation $x^2 = 4y-4$, we get $y = (x/2)^2 + 1$. So, $y$ is going to be of the form $y = n^2+1$, where $n$ is an integer. We already know that when $n=1, y=1$ and it works.",
+      "We can notice that $p = 2+2\\sqrt{y-1} + 2y$ is an increasing function in $y$. So, let's look for the smallest value of $n > 0$ such that $y = n^2+1$ doesn't work. ",
+      "Let's try $n = 31$ and see if it works.",
+      "Then we have $y = 31^2 + 1 = 962$.",
+      "That means $p = 2+2\\sqrt{961} + 2 \\cdot 962 = 1988$",
+      "Now, let's try $n=32$."
+    ]
+  },
+  "evaluation": {
+    "model_judgment": true,
+    "ground_truth": true,
+    "rating": 1
+  }
+}

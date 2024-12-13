@@ -1,0 +1,98 @@
+{
+    "problem": "Find the maximum value of\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix},\\]as $\\theta$ ranges over all angles.",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "We can expand the determinant as follows:\n\\begin{align*}\n\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} &= \\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} - \\begin{vmatrix} 1 & 1 \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix} + \\begin{vmatrix} 1 & 1 + \\sin \\theta \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix} \\\\\n&= ((1 + \\sin \\theta) - 1) - (1 - (1 + \\cos \\theta)) + (1 - (1 + \\sin \\theta)(1 + \\cos \\theta)) \\\\\n&= -\\cos \\theta \\sin \\theta = -\\frac{2 \\cos \\theta \\sin \\theta}{2} = -\\frac{\\sin 2 \\theta}{2}.\n\\end{align*}The maximum value of the determinant is then $\\boxed{\\frac{1}{2}}.$",
+    "is_solved": false,
+    "model_solution": "To find the maximum value of the given determinant, we will use the expansion of a 3x3 determinant. \n\nFirst step: \nWe will apply the expansion of the determinant along the first row. The determinant is given by\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix}.\\]\nApplying the expansion of the determinant along the first row, we get:\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = 1\\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} - 1\\begin{vmatrix} 1 & 1 \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix} + 1\\begin{vmatrix} 1 & 1 + \\sin \\theta \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix}.\\]\nWe can now expand the three 2x2 determinnts, which will give us: \n\n\\[1(1 + \\sin \\theta - 1) - 1(1 - (1 + \\cos \\theta)) + 1(1 - (1 + \\cos \\theta)(1 + \\sin \\theta))\\]\nWe can simplify the expression by performing the arithmetic operations. \n\n\\[1(1 + \\sin \\theta - 1) - 1(1 - (1 + \\cos \\theta)) + 1(1 - (1 + \\cos \\theta)(1 + \\sin \\theta))\\]\n\\[= \\sin \\theta + \\cos \\theta - 1 - \\sin \\theta - \\cos \\theta - \\sin \\theta \\cos \\theta\\]\n\\[= - \\sin \\theta \\cos \\theta - 1\\]\n\\[= -\\frac{1}{2} (\\sin 2\\theta) - 1\\]\n\nTo find the maximum value, we need to analyze the term $-\\frac{1}{2} (\\sin 2\\theta)$ as $\\theta$ ranges over all angles.\nThe term $-\\frac{1}{2} (\\sin 2\\theta)$ will take on its maximum value when $\\sin 2\\theta$ is at its maximum value, which is $1$. \n\nTherefore, we need to find the maximum value of $-\\frac{1}{2} (\\sin 2\\theta) = -\\frac{1}{2} (1)$ as $\\theta$ ranges over all angles.\n\nTo find the maximum value of $-\\frac{1}{2} (1)$, we can simply evaluate the expression. \n\n$-\\frac{1}{2} (1) = -\\frac{1}{2}$\nWe want to find the value of $-\\frac{1}{2}$ when $\\sin 2\\theta = 1$. \n\nThe sine function takes on its maximum value of $1$ at $\\frac{\\pi}{2} + 2k\\pi$, where $k$ is an integer. \n\nTherefore, we want to find the value of $-\\frac{1}{2}$ when $2\\theta = \\frac{\\pi}{2} + 2k\\pi$.\nTo find the value of $-\\frac{1}{2}$ when $2\\theta = \\frac{\\pi}{2} + 2k\\pi$, we can solve for $\\theta$ by dividing both sides by $2$. This gives us:\n\\[\\theta = \\frac{\\pi}{4} + k\\pi\\]\n\nWe can now substitute this expression for $\\theta$ into the original expression $-\\frac{1}{2} (\\sin 2\\theta)$ to find its value.\nWhen $\\theta = \\frac{\\pi}{4}$, we have $\\sin 2\\theta = \\sin \\frac{\\pi}{2} = 1$, and the value of the expression is $-\\frac{1}{2}$.",
+    "steps": [
+        "To find the maximum value of the given determinant, we will use the expansion of a 3x3 determinant. \n\nFirst step: \nWe will apply the expansion of the determinant along the first row. The determinant is given by\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix}.\\]\nApplying the expansion of the determinant along the first row, we get:\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = 1\\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} - 1\\begin{vmatrix} 1 & 1 \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix} + 1\\begin{vmatrix} 1 & 1 + \\sin \\theta \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix}.\\]",
+        "We can now expand the three 2x2 determinnts, which will give us: \n\n\\[1(1 + \\sin \\theta - 1) - 1(1 - (1 + \\cos \\theta)) + 1(1 - (1 + \\cos \\theta)(1 + \\sin \\theta))\\]",
+        "We can simplify the expression by performing the arithmetic operations. \n\n\\[1(1 + \\sin \\theta - 1) - 1(1 - (1 + \\cos \\theta)) + 1(1 - (1 + \\cos \\theta)(1 + \\sin \\theta))\\]\n\\[= \\sin \\theta + \\cos \\theta - 1 - \\sin \\theta - \\cos \\theta - \\sin \\theta \\cos \\theta\\]\n\\[= - \\sin \\theta \\cos \\theta - 1\\]\n\\[= -\\frac{1}{2} (\\sin 2\\theta) - 1\\]\n\nTo find the maximum value, we need to analyze the term $-\\frac{1}{2} (\\sin 2\\theta)$ as $\\theta$ ranges over all angles.",
+        "The term $-\\frac{1}{2} (\\sin 2\\theta)$ will take on its maximum value when $\\sin 2\\theta$ is at its maximum value, which is $1$. \n\nTherefore, we need to find the maximum value of $-\\frac{1}{2} (\\sin 2\\theta) = -\\frac{1}{2} (1)$ as $\\theta$ ranges over all angles.\n\nTo find the maximum value of $-\\frac{1}{2} (1)$, we can simply evaluate the expression. \n\n$-\\frac{1}{2} (1) = -\\frac{1}{2}$",
+        "We want to find the value of $-\\frac{1}{2}$ when $\\sin 2\\theta = 1$. \n\nThe sine function takes on its maximum value of $1$ at $\\frac{\\pi}{2} + 2k\\pi$, where $k$ is an integer. \n\nTherefore, we want to find the value of $-\\frac{1}{2}$ when $2\\theta = \\frac{\\pi}{2} + 2k\\pi$.",
+        "To find the value of $-\\frac{1}{2}$ when $2\\theta = \\frac{\\pi}{2} + 2k\\pi$, we can solve for $\\theta$ by dividing both sides by $2$. This gives us:\n\\[\\theta = \\frac{\\pi}{4} + k\\pi\\]\n\nWe can now substitute this expression for $\\theta$ into the original expression $-\\frac{1}{2} (\\sin 2\\theta)$ to find its value.\nWhen $\\theta = \\frac{\\pi}{4}$, we have $\\sin 2\\theta = \\sin \\frac{\\pi}{2} = 1$, and the value of the expression is $-\\frac{1}{2}$."
+    ],
+    "full_steps": [
+        [
+            "To find the maximum value of the given determinant, we will use the expansion of a 3x3 determinant. \n\nFirst step: \nWe will apply the expansion of the determinant along the first row. The determinant is given by\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix}.\\]\nApplying the expansion of the determinant along the first row, we get:\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = 1\\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} - 1\\begin{vmatrix} 1 & 1 \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix} + 1\\begin{vmatrix} 1 & 1 + \\sin \\theta \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix}.\\]",
+            1
+        ],
+        [
+            "Using the properties of 2x2 determinants, we can simplify each of the smaller determinants:\n\\[\\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} = (1 + \\sin \\theta)(1) - (1)(1) = \\sin \\theta,\\]\n\\[\\begin{vmatrix} 1 & 1 \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix} = (1)(1) - (1)(1 + \\cos \\theta) = -\\cos \\theta,\\]\n\\[\\begin{vmatrix} 1 & 1 + \\sin \\theta \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix} = (1)(1) - (1 + \\sin \\theta)(1 + \\cos \\theta) = -\\cos \\theta - \\sin \\theta - \\sin \\theta \\cos \\theta.\\]\n\nSubstituting these expressions back into the original equation, we get:\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = \\sin \\theta + \\cos \\theta - \\cos \\theta - \\sin \\theta - \\sin \\theta \\cos \\theta = -\\sin \\theta \\cos \\theta.\\]\n\nSo, the determinant simplifies to $-\\sin \\theta \\cos \\theta.$",
+            1
+        ],
+        [
+            "We will use the trigonometric identity $\\sin(2\\theta) = 2\\sin(\\theta)\\cos(\\theta)$ to rewrite the determinant as $-\\frac{1}{2}\\sin(2\\theta)$.",
+            0
+        ],
+        [
+            "Using the trigonometric identity $\\sin(2\\theta) = 2\\sin(\\theta)\\cos(\\theta)$, we can rewrite the expression $-\\sin \\theta \\cos \\theta$ as $\\frac{-1}{2}\\sin(2\\theta)$.",
+            1
+        ],
+        [
+            "The next step is to find the maximum value of $\\frac{-1}{2}\\sin(2\\theta)$ as $\\theta$ ranges over all angles. \n\nSince the maximum value of $\\sin(2\\theta)$ is 1, the maximum value of $\\frac{-1}{2}\\sin(2\\theta)$ occurs when $\\sin(2\\theta)$ is equal to 1, and the corresponding maximum value is $\\frac{-1}{2} \\cdot 1 = \\frac{-1}{2}.$",
+            0
+        ],
+        [
+            "Since we have simplified the determinant to $-\\sin \\theta \\cos \\theta$, we can now analyze the expression to find its maximum value. We know that $-\\sin \\theta \\cos \\theta$ can be rewritten as $-\\frac{1}{2} \\sin 2 \\theta$. \n\nThe sine function has a maximum value of 1, and thus $-\\frac{1}{2} \\sin 2 \\theta$ has a maximum value of $\\frac{1}{2}$.",
+            0
+        ],
+        [
+            "We can now expand the three 2x2 determinnts, which will give us: \n\n\\[1(1 + \\sin \\theta - 1) - 1(1 - (1 + \\cos \\theta)) + 1(1 - (1 + \\cos \\theta)(1 + \\sin \\theta))\\]",
+            1
+        ],
+        [
+            "Simplifying the expression we obtained, we have:\n\n\\[1(\\sin \\theta) - 1(-\\cos \\theta) + 1(1 - 1 - \\sin \\theta - \\cos \\theta - \\cos \\theta \\sin \\theta)\\]\n\\[= \\sin \\theta + \\cos \\theta - \\sin \\theta - \\cos \\theta - \\cos \\theta \\sin \\theta\\]\n\\[= -\\cos \\theta \\sin \\theta.\\]\n\nNow, we will use the double angle formula, $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$.",
+            1
+        ],
+        [
+            "Using the double angle formula, $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$, we can rewrite the expression as:\n\\[-\\frac{1}{2} \\sin(2\\theta).\\]\nSince $-1 \\leq \\sin(2\\theta) \\leq 1$, we can conclude that the maximum value of the determinant is given by the maximum value of $-\\frac{1}{2} \\sin(2\\theta)$, which is $\\boxed{-\\frac{1}{2}}.$",
+            0
+        ],
+        [
+            "Now, simplify the expression obtained after expanding the 2x2 determinants.\n\n\\[1(\\sin \\theta) - 1(-\\cos \\theta) + 1(1 - (1 + \\cos \\theta)(1 + \\sin \\theta))\\]\n\\[= \\sin \\theta + \\cos \\theta + 1 - (1 + \\cos \\theta)(1 + \\sin \\theta)\\]\n\\[= \\sin \\theta + \\cos \\theta - (1 + \\cos \\theta + \\sin \\theta + \\cos \\theta \\sin \\theta)\\]\n\\[= \\sin \\theta + \\cos \\theta - 1 - \\cos \\theta - \\sin \\theta - \\cos \\theta \\sin \\theta\\]\n\\[= -1 - \\cos \\theta \\sin \\theta\\]\n\\[= -1 - \\frac{1}{2} \\sin (2 \\theta)\\]",
+            1
+        ],
+        [
+            "To find the maximum value of the given determinant, we need to analyze the expression $-1 - \\frac{1}{2} \\sin (2 \\theta)$. \n\nSince the maximum value of $\\sin (2 \\theta)$ is $1$, the maximum value of $- \\frac{1}{2} \\sin (2 \\theta)$ is $- \\frac{1}{2}$. \n\nThus, the maximum value of the given expression is $-1 - \\frac{1}{2}(-1) = -1 + \\frac{1}{ 2} = -\\frac{1}{2}$.",
+            0
+        ],
+        [
+            "Now we simplify the expression:\n\\[1(\\sin \\theta) - 1(-\\cos \\theta) + 1(1 - (1 + \\cos \\theta)(1 + \\sin \\theta))\\]\n\\[= \\sin \\theta + \\cos \\theta + 1 - (1 + \\cos \\theta + \\sin \\theta + \\cos \\theta \\sin \\theta)\\]\n\\[= \\sin \\theta + \\cos \\theta - \\cos \\theta - \\sin \\theta - \\cos \\theta \\sin \\theta\\]\n\\[= -\\cos \\theta \\sin \\theta\\]\n\\[= -\\frac{\\cos \\theta \\sin \\theta}{1}\\]\n\\[= -\\frac{1}{2}(\\sin 2\\theta)\\]\n\\[= \\frac{1}{2}(-\\sin 2\\theta).\\]",
+            1
+        ],
+        [
+            "The maximum value of $\\frac{1}{2}(-\\sin 2\\theta)$ occurs when $\\sin 2\\theta = -1.$ \n\nWe will use the trigonometric identity for $\\sin \\alpha$ with $\\alpha = 2\\theta$.",
+            1
+        ],
+        [
+            "To find the maximum value, we need to find the value of $\\theta$ that makes $\\sin 2\\theta = -1$.\n\nUsing the unit circle or trigonometric identities, we know that $\\sin 2\\theta = -1$ when $2\\theta = \\frac{3\\pi}{2} + 2k\\pi$, where $k$ is an integer.\n\nTherefore, we can write $2\\theta = \\frac{3\\pi}{2} + 2k\\pi$ as $\\theta = \\frac{3\\pi}{4} + k\\pi$.",
+            0
+        ],
+        [
+            "The next step is to maximize the expression $\\frac{1}{2}(-\\sin 2\\theta)$. We can do this by finding the maximum value of $\\sin 2\\theta$, which is $1$. This occurs when $2\\theta = 90^{\\circ}$ or $\\theta = 45^{\\circ}$.",
+            0
+        ],
+        [
+            "We can simplify the expression by performing the arithmetic operations. \n\n\\[1(1 + \\sin \\theta - 1) - 1(1 - (1 + \\cos \\theta)) + 1(1 - (1 + \\cos \\theta)(1 + \\sin \\theta))\\]\n\\[= \\sin \\theta + \\cos \\theta - 1 - \\sin \\theta - \\cos \\theta - \\sin \\theta \\cos \\theta\\]\n\\[= - \\sin \\theta \\cos \\theta - 1\\]\n\\[= -\\frac{1}{2} (\\sin 2\\theta) - 1\\]\n\nTo find the maximum value, we need to analyze the term $-\\frac{1}{2} (\\sin 2\\theta)$ as $\\theta$ ranges over all angles.",
+            1
+        ],
+        [
+            "The term $-\\frac{1}{2} (\\sin 2\\theta)$ will take on its maximum value when $\\sin 2\\theta$ is at its maximum value, which is $1$. \n\nTherefore, we need to find the maximum value of $-\\frac{1}{2} (\\sin 2\\theta) = -\\frac{1}{2} (1)$ as $\\theta$ ranges over all angles.\n\nTo find the maximum value of $-\\frac{1}{2} (1)$, we can simply evaluate the expression. \n\n$-\\frac{1}{2} (1) = -\\frac{1}{2}$",
+            1
+        ],
+        [
+            "We want to find the value of $-\\frac{1}{2}$ when $\\sin 2\\theta = 1$. \n\nThe sine function takes on its maximum value of $1$ at $\\frac{\\pi}{2} + 2k\\pi$, where $k$ is an integer. \n\nTherefore, we want to find the value of $-\\frac{1}{2}$ when $2\\theta = \\frac{\\pi}{2} + 2k\\pi$.",
+            1
+        ],
+        [
+            "To find the value of $-\\frac{1}{2}$ when $2\\theta = \\frac{\\pi}{2} + 2k\\pi$, we can solve for $\\theta$ by dividing both sides by $2$. This gives us:\n\\[\\theta = \\frac{\\pi}{4} + k\\pi\\]\n\nWe can now substitute this expression for $\\theta$ into the original expression $-\\frac{1}{2} (\\sin 2\\theta)$ to find its value.\nWhen $\\theta = \\frac{\\pi}{4}$, we have $\\sin 2\\theta = \\sin \\frac{\\pi}{2} = 1$, and the value of the expression is $-\\frac{1}{2}$.",
+            1
+        ]
+    ],
+    "time": 71.3343608379364,
+    "total_tokens": 38155,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

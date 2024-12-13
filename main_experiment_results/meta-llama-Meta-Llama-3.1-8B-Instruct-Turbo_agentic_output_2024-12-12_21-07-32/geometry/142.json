@@ -1,0 +1,36 @@
+{
+    "problem": "Compute $\\sin 60^\\circ$.",
+    "level": "Level 2",
+    "type": "Geometry",
+    "solution": "Let $P$ be the point on the unit circle that is $60^\\circ$ counterclockwise from $(1,0)$, and let $D$ be the foot of the altitude from $P$ to the $x$-axis, as shown below.\n\n[asy]\n\npair A,C,P,O,D;\n\ndraw((0,-1.2)--(0,1.2),p=black+1.2bp,Arrows(0.15cm));\n\ndraw((-1.2,0)--(1.2,0),p=black+1.2bp,Arrows(0.15cm));\n\nA = (1,0);\n\nO= (0,0);\n\nlabel(\"$x$\",(1.2,0),SE);\n\nlabel(\"$y$\",(0,1.2),NE);\n\nP = rotate(60)*A;\n\nD = foot(P,A,-A);\n\ndraw(O--P--D);\n\ndraw(rightanglemark(O,D,P,2));\n\ndraw(Circle(O,1));\n\nlabel(\"$O$\",O,SE);\n\nlabel(\"$P$\",P,NE);\n\n//label(\"$A$\",A,SE);\n\nlabel(\"$D$\",D,S);\n\n[/asy]\n\nTriangle $POD$ is a 30-60-90 triangle, so $DO = \\frac{1}{2}$ and $DP = \\frac{\\sqrt{3}}{2}$.  Therefore, the coordinates of $P$ are $\\left(\\frac{1}{2}, \\frac{\\sqrt{3}}{2}\\right)$, so $\\sin 60^\\circ = \\boxed{\\frac{\\sqrt{3}}{2}}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: Recall the unit circle definition of sine. Since we're given an angle in degrees, we'll convert it to radians because most mathematical definitions and formulas are in radians. However, we'll use the relationship between sine values in degrees and radians, where $\\sin(\\theta^\\circ) = \\sin(\\theta \\cdot \\frac{\\pi}{180} \\text{ radians})$. \n\nFor this problem, the angle is $60^\\circ$.\nStep 2: Convert $60^\\circ$ to radians using the relationship $\\sin(\\theta^\\circ) = \\sin(\\theta \\cdot \\frac{\\pi}{180} \\text{ radians})$, which simplifies to $\\theta = \\theta \\cdot \\frac{\\pi}{180}$. Therefore, $60 = 60 \\cdot \\frac{\\pi}{180}$, which can be further simplified to $60 = \\frac{\\pi}{3}$. Then, the angle in radians is $\\frac{\\pi}{3}$.\nStep 3: Since we know that $\\sin 60^\\circ = \\sin(\\frac{\\pi}{3})$, and we're aware of the special triangle $45^\\circ-45^\\circ-90^\\circ$ ($30^\\circ-60^\\circ-90^\\circ$ is more relevant here) where the ratio of the side lengths opposite the angles is $1:\\sqrt{3}:2$, and because sine is defined as the ratio of the opposite side to the hypotenuse in a right triangle, we can deduce that $\\sin(\\frac{\\pi}{3}) = \\frac{\\sqrt{3}}{2}$.\nStep 4: Since we've determined that $\\sin(\\frac{\\pi}{3}) = \\frac{\\sqrt{3}}{2}$, and we initially converted $60^\\circ$ to radians by using $\\theta = \\theta \\cdot \\frac{\\pi}{180}$, it follows that $\\sin 60^\\circ = \\boxed{\\frac{\\sqrt{3}}{2}}$.",
+    "steps": [
+        "Step 1: Recall the unit circle definition of sine. Since we're given an angle in degrees, we'll convert it to radians because most mathematical definitions and formulas are in radians. However, we'll use the relationship between sine values in degrees and radians, where $\\sin(\\theta^\\circ) = \\sin(\\theta \\cdot \\frac{\\pi}{180} \\text{ radians})$. \n\nFor this problem, the angle is $60^\\circ$.",
+        "Step 2: Convert $60^\\circ$ to radians using the relationship $\\sin(\\theta^\\circ) = \\sin(\\theta \\cdot \\frac{\\pi}{180} \\text{ radians})$, which simplifies to $\\theta = \\theta \\cdot \\frac{\\pi}{180}$. Therefore, $60 = 60 \\cdot \\frac{\\pi}{180}$, which can be further simplified to $60 = \\frac{\\pi}{3}$. Then, the angle in radians is $\\frac{\\pi}{3}$.",
+        "Step 3: Since we know that $\\sin 60^\\circ = \\sin(\\frac{\\pi}{3})$, and we're aware of the special triangle $45^\\circ-45^\\circ-90^\\circ$ ($30^\\circ-60^\\circ-90^\\circ$ is more relevant here) where the ratio of the side lengths opposite the angles is $1:\\sqrt{3}:2$, and because sine is defined as the ratio of the opposite side to the hypotenuse in a right triangle, we can deduce that $\\sin(\\frac{\\pi}{3}) = \\frac{\\sqrt{3}}{2}$.",
+        "Step 4: Since we've determined that $\\sin(\\frac{\\pi}{3}) = \\frac{\\sqrt{3}}{2}$, and we initially converted $60^\\circ$ to radians by using $\\theta = \\theta \\cdot \\frac{\\pi}{180}$, it follows that $\\sin 60^\\circ = \\boxed{\\frac{\\sqrt{3}}{2}}$."
+    ],
+    "full_steps": [
+        [
+            "Step 1: Recall the unit circle definition of sine. Since we're given an angle in degrees, we'll convert it to radians because most mathematical definitions and formulas are in radians. However, we'll use the relationship between sine values in degrees and radians, where $\\sin(\\theta^\\circ) = \\sin(\\theta \\cdot \\frac{\\pi}{180} \\text{ radians})$. \n\nFor this problem, the angle is $60^\\circ$.",
+            1
+        ],
+        [
+            "Step 2: Convert $60^\\circ$ to radians using the relationship $\\sin(\\theta^\\circ) = \\sin(\\theta \\cdot \\frac{\\pi}{180} \\text{ radians})$, which simplifies to $\\theta = \\theta \\cdot \\frac{\\pi}{180}$. Therefore, $60 = 60 \\cdot \\frac{\\pi}{180}$, which can be further simplified to $60 = \\frac{\\pi}{3}$. Then, the angle in radians is $\\frac{\\pi}{3}$.",
+            1
+        ],
+        [
+            "Step 3: Since we know that $\\sin 60^\\circ = \\sin(\\frac{\\pi}{3})$, and we're aware of the special triangle $45^\\circ-45^\\circ-90^\\circ$ ($30^\\circ-60^\\circ-90^\\circ$ is more relevant here) where the ratio of the side lengths opposite the angles is $1:\\sqrt{3}:2$, and because sine is defined as the ratio of the opposite side to the hypotenuse in a right triangle, we can deduce that $\\sin(\\frac{\\pi}{3}) = \\frac{\\sqrt{3}}{2}$.",
+            1
+        ],
+        [
+            "Step 4: Since we've determined that $\\sin(\\frac{\\pi}{3}) = \\frac{\\sqrt{3}}{2}$, and we initially converted $60^\\circ$ to radians by using $\\theta = \\theta \\cdot \\frac{\\pi}{180}$, it follows that $\\sin 60^\\circ = \\boxed{\\frac{\\sqrt{3}}{2}}$.",
+            1
+        ]
+    ],
+    "time": 18.151817083358765,
+    "total_tokens": 2794,
+    "final_answer_tokens": 485,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

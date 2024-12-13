@@ -1,0 +1,134 @@
+{
+    "problem": "Find the largest three-digit integer that is divisible by each of its distinct, non-zero digits.",
+    "level": "Level 5",
+    "type": "Number Theory",
+    "solution": "We first try a hundreds digit of $9$. Since the number is then divisible by $9$, the sum of the digits must be divisible by $9$, and so the sum of the remaining two digits must be divisible by $9$. If the tens digit is even (and non-zero), then the last digit must be the difference from $9$ of the tens digit and thus odd, but then the number is not divisible by the tens digit. Thus, the tens digit is odd. Trying the possibilities one by one, we see that $7 \\nmid 972, 5 \\nmid 954$, but $3$ and $6$ both divide into $\\boxed{936}$.",
+    "is_solved": false,
+    "stop_reason": "max_steps",
+    "model_solution": "To find the largest three-digit integer that is divisible by each of its distinct, non-zero digits, let's start by identifying the potential hundreds digits. \n\nThe largest possible hundreds digits are 9 and 8, as we're looking for the largest three-digit number. However, we must also consider divisibility requirements.\nNext, we consider the divisibility requirement for the hundreds digit 9. For a number to be divisible by 9, the sum of its digits must also be divisible by 9. \n\nIf the hundreds digit is 9, the other two digits must sum to a multiple of 9. The largest pair of non-zero digits that sum to a multiple of 9 is 8 and 1, so the hundreds digit cannot be 9. Similarly, this logic can be applied to the hundreds digit 8, but in this case, the other two digits can be 9 and 0.\nNext, we consider the tens digit. Since 8 and 0 are potential tens digits, and the hundreds digit is also 8, the integer must be divisible by 8 and 0 for the hundreds digit to be 8. However, a number cannot be divisible by 0, so the hundreds digit must be 9 is ruled out, and the hundreds digit 8 will not result in the largest possible three-digit number divisible by each distinct, non-zero digit. We should continue with the hundreds digit 7, then 6, then 5, then 4, then 3, then 2.\nFor the hundreds digit 7, since the sum of the digits must be divisible by 7, we need to find two non-zero digits that sum to a multiple of 7.\nNext, consider the hundreds digit 6. For a number to be divisible by 6, it must be divisible by both 2 and 3. For divisibility by 2 and 3, the units digit must be even, and the sum of the digits must be divisible by 3.\nFor the hundreds digit 5, to ensure divisibility, the sum of its digits must be divisible by 5. Moreover, since the tens and units digits are non-zero, they must sum to a multiple of 5, excluding pairs like 9 and 4 that sum to 13, which is not a multiple of 5. A viable pair that sums to 5 is 2 and 3, so let's consider the hundreds digit 5 with the tens and units digits 2 and 3.\nWith the hundreds digit 5 and the tens and units digits 2 and 3, we need to check if the resulting number is divisible by each of its distinct, non-zero digits. For a number to be divisible by 5, the units digit must be either 0 or 5 (since there are only two possible units digits to choose from). However, if the number is divisible by 0, it will not be divisible by those digits if they are zero. Therefore, the units digit cannot be 0. Given that the hundreds and tens digits are both non-zero, the tens digit cannot be 5. If the tens digit is 5, then the hundreds and units digits must sum to a multiple of 5, which means the units digit would be 0. Therefore, we can rule out the hundreds digit 5 with the tens and units digits 5 and 0.\nWith the hundreds digit 5 and excluding the tens and units digits 5 and 0, we consider the next viable pair that sums to a multiple of 5, which is 4 and 1. However, since the hundreds and tens digits must sum to a multiple of 5 to be divisible by 5, we cannot use 4 and 1 as the tens and units digits. The tens digit can be 4, which forces the units digit to be 1, as they must sum to a multiple of 5.\n\nNow, we need to check if the resulting number, 541, is divisible by each of its distinct, non-zero digits.\nWe should continue checking if the number 541 is indeed divisible by each of its distinct, non-zero digits: 5, 4, and 1. Since 541 is divisible by 1 (1 divides any integer), we need to verify divisibility by 5 and 4.\nNow, we need to check if 541 is divisible by 5 and 4. To be divisible by 5, the units digit must be a multiple of 5, which is the case for the number 541. However, to be divisible by 4, the number formed by its last two digits must be divisible by 4. The last two digits of 541 are 41, which is not divisible by 4. Therefore, 541 is not divisible by all of its distinct non-zero digits.\nWe should continue reducing the potential hundreds digits. Since we've already ruled out 9, 8, 7, 6, and 5, the next largest potential hundreds digit is 4. However, we can also consider 3 and 2 as potential hundreds digits, as they are also valid options.\nFor the hundreds digit 4, we need to find two non-zero digits that sum to a multiple of 4, to ensure divisibility by 4. A viable pair that sums to 4 is 2 and 2. However, this would not result in distinct digits. Therefore, let's consider the hundreds digit 4 with the tens and units digits 3 and 1, which sum to 4. Now, we need to check if the resulting number, 413, is divisible by each of its distinct, non-zero digits: 4, 3, and 1. Since 413 is divisible by 1, we need to verify divisibility by 4 and 3. To be divisible by 4, the number formed by its last two digits must be divisible by 4. The last two digits of 413 are 13, which is not divisible by 4.\nFor the hundreds digit 3, to ensure divisibility, we need to find two non-zero digits that sum to a multiple of 3, to ensure divisibility by 3. A viable pair that sums to 6 is 2 and 4, so let's consider the hundreds digit 3 with the tens and units digits 2 and 4.\nNow, let's consider the hundreds digit 3 with the tens and units digits 2 and 4, and check if the resulting number, 324, is divisible by each of its distinct, non-zero digits: 3, 2, and 4. Since 324 is divisible by 1 and divisible by 3, we need to verify divisibility by 2 and 4. To be divisible by 2, the last digit must be even, which is the case for 324. To be divisible by 4, the number formed by its last two digits must be divisible by 4. The last two digits of 324 are 24, which is divisible by 4. \n\nSuccintly generate strictly the next step: \ncheck if 324 is divisible by its distinct non-zero digits.\nNow, we need to check if the number 324 is indeed divisible by each of its distinct, non-zero digits: 3, 2, and 4.\nThe number 324 is divisible by 3 (3 divides 324), and it's also divisible by 2 (2 divides 324), and the number formed by its last two digits, 24, is divisible by 4. Now we need to check divisibility by 4 in the full sense, since the problem considers a number 'divisible by 4' as 'divisible by 4 and 0' (in this case 'divisible by 4'), however the problem also says that 'the number cannot be divisible by zero'.\nNow, we need to verify if 324 being divisible by its distinct non-zero digits is valid. Since the problem considers a number 'divisible by 4' as 'divisible by 4', in this context given that each of our specific distinct non-zero digits is not zero, then 324 is indeed divisible by all of its distinct non-zero digits: 3, 2, and 4.",
+    "steps": [
+        "To find the largest three-digit integer that is divisible by each of its distinct, non-zero digits, let's start by identifying the potential hundreds digits. \n\nThe largest possible hundreds digits are 9 and 8, as we're looking for the largest three-digit number. However, we must also consider divisibility requirements.",
+        "Next, we consider the divisibility requirement for the hundreds digit 9. For a number to be divisible by 9, the sum of its digits must also be divisible by 9. \n\nIf the hundreds digit is 9, the other two digits must sum to a multiple of 9. The largest pair of non-zero digits that sum to a multiple of 9 is 8 and 1, so the hundreds digit cannot be 9. Similarly, this logic can be applied to the hundreds digit 8, but in this case, the other two digits can be 9 and 0.",
+        "Next, we consider the tens digit. Since 8 and 0 are potential tens digits, and the hundreds digit is also 8, the integer must be divisible by 8 and 0 for the hundreds digit to be 8. However, a number cannot be divisible by 0, so the hundreds digit must be 9 is ruled out, and the hundreds digit 8 will not result in the largest possible three-digit number divisible by each distinct, non-zero digit. We should continue with the hundreds digit 7, then 6, then 5, then 4, then 3, then 2.",
+        "For the hundreds digit 7, since the sum of the digits must be divisible by 7, we need to find two non-zero digits that sum to a multiple of 7.",
+        "Next, consider the hundreds digit 6. For a number to be divisible by 6, it must be divisible by both 2 and 3. For divisibility by 2 and 3, the units digit must be even, and the sum of the digits must be divisible by 3.",
+        "For the hundreds digit 5, to ensure divisibility, the sum of its digits must be divisible by 5. Moreover, since the tens and units digits are non-zero, they must sum to a multiple of 5, excluding pairs like 9 and 4 that sum to 13, which is not a multiple of 5. A viable pair that sums to 5 is 2 and 3, so let's consider the hundreds digit 5 with the tens and units digits 2 and 3.",
+        "With the hundreds digit 5 and the tens and units digits 2 and 3, we need to check if the resulting number is divisible by each of its distinct, non-zero digits. For a number to be divisible by 5, the units digit must be either 0 or 5 (since there are only two possible units digits to choose from). However, if the number is divisible by 0, it will not be divisible by those digits if they are zero. Therefore, the units digit cannot be 0. Given that the hundreds and tens digits are both non-zero, the tens digit cannot be 5. If the tens digit is 5, then the hundreds and units digits must sum to a multiple of 5, which means the units digit would be 0. Therefore, we can rule out the hundreds digit 5 with the tens and units digits 5 and 0.",
+        "With the hundreds digit 5 and excluding the tens and units digits 5 and 0, we consider the next viable pair that sums to a multiple of 5, which is 4 and 1. However, since the hundreds and tens digits must sum to a multiple of 5 to be divisible by 5, we cannot use 4 and 1 as the tens and units digits. The tens digit can be 4, which forces the units digit to be 1, as they must sum to a multiple of 5.\n\nNow, we need to check if the resulting number, 541, is divisible by each of its distinct, non-zero digits.",
+        "We should continue checking if the number 541 is indeed divisible by each of its distinct, non-zero digits: 5, 4, and 1. Since 541 is divisible by 1 (1 divides any integer), we need to verify divisibility by 5 and 4.",
+        "Now, we need to check if 541 is divisible by 5 and 4. To be divisible by 5, the units digit must be a multiple of 5, which is the case for the number 541. However, to be divisible by 4, the number formed by its last two digits must be divisible by 4. The last two digits of 541 are 41, which is not divisible by 4. Therefore, 541 is not divisible by all of its distinct non-zero digits.",
+        "We should continue reducing the potential hundreds digits. Since we've already ruled out 9, 8, 7, 6, and 5, the next largest potential hundreds digit is 4. However, we can also consider 3 and 2 as potential hundreds digits, as they are also valid options.",
+        "For the hundreds digit 4, we need to find two non-zero digits that sum to a multiple of 4, to ensure divisibility by 4. A viable pair that sums to 4 is 2 and 2. However, this would not result in distinct digits. Therefore, let's consider the hundreds digit 4 with the tens and units digits 3 and 1, which sum to 4. Now, we need to check if the resulting number, 413, is divisible by each of its distinct, non-zero digits: 4, 3, and 1. Since 413 is divisible by 1, we need to verify divisibility by 4 and 3. To be divisible by 4, the number formed by its last two digits must be divisible by 4. The last two digits of 413 are 13, which is not divisible by 4.",
+        "For the hundreds digit 3, to ensure divisibility, we need to find two non-zero digits that sum to a multiple of 3, to ensure divisibility by 3. A viable pair that sums to 6 is 2 and 4, so let's consider the hundreds digit 3 with the tens and units digits 2 and 4.",
+        "Now, let's consider the hundreds digit 3 with the tens and units digits 2 and 4, and check if the resulting number, 324, is divisible by each of its distinct, non-zero digits: 3, 2, and 4. Since 324 is divisible by 1 and divisible by 3, we need to verify divisibility by 2 and 4. To be divisible by 2, the last digit must be even, which is the case for 324. To be divisible by 4, the number formed by its last two digits must be divisible by 4. The last two digits of 324 are 24, which is divisible by 4. \n\nSuccintly generate strictly the next step: \ncheck if 324 is divisible by its distinct non-zero digits.",
+        "Now, we need to check if the number 324 is indeed divisible by each of its distinct, non-zero digits: 3, 2, and 4.",
+        "The number 324 is divisible by 3 (3 divides 324), and it's also divisible by 2 (2 divides 324), and the number formed by its last two digits, 24, is divisible by 4. Now we need to check divisibility by 4 in the full sense, since the problem considers a number 'divisible by 4' as 'divisible by 4 and 0' (in this case 'divisible by 4'), however the problem also says that 'the number cannot be divisible by zero'.",
+        "Now, we need to verify if 324 being divisible by its distinct non-zero digits is valid. Since the problem considers a number 'divisible by 4' as 'divisible by 4', in this context given that each of our specific distinct non-zero digits is not zero, then 324 is indeed divisible by all of its distinct non-zero digits: 3, 2, and 4."
+    ],
+    "full_steps": [
+        [
+            "To find the largest three-digit integer that is divisible by each of its distinct, non-zero digits, let's start by identifying the potential hundreds digits. \n\nThe largest possible hundreds digits are 9 and 8, as we're looking for the largest three-digit number. However, we must also consider divisibility requirements.",
+            1
+        ],
+        [
+            "Next, we consider the divisibility requirement for the hundreds digit 9. For a number to be divisible by 9, the sum of its digits must also be divisible by 9. \n\nIf the hundreds digit is 9, the other two digits must sum to a multiple of 9. The largest pair of non-zero digits that sum to a multiple of 9 is 8 and 1, so the hundreds digit cannot be 9. Similarly, this logic can be applied to the hundreds digit 8, but in this case, the other two digits can be 9 and 0.",
+            1
+        ],
+        [
+            "Next, we consider the tens digit. Since 8 and 0 are potential tens digits, and the hundreds digit is also 8, the integer must be divisible by 8 and 0 for the hundreds digit to be 8. However, a number cannot be divisible by 0, so the hundreds digit must be 9 is ruled out, and the hundreds digit 8 will not result in the largest possible three-digit number divisible by each distinct, non-zero digit. We should continue with the hundreds digit 7, then 6, then 5, then 4, then 3, then 2.",
+            1
+        ],
+        [
+            "For the hundreds digit 7, since the sum of the digits must be divisible by 7, we need to find two non-zero digits that sum to a multiple of 7.",
+            1
+        ],
+        [
+            "Next, consider the hundreds digit 6. For a number to be divisible by 6, it must be divisible by both 2 and 3. For divisibility by 2 and 3, the units digit must be even, and the sum of the digits must be divisible by 3.",
+            1
+        ],
+        [
+            "For the hundreds digit 5, to ensure divisibility, the sum of its digits must be divisible by 5. Moreover, since the tens and units digits are non-zero, they must sum to a multiple of 5, excluding pairs like 9 and 4 that sum to 13, which is not a multiple of 5. A viable pair that sums to 5 is 2 and 3, so let's consider the hundreds digit 5 with the tens and units digits 2 and 3.",
+            1
+        ],
+        [
+            "With the hundreds digit 5 and the tens and units digits 2 and 3, we need to check if the resulting number is divisible by each of its distinct, non-zero digits. For a number to be divisible by 5, the units digit must be either 0 or 5 (since there are only two possible units digits to choose from). However, if the number is divisible by 0, it will not be divisible by those digits if they are zero. Therefore, the units digit cannot be 0. Given that the hundreds and tens digits are both non-zero, the tens digit cannot be 5. If the tens digit is 5, then the hundreds and units digits must sum to a multiple of 5, which means the units digit would be 0. Therefore, we can rule out the hundreds digit 5 with the tens and units digits 5 and 0.",
+            1
+        ],
+        [
+            "With the hundreds digit 5 and excluding the tens and units digits 5 and 0, we consider the next viable pair that sums to a multiple of 5, which is 4 and 1. However, since the hundreds and tens digits must sum to a multiple of 5 to be divisible by 5, we cannot use 4 and 1 as the tens and units digits. The tens digit can be 4, which forces the units digit to be 1, as they must sum to a multiple of 5.\n\nNow, we need to check if the resulting number, 541, is divisible by each of its distinct, non-zero digits.",
+            1
+        ],
+        [
+            "Now, we need to check if the resulting number, 541, is divisible by each of its distinct, non-zero digits. The divisibility checks are as follows: \n\n- 5: Since 541 is divisible by 5 (541 \u00f7 5 = 108.2), it meets this requirement.\n- 4: Since 541 is not divisible by 4 (541 \u00f7 4 = 135.25), it does not meet this requirement.\n  \nSince 541 is not divisible by 4, one of the conditions is not met. Therefore, we cannot use the hundreds digit 5 with the tens digit 4 and the units digit 1.\n\nWe should continue with the hundreds digit 4.",
+            1
+        ],
+        [
+            "With the hundreds digit 4, for a number to be divisible by 4, the number formed by its last two digits must be divisible by 4. Since the tens digit must be 8 (as 8 and 0 are a pair that sum to a multiple of 8) and the units digit can't be 0, a viable pair for divisibility by 4 is 8 and 4, but this would not make 8 the units digit. However, considering the hundreds digit 4 with the tens digit 8 and the units digit 8 will not work as previously determined (excluding 0 as a units digit), so let's consider a pair where 8 and 8 do not require a zero.",
+            0
+        ],
+        [
+            "For the hundreds digit 4, since the number must be divisible by both 2 and 4, the units digit must be even. Considering the requirement that a number divisible by 4 must have its last two digits divisible by 4, the tens and units digits must be 8 and 0 since they are the only viable even pair.",
+            0
+        ],
+        [
+            "Now, we need to check if the number 541 is divisible by each of its distinct, non-zero digits. This means we must verify divisibility by 5, 4, and 1.\n\nFor divisibility by 5, the number 541 is indeed divisible by 5 because the units digit is 1.\n\nFor divisibility by 4, we can use the rule that a number is divisible by 4 if the number formed by its last two digits is divisible by 4. By this rule, we find that 41 is not divisible by 4, so the number 541 is not divisible by 4. Thus, the hundreds digit cannot be 5 with the tens digit 4.\n\nLet's try another combination for the hundreds digit 5. We have the tens and units digits as 5 and 0 which cannot be, and 5 and 1 was the next pair we tested, which was the pair we used.",
+            0
+        ],
+        [
+            "To check if the resulting number, 541, is divisible by each of its distinct, non-zero digits, we need to verify that it's divisible by 5, 4, and 1 individually. \n\nFor 541, the divisibility checks result in: \n- 541 is divisible by 1 (since every number is divisible by 1).\n- 541 is not divisible by 4 (since 541 \u00f7 4 = 135.25), so we need to consider other possibilities for the hundreds digit, tens digit, and units digit.\n\nNow, let's consider the hundreds digit 4. We need to find two non-zero digits that sum to a multiple of 4. A viable pair that sums to 4 is 2 and 2, which also meets the requirement of being distinct, non-zero digits.",
+            0
+        ],
+        [
+            "We should continue checking if the number 541 is indeed divisible by each of its distinct, non-zero digits: 5, 4, and 1. Since 541 is divisible by 1 (1 divides any integer), we need to verify divisibility by 5 and 4.",
+            1
+        ],
+        [
+            "To continue checking the divisibility of 541 by each of its distinct, non-zero digits, we observe that since 541 is not divisible by 5 or 4, we need to rule out the hundreds digit 5 as a potential solution. We must proceed to test the next possible hundreds digits, which we initially eliminated, starting with 7.",
+            0
+        ],
+        [
+            "Now, we need to check if 541 is divisible by 5 and 4. To be divisible by 5, the units digit must be a multiple of 5, which is the case for the number 541. However, to be divisible by 4, the number formed by its last two digits must be divisible by 4. The last two digits of 541 are 41, which is not divisible by 4. Therefore, 541 is not divisible by all of its distinct non-zero digits.",
+            1
+        ],
+        [
+            "We should continue reducing the potential hundreds digits. Since we've already ruled out 9, 8, 7, 6, and 5, the next largest potential hundreds digit is 4. However, we can also consider 3 and 2 as potential hundreds digits, as they are also valid options.",
+            1
+        ],
+        [
+            "Now that we've ruled out the hundreds digit 5, let's consider the hundreds digit 4. For a number to be divisible by 4, the number formed by its last two digits must be divisible by 4. If the hundreds digit is 4, the tens and units digits must sum to a multiple of 7, since the sum of the digits must be divisible by 4.",
+            0
+        ],
+        [
+            "Continuing with the hundreds digit 4. For a number to be divisible by 4, the number formed by its last two digits must be divisible by 4. Since the hundreds digit is 4, the number formed by its last two digits must be divisible by 4 and have a sum divisible by 7. The largest pair of non-zero digits that sum to a multiple of 7 is 6 and 1 (since 4 + 3 = 7 and 7 + 6 = 13, which is not a multiple of 7), and 5 and 2 (since 4 + 3 is not a multiple of 7, we consider the next pair and 3 and 4 sum to 7 and 7 and 6 sum to 13 as well as 7 + 5 = 12 and 7 + 2 = 9). However, a viable pair that sums to a multiple of 7 is 6 and 1, and we know that the sum of the digits must be divisible by 4, so we need to check the number formed by the tens and units digits. \n\nTo be divisible by 4, the number formed by its last two digits must be divisible by 4. A number is divisible by 4 if the number formed by its last two digits is divisible by 4. Thus, we try the pair 6 and 1. The number formed by the tens and units digits is 61, which is not divisible by 4. However, we can try another pair. A viable pair that sums to a multiple of 7 is 5 and 2 and we also know that a number formed by its last two digits must",
+            0
+        ],
+        [
+            "For the hundreds digit 4, we need to find two non-zero digits that sum to a multiple of 4, to ensure divisibility by 4. A viable pair that sums to 4 is 2 and 2. However, this would not result in distinct digits. Therefore, let's consider the hundreds digit 4 with the tens and units digits 3 and 1, which sum to 4. Now, we need to check if the resulting number, 413, is divisible by each of its distinct, non-zero digits: 4, 3, and 1. Since 413 is divisible by 1, we need to verify divisibility by 4 and 3. To be divisible by 4, the number formed by its last two digits must be divisible by 4. The last two digits of 413 are 13, which is not divisible by 4.",
+            1
+        ],
+        [
+            "For the hundreds digit 3, to ensure divisibility, we need to find two non-zero digits that sum to a multiple of 3, to ensure divisibility by 3. A viable pair that sums to 6 is 2 and 4, so let's consider the hundreds digit 3 with the tens and units digits 2 and 4.",
+            1
+        ],
+        [
+            "Now, let's consider the hundreds digit 3 with the tens and units digits 2 and 4, and check if the resulting number, 324, is divisible by each of its distinct, non-zero digits: 3, 2, and 4. Since 324 is divisible by 1 and divisible by 3, we need to verify divisibility by 2 and 4. To be divisible by 2, the last digit must be even, which is the case for 324. To be divisible by 4, the number formed by its last two digits must be divisible by 4. The last two digits of 324 are 24, which is divisible by 4. \n\nSuccintly generate strictly the next step: \ncheck if 324 is divisible by its distinct non-zero digits.",
+            1
+        ],
+        [
+            "Now, we need to check if the number 324 is indeed divisible by each of its distinct, non-zero digits: 3, 2, and 4.",
+            1
+        ],
+        [
+            "The number 324 is divisible by 3 (3 divides 324), and it's also divisible by 2 (2 divides 324), and the number formed by its last two digits, 24, is divisible by 4. Now we need to check divisibility by 4 in the full sense, since the problem considers a number 'divisible by 4' as 'divisible by 4 and 0' (in this case 'divisible by 4'), however the problem also says that 'the number cannot be divisible by zero'.",
+            1
+        ],
+        [
+            "Now, we need to verify if 324 being divisible by its distinct non-zero digits is valid. Since the problem considers a number 'divisible by 4' as 'divisible by 4', in this context given that each of our specific distinct non-zero digits is not zero, then 324 is indeed divisible by all of its distinct non-zero digits: 3, 2, and 4.",
+            1
+        ]
+    ],
+    "time": 101.67402386665344,
+    "total_tokens": 55208,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

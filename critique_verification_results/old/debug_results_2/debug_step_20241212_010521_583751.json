@@ -1,0 +1,25 @@
+{
+  "timestamp": "2024-12-12T01:05:21.583734",
+  "problem": "Let $A$, $M$, and $C$ be nonnegative integers such that $A+M+C=12$. What is the maximum value of \\[A\\cdot M\\cdot C+A\\cdot M+M\\cdot\nC+C\\cdot A?\\]",
+  "step": {
+    "text": "It is positive because $A>C$.",
+    "previous_steps": [
+      "Notice that the given expression is equal to $(A+1)(M+1)(C+1)-(A+M+C)-1$.",
+      "This is equal to $(A+1)(M+1)(C+1)-12-1$.",
+      "To maximize this we want to maximize $(A+1)(M+1)(C+1)$.",
+      "Intuitively, the maximum is probably attained at $A=M=C=4$.",
+      "Let's see if we can prove that.",
+      "Suppose for the sake of contradiction that the maximum is not attained at $A=M=C=4$.",
+      "Then at least one of $A$, $M$, or $C$ has to be at least 5.",
+      "WLOG, suppose $A\\geq 5$.",
+      "Suppose WLOG that $A\\geq M \\geq C$, $A+M+C=12$, and $A>C$. If we reduce $A$ by $1$ and increase $C$ by $1$, how does the product $(A+1)(M+1)(C+1)$ change?",
+      "It changes by $(A+1)(M+1)-(M+1)(C+1)$.",
+      "Right. Is this positive or negative?"
+    ]
+  },
+  "evaluation": {
+    "model_judgment": false,
+    "ground_truth": true,
+    "rating": 1
+  }
+}

@@ -1,0 +1,73 @@
+{
+    "problem": "Find the maximum value of\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix},\\]as $\\theta$ ranges over all angles.",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "We can expand the determinant as follows:\n\\begin{align*}\n\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} &= \\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} - \\begin{vmatrix} 1 & 1 \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix} + \\begin{vmatrix} 1 & 1 + \\sin \\theta \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix} \\\\\n&= ((1 + \\sin \\theta) - 1) - (1 - (1 + \\cos \\theta)) + (1 - (1 + \\sin \\theta)(1 + \\cos \\theta)) \\\\\n&= -\\cos \\theta \\sin \\theta = -\\frac{2 \\cos \\theta \\sin \\theta}{2} = -\\frac{\\sin 2 \\theta}{2}.\n\\end{align*}The maximum value of the determinant is then $\\boxed{\\frac{1}{2}}.$",
+    "is_solved": false,
+    "model_solution": "To find the maximum value, let's start by expanding the given determinant using the standard method of expanding along a row or column. We'll choose the first column for simplicity. \n\nExpanding along the first column, we get:\n\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = 1 \\cdot \\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} - 1 \\cdot \\begin{vmatrix} 1 & 1 \\\\ 1 & 1 \\end{vmatrix} + (1 + \\cos \\theta) \\cdot \\begin{vmatrix} 1 & 1 \\\\ 1 + \\sin \\theta & 1 \\end{vmatrix}\\]\n\nNow, let's evaluate the three 2x2 determinants in the expression.\nTo evaluate the three 2x2 determinants in the expression, we get:\n\n\\[\\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} = (1 + \\sin \\theta)(1) - (1)(1) = \\sin \\theta,\\]\n\\[\\begin{vmatrix} 1 & 1 \\\\ 1 & 1 \\end{vmatrix} = (1)(1) - (1)(1) = 0,\\]\n\\[\\begin{vmatrix} 1 & 1 \\\\ 1 + \\sin \\theta & 1 \\end{vmatrix} = (1)(1) - (1)(1 + \\sin \\theta) = -\\sin \\theta.\\]\n\nNow, we substitute these values back into the expression:\n\n\\[1 \\cdot \\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} - 1 \\cdot \\begin{vmatrix} 1 & 1 \\\\ 1 & 1 \\end{vmatrix} + (1 + \\cos \\theta) \\cdot \\begin{vmatrix} 1 & 1 \\\\ 1 + \\sin \\theta & 1 \\end{vmatrix} = 1 \\cdot \\sin \\theta - 1 \\cdot 0 + (1 + \\cos \\theta) \\cdot (-\\sin \\theta)\\]\nWe simplify the expression to get:\n\n\\[1 \\cdot \\sin \\theta - 1 \\cdot 0 + (1 + \\cos \\theta) \\cdot (-\\sin \\theta) = \\sin \\theta - (1 + \\cos \\theta) \\sin \\theta.\\]\n\nWe can factor out $\\sin \\theta$ to get:\n\n\\[\\sin \\theta - (1 + \\cos \\theta) \\sin \\theta = \\sin \\theta - \\sin \\theta - \\sin \\theta \\cos \\theta = -\\sin \\theta \\cos \\theta.\\]\nNow, we can simplify the expression $-\\sin \\theta \\cos \\theta$ further by using the trigonometric identity $\\sin 2\\theta = 2 \\sin \\theta \\cos \\theta$. We can rewrite the expression as:\n\n\\[-\\sin \\theta \\cos \\theta = -\\frac{1}{2} \\sin 2\\theta.\\]\n\nThis expression gives us the value of the determinant as a function of $\\theta$.\nNow, we need to find the maximum value of $-\\frac{1}{2} \\sin 2\\theta$ as $\\theta$ ranges over all angles. \n\nThe maximum value of $\\sin 2\\theta$ is $1$, so the maximum value of $-\\frac{1}{2} \\sin 2\\theta$ will occur when $\\sin 2\\theta = -1$.",
+    "steps": [
+        "To find the maximum value, let's start by expanding the given determinant using the standard method of expanding along a row or column. We'll choose the first column for simplicity. \n\nExpanding along the first column, we get:\n\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = 1 \\cdot \\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} - 1 \\cdot \\begin{vmatrix} 1 & 1 \\\\ 1 & 1 \\end{vmatrix} + (1 + \\cos \\theta) \\cdot \\begin{vmatrix} 1 & 1 \\\\ 1 + \\sin \\theta & 1 \\end{vmatrix}\\]\n\nNow, let's evaluate the three 2x2 determinants in the expression.",
+        "To evaluate the three 2x2 determinants in the expression, we get:\n\n\\[\\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} = (1 + \\sin \\theta)(1) - (1)(1) = \\sin \\theta,\\]\n\\[\\begin{vmatrix} 1 & 1 \\\\ 1 & 1 \\end{vmatrix} = (1)(1) - (1)(1) = 0,\\]\n\\[\\begin{vmatrix} 1 & 1 \\\\ 1 + \\sin \\theta & 1 \\end{vmatrix} = (1)(1) - (1)(1 + \\sin \\theta) = -\\sin \\theta.\\]\n\nNow, we substitute these values back into the expression:\n\n\\[1 \\cdot \\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} - 1 \\cdot \\begin{vmatrix} 1 & 1 \\\\ 1 & 1 \\end{vmatrix} + (1 + \\cos \\theta) \\cdot \\begin{vmatrix} 1 & 1 \\\\ 1 + \\sin \\theta & 1 \\end{vmatrix} = 1 \\cdot \\sin \\theta - 1 \\cdot 0 + (1 + \\cos \\theta) \\cdot (-\\sin \\theta)\\]",
+        "We simplify the expression to get:\n\n\\[1 \\cdot \\sin \\theta - 1 \\cdot 0 + (1 + \\cos \\theta) \\cdot (-\\sin \\theta) = \\sin \\theta - (1 + \\cos \\theta) \\sin \\theta.\\]\n\nWe can factor out $\\sin \\theta$ to get:\n\n\\[\\sin \\theta - (1 + \\cos \\theta) \\sin \\theta = \\sin \\theta - \\sin \\theta - \\sin \\theta \\cos \\theta = -\\sin \\theta \\cos \\theta.\\]",
+        "Now, we can simplify the expression $-\\sin \\theta \\cos \\theta$ further by using the trigonometric identity $\\sin 2\\theta = 2 \\sin \\theta \\cos \\theta$. We can rewrite the expression as:\n\n\\[-\\sin \\theta \\cos \\theta = -\\frac{1}{2} \\sin 2\\theta.\\]\n\nThis expression gives us the value of the determinant as a function of $\\theta$.",
+        "Now, we need to find the maximum value of $-\\frac{1}{2} \\sin 2\\theta$ as $\\theta$ ranges over all angles. \n\nThe maximum value of $\\sin 2\\theta$ is $1$, so the maximum value of $-\\frac{1}{2} \\sin 2\\theta$ will occur when $\\sin 2\\theta = -1$."
+    ],
+    "full_steps": [
+        [
+            "To find the maximum value, let's start by expanding the given determinant using the standard method of expanding along a row or column. We'll choose the first column for simplicity. \n\nExpanding along the first column, we get:\n\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = 1 \\cdot \\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} - 1 \\cdot \\begin{vmatrix} 1 & 1 \\\\ 1 & 1 \\end{vmatrix} + (1 + \\cos \\theta) \\cdot \\begin{vmatrix} 1 & 1 \\\\ 1 + \\sin \\theta & 1 \\end{vmatrix}\\]\n\nNow, let's evaluate the three 2x2 determinants in the expression.",
+            1
+        ],
+        [
+            "To evaluate the three 2x2 determinants in the expression, we get:\n\n\\[\\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} = (1 + \\sin \\theta)(1) - (1)(1) = \\sin \\theta,\\]\n\\[\\begin{vmatrix} 1 & 1 \\\\ 1 & 1 \\end{vmatrix} = (1)(1) - (1)(1) = 0,\\]\n\\[\\begin{vmatrix} 1 & 1 \\\\ 1 + \\sin \\theta & 1 \\end{vmatrix} = (1)(1) - (1)(1 + \\sin \\theta) = -\\sin \\theta.\\]\n\nNow, we substitute these values back into the expression:\n\n\\[1 \\cdot \\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} - 1 \\cdot \\begin{vmatrix} 1 & 1 \\\\ 1 & 1 \\end{vmatrix} + (1 + \\cos \\theta) \\cdot \\begin{vmatrix} 1 & 1 \\\\ 1 + \\sin \\theta & 1 \\end{vmatrix} = 1 \\cdot \\sin \\theta - 1 \\cdot 0 + (1 + \\cos \\theta) \\cdot (-\\sin \\theta)\\]",
+            1
+        ],
+        [
+            "Now, let's simplify the expression by distributing $(1 + \\cos \\theta)$ to $-\\sin \\theta$ and then combining like terms:\n\n\\[1 \\cdot \\sin \\theta - 1 \\cdot 0 + (1 + \\cos \\theta) \\cdot (-\\sin \\theta) = \\sin \\theta - (1 + \\cos \\theta) \\sin \\theta = \\sin \\theta - \\sin \\theta - \\sin \\theta \\cos \\theta = - \\sin \\theta - \\sin \\theta \\cos \\theta.\\]\n\nTo simplify further, we'll use the trigonometric identity $\\sin 2\\theta = 2\\sin \\theta \\cos \\theta$.\n\nWe can rewrite $-\\sin \\theta \\cos \\theta$ as $-\\frac{1}{2} \\sin 2\\theta$.\n\nSubstituting this back into the expression, we get:\n\n\\[-\\sin \\theta - \\sin \\theta \\cos \\theta = -\\sin \\theta - \\frac{1}{2} \\sin 2\\theta.\\]\n\nTo proceed, we need to use the fact that $-1 \\leq \\sin \\theta \\leq 1$ and $-1 \\leq \\cos \\theta \\leq 1$, and then use the properties of the sine function to complete the solution.",
+            1
+        ],
+        [
+            "To find the maximum value of the expression $-\\sin \\theta - \\frac{1}{2} \\sin 2\\theta$, we can use the fact that $-1 \\leq \\sin \\theta \\leq 1$ and $-1 \\leq \\cos \\theta \\leq 1$. We can rewrite the expression as $-\\sin \\theta - \\frac{1}{2} \\sin 2\\theta = -\\sin \\theta - \\frac{1}{2} (2\\sin \\theta \\cos \\theta) = -\\sin \\theta - \\sin \\theta \\cos \\theta = -\\sin \\theta (1 + \\cos \\theta)$. We know that $-1 \\leq \\cos \\theta \\leq 1$, so the maximum value of $1 + \\cos \\theta$ is 2, which occurs when $\\cos \\theta = 1$. Therefore, the maximum value of the expression is $- \\sin \\theta (1 + \\cos \\theta) \\leq - \\sin \\theta (2) = -2 \\sin \\theta$.",
+            1
+        ],
+        [
+            "We want to maximize the expression $-\\sin \\theta (1 + \\cos \\theta)$. Since $-1 \\leq \\cos \\theta \\leq 1$, the maximum value of $1 + \\cos \\theta$ is 2, which occurs when $\\cos \\theta = 1$. However, when $\\cos \\theta = 1$, $\\sin \\theta = 0$. \n\nBut, we can still find the maximum value of the expression by letting $\\theta$ range over all angles. Since $\\sin \\theta$ can be as large as 1, the maximum value of the expression $-\\sin \\theta (1 + \\cos \\theta)$ is $-1 \\cdot (2) = -2$. This occurs when $\\theta = \\frac{3\\pi}{4}$.",
+            0
+        ],
+        [
+            "To find the maximum value of the expression $-2 \\sin \\theta$, we can use the fact that the maximum value of the sine function is 1. Therefore, the maximum value of the expression is $-2 \\sin \\theta \\leq -2(1) = -2$.",
+            0
+        ],
+        [
+            "Now, we can simplify the expression further by combining the two terms with the sine function. We can rewrite the expression as:\n\n\\[-\\sin \\theta - \\frac{1}{2} \\sin 2\\theta = -\\sin \\theta - \\frac{1}{2} (2 \\sin \\theta \\cos \\theta).\\]\n\nUsing the distributive property, we can simplify this to:\n\n\\[-\\sin \\theta - \\sin \\theta \\cos \\theta = -\\sin \\theta(1 + \\cos \\theta).\\]\n\nTo find the maximum value, we need to consider the range of possible values for $\\sin \\theta$ and $\\cos \\theta$. Since $-1 \\leq \\sin \\theta \\leq 1$ and $-1 \\leq \\cos \\theta \\leq 1$, we know that $0 \\leq 1 + \\cos \\theta \\leq 2$.\n\nThe maximum value of the expression will occur when the value of $\\sin \\theta$ is at its maximum, which is 1. At this value, the expression becomes:\n\n\\[-\\sin \\theta(1 + \\cos \\theta) = -1(1 + \\cos \\theta).\\]\n\nSince $0 \\leq 1 + \\cos \\theta \\leq 2$, the maximum value of $-1(1 + \\cos \\theta)$ will occur when $1 + \\cos \\theta = 2$, which gives a maximum value of:\n\n\\[-1(2) = -2.\\]\n\nHowever, we need to consider the case when $\\theta$ is such that $1 + \\cos \\theta = 0$.",
+            0
+        ],
+        [
+            "Since we have the expression $-\\sin \\theta - \\frac{1}{2} \\sin 2\\theta$, we can use the fact that $-1 \\leq \\sin \\theta \\leq 1$ and $-1 \\leq \\cos \\theta \\leq 1$ to analyze the possible values of the expression. \n\nNow, we can rewrite $\\sin 2\\theta$ as $2\\sin \\theta \\cos \\theta$ and use the fact that $-2 \\leq 2\\sin \\theta \\cos \\theta \\leq 2$ to bound the value of $\\sin 2\\theta$.\n\nUsing the triangle inequality, we have $|\\sin \\theta + \\frac{1}{2} \\sin 2\\theta| \\leq |\\sin \\theta| + \\frac{1}{2} |\\sin 2\\theta| \\leq 1 + 1 = 2$.\n\nHowever, the maximum value of the expression is achieved when the absolute value of the expression is maximized. \n\nWe'll use the equality case of the triangle inequality and the properties of the sine function to find the angle $\\theta$ that maximizes the absolute value of the expression.\n\nTo do this, we'll find the values of $\\sin \\theta$ and $\\sin 2\\theta$ that maximize $|\\sin \\theta + \\frac{1}{2} \\sin 2\\theta|$, and then use these values to find the angle $\\theta$ that maximizes the absolute value of the expression.\n\nThis will involve solving an equation and analyzing the possible solutions.\n\nBy solving the equation and analyzing the possible solutions, we can determine",
+            0
+        ],
+        [
+            "We simplify the expression to get:\n\n\\[1 \\cdot \\sin \\theta - 1 \\cdot 0 + (1 + \\cos \\theta) \\cdot (-\\sin \\theta) = \\sin \\theta - (1 + \\cos \\theta) \\sin \\theta.\\]\n\nWe can factor out $\\sin \\theta$ to get:\n\n\\[\\sin \\theta - (1 + \\cos \\theta) \\sin \\theta = \\sin \\theta - \\sin \\theta - \\sin \\theta \\cos \\theta = -\\sin \\theta \\cos \\theta.\\]",
+            1
+        ],
+        [
+            "Now, we can simplify the expression $-\\sin \\theta \\cos \\theta$ further by using the trigonometric identity $\\sin 2\\theta = 2 \\sin \\theta \\cos \\theta$. We can rewrite the expression as:\n\n\\[-\\sin \\theta \\cos \\theta = -\\frac{1}{2} \\sin 2\\theta.\\]\n\nThis expression gives us the value of the determinant as a function of $\\theta$.",
+            1
+        ],
+        [
+            "To find the maximum value of the determinant, we need to maximize the expression $-\\frac{1}{2} \\sin 2\\theta$. The maximum value of $\\sin 2\\theta$ is 1, which occurs when $2\\theta = 90^{\\circ}$ or $\\theta = 45^{\\circ}$.",
+            0
+        ],
+        [
+            "To find the maximum value of the expression $-\\frac{1}{2} \\sin 2\\theta$, we need to find the maximum value of $\\sin 2\\theta$ since the coefficient is negative. \n\nSince the sine function oscillates between -1 and 1, the maximum value of $\\sin 2\\theta$ is 1. Therefore, the maximum value of $-\\frac{1}{2} \\sin 2\\theta$ is:\n\n\\[-\\frac{1}{2} \\cdot 1 = -\\frac{1}{2}\\]",
+            0
+        ],
+        [
+            "Now, we need to find the maximum value of $-\\frac{1}{2} \\sin 2\\theta$ as $\\theta$ ranges over all angles. \n\nThe maximum value of $\\sin 2\\theta$ is $1$, so the maximum value of $-\\frac{1}{2} \\sin 2\\theta$ will occur when $\\sin 2\\theta = -1$.",
+            1
+        ]
+    ],
+    "time": 86.30500602722168,
+    "total_tokens": 31030,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

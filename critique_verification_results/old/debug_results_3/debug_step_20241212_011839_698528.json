@@ -1,0 +1,40 @@
+{
+  "timestamp": "2024-12-12T01:18:39.698511",
+  "problem": "Find the sum of all integral values of $c$ with $c\\le 25$ for which the equation $y=x^2-7x-c$ has two rational roots.",
+  "step": {
+    "text": {
+      "text": "For the perfect square $81$, $c=(81-49)/4=8$. That's an integer.",
+      "rating": null,
+      "source": "human",
+      "flagged": false
+    },
+    "previous_steps": [
+      "I think that we should use the discriminant of the quadratic equation to find the rational roots.",
+      "Me too. The discriminant is $b^2-4ac$.",
+      "But we can simplify that further. The quadratic equation is $y=x^2-7x-c$, so $a=1$, $b=-7$, and $c=-c$.",
+      "So the discriminant is $49-4(-c)$. In order for the discriminant to be a perfect square, $49-4(-c)$ must be equal to $0$ or a perfect square.",
+      "$49-4(-c)$ is equal to $0$ when $c=\\frac{49}{4}$.",
+      "We made a sign error. The expression for the discriminant is $49+4c$.",
+      "Right. So $49+4c$ must be equal to $0$ or a perfect square.",
+      "We only need to consider integer $c$, i.e. those between $\\left \\lceil{-\\frac{49}{4}}\\right \\rceil$ and $25$ inclusive.",
+      "That's a good point. So we have $c\\in \\left \\{-12, -11, \\ldots , 24, 25 \\right \\}$.",
+      "The possible discriminants range between $49-4*12$ and $49+4*25$. Let's list the perfect squares in that range.",
+      "$49-4*12$ is equivalent to $49-48$, which is equal to $1$.",
+      "$49+4*25$ is equivalent to $49+100$, which is equal to $149$.",
+      "The perfect squares between $1$ and $149$ are $1$, $4$, $9$, $16$, $25$, $36$, $49$, $64$, $81$, $100$, $121$, and $144$.",
+      "So $49+4c$ must be equal to one of these values.",
+      "We see that $49+4c$ is always odd, so we only need to check the odd perfect squares.",
+      "That's true. $49+4*-12$ is equal to $49-48$, which is equal to $1$.",
+      "So $c=-12$ is a solution. The remaining perfect squares are $9,25,49,81,121$. Solve for $c$ for each of them, and see if we obtain an integer.",
+      "Call a perfect square $p$, then $c=(p-49)/4$. Calculate this for the remaining perfect squares.",
+      "$9$ is a perfect square. $c=(9-49)/4=-10$. That's an integer.",
+      "For the perfect square $25$, $(25-49)/4=-6$. That's an integer.",
+      "For the perfect square $49$, $(49-49)/4=0$. That's an integer."
+    ]
+  },
+  "evaluation": {
+    "model_judgment": true,
+    "ground_truth": true,
+    "rating": 1
+  }
+}

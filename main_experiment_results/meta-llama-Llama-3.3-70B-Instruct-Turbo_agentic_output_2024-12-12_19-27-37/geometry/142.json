@@ -1,0 +1,31 @@
+{
+    "problem": "Compute $\\sin 60^\\circ$.",
+    "level": "Level 2",
+    "type": "Geometry",
+    "solution": "Let $P$ be the point on the unit circle that is $60^\\circ$ counterclockwise from $(1,0)$, and let $D$ be the foot of the altitude from $P$ to the $x$-axis, as shown below.\n\n[asy]\n\npair A,C,P,O,D;\n\ndraw((0,-1.2)--(0,1.2),p=black+1.2bp,Arrows(0.15cm));\n\ndraw((-1.2,0)--(1.2,0),p=black+1.2bp,Arrows(0.15cm));\n\nA = (1,0);\n\nO= (0,0);\n\nlabel(\"$x$\",(1.2,0),SE);\n\nlabel(\"$y$\",(0,1.2),NE);\n\nP = rotate(60)*A;\n\nD = foot(P,A,-A);\n\ndraw(O--P--D);\n\ndraw(rightanglemark(O,D,P,2));\n\ndraw(Circle(O,1));\n\nlabel(\"$O$\",O,SE);\n\nlabel(\"$P$\",P,NE);\n\n//label(\"$A$\",A,SE);\n\nlabel(\"$D$\",D,S);\n\n[/asy]\n\nTriangle $POD$ is a 30-60-90 triangle, so $DO = \\frac{1}{2}$ and $DP = \\frac{\\sqrt{3}}{2}$.  Therefore, the coordinates of $P$ are $\\left(\\frac{1}{2}, \\frac{\\sqrt{3}}{2}\\right)$, so $\\sin 60^\\circ = \\boxed{\\frac{\\sqrt{3}}{2}}$.",
+    "is_solved": true,
+    "model_solution": "To compute $\\sin 60^\\circ$, we should recall the definition of sine in a right-angled triangle, which is the ratio of the length of the side opposite the angle to the length of the hypotenuse. We also need to consider the properties of a 30-60-90 triangle, where the side lengths follow a specific ratio.\nIn a 30-60-90 triangle, the side lengths are in the ratio $1 : \\sqrt{3} : 2$, where the side opposite the $30^\\circ$ angle is $1$, the side opposite the $60^\\circ$ angle is $\\sqrt{3}$, and the hypotenuse is $2$. Using this ratio, we can determine that the sine of $60^\\circ$ is equal to the ratio of the side opposite the $60^\\circ$ angle to the hypotenuse, which is $\\frac{\\sqrt{3}}{2}$.\nThe next step is to confirm that the ratio $\\frac{\\sqrt{3}}{2}$ is indeed the value of $\\sin 60^\\circ$ by ensuring it matches the definition of sine in a right-angled triangle and the properties of a 30-60-90 triangle. Since it does, we can conclude that $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$. Therefore, the solution is $\\boxed{\\frac{\\sqrt{3}}{2}}$.",
+    "steps": [
+        "To compute $\\sin 60^\\circ$, we should recall the definition of sine in a right-angled triangle, which is the ratio of the length of the side opposite the angle to the length of the hypotenuse. We also need to consider the properties of a 30-60-90 triangle, where the side lengths follow a specific ratio.",
+        "In a 30-60-90 triangle, the side lengths are in the ratio $1 : \\sqrt{3} : 2$, where the side opposite the $30^\\circ$ angle is $1$, the side opposite the $60^\\circ$ angle is $\\sqrt{3}$, and the hypotenuse is $2$. Using this ratio, we can determine that the sine of $60^\\circ$ is equal to the ratio of the side opposite the $60^\\circ$ angle to the hypotenuse, which is $\\frac{\\sqrt{3}}{2}$.",
+        "The next step is to confirm that the ratio $\\frac{\\sqrt{3}}{2}$ is indeed the value of $\\sin 60^\\circ$ by ensuring it matches the definition of sine in a right-angled triangle and the properties of a 30-60-90 triangle. Since it does, we can conclude that $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$. Therefore, the solution is $\\boxed{\\frac{\\sqrt{3}}{2}}$."
+    ],
+    "full_steps": [
+        [
+            "To compute $\\sin 60^\\circ$, we should recall the definition of sine in a right-angled triangle, which is the ratio of the length of the side opposite the angle to the length of the hypotenuse. We also need to consider the properties of a 30-60-90 triangle, where the side lengths follow a specific ratio.",
+            1
+        ],
+        [
+            "In a 30-60-90 triangle, the side lengths are in the ratio $1 : \\sqrt{3} : 2$, where the side opposite the $30^\\circ$ angle is $1$, the side opposite the $60^\\circ$ angle is $\\sqrt{3}$, and the hypotenuse is $2$. Using this ratio, we can determine that the sine of $60^\\circ$ is equal to the ratio of the side opposite the $60^\\circ$ angle to the hypotenuse, which is $\\frac{\\sqrt{3}}{2}$.",
+            1
+        ],
+        [
+            "The next step is to confirm that the ratio $\\frac{\\sqrt{3}}{2}$ is indeed the value of $\\sin 60^\\circ$ by ensuring it matches the definition of sine in a right-angled triangle and the properties of a 30-60-90 triangle. Since it does, we can conclude that $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$. Therefore, the solution is $\\boxed{\\frac{\\sqrt{3}}{2}}$.",
+            1
+        ]
+    ],
+    "time": 4.736989974975586,
+    "total_tokens": 1644,
+    "final_answer_tokens": 366,
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo"
+}

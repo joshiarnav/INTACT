@@ -1,0 +1,37 @@
+{
+    "problem": "How many positive real solutions are there to $x^{10}+7x^9+14x^8+1729x^7-1379x^6=0$?",
+    "level": "Level 3",
+    "type": "Intermediate Algebra",
+    "solution": "We can factor the equation as\n\\[x^6 (x^4 + 7x^3 + 14x^2 + 1729x - 1379) = 0.\\]Since we are looking for positive real solutions, this reduces to\n\\[x^4 + 7x^3 + 14x^2 + 1729x - 1379.\\]Consider the function $f(x) = x^4 + 7x^3 + 14x^2 + 1729x - 1379.$  This is increasing for $x > 0.$  Also, $f(0) < 0$ and $f(1) > 0,$ so there is exactly $\\boxed{1}$ positive real solution, which lies in the interval $(0,1).$",
+    "is_solved": false,
+    "model_solution": "To solve the given equation, we first try to factor out a common term. \n\nStep 1: Factor out x^6 from all terms in the equation.\n\n$x^6(x^4 + 7x^3 + 14x^2 + 1729x - 1379) = 0$",
+    "steps": [
+        "To solve the given equation, we first try to factor out a common term. \n\nStep 1: Factor out x^6 from all terms in the equation.\n\n$x^6(x^4 + 7x^3 + 14x^2 + 1729x - 1379) = 0$"
+    ],
+    "full_steps": [
+        [
+            "To find the number of positive real solutions, we can use Descartes' Rule of Signs.\n\nStep 1: Count the number of sign changes in the coefficients of the polynomial. \nIn the given equation, the coefficients are 1, 7, 14, 1729, -1379. There are 2 sign changes (from 1729 to -1379 is 3 sign changes, 1729 is positive, -1379 is negative).",
+            0
+        ],
+        [
+            "To solve the given equation, we first try to factor out a common term. \n\nStep 1: Factor out x^6 from all terms in the equation.\n\n$x^6(x^4 + 7x^3 + 14x^2 + 1729x - 1379) = 0$",
+            1
+        ],
+        [
+            "Since we factored out $x^6$, it must be that either $x^6 = 0$ or the expression inside the parentheses is equal to zero. \n\nStep 2: Solve for the first case: $x^6 = 0$. This has only 1 solution, which is $x = 0$. However, we are interested in positive real solutions.\n\nStep 3: Solve for the second case: $x^4 + 7x^3 + 14x^2 + 1729x - 1379 = 0$.",
+            0
+        ],
+        [
+            "Step 2: Identify and factor out any common terms within the polynomial $x^4 + 7x^3 + 14x^2 + 1729x - 1379$. \n\n$x^6(x^4 + 7x^3 + 14x^2 + 1729x - 1379) = 0$ can be rewritten as $x^6(x^3+7x^2+14x)(x+1729-\\frac{1379}{x^3}) = 0$",
+            0
+        ],
+        [
+            "Step 2: Since $x^6 = 0$ has one solution (x = 0), we examine the other factor $x^4 + 7x^3 + 14x^2 + 1729x - 1379$. \n\nNotice that this is not easily factorable, so we consider the possible rational roots using the Rational Root Theorem. \n\nHowever, since we are asked for the number of positive real solutions, we consider the behavior of this polynomial as x approaches infinity. \n\nAs x approaches infinity, the term $1729x$ dominates the polynomial, making it positive. Therefore, the polynomial crosses the x-axis at least once, and since it is of even degree, it crosses it an odd number of times. \n\nHowever, since the polynomial is of degree 4, it can have at most 4 real roots. \n\nTo determine the number of positive real solutions, we can use Descartes' Rule of Signs. \n\nThe polynomial $x^4 + 7x^3 + 14x^2 + 1729x - 1379$ has 1 sign change, so it has exactly 1 positive real root.",
+            0
+        ]
+    ],
+    "time": 20.79417610168457,
+    "total_tokens": 2815,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

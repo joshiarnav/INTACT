@@ -1,0 +1,52 @@
+{
+    "problem": "Compute $\\sin 60^\\circ$.",
+    "level": "Level 2",
+    "type": "Geometry",
+    "solution": "Let $P$ be the point on the unit circle that is $60^\\circ$ counterclockwise from $(1,0)$, and let $D$ be the foot of the altitude from $P$ to the $x$-axis, as shown below.\n\n[asy]\n\npair A,C,P,O,D;\n\ndraw((0,-1.2)--(0,1.2),p=black+1.2bp,Arrows(0.15cm));\n\ndraw((-1.2,0)--(1.2,0),p=black+1.2bp,Arrows(0.15cm));\n\nA = (1,0);\n\nO= (0,0);\n\nlabel(\"$x$\",(1.2,0),SE);\n\nlabel(\"$y$\",(0,1.2),NE);\n\nP = rotate(60)*A;\n\nD = foot(P,A,-A);\n\ndraw(O--P--D);\n\ndraw(rightanglemark(O,D,P,2));\n\ndraw(Circle(O,1));\n\nlabel(\"$O$\",O,SE);\n\nlabel(\"$P$\",P,NE);\n\n//label(\"$A$\",A,SE);\n\nlabel(\"$D$\",D,S);\n\n[/asy]\n\nTriangle $POD$ is a 30-60-90 triangle, so $DO = \\frac{1}{2}$ and $DP = \\frac{\\sqrt{3}}{2}$.  Therefore, the coordinates of $P$ are $\\left(\\frac{1}{2}, \\frac{\\sqrt{3}}{2}\\right)$, so $\\sin 60^\\circ = \\boxed{\\frac{\\sqrt{3}}{2}}$.",
+    "is_solved": true,
+    "stop_reason": "final_answer",
+    "model_solution": "Step 1: Recall the definitions of trigonometric ratios in a 30-60-90 right triangle. In such a triangle, the side opposite the 60\u00b0 angle is \u221a3 times the length of the shorter side (adjacent to the 30\u00b0 angle), and the hypotenuse is twice the length of the shorter side. This knowledge will be used to derive the sine of 60\u00b0.\nStep 2: Recall that sin(\u03b8) is defined as the ratio of the side opposite a given angle to the hypotenuse in a right triangle. Using this definition in a 30-60-90 triangle, sin(60\u00b0) is the ratio of the side opposite the 60\u00b0 angle (which is \u221a3 times the length of the shorter side) to the hypotenuse (which is twice the length of the shorter side).\nStep 3: Using the definitions of a 30-60-90 triangle, where the side opposite the 60\u00b0 angle is \u221a3 times the shorter side and the hypotenuse is twice the shorter side, calculate sin(60\u00b0) as (\u221a3 * shorter side) / (2 * shorter side).\nStep 4: Simplify the expression for sin(60\u00b0) by canceling out the 'shorter side' in the numerator and the denominator, leaving only (\u221a3) / 2.\nStep 5: The expression (\u221a3) / 2 is the exact value of sin(60\u00b0).\nStep 6: The exact value of $\\sin 60^\\circ$ is $\\frac{\\sqrt{3}}{2}$.\n$\\boxed{\\frac{\\sqrt{3}}{2}}$",
+    "steps": [
+        "Step 1: Recall the definitions of trigonometric ratios in a 30-60-90 right triangle. In such a triangle, the side opposite the 60\u00b0 angle is \u221a3 times the length of the shorter side (adjacent to the 30\u00b0 angle), and the hypotenuse is twice the length of the shorter side. This knowledge will be used to derive the sine of 60\u00b0.",
+        "Step 2: Recall that sin(\u03b8) is defined as the ratio of the side opposite a given angle to the hypotenuse in a right triangle. Using this definition in a 30-60-90 triangle, sin(60\u00b0) is the ratio of the side opposite the 60\u00b0 angle (which is \u221a3 times the length of the shorter side) to the hypotenuse (which is twice the length of the shorter side).",
+        "Step 3: Using the definitions of a 30-60-90 triangle, where the side opposite the 60\u00b0 angle is \u221a3 times the shorter side and the hypotenuse is twice the shorter side, calculate sin(60\u00b0) as (\u221a3 * shorter side) / (2 * shorter side).",
+        "Step 4: Simplify the expression for sin(60\u00b0) by canceling out the 'shorter side' in the numerator and the denominator, leaving only (\u221a3) / 2.",
+        "Step 5: The expression (\u221a3) / 2 is the exact value of sin(60\u00b0).",
+        "Step 6: The exact value of $\\sin 60^\\circ$ is $\\frac{\\sqrt{3}}{2}$.",
+        "$\\boxed{\\frac{\\sqrt{3}}{2}}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: Recall the definitions of trigonometric ratios in a 30-60-90 right triangle. In such a triangle, the side opposite the 60\u00b0 angle is \u221a3 times the length of the shorter side (adjacent to the 30\u00b0 angle), and the hypotenuse is twice the length of the shorter side. This knowledge will be used to derive the sine of 60\u00b0.",
+            1
+        ],
+        [
+            "Step 2: Recall that sin(\u03b8) is defined as the ratio of the side opposite a given angle to the hypotenuse in a right triangle. Using this definition in a 30-60-90 triangle, sin(60\u00b0) is the ratio of the side opposite the 60\u00b0 angle (which is \u221a3 times the length of the shorter side) to the hypotenuse (which is twice the length of the shorter side).",
+            1
+        ],
+        [
+            "Step 3: Using the definitions of a 30-60-90 triangle, where the side opposite the 60\u00b0 angle is \u221a3 times the shorter side and the hypotenuse is twice the shorter side, calculate sin(60\u00b0) as (\u221a3 * shorter side) / (2 * shorter side).",
+            1
+        ],
+        [
+            "Step 4: Simplify the expression for sin(60\u00b0) by canceling out the 'shorter side' in the numerator and the denominator, leaving only (\u221a3) / 2.",
+            1
+        ],
+        [
+            "Step 5: The expression (\u221a3) / 2 is the exact value of sin(60\u00b0).",
+            1
+        ],
+        [
+            "Step 6: The exact value of $\\sin 60^\\circ$ is $\\frac{\\sqrt{3}}{2}$.",
+            1
+        ],
+        [
+            "$\\boxed{\\frac{\\sqrt{3}}{2}}$",
+            1
+        ]
+    ],
+    "time": 14.583005905151367,
+    "total_tokens": 4744,
+    "final_answer_tokens": 413,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}
