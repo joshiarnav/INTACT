@@ -44,8 +44,8 @@ class RateLimiter:
                 self.last_update = current
 
 # Model configuration
-MODEL = "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
-# MODEL = "meta-llama/Llama-3.3-70B-Instruct-Turbo"
+# MODEL = "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+MODEL = "meta-llama/Llama-3.3-70B-Instruct-Turbo"
 thread_local = threading.local()
 
 # Initialize rate limiter with optimal rate (9.5-9.9 requests per second)

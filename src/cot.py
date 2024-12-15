@@ -12,7 +12,7 @@ from environment import ( #pylint: disable=import-error
     MODEL, get_client, RateLimiter, rate_limiter,
     check_existing_runs, all_problem_files
 )
-from solver import solve
+from solver import solver #pylint: disable=import-error
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')

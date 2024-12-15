@@ -24,7 +24,7 @@ def check_problems(filepaths):
 
             # Check if the part of the JSON marked "model_solution" contains the section in the part of the JSON marked "solution" within the $\\boxed{}$ section.
             data = json.load(f)
-            model_solution = data["model_solution"]
+            model_solution = data.get("model_solution", None)
             solution = data["solution"]
             total_tokens += data["total_tokens"]
 
