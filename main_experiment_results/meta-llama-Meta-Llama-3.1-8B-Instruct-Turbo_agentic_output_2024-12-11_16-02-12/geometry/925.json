@@ -1,0 +1,31 @@
+{
+    "problem": "Compute $\\cos 240^\\circ$.",
+    "level": "Level 3",
+    "type": "Geometry",
+    "solution": "Let $P$ be the point on the unit circle that is $240^\\circ$ counterclockwise from $(1,0)$, and let $D$ be the foot of the altitude from $P$ to the $x$-axis, as shown below.\n\n[asy]\n\npair A,C,P,O,D;\n\ndraw((0,-1.2)--(0,1.2),p=black+1.2bp,Arrows(0.15cm));\n\ndraw((-1.2,0)--(1.2,0),p=black+1.2bp,Arrows(0.15cm));\n\nA = (1,0);\n\nO= (0,0);\n\nlabel(\"$x$\",(1.2,0),SE);\n\nlabel(\"$y$\",(0,1.2),NE);\n\nP = rotate(240)*A;\n\nD = foot(P,A,-A);\n\ndraw(O--P--D);\n\ndraw(rightanglemark(O,D,P,2));\n\ndraw(Circle(O,1));\n\nlabel(\"$O$\",O,SE);\n\nlabel(\"$P$\",P,SW);\n\n//label(\"$A$\",A,SE);\n\nlabel(\"$D$\",D,N);\n\n[/asy]\n\nTriangle $POD$ is a 30-60-90 triangle, so $DO = \\frac{1}{2}$ and $DP = \\frac{\\sqrt{3}}{2}$.  Therefore, the coordinates of $P$ are $\\left(-\\frac12,-\\frac{\\sqrt{3}}{2}\\right)$, so $\\cos 240^\\circ = \\boxed{-\\frac{1}{2}}$.",
+    "is_solved": true,
+    "model_solution": "To compute $\\cos 240^\\circ$, we can use the unit circle or trigonometric identities. \n\nFirst step: Recall that $240^\\circ$ is in the third quadrant of the unit circle, where cosine values are negative.\n\nNow, we can either use the reference angle or the trigonometric identities. We'll use the reference angle. The reference angle for $240^\\circ$ is $60^\\circ$, because $240^\\circ$ is $180^\\circ + 60^\\circ$.\nTo find $\\cos 240^\\circ$, we first need to recall the cosine value of the reference angle, which is $60^\\circ$. Since $60^\\circ$ is in the first quadrant, the cosine value is positive. The cosine of $60^\\circ$ is $\\frac{\\sqrt{3}}{2}$.\n\nSince $240^\\circ$ is in the third quadrant, where cosine values are negative, the cosine of $240^\\circ$ will be the negative of the cosine of the reference angle. Therefore, we have:\n\n$\\cos 240^\\circ = -\\cos 60^\\circ = -\\frac{\\sqrt{3}}{2}$\nWe've already found the value of $\\cos 240^\\circ$ in the previous step.\n\n$\\cos 240^\\circ = -\\cos 60^\\circ = -\\frac{\\sqrt{3}}{2}$\n\n$\\boxed{-\\frac{\\sqrt{3}}{2}}$",
+    "steps": [
+        "To compute $\\cos 240^\\circ$, we can use the unit circle or trigonometric identities. \n\nFirst step: Recall that $240^\\circ$ is in the third quadrant of the unit circle, where cosine values are negative.\n\nNow, we can either use the reference angle or the trigonometric identities. We'll use the reference angle. The reference angle for $240^\\circ$ is $60^\\circ$, because $240^\\circ$ is $180^\\circ + 60^\\circ$.",
+        "To find $\\cos 240^\\circ$, we first need to recall the cosine value of the reference angle, which is $60^\\circ$. Since $60^\\circ$ is in the first quadrant, the cosine value is positive. The cosine of $60^\\circ$ is $\\frac{\\sqrt{3}}{2}$.\n\nSince $240^\\circ$ is in the third quadrant, where cosine values are negative, the cosine of $240^\\circ$ will be the negative of the cosine of the reference angle. Therefore, we have:\n\n$\\cos 240^\\circ = -\\cos 60^\\circ = -\\frac{\\sqrt{3}}{2}$",
+        "We've already found the value of $\\cos 240^\\circ$ in the previous step.\n\n$\\cos 240^\\circ = -\\cos 60^\\circ = -\\frac{\\sqrt{3}}{2}$\n\n$\\boxed{-\\frac{\\sqrt{3}}{2}}$"
+    ],
+    "full_steps": [
+        [
+            "To compute $\\cos 240^\\circ$, we can use the unit circle or trigonometric identities. \n\nFirst step: Recall that $240^\\circ$ is in the third quadrant of the unit circle, where cosine values are negative.\n\nNow, we can either use the reference angle or the trigonometric identities. We'll use the reference angle. The reference angle for $240^\\circ$ is $60^\\circ$, because $240^\\circ$ is $180^\\circ + 60^\\circ$.",
+            1
+        ],
+        [
+            "To find $\\cos 240^\\circ$, we first need to recall the cosine value of the reference angle, which is $60^\\circ$. Since $60^\\circ$ is in the first quadrant, the cosine value is positive. The cosine of $60^\\circ$ is $\\frac{\\sqrt{3}}{2}$.\n\nSince $240^\\circ$ is in the third quadrant, where cosine values are negative, the cosine of $240^\\circ$ will be the negative of the cosine of the reference angle. Therefore, we have:\n\n$\\cos 240^\\circ = -\\cos 60^\\circ = -\\frac{\\sqrt{3}}{2}$",
+            1
+        ],
+        [
+            "We've already found the value of $\\cos 240^\\circ$ in the previous step.\n\n$\\cos 240^\\circ = -\\cos 60^\\circ = -\\frac{\\sqrt{3}}{2}$\n\n$\\boxed{-\\frac{\\sqrt{3}}{2}}$",
+            1
+        ]
+    ],
+    "time": 7.650881767272949,
+    "total_tokens": 1797,
+    "final_answer_tokens": 369,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

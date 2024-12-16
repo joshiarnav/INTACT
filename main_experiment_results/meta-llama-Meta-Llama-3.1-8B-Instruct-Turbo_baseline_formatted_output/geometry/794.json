@@ -1,0 +1,8 @@
+{
+    "problem": "In triangle $ABC$, $\\angle C=90^\\circ$, $AC=6$ and $BC=8$. Points $D$ and $E$ are on $\\overline{AB}$ and $\\overline{BC}$, respectively, and $\\angle BED=90^\\circ$. If $DE=4$, then what is the length of $BD$? [asy]\nimport olympiad; import geometry; size(150); defaultpen(linewidth(0.8));\ndraw(origin--(6,0)--(6,8)--cycle);\ndraw((2,8/3)--(6,8/3));\ndot(\"$A$\",origin,SW); dot(\"$B$\",(6,8),NE); dot(\"$C$\",(6,0),SE); dot(\"$D$\",(2,8/3),W); dot(\"$E$\",(6,8/3),E);\ndraw(rightanglemark((6,8),(6,8/3),(2,8/3),12));\ndraw(rightanglemark((6,8),(6,0),(origin),12));\n[/asy]",
+    "solution": "Applying the Pythagorean Theorem to triangle $ABC$ gives $BA=10$. Since $\\triangle DBE\\sim\\triangle ABC$, $$\\frac{BD}{BA}=\\frac{DE}{AC}.\\qquad{\\rm So}\\qquad\nBD=\\frac{DE}{AC}(BA)=\\frac 46(10)=\\boxed{\\frac{20}{3}}.$$",
+    "total_tokens": 532,
+    "time_taken": 7.6318159103393555,
+    "file_name": "./MATH_subsample_uniform/geometry/794.json",
+    "model_solution": "By the Pythagorean Theorem, we can find the length of AB. AB = sqrt(AC^2 + BC^2) = sqrt(6^2 + 8^2) = sqrt(36 + 64) = sqrt(100) = 10.\n\nNow notice that triangles CDE and CAB are similar. We are given DE = 4 and AC = 6. So by the ratios of the sides of similar triangles, we can find the ratio of BD to BA.\n\nThe ratio of the corresponding side lengths of two similar triangles is equal. So (DE/AC) = (BD/BA). (4/6) = (BD/BA). \n\nSimplifying, we get (2/3) = (BD/10). \n\nNow to find BD, we can cross-multiply and solve for BD.\n\n2*10 = 3*BD\n20 = 3*BD\n\nNow to solve for BD, divide both sides by 3.\n\n20/3 = BD\n6.67 = BD\n\nHowever, the answer must be in the box format, so I will express the decimal as a fraction: 20/3\n\n\nSo the answer is: $\\boxed{20/3}$"
+}

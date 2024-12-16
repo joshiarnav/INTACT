@@ -1,0 +1,8 @@
+{
+    "problem": "What is the sum of all integer values $n$ for which $\\binom{20}{n}+\\binom{20}{10}=\\binom{21}{11}$?",
+    "solution": "From Pascal's identity $\\binom{n-1}{k-1}+\\binom{n-1}{k}=\\binom{n}{k}$.\n\nTherefore, we have $\\binom{20}{11}+\\binom{20}{10}=\\binom{21}{11}$, so $n=11$.\n\nWe know that $\\binom{21}{11}=\\binom{21}{21-11}=\\binom{21}{10}$.\n\nWe use Pascal's identity again to get $\\binom{20}{9}+\\binom{20}{10}=\\binom{21}{10}$, so $n=9$.\n\nThere are two values for $n$, $9$ and $11$, so the sum is $9+11=\\boxed{20}$.",
+    "total_tokens": 310,
+    "time_taken": 1.862267017364502,
+    "file_name": "./MATH_subsample_uniform/counting_and_probability/129.json",
+    "model_solution": "To solve this problem, we can use Pascal's identity: $\\binom{n}{k} + \\binom{n}{k-1} = \\binom{n+1}{k}.$\n\nGiven $\\binom{20}{n}+\\binom{20}{10}=\\binom{21}{11}$, we can rewrite it as $\\binom{20}{n} = \\binom{21}{11} - \\binom{20}{10}.$\n\nUsing Pascal's identity, we know that $\\binom{21}{11} = \\binom{20}{10} + \\binom{20}{11}$, so we can substitute this expression into our equation to get:\n\n$\\binom{20}{n} = \\binom{20}{11}.$\n\nThis equation is satisfied when $n = 9$ or $n = 11.$ Therefore, the sum of all integer values of $n$ that satisfy the equation is:\n\n$9 + 11 = 20$\n\nSo, the final answer is $\\boxed{20}$."
+}

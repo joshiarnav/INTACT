@@ -1,0 +1,66 @@
+{
+    "problem": "In a trapezoid $ABCD$ with $AB$ parallel to $CD$, the diagonals $AC$ and $BD$ intersect at $E$. If the area of triangle $ABE$ is 50 square units, and the area of triangle $ADE$ is 20 square units, what is the area of trapezoid $ABCD$?",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "[asy]\nsize(2.5inch);\npair A,B,C,D,E;\nA = (-3,4);\nB = (5,4);\nC = (4,0);\nD = (0,0);\nE = intersectionpoint(A--C, B--D);\ndraw(A--B--C--D--cycle); draw(A--C); draw(B--D);\nlabel(\"$A$\", A, NW); label(\"$B$\", B, NE); label(\"$C$\", C, SE); label(\"$D$\", D, SW); label(\"$E$\", E, N);\n[/asy] We will write the area of triangle $XYZ$ as $[XYZ].$  Since triangles $ADC$ and $BCD$ share a base and have the same altitude length to that base, they have the same area. Since $[BCD] = [ADC]$, we have $[BCE] + [CDE] = [ADE] + [CDE]$, so  $[BCE] = [ADE] = 20$.\n\nTo find the area of triangle $CDE$, we note that triangles $CDE$ and $ABE$ are similar, and the ratio of their sides is $DE/BE$. Triangles $ADE$ and $ABE$ share an altitude, so $DE/BE = [ADE]/[ABE] = 20/50 = 2/5$. Since the ratio of the areas of two similar triangles is the square of the ratio of their sides, $[CDE]/[ABE] = (DE/BE)^2 = 4/25$, and $[CDE] = (4/25)[ABE] = (4/25)(50) = 8$. Thus, the area of trapezoid $ABCD$ is $[ABE] + [ADE] + [BCE] + [CDE] = 50+20+20+8 = \\boxed{98}$.",
+    "is_solved": false,
+    "model_solution": "Since triangles $ABE$ and $ADE$ share a common base $AE$, we can set up a proportion to find the ratio of the areas of $ABE$ and $ADE$. The ratio of their areas is equal to the ratio of their heights, which are the segments $BE$ and $DE$.\nSince $\\frac{[ABE]}{[ADE]}=\\frac{BE}{DE}$, and we know that $\\frac{[ABE]}{[ADE]}=\\frac{50}{20}=\\frac{5}{2}$, we have $\\frac{BE}{DE}=\\frac{5}{2}$. This implies $DE=\\frac{2}{5}BE$. \n\nSince the ratio of the areas of triangles $BCE$ and $ADE$ is also $\\frac{BE}{DE}$, we have $\\frac{[BCE]}{[ADE]}=\\frac{5}{2}$, which means $[BCE]=\\frac{5}{2}[ADE]=50$.\nSince we know that $[BCE] = 50$, and the ratio of the areas of triangles $BCE$ and $ABE$ is also $\\frac{BE}{DE}$, we have $\\frac{[BCE]}{[ABE]}=\\frac{5}{2}$, which implies $\\frac{[BCE]}{[ABE]}=\\frac{5}{2}$. This implies $[BCE] = \\frac{5}{2}[ABE] = 125$. Then, $[ABCD] = [ABE] + [ADE] + [BCE] + [CDE]$.\nSince we know $[ABE] = 50$, $[ADE] = 20$, and $[BCE] = 125$, to find the area of trapezoid $ABCD$, we need to find $[CDE]$. Since triangles $BCE$ and $CDE$ share a common base $CE$ and have the same height, the ratio of their areas is equal to the ratio of their bases, which are $BE$ and $DE$. This implies $\\frac{[CDE]}{[BCE]}=\\frac{DE}{BE}$. Substituting $\\frac{DE}{BE}=\\frac{2}{5}$, we get $\\frac{[CDE]}{[BCE]}=\\frac{2}{5}$. Since $[BCE]=125$, we have $\\frac{[CDE]}{125}=\\frac{2}{5}$, which means $[CDE]=\\frac{2}{5}\\cdot125=50$.\nSince we know $[ABE] = 50$, $[ADE] = 20$, $[BCE] = 125$, and $[CDE] = 50$, to find the area of trapezoid $ABCD$, we need to find the height of the trapezoid. We can use the area formula for a trapezoid: $[ABCD] = \\frac{h}{2} \\cdot (AB + CD)$, where $h$ is the height. However, we don't have the values of $AB$ and $CD$. We also know that the ratio of the areas of triangles $ABE$ and $ADE$ is $\\frac{50}{20} = \\frac{5}{2}$, and the ratio of their bases is $\\frac{5}{2}$, which implies $\\frac{AB}{AD}=\\frac{5}{2}$, and also, the ratio of the areas of triangles $BCE$ and $CDE$ is $\\frac{125}{50} = \\frac{5}{2}$, and the ratio of their bases is $\\frac{5}{2}$, which implies $\\frac{BC}{CD\nSince we know the ratio of the areas of triangles $ABE$ and $ADE$ is $\\frac{5}{2}$, and the ratio of their bases is $\\frac{5}{2}$, which implies $\\frac{AB}{AD}=\\frac{5}{2}$, this means $AD=\\frac{2}{5}AB$. Since triangles $ABE$ and $CDE$ are similar (they share the same base, and their heights are parallel), their areas are equal, so $[ABE]=[CDE]=50$. Using the fact that $[ABCD] = [ABE] + [ADE] + [BCE] + [CDE]$, we can find the area of trapezoid $ABCD$.\n\nSince $[ABE] = 50$, $[ADE] = 20$, $[BCE] = 125$, and $[CDE] = 50$, we have:\n$[ABCD] = 50 + 20 + 125 + 50 = 245$\nSince $[ABE] = 50$, $[ADE] = 20$, $[BCE] = 125$, and $[CDE] = 50$, we have $[ABCD] = [ABE] + [ADE] + [BCE] + [CDE]$.\nSince we know $[ABE] = 50$, $[ADE] = 20$, $[BCE] = 125$, and $[CDE] = 50$, we have \n$[ABCD]=$ $[ABE] + [ADE] + [BCE] + [CDE]$.\nSince we know $[ABE] = 50$, $[ADE] = 20$, $[BCE] = 125$, and $[CDE] = 50$, we have \n$[ABCD] = [ABE] + [ADE] + [BCE] + [CDE]$. We can now calculate the area of the trapezoid by adding the areas of the four triangles.\nSince $[ABE] = 50$, $[ADE] = 20$, $[BCE] = 125$, and $[CDE] = 50$, we have \n$[ABCD] = 50 + 20 + 125 + 50 = 245$.",
+    "steps": [
+        "Since triangles $ABE$ and $ADE$ share a common base $AE$, we can set up a proportion to find the ratio of the areas of $ABE$ and $ADE$. The ratio of their areas is equal to the ratio of their heights, which are the segments $BE$ and $DE$.",
+        "Since $\\frac{[ABE]}{[ADE]}=\\frac{BE}{DE}$, and we know that $\\frac{[ABE]}{[ADE]}=\\frac{50}{20}=\\frac{5}{2}$, we have $\\frac{BE}{DE}=\\frac{5}{2}$. This implies $DE=\\frac{2}{5}BE$. \n\nSince the ratio of the areas of triangles $BCE$ and $ADE$ is also $\\frac{BE}{DE}$, we have $\\frac{[BCE]}{[ADE]}=\\frac{5}{2}$, which means $[BCE]=\\frac{5}{2}[ADE]=50$.",
+        "Since we know that $[BCE] = 50$, and the ratio of the areas of triangles $BCE$ and $ABE$ is also $\\frac{BE}{DE}$, we have $\\frac{[BCE]}{[ABE]}=\\frac{5}{2}$, which implies $\\frac{[BCE]}{[ABE]}=\\frac{5}{2}$. This implies $[BCE] = \\frac{5}{2}[ABE] = 125$. Then, $[ABCD] = [ABE] + [ADE] + [BCE] + [CDE]$.",
+        "Since we know $[ABE] = 50$, $[ADE] = 20$, and $[BCE] = 125$, to find the area of trapezoid $ABCD$, we need to find $[CDE]$. Since triangles $BCE$ and $CDE$ share a common base $CE$ and have the same height, the ratio of their areas is equal to the ratio of their bases, which are $BE$ and $DE$. This implies $\\frac{[CDE]}{[BCE]}=\\frac{DE}{BE}$. Substituting $\\frac{DE}{BE}=\\frac{2}{5}$, we get $\\frac{[CDE]}{[BCE]}=\\frac{2}{5}$. Since $[BCE]=125$, we have $\\frac{[CDE]}{125}=\\frac{2}{5}$, which means $[CDE]=\\frac{2}{5}\\cdot125=50$.",
+        "Since we know $[ABE] = 50$, $[ADE] = 20$, $[BCE] = 125$, and $[CDE] = 50$, to find the area of trapezoid $ABCD$, we need to find the height of the trapezoid. We can use the area formula for a trapezoid: $[ABCD] = \\frac{h}{2} \\cdot (AB + CD)$, where $h$ is the height. However, we don't have the values of $AB$ and $CD$. We also know that the ratio of the areas of triangles $ABE$ and $ADE$ is $\\frac{50}{20} = \\frac{5}{2}$, and the ratio of their bases is $\\frac{5}{2}$, which implies $\\frac{AB}{AD}=\\frac{5}{2}$, and also, the ratio of the areas of triangles $BCE$ and $CDE$ is $\\frac{125}{50} = \\frac{5}{2}$, and the ratio of their bases is $\\frac{5}{2}$, which implies $\\frac{BC}{CD",
+        "Since we know the ratio of the areas of triangles $ABE$ and $ADE$ is $\\frac{5}{2}$, and the ratio of their bases is $\\frac{5}{2}$, which implies $\\frac{AB}{AD}=\\frac{5}{2}$, this means $AD=\\frac{2}{5}AB$. Since triangles $ABE$ and $CDE$ are similar (they share the same base, and their heights are parallel), their areas are equal, so $[ABE]=[CDE]=50$. Using the fact that $[ABCD] = [ABE] + [ADE] + [BCE] + [CDE]$, we can find the area of trapezoid $ABCD$.\n\nSince $[ABE] = 50$, $[ADE] = 20$, $[BCE] = 125$, and $[CDE] = 50$, we have:\n$[ABCD] = 50 + 20 + 125 + 50 = 245$",
+        "Since $[ABE] = 50$, $[ADE] = 20$, $[BCE] = 125$, and $[CDE] = 50$, we have $[ABCD] = [ABE] + [ADE] + [BCE] + [CDE]$.",
+        "Since we know $[ABE] = 50$, $[ADE] = 20$, $[BCE] = 125$, and $[CDE] = 50$, we have \n$[ABCD]=$ $[ABE] + [ADE] + [BCE] + [CDE]$.",
+        "Since we know $[ABE] = 50$, $[ADE] = 20$, $[BCE] = 125$, and $[CDE] = 50$, we have \n$[ABCD] = [ABE] + [ADE] + [BCE] + [CDE]$. We can now calculate the area of the trapezoid by adding the areas of the four triangles.",
+        "Since $[ABE] = 50$, $[ADE] = 20$, $[BCE] = 125$, and $[CDE] = 50$, we have \n$[ABCD] = 50 + 20 + 125 + 50 = 245$."
+    ],
+    "full_steps": [
+        [
+            "Since triangles $ABE$ and $ADE$ share a common base $AE$, we can set up a proportion to find the ratio of the areas of $ABE$ and $ADE$. The ratio of their areas is equal to the ratio of their heights, which are the segments $BE$ and $DE$.",
+            1
+        ],
+        [
+            "Since $\\frac{[ABE]}{[ADE]}=\\frac{BE}{DE}$, and we know that $\\frac{[ABE]}{[ADE]}=\\frac{50}{20}=\\frac{5}{2}$, we have $\\frac{BE}{DE}=\\frac{5}{2}$. This implies $DE=\\frac{2}{5}BE$. \n\nSince the ratio of the areas of triangles $BCE$ and $ADE$ is also $\\frac{BE}{DE}$, we have $\\frac{[BCE]}{[ADE]}=\\frac{5}{2}$, which means $[BCE]=\\frac{5}{2}[ADE]=50$.",
+            1
+        ],
+        [
+            "Since we know that $[BCE] = 50$, and the ratio of the areas of triangles $BCE$ and $ABE$ is also $\\frac{BE}{DE}$, we have $\\frac{[BCE]}{[ABE]}=\\frac{5}{2}$, which implies $\\frac{[BCE]}{[ABE]}=\\frac{5}{2}$. This implies $[BCE] = \\frac{5}{2}[ABE] = 125$. Then, $[ABCD] = [ABE] + [ADE] + [BCE] + [CDE]$.",
+            1
+        ],
+        [
+            "Since we know $[ABE] = 50$, $[ADE] = 20$, and $[BCE] = 125$, to find the area of trapezoid $ABCD$, we need to find $[CDE]$. Since triangles $BCE$ and $CDE$ share a common base $CE$ and have the same height, the ratio of their areas is equal to the ratio of their bases, which are $BE$ and $DE$. This implies $\\frac{[CDE]}{[BCE]}=\\frac{DE}{BE}$. Substituting $\\frac{DE}{BE}=\\frac{2}{5}$, we get $\\frac{[CDE]}{[BCE]}=\\frac{2}{5}$. Since $[BCE]=125$, we have $\\frac{[CDE]}{125}=\\frac{2}{5}$, which means $[CDE]=\\frac{2}{5}\\cdot125=50$.",
+            1
+        ],
+        [
+            "Since we know $[ABE] = 50$, $[ADE] = 20$, $[BCE] = 125$, and $[CDE] = 50$, to find the area of trapezoid $ABCD$, we need to find the height of the trapezoid. We can use the area formula for a trapezoid: $[ABCD] = \\frac{h}{2} \\cdot (AB + CD)$, where $h$ is the height. However, we don't have the values of $AB$ and $CD$. We also know that the ratio of the areas of triangles $ABE$ and $ADE$ is $\\frac{50}{20} = \\frac{5}{2}$, and the ratio of their bases is $\\frac{5}{2}$, which implies $\\frac{AB}{AD}=\\frac{5}{2}$, and also, the ratio of the areas of triangles $BCE$ and $CDE$ is $\\frac{125}{50} = \\frac{5}{2}$, and the ratio of their bases is $\\frac{5}{2}$, which implies $\\frac{BC}{CD",
+            1
+        ],
+        [
+            "Since we know the ratio of the areas of triangles $ABE$ and $ADE$ is $\\frac{5}{2}$, and the ratio of their bases is $\\frac{5}{2}$, which implies $\\frac{AB}{AD}=\\frac{5}{2}$, this means $AD=\\frac{2}{5}AB$. Since triangles $ABE$ and $CDE$ are similar (they share the same base, and their heights are parallel), their areas are equal, so $[ABE]=[CDE]=50$. Using the fact that $[ABCD] = [ABE] + [ADE] + [BCE] + [CDE]$, we can find the area of trapezoid $ABCD$.\n\nSince $[ABE] = 50$, $[ADE] = 20$, $[BCE] = 125$, and $[CDE] = 50$, we have:\n$[ABCD] = 50 + 20 + 125 + 50 = 245$",
+            1
+        ],
+        [
+            "Since $[ABE] = 50$, $[ADE] = 20$, $[BCE] = 125$, and $[CDE] = 50$, we have $[ABCD] = [ABE] + [ADE] + [BCE] + [CDE]$.",
+            1
+        ],
+        [
+            "Since we know $[ABE] = 50$, $[ADE] = 20$, $[BCE] = 125$, and $[CDE] = 50$, we have \n$[ABCD]=$ $[ABE] + [ADE] + [BCE] + [CDE]$.",
+            1
+        ],
+        [
+            "Since we know $[ABE] = 50$, $[ADE] = 20$, $[BCE] = 125$, and $[CDE] = 50$, we have \n$[ABCD] = [ABE] + [ADE] + [BCE] + [CDE]$. We can now calculate the area of the trapezoid by adding the areas of the four triangles.",
+            1
+        ],
+        [
+            "Since $[ABE] = 50$, $[ADE] = 20$, $[BCE] = 125$, and $[CDE] = 50$, we have \n$[ABCD] = 50 + 20 + 125 + 50 = 245$.",
+            1
+        ]
+    ],
+    "time": 52.17982006072998,
+    "total_tokens": 18836,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

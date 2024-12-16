@@ -1,0 +1,41 @@
+{
+    "problem": "How many three-digit numbers are multiples of neither 5 nor 7?",
+    "level": "Level 5",
+    "type": "Counting & Probability",
+    "solution": "It's easy to count the number of three-digit numbers which are multiples of 5 or 7: the smallest multiple of 7 which is a three-digit number is $15 \\times 7 = 105$, and the largest multiple of 7 that is a three-digit number is $142 \\times 7 = 994$.  Therefore, there are $142-15+1 = 128$ three-digit numbers that are multiples of 7.  The smallest multiple of 5 that is a three-digit number is $20\\times 5 = 100$, and the largest multiple of 5 that is a three digit number is $199\\times 5 =995$. So there are $199-20+1=180$ multiples of 5.\n\nNow notice that we have counted some numbers twice: those multiples of $5\\times7=35$. The smallest multiple of 35 is $3\\times 35 = 105$, the largest multiple of 35 is $28\\times35 =980$. So there are $28-3+1=26$ multiples of 35.\n\nWe have 128 multiples of 7 and 180 multiples of 5, but we count 26 multiples twice.  So, there are a total of $128+180-26 = 282$ distinct three-digit numbers that are multiples of 5 or 7 (or both).   There are 900 three-digit numbers in total (from 100 to 999), so there are $900-282=\\boxed{618}$ three-digit numbers that are not multiples of 7 nor 5.",
+    "is_solved": true,
+    "model_solution": "To solve this problem, we'll first find the total number of three-digit numbers.\n\nStep 1: Determine the range of three-digit numbers.\nThe smallest three-digit number is 100 and the largest is 999.\nStep 2: Calculate the total number of three-digit numbers.\nThere are 999 - 100 + 1 = 900 three-digit numbers.\nStep 3: Find the number of three-digit numbers that are multiples of 5 or 7. First, find the number of multiples of 5 and 7 separately, then subtract the overlap (numbers that are multiples of both) to avoid double-counting. \n\nWe'll start with multiples of 5: The smallest three-digit multiple of 5 is 100 and the largest is 995. \nThe number of multiples of 5 can be found by (995 - 100) / 5 + 1 = 180.\nStep 4: Find the number of multiples of 7.\nThe smallest three-digit multiple of 7 is 105 and the largest is 994.\nThe number of multiples of 7 can be found by (994 - 105) / 7 + 1 = 128.\n\nHowever, there are also multiples of 35 that need to be subtracted to avoid double-counting. \nThe smallest three-digit multiple of 35 is 105 and the largest is 980.\nThe number of multiples of 35 can be found by (980 - 105) / 35 + 1 = 26.\n\nWe then subtract the multiples of 5, multiples of 7, and add back the multiples of 35 from the total number of three-digit numbers to find the final answer. The calculation is 900 - 180 - 128 + 26.\nStep 5: Perform the subtraction to find the number of three-digit numbers that are multiples of neither 5 nor 7.\n900 - 180 - 128 + 26 = 618\n\n$\\boxed{618}$",
+    "steps": [
+        "To solve this problem, we'll first find the total number of three-digit numbers.\n\nStep 1: Determine the range of three-digit numbers.\nThe smallest three-digit number is 100 and the largest is 999.",
+        "Step 2: Calculate the total number of three-digit numbers.\nThere are 999 - 100 + 1 = 900 three-digit numbers.",
+        "Step 3: Find the number of three-digit numbers that are multiples of 5 or 7. First, find the number of multiples of 5 and 7 separately, then subtract the overlap (numbers that are multiples of both) to avoid double-counting. \n\nWe'll start with multiples of 5: The smallest three-digit multiple of 5 is 100 and the largest is 995. \nThe number of multiples of 5 can be found by (995 - 100) / 5 + 1 = 180.",
+        "Step 4: Find the number of multiples of 7.\nThe smallest three-digit multiple of 7 is 105 and the largest is 994.\nThe number of multiples of 7 can be found by (994 - 105) / 7 + 1 = 128.\n\nHowever, there are also multiples of 35 that need to be subtracted to avoid double-counting. \nThe smallest three-digit multiple of 35 is 105 and the largest is 980.\nThe number of multiples of 35 can be found by (980 - 105) / 35 + 1 = 26.\n\nWe then subtract the multiples of 5, multiples of 7, and add back the multiples of 35 from the total number of three-digit numbers to find the final answer. The calculation is 900 - 180 - 128 + 26.",
+        "Step 5: Perform the subtraction to find the number of three-digit numbers that are multiples of neither 5 nor 7.\n900 - 180 - 128 + 26 = 618\n\n$\\boxed{618}$"
+    ],
+    "full_steps": [
+        [
+            "To solve this problem, we'll first find the total number of three-digit numbers.\n\nStep 1: Determine the range of three-digit numbers.\nThe smallest three-digit number is 100 and the largest is 999.",
+            1
+        ],
+        [
+            "Step 2: Calculate the total number of three-digit numbers.\nThere are 999 - 100 + 1 = 900 three-digit numbers.",
+            1
+        ],
+        [
+            "Step 3: Find the number of three-digit numbers that are multiples of 5 or 7. First, find the number of multiples of 5 and 7 separately, then subtract the overlap (numbers that are multiples of both) to avoid double-counting. \n\nWe'll start with multiples of 5: The smallest three-digit multiple of 5 is 100 and the largest is 995. \nThe number of multiples of 5 can be found by (995 - 100) / 5 + 1 = 180.",
+            1
+        ],
+        [
+            "Step 4: Find the number of multiples of 7.\nThe smallest three-digit multiple of 7 is 105 and the largest is 994.\nThe number of multiples of 7 can be found by (994 - 105) / 7 + 1 = 128.\n\nHowever, there are also multiples of 35 that need to be subtracted to avoid double-counting. \nThe smallest three-digit multiple of 35 is 105 and the largest is 980.\nThe number of multiples of 35 can be found by (980 - 105) / 35 + 1 = 26.\n\nWe then subtract the multiples of 5, multiples of 7, and add back the multiples of 35 from the total number of three-digit numbers to find the final answer. The calculation is 900 - 180 - 128 + 26.",
+            1
+        ],
+        [
+            "Step 5: Perform the subtraction to find the number of three-digit numbers that are multiples of neither 5 nor 7.\n900 - 180 - 128 + 26 = 618\n\n$\\boxed{618}$",
+            1
+        ]
+    ],
+    "time": 91.12011408805847,
+    "total_tokens": 3115,
+    "final_answer_tokens": 493,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

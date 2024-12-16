@@ -1,0 +1,8 @@
+{
+    "problem": "Alex has 12 friends and 63 coins. What is the minimum number of additional coins he needs so that he can give each friend at least one coin and no two friends receive the same number of coins?",
+    "solution": "Alex wants to minimize the number of coins he gives to his friends without giving any two of them the same number of coins. The minimum number of coins he can give to a friend is 1. He then gives 2 coins to another friend, then 3 to another, then 4, and so on, until the last friend receives 12. The total number of coins Alex has given away is $1+2+3+\\cdots+12 = \\frac{12 \\cdot 13}{2}=78$.  Thus, Alex needs $78-63=\\boxed{15}$ more coins.",
+    "total_tokens": 349,
+    "time_taken": 1.836197853088379,
+    "file_name": "./MATH_subsample_uniform/algebra/770.json",
+    "model_solution": "To find the minimum number of additional coins Alex needs, we need to find the total number of coins required to distribute them uniquely to each friend.\n\nThe first friend gets 1 coin, the second friend gets 2 coins, the third friend gets 3 coins, and so on until the 12th friend gets 12 coins. \n\nWe can find the total number of coins required by using the formula for the sum of an arithmetic series:\nTotal coins = (n * (a1 + an)) / 2\nwhere n is the number of terms (in this case, 12 friends), a1 is the first term (1 coin), and an is the last term (12 coins).\n\nPlugging in the values, we get:\nTotal coins = (12 * (1 + 12)) / 2\n= (12 * 13) / 2\n= 156 / 2\n= 78 coins\n\nSince Alex already has 63 coins, we subtract this from the total number of coins required to find the minimum number of additional coins he needs:\nAdditional coins needed = Total coins - Coins Alex has\n= 78 - 63\n= 15\n\nSo, the answer is: $\\boxed{15}$"
+}

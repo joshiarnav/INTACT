@@ -1,0 +1,46 @@
+{
+    "problem": "If the angle between the vectors $\\mathbf{a}$ and $\\mathbf{b}$ is $43^\\circ,$ what is the angle between the vectors $-\\mathbf{a}$ and $\\mathbf{b}$?",
+    "level": "Level 1",
+    "type": "Precalculus",
+    "solution": "Since $\\mathbf{a}$ and $-\\mathbf{a}$ point in opposite directions, the angle between them is $180^\\circ.$  Then the angle between $-\\mathbf{a}$ and $\\mathbf{b}$ is $180^\\circ - 43^\\circ = \\boxed{137^\\circ}.$\n\n[asy]\nunitsize(2 cm);\n\npair A, B, O;\n\nA = 2*dir(12);\nB = dir(12 + 43);\nO = (0,0);\n\ndraw(O--A,red,Arrow(6));\ndraw(O--B,red,Arrow(6));\ndraw(O--(-A),red,Arrow(6));\n\nlabel(\"$\\mathbf{a}$\", (O + A)/2, S);\nlabel(\"$\\mathbf{b}$\", (O + B)/2, NW);\nlabel(\"$-\\mathbf{a}$\", (O + (-A))/2, S);\nlabel(\"$43^\\circ$\", (0.4,0.25));\nlabel(\"$137^\\circ$\", (-0.15,0.15));\n[/asy]",
+    "is_solved": true,
+    "model_solution": "First step: Recall that the angle between two vectors is determined by the dot product formula: $\\mathbf{a} \\cdot \\mathbf{b} = |\\mathbf{a}| |\\mathbf{b}| \\cos\\theta$, where $\\theta$ is the angle between the vectors. \n\nHowever, in this case, we are dealing with $-\\mathbf{a}$ instead of $\\mathbf{a}$. To find the angle between the vectors $-\\mathbf{a}$ and $\\mathbf{b}$, we will use the fact that the dot product of two vectors is symmetric, i.e., $\\mathbf{a} \\cdot \\mathbf{b} = -(-\\mathbf{a}) \\cdot \\mathbf{b}$.\n\nWe will start by finding the angle between $\\mathbf{a}$ and $\\mathbf{b}$ using the given information: $\\cos\\theta = \\frac{\\mathbf{a} \\cdot \\mathbf{b}}{|\\mathbf{a}| |\\mathbf{b}|}$ where $\\theta = 43^\\circ$.\nSecond step: Since we know that $\\cos\\theta = \\cos(180^\\circ - \\theta)$ for any angle $\\theta$, we can find the cosine of the angle between $-\\mathbf{a}$ and $\\mathbf{b}$ by using the fact that the cosine of the angle between $-\\mathbf{a}$ and $\\mathbf{b}$ is the negative of the cosine of the angle between $\\mathbf{a}$ and $\\mathbf{b}$.\nThird step: Since $\\cos\\theta = \\cos(180^\\circ - \\theta)$ for any angle $\\theta$, it follows that $\\cos\\theta = -\\cos\\theta$ for $\\theta = 43^\\circ$. This means that the cosine of the angle between $-\\mathbf{a}$ and $\\mathbf{b}$ is the negative of the cosine of the angle between $\\mathbf{a}$ and $\\mathbf{b}$. Therefore, $\\cos\\phi = -\\cos43^\\circ$ where $\\phi$ is the angle between $-\\mathbf{a}$ and $\\mathbf{b}$.\nFourth step: To find the angle $\\phi$ between the vectors $-\\mathbf{a}$ and $\\mathbf{b}$, we need to find the arccosine (inverse cosine) of $-\\cos43^\\circ$. This is because the cosine of an angle is the ratio of the adjacent side to the hypotenuse in a right triangle, and the cosine function is negative in the second and third quadrants where the angle between the vectors $-\\mathbf{a}$ and $\\mathbf{b}$ lies.\nFifth step: To find the angle $\\phi$, we use the fact that the cosine function is positive in the first quadrant. Since the cosine of an angle in the second quadrant is positive, the angle between the vectors $-\\mathbf{a}$ and $\\mathbf{b}$ is the supplement of the angle between the vectors $\\mathbf{a}$ and $-\\mathbf{b}$. Therefore, $\\phi = 180^\\circ - \\theta = 180^\\circ - 43^\\circ = 137^\\circ$.\nSince we found $\\phi = 180^\\circ - 43^\\circ = 137^\\circ$ in the previous step, we have completed the solution. \n\n$\\boxed{137}$",
+    "steps": [
+        "First step: Recall that the angle between two vectors is determined by the dot product formula: $\\mathbf{a} \\cdot \\mathbf{b} = |\\mathbf{a}| |\\mathbf{b}| \\cos\\theta$, where $\\theta$ is the angle between the vectors. \n\nHowever, in this case, we are dealing with $-\\mathbf{a}$ instead of $\\mathbf{a}$. To find the angle between the vectors $-\\mathbf{a}$ and $\\mathbf{b}$, we will use the fact that the dot product of two vectors is symmetric, i.e., $\\mathbf{a} \\cdot \\mathbf{b} = -(-\\mathbf{a}) \\cdot \\mathbf{b}$.\n\nWe will start by finding the angle between $\\mathbf{a}$ and $\\mathbf{b}$ using the given information: $\\cos\\theta = \\frac{\\mathbf{a} \\cdot \\mathbf{b}}{|\\mathbf{a}| |\\mathbf{b}|}$ where $\\theta = 43^\\circ$.",
+        "Second step: Since we know that $\\cos\\theta = \\cos(180^\\circ - \\theta)$ for any angle $\\theta$, we can find the cosine of the angle between $-\\mathbf{a}$ and $\\mathbf{b}$ by using the fact that the cosine of the angle between $-\\mathbf{a}$ and $\\mathbf{b}$ is the negative of the cosine of the angle between $\\mathbf{a}$ and $\\mathbf{b}$.",
+        "Third step: Since $\\cos\\theta = \\cos(180^\\circ - \\theta)$ for any angle $\\theta$, it follows that $\\cos\\theta = -\\cos\\theta$ for $\\theta = 43^\\circ$. This means that the cosine of the angle between $-\\mathbf{a}$ and $\\mathbf{b}$ is the negative of the cosine of the angle between $\\mathbf{a}$ and $\\mathbf{b}$. Therefore, $\\cos\\phi = -\\cos43^\\circ$ where $\\phi$ is the angle between $-\\mathbf{a}$ and $\\mathbf{b}$.",
+        "Fourth step: To find the angle $\\phi$ between the vectors $-\\mathbf{a}$ and $\\mathbf{b}$, we need to find the arccosine (inverse cosine) of $-\\cos43^\\circ$. This is because the cosine of an angle is the ratio of the adjacent side to the hypotenuse in a right triangle, and the cosine function is negative in the second and third quadrants where the angle between the vectors $-\\mathbf{a}$ and $\\mathbf{b}$ lies.",
+        "Fifth step: To find the angle $\\phi$, we use the fact that the cosine function is positive in the first quadrant. Since the cosine of an angle in the second quadrant is positive, the angle between the vectors $-\\mathbf{a}$ and $\\mathbf{b}$ is the supplement of the angle between the vectors $\\mathbf{a}$ and $-\\mathbf{b}$. Therefore, $\\phi = 180^\\circ - \\theta = 180^\\circ - 43^\\circ = 137^\\circ$.",
+        "Since we found $\\phi = 180^\\circ - 43^\\circ = 137^\\circ$ in the previous step, we have completed the solution. \n\n$\\boxed{137}$"
+    ],
+    "full_steps": [
+        [
+            "First step: Recall that the angle between two vectors is determined by the dot product formula: $\\mathbf{a} \\cdot \\mathbf{b} = |\\mathbf{a}| |\\mathbf{b}| \\cos\\theta$, where $\\theta$ is the angle between the vectors. \n\nHowever, in this case, we are dealing with $-\\mathbf{a}$ instead of $\\mathbf{a}$. To find the angle between the vectors $-\\mathbf{a}$ and $\\mathbf{b}$, we will use the fact that the dot product of two vectors is symmetric, i.e., $\\mathbf{a} \\cdot \\mathbf{b} = -(-\\mathbf{a}) \\cdot \\mathbf{b}$.\n\nWe will start by finding the angle between $\\mathbf{a}$ and $\\mathbf{b}$ using the given information: $\\cos\\theta = \\frac{\\mathbf{a} \\cdot \\mathbf{b}}{|\\mathbf{a}| |\\mathbf{b}|}$ where $\\theta = 43^\\circ$.",
+            1
+        ],
+        [
+            "Second step: Since we know that $\\cos\\theta = \\cos(180^\\circ - \\theta)$ for any angle $\\theta$, we can find the cosine of the angle between $-\\mathbf{a}$ and $\\mathbf{b}$ by using the fact that the cosine of the angle between $-\\mathbf{a}$ and $\\mathbf{b}$ is the negative of the cosine of the angle between $\\mathbf{a}$ and $\\mathbf{b}$.",
+            1
+        ],
+        [
+            "Third step: Since $\\cos\\theta = \\cos(180^\\circ - \\theta)$ for any angle $\\theta$, it follows that $\\cos\\theta = -\\cos\\theta$ for $\\theta = 43^\\circ$. This means that the cosine of the angle between $-\\mathbf{a}$ and $\\mathbf{b}$ is the negative of the cosine of the angle between $\\mathbf{a}$ and $\\mathbf{b}$. Therefore, $\\cos\\phi = -\\cos43^\\circ$ where $\\phi$ is the angle between $-\\mathbf{a}$ and $\\mathbf{b}$.",
+            1
+        ],
+        [
+            "Fourth step: To find the angle $\\phi$ between the vectors $-\\mathbf{a}$ and $\\mathbf{b}$, we need to find the arccosine (inverse cosine) of $-\\cos43^\\circ$. This is because the cosine of an angle is the ratio of the adjacent side to the hypotenuse in a right triangle, and the cosine function is negative in the second and third quadrants where the angle between the vectors $-\\mathbf{a}$ and $\\mathbf{b}$ lies.",
+            1
+        ],
+        [
+            "Fifth step: To find the angle $\\phi$, we use the fact that the cosine function is positive in the first quadrant. Since the cosine of an angle in the second quadrant is positive, the angle between the vectors $-\\mathbf{a}$ and $\\mathbf{b}$ is the supplement of the angle between the vectors $\\mathbf{a}$ and $-\\mathbf{b}$. Therefore, $\\phi = 180^\\circ - \\theta = 180^\\circ - 43^\\circ = 137^\\circ$.",
+            1
+        ],
+        [
+            "Since we found $\\phi = 180^\\circ - 43^\\circ = 137^\\circ$ in the previous step, we have completed the solution. \n\n$\\boxed{137}$",
+            1
+        ]
+    ],
+    "time": 30.243908166885376,
+    "total_tokens": 7573,
+    "final_answer_tokens": 841,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

@@ -1,0 +1,8 @@
+{
+    "problem": "What is the least number of colors needed to shade the tessellation shown, such that no two tiles sharing a side are the same color?\n\n[asy]\ndraw((-8,-2)--(8,-2));\ndraw((-8,2)--(8,2));\ndraw((-8,6)--(8,6));\ndraw((-8,10)--(8,10));\ndraw((-8,14)--(8,14));\npath a=(-8,14)--(-6.5,12)--(-10,8)--(-6.5,4)--(-10,0)--(-8,-2);\ndraw(a);\ndraw(shift((4,0))*a);\ndraw(shift((8,0))*a);\ndraw(shift((12,0))*a);\ndraw(shift((16,0))*a);\n[/asy]",
+    "solution": "Clearly one color isn't enough; $\\boxed{2}$ colors will work because the tessellation shown is topologically identical to a chessboard (that is, imagine straightening out the diagonal lines to form an array of squares. This process doesn't change which tiles share a side.).",
+    "total_tokens": 361,
+    "time_taken": 2.0326662063598633,
+    "file_name": "./MATH_subsample_uniform/counting_and_probability/888.json",
+    "model_solution": "To find the least number of colors needed to shade the tessellation, we can consider it as a graph where each tile is a vertex, and two vertices share an edge if the corresponding tiles share a side.\n\n1. Start with the leftmost tile. Color it red.\n2. Consider the tiles directly adjacent to the leftmost tile. These tiles share a side with the leftmost tile and must be colored differently. Color them blue.\n3. Now look at the tiles adjacent to the blue tiles. These tiles share a side with the blue tiles and must be colored differently. Color them red (since the blue tiles are red).\n4. Repeat step 3 with the red tiles from step 1. The tiles adjacent to these red tiles must be colored blue."
+}

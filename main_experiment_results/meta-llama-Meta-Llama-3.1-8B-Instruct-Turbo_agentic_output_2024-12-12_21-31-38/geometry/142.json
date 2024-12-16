@@ -1,0 +1,66 @@
+{
+    "problem": "Compute $\\sin 60^\\circ$.",
+    "level": "Level 2",
+    "type": "Geometry",
+    "solution": "Let $P$ be the point on the unit circle that is $60^\\circ$ counterclockwise from $(1,0)$, and let $D$ be the foot of the altitude from $P$ to the $x$-axis, as shown below.\n\n[asy]\n\npair A,C,P,O,D;\n\ndraw((0,-1.2)--(0,1.2),p=black+1.2bp,Arrows(0.15cm));\n\ndraw((-1.2,0)--(1.2,0),p=black+1.2bp,Arrows(0.15cm));\n\nA = (1,0);\n\nO= (0,0);\n\nlabel(\"$x$\",(1.2,0),SE);\n\nlabel(\"$y$\",(0,1.2),NE);\n\nP = rotate(60)*A;\n\nD = foot(P,A,-A);\n\ndraw(O--P--D);\n\ndraw(rightanglemark(O,D,P,2));\n\ndraw(Circle(O,1));\n\nlabel(\"$O$\",O,SE);\n\nlabel(\"$P$\",P,NE);\n\n//label(\"$A$\",A,SE);\n\nlabel(\"$D$\",D,S);\n\n[/asy]\n\nTriangle $POD$ is a 30-60-90 triangle, so $DO = \\frac{1}{2}$ and $DP = \\frac{\\sqrt{3}}{2}$.  Therefore, the coordinates of $P$ are $\\left(\\frac{1}{2}, \\frac{\\sqrt{3}}{2}\\right)$, so $\\sin 60^\\circ = \\boxed{\\frac{\\sqrt{3}}{2}}$.",
+    "is_solved": true,
+    "model_solution": "To compute $\\sin 60^\\circ$, we'll use the unit circle. \n\nStep 1: Recall the definition of sine in a right-angled triangle inscribed in the unit circle. The sine of an angle is the y-coordinate of the point where the terminal side of the angle intersects the unit circle.\nStep 2: Draw the unit circle and locate the point where the terminal side of the angle $60^\\circ$ intersects the unit circle, noting that this creates an equilateral triangle.\nStep 3: Since the unit circle is symmetric, and we know that the equilateral triangle formed has a 30-60-90 right-angled triangle inside it, we can use the properties of this special triangle to find the y-coordinate of the point on the unit circle.\nStep 4: In a 30-60-90 right triangle, the ratio of the side opposite the 30-degree angle (opposite the 60-degree angle in our case) to the hypotenuse is 1:2. Since the point on the unit circle lies on the terminal side of the 60-degree angle, it creates a 30-60-90 triangle where the hypotenuse is equal to 1 (the unit circle's radius). Therefore, the y-coordinate (opposite the 60-degree angle) is $\\frac{\\sqrt{3}}{2}$.\nSince we have found that the y-coordinate of the point on the unit circle is $\\frac{\\sqrt{3}}{2}$, we can conclude that $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$.\nSince we have found that the y-coordinate of the point on the unit circle is $\\frac{\\sqrt{3}}{2}$, we can conclude that $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$.",
+    "steps": [
+        "To compute $\\sin 60^\\circ$, we'll use the unit circle. \n\nStep 1: Recall the definition of sine in a right-angled triangle inscribed in the unit circle. The sine of an angle is the y-coordinate of the point where the terminal side of the angle intersects the unit circle.",
+        "Step 2: Draw the unit circle and locate the point where the terminal side of the angle $60^\\circ$ intersects the unit circle, noting that this creates an equilateral triangle.",
+        "Step 3: Since the unit circle is symmetric, and we know that the equilateral triangle formed has a 30-60-90 right-angled triangle inside it, we can use the properties of this special triangle to find the y-coordinate of the point on the unit circle.",
+        "Step 4: In a 30-60-90 right triangle, the ratio of the side opposite the 30-degree angle (opposite the 60-degree angle in our case) to the hypotenuse is 1:2. Since the point on the unit circle lies on the terminal side of the 60-degree angle, it creates a 30-60-90 triangle where the hypotenuse is equal to 1 (the unit circle's radius). Therefore, the y-coordinate (opposite the 60-degree angle) is $\\frac{\\sqrt{3}}{2}$.",
+        "Since we have found that the y-coordinate of the point on the unit circle is $\\frac{\\sqrt{3}}{2}$, we can conclude that $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$.",
+        "Since we have found that the y-coordinate of the point on the unit circle is $\\frac{\\sqrt{3}}{2}$, we can conclude that $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$."
+    ],
+    "full_steps": [
+        [
+            "To compute $\\sin 60^\\circ$, recall that a right-angled triangle is associated with this angle. \n\n1. Draw a 30-60-90 right-angled triangle, with the $60^\\circ$ angle opposite the side of length $x\\sqrt{3}$, where $x$ is a scale factor.",
+            1
+        ],
+        [
+            "2. Use the properties of a 30-60-90 triangle to find the length of the side opposite the $60^\\circ$ angle (which is also the side adjacent to the $30^\\circ$ angle), which is $x$.",
+            0
+        ],
+        [
+            "2. In the 30-60-90 triangle, use the Pythagorean Theorem to find the length of the side opposite the $30^\\circ$ angle, which will be $x$. Since the side opposite the $60^\\circ$ angle is $x\\sqrt{3}$, and the hypotenuse can be represented as $2x$, we can use the formula $(x\\sqrt{3})^2 + x^2 = (2x)^2$ to find $x$.",
+            0
+        ],
+        [
+            "To compute $\\sin 60^\\circ$, we'll use the unit circle. \n\nStep 1: Recall the definition of sine in a right-angled triangle inscribed in the unit circle. The sine of an angle is the y-coordinate of the point where the terminal side of the angle intersects the unit circle.",
+            1
+        ],
+        [
+            "Step 2: Draw the unit circle and locate the point where the terminal side of the angle $60^\\circ$ intersects the unit circle, noting that this creates an equilateral triangle.",
+            1
+        ],
+        [
+            "Step 3: Using the properties of an equilateral triangle, we know that all sides are equal. The radius of the unit circle is 1 unit, so the x and y coordinates of the point of intersection will be equal. The point will be $\\left(\\frac{\\sqrt{3}}{2}, \\frac{1}{2}\\right)$, and $\\sin 60^\\circ$ is the y-coordinate.",
+            0
+        ],
+        [
+            "Step 3: Since the unit circle is symmetric, and we know that the equilateral triangle formed has a 30-60-90 right-angled triangle inside it, we can use the properties of this special triangle to find the y-coordinate of the point on the unit circle.",
+            1
+        ],
+        [
+            "Step 4: Recall the properties of a 30-60-90 right-angled triangle, which state that the ratio of the side lengths is 1:\u221a3:2. Since the y-coordinate is the length of the side opposite the 60\u00b0 angle, it's equal to (\u221a3)/2.",
+            0
+        ],
+        [
+            "Step 4: In a 30-60-90 right triangle, the ratio of the side opposite the 30-degree angle (opposite the 60-degree angle in our case) to the hypotenuse is 1:2. Since the point on the unit circle lies on the terminal side of the 60-degree angle, it creates a 30-60-90 triangle where the hypotenuse is equal to 1 (the unit circle's radius). Therefore, the y-coordinate (opposite the 60-degree angle) is $\\frac{\\sqrt{3}}{2}$.",
+            1
+        ],
+        [
+            "Since we have found that the y-coordinate of the point on the unit circle is $\\frac{\\sqrt{3}}{2}$, we can conclude that $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$.",
+            1
+        ],
+        [
+            "Since we have found that the y-coordinate of the point on the unit circle is $\\frac{\\sqrt{3}}{2}$, we can conclude that $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$.",
+            1
+        ]
+    ],
+    "time": 18.77374005317688,
+    "total_tokens": 6503,
+    "final_answer_tokens": 445,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

@@ -1,0 +1,27 @@
+{
+    "problem": "There is a committee composed of eight women and two men. When they meet, they sit in a row---the women in indistinguishable rocking chairs and the men on indistinguishable stools.  How many distinct ways are there for me to arrange the eight chairs and two stools for a meeting?",
+    "level": "Level 5",
+    "type": "Prealgebra",
+    "solution": "Because the rocking chairs are indistinguishable from each other and the stools are indistinguishable from each other, we can think of first placing the two stools somewhere in the ten slots and then filling the rest with rocking chairs. The first stool has $10$ slots in which it can go, and the second has $9$. However, because they are indistinguishable from each other, we have overcounted the number of ways to place the stools by a factor of $2$, so we divide by $2$. Thus, there are $\\frac{10 \\cdot 9}{2} = \\boxed{45}$ distinct ways to arrange the ten chairs and stools for a meeting.",
+    "is_solved": false,
+    "model_solution": "",
+    "steps": [],
+    "full_steps": [
+        [
+            "To find the number of distinct ways to arrange the eight chairs and two stools, we need to use combinations. The first step is to choose the positions of the two stools from the ten total positions. \n\nWe have 10 positions in total and want to arrange 2 stools, the remaining 8 positions will be filled with chairs.",
+            0
+        ],
+        [
+            "Since the chairs and stools are indistinguishable within their respective groups, we will use combinations to find the total number of distinct arrangements.\n\n**Step 1: Choose the positions of the stools**\nWe have 10 total positions where the stools (or chairs) can go, and we need to choose 2 positions for the stools. We can use the combination formula:\n\nC(n, k) = n! / (k!(n-k)!)\nwhere n is the total number of positions (10 in this case), and k is the number of positions we want to choose (2 in this case).\n\nSo, the number of ways to choose the positions of the stools is:\n\nC(10, 2) = 10! / (2!(10-2)!) = 45",
+            0
+        ],
+        [
+            "To find the number of distinct ways to arrange the chairs and stools, we need to start by determining the total number of positions available for the stools (or chairs).\n\nStep 1: Calculate the total number of positions available for the stools.\nThere are 10 total members in the committee. Two of these members will occupy stools, and the remaining 8 will occupy rocking chairs. We can arrange the stools in the available 10 positions.",
+            0
+        ]
+    ],
+    "time": 4.04979395866394,
+    "total_tokens": 1430,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

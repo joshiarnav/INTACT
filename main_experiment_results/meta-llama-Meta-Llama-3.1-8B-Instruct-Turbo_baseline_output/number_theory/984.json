@@ -1,0 +1,8 @@
+{
+    "problem": "Natural numbers of the form $F_n=2^{2^n} + 1 $ are called Fermat numbers. In 1640, Fermat conjectured that all numbers $F_n$, where $n\\neq 0$, are prime. (The conjecture was later shown to be false.) What is the units digit of $F_{1000}$?",
+    "solution": "Let's first try to find the cycle of units digits of $2^n$, starting with $n=1$: $2, 4, 8, 6, 2, 4, 8, 6,\\ldots$ . The cycle of units digits of $2^n$ is 4 digits long: 2, 4, 8, 6. To find the units digit of $2^n$, for any positive integer $n$, we simply need to find the remainder, $R$, when $n$ is divided by 4 ($R=1$ corresponds to the units digit 2, $R=2$ corresponds to the units digit 4, etc.) Since $2^{1000}\\div4=2^{998}$ without remainder, the units digit of $2^{2^{1000}}$ is 6. Therefore, the units digit of $F_n=2^{2^{1000}}+1$ is $6+1=\\boxed{7}$.",
+    "total_tokens": 382,
+    "time_taken": 2.560154676437378,
+    "file_name": "./MATH_subsample_uniform/number_theory/984.json",
+    "model_solution": "To find the units digit of $F_{1000}$, we need to find the units digit of $2^{2^{1000}}$. \n\nWe notice a pattern in the units digits of $2^n$:\n- $2^1$ has a units digit of 2.\n- $2^2$ has a units digit of 4.\n- $2^3$ has a units digit of 8.\n- $2^4$ has a units digit of 6.\n- $2^5$ has a units digit of 2.\n\nThis pattern repeats every 4 powers of 2. Now, let's look at the exponent $2^{1000}$.\n\nWe can write $2^{1000}$ as $2^{4 \\cdot 250}$, since $1000 = 4 \\cdot 250$.\n\nThen, we have that $2^{4 \\cdot 250}$ is equal to $(2^4)^{250}$, which is $6^{250}$.\n\nSince the units digit of $6^n$ is always 6 for any positive integer $n$, we find that the units digit of $2^{2^{1000}}$ is 6.\n\nTherefore, the units digit of $F_{1000}$ is $6 + 1 = 7$."
+}

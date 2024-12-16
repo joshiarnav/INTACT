@@ -1,0 +1,26 @@
+{
+    "problem": "Find $2^{-1} \\pmod{185}$, as a residue modulo 185.  (Give an answer between 0 and 184, inclusive.)",
+    "level": "Level 4",
+    "type": "Number Theory",
+    "solution": "Since $2 \\cdot 93 \\equiv 186 \\equiv 1 \\pmod{185}$, $2^{-1} \\equiv \\boxed{93} \\pmod{185}$.",
+    "is_solved": true,
+    "model_solution": "To find $2^{-1} \\pmod{185}$, we will first use the property that $a^{-1} \\equiv b \\pmod{m}$ if and only if $ab \\equiv 1 \\pmod{m}$. \n\nStep 1: We will use the Extended Euclidean Algorithm to find the modular multiplicative inverse of 2 modulo 185.\nStep 2: Apply the Extended Euclidean Algorithm to find the coefficients $x$ and $y$ such that $2x + 185y = d$, where $d$ is the greatest common divisor of 2 and 185. Since 185 is odd, it is not a multiple of 2, so $d = 1$. We need to find $x$ such that $2x \\equiv 1 \\pmod{185}$, which will be the modular multiplicative inverse of 2 modulo 185.\n\nTo find the $x$ and $y$, we'll use the Extended Euclidean Algorithm:\n\n185 = 92 * 2 + 1 \n2 = 2 * 1 + 0\n\nNow, we'll work backwards to express 1 as a linear combination of 2 and 185. From the first equation, we have:\n1 = 185 - 92 * 2\n\nSo, $x = -92$ and $y = 1$. Therefore, the modular multiplicative inverse of 2 modulo 185 is $-92 \\equiv 93 \\pmod{185}$.\n\n$\\boxed{93}$",
+    "steps": [
+        "To find $2^{-1} \\pmod{185}$, we will first use the property that $a^{-1} \\equiv b \\pmod{m}$ if and only if $ab \\equiv 1 \\pmod{m}$. \n\nStep 1: We will use the Extended Euclidean Algorithm to find the modular multiplicative inverse of 2 modulo 185.",
+        "Step 2: Apply the Extended Euclidean Algorithm to find the coefficients $x$ and $y$ such that $2x + 185y = d$, where $d$ is the greatest common divisor of 2 and 185. Since 185 is odd, it is not a multiple of 2, so $d = 1$. We need to find $x$ such that $2x \\equiv 1 \\pmod{185}$, which will be the modular multiplicative inverse of 2 modulo 185.\n\nTo find the $x$ and $y$, we'll use the Extended Euclidean Algorithm:\n\n185 = 92 * 2 + 1 \n2 = 2 * 1 + 0\n\nNow, we'll work backwards to express 1 as a linear combination of 2 and 185. From the first equation, we have:\n1 = 185 - 92 * 2\n\nSo, $x = -92$ and $y = 1$. Therefore, the modular multiplicative inverse of 2 modulo 185 is $-92 \\equiv 93 \\pmod{185}$.\n\n$\\boxed{93}$"
+    ],
+    "full_steps": [
+        [
+            "To find $2^{-1} \\pmod{185}$, we will first use the property that $a^{-1} \\equiv b \\pmod{m}$ if and only if $ab \\equiv 1 \\pmod{m}$. \n\nStep 1: We will use the Extended Euclidean Algorithm to find the modular multiplicative inverse of 2 modulo 185.",
+            1
+        ],
+        [
+            "Step 2: Apply the Extended Euclidean Algorithm to find the coefficients $x$ and $y$ such that $2x + 185y = d$, where $d$ is the greatest common divisor of 2 and 185. Since 185 is odd, it is not a multiple of 2, so $d = 1$. We need to find $x$ such that $2x \\equiv 1 \\pmod{185}$, which will be the modular multiplicative inverse of 2 modulo 185.\n\nTo find the $x$ and $y$, we'll use the Extended Euclidean Algorithm:\n\n185 = 92 * 2 + 1 \n2 = 2 * 1 + 0\n\nNow, we'll work backwards to express 1 as a linear combination of 2 and 185. From the first equation, we have:\n1 = 185 - 92 * 2\n\nSo, $x = -92$ and $y = 1$. Therefore, the modular multiplicative inverse of 2 modulo 185 is $-92 \\equiv 93 \\pmod{185}$.\n\n$\\boxed{93}$",
+            1
+        ]
+    ],
+    "time": 5.844080924987793,
+    "total_tokens": 1255,
+    "final_answer_tokens": 424,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

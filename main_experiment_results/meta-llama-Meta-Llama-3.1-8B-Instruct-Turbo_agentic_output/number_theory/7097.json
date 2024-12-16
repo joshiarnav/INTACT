@@ -1,0 +1,41 @@
+{
+    "problem": "Let $m$ and $n$ be positive integers satisfying the conditions\n$\\quad\\bullet\\ \\gcd(m+n,210)=1,$\n$\\quad\\bullet\\ m^m$ is a multiple of $n^n,$ and\n$\\quad\\bullet\\ m$ is not a multiple of $n.$\nFind the least possible value of $m+n.$\n",
+    "level": "Level 5",
+    "type": "Number Theory",
+    "solution": "Taking inspiration from $4^4 \\mid 10^{10}$ we are inspired to take $n$ to be $p^2$, the lowest prime not dividing $210$, or $11 \\implies n = 121$. Now, there are $242$ factors of $11$, so $11^{242} \\mid m^m$, and then $m = 11k$ for $k \\geq 22$. Now, $\\gcd(m+n, 210) = \\gcd(11+k,210) = 1$. Noting $k = 26$ is the minimal that satisfies this, we get $(n,m) = (121,286)$. Thus, it is easy to verify this is minimal and we get $\\boxed{407}$.",
+    "is_solved": true,
+    "model_solution": "Step 1: \nSince $\\gcd(m+n,210)=1$, $m+n$ must not share any prime factors with 210. The prime factorization of 210 is $2 \\cdot 3 \\cdot 5 \\cdot 7$. Therefore, $m+n$ cannot be divisible by 2, 3, 5, or 7. \n\nTo proceed, we need to consider the third condition: $m^m$ is a multiple of $n^n$ and $m$ is not a multiple of $n$. This suggests that $m$ and $n$ share some prime factors.\nStep 2:\nSince $m^m$ is a multiple of $n^n$ and $m$ is not a multiple of $n$, let $p^a$ be the smallest power of prime $p$ dividing $m$ and $n$. Then $p^{am}$ must divide $n^n$, so $am \\geq n$, and $n$ must be a multiple of $m$. However, this contradicts the condition that $m$ is not a multiple of $n$. Therefore, $n$ must be a multiple of $p^{ka}$ for some prime $p$ and integers $k \\geq 1$ and $a \\geq n$. The least possible value will occur when $a = n$ and $k = 1$, so $n = p^n$ for some prime $p$. The smallest such prime is 11.\nStep 3:\nSince $n=p^n$, the smallest possible value for $p$ is 11. Let $p=11$. We want to minimize $m+n$. We need to ensure that $m+n$ is not divisible by 2, 3, 5, or 7. The smallest such value for $m+n$ is $11+11^2 = 121+11 = 132$. However, $\\gcd(132, 210) = 6 \\neq 1$. The next smallest odd prime is 23, but then $m+n$ would be even. Therefore, the next smallest prime to consider is 31. \n\nLet $p=31$. The smallest value for $m+n$ would be $31+31^2 = 961+31=992$. \n\nNow we want to check if $\\gcd(992, 210)=1$.\nStep 4:\nTo find the least possible value of m+n, we need to verify if $\\gcd(992, 210)=1$. Since 992 is not a multiple of 2, 3, 5, or 7, and 210's prime factors are 2, 3, 5, and 7, we only need to check if 992 is a multiple of any higher prime factors of 210. The next prime factor of 210 is 11, but 992 is not a multiple of 11. Therefore, $\\gcd(992, 210)=1$.\nStep 5:\nSince $\\gcd(992, 210)=1$, we have found the least possible value of $m+n$. We can conclude our solution here.\n\n$\\boxed{992}$",
+    "steps": [
+        "Step 1: \nSince $\\gcd(m+n,210)=1$, $m+n$ must not share any prime factors with 210. The prime factorization of 210 is $2 \\cdot 3 \\cdot 5 \\cdot 7$. Therefore, $m+n$ cannot be divisible by 2, 3, 5, or 7. \n\nTo proceed, we need to consider the third condition: $m^m$ is a multiple of $n^n$ and $m$ is not a multiple of $n$. This suggests that $m$ and $n$ share some prime factors.",
+        "Step 2:\nSince $m^m$ is a multiple of $n^n$ and $m$ is not a multiple of $n$, let $p^a$ be the smallest power of prime $p$ dividing $m$ and $n$. Then $p^{am}$ must divide $n^n$, so $am \\geq n$, and $n$ must be a multiple of $m$. However, this contradicts the condition that $m$ is not a multiple of $n$. Therefore, $n$ must be a multiple of $p^{ka}$ for some prime $p$ and integers $k \\geq 1$ and $a \\geq n$. The least possible value will occur when $a = n$ and $k = 1$, so $n = p^n$ for some prime $p$. The smallest such prime is 11.",
+        "Step 3:\nSince $n=p^n$, the smallest possible value for $p$ is 11. Let $p=11$. We want to minimize $m+n$. We need to ensure that $m+n$ is not divisible by 2, 3, 5, or 7. The smallest such value for $m+n$ is $11+11^2 = 121+11 = 132$. However, $\\gcd(132, 210) = 6 \\neq 1$. The next smallest odd prime is 23, but then $m+n$ would be even. Therefore, the next smallest prime to consider is 31. \n\nLet $p=31$. The smallest value for $m+n$ would be $31+31^2 = 961+31=992$. \n\nNow we want to check if $\\gcd(992, 210)=1$.",
+        "Step 4:\nTo find the least possible value of m+n, we need to verify if $\\gcd(992, 210)=1$. Since 992 is not a multiple of 2, 3, 5, or 7, and 210's prime factors are 2, 3, 5, and 7, we only need to check if 992 is a multiple of any higher prime factors of 210. The next prime factor of 210 is 11, but 992 is not a multiple of 11. Therefore, $\\gcd(992, 210)=1$.",
+        "Step 5:\nSince $\\gcd(992, 210)=1$, we have found the least possible value of $m+n$. We can conclude our solution here.\n\n$\\boxed{992}$"
+    ],
+    "full_steps": [
+        [
+            "Step 1: \nSince $\\gcd(m+n,210)=1$, $m+n$ must not share any prime factors with 210. The prime factorization of 210 is $2 \\cdot 3 \\cdot 5 \\cdot 7$. Therefore, $m+n$ cannot be divisible by 2, 3, 5, or 7. \n\nTo proceed, we need to consider the third condition: $m^m$ is a multiple of $n^n$ and $m$ is not a multiple of $n$. This suggests that $m$ and $n$ share some prime factors.",
+            1
+        ],
+        [
+            "Step 2:\nSince $m^m$ is a multiple of $n^n$ and $m$ is not a multiple of $n$, let $p^a$ be the smallest power of prime $p$ dividing $m$ and $n$. Then $p^{am}$ must divide $n^n$, so $am \\geq n$, and $n$ must be a multiple of $m$. However, this contradicts the condition that $m$ is not a multiple of $n$. Therefore, $n$ must be a multiple of $p^{ka}$ for some prime $p$ and integers $k \\geq 1$ and $a \\geq n$. The least possible value will occur when $a = n$ and $k = 1$, so $n = p^n$ for some prime $p$. The smallest such prime is 11.",
+            1
+        ],
+        [
+            "Step 3:\nSince $n=p^n$, the smallest possible value for $p$ is 11. Let $p=11$. We want to minimize $m+n$. We need to ensure that $m+n$ is not divisible by 2, 3, 5, or 7. The smallest such value for $m+n$ is $11+11^2 = 121+11 = 132$. However, $\\gcd(132, 210) = 6 \\neq 1$. The next smallest odd prime is 23, but then $m+n$ would be even. Therefore, the next smallest prime to consider is 31. \n\nLet $p=31$. The smallest value for $m+n$ would be $31+31^2 = 961+31=992$. \n\nNow we want to check if $\\gcd(992, 210)=1$.",
+            1
+        ],
+        [
+            "Step 4:\nTo find the least possible value of m+n, we need to verify if $\\gcd(992, 210)=1$. Since 992 is not a multiple of 2, 3, 5, or 7, and 210's prime factors are 2, 3, 5, and 7, we only need to check if 992 is a multiple of any higher prime factors of 210. The next prime factor of 210 is 11, but 992 is not a multiple of 11. Therefore, $\\gcd(992, 210)=1$.",
+            1
+        ],
+        [
+            "Step 5:\nSince $\\gcd(992, 210)=1$, we have found the least possible value of $m+n$. We can conclude our solution here.\n\n$\\boxed{992}$",
+            1
+        ]
+    ],
+    "time": 62.459733963012695,
+    "total_tokens": 6023,
+    "final_answer_tokens": 809,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

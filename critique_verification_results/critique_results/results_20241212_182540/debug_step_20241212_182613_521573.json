@@ -1,0 +1,49 @@
+{
+  "timestamp": "2024-12-12T18:26:13.521557",
+  "problem": "Given that $x^2 + y^2 = 14x + 6y + 6,$ find the largest possible value of $3x + 4y.$",
+  "step": {
+    "text": "That's $35.4+12+4(6.4)$.",
+    "previous_steps": [
+      "Let's complete the square to make this easier to work with.",
+      "We can rewrite the first equation as $x^2-14x+y^2-6y=6$.",
+      "The first thing we want to do is complete the square for the $x$ terms.",
+      "So we'll add $(14/2)^2$ to both sides.",
+      "That gives us $x^2-14x+49+y^2-6y=6+49$.",
+      "Now we can complete the square for the $y$ terms.",
+      "We just need to add $(6/2)^2$ to both sides.",
+      "That gives us $x^2-14x+49+y^2-6y+9=6+49+9$.",
+      "Now we can factor both $x^2-14x+49$ and $y^2-6y+9$ terms.",
+      "So we get $(x-7)^2+(y-3)^2=0+64$.",
+      "We can simplify that to $(x-7)^2+(y-3)^2=64$.",
+      "So that's a circle centered at $(7,3)$ with a radius of $8$.",
+      "Right. Now we just need to find the slope of the line $3x+4y=k$.",
+      "That's just $-3/4$.",
+      "Let's express $y$ in terms of $x$ using the expression of the circle.",
+      "That's $y=3+\\sqrt{64-(x-7)^2}$.",
+      "Now we can plug that in to the equation for the slope.",
+      "So, we have $f(x) = 3x + 12 + 4(\\sqrt{64-(x-7)^2})$. Let's find its maximum.",
+      "We can find the maximum by taking the derivative and setting it equal to 0.",
+      "So $f'(x) = 3 - 4(x-7)/\\sqrt{64-(x-7)^2}=0$.",
+      "That means $3 = 4(x-7)/\\sqrt{64-(x-7)^2}$",
+      "So $3\\sqrt{64-(x-7)^2} = 4(x-7)$.",
+      "Now we can square both sides to get rid of the square root.",
+      "That gives us $9(64-(x-7)^2) = 16(x-7)^2$.",
+      "So $576-9(x-7)^2 = 16(x-7)^2$.",
+      "And $25(x-7)^2 = 576$",
+      "So $(x-7)^2 = 23.04$.",
+      "So $x = 7\\pm\\sqrt{23.04}$.",
+      "So $x = 7\\pm4.8$. That gives us solutions of $11.8$ and $2.2$.",
+      "So the maximum occurs at $x = 11.8$.",
+      "So, we need to calculate $f(11.8)=3*11.8 + 12 + 4(\\sqrt{64-(11.8-7)^2})$.",
+      "That's $35.4+12+4(\\sqrt{64-4.8^2})$.",
+      "So, $k=35.4+12+4(\\sqrt{64-4.8^2})$.",
+      "So, $k=35.4+12+4(\\sqrt{64-23.04})$.",
+      "Finally, $k=35.4+12+4(\\sqrt{40.96})$."
+    ]
+  },
+  "evaluation": {
+    "model_judgment": true,
+    "ground_truth": true,
+    "rating": 1
+  }
+}

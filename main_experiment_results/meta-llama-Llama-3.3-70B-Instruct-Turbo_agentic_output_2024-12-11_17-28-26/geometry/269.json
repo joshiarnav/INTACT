@@ -1,0 +1,31 @@
+{
+    "problem": "Find the area of a triangle with side lengths 8, 9, and 9.",
+    "level": "Level 3",
+    "type": "Geometry",
+    "solution": "We draw the longest altitude of this triangle, which breaks the triangle into two right triangles.   [asy]\nsize(100);\npair A,B,C,D;\nA=(0,0); B=(8,0); C=(4,sqrt(65)); D=(4,0);\ndraw(A--B--C--cycle); draw(C--D);\ndraw(rightanglemark(C,D,A,18));\nlabel(\"8\",D,S); label(\"9\",(A+C)/2,W); label(\"9\",(B+C)/2,E);\n[/asy] The right triangles are congruent because the original triangle is isosceles; each right triangle has one leg length $8/2=4$ and hypotenuse length 9.  The other leg, which is also the height of the original triangle, has length $\\sqrt{9^2-4^2}=\\sqrt{65}$.  Thus, the original triangle has base length 8, height $\\sqrt{65}$, and area \\[\\frac{1}{2}(8)(\\sqrt{65})=\\boxed{4\\sqrt{65}}.\\]",
+    "is_solved": true,
+    "model_solution": "To find the area of the triangle, we will use Heron's formula. The first step is to calculate the semi-perimeter (s) of the triangle, which is half the sum of its side lengths. \n\ns = (8 + 9 + 9) / 2\ns = 26 / 2\ns = 13\n\nNow we have the semi-perimeter, and we can proceed to the next step.\nNow that we have the semi-perimeter, we can apply Heron's formula to calculate the area of the triangle. Heron's formula is given by:\n\nArea = \u221a(s(s - a)(s - b)(s - c))\n\nwhere a, b, and c are the side lengths of the triangle. In this case, a = 8, b = 9, and c = 9.\n\nSubstituting the values into the formula:\n\nArea = \u221a(13(13 - 8)(13 - 9)(13 - 9))\nArea = \u221a(13(5)(4)(4))\nArea = \u221a(13 * 5 * 4 * 4)\nArea = \u221a(1040)\n\nNext step: Calculate the square root of 1040 to find the area.\nTo find the area, we need to calculate the square root of 1040.\n\nArea = \u221a1040\nArea \u2248 32.31\n\nSince we are looking for the final answer, we can box it:\n\n$\\boxed{32.31}$",
+    "steps": [
+        "To find the area of the triangle, we will use Heron's formula. The first step is to calculate the semi-perimeter (s) of the triangle, which is half the sum of its side lengths. \n\ns = (8 + 9 + 9) / 2\ns = 26 / 2\ns = 13\n\nNow we have the semi-perimeter, and we can proceed to the next step.",
+        "Now that we have the semi-perimeter, we can apply Heron's formula to calculate the area of the triangle. Heron's formula is given by:\n\nArea = \u221a(s(s - a)(s - b)(s - c))\n\nwhere a, b, and c are the side lengths of the triangle. In this case, a = 8, b = 9, and c = 9.\n\nSubstituting the values into the formula:\n\nArea = \u221a(13(13 - 8)(13 - 9)(13 - 9))\nArea = \u221a(13(5)(4)(4))\nArea = \u221a(13 * 5 * 4 * 4)\nArea = \u221a(1040)\n\nNext step: Calculate the square root of 1040 to find the area.",
+        "To find the area, we need to calculate the square root of 1040.\n\nArea = \u221a1040\nArea \u2248 32.31\n\nSince we are looking for the final answer, we can box it:\n\n$\\boxed{32.31}$"
+    ],
+    "full_steps": [
+        [
+            "To find the area of the triangle, we will use Heron's formula. The first step is to calculate the semi-perimeter (s) of the triangle, which is half the sum of its side lengths. \n\ns = (8 + 9 + 9) / 2\ns = 26 / 2\ns = 13\n\nNow we have the semi-perimeter, and we can proceed to the next step.",
+            1
+        ],
+        [
+            "Now that we have the semi-perimeter, we can apply Heron's formula to calculate the area of the triangle. Heron's formula is given by:\n\nArea = \u221a(s(s - a)(s - b)(s - c))\n\nwhere a, b, and c are the side lengths of the triangle. In this case, a = 8, b = 9, and c = 9.\n\nSubstituting the values into the formula:\n\nArea = \u221a(13(13 - 8)(13 - 9)(13 - 9))\nArea = \u221a(13(5)(4)(4))\nArea = \u221a(13 * 5 * 4 * 4)\nArea = \u221a(1040)\n\nNext step: Calculate the square root of 1040 to find the area.",
+            1
+        ],
+        [
+            "To find the area, we need to calculate the square root of 1040.\n\nArea = \u221a1040\nArea \u2248 32.31\n\nSince we are looking for the final answer, we can box it:\n\n$\\boxed{32.31}$",
+            1
+        ]
+    ],
+    "time": 13.991358757019043,
+    "total_tokens": 1860,
+    "final_answer_tokens": 382,
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo"
+}

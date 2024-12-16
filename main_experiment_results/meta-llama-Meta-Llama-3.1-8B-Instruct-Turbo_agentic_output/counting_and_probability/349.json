@@ -1,0 +1,51 @@
+{
+    "problem": "If Anna flips 8 coins, what is the probability that she gets more heads than tails?",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "We could solve this problem using casework, but using a little bit of symmetry and complementary probability gives us a more elegant solution. Since each coin flips heads and tails with equal probability, by the principle of symmetry the probability of getting more heads than tails is the equal to the probability of getting more tails than heads. Additionally, there are only three possible outcomes: getting more heads than tails, getting more tails than heads, or getting the same number of both. If we let $x$ represent the probability of the first outcome (which is the same as the probability of the second outcome) and $y$ represent the probability of the third outcome, we get the equation $2x + y = 1 \\Rightarrow x=\\dfrac{1-y}{2}$. So all we need to do is calculate the probability of getting the same number of heads and tails and we can then easily solve for what we want using the principle of complementary probability. Since there are two equally likely outcomes for each flip, there are a total of $2^8$ equally likely possible outcomes for flipping the 8 coins. We will have the same number of both heads and tails if we have exactly 4 of each, which we can count by selecting 4 out of the 8 flips to be heads which can occur in $\\binom{8}{4}=70$ ways. So $y=\\dfrac{70}{256}=\\dfrac{35}{128}$, and substituting that back into our first equation gives us the probability that we want: $x=\\boxed{\\dfrac{93}{256}}$.",
+    "is_solved": true,
+    "model_solution": "To solve this problem, we need to calculate the total number of possible outcomes and then find the number of outcomes with more heads than tails. \n\nStep 1: Calculate the total number of possible outcomes when flipping 8 coins. \nSince each coin has 2 outcomes (heads or tails), the total number of possible outcomes for 8 coins is 2^8 = 256.\nStep 2: Calculate the number of outcomes with more heads than tails. Since we want more heads than tails, we can consider the following cases: \n- 5 heads and 3 tails\n- 6 heads and 2 tails\n- 7 heads and 1 tail\n- 8 heads and 0 tails\n\nWe can use combinations (nCr) to calculate the number of outcomes for each case. \n\nNumber of outcomes for 8 flips is 2^8 = 256.\nStep 3: Calculate the number of outcomes for each case using combinations and then sum them up. \n\n- Number of outcomes for 5 heads and 3 tails: 8C5 = 56\n- Number of outcomes for 6 heads and 2 tails: 8C6 = 28\n- Number of outcomes for 7 heads and 1 tail: 8C7 = 8\n- Number of outcomes for 8 heads and 0 tails: 8C8 = 1\n\nAdding these up, we get 56 + 28 + 8 + 1 = 93.\nStep 4: Calculate the probability by dividing the number of outcomes with more heads than tails by the total number of possible! outcomes.\n\nProbability = Number of outcomes with more heads than tails / Total number of possible outcomes\nProbability = 93 / 256\nStep 5: Convert the probability to a simplified fraction or decimal, if necessary. \n\nIn this case, the probability is already in its simplest form.\nStep 6:  The probability that Anna gets more heads than tails when flipping 8 coins is already in its simplest form, so no further simplification is required.\nStep 6: The probability that Anna gets more heads than tails when flipping 8 coins is $\\boxed{\\frac{93}{256}}$.",
+    "steps": [
+        "To solve this problem, we need to calculate the total number of possible outcomes and then find the number of outcomes with more heads than tails. \n\nStep 1: Calculate the total number of possible outcomes when flipping 8 coins. \nSince each coin has 2 outcomes (heads or tails), the total number of possible outcomes for 8 coins is 2^8 = 256.",
+        "Step 2: Calculate the number of outcomes with more heads than tails. Since we want more heads than tails, we can consider the following cases: \n- 5 heads and 3 tails\n- 6 heads and 2 tails\n- 7 heads and 1 tail\n- 8 heads and 0 tails\n\nWe can use combinations (nCr) to calculate the number of outcomes for each case. \n\nNumber of outcomes for 8 flips is 2^8 = 256.",
+        "Step 3: Calculate the number of outcomes for each case using combinations and then sum them up. \n\n- Number of outcomes for 5 heads and 3 tails: 8C5 = 56\n- Number of outcomes for 6 heads and 2 tails: 8C6 = 28\n- Number of outcomes for 7 heads and 1 tail: 8C7 = 8\n- Number of outcomes for 8 heads and 0 tails: 8C8 = 1\n\nAdding these up, we get 56 + 28 + 8 + 1 = 93.",
+        "Step 4: Calculate the probability by dividing the number of outcomes with more heads than tails by the total number of possible! outcomes.\n\nProbability = Number of outcomes with more heads than tails / Total number of possible outcomes\nProbability = 93 / 256",
+        "Step 5: Convert the probability to a simplified fraction or decimal, if necessary. \n\nIn this case, the probability is already in its simplest form.",
+        "Step 6:  The probability that Anna gets more heads than tails when flipping 8 coins is already in its simplest form, so no further simplification is required.",
+        "Step 6: The probability that Anna gets more heads than tails when flipping 8 coins is $\\boxed{\\frac{93}{256}}$."
+    ],
+    "full_steps": [
+        [
+            "To solve this problem, we need to calculate the total number of possible outcomes and then find the number of outcomes with more heads than tails. \n\nStep 1: Calculate the total number of possible outcomes when flipping 8 coins. \nSince each coin has 2 outcomes (heads or tails), the total number of possible outcomes for 8 coins is 2^8 = 256.",
+            1
+        ],
+        [
+            "Step 2: Calculate the number of outcomes with more heads than tails. Since we want more heads than tails, we can consider the following cases: \n- 5 heads and 3 tails\n- 6 heads and 2 tails\n- 7 heads and 1 tail\n- 8 heads and 0 tails\n\nWe can use combinations (nCr) to calculate the number of outcomes for each case. \n\nNumber of outcomes for 8 flips is 2^8 = 256.",
+            1
+        ],
+        [
+            "Step 3: Calculate the number of outcomes for each case using combinations and then sum them up. \n\n- Number of outcomes for 5 heads and 3 tails: 8C5 = 56\n- Number of outcomes for 6 heads and 2 tails: 8C6 = 28\n- Number of outcomes for 7 heads and 1 tail: 8C7 = 8\n- Number of outcomes for 8 heads and 0 tails: 8C8 = 1\n\nAdding these up, we get 56 + 28 + 8 + 1 = 93.",
+            1
+        ],
+        [
+            "Step 4: Calculate the probability by dividing the number of outcomes with more heads than tails by the total number of possible! outcomes.\n\nProbability = Number of outcomes with more heads than tails / Total number of possible outcomes\nProbability = 93 / 256",
+            1
+        ],
+        [
+            "Step 5: Convert the probability to a simplified fraction or decimal, if necessary. \n\nIn this case, the probability is already in its simplest form.",
+            1
+        ],
+        [
+            "Step 6:  The probability that Anna gets more heads than tails when flipping 8 coins is already in its simplest form, so no further simplification is required.",
+            1
+        ],
+        [
+            "Step 6: The probability that Anna gets more heads than tails when flipping 8 coins is $\\boxed{\\frac{93}{256}}$.",
+            1
+        ]
+    ],
+    "time": 10.225199937820435,
+    "total_tokens": 5808,
+    "final_answer_tokens": 544,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

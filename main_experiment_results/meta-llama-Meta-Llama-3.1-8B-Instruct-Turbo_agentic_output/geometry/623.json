@@ -1,0 +1,66 @@
+{
+    "problem": "Points $A$ and $B$ are selected on the graph of $y = -\\frac{1}{2}x^2$ so that triangle $ABO$ is equilateral. Find the length of one side of triangle $ABO$. [asy]\nsize(150);\ndraw( (-4, -8) -- (-3.4641, -6)-- (-3, -9/2)-- (-5/2, -25/8)-- (-2,-2)-- (-3/2, -9/8) -- (-1, -1/2) -- (-3/4, -9/32) -- (-1/2, -1/8) -- (-1/4, -1/32) -- (0,0) -- (1/4, -1/32) -- (1/2, -1/8) -- (3/4, -9/32) -- (1, -1/2) -- (3/2, -9/8)-- (2,-2)-- (5/2, -25/8)--(3, -9/2)-- (3.4641, -6) -- (4, -8) , Arrows);\ndraw( (-3.4641, -6) -- (0,0) -- (3.4641, -6)--cycle);\n\ndot((-3.4641, -6)); dot((0,0)); dot((3.4641, -6));\nlabel(\"$B$\", (-3.4641, -6), NW); label(\"$A$\", (3.4641, -6), NE);\nlabel(\"$O$\", (0,0), NW);\ndraw( (-6,0) -- (6,0), EndArrow);\nlabel(\"$y$\", (0,5), N); label(\"$x$\", (6,0), E);\ndraw( (0,-7) -- (0,5), EndArrow);\n[/asy]",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "Let the coordinates of $A$ be $(a_1,a_2)$. Then since $A$ is on the graph of $y=-\\frac{1}{2}x^2$, we know that $a_2 = -\\frac{1}{2}a_1^2$. We can also use our knowledge of special right triangles to write $a_2$ in terms of $a_1$. Let $C$ be the midpoint of $A$ and $B$ and let $O$ be the origin. Then $OCA$ is a 30-60-90 right triangle, so the ratio of the length of $OC$ to the length of $CA$ is $\\sqrt{3}:1$. Now the coordinates of C are $(0, a_2)$, so the length of $OC$ is just $-a_2$ (since $a_2$ is negative) and the length of $CA$ is $a_1$. This means $\\dfrac{-a_2}{a_1}=\\sqrt{3} \\Longrightarrow a_2=-\\sqrt{3}a_1$.\n\nWe can now set our two equations for $a_2$ equal to each other and get $-\\sqrt{3}a_1 = -\\frac{1}{2}a_1^2$. Multiplying both sides by $-\\frac{2}{a_1}$ immediately gives $a_1=2\\sqrt{3}$. From here we could solve for $a_2$ using one of our equations and then use the Pythagorean Theorem to solve for the side length of the equilateral triangle, but there's a better way. We remember that the hypotenuse of our special triangle is twice as long as the shortest side of it, which has length $a_1=2\\sqrt{3}$. Therefore our answer is $\\boxed{4\\sqrt{3}}$.",
+    "is_solved": false,
+    "model_solution": "Let $A = (a_1, a_2)$ and $B = (b_1, b_2)$. Since $A$ and $B$ lie on the graph of $y = -\\frac{1}{2}x^2$, we have $a_2 = -\\frac{1}{2}a_1^2$ and $b_2 = -\\frac{1}{2}b_1^2$.\nSince triangle $ABO$ is equilateral, we have $|OA| = |OB| = |AB|$. The distance between two points $(x_1, y_1)$ and $(x_2, y_2)$ is given by $\\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$. Therefore, we have:\n\n$$|AB| = \\sqrt{(b_1 - a_1)^2 + (b_2 - a_2)^2} = \\sqrt{(b_1 - a_1)^2 + (-\\frac{1}{2}b_1^2 + \\frac{1}{2}a_1^2)^2}$$\nSince triangle $ABO$ is equilateral, we also have $|OA| = |AB|$. Using the distance formula, we get:\n\n$$|OA| = \\sqrt{(a_1 - 0)^2 + (a_2 - 0)^2} = \\sqrt{a_1^2 + (-\\frac{1}{2}a_1^2)^2}$$\n\nSince $|OA| = |AB|$, we can equate the two expressions for $|AB|$ and $|OA|$ to obtain:\n\n$$\\sqrt{(b_1 - a_1)^2 + (-\\frac{1}{2}b_1^2 + \\frac{1}{2}a_1^2)^2} = \\sqrt{a_1^2 + (-\\frac{1}{2}a_1^2)^2}$$\nSquaring both sides of the equation obtained in the previous step gives:\n\n$$(b_1 - a_1)^2 + \\left(-\\frac{1}{2}b_1^2 + \\frac{1}{2}a_1^2\\right)^2 = a_1^2 + \\left(-\\frac{1}{2}a_1^2\\right)^2$$\n\nThis can be expanded to:\n\n$$(b_1^2 - 2a_1b_1 + a_1^2) + \\left(\\frac{1}{4}b_1^4 - a_1b_1^2 + \\frac{1}{4}a_1^4\\right) = a_1^2 + \\frac{1}{4}a_1^4$$\nCombine like terms on the left-hand side to simplify the equation:\n\n$$b_1^2 - 2a_1b_1 + a_1^2 + \\frac{1}{4}b_1^4 - a_1b_1^2 + \\frac{1}{4}a_1^4 = a_1^2 + \\frac{1}{4}a_1^4$$\n\nThis simplifies to:\n\n$$\\frac{1}{4}b_1^4 - a_1b_1^2 - 2a_1b_1 + a_1^2 = 0$$\nWe recognize the equation $\\frac{1}{4}b_1^4 - a_1b_1^2 - 2a_1b_1 + a_1^2 = 0$ as a quadratic equation in $b_1^2$, so we let $u = b_1^2$ and rewrite the equation as $\\frac{1}{4}u^2 - a_1u - 2a_1b_1 + a_1^2 = 0.$\nWe can now treat the equation $\\frac{1}{4}u^2 - a_1u - 2a_1b_1 + a_1^2 = 0$ as a quadratic equation in $u$ and solve for $u$.  We can factor the left-hand side of the equation as: $$\\left(\\frac{1}{2}u + a_1\\right)\\left(\\frac{1}{2}u - 2a_1b_1 + a_1^2\\right) = 0$$\nFrom the factored equation $\\left(\\frac{1}{2}u + a_1\\right)\\left(\\frac{1}{2}u - 2a_1b_1 + a_1^2\\right) = 0$, we can equate each factor to zero to solve for $u$.  We obtain:\n\n$$\\frac{1}{2}u + a_1 = 0 \\quad \\text{or} \\quad \\frac{1}{2}u - 2a_1b_1 + a_1^2 = 0$$\nWe now solve for $u$ in the two equations obtained in the previous step. Multiplying both sides of the first equation by 2 gives $u = -2a_1$. Multiplying both sides of the second equation by 2 gives $u = 4a_1b_1 - 2a_1^2$. Substituting $u = b_1^2$ into both equations gives $b_1^2 = -2a_1$ and $b_1^2 = 4a_1b_1 - 2a_1^2$.\nSince $b_1^2 = -2a_1$ and $b_1^2 = 4a_1b_1 - 2a_1^2$ are both equal to $b_1^2$, we can equate the two expressions to obtain:\n\n$$-2a_1 = 4a_1b_1 - 2a_1^2$$",
+    "steps": [
+        "Let $A = (a_1, a_2)$ and $B = (b_1, b_2)$. Since $A$ and $B$ lie on the graph of $y = -\\frac{1}{2}x^2$, we have $a_2 = -\\frac{1}{2}a_1^2$ and $b_2 = -\\frac{1}{2}b_1^2$.",
+        "Since triangle $ABO$ is equilateral, we have $|OA| = |OB| = |AB|$. The distance between two points $(x_1, y_1)$ and $(x_2, y_2)$ is given by $\\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$. Therefore, we have:\n\n$$|AB| = \\sqrt{(b_1 - a_1)^2 + (b_2 - a_2)^2} = \\sqrt{(b_1 - a_1)^2 + (-\\frac{1}{2}b_1^2 + \\frac{1}{2}a_1^2)^2}$$",
+        "Since triangle $ABO$ is equilateral, we also have $|OA| = |AB|$. Using the distance formula, we get:\n\n$$|OA| = \\sqrt{(a_1 - 0)^2 + (a_2 - 0)^2} = \\sqrt{a_1^2 + (-\\frac{1}{2}a_1^2)^2}$$\n\nSince $|OA| = |AB|$, we can equate the two expressions for $|AB|$ and $|OA|$ to obtain:\n\n$$\\sqrt{(b_1 - a_1)^2 + (-\\frac{1}{2}b_1^2 + \\frac{1}{2}a_1^2)^2} = \\sqrt{a_1^2 + (-\\frac{1}{2}a_1^2)^2}$$",
+        "Squaring both sides of the equation obtained in the previous step gives:\n\n$$(b_1 - a_1)^2 + \\left(-\\frac{1}{2}b_1^2 + \\frac{1}{2}a_1^2\\right)^2 = a_1^2 + \\left(-\\frac{1}{2}a_1^2\\right)^2$$\n\nThis can be expanded to:\n\n$$(b_1^2 - 2a_1b_1 + a_1^2) + \\left(\\frac{1}{4}b_1^4 - a_1b_1^2 + \\frac{1}{4}a_1^4\\right) = a_1^2 + \\frac{1}{4}a_1^4$$",
+        "Combine like terms on the left-hand side to simplify the equation:\n\n$$b_1^2 - 2a_1b_1 + a_1^2 + \\frac{1}{4}b_1^4 - a_1b_1^2 + \\frac{1}{4}a_1^4 = a_1^2 + \\frac{1}{4}a_1^4$$\n\nThis simplifies to:\n\n$$\\frac{1}{4}b_1^4 - a_1b_1^2 - 2a_1b_1 + a_1^2 = 0$$",
+        "We recognize the equation $\\frac{1}{4}b_1^4 - a_1b_1^2 - 2a_1b_1 + a_1^2 = 0$ as a quadratic equation in $b_1^2$, so we let $u = b_1^2$ and rewrite the equation as $\\frac{1}{4}u^2 - a_1u - 2a_1b_1 + a_1^2 = 0.$",
+        "We can now treat the equation $\\frac{1}{4}u^2 - a_1u - 2a_1b_1 + a_1^2 = 0$ as a quadratic equation in $u$ and solve for $u$.  We can factor the left-hand side of the equation as: $$\\left(\\frac{1}{2}u + a_1\\right)\\left(\\frac{1}{2}u - 2a_1b_1 + a_1^2\\right) = 0$$",
+        "From the factored equation $\\left(\\frac{1}{2}u + a_1\\right)\\left(\\frac{1}{2}u - 2a_1b_1 + a_1^2\\right) = 0$, we can equate each factor to zero to solve for $u$.  We obtain:\n\n$$\\frac{1}{2}u + a_1 = 0 \\quad \\text{or} \\quad \\frac{1}{2}u - 2a_1b_1 + a_1^2 = 0$$",
+        "We now solve for $u$ in the two equations obtained in the previous step. Multiplying both sides of the first equation by 2 gives $u = -2a_1$. Multiplying both sides of the second equation by 2 gives $u = 4a_1b_1 - 2a_1^2$. Substituting $u = b_1^2$ into both equations gives $b_1^2 = -2a_1$ and $b_1^2 = 4a_1b_1 - 2a_1^2$.",
+        "Since $b_1^2 = -2a_1$ and $b_1^2 = 4a_1b_1 - 2a_1^2$ are both equal to $b_1^2$, we can equate the two expressions to obtain:\n\n$$-2a_1 = 4a_1b_1 - 2a_1^2$$"
+    ],
+    "full_steps": [
+        [
+            "Let $A = (a_1, a_2)$ and $B = (b_1, b_2)$. Since $A$ and $B$ lie on the graph of $y = -\\frac{1}{2}x^2$, we have $a_2 = -\\frac{1}{2}a_1^2$ and $b_2 = -\\frac{1}{2}b_1^2$.",
+            1
+        ],
+        [
+            "Since triangle $ABO$ is equilateral, we have $|OA| = |OB| = |AB|$. The distance between two points $(x_1, y_1)$ and $(x_2, y_2)$ is given by $\\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$. Therefore, we have:\n\n$$|AB| = \\sqrt{(b_1 - a_1)^2 + (b_2 - a_2)^2} = \\sqrt{(b_1 - a_1)^2 + (-\\frac{1}{2}b_1^2 + \\frac{1}{2}a_1^2)^2}$$",
+            1
+        ],
+        [
+            "Since triangle $ABO$ is equilateral, we also have $|OA| = |AB|$. Using the distance formula, we get:\n\n$$|OA| = \\sqrt{(a_1 - 0)^2 + (a_2 - 0)^2} = \\sqrt{a_1^2 + (-\\frac{1}{2}a_1^2)^2}$$\n\nSince $|OA| = |AB|$, we can equate the two expressions for $|AB|$ and $|OA|$ to obtain:\n\n$$\\sqrt{(b_1 - a_1)^2 + (-\\frac{1}{2}b_1^2 + \\frac{1}{2}a_1^2)^2} = \\sqrt{a_1^2 + (-\\frac{1}{2}a_1^2)^2}$$",
+            1
+        ],
+        [
+            "Squaring both sides of the equation obtained in the previous step gives:\n\n$$(b_1 - a_1)^2 + \\left(-\\frac{1}{2}b_1^2 + \\frac{1}{2}a_1^2\\right)^2 = a_1^2 + \\left(-\\frac{1}{2}a_1^2\\right)^2$$\n\nThis can be expanded to:\n\n$$(b_1^2 - 2a_1b_1 + a_1^2) + \\left(\\frac{1}{4}b_1^4 - a_1b_1^2 + \\frac{1}{4}a_1^4\\right) = a_1^2 + \\frac{1}{4}a_1^4$$",
+            1
+        ],
+        [
+            "Combine like terms on the left-hand side to simplify the equation:\n\n$$b_1^2 - 2a_1b_1 + a_1^2 + \\frac{1}{4}b_1^4 - a_1b_1^2 + \\frac{1}{4}a_1^4 = a_1^2 + \\frac{1}{4}a_1^4$$\n\nThis simplifies to:\n\n$$\\frac{1}{4}b_1^4 - a_1b_1^2 - 2a_1b_1 + a_1^2 = 0$$",
+            1
+        ],
+        [
+            "We recognize the equation $\\frac{1}{4}b_1^4 - a_1b_1^2 - 2a_1b_1 + a_1^2 = 0$ as a quadratic equation in $b_1^2$, so we let $u = b_1^2$ and rewrite the equation as $\\frac{1}{4}u^2 - a_1u - 2a_1b_1 + a_1^2 = 0.$",
+            1
+        ],
+        [
+            "We can now treat the equation $\\frac{1}{4}u^2 - a_1u - 2a_1b_1 + a_1^2 = 0$ as a quadratic equation in $u$ and solve for $u$.  We can factor the left-hand side of the equation as: $$\\left(\\frac{1}{2}u + a_1\\right)\\left(\\frac{1}{2}u - 2a_1b_1 + a_1^2\\right) = 0$$",
+            1
+        ],
+        [
+            "From the factored equation $\\left(\\frac{1}{2}u + a_1\\right)\\left(\\frac{1}{2}u - 2a_1b_1 + a_1^2\\right) = 0$, we can equate each factor to zero to solve for $u$.  We obtain:\n\n$$\\frac{1}{2}u + a_1 = 0 \\quad \\text{or} \\quad \\frac{1}{2}u - 2a_1b_1 + a_1^2 = 0$$",
+            1
+        ],
+        [
+            "We now solve for $u$ in the two equations obtained in the previous step. Multiplying both sides of the first equation by 2 gives $u = -2a_1$. Multiplying both sides of the second equation by 2 gives $u = 4a_1b_1 - 2a_1^2$. Substituting $u = b_1^2$ into both equations gives $b_1^2 = -2a_1$ and $b_1^2 = 4a_1b_1 - 2a_1^2$.",
+            1
+        ],
+        [
+            "Since $b_1^2 = -2a_1$ and $b_1^2 = 4a_1b_1 - 2a_1^2$ are both equal to $b_1^2$, we can equate the two expressions to obtain:\n\n$$-2a_1 = 4a_1b_1 - 2a_1^2$$",
+            1
+        ]
+    ],
+    "time": 55.01361083984375,
+    "total_tokens": 25090,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

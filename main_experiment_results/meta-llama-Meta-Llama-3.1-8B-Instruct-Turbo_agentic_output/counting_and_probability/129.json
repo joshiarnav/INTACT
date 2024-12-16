@@ -1,0 +1,46 @@
+{
+    "problem": "What is the sum of all integer values $n$ for which $\\binom{20}{n}+\\binom{20}{10}=\\binom{21}{11}$?",
+    "level": "Level 3",
+    "type": "Counting & Probability",
+    "solution": "From Pascal's identity $\\binom{n-1}{k-1}+\\binom{n-1}{k}=\\binom{n}{k}$.\n\nTherefore, we have $\\binom{20}{11}+\\binom{20}{10}=\\binom{21}{11}$, so $n=11$.\n\nWe know that $\\binom{21}{11}=\\binom{21}{21-11}=\\binom{21}{10}$.\n\nWe use Pascal's identity again to get $\\binom{20}{9}+\\binom{20}{10}=\\binom{21}{10}$, so $n=9$.\n\nThere are two values for $n$, $9$ and $11$, so the sum is $9+11=\\boxed{20}$.",
+    "is_solved": true,
+    "model_solution": "To solve this problem, we can use Pascal's Identity, which states that $\\binom{n}{k} + \\binom{n}{k-1} = \\binom{n+1}{k}$. \n\nFirst, rearrange the given equation: $\\binom{20}{n} = \\binom{21}{11} - \\binom{20}{10}$.\n\nBy applying Pascal's Identity to $\\binom{21}{11}$, we get: $\\binom{21}{11} = \\binom{20}{11} + \\binom{20}{10}$.\nSubstitute the expression for $\\binom{21}{11}$ into the rearranged equation: $\\binom{20}{n} = \\binom{20}{11} + \\binom{20}{10} - \\binom{20}{10}$.\n\nThis simplifies to: $\\binom{20}{n} = \\binom{20}{11}$.\n\nThis implies that $n = \\boxed{11}$ or $n = \\boxed{9}$ (by considering the property that $\\binom{n}{k}=\\binom{n}{n-k}$).\nSince $n = 9$ or $n = 11$ and the problem asks for the sum of all integer values $n$, the sum of these values is:\n\n$9 + 11 = \\boxed{20}$\nThe next step is to verify that we have found all the possible values of n. We already know that $\\binom{20}{n}=\\binom{20}{11}$, and by the property of binomial coefficients, we also have $\\binom{20}{n}=\\binom{20}{20-11}=\\binom{20}{9}$, which confirms that n = 9 is a valid solution. Since we used this property to find the second solution, we can be sure that we have exhausted all possibilities for n.\nWe need to verify that we have found all the possible values of $n$ for the equation $\\binom{20}{n}+\\binom{20}{10}=\\binom{21}{11}$. \n\nThis has been done by confirming that $n = 9$ is a valid solution due to the property of binomial coefficients, and we initially found that $n = 11$ is a solution.\nWe have now confirmed that we have found all possible values of $n$. \n\nThe problem is asking for the sum of all integer values $n$ for which $\\binom{20}{n}+\\binom{20}{10}=\\binom{21}{11}$. \n\nWe have found two solutions, $n = 9$ and $n = 11$, and we have confirmed that these are the only solutions. \n\nTherefore, the sum of all integer values $n$ for which $\\binom{20}{n}+\\binom{20}{10}=\\binom{21}{11}$ is $\\boxed{20}$.",
+    "steps": [
+        "To solve this problem, we can use Pascal's Identity, which states that $\\binom{n}{k} + \\binom{n}{k-1} = \\binom{n+1}{k}$. \n\nFirst, rearrange the given equation: $\\binom{20}{n} = \\binom{21}{11} - \\binom{20}{10}$.\n\nBy applying Pascal's Identity to $\\binom{21}{11}$, we get: $\\binom{21}{11} = \\binom{20}{11} + \\binom{20}{10}$.",
+        "Substitute the expression for $\\binom{21}{11}$ into the rearranged equation: $\\binom{20}{n} = \\binom{20}{11} + \\binom{20}{10} - \\binom{20}{10}$.\n\nThis simplifies to: $\\binom{20}{n} = \\binom{20}{11}$.\n\nThis implies that $n = \\boxed{11}$ or $n = \\boxed{9}$ (by considering the property that $\\binom{n}{k}=\\binom{n}{n-k}$).",
+        "Since $n = 9$ or $n = 11$ and the problem asks for the sum of all integer values $n$, the sum of these values is:\n\n$9 + 11 = \\boxed{20}$",
+        "The next step is to verify that we have found all the possible values of n. We already know that $\\binom{20}{n}=\\binom{20}{11}$, and by the property of binomial coefficients, we also have $\\binom{20}{n}=\\binom{20}{20-11}=\\binom{20}{9}$, which confirms that n = 9 is a valid solution. Since we used this property to find the second solution, we can be sure that we have exhausted all possibilities for n.",
+        "We need to verify that we have found all the possible values of $n$ for the equation $\\binom{20}{n}+\\binom{20}{10}=\\binom{21}{11}$. \n\nThis has been done by confirming that $n = 9$ is a valid solution due to the property of binomial coefficients, and we initially found that $n = 11$ is a solution.",
+        "We have now confirmed that we have found all possible values of $n$. \n\nThe problem is asking for the sum of all integer values $n$ for which $\\binom{20}{n}+\\binom{20}{10}=\\binom{21}{11}$. \n\nWe have found two solutions, $n = 9$ and $n = 11$, and we have confirmed that these are the only solutions. \n\nTherefore, the sum of all integer values $n$ for which $\\binom{20}{n}+\\binom{20}{10}=\\binom{21}{11}$ is $\\boxed{20}$."
+    ],
+    "full_steps": [
+        [
+            "To solve this problem, we can use Pascal's Identity, which states that $\\binom{n}{k} + \\binom{n}{k-1} = \\binom{n+1}{k}$. \n\nFirst, rearrange the given equation: $\\binom{20}{n} = \\binom{21}{11} - \\binom{20}{10}$.\n\nBy applying Pascal's Identity to $\\binom{21}{11}$, we get: $\\binom{21}{11} = \\binom{20}{11} + \\binom{20}{10}$.",
+            1
+        ],
+        [
+            "Substitute the expression for $\\binom{21}{11}$ into the rearranged equation: $\\binom{20}{n} = \\binom{20}{11} + \\binom{20}{10} - \\binom{20}{10}$.\n\nThis simplifies to: $\\binom{20}{n} = \\binom{20}{11}$.\n\nThis implies that $n = \\boxed{11}$ or $n = \\boxed{9}$ (by considering the property that $\\binom{n}{k}=\\binom{n}{n-k}$).",
+            1
+        ],
+        [
+            "Since $n = 9$ or $n = 11$ and the problem asks for the sum of all integer values $n$, the sum of these values is:\n\n$9 + 11 = \\boxed{20}$",
+            1
+        ],
+        [
+            "The next step is to verify that we have found all the possible values of n. We already know that $\\binom{20}{n}=\\binom{20}{11}$, and by the property of binomial coefficients, we also have $\\binom{20}{n}=\\binom{20}{20-11}=\\binom{20}{9}$, which confirms that n = 9 is a valid solution. Since we used this property to find the second solution, we can be sure that we have exhausted all possibilities for n.",
+            1
+        ],
+        [
+            "We need to verify that we have found all the possible values of $n$ for the equation $\\binom{20}{n}+\\binom{20}{10}=\\binom{21}{11}$. \n\nThis has been done by confirming that $n = 9$ is a valid solution due to the property of binomial coefficients, and we initially found that $n = 11$ is a solution.",
+            1
+        ],
+        [
+            "We have now confirmed that we have found all possible values of $n$. \n\nThe problem is asking for the sum of all integer values $n$ for which $\\binom{20}{n}+\\binom{20}{10}=\\binom{21}{11}$. \n\nWe have found two solutions, $n = 9$ and $n = 11$, and we have confirmed that these are the only solutions. \n\nTherefore, the sum of all integer values $n$ for which $\\binom{20}{n}+\\binom{20}{10}=\\binom{21}{11}$ is $\\boxed{20}$.",
+            1
+        ]
+    ],
+    "time": 17.690712928771973,
+    "total_tokens": 5815,
+    "final_answer_tokens": 734,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

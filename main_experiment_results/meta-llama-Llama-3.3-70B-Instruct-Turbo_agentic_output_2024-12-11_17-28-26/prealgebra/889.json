@@ -1,0 +1,26 @@
+{
+    "problem": "If altitude $CD$ is $\\sqrt3$ centimeters, what is the number of square centimeters in the area of $\\Delta ABC$?\n\n[asy] import olympiad; pair A,B,C,D; A = (0,sqrt(3)); B = (1,0);\nC = foot(A,B,-B); D = foot(C,A,B); draw(A--B--C--A); draw(C--D,dashed);\nlabel(\"$30^{\\circ}$\",A-(0.05,0.4),E);\nlabel(\"$A$\",A,N);label(\"$B$\",B,E);label(\"$C$\",C,W);label(\"$D$\",D,NE);\ndraw((0,.1)--(.1,.1)--(.1,0)); draw(D + .1*dir(210)--D + sqrt(2)*.1*dir(165)--D+.1*dir(120));\n[/asy]",
+    "level": "Level 5",
+    "type": "Prealgebra",
+    "solution": "From 30-60-90 right triangle $ACD$ with hypotenuse $\\overline{AC}$ and shorter leg $\\overline{CD}$, we have $AC = 2CD = 2\\sqrt{3}$.\n\nFrom 30-60-90 triangle $ABC$ with shorter leg $\\overline{BC}$ and longer leg $\\overline{AC}$, we have $AC = BC \\sqrt{3}$.  Since $AC = 2\\sqrt{3}$, we have $BC = 2$.  Therefore, the area of $\\triangle ABC$ is  \\[\\frac{(AC)(BC)}{2} = \\frac{(2\\sqrt{3})(2)}{2} = \\boxed{2\\sqrt{3}}.\\]",
+    "is_solved": false,
+    "model_solution": "## Step 1: To find the area of triangle ABC, we first notice that we have a 30-60-90 right triangle ACD.\nIn a 30-60-90 triangle, the sides are in the ratio $1 : \\sqrt{3} : 2$. Given that the altitude CD is $\\sqrt{3}$ centimeters, we can use this ratio to find the lengths of the other sides of the triangle.\n\n## Step 2: Using the 30-60-90 triangle ratio, we find that AC = 2 * CD = 2 * $\\sqrt{3}$ = 2$\\sqrt{3}$ centimeters.\nNow we have the length of side AC.\n\n## Step 3: Next, we can use the fact that triangle ABC is also a 30-60-90 triangle to find the length of side BC.\nSince AC is the side opposite the 60-degree angle and is $\\sqrt{3}$ times the length of the side opposite the 30-degree angle, we can find BC using the ratio of sides in a 30-60-90 triangle.\n\n## Step 4: The ratio of the sides in a 30-60-90 triangle is $1 :\n## Step 5: Using the ratio, we find that BC = 2 centimeters.\nNow we have the lengths of sides AC and BC.\n\n## Step 6: To find the area of triangle ABC, we can use the formula for the area of a triangle: $\\frac{1}{2}$ * base * height.\nIn this case, BC is the base and AC is the height.\n\n## Step 7: Plugging in the values, we get the area of triangle ABC = $\\frac{1}{2}$ * 2 * 2$\\sqrt{3}$ = 2$\\sqrt{3}$ square centimeters.\n\nThe final answer is: $\\boxed{2\\sqrt{3}}$",
+    "steps": [
+        "## Step 1: To find the area of triangle ABC, we first notice that we have a 30-60-90 right triangle ACD.\nIn a 30-60-90 triangle, the sides are in the ratio $1 : \\sqrt{3} : 2$. Given that the altitude CD is $\\sqrt{3}$ centimeters, we can use this ratio to find the lengths of the other sides of the triangle.\n\n## Step 2: Using the 30-60-90 triangle ratio, we find that AC = 2 * CD = 2 * $\\sqrt{3}$ = 2$\\sqrt{3}$ centimeters.\nNow we have the length of side AC.\n\n## Step 3: Next, we can use the fact that triangle ABC is also a 30-60-90 triangle to find the length of side BC.\nSince AC is the side opposite the 60-degree angle and is $\\sqrt{3}$ times the length of the side opposite the 30-degree angle, we can find BC using the ratio of sides in a 30-60-90 triangle.\n\n## Step 4: The ratio of the sides in a 30-60-90 triangle is $1 :",
+        "## Step 5: Using the ratio, we find that BC = 2 centimeters.\nNow we have the lengths of sides AC and BC.\n\n## Step 6: To find the area of triangle ABC, we can use the formula for the area of a triangle: $\\frac{1}{2}$ * base * height.\nIn this case, BC is the base and AC is the height.\n\n## Step 7: Plugging in the values, we get the area of triangle ABC = $\\frac{1}{2}$ * 2 * 2$\\sqrt{3}$ = 2$\\sqrt{3}$ square centimeters.\n\nThe final answer is: $\\boxed{2\\sqrt{3}}$"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: To find the area of triangle ABC, we first notice that we have a 30-60-90 right triangle ACD.\nIn a 30-60-90 triangle, the sides are in the ratio $1 : \\sqrt{3} : 2$. Given that the altitude CD is $\\sqrt{3}$ centimeters, we can use this ratio to find the lengths of the other sides of the triangle.\n\n## Step 2: Using the 30-60-90 triangle ratio, we find that AC = 2 * CD = 2 * $\\sqrt{3}$ = 2$\\sqrt{3}$ centimeters.\nNow we have the length of side AC.\n\n## Step 3: Next, we can use the fact that triangle ABC is also a 30-60-90 triangle to find the length of side BC.\nSince AC is the side opposite the 60-degree angle and is $\\sqrt{3}$ times the length of the side opposite the 30-degree angle, we can find BC using the ratio of sides in a 30-60-90 triangle.\n\n## Step 4: The ratio of the sides in a 30-60-90 triangle is $1 :",
+            1
+        ],
+        [
+            "## Step 5: Using the ratio, we find that BC = 2 centimeters.\nNow we have the lengths of sides AC and BC.\n\n## Step 6: To find the area of triangle ABC, we can use the formula for the area of a triangle: $\\frac{1}{2}$ * base * height.\nIn this case, BC is the base and AC is the height.\n\n## Step 7: Plugging in the values, we get the area of triangle ABC = $\\frac{1}{2}$ * 2 * 2$\\sqrt{3}$ = 2$\\sqrt{3}$ square centimeters.\n\nThe final answer is: $\\boxed{2\\sqrt{3}}$",
+            1
+        ]
+    ],
+    "time": 6.196824073791504,
+    "total_tokens": 2350,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo"
+}

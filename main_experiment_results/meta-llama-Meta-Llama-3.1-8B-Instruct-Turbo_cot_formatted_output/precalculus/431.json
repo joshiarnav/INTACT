@@ -1,0 +1,8 @@
+{
+    "problem": "Convert the point $(\\sqrt{2},-\\sqrt{2})$ in rectangular coordinates to polar coordinates.  Enter your answer in the form $(r,\\theta),$ where $r > 0$ and $0 \\le \\theta < 2 \\pi.$",
+    "solution": "We have that $r = \\sqrt{(\\sqrt{2})^2 + (-\\sqrt{2})^2} = 2.$  Also, if we draw the line connecting the origin and $(\\sqrt{2},-\\sqrt{2}),$ this line makes an angle of $\\frac{7 \\pi}{4}$ with the positive $x$-axis.\n\n[asy]\nunitsize(0.8 cm);\n\ndraw((-2.5,0)--(2.5,0));\ndraw((0,-2.5)--(0,2.5));\ndraw(arc((0,0),2,0,315),red,Arrow(6));\ndraw((0,0)--(sqrt(2),-sqrt(2)));\n\ndot((sqrt(2),-sqrt(2)), red);\nlabel(\"$(\\sqrt{2},-\\sqrt{2})$\", (sqrt(2),-sqrt(2)), NE, UnFill);\ndot((2,0), red);\n[/asy]\n\nTherefore, the polar coordinates are $\\boxed{\\left( 2, \\frac{7 \\pi}{4} \\right)}.$",
+    "total_tokens": 381,
+    "time_taken": 2.8537979125976562,
+    "file_name": "./MATH_subsample_uniform/precalculus/431.json",
+    "model_solution": "To convert the point from rectangular coordinates $(x,y)$ to polar coordinates $(r,\\theta),$ we can use the following formulas:\n\n$r = \\sqrt{x^2 + y^2}$\n$\\theta = \\tan^{-1} \\left(\\frac{y}{x}\\right)$\n\nGiven the point $(\\sqrt{2},-\\sqrt{2}),$ we can plug in the values for $x$ and $y$:\n\n$r = \\sqrt{(\\sqrt{2})^2 + (-\\sqrt{2})^2}$\n$= \\sqrt{2 + 2}$\n$= \\sqrt{4}$\n$= 2$\n\n$\\theta = \\tan^{-1} \\left(\\frac{-\\sqrt{2}}{\\sqrt{2}}\\right)$\n$= \\tan^{-1} \\left(-1\\right)$\nSince the value of $y$ is negative and $0 < \\theta < \\pi$, we must use the third quadrant to find the tangent, which should give us $\\tan^{-1}(-1)$ = $\\frac{5\\pi}{4}.$\n\nTherefore, the polar coordinates of the point $(\\sqrt{2},-\\sqrt{2})$ are $\\boxed{\\left(2,\\frac{5\\pi}{4}\\right)}$."
+}

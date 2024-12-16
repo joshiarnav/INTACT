@@ -1,0 +1,21 @@
+{
+    "problem": "Find the maximum value of\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix},\\]as $\\theta$ ranges over all angles.",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "We can expand the determinant as follows:\n\\begin{align*}\n\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} &= \\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} - \\begin{vmatrix} 1 & 1 \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix} + \\begin{vmatrix} 1 & 1 + \\sin \\theta \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix} \\\\\n&= ((1 + \\sin \\theta) - 1) - (1 - (1 + \\cos \\theta)) + (1 - (1 + \\sin \\theta)(1 + \\cos \\theta)) \\\\\n&= -\\cos \\theta \\sin \\theta = -\\frac{2 \\cos \\theta \\sin \\theta}{2} = -\\frac{\\sin 2 \\theta}{2}.\n\\end{align*}The maximum value of the determinant is then $\\boxed{\\frac{1}{2}}.$",
+    "is_solved": false,
+    "model_solution": "## Step 1: To find the maximum value of the given determinant, we first need to expand the determinant using its definition.\nThe determinant of a 3x3 matrix can be expanded as follows:\n\\[\\begin{vmatrix} a & b & c \\\\ d & e & f \\\\ g & h & i \\end{vmatrix} = a(ei - fh) - b(di - fg) + c(dh - eg).\\]\nApplying this expansion to the given determinant, we get:\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = 1((1 + \\sin \\theta)(1) - (1)(1)) - 1((1)(1) - (1)(1 + \\cos \\theta)) + 1((1)(1) - (1 + \\sin \\theta)(1 + \\cos \\theta)).\\]\n\n## Step 2: Simplify the expression obtained from expanding the determinant.\nSimplifying the expression further:\n\\[= 1(1 + \\sin \\theta",
+    "steps": [
+        "## Step 1: To find the maximum value of the given determinant, we first need to expand the determinant using its definition.\nThe determinant of a 3x3 matrix can be expanded as follows:\n\\[\\begin{vmatrix} a & b & c \\\\ d & e & f \\\\ g & h & i \\end{vmatrix} = a(ei - fh) - b(di - fg) + c(dh - eg).\\]\nApplying this expansion to the given determinant, we get:\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = 1((1 + \\sin \\theta)(1) - (1)(1)) - 1((1)(1) - (1)(1 + \\cos \\theta)) + 1((1)(1) - (1 + \\sin \\theta)(1 + \\cos \\theta)).\\]\n\n## Step 2: Simplify the expression obtained from expanding the determinant.\nSimplifying the expression further:\n\\[= 1(1 + \\sin \\theta"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: To find the maximum value of the given determinant, we first need to expand the determinant using its definition.\nThe determinant of a 3x3 matrix can be expanded as follows:\n\\[\\begin{vmatrix} a & b & c \\\\ d & e & f \\\\ g & h & i \\end{vmatrix} = a(ei - fh) - b(di - fg) + c(dh - eg).\\]\nApplying this expansion to the given determinant, we get:\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = 1((1 + \\sin \\theta)(1) - (1)(1)) - 1((1)(1) - (1)(1 + \\cos \\theta)) + 1((1)(1) - (1 + \\sin \\theta)(1 + \\cos \\theta)).\\]\n\n## Step 2: Simplify the expression obtained from expanding the determinant.\nSimplifying the expression further:\n\\[= 1(1 + \\sin \\theta",
+            1
+        ]
+    ],
+    "time": 2.5027880668640137,
+    "total_tokens": 778,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo"
+}

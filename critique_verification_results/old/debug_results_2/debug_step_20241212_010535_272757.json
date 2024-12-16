@@ -1,0 +1,38 @@
+{
+  "timestamp": "2024-12-12T01:05:35.272737",
+  "problem": "Compute the smallest positive integer $n$ such that\n\\[\\sum_{k = 0}^n \\log_2 \\left( 1 + \\frac{1}{2^{2^k}} \\right) \\ge 1 + \\log_2 \\frac{2014}{2015}.\\]",
+  "step": {
+    "text": "So, $n\\ge2.45635463$",
+    "previous_steps": [
+      "Let $A = 1 + \\log_2 \\frac{2014}{2015}$. We see that\n\\[\\log_2 \\left( 1 + \\frac{1}{2^{2^k}} \\right) = \\log_2 \\frac{2^{2^k} + 1}{2^{2^k}} = \\log_2 \\left( \\frac{2^{2^k} + 1}{2^{2^k}} \\right) = \\log_2 (2^{2^k} + 1) - 2^k.\\]Therefore,\n\\begin{align*}\n\\sum_{k = 0}^n \\log_2 \\left( 1 + \\frac{1}{2^{2^k}} \\right) &= \\sum_{k = 0}^n \\log_2 (2^{2^k} + 1) - \\sum_{k = 0}^n 2^k \\\\\n&= \\sum_{k = 0}^n \\log_2 (2^{2^k} + 1) - (2^{n + 1} - 1).\n\\end{align*}We want to find the smallest $n$ such that this sum is at least $A$.",
+      "$\\sum_{k = 0}^n \\log_2 (2^{2^k} + 1)=\\log_2(\\prod_{k=0}^n(2^{2^k} + 1))$.",
+      "So, we have to find the smallest $n$ such that $\\log_2(\\prod_{k=0}^n(2^{2^k} + 1))\\ge2^{n+1}+\\log_2\\frac{2014}{2015}=\\log_2({2^{2^{n+1}}*\\frac{2014}{2015})}$.",
+      "So $\\prod_{k=0}^n(2^{2^k}+1)\\ge2^{2^{n+1}}\\cdot\\frac{2014}{2015}$.",
+      "Let's plug in some values of $n$.",
+      "For $n=0$, the inequality is not true.",
+      "Right. For $n=1$, the inequality is: $(2^2+1)(2+1)\\ge2^4\\cdot\\frac{2014}{2015}$ which is also not true.",
+      "Let's prove by induction that $\\prod_{k=0}^n(2^{2^k}+1) = 2^{2^{n+1}}-1$.",
+      "For $n=0$ it's true.",
+      "Assume that for $n=m$ it's true. We'll prove for $n=m+1$.",
+      "The product for $n=m+1$ is: $\\left(\\prod_{k=0}^m(2^{2^k}+1)\\right)(2^{2^{m+1}}+1)$.",
+      "By the induction hypothesis, this is equal to: $(2^{2^{m+1}}-1)(2^{2^{m+1}}+1)$.",
+      "Simplifying, we get $2^{2^{m+2}}-1$.",
+      "So, by induction, $\\prod_{k=0}^n(2^{2^k}+1) = 2^{2^{n+1}}-1$",
+      "Our inequality becomes: $2^{2^{n+1}}-1\\ge2^{2^{n+1}}\\cdot\\frac{2014}{2015}$.",
+      "So, we must have $2^{2^{n+1}}\\cdot\\frac{1}{2015}\\ge1$",
+      "We want the smallest $n$ for which this is true.",
+      "$2^{2^{n+1}}\\cdot\\frac{1}{2015}\\ge1\\iff2^{2^{n+1}}\\ge2015$.",
+      "We took the base-2 logarithm of both sides and we get: $2^{n+1}\\ge\\log_2(2015)$.",
+      "So, $n+1\\ge\\log_2(\\log_2(2015))$ and finally $n\\ge\\log_2(\\log_2(2015))-1$.",
+      "$\\log_2{2015}=10.9765641$.",
+      "So, $n\\ge\\log_2(10.9765641)-1$.",
+      "$\\log_2{10.9765641}=3.45635463$",
+      "So, $n\\ge3.45635463-1$"
+    ]
+  },
+  "evaluation": {
+    "model_judgment": true,
+    "ground_truth": true,
+    "rating": 1
+  }
+}

@@ -1,0 +1,66 @@
+{
+    "problem": "For a positive integer $n$ and nonzero digits $a$, $b$, and $c$, let $A_n$ be the $n$-digit integer each of whose digits is equal to $a$; let $B_n$ be the $n$-digit integer each of whose digits is equal to $b$, and let $C_n$ be the $2n$-digit (not $n$-digit) integer each of whose digits is equal to $c$. What is the greatest possible value of $a + b + c$ for which there are at least two values of $n$ such that $C_n - B_n = A_n^2$?\n$\\textbf{(A)} \\text{ 12} \\qquad \\textbf{(B)} \\text{ 14} \\qquad \\textbf{(C)} \\text{ 16} \\qquad \\textbf{(D)} \\text{ 18} \\qquad \\textbf{(E)} \\text{ 20}$\n",
+    "level": "Level 5",
+    "type": "Number Theory",
+    "solution": "Observe $A_n = a(1 + 10 + \\dots + 10^{n - 1}) = a \\cdot \\tfrac{10^n - 1}{9}$; similarly $B_n = b \\cdot \\tfrac{10^n - 1}{9}$ and $C_n = c \\cdot \\tfrac{10^{2n} - 1}{9}$. The relation $C_n - B_n = A_n^2$ rewrites as\\[c \\cdot \\frac{10^{2n} - 1}{9} - b \\cdot \\frac{10^n - 1}{9} = a^2 \\cdot \\left(\\frac{10^n - 1}{9}\\right)^2.\\]Since $n > 0$, $10^n > 1$ and we may cancel out a factor of $\\tfrac{10^n - 1}{9}$ to obtain\\[c \\cdot (10^n + 1) - b = a^2 \\cdot \\frac{10^n - 1}{9}.\\]This is a linear equation in $10^n$. Thus, if two distinct values of $n$ satisfy it, then all values of $n$ will. Now we plug in $n=0$ and $n=1$ (or some other number), we get $2c - b = 0$ and $11c - b= a^2$ . Solving the equations for $c$ and $b$, we get\\[c = \\frac{a^2}{9} \\quad \\text{and} \\quad c - b = -\\frac{a^2}{9} \\implies b = \\frac{2a^2}{9}.\\]To maximize $a + b + c = a + \\tfrac{a^2}{3}$, we need to maximize $a$. Since $b$ and $c$ must be integers, $a$ must be a multiple of $3$. If $a = 9$ then $b$ exceeds $9$. However, if $a = 6$ then $b = 8$ and $c = 4$ for an answer of $\\boxed{18}$.",
+    "is_solved": false,
+    "model_solution": "We are given that $C_n-B_n=A_n^2$; we can rewrite this as\n\\[C_n-A_n^2-B_n=0\\]\nWe can rewrite $C_n$, $A_n$, and $B_n$ in terms of $a$, $b$, and $c$:\nThe next step is to express $C_n$, $A_n$, and $B_n$ in terms of $a$, $b$, and $c$ as follows:\n\\[C_n=\\frac{c(10^{2n}-1)}{9}\\]\n\\[A_n=\\frac{a(10^n-1)}{9}\\]\n\\[B_n=\\frac{b(10^n-1)}{9}\\]\nSubstituting these expressions into the equation we derived initially, we get\n\\[\\frac{c(10^{2n}-1)}{9}-\\frac{a^2(10^n-1)^2}{81}-\\frac{b(10^n-1)}{9}=0\\]\nMultiplying through by $81$ to eliminate the fractions, we get\nWe can group all the terms together and move the term with $10^{2n}-1$ to the left-hand side to get \\[c(10^{2n}-1)-a^2(10^n-1)^2=9b(10^n-1)\\] Then we can rearrange the equation to get \\[c(10^{2n}-1)=(a^2)(10^n-1)^2+9b(10^n-1)\\] If we let $x=10^n-1$, then the equation simplifies to \\[c(x+1)^2=a^2x^2+9bx+9b\\]\nExpanding the right-hand side of the equation, we obtain\n\\[c(x^2+2x+1)=a^2x^2+9bx+9b.\\]\nGrouping all the terms by power of $x$, we have \n\\[cx^2+(2c-9b)x+c=0.\\]\nWe now seek the values of $a$, $b$, and $c$ such that this equation has at least two solutions in $x$.\nWe seek the values of $a$, $b$, and $c$ such that this equation has at least two solutions in $x$.\nIn order for the equation to have at least two solutions in $x$, the discriminant $(2c-9b)^2-4c^2$ must either be a perfect square or zero. If it is a perfect square, then we are done. If it is zero, then we must have $2c-9b=0$, which simplifies to $2c=9b$.\nWe have that $(2c-9b)^2-4c^2\\ge 0$; expanding the left-hand side of the inequality, we have that $4c^2-36bc+81b^2-4c^2\\ge 0$, which simplifies to $-36bc+81b^2\\ge 0$. Factoring the left-hand side of the inequality, we have that $9b(9b-4c)\\ge 0$. Since $b$ is a nonzero digit, we know that $b \\neq 0$. Therefore, we have that $9b-4c > 0$ or $b > \\frac{4}{9}c$. Since $c$ is a nonzero digit, we know that $c\\le 9$. Therefore, we have that $c\\le 9$ and $b > \\frac{4}{9}c$. Since we are asked for the greatest possible value of $a+b+c$, we will try $b=8$ or $c=9$, as these are the largest possible values of $b$ and $c$ that satisfy the inequality.\nIf $c=9$, then\nWe then check that $(2c-9b)^2-4c^2=0$, and we find that $(16)(9)-4(9)^2=144-324=-180$, which is not a perfect square. Therefore, we must have that $b=8$; we check that $9b-4c=72-36=36>0$.\nWe can now let $c=9$ and $b=8$ and substitute these values into the equation to get\n\\[9x^2+18x+9=a^2x^2+72x+72.\\]\nMoving all terms to the left-hand side of the equation, we have\n\\[(9-a^2)x^2+(72-18)x+(72-9)=0\\]\nwhich simplifies to\n\\[(a^2-9)x^2+54x+63=0\\]\nDividing both sides of the equation by $3$, we obtain\n\\[\\frac{(a^2-9)}{3}x^2+18x+21=0\\]\nWe now seek the values of $a$ such that this equation has at least two solutions in $x$.\nWe have that $\\frac{(a^2-9)}{3}x^2+18x+21=0$; in order for this equation to have at least two solutions in $x$, the discriminant $18^2-4\\left(\\frac{(a^2-9)}{3}\\right)(21)$ must be a perfect square.\nDividing through by 4, we have that $9^2-4\\left(\\frac{(a^2-9)}{3}\\right)(21/4)$ is a perfect square.\nExpanding the expression $9^2-4\\left(\\frac{(a^2-9)}{3}\\right)(21/4)$, we have that $81-21(a^2-9)/1$ is a perfect square. Multiplying both sides of the equation by $1$, we have that $81-21(a^2-9)$ is a perfect square. Expanding the expression $81-21(a^2-9)$, we have that $81-21a^2+189$ is a perfect square. Combining like terms, we have that $270-21a^2$ is a perfect square.",
+    "steps": [
+        "We are given that $C_n-B_n=A_n^2$; we can rewrite this as\n\\[C_n-A_n^2-B_n=0\\]\nWe can rewrite $C_n$, $A_n$, and $B_n$ in terms of $a$, $b$, and $c$:",
+        "The next step is to express $C_n$, $A_n$, and $B_n$ in terms of $a$, $b$, and $c$ as follows:\n\\[C_n=\\frac{c(10^{2n}-1)}{9}\\]\n\\[A_n=\\frac{a(10^n-1)}{9}\\]\n\\[B_n=\\frac{b(10^n-1)}{9}\\]\nSubstituting these expressions into the equation we derived initially, we get\n\\[\\frac{c(10^{2n}-1)}{9}-\\frac{a^2(10^n-1)^2}{81}-\\frac{b(10^n-1)}{9}=0\\]\nMultiplying through by $81$ to eliminate the fractions, we get",
+        "We can group all the terms together and move the term with $10^{2n}-1$ to the left-hand side to get \\[c(10^{2n}-1)-a^2(10^n-1)^2=9b(10^n-1)\\] Then we can rearrange the equation to get \\[c(10^{2n}-1)=(a^2)(10^n-1)^2+9b(10^n-1)\\] If we let $x=10^n-1$, then the equation simplifies to \\[c(x+1)^2=a^2x^2+9bx+9b\\]",
+        "Expanding the right-hand side of the equation, we obtain\n\\[c(x^2+2x+1)=a^2x^2+9bx+9b.\\]\nGrouping all the terms by power of $x$, we have \n\\[cx^2+(2c-9b)x+c=0.\\]\nWe now seek the values of $a$, $b$, and $c$ such that this equation has at least two solutions in $x$.",
+        "We seek the values of $a$, $b$, and $c$ such that this equation has at least two solutions in $x$.",
+        "In order for the equation to have at least two solutions in $x$, the discriminant $(2c-9b)^2-4c^2$ must either be a perfect square or zero. If it is a perfect square, then we are done. If it is zero, then we must have $2c-9b=0$, which simplifies to $2c=9b$.",
+        "We have that $(2c-9b)^2-4c^2\\ge 0$; expanding the left-hand side of the inequality, we have that $4c^2-36bc+81b^2-4c^2\\ge 0$, which simplifies to $-36bc+81b^2\\ge 0$. Factoring the left-hand side of the inequality, we have that $9b(9b-4c)\\ge 0$. Since $b$ is a nonzero digit, we know that $b \\neq 0$. Therefore, we have that $9b-4c > 0$ or $b > \\frac{4}{9}c$. Since $c$ is a nonzero digit, we know that $c\\le 9$. Therefore, we have that $c\\le 9$ and $b > \\frac{4}{9}c$. Since we are asked for the greatest possible value of $a+b+c$, we will try $b=8$ or $c=9$, as these are the largest possible values of $b$ and $c$ that satisfy the inequality.\nIf $c=9$, then",
+        "We then check that $(2c-9b)^2-4c^2=0$, and we find that $(16)(9)-4(9)^2=144-324=-180$, which is not a perfect square. Therefore, we must have that $b=8$; we check that $9b-4c=72-36=36>0$.\nWe can now let $c=9$ and $b=8$ and substitute these values into the equation to get\n\\[9x^2+18x+9=a^2x^2+72x+72.\\]\nMoving all terms to the left-hand side of the equation, we have\n\\[(9-a^2)x^2+(72-18)x+(72-9)=0\\]\nwhich simplifies to\n\\[(a^2-9)x^2+54x+63=0\\]\nDividing both sides of the equation by $3$, we obtain\n\\[\\frac{(a^2-9)}{3}x^2+18x+21=0\\]\nWe now seek the values of $a$ such that this equation has at least two solutions in $x$.",
+        "We have that $\\frac{(a^2-9)}{3}x^2+18x+21=0$; in order for this equation to have at least two solutions in $x$, the discriminant $18^2-4\\left(\\frac{(a^2-9)}{3}\\right)(21)$ must be a perfect square.\nDividing through by 4, we have that $9^2-4\\left(\\frac{(a^2-9)}{3}\\right)(21/4)$ is a perfect square.",
+        "Expanding the expression $9^2-4\\left(\\frac{(a^2-9)}{3}\\right)(21/4)$, we have that $81-21(a^2-9)/1$ is a perfect square. Multiplying both sides of the equation by $1$, we have that $81-21(a^2-9)$ is a perfect square. Expanding the expression $81-21(a^2-9)$, we have that $81-21a^2+189$ is a perfect square. Combining like terms, we have that $270-21a^2$ is a perfect square."
+    ],
+    "full_steps": [
+        [
+            "We are given that $C_n-B_n=A_n^2$; we can rewrite this as\n\\[C_n-A_n^2-B_n=0\\]\nWe can rewrite $C_n$, $A_n$, and $B_n$ in terms of $a$, $b$, and $c$:",
+            1
+        ],
+        [
+            "The next step is to express $C_n$, $A_n$, and $B_n$ in terms of $a$, $b$, and $c$ as follows:\n\\[C_n=\\frac{c(10^{2n}-1)}{9}\\]\n\\[A_n=\\frac{a(10^n-1)}{9}\\]\n\\[B_n=\\frac{b(10^n-1)}{9}\\]\nSubstituting these expressions into the equation we derived initially, we get\n\\[\\frac{c(10^{2n}-1)}{9}-\\frac{a^2(10^n-1)^2}{81}-\\frac{b(10^n-1)}{9}=0\\]\nMultiplying through by $81$ to eliminate the fractions, we get",
+            1
+        ],
+        [
+            "We can group all the terms together and move the term with $10^{2n}-1$ to the left-hand side to get \\[c(10^{2n}-1)-a^2(10^n-1)^2=9b(10^n-1)\\] Then we can rearrange the equation to get \\[c(10^{2n}-1)=(a^2)(10^n-1)^2+9b(10^n-1)\\] If we let $x=10^n-1$, then the equation simplifies to \\[c(x+1)^2=a^2x^2+9bx+9b\\]",
+            1
+        ],
+        [
+            "Expanding the right-hand side of the equation, we obtain\n\\[c(x^2+2x+1)=a^2x^2+9bx+9b.\\]\nGrouping all the terms by power of $x$, we have \n\\[cx^2+(2c-9b)x+c=0.\\]\nWe now seek the values of $a$, $b$, and $c$ such that this equation has at least two solutions in $x$.",
+            1
+        ],
+        [
+            "We seek the values of $a$, $b$, and $c$ such that this equation has at least two solutions in $x$.",
+            1
+        ],
+        [
+            "In order for the equation to have at least two solutions in $x$, the discriminant $(2c-9b)^2-4c^2$ must either be a perfect square or zero. If it is a perfect square, then we are done. If it is zero, then we must have $2c-9b=0$, which simplifies to $2c=9b$.",
+            1
+        ],
+        [
+            "We have that $(2c-9b)^2-4c^2\\ge 0$; expanding the left-hand side of the inequality, we have that $4c^2-36bc+81b^2-4c^2\\ge 0$, which simplifies to $-36bc+81b^2\\ge 0$. Factoring the left-hand side of the inequality, we have that $9b(9b-4c)\\ge 0$. Since $b$ is a nonzero digit, we know that $b \\neq 0$. Therefore, we have that $9b-4c > 0$ or $b > \\frac{4}{9}c$. Since $c$ is a nonzero digit, we know that $c\\le 9$. Therefore, we have that $c\\le 9$ and $b > \\frac{4}{9}c$. Since we are asked for the greatest possible value of $a+b+c$, we will try $b=8$ or $c=9$, as these are the largest possible values of $b$ and $c$ that satisfy the inequality.\nIf $c=9$, then",
+            1
+        ],
+        [
+            "We then check that $(2c-9b)^2-4c^2=0$, and we find that $(16)(9)-4(9)^2=144-324=-180$, which is not a perfect square. Therefore, we must have that $b=8$; we check that $9b-4c=72-36=36>0$.\nWe can now let $c=9$ and $b=8$ and substitute these values into the equation to get\n\\[9x^2+18x+9=a^2x^2+72x+72.\\]\nMoving all terms to the left-hand side of the equation, we have\n\\[(9-a^2)x^2+(72-18)x+(72-9)=0\\]\nwhich simplifies to\n\\[(a^2-9)x^2+54x+63=0\\]\nDividing both sides of the equation by $3$, we obtain\n\\[\\frac{(a^2-9)}{3}x^2+18x+21=0\\]\nWe now seek the values of $a$ such that this equation has at least two solutions in $x$.",
+            1
+        ],
+        [
+            "We have that $\\frac{(a^2-9)}{3}x^2+18x+21=0$; in order for this equation to have at least two solutions in $x$, the discriminant $18^2-4\\left(\\frac{(a^2-9)}{3}\\right)(21)$ must be a perfect square.\nDividing through by 4, we have that $9^2-4\\left(\\frac{(a^2-9)}{3}\\right)(21/4)$ is a perfect square.",
+            1
+        ],
+        [
+            "Expanding the expression $9^2-4\\left(\\frac{(a^2-9)}{3}\\right)(21/4)$, we have that $81-21(a^2-9)/1$ is a perfect square. Multiplying both sides of the equation by $1$, we have that $81-21(a^2-9)$ is a perfect square. Expanding the expression $81-21(a^2-9)$, we have that $81-21a^2+189$ is a perfect square. Combining like terms, we have that $270-21a^2$ is a perfect square.",
+            1
+        ]
+    ],
+    "time": 122.16090965270996,
+    "total_tokens": 18700,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-Vision-Free"
+}

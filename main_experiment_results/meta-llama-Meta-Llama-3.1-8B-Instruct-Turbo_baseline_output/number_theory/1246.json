@@ -1,0 +1,8 @@
+{
+    "problem": "A divisor of a number is a proper divisor if it is not equal to the number. What is the sum of the proper divisors of $432$?",
+    "solution": "The prime factorization of $432 = 2^4 \\cdot 3^3$. It follows that the sum of the divisors is equal to $(1 + 2 + 2^2 + 2^3 + 2^4)(1 + 3 + 3^2 + 3^3)$, as each factor of $432$ is represented when the product is expanded. We have to subtract $432$ so that we only count the proper divisors, so the answer is \\begin{align*}\n(1 + 2 + 4 + 8 + 16)(1 + 3 + 9 + 27) - 432 &= (31)(40) - 432\\\\\n&= 1240 - 432\\\\\n&= \\boxed{808}.\\\\\n\\end{align*}",
+    "total_tokens": 366,
+    "time_taken": 5.525043964385986,
+    "file_name": "./MATH_subsample_uniform/number_theory/1246.json",
+    "model_solution": "To find the sum of the proper divisors of 432, we first need to prime factorize 432.\n\n432 = 2^4 * 3^3\n\nThe sum of divisors of a number can be calculated by the formula:\n(a^0 + a^1 + ... + a^n)(b^0 + b^1 + ... + b^m)\n\nwhere a and b are prime factors of the number, and n and m are the powers of the prime factors.\n\nHere, we have a = 2, b = 3, n = 4, and m = 3. So the sum of divisors of 432 will be:\n\n(2^0 + 2^1 + 2^2 + 2^3 + 2^4)(3^0 + 3^1 + 3^2 + 3^3)\n= (1 + 2 + 4 + 8 + 16)(1 + 3 + 9 + 27)\n= 31 * 40\n= 1240\n\nHowever, the question asks for the sum of the proper divisors. The sum of proper divisors can be calculated by subtracting the number itself from the sum of divisors. \n\nSum of proper divisors = Sum of divisors - Number\n= 1240 - 432\n= 808\n\nTherefore, the sum of the proper divisors of 432 is 808."
+}

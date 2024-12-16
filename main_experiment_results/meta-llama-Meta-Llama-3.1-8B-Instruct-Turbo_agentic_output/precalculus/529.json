@@ -1,0 +1,66 @@
+{
+    "problem": "Let $l,$ $m,$ and $n$ be real numbers, and let $A,$ $B,$ $C$ be points such that the midpoint of $\\overline{BC}$ is $(l,0,0),$ the midpoint of $\\overline{AC}$ is $(0,m,0),$ and the midpoint of $\\overline{AB}$ is $(0,0,n).$  Find\n\\[\\frac{AB^2 + AC^2 + BC^2}{l^2 + m^2 + n^2}.\\]",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "Let $D = (l,0,0),$ $E = (0,m,0),$ and $F = (0,0,n).$  Then triangle $DEF$ is the medial triangle of triangle $ABC.$\n\n[asy]\nunitsize(0.5 cm);\n\npair A, B, C, D, E, F;\n\nA = (2,5);\nB = (0,0);\nC = (9,0);\nD = (B + C)/2;\nE = (A + C)/2;\nF = (A + B)/2;\n\ndraw(A--B--C--cycle);\ndraw(D--E--F--cycle);\n\nlabel(\"$A$\", A, N);\nlabel(\"$B$\", B, SW);\nlabel(\"$C$\", C, SE);\nlabel(\"$D$\", D, S);\nlabel(\"$E$\", E, NE);\nlabel(\"$F$\", F, NW);\n[/asy]\n\nHence, $EF = \\frac{BC}{2},$ so\n\\[BC^2 = 4EF^2 = 4m^2 + 4n^2.\\]Similarly, $AC^2 = 4l^2 + 4n^2,$ and $AB^2 = 4l^2 + 4m^2,$ so\n\\[\\frac{AB^2 + AC^2 + BC^2}{l^2 + m^2 + n^2} = \\frac{(4l^2 + 4m^2) + (4l^2 + 4n^2) + (4m^2 + 4n^2)}{l^2 + m^2 + n^2} = \\frac{8l^2 + 8m^2 + 8n^2}{l^2 + m^2 + n^2} = \\boxed{8}.\\]",
+    "is_solved": false,
+    "model_solution": "Let $A = (a_1, a_2, a_3),$ $B = (b_1, b_2, b_3),$ and $C = (c_1, c_2, c_3).$ \n\nSince the midpoint of $\\overline{BC}$ is $(l,0,0),$ we have $\\frac{b_1+c_1}{2} = l,$ $\\frac{b_2+c_2}{2} = 0,$ and $\\frac{b_3+c_3}{2} = 0.$\nSince the midpoint of $\\overline{BC}$ is $(l,0,0),$ we have $\\frac{b_1+c_1}{2} = l,$ $\\frac{b_2+c_2}{2} = 0,$ and $\\frac{b_3+c_3}{2} = 0.$ \n\nSimilarly, from the midpoint of $\\overline{AC}$ being $(0,m,0)$, we have $\\frac{a_1+c_1}{2} = 0,$ $\\frac{a_2+c_2}{2} = m,$ and $\\frac{a_3+c_3}{2} = 0.$ \n\nAnd from the midpoint of $\\overline{AB}$ being $(0,0,n)$, we have $\\frac{a_1+b_1}{2} = 0,$ $\\frac{a_2+b_2}{2} = 0,$ and $\\frac{a_3+b_3}{2} = n.$\n\nSolving these equations for $a_1,$ $a_2,$ $a_3,$ $b_1,$ $b_2,$ $b_3,$ $c_1,$\nTo solve for $a_1,$ $a_2,$ $a_3,$ $b_1,$ $b_2,$ $b_3,$ $c_1,$ $c_2,$ and $c_3$, we have:\n\n\\begin{align*}\na_1+c_1&=0, & a_2+c_2&=2m, & a_3+c_3&=0 \\\\\na_1+b_1&=0, & a_2+b_2&=0, & a_3+b_3&=2n \\\\\nb_1+c_1&=2l, & b_2+c_2&=0, & b_3+c_3&=0 \\\\\n\\end{align*}Adding the first two equations gives $2a_2 = 2m$ so $a_2 = m$. Similarly, adding the last three equations gives $2a_3 = 2n$ so $a_3 = n$. \nNow solving for the other variables, we get: \n$a_1 = -c_1, a_2 = m, a_3 = n$ from the first set\nFrom the first set of equations, we have $a_1 = -c_1$.  Then, using $a_1+b_1=0$, we have $-c_1+b_1=0$ so $b_1=c_1$.  Similarly, using $b_2+c_2=0$, we have $b_2=-c_2$. \n\nNow we can write $B$ and $C$ as $B = (c_1, -c_2, b_3)$ and $C = (-c_1, c_2, c_3)$.\nFrom the equation $b_1 + c_1 = 2l$, we have $c_1 = 2l$. Substituting this into the equation $a_3 + c_3 = 0$, we have $n + c_3 = 0$ or $c_3 = -n$. Substituting $c_1 = 2l$ into the equation $b_3 + c_3 = 0$, we have $b_3 = -2l$. \n\nNow we can write $A$, $B$, and $C$ as $A = (-c_1, m, n) = (-2l, m, n)$, $B = (c_1, -c_2, -2l) = (2l, -c_2, -2l)$, and $C = (-c_1, c_2, -n) = (-2l, c_2, -n)$.\n\nWe can calculate the squared distances $AB^2$, $AC^2$, and $BC^2$ as follows:\n\n$AB^2 = (2l - (-2l))^2 + (-c_2 - m\nWe can simplify $AB^2$ to $AB^2 = (4l)^2 + (-c_2-m)^2 + (-2l)^2$ \n$AB^2 = 16l^2 + c_2^2 + m^2 + 4l^2$ \n$AB^2 = 20l^2 + c_2^2 + m^2$. \n\nSimilarly, we have:\n$AC^2 = 20l^2 + c_2^2 + n^2$. \n$BC^2 = 4l^2 + c_2^2$.\n\nNow we can find the sum of the squared distances $AB^2 + AC^2 + BC^2$:\n$AB^2 + AC^2 + BC^2 = 20l^2 + c_2^2 + m^2 + 20l^2 + c_2^2 + n^2 + 4l^2 + c_2^2 = 44l^2 + 3c_2^2 + m^2 + n^2$\nWe have $AB^2 + AC^2 + BC^2 = 44l^2 + 3c_2^2 + m^2 + n^2$. \n\nWe can now find the desired expression by dividing by $l^2 + m^2 + n^2$:\n$\\frac{AB^2 + AC^2 + BC^2}{l^2 + m^2 + n^2} = \\frac{44l^2 + 3c_2^2 + m^2 + n^2}{l^2 + m^2 + n^2}$\n\nUsing the fact that $c_2^2 \\leq c_1^2 + c_2^2 + c_3^2 = l^2 + m^2 + n^2$, we have:\n$c_2^2 \\leq l^2 + m^2 + n^2$\n\nSince $c_2^2$ is a constant, we can say that $3c_2^2 \\leq 3l^2 + m^2 + n^2$. \n\nWe can now simplify the expression:\n$\\frac{44l^2 +\nSince $3c_2^2 \\leq 3l^2 + m^2 + n^2$, we can substitute this into the expression:\n$\\frac{44l^2 + 3c_2^2 + m^2 + n^2}{l^2 + m^2 + n^2} \\leq \\frac{44l^2 + 3l^2 + m^2 + n^2}{l^2 + m^2 + n^2}$\nWe can now simplify the expression:\n\n$\\frac{44l^2 + 3l^2 + m^2 + n^2}{l^2 + m^2 + n^2}$\n\n$= \\frac{47l^2 + m^2 + n^2}{l^2 + m^2 + n^2}$\nWe can now simplify the expression:\n$\\frac{47l^2 + m^2 + n^2}{l^2 + m^2 + n^2}$\n\n$= 47 + \\frac{m^2 + n^2}{l^2 + m^2 + n^2}$",
+    "steps": [
+        "Let $A = (a_1, a_2, a_3),$ $B = (b_1, b_2, b_3),$ and $C = (c_1, c_2, c_3).$ \n\nSince the midpoint of $\\overline{BC}$ is $(l,0,0),$ we have $\\frac{b_1+c_1}{2} = l,$ $\\frac{b_2+c_2}{2} = 0,$ and $\\frac{b_3+c_3}{2} = 0.$",
+        "Since the midpoint of $\\overline{BC}$ is $(l,0,0),$ we have $\\frac{b_1+c_1}{2} = l,$ $\\frac{b_2+c_2}{2} = 0,$ and $\\frac{b_3+c_3}{2} = 0.$ \n\nSimilarly, from the midpoint of $\\overline{AC}$ being $(0,m,0)$, we have $\\frac{a_1+c_1}{2} = 0,$ $\\frac{a_2+c_2}{2} = m,$ and $\\frac{a_3+c_3}{2} = 0.$ \n\nAnd from the midpoint of $\\overline{AB}$ being $(0,0,n)$, we have $\\frac{a_1+b_1}{2} = 0,$ $\\frac{a_2+b_2}{2} = 0,$ and $\\frac{a_3+b_3}{2} = n.$\n\nSolving these equations for $a_1,$ $a_2,$ $a_3,$ $b_1,$ $b_2,$ $b_3,$ $c_1,$",
+        "To solve for $a_1,$ $a_2,$ $a_3,$ $b_1,$ $b_2,$ $b_3,$ $c_1,$ $c_2,$ and $c_3$, we have:\n\n\\begin{align*}\na_1+c_1&=0, & a_2+c_2&=2m, & a_3+c_3&=0 \\\\\na_1+b_1&=0, & a_2+b_2&=0, & a_3+b_3&=2n \\\\\nb_1+c_1&=2l, & b_2+c_2&=0, & b_3+c_3&=0 \\\\\n\\end{align*}Adding the first two equations gives $2a_2 = 2m$ so $a_2 = m$. Similarly, adding the last three equations gives $2a_3 = 2n$ so $a_3 = n$. \nNow solving for the other variables, we get: \n$a_1 = -c_1, a_2 = m, a_3 = n$ from the first set",
+        "From the first set of equations, we have $a_1 = -c_1$.  Then, using $a_1+b_1=0$, we have $-c_1+b_1=0$ so $b_1=c_1$.  Similarly, using $b_2+c_2=0$, we have $b_2=-c_2$. \n\nNow we can write $B$ and $C$ as $B = (c_1, -c_2, b_3)$ and $C = (-c_1, c_2, c_3)$.",
+        "From the equation $b_1 + c_1 = 2l$, we have $c_1 = 2l$. Substituting this into the equation $a_3 + c_3 = 0$, we have $n + c_3 = 0$ or $c_3 = -n$. Substituting $c_1 = 2l$ into the equation $b_3 + c_3 = 0$, we have $b_3 = -2l$. \n\nNow we can write $A$, $B$, and $C$ as $A = (-c_1, m, n) = (-2l, m, n)$, $B = (c_1, -c_2, -2l) = (2l, -c_2, -2l)$, and $C = (-c_1, c_2, -n) = (-2l, c_2, -n)$.\n\nWe can calculate the squared distances $AB^2$, $AC^2$, and $BC^2$ as follows:\n\n$AB^2 = (2l - (-2l))^2 + (-c_2 - m",
+        "We can simplify $AB^2$ to $AB^2 = (4l)^2 + (-c_2-m)^2 + (-2l)^2$ \n$AB^2 = 16l^2 + c_2^2 + m^2 + 4l^2$ \n$AB^2 = 20l^2 + c_2^2 + m^2$. \n\nSimilarly, we have:\n$AC^2 = 20l^2 + c_2^2 + n^2$. \n$BC^2 = 4l^2 + c_2^2$.\n\nNow we can find the sum of the squared distances $AB^2 + AC^2 + BC^2$:\n$AB^2 + AC^2 + BC^2 = 20l^2 + c_2^2 + m^2 + 20l^2 + c_2^2 + n^2 + 4l^2 + c_2^2 = 44l^2 + 3c_2^2 + m^2 + n^2$",
+        "We have $AB^2 + AC^2 + BC^2 = 44l^2 + 3c_2^2 + m^2 + n^2$. \n\nWe can now find the desired expression by dividing by $l^2 + m^2 + n^2$:\n$\\frac{AB^2 + AC^2 + BC^2}{l^2 + m^2 + n^2} = \\frac{44l^2 + 3c_2^2 + m^2 + n^2}{l^2 + m^2 + n^2}$\n\nUsing the fact that $c_2^2 \\leq c_1^2 + c_2^2 + c_3^2 = l^2 + m^2 + n^2$, we have:\n$c_2^2 \\leq l^2 + m^2 + n^2$\n\nSince $c_2^2$ is a constant, we can say that $3c_2^2 \\leq 3l^2 + m^2 + n^2$. \n\nWe can now simplify the expression:\n$\\frac{44l^2 +",
+        "Since $3c_2^2 \\leq 3l^2 + m^2 + n^2$, we can substitute this into the expression:\n$\\frac{44l^2 + 3c_2^2 + m^2 + n^2}{l^2 + m^2 + n^2} \\leq \\frac{44l^2 + 3l^2 + m^2 + n^2}{l^2 + m^2 + n^2}$",
+        "We can now simplify the expression:\n\n$\\frac{44l^2 + 3l^2 + m^2 + n^2}{l^2 + m^2 + n^2}$\n\n$= \\frac{47l^2 + m^2 + n^2}{l^2 + m^2 + n^2}$",
+        "We can now simplify the expression:\n$\\frac{47l^2 + m^2 + n^2}{l^2 + m^2 + n^2}$\n\n$= 47 + \\frac{m^2 + n^2}{l^2 + m^2 + n^2}$"
+    ],
+    "full_steps": [
+        [
+            "Let $A = (a_1, a_2, a_3),$ $B = (b_1, b_2, b_3),$ and $C = (c_1, c_2, c_3).$ \n\nSince the midpoint of $\\overline{BC}$ is $(l,0,0),$ we have $\\frac{b_1+c_1}{2} = l,$ $\\frac{b_2+c_2}{2} = 0,$ and $\\frac{b_3+c_3}{2} = 0.$",
+            1
+        ],
+        [
+            "Since the midpoint of $\\overline{BC}$ is $(l,0,0),$ we have $\\frac{b_1+c_1}{2} = l,$ $\\frac{b_2+c_2}{2} = 0,$ and $\\frac{b_3+c_3}{2} = 0.$ \n\nSimilarly, from the midpoint of $\\overline{AC}$ being $(0,m,0)$, we have $\\frac{a_1+c_1}{2} = 0,$ $\\frac{a_2+c_2}{2} = m,$ and $\\frac{a_3+c_3}{2} = 0.$ \n\nAnd from the midpoint of $\\overline{AB}$ being $(0,0,n)$, we have $\\frac{a_1+b_1}{2} = 0,$ $\\frac{a_2+b_2}{2} = 0,$ and $\\frac{a_3+b_3}{2} = n.$\n\nSolving these equations for $a_1,$ $a_2,$ $a_3,$ $b_1,$ $b_2,$ $b_3,$ $c_1,$",
+            1
+        ],
+        [
+            "To solve for $a_1,$ $a_2,$ $a_3,$ $b_1,$ $b_2,$ $b_3,$ $c_1,$ $c_2,$ and $c_3$, we have:\n\n\\begin{align*}\na_1+c_1&=0, & a_2+c_2&=2m, & a_3+c_3&=0 \\\\\na_1+b_1&=0, & a_2+b_2&=0, & a_3+b_3&=2n \\\\\nb_1+c_1&=2l, & b_2+c_2&=0, & b_3+c_3&=0 \\\\\n\\end{align*}Adding the first two equations gives $2a_2 = 2m$ so $a_2 = m$. Similarly, adding the last three equations gives $2a_3 = 2n$ so $a_3 = n$. \nNow solving for the other variables, we get: \n$a_1 = -c_1, a_2 = m, a_3 = n$ from the first set",
+            1
+        ],
+        [
+            "From the first set of equations, we have $a_1 = -c_1$.  Then, using $a_1+b_1=0$, we have $-c_1+b_1=0$ so $b_1=c_1$.  Similarly, using $b_2+c_2=0$, we have $b_2=-c_2$. \n\nNow we can write $B$ and $C$ as $B = (c_1, -c_2, b_3)$ and $C = (-c_1, c_2, c_3)$.",
+            1
+        ],
+        [
+            "From the equation $b_1 + c_1 = 2l$, we have $c_1 = 2l$. Substituting this into the equation $a_3 + c_3 = 0$, we have $n + c_3 = 0$ or $c_3 = -n$. Substituting $c_1 = 2l$ into the equation $b_3 + c_3 = 0$, we have $b_3 = -2l$. \n\nNow we can write $A$, $B$, and $C$ as $A = (-c_1, m, n) = (-2l, m, n)$, $B = (c_1, -c_2, -2l) = (2l, -c_2, -2l)$, and $C = (-c_1, c_2, -n) = (-2l, c_2, -n)$.\n\nWe can calculate the squared distances $AB^2$, $AC^2$, and $BC^2$ as follows:\n\n$AB^2 = (2l - (-2l))^2 + (-c_2 - m",
+            1
+        ],
+        [
+            "We can simplify $AB^2$ to $AB^2 = (4l)^2 + (-c_2-m)^2 + (-2l)^2$ \n$AB^2 = 16l^2 + c_2^2 + m^2 + 4l^2$ \n$AB^2 = 20l^2 + c_2^2 + m^2$. \n\nSimilarly, we have:\n$AC^2 = 20l^2 + c_2^2 + n^2$. \n$BC^2 = 4l^2 + c_2^2$.\n\nNow we can find the sum of the squared distances $AB^2 + AC^2 + BC^2$:\n$AB^2 + AC^2 + BC^2 = 20l^2 + c_2^2 + m^2 + 20l^2 + c_2^2 + n^2 + 4l^2 + c_2^2 = 44l^2 + 3c_2^2 + m^2 + n^2$",
+            1
+        ],
+        [
+            "We have $AB^2 + AC^2 + BC^2 = 44l^2 + 3c_2^2 + m^2 + n^2$. \n\nWe can now find the desired expression by dividing by $l^2 + m^2 + n^2$:\n$\\frac{AB^2 + AC^2 + BC^2}{l^2 + m^2 + n^2} = \\frac{44l^2 + 3c_2^2 + m^2 + n^2}{l^2 + m^2 + n^2}$\n\nUsing the fact that $c_2^2 \\leq c_1^2 + c_2^2 + c_3^2 = l^2 + m^2 + n^2$, we have:\n$c_2^2 \\leq l^2 + m^2 + n^2$\n\nSince $c_2^2$ is a constant, we can say that $3c_2^2 \\leq 3l^2 + m^2 + n^2$. \n\nWe can now simplify the expression:\n$\\frac{44l^2 +",
+            1
+        ],
+        [
+            "Since $3c_2^2 \\leq 3l^2 + m^2 + n^2$, we can substitute this into the expression:\n$\\frac{44l^2 + 3c_2^2 + m^2 + n^2}{l^2 + m^2 + n^2} \\leq \\frac{44l^2 + 3l^2 + m^2 + n^2}{l^2 + m^2 + n^2}$",
+            1
+        ],
+        [
+            "We can now simplify the expression:\n\n$\\frac{44l^2 + 3l^2 + m^2 + n^2}{l^2 + m^2 + n^2}$\n\n$= \\frac{47l^2 + m^2 + n^2}{l^2 + m^2 + n^2}$",
+            1
+        ],
+        [
+            "We can now simplify the expression:\n$\\frac{47l^2 + m^2 + n^2}{l^2 + m^2 + n^2}$\n\n$= 47 + \\frac{m^2 + n^2}{l^2 + m^2 + n^2}$",
+            1
+        ]
+    ],
+    "time": 185.95561385154724,
+    "total_tokens": 25092,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

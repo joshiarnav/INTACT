@@ -1,0 +1,21 @@
+{
+    "problem": "Let $(a,b,c,d)$ be a solution to the system\\begin{align*}a+b&=15,\\\\ab+c+d&=78,\\\\ad+bc&=160,\\\\cd&=96.\\end{align*}Find the greatest possible value of $a^2+b^2+c^2+d^2$.\n",
+    "level": "Level 5",
+    "type": "Intermediate Algebra",
+    "solution": "Note that when multiplying quadratics, terms add up similar to the equations of a system, so let\\begin{align*} p(x) &= (x^2 + ax + c)(x^2 + bx + d) \\\\ &= x^4 + (a+b)x^3 + (ab+c+d)x^2 + (ad+bc)x + cd \\\\ &= x^4 + 15x^3 + 78x^2 + 160x + 96 \\end{align*}Factoring $p(x)$ with the Rational Root Theorem results in $(x+4)(x+4)(x+1)(x+6)$. By the Fundamental Theorem of Algebra, we know that $x+4, x+4, x+1, x+6$ are all the linear factors of the polynomial, so the quadratic factors can only be multiplied from these linear factors.\nThere are only two possible distinct groupings (not counting rearrangements) -- $(x^2 + 8x + 16)(x^2 + 7x + 6)$ and $(x^2 + 5x + 4)(x^2 + 10x + 24)$. In the first case, $a^2 + b^2 + c^2 + d^2 = 405$, and in the second case, $a^2 + b^2 + c^2 + d^2 = 717$. The largest of the two options is $\\boxed{717}$.",
+    "is_solved": false,
+    "model_solution": "## Step 1: Recognize the given system of equations as coefficients obtained when two polynomials are multiplied.\nWhen we multiply two polynomials of the form $(x^2 + ax + c)$ and $(x^2 + bx + d)$, we get a polynomial of the form $x^4 + (a+b)x^3 + (ab+c+d)x^2 + (ad+bc)x + cd$. The coefficients of this resulting polynomial are exactly the equations given in the problem.\n\n## Step 2: Write down the polynomial equation based on the given system of equations.\nGiven the system of equations:\n\\begin{align*}\na+b &= 15, \\\\\nab+c+d &= 78, \\\\\nad+bc &= 160, \\\\\ncd &= 96,\n\\end{align*}\nwe can write the polynomial as $x^4 + 15x^3 + 78x^2 + 160x + 96$.\n\n## Step 3: Factor the polynomial to find the roots.\nTo solve for $a$, $b$, $c$, and $d$, we need to factor the polynomial $x^4 + 15x^3 + 78x^2 + 160",
+    "steps": [
+        "## Step 1: Recognize the given system of equations as coefficients obtained when two polynomials are multiplied.\nWhen we multiply two polynomials of the form $(x^2 + ax + c)$ and $(x^2 + bx + d)$, we get a polynomial of the form $x^4 + (a+b)x^3 + (ab+c+d)x^2 + (ad+bc)x + cd$. The coefficients of this resulting polynomial are exactly the equations given in the problem.\n\n## Step 2: Write down the polynomial equation based on the given system of equations.\nGiven the system of equations:\n\\begin{align*}\na+b &= 15, \\\\\nab+c+d &= 78, \\\\\nad+bc &= 160, \\\\\ncd &= 96,\n\\end{align*}\nwe can write the polynomial as $x^4 + 15x^3 + 78x^2 + 160x + 96$.\n\n## Step 3: Factor the polynomial to find the roots.\nTo solve for $a$, $b$, $c$, and $d$, we need to factor the polynomial $x^4 + 15x^3 + 78x^2 + 160"
+    ],
+    "full_steps": [
+        [
+            "## Step 1: Recognize the given system of equations as coefficients obtained when two polynomials are multiplied.\nWhen we multiply two polynomials of the form $(x^2 + ax + c)$ and $(x^2 + bx + d)$, we get a polynomial of the form $x^4 + (a+b)x^3 + (ab+c+d)x^2 + (ad+bc)x + cd$. The coefficients of this resulting polynomial are exactly the equations given in the problem.\n\n## Step 2: Write down the polynomial equation based on the given system of equations.\nGiven the system of equations:\n\\begin{align*}\na+b &= 15, \\\\\nab+c+d &= 78, \\\\\nad+bc &= 160, \\\\\ncd &= 96,\n\\end{align*}\nwe can write the polynomial as $x^4 + 15x^3 + 78x^2 + 160x + 96$.\n\n## Step 3: Factor the polynomial to find the roots.\nTo solve for $a$, $b$, $c$, and $d$, we need to factor the polynomial $x^4 + 15x^3 + 78x^2 + 160",
+            1
+        ]
+    ],
+    "time": 3.639904022216797,
+    "total_tokens": 792,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo"
+}

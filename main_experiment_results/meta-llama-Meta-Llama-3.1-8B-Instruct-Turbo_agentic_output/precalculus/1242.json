@@ -1,0 +1,46 @@
+{
+    "problem": "Find the maximum value of\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix},\\]as $\\theta$ ranges over all angles.",
+    "level": "Level 4",
+    "type": "Precalculus",
+    "solution": "We can expand the determinant as follows:\n\\begin{align*}\n\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} &= \\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} - \\begin{vmatrix} 1 & 1 \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix} + \\begin{vmatrix} 1 & 1 + \\sin \\theta \\\\ 1 + \\cos \\theta & 1 \\end{vmatrix} \\\\\n&= ((1 + \\sin \\theta) - 1) - (1 - (1 + \\cos \\theta)) + (1 - (1 + \\sin \\theta)(1 + \\cos \\theta)) \\\\\n&= -\\cos \\theta \\sin \\theta = -\\frac{2 \\cos \\theta \\sin \\theta}{2} = -\\frac{\\sin 2 \\theta}{2}.\n\\end{align*}The maximum value of the determinant is then $\\boxed{\\frac{1}{2}}.$",
+    "is_solved": true,
+    "model_solution": "To find the maximum value of the given determinant, we'll first apply the expansion of the determinant along the first column. \n\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = 1\\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} - 1\\begin{vmatrix} 1 & 1 \\\\ 1 & 1 \\end{vmatrix} + (1 + \\cos \\theta)\\begin{vmatrix} 1 & 1 + \\sin \\theta \\\\ 1 & 1 \\end{vmatrix}.\\]\n\nSimplifying the 2x2 determinants inside, we get:\n\n\\[1((1 + \\sin \\theta) - 1) - 1(1 - 1) + (1 + \\cos \\theta)((1 - 1 - \\sin \\theta)).\\]\n\nThis can be further simplified to:\n\n\\[1(\\sin \\theta) - 0 + (1 + \\\nSimplifying the expression further, we get:\n\n\\[\\sin \\theta - \\sin \\theta \\cos \\theta.\\]\n\nThis can be rewritten as:\n\n\\[\\sin \\theta (1 - \\cos \\theta).\\]\nTo find the maximum value of $\\sin \\theta (1 - \\cos \\theta),$ we need to find the maximum value of the sine function and the minimum value of the cosine function. The maximum value of sine is 1, which occurs when $\\theta = \\frac{\\pi}{2} + 2k\\pi$ for any integer $k$. \n\nTherefore, we want to find the maximum value of $1(1 - \\cos \\theta)$.\nWe need to find the minimum value of the cosine function $1 - \\cos \\theta$. Since the cosine function is periodic with a period of $2\\pi$, the minimum value of $\\cos \\theta$ is $-1$, which occurs when $\\theta = \\pi + 2k\\pi$ for any integer $k$. Therefore, the minimum value of $1 - \\cos \\theta$ is $1 - (-1) = 2$. \n\nThis means the maximum value of $\\sin \\theta (1 - \\cos \\theta)$ is $\\sin \\theta (2) = 2\\sin \\theta$.\nTo find the maximum value of $2\\sin \\theta,$ we note that the sine function is periodic with a period of $2\\pi,$ and its maximum value is $1.$ This maximum value occurs when $\\theta = \\frac{\\pi}{2} + 2k\\pi$ for any integer $k.$ Therefore, the maximum value of $2\\sin \\theta$ is $2(1) = 2.$\nThe maximum value of $2\\sin \\theta$ is $2$, and since this value occurs when $\\theta = \\frac{\\pi}{2} + 2k\\pi$ for any integer $k,$ the maximum value of the determinant is $\\boxed{2}$.",
+    "steps": [
+        "To find the maximum value of the given determinant, we'll first apply the expansion of the determinant along the first column. \n\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = 1\\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} - 1\\begin{vmatrix} 1 & 1 \\\\ 1 & 1 \\end{vmatrix} + (1 + \\cos \\theta)\\begin{vmatrix} 1 & 1 + \\sin \\theta \\\\ 1 & 1 \\end{vmatrix}.\\]\n\nSimplifying the 2x2 determinants inside, we get:\n\n\\[1((1 + \\sin \\theta) - 1) - 1(1 - 1) + (1 + \\cos \\theta)((1 - 1 - \\sin \\theta)).\\]\n\nThis can be further simplified to:\n\n\\[1(\\sin \\theta) - 0 + (1 + \\",
+        "Simplifying the expression further, we get:\n\n\\[\\sin \\theta - \\sin \\theta \\cos \\theta.\\]\n\nThis can be rewritten as:\n\n\\[\\sin \\theta (1 - \\cos \\theta).\\]",
+        "To find the maximum value of $\\sin \\theta (1 - \\cos \\theta),$ we need to find the maximum value of the sine function and the minimum value of the cosine function. The maximum value of sine is 1, which occurs when $\\theta = \\frac{\\pi}{2} + 2k\\pi$ for any integer $k$. \n\nTherefore, we want to find the maximum value of $1(1 - \\cos \\theta)$.",
+        "We need to find the minimum value of the cosine function $1 - \\cos \\theta$. Since the cosine function is periodic with a period of $2\\pi$, the minimum value of $\\cos \\theta$ is $-1$, which occurs when $\\theta = \\pi + 2k\\pi$ for any integer $k$. Therefore, the minimum value of $1 - \\cos \\theta$ is $1 - (-1) = 2$. \n\nThis means the maximum value of $\\sin \\theta (1 - \\cos \\theta)$ is $\\sin \\theta (2) = 2\\sin \\theta$.",
+        "To find the maximum value of $2\\sin \\theta,$ we note that the sine function is periodic with a period of $2\\pi,$ and its maximum value is $1.$ This maximum value occurs when $\\theta = \\frac{\\pi}{2} + 2k\\pi$ for any integer $k.$ Therefore, the maximum value of $2\\sin \\theta$ is $2(1) = 2.$",
+        "The maximum value of $2\\sin \\theta$ is $2$, and since this value occurs when $\\theta = \\frac{\\pi}{2} + 2k\\pi$ for any integer $k,$ the maximum value of the determinant is $\\boxed{2}$."
+    ],
+    "full_steps": [
+        [
+            "To find the maximum value of the given determinant, we'll first apply the expansion of the determinant along the first column. \n\n\\[\\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & 1 + \\sin \\theta & 1 \\\\ 1 + \\cos \\theta & 1 & 1 \\end{vmatrix} = 1\\begin{vmatrix} 1 + \\sin \\theta & 1 \\\\ 1 & 1 \\end{vmatrix} - 1\\begin{vmatrix} 1 & 1 \\\\ 1 & 1 \\end{vmatrix} + (1 + \\cos \\theta)\\begin{vmatrix} 1 & 1 + \\sin \\theta \\\\ 1 & 1 \\end{vmatrix}.\\]\n\nSimplifying the 2x2 determinants inside, we get:\n\n\\[1((1 + \\sin \\theta) - 1) - 1(1 - 1) + (1 + \\cos \\theta)((1 - 1 - \\sin \\theta)).\\]\n\nThis can be further simplified to:\n\n\\[1(\\sin \\theta) - 0 + (1 + \\",
+            1
+        ],
+        [
+            "Simplifying the expression further, we get:\n\n\\[\\sin \\theta - \\sin \\theta \\cos \\theta.\\]\n\nThis can be rewritten as:\n\n\\[\\sin \\theta (1 - \\cos \\theta).\\]",
+            1
+        ],
+        [
+            "To find the maximum value of $\\sin \\theta (1 - \\cos \\theta),$ we need to find the maximum value of the sine function and the minimum value of the cosine function. The maximum value of sine is 1, which occurs when $\\theta = \\frac{\\pi}{2} + 2k\\pi$ for any integer $k$. \n\nTherefore, we want to find the maximum value of $1(1 - \\cos \\theta)$.",
+            1
+        ],
+        [
+            "We need to find the minimum value of the cosine function $1 - \\cos \\theta$. Since the cosine function is periodic with a period of $2\\pi$, the minimum value of $\\cos \\theta$ is $-1$, which occurs when $\\theta = \\pi + 2k\\pi$ for any integer $k$. Therefore, the minimum value of $1 - \\cos \\theta$ is $1 - (-1) = 2$. \n\nThis means the maximum value of $\\sin \\theta (1 - \\cos \\theta)$ is $\\sin \\theta (2) = 2\\sin \\theta$.",
+            1
+        ],
+        [
+            "To find the maximum value of $2\\sin \\theta,$ we note that the sine function is periodic with a period of $2\\pi,$ and its maximum value is $1.$ This maximum value occurs when $\\theta = \\frac{\\pi}{2} + 2k\\pi$ for any integer $k.$ Therefore, the maximum value of $2\\sin \\theta$ is $2(1) = 2.$",
+            1
+        ],
+        [
+            "The maximum value of $2\\sin \\theta$ is $2$, and since this value occurs when $\\theta = \\frac{\\pi}{2} + 2k\\pi$ for any integer $k,$ the maximum value of the determinant is $\\boxed{2}$.",
+            1
+        ]
+    ],
+    "time": 103.50732111930847,
+    "total_tokens": 7272,
+    "final_answer_tokens": 807,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

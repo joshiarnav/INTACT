@@ -1,0 +1,8 @@
+{
+    "problem": "In the triangle shown, what is the positive difference between the greatest and least possible integral values of $x$?\n\n[asy]\n\ndefaultpen(linewidth(0.7));\npair a,b,c;\nb = (1,2); c = (3,0);\ndraw(a--b--c--a);\nlabel(\"$x$\",a--b,dir(135)); label(\"5\",b--c,dir(45)); label(\"6\",c--a,S);\n[/asy]",
+    "solution": "We have $x<6+5=11$ and $x>6-5=1$, so the possible values of $x$ are from $2$ to $10$, and their difference is $10-2 = \\boxed{8}$.",
+    "total_tokens": 402,
+    "time_taken": 3.8803420066833496,
+    "file_name": "./MATH_subsample_uniform/geometry/847.json",
+    "model_solution": "To find the greatest and least possible integral values of $x$, we first need to apply the triangle inequality, which states that the sum of the lengths of any two sides of a triangle must be greater than the length of the third side.\n\nIn this triangle, the two fixed sides are 5 and 6. Therefore, we can set up the following inequalities:\n\n- $5 + 6 > x$\n- $5 + x > 6$\n- $6 + x > 5$\n\nSimplifying the inequalities, we get:\n\n- $11 > x$\n- $x > 1$\n- $x > -1$\n\nSince $x$ must be a positive length, we can ignore the inequality $x > -1$ and consider only $x > 1$ and $11 > x$.\n\nThe greatest possible integral value of $x$ is 10 (the largest integer less than 11), and the least possible integral value of $x$ is 2 (the smallest integer greater than 1).\n\nThe positive difference between the greatest and least possible integral values of $x$ is $10 - 2 = 8.$ \n\nTherefore, the answer is $\\boxed{8}$."
+}

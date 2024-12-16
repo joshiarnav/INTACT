@@ -1,0 +1,20 @@
+{
+  "timestamp": "2024-12-12T01:06:09.501967",
+  "problem": "Evaluate\n\\[\\begin{vmatrix} 1 & x & y \\\\ 1 & x + y & y \\\\ 1 & x & x + y \\end{vmatrix}.\\]",
+  "step": {
+    "text": "So the answer is $1 \\cdot (x^2 + xy + y^2) + x \\cdot (x) + y \\cdot (-y)$.",
+    "previous_steps": [
+      "This looks like a job for cofactor expansion.",
+      "Agreed. Let's do the expansion along the top row.",
+      "The first entry is $1$, and its cofactor is\n\\[\\begin{vmatrix} x + y & y \\\\ x & x + y \\end{vmatrix}.\\]\nWe can compute this determinant by cofactor expansion as well, but let's take a shortcut.",
+      "The determinant of a $2 \\times 2$ matrix $\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}$ is $ad - bc$.",
+      "So the cofactor of the first entry is $(x + y)^2 - xy = x^2 + 2xy + y^2 - xy = x^2 + xy + y^2$.\nThe second entry is $x$, and its cofactor is\n\\[\\begin{vmatrix} 1 & y \\\\ 1 & x + y \\end{vmatrix}.\\]\nThis is a $2 \\times 2$ determinant, so its value is $(x + y) - y = x$.\nThe third entry is $y$, and its cofactor is\n\\[\\begin{vmatrix} 1 & x + y \\\\ 1 & x \\end{vmatrix}.\\]\nThis is also a $2 \\times 2$ determinant, so its value is $(x) - (x + y) = -y$.",
+      "Now we just need to multiply these out and add them up."
+    ]
+  },
+  "evaluation": {
+    "model_judgment": true,
+    "ground_truth": true,
+    "rating": 1
+  }
+}

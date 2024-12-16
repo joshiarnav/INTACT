@@ -1,0 +1,46 @@
+{
+    "problem": "Compute $\\sin 60^\\circ$.",
+    "level": "Level 2",
+    "type": "Geometry",
+    "solution": "Let $P$ be the point on the unit circle that is $60^\\circ$ counterclockwise from $(1,0)$, and let $D$ be the foot of the altitude from $P$ to the $x$-axis, as shown below.\n\n[asy]\n\npair A,C,P,O,D;\n\ndraw((0,-1.2)--(0,1.2),p=black+1.2bp,Arrows(0.15cm));\n\ndraw((-1.2,0)--(1.2,0),p=black+1.2bp,Arrows(0.15cm));\n\nA = (1,0);\n\nO= (0,0);\n\nlabel(\"$x$\",(1.2,0),SE);\n\nlabel(\"$y$\",(0,1.2),NE);\n\nP = rotate(60)*A;\n\nD = foot(P,A,-A);\n\ndraw(O--P--D);\n\ndraw(rightanglemark(O,D,P,2));\n\ndraw(Circle(O,1));\n\nlabel(\"$O$\",O,SE);\n\nlabel(\"$P$\",P,NE);\n\n//label(\"$A$\",A,SE);\n\nlabel(\"$D$\",D,S);\n\n[/asy]\n\nTriangle $POD$ is a 30-60-90 triangle, so $DO = \\frac{1}{2}$ and $DP = \\frac{\\sqrt{3}}{2}$.  Therefore, the coordinates of $P$ are $\\left(\\frac{1}{2}, \\frac{\\sqrt{3}}{2}\\right)$, so $\\sin 60^\\circ = \\boxed{\\frac{\\sqrt{3}}{2}}$.",
+    "is_solved": true,
+    "stop_reason": "final_answer",
+    "model_solution": "To compute $\\sin 60^\\circ$, we can use the unit circle. \n\nThe first step is to construct an angle of $60^\\circ$ on the unit circle and locate its coordinates.\nLocate the terminal side of the angle of $60^\\circ$ and construct a right triangle with the terminal side as the hypotenuse, where the angle between the side opposite to the terminal side and the hypotenuse is $60^\\circ$.\nThe next step is to determine the side lengths of the right triangle. Since the angle between the hypotenuse and the side opposite to the terminal side is 60\u00b0, it follows the ratio of the side lengths that defines a 30\u00b0-60\u00b0-90\u00b0 triangle. The side lengths are typically in the ratio 1:\u221a3:2, with 1 being opposite to the 30\u00b0 angle, \u221a3 being opposite to the 60\u00b0 angle, and 2 being the hypotenuse.\nUsing the side lengths of the right triangle (1:\u221a3:2) and since the side opposite to the 60\u00b0 angle has the length of \u221a3, we can now calculate the sine of 60\u00b0 as the ratio of the side opposite to the 60\u00b0 angle to the hypotenuse, which is \u221a3/2. \n\nNext step: Simplify the expression to obtain the final value of $\\sin 60^\\circ$.\nSince the expression $\\frac{\\sqrt{3}}{2}$ is already simplified, the final step is:\n\n$\\boxed{\\frac{\\sqrt{3}}{2}}$",
+    "steps": [
+        "To compute $\\sin 60^\\circ$, we can use the unit circle. \n\nThe first step is to construct an angle of $60^\\circ$ on the unit circle and locate its coordinates.",
+        "Locate the terminal side of the angle of $60^\\circ$ and construct a right triangle with the terminal side as the hypotenuse, where the angle between the side opposite to the terminal side and the hypotenuse is $60^\\circ$.",
+        "The next step is to determine the side lengths of the right triangle. Since the angle between the hypotenuse and the side opposite to the terminal side is 60\u00b0, it follows the ratio of the side lengths that defines a 30\u00b0-60\u00b0-90\u00b0 triangle. The side lengths are typically in the ratio 1:\u221a3:2, with 1 being opposite to the 30\u00b0 angle, \u221a3 being opposite to the 60\u00b0 angle, and 2 being the hypotenuse.",
+        "Using the side lengths of the right triangle (1:\u221a3:2) and since the side opposite to the 60\u00b0 angle has the length of \u221a3, we can now calculate the sine of 60\u00b0 as the ratio of the side opposite to the 60\u00b0 angle to the hypotenuse, which is \u221a3/2. \n\nNext step: Simplify the expression to obtain the final value of $\\sin 60^\\circ$.",
+        "Since the expression $\\frac{\\sqrt{3}}{2}$ is already simplified, the final step is:\n\n$\\boxed{\\frac{\\sqrt{3}}{2}}$"
+    ],
+    "full_steps": [
+        [
+            "To compute $\\sin 60^\\circ$, we can use the unit circle. \n\nThe first step is to construct an angle of $60^\\circ$ on the unit circle and locate its coordinates.",
+            1
+        ],
+        [
+            "Locate the terminal side of the angle of $60^\\circ$ and construct a right triangle with the terminal side as the hypotenuse, where the angle between the side opposite to the terminal side and the hypotenuse is $60^\\circ$.",
+            1
+        ],
+        [
+            "Since we have constructed a right triangle with the terminal side of the angle as the hypotenuse, we can apply the 30-60-90 triangle property to find the coordinates. The side opposite to the $60^\\circ$ angle is $\\frac{\\sqrt{3}}{2}$ of the hypotenuse and the adjacent side is $\\frac{1}{2}$ of the hypotenuse.",
+            0
+        ],
+        [
+            "The next step is to determine the side lengths of the right triangle. Since the angle between the hypotenuse and the side opposite to the terminal side is 60\u00b0, it follows the ratio of the side lengths that defines a 30\u00b0-60\u00b0-90\u00b0 triangle. The side lengths are typically in the ratio 1:\u221a3:2, with 1 being opposite to the 30\u00b0 angle, \u221a3 being opposite to the 60\u00b0 angle, and 2 being the hypotenuse.",
+            1
+        ],
+        [
+            "Using the side lengths of the right triangle (1:\u221a3:2) and since the side opposite to the 60\u00b0 angle has the length of \u221a3, we can now calculate the sine of 60\u00b0 as the ratio of the side opposite to the 60\u00b0 angle to the hypotenuse, which is \u221a3/2. \n\nNext step: Simplify the expression to obtain the final value of $\\sin 60^\\circ$.",
+            1
+        ],
+        [
+            "Since the expression $\\frac{\\sqrt{3}}{2}$ is already simplified, the final step is:\n\n$\\boxed{\\frac{\\sqrt{3}}{2}}$",
+            1
+        ]
+    ],
+    "time": 19.084183931350708,
+    "total_tokens": 3276,
+    "final_answer_tokens": 392,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

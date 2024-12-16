@@ -1,0 +1,41 @@
+{
+    "problem": "Crestview's school colors are purple and gold. The students are designing a flag using three solid-colored horizontal stripes, as shown. Using one or both of the school colors, how many different flags are possible if adjacent stripes may be the same color?\n\n[asy]\nsize(75);\ndraw((0,0)--(0,12));\ndot((0,12));\ndraw((0,12)--(8,12)--(8,11)--(0,11));\ndraw((8,11)--(8,9)--(0,9));\ndraw((8,9)--(8,6)--(0,6));\n[/asy]",
+    "level": "Level 2",
+    "type": "Counting & Probability",
+    "solution": "There are two possible colors for the first stripe, two possible colors for the second stripe, and two possible colors for the third stripe. Since the colors of each stripe are mutually exclusive, there are $2\\times 2 \\times 2 = \\boxed{8}$ ways to color the flag.",
+    "is_solved": true,
+    "model_solution": "To find the total number of possible flags, we first consider the options for the top stripe. \n\nThere are 2 possible colors for the top stripe: purple or gold.\nFor each of the top stripe's 2 possible colors, we can also choose either of the two colors for the middle stripe.\nFor each of the 4 possible combinations of colors for the top and middle stripes, we can choose either of the two colors for the bottom stripe, giving us a total of $4\\times2=8$ possible flags.\nFor each of the 8 possible combinations of colors for the top, middle, and bottom stripes, there are no restrictions on the colors of the adjacent stripes, so the total number of possible flags is $8\\times 1=8$.\nFor each of the 8 possible combinations of colors for the top, middle, and bottom stripes, there are no restrictions on the colors of the adjacent stripes, so the total number of possible flags is $8\\times 1=8$ and there are 8 possible colors combinations for the stripes, so we have $\\boxed{8}$.",
+    "steps": [
+        "To find the total number of possible flags, we first consider the options for the top stripe. \n\nThere are 2 possible colors for the top stripe: purple or gold.",
+        "For each of the top stripe's 2 possible colors, we can also choose either of the two colors for the middle stripe.",
+        "For each of the 4 possible combinations of colors for the top and middle stripes, we can choose either of the two colors for the bottom stripe, giving us a total of $4\\times2=8$ possible flags.",
+        "For each of the 8 possible combinations of colors for the top, middle, and bottom stripes, there are no restrictions on the colors of the adjacent stripes, so the total number of possible flags is $8\\times 1=8$.",
+        "For each of the 8 possible combinations of colors for the top, middle, and bottom stripes, there are no restrictions on the colors of the adjacent stripes, so the total number of possible flags is $8\\times 1=8$ and there are 8 possible colors combinations for the stripes, so we have $\\boxed{8}$."
+    ],
+    "full_steps": [
+        [
+            "To find the total number of possible flags, we first consider the options for the top stripe. \n\nThere are 2 possible colors for the top stripe: purple or gold.",
+            1
+        ],
+        [
+            "For each of the top stripe's 2 possible colors, we can also choose either of the two colors for the middle stripe.",
+            1
+        ],
+        [
+            "For each of the 4 possible combinations of colors for the top and middle stripes, we can choose either of the two colors for the bottom stripe, giving us a total of $4\\times2=8$ possible flags.",
+            1
+        ],
+        [
+            "For each of the 8 possible combinations of colors for the top, middle, and bottom stripes, there are no restrictions on the colors of the adjacent stripes, so the total number of possible flags is $8\\times 1=8$.",
+            1
+        ],
+        [
+            "For each of the 8 possible combinations of colors for the top, middle, and bottom stripes, there are no restrictions on the colors of the adjacent stripes, so the total number of possible flags is $8\\times 1=8$ and there are 8 possible colors combinations for the stripes, so we have $\\boxed{8}$.",
+            1
+        ]
+    ],
+    "time": 55.54937028884888,
+    "total_tokens": 3309,
+    "final_answer_tokens": 430,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

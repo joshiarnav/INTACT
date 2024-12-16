@@ -1,0 +1,36 @@
+{
+    "problem": "How many three digit numbers are left if we exclude all three digit numbers in which there are exactly two digits the same, but these two digits are not adjacent?",
+    "level": "Level 4",
+    "type": "Counting & Probability",
+    "solution": "The only three digit numbers which are ruled out are numbers of the form $ABA$, where A and B are different digits. There are 9 ways to choose A, since it can't be 0, and once A has been chosen there are 9 ways to choose B. Since there are $9\\cdot10\\cdot10=900$ total three digit numbers, and $9\\cdot9=81$ numbers which aren't valid, there are $900-81=\\boxed{819}$ valid numbers.",
+    "is_solved": true,
+    "model_solution": "To solve this problem, we first need to identify the three-digit numbers with exactly two non-adjacent identical digits. \n\nStep 1: Identify the pattern of non-adjacent identical digits in a three-digit number. The pattern is ABA, where A and B are different digits. \n\nExample: 122, 355, 477, etc. \n\nWe will then calculate the total count of numbers following this pattern.\nStep 2: \nCalculate the total count of numbers following the ABA pattern. \nFor A, we have 9 options (1-9, cannot be 0). \nOnce A is chosen, for B, we have 9 options (0 and the remaining 8 digits). \nSo, the total count is 9 * 9 = 81.\nStep 3: \nTo find the total count of three-digit numbers that do not have exactly two non-adjacent identical digits, we subtract the count of numbers following the ABA pattern from the total count of three-digit numbers. There are 900 three-digit numbers in total (from 100 to 999). Therefore, the total count of three-digit numbers that do not have exactly two non-adjacent identical digits is 900 - 81 = 819.\nStep 4: \nThe total count of three-digit numbers that do not have exactly two non-adjacent identical digits is 819. Since the total count of three-digit numbers is 900, the number of three-digit numbers left after excluding all three-digit numbers in which there are exactly two digits the same, but these two digits are not adjacent, is 819. \n\n$\\boxed{819}$",
+    "steps": [
+        "To solve this problem, we first need to identify the three-digit numbers with exactly two non-adjacent identical digits. \n\nStep 1: Identify the pattern of non-adjacent identical digits in a three-digit number. The pattern is ABA, where A and B are different digits. \n\nExample: 122, 355, 477, etc. \n\nWe will then calculate the total count of numbers following this pattern.",
+        "Step 2: \nCalculate the total count of numbers following the ABA pattern. \nFor A, we have 9 options (1-9, cannot be 0). \nOnce A is chosen, for B, we have 9 options (0 and the remaining 8 digits). \nSo, the total count is 9 * 9 = 81.",
+        "Step 3: \nTo find the total count of three-digit numbers that do not have exactly two non-adjacent identical digits, we subtract the count of numbers following the ABA pattern from the total count of three-digit numbers. There are 900 three-digit numbers in total (from 100 to 999). Therefore, the total count of three-digit numbers that do not have exactly two non-adjacent identical digits is 900 - 81 = 819.",
+        "Step 4: \nThe total count of three-digit numbers that do not have exactly two non-adjacent identical digits is 819. Since the total count of three-digit numbers is 900, the number of three-digit numbers left after excluding all three-digit numbers in which there are exactly two digits the same, but these two digits are not adjacent, is 819. \n\n$\\boxed{819}$"
+    ],
+    "full_steps": [
+        [
+            "To solve this problem, we first need to identify the three-digit numbers with exactly two non-adjacent identical digits. \n\nStep 1: Identify the pattern of non-adjacent identical digits in a three-digit number. The pattern is ABA, where A and B are different digits. \n\nExample: 122, 355, 477, etc. \n\nWe will then calculate the total count of numbers following this pattern.",
+            1
+        ],
+        [
+            "Step 2: \nCalculate the total count of numbers following the ABA pattern. \nFor A, we have 9 options (1-9, cannot be 0). \nOnce A is chosen, for B, we have 9 options (0 and the remaining 8 digits). \nSo, the total count is 9 * 9 = 81.",
+            1
+        ],
+        [
+            "Step 3: \nTo find the total count of three-digit numbers that do not have exactly two non-adjacent identical digits, we subtract the count of numbers following the ABA pattern from the total count of three-digit numbers. There are 900 three-digit numbers in total (from 100 to 999). Therefore, the total count of three-digit numbers that do not have exactly two non-adjacent identical digits is 900 - 81 = 819.",
+            1
+        ],
+        [
+            "Step 4: \nThe total count of three-digit numbers that do not have exactly two non-adjacent identical digits is 819. Since the total count of three-digit numbers is 900, the number of three-digit numbers left after excluding all three-digit numbers in which there are exactly two digits the same, but these two digits are not adjacent, is 819. \n\n$\\boxed{819}$",
+            1
+        ]
+    ],
+    "time": 8.45343804359436,
+    "total_tokens": 2615,
+    "final_answer_tokens": 443,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

@@ -1,0 +1,66 @@
+{
+    "problem": "In the figure below, $ABCD$ is a square piece of paper 6 cm on each side. Corner $C$ is folded over so that it coincides with $E$, the midpoint of $\\overline{AD}$. If $\\overline{GF}$ represents the crease created by the fold such that $F$ is on $CD,$ what is the length of $\\overline{FD}$? Express your answer as a common fraction. [asy]\nimport geometry;\nsize(150);\npair A = (0,0), B = (0,1), C = (1,1), D = (1,0);\npath square = A--B--C--D--cycle;\ndraw(square);\nlabel(\"A\",A,SW); label(\"B\",B,NW); label(\"C\",C,NE); label(\"D\",D,SE);\npair E = midpoint(A--D);\nline CE = line(C,E);\npair X = midpoint(C--E); line FG = perpendicular(X,CE);\n\npair[] intwithsquare = intersectionpoints(FG,square);\npair G = intwithsquare[0];\npair F = intwithsquare[1];\ndraw(F--G,dashed);\nlabel(\"F\",F,E);\nlabel(\"G\",G,W);\n[/asy]",
+    "level": "Level 5",
+    "type": "Geometry",
+    "solution": "Notice that after folding the paper, $\\overline{CF}$ becomes $\\overline{EF}$ (we are basically reflecting the segment across the crease line). If $FD=x$, then $CF=EF=6-x$. Angle $FDE$ is a right angle since $ABCD$ is a square, so $\\triangle FDE$ is a right triangle. We also know the length of $\\overline{ED}$ is $3$ since $E$ is the midpoint of $\\overline{AD}$. By the Pythagorean Theorem, $(6-x)^2=x^2+3^2$ and we can solve for $x$. \\begin{align*}\n(36-12x+x^2)&=x^2+9\\quad\\Rightarrow\\\\\n36-12x&=9\\quad\\Rightarrow\\\\\n27&=12x\\quad\\Rightarrow\\\\\n\\frac{9}{4}&=x\n\\end{align*} The length of $\\overline{FD}$ is $\\boxed{\\frac94}$ cm.\n\n[asy]\nimport geometry;\nsize(150);\npair A = (0,0), B = (0,1), C = (1,1), D = (1,0);\npath square = A--B--C--D--cycle;\ndraw(square);\nlabel(\"A\",A,SW); label(\"B\",B,NW); label(\"C\",C,NE); label(\"D\",D,SE);\npair E = midpoint(A--D);\nline CE = line(C,E);\npair X = midpoint(C--E); line FG = perpendicular(X,CE);\n\npair[] intwithsquare = intersectionpoints(FG,square);\npair G = intwithsquare[0];\npair F = intwithsquare[1];\ndraw(F--G,dashed);\ndraw(C--E);\nlabel(\"F\",F,E);\nlabel(\"G\",G,W);\nlabel(\"E\", E, S);\ndraw(F--E);\nlabel(\"$3$\", (E+D)/2, S);\nlabel(\"$x$\", (F+D)/2, E);\nlabel(\"$6-x$\", (F+C)/2, E);\nlabel(\"$6-x$\", (F+E)/2, fontsize(8));\ndraw(rightanglemark(C,D,E,2));\n[/asy]",
+    "is_solved": false,
+    "model_solution": "Let's start by labeling the figure and identifying the given information: \n\n* $ABCD$ is a square with each side measuring 6 cm.\n* Corner $C$ is folded over and coincides with $E$, the midpoint of $\\overline{AD}$.\n* $\\overline{GF}$ represents the crease created by the fold, where $F$ is on $CD$.\n* We are asked to find the length of $\\overline{FD}$.\nSince $ABCD$ is a square, $\\triangle FDE$ is a right triangle. We can use the Pythagorean Theorem to find the length of $\\overline{FD}$.\n\nLet $FD = x$. Then $FC = 6 - x$. Since $\\triangle FDE$ is a right triangle, we can write:\n\n$$(6 - x)^2 + x^2 = 6^2$$\n\nExpanding and simplifying the equation, we get:\n\n$$x^2 - 12x + 36 + x^2 = 36$$\n\nCombine like terms:\n\n$$2x^2 - 12x = 0$$\n\nDivide by 2:\n\n$$x^2 - 6x = 0$$\n\nFactor out $x$:\n\n$$x(x - 6) = 0$$\n\nThis gives us two possible solutions for $x$: $x = 0$ or $x = 6$. However, since $F$ is on $CD$, $x$ cannot be 0.\nThe only solution that satisfies the given conditions is $x = 0$. This would mean that $F$ and $D$ coincide, which is not possible since $F$ is on $CD$. Therefore, we need to reconsider our approach. Since $\\triangle FDE$ is a right triangle, we can use the Pythagorean Theorem to find the length of $\\overline{FD}$.\nSince $\\triangle FDE$ is a right triangle, and $E$ is the midpoint of $\\overline{AD}$, we can also consider that $\\triangle FDE$ is similar to $\\triangle CDE$. This allows us to set up the proportion $\\frac{FD}{DC} = \\frac{DE}{DC}$, where $DC = 6$.\nSince $\\triangle FDE$ is similar to $\\triangle CDE$, we can set up the proportion $\\frac{FD}{DC} = \\frac{DE}{DC}$. We know that $DC = 6$ and $DE = 3$ since $E$ is the midpoint of $\\overline{AD}$. Substituting these values into the proportion, we get:\n\n$\\frac{FD}{6} = \\frac{3}{6}$\n\nNow, we can solve for $FD$.\nNow, we can solve for $FD$ by cross-multiplying:\n\n$FD \\times 6 = 3 \\times 6$\n\n$FD \\times 6 = 18$\n\n$FD = \\frac{18}{6}$\nWe can simplify the fraction by dividing both the numerator and denominator by their greatest common divisor, which is 6:\n\n$FD = \\frac{18}{6} = \\frac{3}{1} = 3$\nSimplify the fraction $\\frac{18}{6}$ by dividing both the numerator and denominator by their greatest common divisor, which is 6.\nNow that we have found that $FD = 3$, we can state that the length of $\\overline{FD}$ is 3 cm.\nNow that we have found that $FD = 3$, we can state that the length of $\\overline{FD}$ is $\\boxed{3}$.",
+    "steps": [
+        "Let's start by labeling the figure and identifying the given information: \n\n* $ABCD$ is a square with each side measuring 6 cm.\n* Corner $C$ is folded over and coincides with $E$, the midpoint of $\\overline{AD}$.\n* $\\overline{GF}$ represents the crease created by the fold, where $F$ is on $CD$.\n* We are asked to find the length of $\\overline{FD}$.",
+        "Since $ABCD$ is a square, $\\triangle FDE$ is a right triangle. We can use the Pythagorean Theorem to find the length of $\\overline{FD}$.\n\nLet $FD = x$. Then $FC = 6 - x$. Since $\\triangle FDE$ is a right triangle, we can write:\n\n$$(6 - x)^2 + x^2 = 6^2$$\n\nExpanding and simplifying the equation, we get:\n\n$$x^2 - 12x + 36 + x^2 = 36$$\n\nCombine like terms:\n\n$$2x^2 - 12x = 0$$\n\nDivide by 2:\n\n$$x^2 - 6x = 0$$\n\nFactor out $x$:\n\n$$x(x - 6) = 0$$\n\nThis gives us two possible solutions for $x$: $x = 0$ or $x = 6$. However, since $F$ is on $CD$, $x$ cannot be 0.",
+        "The only solution that satisfies the given conditions is $x = 0$. This would mean that $F$ and $D$ coincide, which is not possible since $F$ is on $CD$. Therefore, we need to reconsider our approach. Since $\\triangle FDE$ is a right triangle, we can use the Pythagorean Theorem to find the length of $\\overline{FD}$.",
+        "Since $\\triangle FDE$ is a right triangle, and $E$ is the midpoint of $\\overline{AD}$, we can also consider that $\\triangle FDE$ is similar to $\\triangle CDE$. This allows us to set up the proportion $\\frac{FD}{DC} = \\frac{DE}{DC}$, where $DC = 6$.",
+        "Since $\\triangle FDE$ is similar to $\\triangle CDE$, we can set up the proportion $\\frac{FD}{DC} = \\frac{DE}{DC}$. We know that $DC = 6$ and $DE = 3$ since $E$ is the midpoint of $\\overline{AD}$. Substituting these values into the proportion, we get:\n\n$\\frac{FD}{6} = \\frac{3}{6}$\n\nNow, we can solve for $FD$.",
+        "Now, we can solve for $FD$ by cross-multiplying:\n\n$FD \\times 6 = 3 \\times 6$\n\n$FD \\times 6 = 18$\n\n$FD = \\frac{18}{6}$",
+        "We can simplify the fraction by dividing both the numerator and denominator by their greatest common divisor, which is 6:\n\n$FD = \\frac{18}{6} = \\frac{3}{1} = 3$",
+        "Simplify the fraction $\\frac{18}{6}$ by dividing both the numerator and denominator by their greatest common divisor, which is 6.",
+        "Now that we have found that $FD = 3$, we can state that the length of $\\overline{FD}$ is 3 cm.",
+        "Now that we have found that $FD = 3$, we can state that the length of $\\overline{FD}$ is $\\boxed{3}$."
+    ],
+    "full_steps": [
+        [
+            "Let's start by labeling the figure and identifying the given information: \n\n* $ABCD$ is a square with each side measuring 6 cm.\n* Corner $C$ is folded over and coincides with $E$, the midpoint of $\\overline{AD}$.\n* $\\overline{GF}$ represents the crease created by the fold, where $F$ is on $CD$.\n* We are asked to find the length of $\\overline{FD}$.",
+            1
+        ],
+        [
+            "Since $ABCD$ is a square, $\\triangle FDE$ is a right triangle. We can use the Pythagorean Theorem to find the length of $\\overline{FD}$.\n\nLet $FD = x$. Then $FC = 6 - x$. Since $\\triangle FDE$ is a right triangle, we can write:\n\n$$(6 - x)^2 + x^2 = 6^2$$\n\nExpanding and simplifying the equation, we get:\n\n$$x^2 - 12x + 36 + x^2 = 36$$\n\nCombine like terms:\n\n$$2x^2 - 12x = 0$$\n\nDivide by 2:\n\n$$x^2 - 6x = 0$$\n\nFactor out $x$:\n\n$$x(x - 6) = 0$$\n\nThis gives us two possible solutions for $x$: $x = 0$ or $x = 6$. However, since $F$ is on $CD$, $x$ cannot be 0.",
+            1
+        ],
+        [
+            "The only solution that satisfies the given conditions is $x = 0$. This would mean that $F$ and $D$ coincide, which is not possible since $F$ is on $CD$. Therefore, we need to reconsider our approach. Since $\\triangle FDE$ is a right triangle, we can use the Pythagorean Theorem to find the length of $\\overline{FD}$.",
+            1
+        ],
+        [
+            "Since $\\triangle FDE$ is a right triangle, and $E$ is the midpoint of $\\overline{AD}$, we can also consider that $\\triangle FDE$ is similar to $\\triangle CDE$. This allows us to set up the proportion $\\frac{FD}{DC} = \\frac{DE}{DC}$, where $DC = 6$.",
+            1
+        ],
+        [
+            "Since $\\triangle FDE$ is similar to $\\triangle CDE$, we can set up the proportion $\\frac{FD}{DC} = \\frac{DE}{DC}$. We know that $DC = 6$ and $DE = 3$ since $E$ is the midpoint of $\\overline{AD}$. Substituting these values into the proportion, we get:\n\n$\\frac{FD}{6} = \\frac{3}{6}$\n\nNow, we can solve for $FD$.",
+            1
+        ],
+        [
+            "Now, we can solve for $FD$ by cross-multiplying:\n\n$FD \\times 6 = 3 \\times 6$\n\n$FD \\times 6 = 18$\n\n$FD = \\frac{18}{6}$",
+            1
+        ],
+        [
+            "We can simplify the fraction by dividing both the numerator and denominator by their greatest common divisor, which is 6:\n\n$FD = \\frac{18}{6} = \\frac{3}{1} = 3$",
+            1
+        ],
+        [
+            "Simplify the fraction $\\frac{18}{6}$ by dividing both the numerator and denominator by their greatest common divisor, which is 6.",
+            1
+        ],
+        [
+            "Now that we have found that $FD = 3$, we can state that the length of $\\overline{FD}$ is 3 cm.",
+            1
+        ],
+        [
+            "Now that we have found that $FD = 3$, we can state that the length of $\\overline{FD}$ is $\\boxed{3}$.",
+            1
+        ]
+    ],
+    "time": 45.72017002105713,
+    "total_tokens": 17698,
+    "final_answer_tokens": 0,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

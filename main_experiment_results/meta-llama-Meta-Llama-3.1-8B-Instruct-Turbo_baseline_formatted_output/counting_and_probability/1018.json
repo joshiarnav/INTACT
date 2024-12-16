@@ -1,0 +1,8 @@
+{
+    "problem": "We flip a fair coin 10 times.  What is the probability that we get heads in exactly 8 of the 10 flips?",
+    "solution": "There are $2^{10} = 1024$ possible outcomes of the 10 coin flips. There are $\\binom{10}{8}=\\binom{10}{2}=45$ ways to get exactly 8 heads, so the probability is $\\dfrac{45}{2^{10}}=\\boxed{\\dfrac{45}{1024}}$.",
+    "total_tokens": 450,
+    "time_taken": 3.479982852935791,
+    "file_name": "./MATH_subsample_uniform/counting_and_probability/1018.json",
+    "model_solution": "To find the probability of getting exactly 8 heads in 10 coin flips, we can use the binomial probability formula: \n\nP(X = k) = (nCk) * (p^k) * (q^(n-k))\n\nwhere:\n- P(X = k) is the probability of getting k successes (heads)\n- n is the number of trials (flips) = 10\n- k is the number of successes (heads) = 8\n- nCk is the number of combinations of n items taken k at a time, also written as C(n, k) or n choose k. It is calculated as: nCk = n! / (k! * (n-k)!)\n- p is the probability of success (getting heads) = 0.5 (since it's a fair coin)\n- q is the probability of failure (getting tails) = 0.5 (since it's a fair coin)\n\nFirst, we need to find the number of combinations (nCk):\n\n10C8 = 10! / (8! * (10-8)!) \n= 10! / (8! * 2!)\n= (10 * 9) / 2 \n= 45 \n\nNow we plug the values into the formula:\n\nP(X = 8) = (45) * (0.5^8) * (0.5^(10-8))\n= 45 * (0.5^8) * (0.5^2)\n= 45 * 0.5^10\n= 45 * 1/1024\n= 45/1024\n\nSo the probability that we get heads in exactly 8 of the 10 flips is 45/1024.\n\n$\\boxed{45/1024}$"
+}

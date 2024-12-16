@@ -1,0 +1,14 @@
+{
+  "problem": "Let $S = 1 - 2 + 3 - 4 + \\cdots + 2009 - 2010$. What is the residue of $S$, modulo 2010?",
+  "all_solutions": [
+    "To find the residue of $S$ modulo 2010, let's group the terms of the series into pairs, since this will make it easier to simplify the expression:\n\n$-2 + 3$, $-4 + 5$, $\\ldots$, $-2010$\n\nEach pair has the form $(2n + 1) - (2n) = 1$.\n\nHowever, on the last line, since we have no pair to produce a $1$, we must subtract $2010$ from the sum, because it would otherwise include an extra $1$ which isn't in the sequence.\n\nThere are $1005$ pairs, so the total number of pairs is $1005$.\n\nTherefore, the residue of $S$, modulo 2010, is\n$\\boxed{1005 - 2010 = -1005 = 1005}$.",
+    "To find the residue of S modulo 2010, we need to simplify the expression.\n\nFirst, let's pair the terms in S: \n\n(1 - 2) + (3 - 4) + ... + (2009 - 2010)\n\nEach pair can be simplified as follows:\n\n-2 + 3 - 4 + 5 - ... - 2010\n\nObserve that each pair adds up to -1:\n\n(-2 + 3) - (4 + 5) + ... + (-2009 + 2010)\n\nSince the terms are paired in a way that they cancel out, we can simplify the expression further. \n\nAs there are 1005 pairs, we get: \n\n-1005\n\nSo, the residue of S modulo 2010 is:\n\n-1005 % 2010 = 1005 \n\nTherefore, the final answer is $\\boxed{1005}$."
+  ],
+  "model_solution": "To find the residue of S modulo 2010, we need to simplify the expression.\n\nFirst, let's pair the terms in S: \n\n(1 - 2) + (3 - 4) + ... + (2009 - 2010)\n\nEach pair can be simplified as follows:\n\n-2 + 3 - 4 + 5 - ... - 2010\n\nObserve that each pair adds up to -1:\n\n(-2 + 3) - (4 + 5) + ... + (-2009 + 2010)\n\nSince the terms are paired in a way that they cancel out, we can simplify the expression further. \n\nAs there are 1005 pairs, we get: \n\n-1005\n\nSo, the residue of S modulo 2010 is:\n\n-1005 % 2010 = 1005 \n\nTherefore, the final answer is $\\boxed{1005}$.",
+  "critique": "After reviewing both solutions, I would rate Solution 2 as the better solution. \n\nThe reason is that Solution 2 presents a clearer and more concise explanation of the problem and the solution, and it also avoids introducing an unnecessary subtraction of 2010 from the sum. \n\nBoth solutions arrive at the same answer, but Solution 2 is more straightforward and easier to follow.\n\nTherefore, the best solution is Solution 2. \n\nIndex number: 2",
+  "solution": "Note that $x + 2010 \\equiv x \\pmod{2010}$. Add 2010 to every negative summand and rearrange the terms to find $S \\equiv 0 + 1 + 2 + 3 + \\cdots + 2008 + 2009 \\pmod{2010}$. The right-hand side is the sum of the integers from 1 to 2010, so $S \\equiv \\frac{2010 \\cdot 2011}{2} \\equiv 1005 \\cdot 2011 \\equiv 1005 \\cdot 1 \\equiv \\boxed{1005} \\pmod{2010}$.",
+  "level": "Level 4",
+  "type": "Number Theory",
+  "total_tokens": 562,
+  "time_taken": 7.12023401260376
+}

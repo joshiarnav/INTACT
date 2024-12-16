@@ -1,0 +1,8 @@
+{
+    "problem": "The product of two positive integers plus their sum is 103. The integers are relatively prime, and each is less than 20. What is the sum of the two integers?",
+    "solution": "Let our numbers be $a$ and $b$ with $a>b.$ Then $ab+a+b=103$. With Simon's Favorite Factoring Trick in mind, we add $1$ to both sides and get $ab+a+b+1 = 104$, which factors as $(a+1)(b+1)=104$. We consider pairs $(a+1, b+1)$ of factors of $104$: $(104,1), (52,2), (26,4), (13,8)$. Since $a<20$, we can rule out the first 3 pairs, which gives $a=12$ and $b=7$, so $a+b=\\boxed{19}$.",
+    "total_tokens": 420,
+    "time_taken": 4.859154224395752,
+    "file_name": "./MATH_subsample_uniform/algebra/815.json",
+    "model_solution": "Let's denote the two integers as $a$ and $b$. We are given that the product of $a$ and $b$ plus their sum is 103, and that $a$ and $b$ are relatively prime. \n\nGiven the problem, we have:\n\n$a \\cdot b + a + b = 103$\n\n$(a + 1)(b + 1) = 104$\n\nWe can factorize 104 as $104 = 2^4 \\cdot 13$.\n\nWe have the following possible cases:\n\nCase 1: $(a + 1) = 104, (b + 1) = 1$\n\nSince $a$ and $b$ are positive integers, we have $a = 103$ and $b = 0$. However, as $a$ and $b$ are relatively prime and positive, this case is not valid.\n\nCase 2: $(a + 1) = 26, (b + 1) = 4$\n\nWe have $a = 25$ and $b = 3$. However, $25$ and $3$ are not relatively prime.\n\nCase 3: $(a + 1) = 13, (b + 1) = 8$\n\nWe have $a = 12$ and $b = 7$. Since $a$ and $b$ are relatively prime and both are less than 20, this case is valid.\n\nWe have found that $a = 12$ and $b = 7$ are the integers that satisfy the conditions.\n\nTherefore, the answer is $\\boxed{19}$."
+}

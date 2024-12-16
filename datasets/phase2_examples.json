@@ -1,0 +1,3783 @@
+[
+  {
+    "labeler": "340d89bc-f5b7-45e9-b272-909ba68ee363",
+    "timestamp": "2023-03-19T02:54:52.529607",
+    "generation": 9,
+    "is_quality_control_question": false,
+    "is_initial_screening_question": false,
+    "question": {
+      "problem": "The first four terms in an arithmetic sequence are $x+y$, $x-y$, $xy$, and $x/y$, in that order. What is the fifth term? Express your answer as a common fraction.",
+      "ground_truth_solution": "Since the difference of the first two terms is $-2y$, the third and fourth terms of the sequence must be $x-3y$ and $x-5y$. Thus \\[\nx-3y = xy \\quad\\text{and}\\quad x-5y = \\frac{x}{y},\n\\]so $xy - 5y^{2} = x.$ Combining these equations we obtain \\[\n(x - 3y) - 5y^{2}= x\\quad\\text{and, therefore, }\\quad -3y - 5y^{2} = 0.\n\\]Since $y$ cannot be 0, we have $y = -\\frac{3}{5}$, and it follows that $x = -\\frac{9}{8}$. The fifth term in the sequence is $x - 7y\n= \\boxed{\\frac{123}{40}}$.",
+      "ground_truth_answer": "\\frac{123}{40}",
+      "pre_generated_steps": [
+        "To find the fifth term, I need to identify the common difference of the arithmetic sequence and add it to the fourth term.",
+        "The common difference is the same for any consecutive pair of terms, so I can use any of them to find it.",
+        "For example, using the first and second terms, I can write $x-y = x+y + d$, where $d$ is the common difference.",
+        "Solving for $d$, I get $d = -2y$.",
+        "Using another pair of terms, such as the second and third, I can check if this value of $d$ is consistent.",
+        "I have $xy = x-y + d$, so substituting $d = -2y$, I get $xy = x-y - 2y$.",
+        "Simplifying, I get $xy = x - 3y$.",
+        "This seems like a reasonable equation, so I will assume that $d = -2y$ is correct.",
+        "Now, to find the fifth term, I need to add $d$ to the fourth term.",
+        "The fourth term is $x/y$, so the fifth term is $x/y + d = x/y - 2y$.",
+        "To express this as a common fraction, I need to find a common denominator for $x/y$ and $-2y$.",
+        "The least common denominator is $y$, so I can multiply the numerator and denominator of $-2y$ by $y$ to get $-2y^2/y$.",
+        "Therefore, the fifth term is $x/y - 2y^2/y = (x - 2y^2)/y$.\n\n# Answer\n\n(x - 2y^2)/y"
+      ],
+      "pre_generated_answer": "(x - 2y^2)/y",
+      "pre_generated_verifier_score": 0.0028021405192614895
+    },
+    "label": {
+      "steps": [
+        {
+          "completions": [
+            {
+              "text": "To find the fifth term, I need to identify the common difference of the arithmetic sequence and add it to the fourth term.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "The common difference is the same for any consecutive pair of terms, so I can use any of them to find it.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "For example, using the first and second terms, I can write $x-y = x+y + d$, where $d$ is the common difference.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Solving for $d$, I get $d = -2y$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Using another pair of terms, such as the second and third, I can check if this value of $d$ is consistent.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I have $xy = x-y + d$, so substituting $d = -2y$, I get $xy = x-y - 2y$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Simplifying, I get $xy = x - 3y$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "This seems like a reasonable equation, so I will assume that $d = -2y$ is correct.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Now, to find the fifth term, I need to add $d$ to the fourth term.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "The fourth term is $x/y$, so the fifth term is $x/y + d = x/y - 2y$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "To express this as a common fraction, I need to find a common denominator for $x/y$ and $-2y$.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "The least common denominator is $y$, so I can multiply the numerator and denominator of $-2y$ by $y$ to get $-2y^2/y$.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Therefore, the fifth term is $x/y - 2y^2/y = (x - 2y^2)/y$.\n\n# Answer\n\n(x - 2y^2)/y",
+              "rating": -1,
+              "flagged": null
+            },
+            {
+              "text": "Adding this to $x/y$, I get $(x/y) + (-2y^2/y) = (x - 2y^2)/y$.",
+              "rating": 0,
+              "flagged": false
+            },
+            {
+              "text": "Then, adding $x/y$ and $-2y^2/y$, I get $(x - 2y^2)/y$.",
+              "rating": 0,
+              "flagged": false
+            },
+            {
+              "text": "Adding $x/y$ and $-2y^2/y$, I get $(x - 2y^2)/y$.",
+              "rating": 0,
+              "flagged": false
+            },
+            {
+              "text": "Adding this to $x/y$, I get $(x/y) + (-2y^2/y) = (x-2y^2)/y$.",
+              "rating": 0,
+              "flagged": false
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": null
+        }
+      ],
+      "total_time": 185755,
+      "finish_reason": "found_error"
+    }
+  },
+  {
+    "labeler": "2b794369-78c8-4e28-b3ba-eb0dd4a9ab2c",
+    "timestamp": "2023-02-16T04:45:39.523907",
+    "generation": 9,
+    "is_quality_control_question": false,
+    "is_initial_screening_question": false,
+    "question": {
+      "problem": "A right cylindrical oil tank is $15$ feet tall and its circular bases have diameters of $4$ feet each. When the tank is lying flat on its side (not on one of the circular ends), the oil inside is $3$ feet deep. How deep, in feet, would the oil have been if the tank had been standing upright on one of its bases? Express your answer as a decimal to the nearest tenth.",
+      "ground_truth_solution": "Since the oil is $3$ feet deep, we want to find the ratio of the area of the part of the circle covered with oil (part under the horizontal line of the figure below) to the entire area of the circle.\n[asy]\ndraw(Circle((0,0),2));\ndraw((-1.732,1)--(1.732,1));\ndraw((0,0)--(-1.732,1));\ndraw((0,0)--(1.732,1));\ndraw((0,0)--(0,1));\n[/asy] The two radii drawn makes a $120$ degree angle, so the area of the fraction of the circle covered by the oil is $\\frac23$ of the circle in addition to the isosceles triangle. We can find the length of half the base of the isosceles triangle by using the Pythagorean theorem on the smaller right triangle. Setting half the length of the base to $x$, we have $x^2+1=4$, so $x=\\sqrt{3}$ and the length of the base is $2\\sqrt3$. Therefore, we have that the area of the triangle is $\\frac12 \\cdot 1 \\cdot 2\\sqrt3=\\sqrt3$. So, the area of the part of the circle that's covered in oil is $\\frac23 \\cdot 4\\pi + \\sqrt3=\\frac83\\pi+\\sqrt3$.\n\nThus, we have that the oil takes up $\\dfrac{\\frac83\\pi+\\sqrt3}{4\\pi} \\approx \\frac{10.11}{12.57} \\approx 0.805$ of the cylinder.\n\nWith the cylinder upright, the fraction of the cylinder the oil covers is the same as the fraction of the height the oil covers. Therefore, the oil would be $15 \\text{ feet} \\cdot 0.805 \\approx 12.08 \\approx \\boxed{12.1}$.",
+      "ground_truth_answer": "12.1",
+      "pre_generated_steps": [
+        "I need to find the volume of the oil in the tank and then divide it by the area of the base to get the height of the oil when the tank is upright.",
+        "To find the volume of the oil, I can think of it as a segment of a cylinder, where the central angle of the segment is determined by the depth of the oil.",
+        "If I draw a right triangle inside the tank, where the hypotenuse is the diameter of the base, the adjacent side is the depth of the oil, and the opposite side is half the length of the chord that cuts the oil segment, I can use trigonometry to find the central angle.",
+        "The diameter of the base is $4$ feet, so the hypotenuse of the triangle is $4$ feet. The depth of the oil is $3$ feet, so the adjacent side is $3$ feet. Using the Pythagorean theorem, I can find the opposite side as $\\sqrt{4^2 - 3^2} = \\sqrt{7}$ feet.",
+        "Using the cosine function, I can find the central angle as $\\cos^{-1}(\\frac{3}{4}) \\approx 0.7227$ radians.",
+        "The length of the chord that cuts the oil segment is twice the opposite side, so it is $2\\sqrt{7}$ feet. The radius of the base is half the diameter, so it is $2$ feet.",
+        "Using the formula for the area of a circular segment, I can find the area of the oil segment as $A = \\frac{1}{2}r^2(\\theta - \\sin \\theta) \\approx 2.6766$ square feet.",
+        "The length of the tank is $15$ feet, so the volume of the oil segment is $V = A \\cdot 15 \\approx 40.1491$ cubic feet.",
+        "The area of the base is $\\pi r^2 = 4\\pi$ square feet.",
+        "The height of the oil when the tank is upright is $h = \\frac{V}{A} \\approx 3.1797$ feet.",
+        "Rounding to the nearest tenth, the answer is $3.2$ feet.",
+        "# Answer\n\n3.2"
+      ],
+      "pre_generated_answer": "3.2",
+      "pre_generated_verifier_score": 0.0023976583468112126
+    },
+    "label": {
+      "steps": [
+        {
+          "completions": [
+            {
+              "text": "I need to find the volume of the oil in the tank and then divide it by the area of the base to get the height of the oil when the tank is upright.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "To find the volume of the oil, I can think of it as a segment of a cylinder, where the central angle of the segment is determined by the depth of the oil.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "If I draw a right triangle inside the tank, where the hypotenuse is the diameter of the base, the adjacent side is the depth of the oil, and the opposite side is half the length of the chord that cuts the oil segment, I can use trigonometry to find the central angle.",
+              "rating": -1,
+              "flagged": null
+            },
+            {
+              "text": "If I draw a right triangle inside the circular base, where the hypotenuse is the diameter of the base, one leg is the depth of the oil, and the other leg is half the length of the segment's chord, I can use trigonometry to find the central angle.",
+              "rating": -1,
+              "flagged": false
+            },
+            {
+              "text": "If I draw a right triangle inside the segment, with one leg as the radius of the base, another leg as the depth of the oil, and the hypotenuse as the radius of the segment, I can use trigonometry to find the central angle.",
+              "rating": -1,
+              "flagged": false
+            },
+            {
+              "text": "If I draw a right triangle inside the circle, where the hypotenuse is the diameter of the circle, the adjacent side is the depth of the oil, and the opposite side is half the length of the segment, I can use trigonometry to find the central angle.",
+              "rating": -1,
+              "flagged": false
+            },
+            {
+              "text": "I can draw a right triangle inside the circular cross-section of the tank, where the hypotenuse is the diameter of the base, one leg is the depth of the oil, and the other leg is half the length of the chord that forms the boundary of the oil segment.",
+              "rating": -1,
+              "flagged": false
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": null
+        }
+      ],
+      "total_time": 282072,
+      "finish_reason": "found_error"
+    }
+  },
+  {
+    "labeler": "2b794369-78c8-4e28-b3ba-eb0dd4a9ab2c",
+    "timestamp": "2023-02-16T04:32:46.248012",
+    "generation": 9,
+    "is_quality_control_question": false,
+    "is_initial_screening_question": false,
+    "question": {
+      "problem": "The sum of the squares of three consecutive positive even numbers is $12296$. Find the product of the three numbers divided by $8$.",
+      "ground_truth_solution": "If $n$ is the middle number of the three, the other two numbers are $n-2$ and $n+2$. Therefore, the squares are $n^2-4n+4$, $n^2$, and $n^2+4n+4$. Setting the sum of the three squares equal to $12296$, \\begin{align*}\n\\left(n^2-4n+4\\right)+\\left(n^2\\right)+\\left(n^2+4n+4\\right)&=12296\\\\\n3n^2+8&=12296\\\\\n3n^2&=12288\\\\\nn^2&=4096\\\\\nn&=\\pm64\n\\end{align*}Because $n$ is positive, $n$ must be $64$. Therefore, the set of numbers is $62, 64, 66$. The product of those is $261888$. The product divided by 8 is $\\boxed{32736}$.",
+      "ground_truth_answer": "32736",
+      "pre_generated_steps": [
+        "I need to find three consecutive positive even numbers whose squares add up to $12296$.",
+        "Let me call them $2n-2$, $2n$, and $2n+2$, where $n$ is a positive integer.",
+        "Then I have the equation $(2n-2)^2+(2n)^2+(2n+2)^2=12296$.",
+        "I can expand the squares and simplify the equation: $4n^2-8n+4+4n^2+4n^2+8n+4=12296$.",
+        "Combining like terms, I get $12n^2+8=12296$.",
+        "Subtracting $8$ from both sides, I get $12n^2=12288$.",
+        "Dividing both sides by $12$, I get $n^2=1024$.",
+        "Taking the square root of both sides, I get $n=\\pm 32$.",
+        "Since $n$ has to be positive, I choose $n=32$.",
+        "This means that the three consecutive positive even numbers are $2n-2=62$, $2n=64$, and $2n+2=66$.",
+        "The product of these numbers is $62\\times 64\\times 66=258048$.",
+        "Dividing this by $8$, I get the final answer: $32256$.",
+        "# Answer\n\n32256"
+      ],
+      "pre_generated_answer": "32256",
+      "pre_generated_verifier_score": 0.002408820230107101
+    },
+    "label": {
+      "steps": [
+        {
+          "completions": [
+            {
+              "text": "I need to find three consecutive positive even numbers whose squares add up to $12296$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Let me call them $2n-2$, $2n$, and $2n+2$, where $n$ is a positive integer.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Then I have the equation $(2n-2)^2+(2n)^2+(2n+2)^2=12296$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I can expand the squares and simplify the equation: $4n^2-8n+4+4n^2+4n^2+8n+4=12296$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Combining like terms, I get $12n^2+8=12296$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Subtracting $8$ from both sides, I get $12n^2=12288$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Dividing both sides by $12$, I get $n^2=1024$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Taking the square root of both sides, I get $n=\\pm 32$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Since $n$ has to be positive, I choose $n=32$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "This means that the three consecutive positive even numbers are $2n-2=62$, $2n=64$, and $2n+2=66$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "The product of these numbers is $62\\times 64\\times 66=258048$.",
+              "rating": -1,
+              "flagged": null
+            },
+            {
+              "text": "To find their product divided by $8$, I can write it as $\\frac{(2n-2)(2n)(2n+2)}{8}$.",
+              "rating": 1,
+              "flagged": false
+            },
+            {
+              "text": "To find the product of the three numbers divided by $8$, I can multiply them together and then divide by $8$: $\\frac{62\\cdot 64\\cdot 66}{8}$.",
+              "rating": 1,
+              "flagged": false
+            },
+            {
+              "text": "To find their product divided by $8$, I can write it as $\\frac{(2n-2)(2n)(2n+2)}{8}=\\frac{2^2n(n-1)(n+1)}{2^3}$.",
+              "rating": -1,
+              "flagged": false
+            },
+            {
+              "text": "To find their product divided by $8$, I can divide each factor by $8$ first and then multiply them: $\\frac{62}{8}\\cdot\\frac{64}{8}\\cdot\\frac{66}{8}=\\frac{31}{4}\\cdot 8\\cdot\\frac{33}{4}$.",
+              "rating": -1,
+              "flagged": false
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": null
+        }
+      ],
+      "total_time": 131284,
+      "finish_reason": "found_error"
+    }
+  },
+  {
+    "labeler": "2b794369-78c8-4e28-b3ba-eb0dd4a9ab2c",
+    "timestamp": "2023-02-16T04:11:44.196256",
+    "generation": 9,
+    "is_quality_control_question": false,
+    "is_initial_screening_question": false,
+    "question": {
+      "problem": "In triangle $ABC$, medians $AD$ and $CE$ intersect at $P$, $PE=1.5$, $PD=2$, and $DE=2.5$.  What is the area of $AEDC$?",
+      "ground_truth_solution": "Note that $1.5^2 + 2^2 = 2.5^2,$ so $\\triangle PED$ has a right angle at $P.$ (Alternatively, you could note that $(1.5, 2, 2.5)$ is half of the Pythagorean triple $(3,4,5).$) [asy]size(6cm);pair P=(0,0),D=(0,-2),E=(-1.5,0),C=(3,0),A=(0,4),B=extension(A,E,D,C);draw(A--B--C--cycle^^C--E^^A--D);draw(rightanglemark(E,P,D));draw(E--D);dot(\"$A$\",A,N);dot(\"$B$\",B,SW);dot(\"$C$\",C,dir(0));dot(\"$D$\",D,SSE);dot(\"$E$\",E,NW);dot(\"$P$\",P,NE);[/asy] Since the centroid $P$ divides medians $AD$ and $CE$ in the ratio $2 : 1,$ we have $CP = 2 \\cdot EP = 2 \\cdot 1.5 = 3$ and $AP = 2 \\cdot DP = 2 \\cdot 2 = 4.$ Then quadrilateral $AEDC$ consists of four right triangles; we can then compute its area as \\[[AEDC] = \\tfrac12 (4 \\cdot 1.5 + 2 \\cdot 1.5 + 3 \\cdot 2 + 4 \\cdot 3) = \\boxed{13.5}.\\]",
+      "ground_truth_answer": "13.5",
+      "pre_generated_steps": [
+        "I recognize that this problem involves a triangle and its medians, which are the segments that connect each vertex to the midpoint of the opposite side.",
+        "I also know that the three medians of a triangle are concurrent, meaning they all intersect at one point, which is called the centroid.",
+        "The centroid has some interesting properties: it divides each median into a ratio of 2:1, and it is also the center of mass of the triangle.",
+        "This means that if I draw a third median, say $BF$, it will also pass through $P$ and be divided into $BP:PF=2:1$.",
+        "Since $CE$ is a median, $E$ must be the midpoint of $AB$, and similarly $D$ must be the midpoint of $BC$.",
+        "This implies that $DE$ is parallel to $AC$, and also half as long.",
+        "Therefore, $AC=2DE=5$.",
+        "Now, I want to find the area of $AEDC$, which is a quadrilateral with two opposite sides parallel.",
+        "I can use the formula for the area of a trapezoid, which is the average of the bases times the height.",
+        "The bases are $DE=2.5$ and $AC=5$, and the height is the distance between them, which is also the length of $CE$.",
+        "To find $CE$, I can use the fact that it is a median and $PE=1.5$.",
+        "Since $P$ divides $CE$ into $CP:PE=2:1$, I can use a proportion to get $CP=2PE=3$.",
+        "Therefore, $CE=CP+PE=3+1.5=4.5$.",
+        "Now I have everything I need to apply the formula: the area of $AEDC$ is $(2.5+5)/2 \\times 4.5 = 16.875$.\n\n# Answer\n\n16.875"
+      ],
+      "pre_generated_answer": "16.875",
+      "pre_generated_verifier_score": 0.0024244699674069547
+    },
+    "label": {
+      "steps": [
+        {
+          "completions": [
+            {
+              "text": "I recognize that this problem involves a triangle and its medians, which are the segments that connect each vertex to the midpoint of the opposite side.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I also know that the three medians of a triangle are concurrent, meaning they all intersect at one point, which is called the centroid.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "The centroid has some interesting properties: it divides each median into a ratio of 2:1, and it is also the center of mass of the triangle.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "This means that if I draw a third median, say $BF$, it will also pass through $P$ and be divided into $BP:PF=2:1$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Since $CE$ is a median, $E$ must be the midpoint of $AB$, and similarly $D$ must be the midpoint of $BC$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "This implies that $DE$ is parallel to $AC$, and also half as long.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            { "text": "Therefore, $AC=2DE=5$.", "rating": 1, "flagged": null }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Now, I want to find the area of $AEDC$, which is a quadrilateral with two opposite sides parallel.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I can use the formula for the area of a trapezoid, which is the average of the bases times the height.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "The bases are $DE=2.5$ and $AC=5$, and the height is the distance between them, which is also the length of $CE$.",
+              "rating": -1,
+              "flagged": null
+            },
+            {
+              "text": "The bases are $AC=5$ and $DE=2.5$, so their average is $3.75$.",
+              "rating": 0,
+              "flagged": false
+            },
+            {
+              "text": "The bases are $DE=2.5$ and $AC=5$, and the height is the distance between them, which is also the length of the median $BF$.",
+              "rating": -1,
+              "flagged": false
+            },
+            {
+              "text": "The bases are $AC$ and $DE$, and the height is the distance between them, which I can call $h$.",
+              "rating": 0,
+              "flagged": false
+            },
+            {
+              "text": "The bases are $AC$ and $DE$, and the height is the perpendicular distance between them.",
+              "rating": 0,
+              "flagged": false
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": null
+        }
+      ],
+      "total_time": 168143,
+      "finish_reason": "found_error"
+    }
+  },
+  {
+    "labeler": "2b794369-78c8-4e28-b3ba-eb0dd4a9ab2c",
+    "timestamp": "2023-02-15T20:47:11.895085",
+    "generation": 9,
+    "is_quality_control_question": false,
+    "is_initial_screening_question": false,
+    "question": {
+      "problem": "Let $\\alpha$ and $\\beta$ be the roots of $x^2 + px + 1 = 0,$ and let $\\gamma$ and $\\delta$ are the roots of $x^2 + qx + 1 = 0.$  Express\n\\[(\\alpha - \\gamma)(\\beta - \\gamma)(\\alpha + \\delta)(\\beta + \\delta)\\]in terms of $p$ and $q.$",
+      "ground_truth_solution": "Since $\\alpha$ and $\\beta$ are the roots of $x^2 + px + 1 = 0,$\n\\[(x - \\alpha)(x - \\beta) = x^2 + px + 1.\\]Setting $x = \\gamma,$ we get\n\\[(\\gamma - \\alpha)(\\gamma - \\beta) = \\gamma^2 + p \\gamma + 1.\\]or $(\\alpha - \\gamma)(\\beta - \\gamma) = \\gamma^2 + p \\gamma + 1.$\n\nSetting $x = -\\delta,$ we get\n\\[(-\\delta - \\alpha)(-\\delta - \\beta) = \\delta^2 - p \\delta + 1,\\]or $(\\alpha + \\beta)(\\beta + \\delta) = \\delta^2 - p \\delta + 1.$\n\nSince $\\gamma$ and $\\delta$ are the roots of $x^2 + qx + 1 = 0,$ $\\gamma^2 + q \\gamma + 1 = 0$ and $\\delta^2 + q \\delta + 1 = 0.$  Then\n\\[\\gamma^2 + p \\gamma + 1 = (p - q) \\gamma\\]and\n\\[\\delta^2 - p \\delta + 1 = -(p + q) \\delta.\\]Finally, by Vieta's formulas, $\\gamma \\delta = 1,$ so\n\\[(p - q) \\gamma \\cdot (-(p + q)) \\delta = (q - p)(q + p) = \\boxed{q^2 - p^2}.\\]",
+      "ground_truth_answer": "q^2 - p^2",
+      "pre_generated_steps": [
+        "I notice that both equations have the same constant term, $1,$ which means that the product of the roots in each equation is also $1.$",
+        "That is, $\\alpha \\beta = 1$ and $\\gamma \\delta = 1.$",
+        "This suggests that I can use the difference of squares identity to simplify the expression I want to find.",
+        "Specifically, I can rewrite $(\\alpha - \\gamma)(\\beta - \\gamma)$ as $(\\alpha \\beta - \\gamma (\\alpha + \\beta) + \\gamma^2),$ and $(\\alpha + \\delta)(\\beta + \\delta)$ as $(\\alpha \\beta + \\delta (\\alpha + \\beta) + \\delta^2).$",
+        "Then, multiplying these two expressions, I get $(\\alpha \\beta - \\gamma (\\alpha + \\beta) + \\gamma^2)(\\alpha \\beta + \\delta (\\alpha + \\beta) + \\delta^2)$",
+        "Expanding this, I get $\\alpha^2 \\beta^2 - \\gamma \\delta (\\alpha + \\beta)^2 + (\\gamma^2 - \\delta^2)(\\alpha + \\beta) + \\gamma^2 \\delta^2.$",
+        "Now, I can use the fact that $\\alpha \\beta = \\gamma \\delta = 1$ to simplify this further.",
+        "I get $1 - (\\alpha + \\beta)^2 + (\\gamma^2 - \\delta^2)(\\alpha + \\beta) + 1.$",
+        "This is a quadratic expression in $(\\alpha + \\beta),$ which I can also find in terms of $p.$",
+        "By Vieta's formulas, I know that $\\alpha + \\beta = -p,$ so I can substitute that in.",
+        "I get $1 - (-p)^2 + (\\gamma^2 - \\delta^2)(-p) + 1.$",
+        "Simplifying, I get $2 - p^2 - p(\\gamma^2 - \\delta^2).$",
+        "Now, I only need to find $\\gamma^2 - \\delta^2$ in terms of $q.$",
+        "I can use another difference of squares identity, and write $\\gamma^2 - \\delta^2 = (\\gamma + \\delta)(\\gamma - \\delta).$",
+        "By Vieta's formulas, I know that $\\gamma + \\delta = -q,$ so I can substitute that in.",
+        "I get $\\gamma^2 - \\delta^2 = -q(\\gamma - \\delta).$",
+        "To find $\\gamma - \\delta,$ I can use the quadratic formula and subtract the two solutions.",
+        "I get $\\gamma - \\delta = \\sqrt{q^2 - 4}.$",
+        "Substituting this in, I get $\\gamma^2 - \\delta^2 = -q\\sqrt{q^2 - 4}.$",
+        "Therefore, the final expression is $2 - p^2 - p(-q\\sqrt{q^2 - 4}).$",
+        "I can simplify this further by distributing the negative sign.",
+        "I get $2 - p^2 + pq\\sqrt{q^2 - 4}.$",
+        "# Answer\n\n2 - p^2 + pq\\sqrt{q^2 - 4}"
+      ],
+      "pre_generated_answer": "2 - p^2 + pq\\sqrt{q^2 - 4}",
+      "pre_generated_verifier_score": 0.0024579879122568096
+    },
+    "label": {
+      "steps": [
+        {
+          "completions": [
+            {
+              "text": "I notice that both equations have the same constant term, $1,$ which means that the product of the roots in each equation is also $1.$",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "That is, $\\alpha \\beta = 1$ and $\\gamma \\delta = 1.$",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "This suggests that I can use the difference of squares identity to simplify the expression I want to find.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Specifically, I can rewrite $(\\alpha - \\gamma)(\\beta - \\gamma)$ as $(\\alpha \\beta - \\gamma (\\alpha + \\beta) + \\gamma^2),$ and $(\\alpha + \\delta)(\\beta + \\delta)$ as $(\\alpha \\beta + \\delta (\\alpha + \\beta) + \\delta^2).$",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Then, multiplying these two expressions, I get $(\\alpha \\beta - \\gamma (\\alpha + \\beta) + \\gamma^2)(\\alpha \\beta + \\delta (\\alpha + \\beta) + \\delta^2)$",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Expanding this, I get $\\alpha^2 \\beta^2 - \\gamma \\delta (\\alpha + \\beta)^2 + (\\gamma^2 - \\delta^2)(\\alpha + \\beta) + \\gamma^2 \\delta^2.$",
+              "rating": -1,
+              "flagged": null
+            },
+            {
+              "text": "Expanding this out, I get $\\alpha^2 \\beta^2 - \\gamma^2 \\delta^2 + (\\alpha \\beta - \\gamma \\delta)(\\alpha + \\beta)(\\delta - \\gamma) + \\gamma \\delta (\\alpha + \\beta)^2 + \\gamma^2 \\delta^2.$",
+              "rating": -1,
+              "flagged": false
+            },
+            {
+              "text": "Expanding this, I get $\\alpha^2 \\beta^2 + \\alpha \\beta \\delta (\\alpha + \\beta) + \\alpha \\beta \\delta^2 - \\gamma \\alpha \\beta (\\alpha + \\beta) - \\gamma \\alpha \\beta \\delta (\\alpha + \\beta) - \\gamma \\alpha \\beta \\delta^2 + \\gamma^2 \\alpha \\beta + \\gamma^2 \\delta (\\alpha + \\beta) + \\gamma^2 \\delta^2.$",
+              "rating": -1,
+              "flagged": false
+            },
+            {
+              "text": "Expanding this, I get $\\alpha^2 \\beta^2 - \\alpha \\beta \\gamma \\delta (\\alpha + \\beta)^2 + (\\gamma^2 + \\delta^2)(\\alpha \\beta)^2 + \\gamma \\delta (\\alpha + \\beta)(\\gamma^2 - \\alpha \\beta - \\delta^2).$",
+              "rating": -1,
+              "flagged": false
+            },
+            {
+              "text": "Expanding this further, I get $\\alpha \\beta \\delta (\\alpha + \\beta) - \\gamma \\delta (\\alpha + \\beta)^2 + (\\gamma \\delta)^2.$",
+              "rating": -1,
+              "flagged": false
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": null
+        }
+      ],
+      "total_time": 261276,
+      "finish_reason": "found_error"
+    }
+  },
+  {
+    "labeler": "2b794369-78c8-4e28-b3ba-eb0dd4a9ab2c",
+    "timestamp": "2023-02-15T20:42:41.482288",
+    "generation": 9,
+    "is_quality_control_question": false,
+    "is_initial_screening_question": false,
+    "question": {
+      "problem": "The sides of a triangle have lengths $11, 15,$ and $k,$ where $k$ is a positive integer. For how many values of $k$ is the triangle obtuse?",
+      "ground_truth_solution": "The longest side of the triangle either has length $15$ or has length $k.$ Take cases:\n\nIf the longest side has length $15,$ then $k \\le 15.$ The triangle must be nondegenerate, which happens if and only if $15 < 11 + k,$ or $4 < k,$ by the triangle inequality. Now, for the triangle to be obtuse, we must have $15^2 > 11^2 + k^2,$ or $15^2 - 11^2 = 104 > k^2,$ which gives $k\\leq 10$ (since $k$ is an integer). Therefore, the possible values of $k$ in this case are $k = 5, 6, \\ldots, 10.$\n\nIf the longest side has length $k,$ then $k \\ge 15.$ In this case, the triangle inequality gives $k < 15 + 11,$ or $k < 26.$ For the triangle to be obtuse, we must have $k^2 > 11^2 + 15^2 = 346,$ or $k \\ge 19$ (since $k$ is an integer). Therefore, the possible values of $k$ in this case are $k = 19, 20, \\ldots, 25.$\n\nIn total, the number of possible values of $k$ is $(10 - 5 + 1) + (25 - 19 + 1) = \\boxed{13}.$",
+      "ground_truth_answer": "13",
+      "pre_generated_steps": [
+        "To solve this problem, I need to recall the relationship between the side lengths and the angles of a triangle, using the law of cosines.",
+        "The law of cosines says that for any triangle with sides $a, b,$ and $c$ and the angle $C$ opposite to $c,$ we have $c^2 = a^2 + b^2 - 2ab \\cos C.$",
+        "If the triangle is obtuse, then the angle $C$ is greater than $90^\\circ,$ which means that $\\cos C$ is negative.",
+        "This implies that $c^2 > a^2 + b^2,$ which is equivalent to $c > \\sqrt{a^2 + b^2}.$",
+        "In this problem, I can label the sides $a = 11, b = 15,$ and $c = k.$",
+        "Then, the triangle is obtuse if $k > \\sqrt{11^2 + 15^2}.$",
+        "To find the possible values of $k,$ I need to simplify the expression under the square root.",
+        "I can use the Pythagorean theorem to see that $11^2 + 15^2 = 346,$ which is not a perfect square.",
+        "The next perfect square after $346$ is $361,$ which is $19^2.$",
+        "This means that $\\sqrt{346}$ is slightly less than $19,$ and so the smallest integer value of $k$ that satisfies the inequality is $k = 19.$",
+        "The largest possible value of $k$ is determined by the triangle inequality, which says that the sum of any two sides of a triangle must be greater than the third side.",
+        "This means that $k < 11 + 15 = 26.$",
+        "The largest integer value of $k$ that satisfies this inequality is $k = 25.$",
+        "Therefore, the possible values of $k$ are $19, 20, 21, 22, 23, 24,$ and $25.$",
+        "There are $7$ such values.\n\n# Answer\n\n7"
+      ],
+      "pre_generated_answer": "7",
+      "pre_generated_verifier_score": 0.00246066845565102
+    },
+    "label": {
+      "steps": [
+        {
+          "completions": [
+            {
+              "text": "To solve this problem, I need to recall the relationship between the side lengths and the angles of a triangle, using the law of cosines.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "The law of cosines says that for any triangle with sides $a, b,$ and $c$ and the angle $C$ opposite to $c,$ we have $c^2 = a^2 + b^2 - 2ab \\cos C.$",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "If the triangle is obtuse, then the angle $C$ is greater than $90^\\circ,$ which means that $\\cos C$ is negative.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "This implies that $c^2 > a^2 + b^2,$ which is equivalent to $c > \\sqrt{a^2 + b^2}.$",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "In this problem, I can label the sides $a = 11, b = 15,$ and $c = k.$",
+              "rating": -1,
+              "flagged": null
+            },
+            {
+              "text": "In this problem, I can assume without loss of generality that $k$ is the longest side, since the triangle is obtuse.",
+              "rating": -1,
+              "flagged": false
+            },
+            {
+              "text": "So, for the triangle in the problem to be obtuse, I need to find the values of $k$ that satisfy $k > \\sqrt{11^2 + 15^2}.$",
+              "rating": 0,
+              "flagged": false
+            },
+            {
+              "text": "So, to find out when the triangle is obtuse, I need to compare the length of the longest side, which is either $k$ or $15,$ with the square root of the sum of the squares of the other two sides.",
+              "rating": 1,
+              "flagged": false
+            },
+            {
+              "text": "In this problem, I can pick any of the three angles to be the obtuse one, and I will get a similar inequality.",
+              "rating": 1,
+              "flagged": false
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": null
+        }
+      ],
+      "total_time": 149538,
+      "finish_reason": "found_error"
+    }
+  },
+  {
+    "labeler": "2b794369-78c8-4e28-b3ba-eb0dd4a9ab2c",
+    "timestamp": "2023-02-15T05:40:45.535235",
+    "generation": 9,
+    "is_quality_control_question": false,
+    "is_initial_screening_question": false,
+    "question": {
+      "problem": "Three points are chosen uniformly at random on a circle. What is the probability that no two of these points form an obtuse triangle with the circle's center?",
+      "ground_truth_solution": "Let us call the circle's center $O$.  We first note that if $A$ and $B$ are points on the circle, then triangle $AOB$ is isosceles with $AO= BO$.  Therefore, if $AOB$ is an obtuse triangle, then the obtuse angle must be at $O$.  So $AOB$ is an obtuse triangle if and only if minor arc $AB$ has measure of more than $\\pi/2$ ($90^\\circ$).\n\nNow, let the three randomly chosen points be $A_0$, $A_1$, and $A_2$.  Let $\\theta$ be the measure of minor arc $A_0A_1$. Since $\\theta$ is equally likely to be any value from 0 to $\\pi$, the probability that it is less than $\\pi/2$ is 1/2.\n\nNow suppose that $\\theta < \\pi/2$.  For the problem's condition to hold, it is necessary and sufficient for point $A_2$ to lie within $\\pi/2$ of both $A_0$ and $A_1$ along the circumference. As the diagram below shows, this is the same as saying that $A_2$ must lie along a particular arc of measure $\\pi - \\theta$.\n\n[asy]\nsize(200);\ndefaultpen(.7);\n\npair O=(0,0), A=expi(4*pi/7), B=expi(3*pi/7);\n\ndraw(circle(O,1));\n\npair BB=rotate(90)*B;\npair AA=rotate(-90)*A;\n\npair LC= expi(5*pi/7), RC= expi(2*pi/7);\n\ndraw(O--BB..A..B..AA--O);\n\nfill(O--BB..LC..A--cycle,gray(.8));\nfill(O--A..(0,1)..B--cycle,gray(.6));\nfill(O--B..RC..AA--cycle,gray(.8));\n\npair SA=1.15*A,SB=1.15*B,SBB=1.15*BB;\npair SAA=1.15*AA,SLC=1.15*LC,SRC=1.15*RC;\n\nlabel(\"\\(A_0\\)\",SA,N);\nlabel(\"\\(A_1\\)\",SB,N);\n\ndraw(SBB..SLC..SA,Arrows,Bars);\ndraw(SA..(0,1.15)..SB,Arrows);\ndraw(SB..SRC..SAA,Arrows,Bars);\n\nlabel(\"\\(\\frac{\\pi}{2}-\\theta\\)\",SLC,NW);\nlabel(\"\\(\\frac{\\pi}{2}-\\theta\\)\",SRC,NE);\nlabel(\"\\(\\theta\\)\",(0,1.15),(0,1));\n[/asy]\n\nThe probability of this occurrence is $\\frac{\\pi-\\theta}{2\\pi} = \\frac{1}{2} - \\frac{\\theta}{2\\pi}$, since $A_2$ is equally likely to go anywhere on the circle. Since the average value of $\\theta$ between 0 and $\\pi/2$ is $\\pi/4$, it follows that the overall probability for $\\theta < \\pi/2$ is $\\frac{1}{2} - \\frac{\\pi/4}{2\\pi} = \\frac{3}{8}$.\n\nSince the probability that $\\theta < \\pi/2$ is 1/2, our final probability is $\\frac{1}{2} \\cdot \\frac{3}{8} = \\boxed{\\frac{3}{16}}$.",
+      "ground_truth_answer": "\\frac{3}{16}",
+      "pre_generated_steps": [
+        "This is a problem about the angles subtended by arcs of the circle.",
+        "For example, if we choose three points A, B, and C on the circle, then the angle subtended by arc AB at the center is twice the angle subtended by arc AB at any point on the circle.",
+        "Similarly, the angle subtended by arc BC at the center is twice the angle subtended by arc BC at any point on the circle, and so on.",
+        "So, we can think of choosing three points on the circle as choosing three angles at the center that add up to 360 degrees.",
+        "Now, we want to avoid the situation where any of these angles is greater than 90 degrees, because that would mean the triangle formed by the center and the two endpoints of the arc is obtuse.",
+        "So, the question is equivalent to asking: what is the probability that three randomly chosen numbers add up to 360 degrees, and none of them is greater than 90 degrees?",
+        "This seems like a problem that can be solved by geometric probability.",
+        "Let's draw a picture of the possible outcomes.",
+        "We can use a coordinate plane where the x-axis represents the first angle, the y-axis represents the second angle, and the third angle is determined by the equation x + y + z = 360.",
+        "The region where all three angles are positive and less than 360 degrees is a triangular region with vertices at (0, 0), (0, 360), and (360, 0).",
+        "This region has area 1/2 * 360 * 360 = 64800 square units.",
+        "The region where all three angles are less than or equal to 90 degrees is a smaller triangular region with vertices at (0, 0), (0, 90), and (90, 0).",
+        "This region has area 1/2 * 90 * 90 = 4050 square units.",
+        "So, the probability that we want is the ratio of the smaller area to the larger area, which is 4050/64800 = 1/16.",
+        "# Answer\n\n1/16"
+      ],
+      "pre_generated_answer": "1/16",
+      "pre_generated_verifier_score": 0.0024856832355780708
+    },
+    "label": {
+      "steps": [
+        {
+          "completions": [
+            {
+              "text": "This is a problem about the angles subtended by arcs of the circle.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "For example, if we choose three points A, B, and C on the circle, then the angle subtended by arc AB at the center is twice the angle subtended by arc AB at any point on the circle.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Similarly, the angle subtended by arc BC at the center is twice the angle subtended by arc BC at any point on the circle, and so on.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "So, we can think of choosing three points on the circle as choosing three angles at the center that add up to 360 degrees.",
+              "rating": -1,
+              "flagged": null
+            },
+            {
+              "text": "If we want to avoid forming an obtuse triangle with the center, then we need to make sure that none of these angles at the center exceed 90 degrees.",
+              "rating": 1,
+              "flagged": false
+            },
+            {
+              "text": "An obtuse triangle is one where one angle is greater than 90 degrees.",
+              "rating": 1,
+              "flagged": false
+            },
+            {
+              "text": "So, we want to find the probability that all three angles subtended by the arcs AB, BC, and CA at the center are less than or equal to 90 degrees.",
+              "rating": 1,
+              "flagged": false
+            },
+            {
+              "text": "So, the problem is asking us to find the probability that none of the three angles subtended by the arcs AB, BC, and CA at the center are greater than 90 degrees.",
+              "rating": 1,
+              "flagged": false
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": null
+        }
+      ],
+      "total_time": 272313,
+      "finish_reason": "found_error"
+    }
+  },
+  {
+    "labeler": "2b794369-78c8-4e28-b3ba-eb0dd4a9ab2c",
+    "timestamp": "2023-02-15T05:25:37.544198",
+    "generation": 9,
+    "is_quality_control_question": false,
+    "is_initial_screening_question": false,
+    "question": {
+      "problem": "For how many different digits $n$ is the three-digit number $14n$ divisible by $n$?\n\nNote: $14n$ refers to a three-digit number with the unit digit of $n,$ not the product of $14$ and $n.$",
+      "ground_truth_solution": "We have to account for each possible value of $n$ here. First of all, we can quickly find that for $n = 1, 2, 5,$ the resulting number $14n$ must be divisible by $n$, using their respective divisibility rules.\n\nWe see that for $n = 3$, we get $143.$ Since $1 + 4 + 3 = 8,$ which is not a multiple of $3,$ we can see that $n = 3$ does not work. Moreover, if $143$ is not divisible by $3$, then $146$ and $149$ are not divisible by $3$ or any multiple of $3$, so $n = 6$ and $n = 9$ do not work.\n\nFor $n = 4$, we can see that $144$ is divisible by $4$ because $44$ is divisible by $4,$ so $n = 4$ works.\n\nFor $n = 7$, we can easily perform division and see that $147$ is divisible by $7,$ so $n = 7$ works.\n\nFor $n = 8$, we have little choice but to find that $\\dfrac{148}{8} = \\dfrac{37}{2},$ and so $n = 8$ does not work.\n\nAll in all, we have that $n$ can be $1,$ $2,$ $4,$ $5,$ or $7,$ so we have $\\boxed{5}$ possible choices for $n$ such that $14n$ is divisible by $n.$",
+      "ground_truth_answer": "5",
+      "pre_generated_steps": [
+        "To find the digits $n$ that make $14n$ divisible by $n,$ I need to find the values of $n$ that satisfy the equation $14n = kn,$ where $k$ is some integer.",
+        "This equation can be simplified by dividing both sides by $n,$ as long as $n \\neq 0.$",
+        "I get $14 = k,$ so $k$ must be $14.$",
+        "This means that $14n$ is divisible by $n$ only when $14n = 14n,$ which is always true.",
+        "Therefore, any nonzero digit $n$ will make $14n$ divisible by $n.$",
+        "There are $9$ nonzero digits, so there are $9$ different digits $n$ that satisfy the problem.",
+        "# Answer\n\n9"
+      ],
+      "pre_generated_answer": "9",
+      "pre_generated_verifier_score": 0.0025003258208338673
+    },
+    "label": {
+      "steps": [
+        {
+          "completions": [
+            {
+              "text": "To find the digits $n$ that make $14n$ divisible by $n,$ I need to find the values of $n$ that satisfy the equation $14n = kn,$ where $k$ is some integer.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "This equation can be simplified by dividing both sides by $n,$ as long as $n \\neq 0.$",
+              "rating": -1,
+              "flagged": null
+            },
+            {
+              "text": "This implies that $14n$ is a multiple of $n,$ so $n$ must be a factor of $14n.$",
+              "rating": 0,
+              "flagged": false
+            },
+            {
+              "text": "This equation implies that $14 = k$, since $n \\neq 0$.",
+              "rating": -1,
+              "flagged": false
+            },
+            {
+              "text": "I can divide both sides by $n$ to get $14 = k,$ as long as $n \\neq 0.$",
+              "rating": -1,
+              "flagged": false
+            },
+            {
+              "text": "This equation implies that $n$ is a factor of $14,$ since I can rewrite it as $n(k - 14) = 0.$",
+              "rating": 0,
+              "flagged": false
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": null
+        }
+      ],
+      "total_time": 46015,
+      "finish_reason": "found_error"
+    }
+  },
+  {
+    "labeler": "2b794369-78c8-4e28-b3ba-eb0dd4a9ab2c",
+    "timestamp": "2023-02-15T05:24:43.013022",
+    "generation": 9,
+    "is_quality_control_question": false,
+    "is_initial_screening_question": false,
+    "question": {
+      "problem": "What is the hundreds digit in the following product: $5 \\times 6 \\times 7 \\times 8 \\times 9 \\times 10$ ?",
+      "ground_truth_solution": "The hundreds digit in the given expression is the same as the tens digit in the expression $5\\times6\\times7\\times8\\times9$, which is the same as the ones digit in the expression $6\\times7\\times4\\times9$ (we divide out a 10 each time). $6\\times7=42$ has a ones digit of 2 and $4\\times9=36$ has a ones digit of 6, and $2\\times6=12$, so the entire product has a ones digit of $\\boxed{2}$.",
+      "ground_truth_answer": "2",
+      "pre_generated_steps": [
+        "To find the hundreds digit of the product, I need to multiply the last three digits of each factor and look at the result.",
+        "The last three digits of $5$ are $005$, of $6$ are $006$, of $7$ are $007$, of $8$ are $008$, of $9$ are $009$, and of $10$ are $010$.",
+        "Multiplying $005$ by $006$ gives $030$, which has a zero in the hundreds place.",
+        "Multiplying $030$ by $007$ gives $210$, which has a two in the hundreds place.",
+        "Multiplying $210$ by $008$ gives $1680$, which has a six in the hundreds place.",
+        "Multiplying $1680$ by $009$ gives $15120$, which has a one in the hundreds place.",
+        "Multiplying $15120$ by $010$ gives $151200$, which has a five in the hundreds place.",
+        "Therefore, the hundreds digit of the product is five.",
+        "# Answer\n\n5"
+      ],
+      "pre_generated_answer": "5",
+      "pre_generated_verifier_score": 0.0025017632227943543
+    },
+    "label": {
+      "steps": [
+        {
+          "completions": [
+            {
+              "text": "To find the hundreds digit of the product, I need to multiply the last three digits of each factor and look at the result.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "The last three digits of $5$ are $005$, of $6$ are $006$, of $7$ are $007$, of $8$ are $008$, of $9$ are $009$, and of $10$ are $010$.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Multiplying $005$ by $006$ gives $030$, which has a zero in the hundreds place.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Multiplying $030$ by $007$ gives $210$, which has a two in the hundreds place.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Multiplying $210$ by $008$ gives $1680$, which has a six in the hundreds place.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Multiplying $1680$ by $009$ gives $15120$, which has a one in the hundreds place.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Multiplying $15120$ by $010$ gives $151200$, which has a five in the hundreds place.",
+              "rating": -1,
+              "flagged": null
+            },
+            {
+              "text": "Multiplying $15120$ by $010$ gives $151200$, which has a five in the hundreds place.",
+              "rating": -1,
+              "flagged": false
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": null
+        }
+      ],
+      "total_time": 97500,
+      "finish_reason": "found_error"
+    }
+  },
+  {
+    "labeler": "2b794369-78c8-4e28-b3ba-eb0dd4a9ab2c",
+    "timestamp": "2023-02-15T05:22:56.416884",
+    "generation": 9,
+    "is_quality_control_question": false,
+    "is_initial_screening_question": false,
+    "question": {
+      "problem": "How many positive integers less than or equal to 100 have a prime factor that is greater than 4?",
+      "ground_truth_solution": "The easiest solution is to find the number of positive integers with only 2 and 3 as their prime factors. If the number has no factors of 3, the qualifying numbers are $2^0, 2^1, 2^2, 2^3, 2^4, 2^5, 2^6$ for 7 total. If there is one factor of 3, we have $2^0 \\cdot 3^1, 2^1 \\cdot 3^1, 2^2 \\cdot 3^1, 2^3 \\cdot 3^1, 2^4 \\cdot 3^1, 2^5 \\cdot 3^1$ for 6 total. With two factors of 3, we have $2^0 \\cdot 3^2, 2^1 \\cdot 3^2, 2^2 \\cdot 3^2, 2^3 \\cdot 3^2$ for 4 total. With three factors of 3, we have $2^0 \\cdot 3^3, 2^1 \\cdot 3^3$ for 2 total. Finally, $3^4$ gives us 1 more. So, there are $7+ 6+4+2+1 = 20$ positive integers less than or equal to 100 that have only 2 and 3 as prime factors. Therefore, there are $100-20 = \\boxed{80}$ positive integers less than or equal to 100 that have a prime factor greater than 4.",
+      "ground_truth_answer": "80",
+      "pre_generated_steps": [
+        "I know that the prime factors of any number must be less than or equal to its square root, so I can start by finding the prime numbers less than or equal to 10, since 10 is the square root of 100.",
+        "Those prime numbers are 2, 3, 5, and 7.",
+        "I can eliminate 2 and 3 as possible prime factors, since they are not greater than 4.",
+        "That leaves me with 5 and 7 as the only possible prime factors that are greater than 4.",
+        "To find the numbers that have 5 or 7 as a prime factor, I can use the divisibility rules for 5 and 7.",
+        "A number is divisible by 5 if its last digit is 0 or 5, and a number is divisible by 7 if the difference between twice its last digit and the rest of the number is divisible by 7.",
+        "For example, 35 is divisible by 5 and 7, because its last digit is 5 and 2*5 - 3 = 7, which is divisible by 7.",
+        "I can list the multiples of 5 from 5 to 100: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100.",
+        "There are 20 of them.",
+        "I can also list the multiples of 7 from 7 to 98: 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 91, 98.",
+        "There are 14 of them.",
+        "However, I have counted some numbers twice, such as 35 and 70, which are divisible by both 5 and 7.",
+        "To avoid double counting, I need to subtract the multiples of 35, which are the common multiples of 5 and 7, from 35 to 70: 35, 70.",
+        "There are 2 of them.",
+        "So, the number of positive integers less than or equal to 100 that have a prime factor that is greater than 4 is 20 + 14 - 2 = 32.",
+        "# Answer\n\n32"
+      ],
+      "pre_generated_answer": "32",
+      "pre_generated_verifier_score": 0.0025032926071415296
+    },
+    "label": {
+      "steps": [
+        {
+          "completions": [
+            {
+              "text": "I know that the prime factors of any number must be less than or equal to its square root, so I can start by finding the prime numbers less than or equal to 10, since 10 is the square root of 100.",
+              "rating": -1,
+              "flagged": null
+            },
+            {
+              "text": "I want to count how many numbers from 1 to 100 have a prime factor greater than 4.",
+              "rating": 0,
+              "flagged": false
+            },
+            {
+              "text": "I want to count the numbers that have a prime factor greater than 4, which means they must have at least one factor of 5, 7, 11, 13, or any other prime up to 97.",
+              "rating": 0,
+              "flagged": false
+            },
+            {
+              "text": "I want to count the numbers that have a prime factor greater than 4, so I can start by listing some primes greater than 4: 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97.",
+              "rating": 0,
+              "flagged": false
+            },
+            {
+              "text": "I need to find the numbers that have at least one factor that is either 5, 7, 11, 13, ..., or 97, since these are the primes that are greater than 4 and less than or equal to 100.",
+              "rating": 0,
+              "flagged": false
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": null
+        }
+      ],
+      "total_time": 146513,
+      "finish_reason": "found_error"
+    }
+  },
+  {
+    "labeler": "5450acce-b871-465b-9ee9-7b3835400687",
+    "timestamp": "2023-02-15T02:07:25.702370",
+    "generation": 9,
+    "is_quality_control_question": false,
+    "is_initial_screening_question": false,
+    "question": {
+      "problem": "What is the area of the portion of the circle defined by $x^2-12x+y^2=28$ that lies above the $x$-axis and to the right of the line $y=6-x$?",
+      "ground_truth_solution": "Completing the square, the equation of the circle can be rewritten in the form \\[\n(x^2-12x +36) +y^2=64,\n\\]or $(x-6)^2 +y^2 =8^2.$ The center of this circle is $(6,0)$, so both the $x$-axis and the line $y=6-x$ pass through the center of the circle: [asy]\nsize(8cm);\nvoid axes(real x0, real x1, real y0, real y1)\n{\n    draw((x0,0)--(x1,0),EndArrow);\n    draw((0,y0)--(0,y1),EndArrow);\n    label(\"$x$\",(x1,0),E);\n    label(\"$y$\",(0,y1),N);\n    for (int i=floor(x0)+1; i<x1; ++i)\n        draw((i,.1)--(i,-.1));\n    for (int i=floor(y0)+1; i<y1; ++i)\n        draw((.1,i)--(-.1,i));\n}\nvoid e(real a, real b, real h, real k)\n{\n    draw(shift((h,k))*scale(a,b)*unitcircle);\n}\nfilldraw(arc((6,0),8,0,135)--(6-4*sqrt(2),4*sqrt(2))--(6,0)--cycle,rgb(0.8,0.8,0.8));\naxes(-5,18,-10,10);\ne(8, 8, 6, 0);\nreal f(real x) { return 6-x; }\ndraw(graph(f,-3,14),Arrows);\ndot((6,0));\nlabel(\"$y=6-x$\",(14,-8),E);\nlabel(\"$(6,0)$\",(6,0),dir(235)*1.3);\n[/asy] Since the line $y=6-x$ has slope $-1,$ it makes an angle of $135^\\circ$ with the positive $x-$axis, so the desired region makes up $\\frac{135^\\circ}{360^\\circ} = \\frac{3}{8}$ of the circle.  The radius of the circle is $\\sqrt{64} = 8$, so the circle has area $8^2\\pi = 64\\pi$. Therefore, the desired area is $64\\pi\\cdot\\frac{3}{8}=\\boxed{24 \\pi}$.",
+      "ground_truth_answer": "24 \\pi",
+      "pre_generated_steps": [
+        "I recognize that this is a circle with center at $(6,0)$ and radius $r=\\sqrt{28+6^2}=10$.",
+        "I want to find the area of the sector of the circle that is bounded by the $x$-axis and the line $y=6-x$.",
+        "To do that, I need to find the angle of the sector in radians, and then use the formula $A=\\frac{1}{2}r^2\\theta$.",
+        "The angle of the sector is the same as the angle between the $x$-axis and the line $y=6-x$.",
+        "To find that angle, I can use the slope of the line, which is $-1$.",
+        "The slope of a line is the tangent of the angle it makes with the positive $x$-axis, so $\\tan\\theta=-1$.",
+        "To solve for $\\theta$, I can use the inverse tangent function, which gives me $\\theta=\\arctan(-1)$.",
+        "I know that $\\arctan(-1)$ is the same as $-\\arctan(1)$, and that $\\arctan(1)=\\frac{\\pi}{4}$ by symmetry.",
+        "Therefore, $\\theta=-\\frac{\\pi}{4}$.",
+        "However, this is not the angle I want, because it is negative and measured clockwise from the positive $x$-axis.",
+        "To get the positive angle measured counterclockwise, I need to add $\\pi$ to $\\theta$.",
+        "So the angle of the sector is $\\theta+\\pi=\\frac{3\\pi}{4}$.",
+        "Now I can plug this into the formula for the area of the sector.",
+        "$A=\\frac{1}{2}(10)^2\\frac{3\\pi}{4}=\\frac{75\\pi}{2}$.",
+        "# Answer\n\n\\frac{75\\pi}{2}"
+      ],
+      "pre_generated_answer": "\\frac{75\\pi}{2}",
+      "pre_generated_verifier_score": 0.0025422841391962644
+    },
+    "label": {
+      "steps": [
+        {
+          "completions": [
+            {
+              "text": "I recognize that this is a circle with center at $(6,0)$ and radius $r=\\sqrt{28+6^2}=10$.",
+              "rating": -1,
+              "flagged": null
+            },
+            {
+              "text": "I notice that the equation of the circle can be rewritten as $(x-6)^2+y^2=64$, which means that the center of the circle is at $(6,0)$ and the radius is $8$ units.",
+              "rating": 1,
+              "flagged": false
+            },
+            {
+              "text": "I notice that the equation of the circle can be written as $(x-6)^2+y^2=64$, which means that the center of the circle is at $(6,0)$ and the radius is $8$.",
+              "rating": 1,
+              "flagged": false
+            },
+            {
+              "text": "This problem involves finding the area of a segment of a circle that is formed by a chord and an arc.",
+              "rating": 1,
+              "flagged": false
+            },
+            {
+              "text": "I recognize that this is a circle with center $(6,0)$ and radius $\\sqrt{64}=8$ by completing the square for $x^2-12x$.",
+              "rating": 1,
+              "flagged": false
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": null
+        }
+      ],
+      "total_time": 323966,
+      "finish_reason": "found_error"
+    }
+  },
+  {
+    "labeler": "2b794369-78c8-4e28-b3ba-eb0dd4a9ab2c",
+    "timestamp": "2023-02-14T22:24:57.687736",
+    "generation": 9,
+    "is_quality_control_question": false,
+    "is_initial_screening_question": false,
+    "question": {
+      "problem": "Find the maximum of\n\\[\\sqrt{x + 27} + \\sqrt{13 - x} + \\sqrt{x}\\]for $0 \\le x \\le 13.$",
+      "ground_truth_solution": "By Cauchy-Schwarz applied to $ \\left( 1,\\frac{1}{3},\\frac{1}{2}\\right) $ and $ (\\sqrt{x+27},\\sqrt{13-x},\\sqrt{x}) $,\n\\[\\left( 1 + \\frac{1}{3} + \\frac{1}{2} \\right) ((x + 27) + 3(13 - x) + 2x) \\ge (\\sqrt{x + 27} + \\sqrt{13 - x} + \\sqrt{x})^2.\\]Hence,\n\\[(\\sqrt{x + 27} + \\sqrt{13 - x} + \\sqrt{x})^2 \\le 121,\\]so $\\sqrt{x + 27} + \\sqrt{13 - x} + \\sqrt{x} \\le 11.$\n\nEquality occurs when $x = 9,$ so the maximum value is $\\boxed{11}.$",
+      "ground_truth_answer": "11",
+      "pre_generated_steps": [
+        "I notice that the expression inside the square root signs are linear functions of x, so I wonder if there is a way to use some algebra or calculus to simplify the problem.",
+        "One idea is to try to complete the square for each term, but that might get messy and I don't see an obvious way to do that.",
+        "Another idea is to use the fact that the square root function is concave, which means that it gets flatter as x increases.",
+        "This suggests that the expression might be maximized when x is as small as possible, since that would make the first two terms as large as possible.",
+        "To check this idea, I could try plugging in the endpoints of the interval and see what happens.",
+        "If I plug in x = 0, I get \\[\\sqrt{0 + 27} + \\sqrt{13 - 0} + \\sqrt{0} = \\sqrt{27} + \\sqrt{13} + 0.\\]",
+        "If I plug in x = 13, I get \\[\\sqrt{13 + 27} + \\sqrt{13 - 13} + \\sqrt{13} = \\sqrt{40} + 0 + \\sqrt{13}.\\]",
+        "Comparing these two values, I see that the first one is larger, since \\[\\sqrt{27} > \\sqrt{40}.\\]",
+        "This means that the expression is maximized when x = 0, and the maximum value is \\[\\sqrt{27} + \\sqrt{13}.\\]",
+        "# Answer\n\n\\sqrt{27} + \\sqrt{13}"
+      ],
+      "pre_generated_answer": "\\sqrt{27} + \\sqrt{13}",
+      "pre_generated_verifier_score": 0.0025986464687577197
+    },
+    "label": {
+      "steps": [
+        {
+          "completions": [
+            {
+              "text": "I notice that the expression inside the square root signs are linear functions of x, so I wonder if there is a way to use some algebra or calculus to simplify the problem.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "One idea is to try to complete the square for each term, but that might get messy and I don't see an obvious way to do that.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Another idea is to use the fact that the square root function is concave, which means that it gets flatter as x increases.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "This suggests that the expression might be maximized when x is as small as possible, since that would make the first two terms as large as possible.",
+              "rating": -1,
+              "flagged": null
+            },
+            {
+              "text": "This implies that the expression should be maximized when x is as small as possible, because then the square root terms will be steeper and contribute more to the sum.",
+              "rating": -1,
+              "flagged": false
+            },
+            {
+              "text": "This suggests that the expression might be maximized when x is as small or as large as possible, that is, at the endpoints of the interval $[0, 13]$.",
+              "rating": -1,
+              "flagged": false
+            },
+            {
+              "text": "This implies that the expression is maximized when x is as small or as large as possible, since moving x towards the middle would make the square root terms decrease faster than they increase.",
+              "rating": -1,
+              "flagged": false
+            },
+            {
+              "text": "This implies that the expression should be maximized when x is as small or as large as possible, since those are the endpoints of the interval.",
+              "rating": -1,
+              "flagged": false
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": null
+        }
+      ],
+      "total_time": 67216,
+      "finish_reason": "found_error"
+    }
+  },
+  {
+    "labeler": "2b794369-78c8-4e28-b3ba-eb0dd4a9ab2c",
+    "timestamp": "2023-02-14T05:43:37.834532",
+    "generation": 9,
+    "is_quality_control_question": false,
+    "is_initial_screening_question": false,
+    "question": {
+      "problem": "A $\\textit{palindrome}$ is a positive integer which reads the same forward and backward, like $12321$ or $4884$.\n\nHow many $4$-digit palindromes are divisible by $3$?",
+      "ground_truth_solution": "Once we've picked the first two digits of a $4$-digit palindrome, the last two digits are automatically chosen by mirroring the first two. Thus, we can make exactly one $4$-digit palindrome for every $2$-digit number. For example, the $2$-digit number $57$ gives the palindrome $5775$.\n\nFor an integer to be divisible by $3$, the sum of its digits must also be divisible by $3$. A $4$-digit palindrome has two identical pairs of digits. If the total of all four digits is a multiple of $3$, then the first two digits must also add up to a multiple of $3$ (since doubling a non-multiple of $3$ can't give us a multiple of $3$). Thus, to make a $4$-digit palindrome which is a multiple of $3$, we must use a $2$-digit number that is a multiple of $3$.\n\nThis tells us that the number of $4$-digit palindromes that are divisible by $3$ is identical to the number of multiples of $3$ from $10$ through $99$. Here is a list of those multiples of $3$: $$12, 15, 18, 21, 24, \\ldots, 90, 93, 96, 99.$$ This list consists of the $30$ positive multiples of $3$ greater than $10.$ So, there are $30$ numbers in the list, and therefore $\\boxed{30}$ four-digit palindromes that are divisible by $3$.\n\nHere is a list of those palindromes: $$1221, 1551, 1881, 2112, 2442, \\ldots, 9009, 9339, 9669, 9999.$$",
+      "ground_truth_answer": "30",
+      "pre_generated_steps": [
+        "To be divisible by $3$, a number must have a sum of digits that is a multiple of $3$.",
+        "For a $4$-digit palindrome, the first and fourth digits must be the same, and the second and third digits must be the same.",
+        "So, the sum of digits is $2a + 2b$, where $a$ is the first digit and $b$ is the second digit.",
+        "For this sum to be a multiple of $3$, either both $a$ and $b$ are multiples of $3$, or both $a$ and $b$ have a remainder of $1$ when divided by $3$, or both $a$ and $b$ have a remainder of $2$ when divided by $3$.",
+        "Since $a$ can be any digit from $1$ to $9$, and $b$ can be any digit from $0$ to $9$, there are $3$ choices for $a$ in each case, and $4$ choices for $b$ in each case.",
+        "Therefore, the total number of $4$-digit palindromes divisible by $3$ is $3 \\times 4 \\times 3 = 36$.",
+        "# Answer\n\n36"
+      ],
+      "pre_generated_answer": "36",
+      "pre_generated_verifier_score": 0.0026265416182756547
+    },
+    "label": {
+      "steps": [
+        {
+          "completions": [
+            {
+              "text": "To be divisible by $3$, a number must have a sum of digits that is a multiple of $3$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "For a $4$-digit palindrome, the first and fourth digits must be the same, and the second and third digits must be the same.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "So, the sum of digits is $2a + 2b$, where $a$ is the first digit and $b$ is the second digit.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "For this sum to be a multiple of $3$, either both $a$ and $b$ are multiples of $3$, or both $a$ and $b$ have a remainder of $1$ when divided by $3$, or both $a$ and $b$ have a remainder of $2$ when divided by $3$.",
+              "rating": -1,
+              "flagged": null
+            },
+            {
+              "text": "This means that $a + b$ must be a multiple of $3$.",
+              "rating": 1,
+              "flagged": false
+            },
+            {
+              "text": "For this sum to be a multiple of $3$, either both $a$ and $b$ are multiples of $3$, or both $a$ and $b$ have a remainder of $1$ or $2$ when divided by $3$.",
+              "rating": -1,
+              "flagged": false
+            },
+            {
+              "text": "Since $a$ and $b$ are digits, they can only be between $0$ and $9$.",
+              "rating": 1,
+              "flagged": false
+            },
+            {
+              "text": "Since $a$ and $b$ are digits, they can have values from $0$ to $9$.",
+              "rating": 1,
+              "flagged": false
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": null
+        }
+      ],
+      "total_time": 117519,
+      "finish_reason": "found_error"
+    }
+  },
+  {
+    "labeler": "2b794369-78c8-4e28-b3ba-eb0dd4a9ab2c",
+    "timestamp": "2023-02-14T05:21:47.631169",
+    "generation": 9,
+    "is_quality_control_question": false,
+    "is_initial_screening_question": false,
+    "question": {
+      "problem": "Let $S$ be the set of all ordered triple of integers $(a_1,a_2,a_3)$ with $1 \\le a_1,a_2,a_3 \\le 10$. Each ordered triple in $S$ generates a sequence according to the rule $a_n=a_{n-1}\\cdot | a_{n-2}-a_{n-3} |$ for all $n\\ge 4$. Find the number of such sequences for which $a_n=0$ for some $n$.",
+      "ground_truth_solution": "Let $a_1=x, a_2=y, a_3=z$. First note that if any absolute value equals 0, then $a_n=0$. Also note that if at any position, $a_n=a_{n-1}$, then $a_{n+2}=0$. Then, if any absolute value equals 1, then $a_n=0$. Therefore, if either $|y-x|$ or $|z-y|$ is less than or equal to 1, then that ordered triple meets the criteria. Assume that to be the only way the criteria is met. To prove, let $|y-x|>1$, and $|z-y|>1$. Then, $a_4 \\ge 2z$, $a_5 \\ge 4z$, and $a_6 \\ge 4z$. However, since the minimum values of $a_5$ and $a_6$ are equal, there must be a scenario where the criteria was met that does not meet our earlier scenarios. Calculation shows that to be $z=1$, $|y-x|=2$. Again assume that any other scenario will not meet criteria. To prove, divide the other scenarios into two cases: $z>1$, $|y-x|>1$, and $|z-y|>1$; and $z=1$, $|y-x|>2$, and $|z-y|>1$. For the first one, $a_4 \\ge 2z$, $a_5 \\ge 4z$, $a_6 \\ge 8z$, and $a_7 \\ge 16z$, by which point we see that this function diverges. For the second one, $a_4 \\ge 3$, $a_5 \\ge 6$, $a_6 \\ge 18$, and $a_7 \\ge 54$, by which point we see that this function diverges.\nTherefore, the only scenarios where $a_n=0$ is when any of the following are met: $|y-x|<2$ (280 options) $|z-y|<2$ (280 options, 80 of which coincide with option 1) $z=1$, $|y-x|=2$. (16 options, 2 of which coincide with either option 1 or option 2) Adding the total number of such ordered triples yields $280+280-80+16-2=\\boxed{494}$.",
+      "ground_truth_answer": "494",
+      "pre_generated_steps": [
+        "This problem involves counting the number of sequences that start with three integers between 1 and 10 and then follow a recursive rule.",
+        "The first thing I notice is that the recursive rule involves the absolute value of the difference of two previous terms, which means that the sequence can never become negative.",
+        "The only way to get $a_n=0$ is if either $a_{n-1}=0$ or $a_{n-2}=a_{n-3}$.",
+        "So I want to avoid the cases where $a_1,a_2,a_3$ are all distinct and nonzero, because then the sequence will never have a zero term.",
+        "How many such cases are there?",
+        "Well, I can choose any of the 10 integers for $a_1$, then any of the remaining 9 for $a_2$, and then any of the remaining 8 for $a_3$.",
+        "So there are $10\\times 9\\times 8=720$ cases to avoid.",
+        "But wait, that's not quite right, because I could also have the case where $a_1=a_2\\neq a_3$ or $a_1\\neq a_2=a_3$.",
+        "In those cases, the sequence will have a zero term when $n=4$, because $a_4=a_3\\cdot |a_2-a_1|=0$.",
+        "So I need to subtract those cases from the ones I want to avoid.",
+        "How many such cases are there?",
+        "Well, I can choose any of the 10 integers for $a_1$, then I have to choose the same integer for $a_2$, and then any of the remaining 9 for $a_3$.",
+        "So there are $10\\times 1\\times 9=90$ cases where $a_1=a_2\\neq a_3$.",
+        "Similarly, there are $10\\times 9\\times 1=90$ cases where $a_1\\neq a_2=a_3$.",
+        "So there are $90+90=180$ cases to subtract from the ones I want to avoid.",
+        "That means there are $720-180=540$ cases to avoid.",
+        "Therefore, the number of cases I want to count is the total number of possible cases minus the ones I want to avoid.",
+        "The total number of possible cases is $10\\times 10\\times 10=1000$, because I can choose any of the 10 integers for each of $a_1,a_2,a_3$.",
+        "So the number of cases I want to count is $1000-540=460$.",
+        "# Answer\n\n460"
+      ],
+      "pre_generated_answer": "460",
+      "pre_generated_verifier_score": 0.0026526218852623426
+    },
+    "label": {
+      "steps": [
+        {
+          "completions": [
+            {
+              "text": "This problem involves counting the number of sequences that start with three integers between 1 and 10 and then follow a recursive rule.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "The first thing I notice is that the recursive rule involves the absolute value of the difference of two previous terms, which means that the sequence can never become negative.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "The only way to get $a_n=0$ is if either $a_{n-1}=0$ or $a_{n-2}=a_{n-3}$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "So I want to avoid the cases where $a_1,a_2,a_3$ are all distinct and nonzero, because then the sequence will never have a zero term.",
+              "rating": -1,
+              "flagged": null
+            },
+            {
+              "text": "If $a_{n-1}=0$, then we can ignore the rest of the rule and just focus on finding the sequences that have a zero in the third position.",
+              "rating": 0,
+              "flagged": false
+            },
+            {
+              "text": "Therefore, I want to count how many sequences satisfy one of these two conditions.",
+              "rating": 0,
+              "flagged": false
+            },
+            {
+              "text": "The second case is easier to handle, so I'll start with that.",
+              "rating": 0,
+              "flagged": false
+            },
+            {
+              "text": "So I want to count how many ways I can start with three integers and eventually get either a zero or two consecutive equal terms.",
+              "rating": 0,
+              "flagged": false
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": null
+        }
+      ],
+      "total_time": 191588,
+      "finish_reason": "found_error"
+    }
+  },
+  {
+    "labeler": "2b794369-78c8-4e28-b3ba-eb0dd4a9ab2c",
+    "timestamp": "2023-02-14T05:11:30.080705",
+    "generation": 9,
+    "is_quality_control_question": false,
+    "is_initial_screening_question": false,
+    "question": {
+      "problem": "A positive integer $X$ is 2 more than a multiple of 3. Its units digit is the same as the units digit of a number that is 4 more than a multiple of 5. What is the smallest possible value of $X$?",
+      "ground_truth_solution": "If a positive integer is 4 more than a multiple of 5, then its units digit must be 4 or 9.  We check positive integers ending in 4 or 9 until we find one which is 2 more than a multiple of 3: 4 is 1 more than a multiple of 3, 9 is a multiple of 3, and $\\boxed{14}$ is 2 more than a multiple of 3.",
+      "ground_truth_answer": "14",
+      "pre_generated_steps": [
+        "I want to find the smallest positive integer $X$ that satisfies the given conditions.",
+        "I know that any multiple of 3 has the form $3k$ for some integer $k$, so $X$ has the form $3k + 2$.",
+        "I also know that any multiple of 5 has the form $5n$ for some integer $n$, so the number with the same units digit as $X$ has the form $5n + 4$.",
+        "Since the units digits of $X$ and $5n + 4$ are the same, I can equate them and get $3k + 2 \\equiv 5n + 4 \\pmod{10}$.",
+        "This means that the difference between $3k + 2$ and $5n + 4$ is a multiple of 10.",
+        "I can simplify this difference by subtracting 4 from both sides and get $3k - 2 \\equiv 5n \\pmod{10}$.",
+        "Now I need to find the smallest values of $k$ and $n$ that make this equation true.",
+        "I can try some values of $k$ and see what they imply for $n$.",
+        "If $k = 0$, then $3k - 2 = -2$ and $5n = -2 + 10m$ for some integer $m$.",
+        "This implies that $n = -0.4 + 2m$, which is not an integer.",
+        "So $k = 0$ does not work.",
+        "If $k = 1$, then $3k - 2 = 1$ and $5n = 1 + 10m$ for some integer $m$.",
+        "This implies that $n = 0.2 + 2m$, which is also not an integer.",
+        "So $k = 1$ does not work either.",
+        "If $k = 2$, then $3k - 2 = 4$ and $5n = 4 + 10m$ for some integer $m$.",
+        "This implies that $n = 0.8 + 2m$, which is again not an integer.",
+        "So $k = 2$ does not work as well.",
+        "If $k = 3$, then $3k - 2 = 7$ and $5n = 7 + 10m$ for some integer $m$.",
+        "This implies that $n = 1.4 + 2m$, which is not an integer.",
+        "So $k = 3$ does not work.",
+        "If $k = 4$, then $3k - 2 = 10$ and $5n = 10 + 10m$ for some integer $m$.",
+        "This implies that $n = 2 + 2m$, which is an integer.",
+        "So $k = 4$ works.",
+        "This means that the smallest value of $X$ is $3k + 2 = 3 \\cdot 4 + 2 = 14$.",
+        "# Answer\n\n14"
+      ],
+      "pre_generated_answer": "14",
+      "pre_generated_verifier_score": 0.002657886162988105
+    },
+    "label": {
+      "steps": [
+        {
+          "completions": [
+            {
+              "text": "I want to find the smallest positive integer $X$ that satisfies the given conditions.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I know that any multiple of 3 has the form $3k$ for some integer $k$, so $X$ has the form $3k + 2$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I also know that any multiple of 5 has the form $5n$ for some integer $n$, so the number with the same units digit as $X$ has the form $5n + 4$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Since the units digits of $X$ and $5n + 4$ are the same, I can equate them and get $3k + 2 \\equiv 5n + 4 \\pmod{10}$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "This means that the difference between $3k + 2$ and $5n + 4$ is a multiple of 10.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I can simplify this difference by subtracting 4 from both sides and get $3k - 2 \\equiv 5n \\pmod{10}$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Now I need to find the smallest values of $k$ and $n$ that make this equation true.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I can try some values of $k$ and see what they imply for $n$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "If $k = 0$, then $3k - 2 = -2$ and $5n = -2 + 10m$ for some integer $m$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "This implies that $n = -0.4 + 2m$, which is not an integer.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "So $k = 0$ does not work.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "If $k = 1$, then $3k - 2 = 1$ and $5n = 1 + 10m$ for some integer $m$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "This implies that $n = 0.2 + 2m$, which is also not an integer.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "So $k = 1$ does not work either.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "If $k = 2$, then $3k - 2 = 4$ and $5n = 4 + 10m$ for some integer $m$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "This implies that $n = 0.8 + 2m$, which is again not an integer.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "So $k = 2$ does not work as well.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "If $k = 3$, then $3k - 2 = 7$ and $5n = 7 + 10m$ for some integer $m$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "This implies that $n = 1.4 + 2m$, which is not an integer.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "So $k = 3$ does not work.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "If $k = 4$, then $3k - 2 = 10$ and $5n = 10 + 10m$ for some integer $m$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "This implies that $n = 2 + 2m$, which is an integer.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            { "text": "So $k = 4$ works.", "rating": 1, "flagged": null }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "This means that the smallest value of $X$ is $3k + 2 = 3 \\cdot 4 + 2 = 14$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            { "text": "# Answer\n\n14", "rating": 1, "flagged": null }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        }
+      ],
+      "total_time": 290229,
+      "finish_reason": "solution"
+    }
+  },
+  {
+    "labeler": "2b794369-78c8-4e28-b3ba-eb0dd4a9ab2c",
+    "timestamp": "2023-02-14T00:25:46.092891",
+    "generation": 9,
+    "is_quality_control_question": false,
+    "is_initial_screening_question": false,
+    "question": {
+      "problem": "A PE class has 12 students, 6 girls and 6 boys. The coach has 4 jerseys in each of 3 colors to mark 3 teams for a soccer tournament. If the coach wants at least one girl and at least one boy on each team, how many ways can he give out the jerseys? (Jerseys of the same color are indistinguishable.)",
+      "ground_truth_solution": "In all, disregarding the gender rule, there are $$\\binom{12}4\\binom84=\\frac{12\\cdot11\\cdot10\\cdot9\\cdot8\\cdot7\\cdot6\\cdot5}{4\\cdot3\\cdot2\\cdot4\\cdot3\\cdot2}=34650$$ways of assigning the teams. We will count the number of ways a team can have all boys or all girls and subtract from this total.\n\nThere are 2 choices for the violating gender and 3 choices for the violating color. Once these are picked, there are $\\binom64=15$ ways to choose the violating team, and $\\binom84=70$ ways to pick the other two teams, for a total of $2\\cdot3\\cdot15\\cdot70=6300$ ways to choose a violating team. However, this procedure double-counts the assignments that make one team all girls and another all boys. There are 3 choices for the girls team and then 2 choices for the boys team, and $\\binom64^2=225$ ways to choose the teams, for a total of $2\\cdot3\\cdot225=1350$ double-counted arrangements, leaving $6300-1350=4950$ ways to make a team all girls or all boys. Subtracting this from the total, we get $34650-4950=\\boxed{29700}$ ways for the coach to assign the teams.",
+      "ground_truth_answer": "29700",
+      "pre_generated_steps": [
+        "I need to count the number of ways to divide 12 students into 3 groups of 4, such that each group has at least one girl and at least one boy.",
+        "I can use the principle of multiplication to count the number of choices for each group, and then multiply them together to get the total number.",
+        "But I have to be careful not to overcount, since the order of the groups does not matter.",
+        "One way to avoid overcounting is to fix the color of the jerseys for each group, say red, blue, and green.",
+        "Then I can start by choosing 4 students for the red team.",
+        "To ensure that there is at least one girl and at least one boy, I can choose one girl and one boy first, and then choose 2 more students from the remaining 10.",
+        "There are 6 ways to choose one girl from 6 girls, and 6 ways to choose one boy from 6 boys.",
+        "Then there are 10 choose 2, or 45, ways to choose 2 more students from the remaining 10.",
+        "So the number of ways to choose the red team is 6 times 6 times 45, or 1620.",
+        "Now I have 8 students left, 4 girls and 4 boys, and I need to choose 4 for the blue team.",
+        "I can use the same method as before, and choose one girl and one boy first, and then 2 more from the remaining 6.",
+        "There are 4 ways to choose one girl from 4 girls, and 4 ways to choose one boy from 4 boys.",
+        "Then there are 6 choose 2, or 15, ways to choose 2 more from the remaining 6.",
+        "So the number of ways to choose the blue team is 4 times 4 times 15, or 240.",
+        "Finally, I have 4 students left, 2 girls and 2 boys, and they will form the green team.",
+        "There is only one way to choose the green team, since I have no choice left.",
+        "So the number of ways to choose the green team is 1.",
+        "Therefore, the total number of ways to give out the jerseys is the product of the number of ways to choose each team: 1620 times 240 times 1, or 388800.",
+        "# Answer\n\n388800"
+      ],
+      "pre_generated_answer": "388800",
+      "pre_generated_verifier_score": 0.002706003118122245
+    },
+    "label": {
+      "steps": [
+        {
+          "completions": [
+            {
+              "text": "I need to count the number of ways to divide 12 students into 3 groups of 4, such that each group has at least one girl and at least one boy.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I can use the principle of multiplication to count the number of choices for each group, and then multiply them together to get the total number.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "But I have to be careful not to overcount, since the order of the groups does not matter.",
+              "rating": -1,
+              "flagged": null
+            },
+            {
+              "text": "However, I have to be careful not to overcount, since the order of the groups does not matter.",
+              "rating": -1,
+              "flagged": false
+            },
+            {
+              "text": "For the first group, I can choose any girl and any boy, and then any two of the remaining 10 students. That gives me 6 * 6 * (10 choose 2) ways to form the first group.",
+              "rating": 0,
+              "flagged": false
+            },
+            {
+              "text": "For the first group, I can choose any 4 students out of 12, which gives me 12 choose 4, or 495 ways.",
+              "rating": -1,
+              "flagged": false
+            },
+            {
+              "text": "However, I have to be careful not to overcount, since the order of the groups does not matter. For example, if I have groups A, B, and C, I don't want to count them again as B, A, and C.",
+              "rating": -1,
+              "flagged": false
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": null
+        }
+      ],
+      "total_time": 222666,
+      "finish_reason": "found_error"
+    }
+  },
+  {
+    "labeler": "5450acce-b871-465b-9ee9-7b3835400687",
+    "timestamp": "2023-02-13T23:58:42.465028",
+    "generation": 9,
+    "is_quality_control_question": false,
+    "is_initial_screening_question": false,
+    "question": {
+      "problem": "How many nonnegative integers can be written in the form\\[a_7\\cdot3^7+a_6\\cdot3^6+a_5\\cdot3^5+a_4\\cdot3^4+a_3\\cdot3^3+a_2\\cdot3^2+a_1\\cdot3^1+a_0\\cdot3^0,\\]where $a_i\\in \\{-1,0,1\\}$ for $0\\le i \\le 7$?\n$\\textbf{(A) } 512 \\qquad  \\textbf{(B) } 729 \\qquad  \\textbf{(C) } 1094 \\qquad  \\textbf{(D) } 3281 \\qquad  \\textbf{(E) } 59,048$",
+      "ground_truth_solution": "This looks like balanced ternary, in which all the integers with absolute values less than $\\frac{3^n}{2}$ are represented in $n$ digits. There are 8 digits. Plugging in 8 into the formula for the balanced ternary gives a maximum bound of $|x|=3280.5$, which means there are 3280 positive integers, 0, and 3280 negative integers. Since we want all nonnegative integers, there are $3280+1=\\boxed{3281}$.",
+      "ground_truth_answer": "3281",
+      "pre_generated_steps": [
+        "I notice that this expression looks like a base-3 representation of a number, except that the coefficients $a_i$ can also be -1, not just 0 or 1.",
+        "I wonder what happens when $a_i=-1$ for some $i$.",
+        "I realize that this means subtracting a power of 3 from the number, which could make it negative.",
+        "I want to avoid negative numbers, since the problem asks for nonnegative integers.",
+        "I think about how to prevent the expression from becoming negative.",
+        "I see that if I have a -1 coefficient for some power of 3, I need to have a 1 coefficient for a higher power of 3 to cancel it out.",
+        "I also see that if I have a 0 coefficient for some power of 3, I can have either 0 or 1 for a higher power of 3, since it does not affect the sign of the number.\n[*: I conclude that the only way to make the expression nonnegative is to have 1 as the highest nonzero coefficient, and then have any combination of -1, 0, or 1 for the lower coefficients.",
+        "I count how many ways I can do this.",
+        "I notice that for each power of 3, I have three choices for the coefficient, except for the highest nonzero one, which must be 1.",
+        "I also notice that the highest nonzero coefficient could be anywhere from $a_0$ to $a_7$, depending on how large the number is.",
+        "I realize that this means I have 8 different cases to consider, one for each possible position of the highest nonzero coefficient.",
+        "I start with the case where $a_0=1$ and the rest are 0.",
+        "I see that this gives me only one number, which is 1.",
+        "I move on to the case where $a_1=1$ and the rest are either -1, 0, or 1.",
+        "I see that this gives me $3^1=3$ numbers, since I have three choices for $a_0$.",
+        "I continue this pattern, and I find that for each case, I have $3^i$ numbers, where $i$ is the position of the highest nonzero coefficient.",
+        "I add up all these numbers for each case, and I get \\[1+3+3^2+\\cdots+3^7=3280.\\]",
+        "I realize that I have not counted the case where all the coefficients are 0, which gives me another number, which is 0.",
+        "I add 1 to my previous sum, and I get \\[1+1+3+3^2+\\cdots+3^7=3281.\\]",
+        "I check that this is one of the answer choices, and it is.",
+        "# Answer\n\n3281"
+      ],
+      "pre_generated_answer": "3281",
+      "pre_generated_verifier_score": 0.002736582551554198
+    },
+    "label": {
+      "steps": [
+        {
+          "completions": [
+            {
+              "text": "I notice that this expression looks like a base-3 representation of a number, except that the coefficients $a_i$ can also be -1, not just 0 or 1.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I wonder what happens when $a_i=-1$ for some $i$.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I realize that this means subtracting a power of 3 from the number, which could make it negative.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I want to avoid negative numbers, since the problem asks for nonnegative integers.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I think about how to prevent the expression from becoming negative.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I see that if I have a -1 coefficient for some power of 3, I need to have a 1 coefficient for a higher power of 3 to cancel it out.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I also see that if I have a 0 coefficient for some power of 3, I can have either 0 or 1 for a higher power of 3, since it does not affect the sign of the number.\n[*: I conclude that the only way to make the expression nonnegative is to have 1 as the highest nonzero coefficient, and then have any combination of -1, 0, or 1 for the lower coefficients.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I count how many ways I can do this.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I notice that for each power of 3, I have three choices for the coefficient, except for the highest nonzero one, which must be 1.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I also notice that the highest nonzero coefficient could be anywhere from $a_0$ to $a_7$, depending on how large the number is.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I realize that this means I have 8 different cases to consider, one for each possible position of the highest nonzero coefficient.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I start with the case where $a_0=1$ and the rest are 0.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I see that this gives me only one number, which is 1.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I move on to the case where $a_1=1$ and the rest are either -1, 0, or 1.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I see that this gives me $3^1=3$ numbers, since I have three choices for $a_0$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I continue this pattern, and I find that for each case, I have $3^i$ numbers, where $i$ is the position of the highest nonzero coefficient.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I add up all these numbers for each case, and I get \\[1+3+3^2+\\cdots+3^7=3280.\\]",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I realize that I have not counted the case where all the coefficients are 0, which gives me another number, which is 0.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I add 1 to my previous sum, and I get \\[1+1+3+3^2+\\cdots+3^7=3281.\\]",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I check that this is one of the answer choices, and it is.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            { "text": "# Answer\n\n3281", "rating": 1, "flagged": null }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        }
+      ],
+      "total_time": 740297,
+      "finish_reason": "solution"
+    }
+  },
+  {
+    "labeler": "2b794369-78c8-4e28-b3ba-eb0dd4a9ab2c",
+    "timestamp": "2023-02-13T23:49:28.195984",
+    "generation": 9,
+    "is_quality_control_question": false,
+    "is_initial_screening_question": false,
+    "question": {
+      "problem": "A regular tetrahedron is a pyramid with four faces, each of which is an equilateral triangle.\n\nLet $ABCD$ be a regular tetrahedron and let $P$ be the unique point equidistant from points $A,B,C,D$. Extend $\\overrightarrow{AP}$ to hit face $BCD$ at point $Q$. What is the ratio $PQ/AQ$ ?",
+      "ground_truth_solution": "Let's start with a picture: [asy]\nimport three;\ntriple d = (0,0,0);\ntriple b = (1,0,0);\ntriple c = (1/2,sqrt(3)/2,0);\ntriple a = (1/2,sqrt(3)/6,sqrt(6)/3);\ntriple p = (a+b+c+d)/4;\ntriple q = (d+b+c)/3;\ndraw(a--b--c--a); draw(c--d--b,dotted); draw(d--a,dotted); draw(a--q,dashed);\ndot(a); dot(b); dot(c); dot(d); dot(p); dot(q);\nlabel(\"$A$\",a,N);\nlabel(\"$B$\",b,WSW);\nlabel(\"$C$\",c,ESE);\nlabel(\"$D$\",d,ENE);\nlabel(\"$P$\",p,W);\nlabel(\"$Q$\",q,W);\n[/asy] We can carve $ABCD$ into four (non-regular) tetrahedra that share $P$ as a vertex and have respective bases $ABC$, $ABD$, $ACD$, and $BCD$ (the faces of $ABCD$). For example, this diagram shows one of these four tetrahedra, namely $BCDP$: [asy]\nimport three;\ntriple d = (0,0,0);\ntriple b = (1,0,0);\ntriple c = (1/2,sqrt(3)/2,0);\ntriple a = (1/2,sqrt(3)/6,sqrt(6)/3);\ntriple p = (a+b+c+d)/4;\ntriple q = (d+b+c)/3;\ndraw(a--b--c--a); draw(c--d--b,dotted); draw(d--a,dotted); draw(a--q,dashed);\ndraw(surface(b--p--c--cycle),red,nolight);\ndraw(surface(d--p--c--cycle),red+white,nolight);\ndot(a); dot(b); dot(c); dot(d); dot(p);\nlabel(\"$A$\",a,N);\nlabel(\"$B$\",b,WSW);\nlabel(\"$C$\",c,ESE);\nlabel(\"$D$\",d,ENE);\nlabel(\"$P$\",p,W);\n[/asy] The four tetrahedra formed in this way are congruent, so each contains one-quarter the volume of $ABCD$.\n\nThe height of tetrahedron $BCDP$ is $PQ$, so the volume of $BCDP$ is $$\\frac 13\\cdot (\\text{area of }\\triangle BCD)\\cdot PQ.$$The volume of the original tetrahedron, $ABCD$, is $$\\frac 13\\cdot (\\text{area of }\\triangle BCD)\\cdot AQ.$$Thus $PQ/AQ$ is equal to the ratio of the volume of $BCDP$ to the volume of $ABCD$, which we already know to be $\\boxed{\\frac{1}{4}}$.",
+      "ground_truth_answer": "\\frac{1}{4}",
+      "pre_generated_steps": [
+        "I know that point $P$ is the center of the circumscribed sphere of the tetrahedron, and that it is also the centroid of the tetrahedron.",
+        "This means that $P$ is the midpoint of the segment $AQ$, so $PQ = AQ/2$.",
+        "Therefore, the ratio $PQ/AQ$ is $1/2$.\n\n# Answer\n\n1/2"
+      ],
+      "pre_generated_answer": "1/2",
+      "pre_generated_verifier_score": 0.002733372089125618
+    },
+    "label": {
+      "steps": [
+        {
+          "completions": [
+            {
+              "text": "I know that point $P$ is the center of the circumscribed sphere of the tetrahedron, and that it is also the centroid of the tetrahedron.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "This means that $P$ is the midpoint of the segment $AQ$, so $PQ = AQ/2$.",
+              "rating": -1,
+              "flagged": null
+            },
+            {
+              "text": "Since $P$ is the centroid, it is the average of the vertices.",
+              "rating": 1,
+              "flagged": false
+            },
+            {
+              "text": "I also know that the centroid of a triangle is the point where the three medians intersect, and that it divides each median into a ratio of 2:1.",
+              "rating": 0,
+              "flagged": false
+            },
+            {
+              "text": "This means that $P$ is the average of the vertices $A,B,C,D$, or in other words, $P = \\frac{1}{4}(A+B+C+D)$ using vector notation.",
+              "rating": 1,
+              "flagged": false
+            },
+            {
+              "text": "This means that $P$ is the average of the vertices of the tetrahedron, so I can write $P = \\frac{1}{4}(A+B+C+D)$.",
+              "rating": 1,
+              "flagged": false
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": null
+        }
+      ],
+      "total_time": 39009,
+      "finish_reason": "found_error"
+    }
+  },
+  {
+    "labeler": "2b794369-78c8-4e28-b3ba-eb0dd4a9ab2c",
+    "timestamp": "2023-02-19T22:32:58.844022",
+    "generation": 9,
+    "is_quality_control_question": false,
+    "is_initial_screening_question": false,
+    "question": {
+      "problem": "Regular hexagon $ABCDEF$ is the base of right pyramid $\\allowbreak PABCDEF$.  If $PAD$ is an equilateral triangle with side length 8, then what is the volume of the pyramid?",
+      "ground_truth_solution": "[asy]\nimport three;\ntriple A = (1,0,0);\ntriple B = (0.5,sqrt(3)/2,0);\ntriple C = (-0.5,sqrt(3)/2,0);\ntriple D = (-1,0,0);\ntriple EE = (-0.5,-sqrt(3)/2,0);\ntriple F = (0.5,-sqrt(3)/2,0);\n\ntriple P = (0,0,1);\n\ndraw(F--A--B--C);\ndraw(C--D--EE--F,dashed);\ndraw(A--P--C);\ndraw(EE--P--D,dashed);\ndraw(B--P--F);\nlabel(\"$A$\",A,S);\nlabel(\"$B$\",B,S);\nlabel(\"$C$\",C,E);\nlabel(\"$D$\",D,S);\nlabel(\"$P$\",P,N);\nlabel(\"$E$\",EE,S);\ndraw(A--D,dashed);\nlabel(\"$F$\",F,W);\ndraw(EE--B,dashed);\ndraw(C--F,dashed);\ntriple O = (0,0,0);\ndraw(P--O,dashed);\nlabel(\"$O$\",O,S);\n[/asy]\n\nDrawing the long diagonals of a regular hexagon divides the hexagon into equilateral triangles with side length equal to half the length of each long diagonal.  So, the area of the base equals 6 times the area of an equilateral triangle with side length 4.  An equilateral triangle with side length 4 has area $4^2\\sqrt{3}/4 = 4\\sqrt{3}$, so the area of the base of the pyramid is $6(4\\sqrt{3}) = 24\\sqrt{3}$.\n\nLet $O$ be the center of the hexagon, so $\\overline{PO}$ is the altitude from the apex of the pyramid.  Since triangle $PAD$ is an equilateral triangle, triangle $POA$ is a 30-60-90 triangle with hypotenuse 8.  $\\overline{PO}$ is opposite the $60^\\circ$ angle in this triangle, so $PO = 4\\sqrt{3}$.\n\nFinally, the volume of the pyramid is  \\[\\frac13\\cdot [ABCDEF] \\cdot PO = \\frac13\\cdot 24\\sqrt{3} \\cdot 4\\sqrt{3} = \\boxed{96}.\\]",
+      "ground_truth_answer": "96",
+      "pre_generated_steps": [
+        "I know that the volume of a pyramid is one-third times the base area times the height.",
+        "So I need to find the base area and the height of the pyramid.",
+        "The base is a regular hexagon, which can be divided into six equilateral triangles with side length 8.",
+        "The area of one such triangle is $\\frac{8^2\\sqrt{3}}{4} = 16\\sqrt{3}$, so the area of the hexagon is $6 \\times 16\\sqrt{3} = 96\\sqrt{3}$.",
+        "The height of the pyramid is the perpendicular distance from the vertex $P$ to the base.",
+        "I can use the Pythagorean theorem to find the height, since I know the length of $PA$ and $PD$, and the angle between them.",
+        "$PA$ and $PD$ are both 8, and the angle between them is 60 degrees, since $PAD$ is equilateral.",
+        "So if $h$ is the height, then $h^2 + (4\\sqrt{3})^2 = 8^2$, since $4\\sqrt{3}$ is the distance from the midpoint of $AD$ to the base.",
+        "Solving for $h$, I get $h^2 = 64 - 48 = 16$, so $h = 4$.",
+        "Now I have the base area and the height, so I can plug them into the formula for the volume.",
+        "The volume is $\\frac{1}{3} \\times 96\\sqrt{3} \\times 4 = 128\\sqrt{3}$.\n\n# Answer\n\n128\\sqrt{3}"
+      ],
+      "pre_generated_answer": "128\\sqrt{3}",
+      "pre_generated_verifier_score": 0.0020712216369158025
+    },
+    "label": {
+      "steps": [
+        {
+          "completions": [
+            {
+              "text": "I know that the volume of a pyramid is one-third times the base area times the height.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "So I need to find the base area and the height of the pyramid.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "The base is a regular hexagon, which can be divided into six equilateral triangles with side length 8.",
+              "rating": -1,
+              "flagged": null
+            },
+            {
+              "text": "The base area is the area of a regular hexagon, which is six times the area of an equilateral triangle with the same side length as the hexagon.",
+              "rating": 1,
+              "flagged": false
+            },
+            {
+              "text": "To find the base area, I need to find the area of the regular hexagon $ABCDEF$.",
+              "rating": 1,
+              "flagged": false
+            },
+            {
+              "text": "The base area is just the area of the hexagon $ABCDEF$, which is composed of six equilateral triangles with side length 8.",
+              "rating": -1,
+              "flagged": false
+            },
+            {
+              "text": "I also know that the base is a regular hexagon, and I recall that the area of a regular hexagon with side length $s$ is $\\frac{3\\sqrt{3}}{2}s^2$.",
+              "rating": 1,
+              "flagged": false
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": null
+        }
+      ],
+      "total_time": 104625,
+      "finish_reason": "found_error"
+    }
+  },
+  {
+    "labeler": "2b794369-78c8-4e28-b3ba-eb0dd4a9ab2c",
+    "timestamp": "2023-02-19T07:44:01.230745",
+    "generation": 9,
+    "is_quality_control_question": false,
+    "is_initial_screening_question": false,
+    "question": {
+      "problem": "Two numbers $90$ and $m$ share exactly three positive divisors. What is the greatest of these three common divisors?",
+      "ground_truth_solution": "Recall that the common divisors of two integers are precisely the divisors of the greatest common divisor. So, for two numbers to have exactly three positive divisors in common, those divisors must be $1$, $p$, and $p^2$ such that $p$ is prime. We now look at the prime factorization of $90$: $90=2 \\cdot 3^2 \\cdot 5$. Since $3^2$ is the only perfect square divisor of $90$, the divisors that $90$ and $m$ share must be $1$, $3$, and $9$. The largest of these three numbers is $\\boxed{9}$.",
+      "ground_truth_answer": "9",
+      "pre_generated_steps": [
+        "To find the common divisors of $90$ and $m$, I need to factorize both numbers into prime factors.",
+        "I know that $90 = 2 \\times 3^2 \\times 5$, so the prime factors of $90$ are $2, 3,$ and $5$.",
+        "I also know that the number of divisors of a number is equal to the product of one more than the exponents of its prime factors.",
+        "For example, $90$ has $(1 + 1) \\times (2 + 1) \\times (1 + 1) = 12$ divisors, which are $1, 2, 3, 5, 6, 9, 10, 15, 18, 30, 45, 90$.",
+        "Therefore, if $m$ has exactly three common divisors with $90$, it must have only three prime factors, and they must be among $2, 3,$ and $5$.",
+        "Moreover, the exponents of these prime factors in $m$ must be either equal to or less than the exponents of the same factors in $90$.",
+        "This means that $m$ can be any of the following numbers: $2, 3, 5, 6, 9, 10, 15, 18, 30, 45, 90$.",
+        "To find the greatest common divisor of $90$ and $m$, I need to find the largest product of prime factors that appear in both numbers with the lowest exponents.",
+        "For example, if $m = 6 = 2 \\times 3$, then the greatest common divisor is $2 \\times 3 = 6$.",
+        "If $m = 10 = 2 \\times 5$, then the greatest common divisor is $2 \\times 1 = 2$.",
+        "If $m = 15 = 3 \\times 5$, then the greatest common divisor is $3 \\times 1 = 3$.",
+        "I notice that the greatest common divisor is always one of the three common divisors, and that it is always a divisor of $m$.",
+        "Therefore, to find the greatest common divisor, I just need to find the largest number among the possible values of $m$ that is a factor of $90$.",
+        "The largest number in the list is $90$, and it is a factor of itself, so the greatest common divisor of $90$ and $m$ is $90$.\n\n# Answer\n\n90"
+      ],
+      "pre_generated_answer": "90",
+      "pre_generated_verifier_score": 0.0020734993171533074
+    },
+    "label": {
+      "steps": [
+        {
+          "completions": [
+            {
+              "text": "To find the common divisors of $90$ and $m$, I need to factorize both numbers into prime factors.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I know that $90 = 2 \\times 3^2 \\times 5$, so the prime factors of $90$ are $2, 3,$ and $5$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I also know that the number of divisors of a number is equal to the product of one more than the exponents of its prime factors.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "For example, $90$ has $(1 + 1) \\times (2 + 1) \\times (1 + 1) = 12$ divisors, which are $1, 2, 3, 5, 6, 9, 10, 15, 18, 30, 45, 90$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Therefore, if $m$ has exactly three common divisors with $90$, it must have only three prime factors, and they must be among $2, 3,$ and $5$.",
+              "rating": -1,
+              "flagged": null
+            },
+            {
+              "text": "If $90$ and $m$ share exactly three divisors, then these must be $1$, the greatest common divisor (GCD) of $90$ and $m$, and one other divisor.",
+              "rating": 1,
+              "flagged": false
+            },
+            {
+              "text": "Now, if $90$ and $m$ share exactly three common divisors, then those divisors must be $1$, a prime factor of $90$, and the product of two prime factors of $90$.",
+              "rating": 0,
+              "flagged": false
+            },
+            {
+              "text": "Therefore, if $90$ and $m$ share exactly three positive divisors, then their greatest common divisor (gcd) must also be a divisor of $90$.",
+              "rating": 1,
+              "flagged": false
+            },
+            {
+              "text": "Now, if $m$ shares exactly three of these divisors with $90$, then it must have one of these three divisors as its highest prime factor, and the other two as its lower prime factors.",
+              "rating": -1,
+              "flagged": false
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": null
+        }
+      ],
+      "total_time": 227046,
+      "finish_reason": "found_error"
+    }
+  },
+  {
+    "labeler": "2b794369-78c8-4e28-b3ba-eb0dd4a9ab2c",
+    "timestamp": "2023-02-19T07:40:04.701189",
+    "generation": 9,
+    "is_quality_control_question": false,
+    "is_initial_screening_question": false,
+    "question": {
+      "problem": "On the complex plane, the parallelogram formed by the points 0, $z,$ $\\frac{1}{z},$ and $z + \\frac{1}{z}$ has area $\\frac{35}{37}.$  If the real part of $z$ is positive, let $d$ be the smallest possible value of $\\left| z + \\frac{1}{z} \\right|.$  Compute $d^2.$",
+      "ground_truth_solution": "Let $z = r (\\cos \\theta + i \\sin \\theta).$  Then\n\\[\\frac{1}{z} = \\frac{1}{r (\\cos \\theta + i \\sin \\theta)} = \\frac{1}{r} (\\cos (-\\theta) + i \\sin (-\\theta)) = \\frac{1}{r} (\\cos \\theta - i \\sin \\theta).\\]By the shoelace formula, the area of the triangle formed by 0, $z = r \\cos \\theta + ir \\sin \\theta$ and $\\frac{1}{z} = \\frac{1}{r} \\cos \\theta - \\frac{i}{r} \\sin \\theta$ is\n\\[\\frac{1}{2} \\left| (r \\cos \\theta) \\left( -\\frac{1}{r} \\sin \\theta \\right) - (r \\sin \\theta) \\left( \\frac{1}{r} \\cos \\theta \\right) \\right| = |\\sin \\theta \\cos \\theta|,\\]so the area of the parallelogram is\n\\[2 |\\sin \\theta \\cos \\theta| = |\\sin 2 \\theta|.\\]Thus, $|\\sin 2 \\theta| = \\frac{35}{37}.$\n\nWe want to find the smallest possible value of\n\\begin{align*}\n\\left| z + \\frac{1}{z} \\right| &= \\left| r \\cos \\theta + ir \\sin \\theta + \\frac{1}{r} \\cos \\theta - \\frac{i}{r} \\sin \\theta \\right| \\\\\n&= \\left| r \\cos \\theta + \\frac{1}{r} \\cos \\theta + i \\left( r \\sin \\theta - \\frac{1}{r} \\sin \\theta \\right) \\right|.\n\\end{align*}The square of this magnitude is\n\\begin{align*}\n\\left( r \\cos \\theta + \\frac{1}{r} \\cos \\theta \\right)^2 + \\left( r \\sin \\theta - \\frac{1}{r} \\sin \\theta \\right)^2 &= r^2 \\cos^2 \\theta + 2 \\cos^2 \\theta + \\frac{1}{r} \\cos^2 \\theta + r^2 \\sin^2 \\theta - 2 \\sin^2 \\theta + \\frac{1}{r^2} \\sin^2 \\theta \\\\\n&= r^2 + \\frac{1}{r^2} + 2 (\\cos^2 \\theta - \\sin^2 \\theta) \\\\\n&= r^2 + \\frac{1}{r^2} + 2 \\cos 2 \\theta.\n\\end{align*}By AM-GM, $r^2 + \\frac{1}{r^2} \\ge 2.$  Also,\n\\[\\cos^2 2 \\theta = 1 - \\sin^2 2 \\theta = 1 - \\left( \\frac{35}{37} \\right)^2 = \\frac{144}{1369},\\]so $\\cos 2 \\theta = \\pm \\frac{12}{37}.$\n\nTo minimize the expression above, we take $\\cos 2 \\theta = -\\frac{12}{37},$ so\n\\[d^2 = 2 - 2 \\cdot \\frac{12}{37} = \\boxed{\\frac{50}{37}}.\\]",
+      "ground_truth_answer": "\\frac{50}{37}",
+      "pre_generated_steps": [
+        "I need to find the magnitude of $z + \\frac{1}{z},$ which is the length of the diagonal of the parallelogram.",
+        "To do that, I need to know the angle between $z$ and $\\frac{1}{z},$ which is the same as the angle between $z$ and the positive real axis, since $\\frac{1}{z}$ is the reflection of $z$ across the real axis.",
+        "Let $\\theta$ be that angle. Then I can use the cosine rule to find $d^2$ in terms of $\\theta$ and $|z|.$",
+        "By the cosine rule, $d^2 = |z|^2 + \\frac{1}{|z|^2} - 2 \\cos \\theta.$",
+        "To simplify this expression, I can use the fact that $|z| = |\\frac{1}{z}|,$ so $|z|^4 = 1.$",
+        "This gives me $d^2 = 2 - 2 \\cos \\theta.$",
+        "Now I need to find the smallest possible value of $d^2.$",
+        "I know that $-1 \\leq \\cos \\theta \\leq 1,$ so $d^2$ is maximized when $\\cos \\theta = -1,$ and minimized when $\\cos \\theta = 1.$",
+        "The maximum value of $d^2$ is $4,$ which occurs when $\\theta = \\pi,$ and the minimum value of $d^2$ is $0,$ which occurs when $\\theta = 0.$",
+        "However, $\\theta = 0$ means that $z$ is real, and then the parallelogram would be degenerate and have zero area, which contradicts the given condition.",
+        "Therefore, $\\theta$ cannot be zero, and the smallest possible value of $d^2$ must be positive.",
+        "I also know that the area of the parallelogram is $\\frac{1}{2} |z|^2 \\sin \\theta = \\frac{35}{37},$ by the formula for the area of a parallelogram in terms of its base and height.",
+        "Since $|z|^2 = 1,$ this simplifies to $\\sin \\theta = \\frac{35}{37}.$",
+        "This means that $\\theta$ is acute, and I can use the Pythagorean identity to find $\\cos \\theta.$",
+        "I have $\\cos^2 \\theta + \\sin^2 \\theta = 1,$ so $\\cos \\theta = \\pm \\sqrt{1 - \\sin^2 \\theta}.$",
+        "Since $\\theta$ is acute, $\\cos \\theta$ must be positive, so $\\cos \\theta = \\sqrt{1 - \\sin^2 \\theta}.$",
+        "Substituting $\\sin \\theta = \\frac{35}{37},$ I get $\\cos \\theta = \\sqrt{1 - \\frac{1225}{1369}} = \\sqrt{\\frac{144}{1369}} = \\frac{12}{37}.$",
+        "Therefore, the smallest possible value of $d^2$ is $2 - 2 \\cos \\theta = 2 - 2 \\cdot \\frac{12}{37} = \\frac{50}{37}.$",
+        "# Answer\n\n\\frac{50}{37}"
+      ],
+      "pre_generated_answer": "\\frac{50}{37}",
+      "pre_generated_verifier_score": 0.0020751530127288828
+    },
+    "label": {
+      "steps": [
+        {
+          "completions": [
+            {
+              "text": "I need to find the magnitude of $z + \\frac{1}{z},$ which is the length of the diagonal of the parallelogram.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "To do that, I need to know the angle between $z$ and $\\frac{1}{z},$ which is the same as the angle between $z$ and the positive real axis, since $\\frac{1}{z}$ is the reflection of $z$ across the real axis.",
+              "rating": -1,
+              "flagged": null
+            },
+            {
+              "text": "To do that, I can use the fact that the area of the parallelogram is $\\frac{35}{37}.$",
+              "rating": 0,
+              "flagged": false
+            },
+            {
+              "text": "To do that, I need to find the lengths of the sides and the angle between them.",
+              "rating": 0,
+              "flagged": false
+            },
+            {
+              "text": "To use the formula for the area of a parallelogram, I need to find the base and the height.",
+              "rating": 0,
+              "flagged": false
+            },
+            {
+              "text": "I know that the area of a parallelogram is the product of the lengths of its base and height, and I also know that the area is half the product of the lengths of its diagonals and the sine of the angle between them.",
+              "rating": 0,
+              "flagged": false
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": null
+        }
+      ],
+      "total_time": 172569,
+      "finish_reason": "found_error"
+    }
+  },
+  {
+    "labeler": "2b794369-78c8-4e28-b3ba-eb0dd4a9ab2c",
+    "timestamp": "2023-02-19T05:36:46.608281",
+    "generation": 9,
+    "is_quality_control_question": false,
+    "is_initial_screening_question": false,
+    "question": {
+      "problem": "Evaluate the product of $\\sqrt[3]{2^2} + \\sqrt[3]{2}$ with $2 - 2\\sqrt[3]{2} - \\sqrt[3]{2^2}$.",
+      "ground_truth_solution": "The given expression is equivalent to the product $$\\left(\\sqrt[3]{4} + \\sqrt[3]{2}\\right) \\cdot \\left(-\\sqrt[3]{16} + \\sqrt[3]{8} - \\sqrt[3]{4}\\right).$$If we let $a = \\sqrt[3]{4}$ and $b = \\sqrt[3]{2}$, then the above expression becomes $$(a+b)(-a^2 + ab - b^2) = -(a+b)(a^2 - ab + b^2) = -(a^3 + b^3).$$Thus, the expression is equal to $- \\left(\\sqrt[3]{4}\\right)^3 - \\left( \\sqrt[3]{2} \\right)^3 = \\boxed{-6}$.",
+      "ground_truth_answer": "-6",
+      "pre_generated_steps": [
+        "I notice that the two factors are of the form $a + b$ and $a^2 - ab + b^2$, where $a = \\sqrt[3]{2^2}$ and $b = \\sqrt[3]{2}$.",
+        "I recall that this is a special product that can be simplified using the identity $(a + b)(a^2 - ab + b^2) = a^3 + b^3$.",
+        "So, I can rewrite the product as $(\\sqrt[3]{2^2} + \\sqrt[3]{2})(\\sqrt[3]{2^2}^2 - \\sqrt[3]{2^2}\\sqrt[3]{2} + \\sqrt[3]{2}^2)$.",
+        "Then, I can apply the identity and get $(\\sqrt[3]{2^2} + \\sqrt[3]{2})(\\sqrt[3]{2^2}^2 - \\sqrt[3]{2^2}\\sqrt[3]{2} + \\sqrt[3]{2}^2) = \\sqrt[3]{2^2}^3 + \\sqrt[3]{2}^3$.",
+        "Now, I just need to simplify the two terms by cubing them.",
+        "I know that $\\sqrt[3]{2^2}^3 = 2^2 = 4$ and $\\sqrt[3]{2}^3 = 2$.",
+        "So, the final answer is $4 + 2 = 6$.",
+        "# Answer\n\n6"
+      ],
+      "pre_generated_answer": "6",
+      "pre_generated_verifier_score": 0.0021103304567050966
+    },
+    "label": {
+      "steps": [
+        {
+          "completions": [
+            {
+              "text": "I notice that the two factors are of the form $a + b$ and $a^2 - ab + b^2$, where $a = \\sqrt[3]{2^2}$ and $b = \\sqrt[3]{2}$.",
+              "rating": -1,
+              "flagged": null
+            },
+            {
+              "text": "I notice that the first factor, $\\sqrt[3]{2^2} + \\sqrt[3]{2}$, is the sum of two cube roots of powers of $2$, and the second factor, $2 - 2\\sqrt[3]{2} - \\sqrt[3]{2^2}$, is the difference of the same cube roots of powers of $2$.",
+              "rating": -1,
+              "flagged": false
+            },
+            {
+              "text": "This problem is about combining powers and roots of 2, so I want to simplify the expressions as much as possible using the properties of radicals.",
+              "rating": 0,
+              "flagged": false
+            },
+            {
+              "text": "I notice that the first factor is a sum of two cube roots of powers of 2, and the second factor is a difference of twice the first term, minus the second term, minus the square of the second term.",
+              "rating": -1,
+              "flagged": false
+            },
+            {
+              "text": "To start, I notice that both factors are cubic roots of something, and I wonder if I can use the formula for the difference of two cubes to simplify them.",
+              "rating": 0,
+              "flagged": false
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": null
+        }
+      ],
+      "total_time": 175497,
+      "finish_reason": "found_error"
+    }
+  },
+  {
+    "labeler": "2b794369-78c8-4e28-b3ba-eb0dd4a9ab2c",
+    "timestamp": "2023-02-19T05:33:41.910774",
+    "generation": 9,
+    "is_quality_control_question": false,
+    "is_initial_screening_question": false,
+    "question": {
+      "problem": "The polynomial\n$$g(x) = x^3 - x^2 - (m^2 + m) x + 2m^2 + 4m + 2$$is divisible by $x-4$ and all of its zeroes are integers. Find all possible values of $m$.",
+      "ground_truth_solution": "Since $g(x)$ is divisible by $x-4$, we have $g(4)=0$. We also have\n\\begin{align*}\ng(4) &= 4^3 - 4^2 - (m^2+m)(4) + 2m^2+4m+2 \\\\\n&= 50 - 2m^2,\n\\end{align*}so $0=50-2m^2$. Thus $m$ can only be $5$ or $-5$. We check both possibilities.\n\nIf $m=5$, then $g(x)=x^3-x^2-30x+72=(x-4)(x^2+3x-18)=(x-4)(x+6)(x-3)$, so all zeroes are integers.\n\nIf $m=-5$, then $g(x)=x^3-x^2-20x+32=(x-4)(x^2+3x-8)$, but $x^2+3x-8$ does not have integer zeroes.\n\nTherefore, the only solution is $m=\\boxed{5}$.",
+      "ground_truth_answer": "5",
+      "pre_generated_steps": [
+        "I notice that the polynomial has a factor of $x-4$, so one of its zeroes is $x=4$.",
+        "That means I can use synthetic division to divide the polynomial by $x-4$ and get a quotient of degree 2.",
+        "To do that, I write down the coefficients of the polynomial, leaving out the $x$'s: $(1, -1, -m^2 - m, 2m^2 + 4m + 2)$.",
+        "Then I write down the zero, $x=4$, on the left, and draw a vertical line and a horizontal line to separate the coefficients and the quotient.",
+        "I bring down the first coefficient, $1$, and write it under the horizontal line.",
+        "Then I multiply $1$ by $4$ and write the result, $4$, above the second coefficient, $-1$.",
+        "I add $-1$ and $4$ and get $3$, and write it under the horizontal line.",
+        "Then I multiply $3$ by $4$ and write the result, $12$, above the third coefficient, $-m^2 - m$.",
+        "I add $-m^2 - m$ and $12$ and get $-m^2 - m + 12$, and write it under the horizontal line.",
+        "Then I multiply $-m^2 - m + 12$ by $4$ and write the result, $-4m^2 - 4m + 48$, above the last coefficient, $2m^2 + 4m + 2$.",
+        "I add $2m^2 + 4m + 2$ and $-4m^2 - 4m + 48$ and get $-2m^2 + 50$, and write it under the horizontal line.",
+        "This is the remainder of the division, and it should be zero, since $x-4$ is a factor of the polynomial.",
+        "So I set $-2m^2 + 50 = 0$ and solve for $m$.",
+        "I subtract $50$ from both sides and get $-2m^2 = -50$.",
+        "I divide both sides by $-2$ and get $m^2 = 25$.",
+        "I take the square root of both sides and get $m = \\pm 5$.",
+        "These are two possible values of $m$, but I need to check if they satisfy the other condition, that all of the zeroes of the polynomial are integers.",
+        "To do that, I look at the quotient of the division, which is the polynomial $x^2 + 3x - m^2 - m + 12$.",
+        "I want to factor this polynomial and find its zeroes.",
+        "I notice that it has a constant term of $-m^2 - m + 12$, which is equal to $-25 - 5 + 12 = -18$ when $m = 5$, and $-25 + 5 + 12 = -8$ when $m = -5$.",
+        "I also notice that it has a leading coefficient of $1$, so if it has integer zeroes, they must be factors of the constant term.",
+        "So I list the factors of $-18$ and $-8$ and see if any pair of them add up to the middle coefficient, $3$.",
+        "The factors of $-18$ are $\\pm 1, \\pm 2, \\pm 3, \\pm 6, \\pm 9, \\pm 18$.",
+        "The only pair that adds up to $3$ is $-3$ and $6$.",
+        "So when $m = 5$, the polynomial $x^2 + 3x - m^2 - m + 12$ can be factored as $(x-3)(x+6)$, and its zeroes are $x=3$ and $x=-6$, which are integers.",
+        "The factors of $-8$ are $\\pm 1, \\pm 2, \\pm 4, \\pm 8$.",
+        "The only pair that adds up to $3$ is $-1$ and $4$.",
+        "So when $m = -5$, the polynomial $x^2 + 3x - m^2 - m + 12$ can be factored as $(x-1)(x+4)$, and its zeroes are $x=1$ and $x=-4$, which are also integers.",
+        "Therefore, both $m = 5$ and $m = -5$ are possible values of $m$ that satisfy the given conditions.",
+        "# Answer\n\n5, -5"
+      ],
+      "pre_generated_answer": "5, -5",
+      "pre_generated_verifier_score": 0.002110933227931397
+    },
+    "label": {
+      "steps": [
+        {
+          "completions": [
+            {
+              "text": "I notice that the polynomial has a factor of $x-4$, so one of its zeroes is $x=4$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "That means I can use synthetic division to divide the polynomial by $x-4$ and get a quotient of degree 2.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "To do that, I write down the coefficients of the polynomial, leaving out the $x$'s: $(1, -1, -m^2 - m, 2m^2 + 4m + 2)$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Then I write down the zero, $x=4$, on the left, and draw a vertical line and a horizontal line to separate the coefficients and the quotient.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I bring down the first coefficient, $1$, and write it under the horizontal line.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Then I multiply $1$ by $4$ and write the result, $4$, above the second coefficient, $-1$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I add $-1$ and $4$ and get $3$, and write it under the horizontal line.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Then I multiply $3$ by $4$ and write the result, $12$, above the third coefficient, $-m^2 - m$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I add $-m^2 - m$ and $12$ and get $-m^2 - m + 12$, and write it under the horizontal line.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Then I multiply $-m^2 - m + 12$ by $4$ and write the result, $-4m^2 - 4m + 48$, above the last coefficient, $2m^2 + 4m + 2$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I add $2m^2 + 4m + 2$ and $-4m^2 - 4m + 48$ and get $-2m^2 + 50$, and write it under the horizontal line.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "This is the remainder of the division, and it should be zero, since $x-4$ is a factor of the polynomial.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "So I set $-2m^2 + 50 = 0$ and solve for $m$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I subtract $50$ from both sides and get $-2m^2 = -50$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I divide both sides by $-2$ and get $m^2 = 25$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I take the square root of both sides and get $m = \\pm 5$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "These are two possible values of $m$, but I need to check if they satisfy the other condition, that all of the zeroes of the polynomial are integers.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "To do that, I look at the quotient of the division, which is the polynomial $x^2 + 3x - m^2 - m + 12$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I want to factor this polynomial and find its zeroes.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I notice that it has a constant term of $-m^2 - m + 12$, which is equal to $-25 - 5 + 12 = -18$ when $m = 5$, and $-25 + 5 + 12 = -8$ when $m = -5$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I also notice that it has a leading coefficient of $1$, so if it has integer zeroes, they must be factors of the constant term.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "So I list the factors of $-18$ and $-8$ and see if any pair of them add up to the middle coefficient, $3$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "The factors of $-18$ are $\\pm 1, \\pm 2, \\pm 3, \\pm 6, \\pm 9, \\pm 18$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "The only pair that adds up to $3$ is $-3$ and $6$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "So when $m = 5$, the polynomial $x^2 + 3x - m^2 - m + 12$ can be factored as $(x-3)(x+6)$, and its zeroes are $x=3$ and $x=-6$, which are integers.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "The factors of $-8$ are $\\pm 1, \\pm 2, \\pm 4, \\pm 8$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "The only pair that adds up to $3$ is $-1$ and $4$.",
+              "rating": -1,
+              "flagged": null
+            },
+            {
+              "text": "The only pair that adds up to $3$ is $-1$ and $4$.",
+              "rating": -1,
+              "flagged": false
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": null
+        }
+      ],
+      "total_time": 330707,
+      "finish_reason": "found_error"
+    }
+  },
+  {
+    "labeler": "2b794369-78c8-4e28-b3ba-eb0dd4a9ab2c",
+    "timestamp": "2023-02-19T05:28:01.534396",
+    "generation": 9,
+    "is_quality_control_question": false,
+    "is_initial_screening_question": false,
+    "question": {
+      "problem": "If Greg rolls four fair six-sided dice, what is the probability that he rolls more 1's than 6's?",
+      "ground_truth_solution": "We notice that the probability that he rolls more 1's than 6's must equal the probability that he rolls more 6's than 1's. So, we can find the probability that Greg rolls the same number of 1's and 6's, subtract it from 1, and divide by 2 to find the probability that Greg rolls more 1's than 6's. There are three ways Greg can roll the same number of 1's and 6's: he can roll two of each, one of each, or none of each. If he rolls two of each, there are $\\binom{4}{2}=6$ ways to choose which two dice roll the 1's. If he rolls one of each, there are $\\binom{4}{1}\\binom{3}{1}=12$ ways to choose which dice are the 6 and the 1, and for each of those ways there are $4\\cdot4=16$ ways to choose the values of the other dice. If Greg rolls no 1's or 6's, there are $4^4=256$ possible values for the dice. In total, there are $6+12\\cdot16+256=454$ ways Greg can roll the same number of 1's and 6's. There are $6^4=1296$ total ways the four dice can roll, so the probability that Greg rolls more 1's than 6's is $\\dfrac{1}{2} \\left(1-\\dfrac{454}{1296}\\right)=\\boxed{\\dfrac{421}{1296}}$.",
+      "ground_truth_answer": "\\dfrac{421}{1296}",
+      "pre_generated_steps": [
+        "I want to find the probability of an event that depends on the outcomes of four independent trials, each with six possible outcomes.",
+        "This sounds like a problem that involves the binomial distribution, which counts the number of successes in a fixed number of trials, each with two possible outcomes.",
+        "In this case, I can define a success as rolling a 1 and a failure as rolling a 6, and ignore the other four outcomes.",
+        "Then, the probability of rolling more 1's than 6's is the same as the probability of getting more than two successes in four trials.",
+        "To use the binomial formula, I need to know the probability of success in one trial, which is 1/6, and the probability of failure, which is also 1/6.",
+        "The binomial formula says that the probability of getting exactly k successes in n trials, each with probability p of success, is n choose k times p^k times (1-p)^(n-k).",
+        "To get more than two successes, I need to add up the probabilities of getting exactly three and exactly four successes.",
+        "So, the probability of getting more than two successes in four trials, each with probability 1/6 of success, is 4 choose 3 times (1/6)^3 times (5/6)^1 plus 4 choose 4 times (1/6)^4 times (5/6)^0.",
+        "I can simplify this expression by using the fact that n choose n is 1 and n choose n-1 is n, and that any number to the zero power is 1.",
+        "So, the probability becomes 4 times (1/6)^3 times (5/6) plus (1/6)^4, which is 20/1296 plus 1/1296, which is 21/1296.",
+        "I can reduce this fraction by dividing the numerator and denominator by 3, which gives 7/432.",
+        "# Answer\n\n7/432"
+      ],
+      "pre_generated_answer": "7/432",
+      "pre_generated_verifier_score": 0.0021161194160819207
+    },
+    "label": {
+      "steps": [
+        {
+          "completions": [
+            {
+              "text": "I want to find the probability of an event that depends on the outcomes of four independent trials, each with six possible outcomes.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "This sounds like a problem that involves the binomial distribution, which counts the number of successes in a fixed number of trials, each with two possible outcomes.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "In this case, I can define a success as rolling a 1 and a failure as rolling a 6, and ignore the other four outcomes.",
+              "rating": -1,
+              "flagged": null
+            },
+            {
+              "text": "In this case, I can think of rolling a 1 as a success, and rolling anything else as a failure.",
+              "rating": -1,
+              "flagged": false
+            },
+            {
+              "text": "In this case, I can define a success as rolling a 1 and a failure as rolling a 6, and ignore the other four outcomes.",
+              "rating": -1,
+              "flagged": false
+            },
+            {
+              "text": "In this case, I can think of each die roll as a trial, and a success as rolling a 1 or a 6, since those are the only numbers that affect the event I'm interested in.",
+              "rating": -1,
+              "flagged": false
+            },
+            {
+              "text": "To apply the binomial distribution, I need to identify what counts as a success and what counts as a failure in each trial.",
+              "rating": 0,
+              "flagged": false
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": null
+        }
+      ],
+      "total_time": 192526,
+      "finish_reason": "found_error"
+    }
+  },
+  {
+    "labeler": "2b794369-78c8-4e28-b3ba-eb0dd4a9ab2c",
+    "timestamp": "2023-02-19T05:18:11.998786",
+    "generation": 9,
+    "is_quality_control_question": false,
+    "is_initial_screening_question": false,
+    "question": {
+      "problem": "A bored student walks down a hall that contains a row of closed lockers, numbered $1$ to $1024$. He opens the locker numbered 1, and then alternates between skipping and opening each locker thereafter. When he reaches the end of the hall, the student turns around and starts back. He opens the first closed locker he encounters, and then alternates between skipping and opening each closed locker thereafter. The student continues wandering back and forth in this manner until every locker is open. What is the number of the last locker he opens?",
+      "ground_truth_solution": "On his first pass, he opens all of the odd lockers. So there are only even lockers closed. Then he opens the lockers that are multiples of $4$, leaving only lockers $2 \\pmod{8}$ and $6 \\pmod{8}$. Then he goes ahead and opens all lockers $2 \\pmod {8}$, leaving lockers either $6 \\pmod {16}$ or $14 \\pmod {16}$. He then goes ahead and opens all lockers $14 \\pmod {16}$, leaving the lockers either $6 \\pmod {32}$ or $22 \\pmod {32}$. He then goes ahead and opens all lockers $6 \\pmod {32}$, leaving $22 \\pmod {64}$ or $54 \\pmod {64}$. He then opens $54 \\pmod {64}$, leaving $22 \\pmod {128}$ or $86 \\pmod {128}$. He then opens $22 \\pmod {128}$ and leaves $86 \\pmod {256}$ and $214 \\pmod {256}$. He then opens all $214 \\pmod {256}$, so we have $86 \\pmod {512}$ and $342 \\pmod {512}$, leaving lockers $86, 342, 598$, and $854$, and he is at where he started again. He then opens $86$ and $598$, and then goes back and opens locker number $854$, leaving locker number $\\boxed{342}$ untouched. He opens that locker.",
+      "ground_truth_answer": "342",
+      "pre_generated_steps": [
+        "I need to find a pattern or a rule that describes which lockers are open and which are closed at any given time.",
+        "I notice that the first time the student walks down the hall, he opens every odd locker, and the second time he walks down the hall, he opens every locker that is a multiple of 4.",
+        "I wonder if there is a connection between the number of times the student walks down the hall and the factors of the locker numbers.",
+        "I realize that the student opens a locker if and only if it has an odd number of factors.",
+        "I recall that a positive integer has an odd number of factors if and only if it is a perfect square.",
+        "I see that the largest perfect square that is less than or equal to 1024 is 1024 itself.",
+        "I conclude that the last locker the student opens is the one numbered 1024.",
+        "# Answer\n\n1024"
+      ],
+      "pre_generated_answer": "1024",
+      "pre_generated_verifier_score": 0.0021315701893901908
+    },
+    "label": {
+      "steps": [
+        {
+          "completions": [
+            {
+              "text": "I need to find a pattern or a rule that describes which lockers are open and which are closed at any given time.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I notice that the first time the student walks down the hall, he opens every odd locker, and the second time he walks down the hall, he opens every locker that is a multiple of 4.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I wonder if there is a connection between the number of times the student walks down the hall and the factors of the locker numbers.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I realize that the student opens a locker if and only if it has an odd number of factors.",
+              "rating": -1,
+              "flagged": null
+            },
+            {
+              "text": "I try to write down the locker numbers that are open after each pass.",
+              "rating": 0,
+              "flagged": false
+            },
+            {
+              "text": "I try to generalize this idea and I come up with the following hypothesis: after the student walks down the hall $n$ times, he opens every locker that is a multiple of $2^n$.",
+              "rating": -1,
+              "flagged": false
+            },
+            {
+              "text": "I write down the first few locker numbers that are opened in order: 1, 3, 5, 7, ..., 1023, 4, 8, 12, ..., 1024, 6, 10, 14, ..., 1022, 9, 13, 17, ..., 1021, 11, 15, 19, ..., 1023, 16, 20, 24, ..., 48, 32, 36, 40, ..., 64, 18, 22, 26, ..., 46, 33, 37, 41, ..., 63, 47, 51, 55, ..., 79, 23, 27, 31, ..., 63, 34, 38, 42, ..., 62, ...",
+              "rating": -1,
+              "flagged": false
+            },
+            {
+              "text": "I try to write down the locker numbers that are open after each walk.",
+              "rating": 0,
+              "flagged": false
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": null
+        }
+      ],
+      "total_time": 253066,
+      "finish_reason": "found_error"
+    }
+  },
+  {
+    "labeler": "2b794369-78c8-4e28-b3ba-eb0dd4a9ab2c",
+    "timestamp": "2023-02-19T05:01:13.351578",
+    "generation": 9,
+    "is_quality_control_question": false,
+    "is_initial_screening_question": false,
+    "question": {
+      "problem": "The least common multiple of $1!+2!$, $2!+3!$, $3!+4!$, $4!+5!$, $5!+6!$, $6!+7!$, $7!+8!$, and $8!+9!$ can be expressed in the form $a\\cdot b!$, where $a$ and $b$ are integers and $b$ is as large as possible. What is $a+b$?",
+      "ground_truth_solution": "Note that we can factor $n!+(n+1)!$ as $n!\\cdot [1+(n+1)] = n!\\cdot(n+2)$. Thus, we have \\begin{align*}\n1!+2! &= 1!\\cdot 3 \\\\\n2!+3! &= 2!\\cdot 4 \\\\\n3!+4! &= 3!\\cdot 5 \\\\\n4!+5! &= 4!\\cdot 6 \\\\\n5!+6! &= 5!\\cdot 7 \\\\\n6!+7! &= 6!\\cdot 8 \\\\\n7!+8! &= 7!\\cdot 9 \\\\\n8!+9! &= 8!\\cdot 10\n\\end{align*}The last two numbers are $9\\cdot 7!$ and $(8\\cdot 10)\\cdot 7!$, so their least common multiple is equal to $\\mathop{\\text{lcm}}[9,8\\cdot 10]\\cdot 7!$. Since $9$ and $8\\cdot 10$ are relatively prime, we have $\\mathop{\\text{lcm}}[9,8\\cdot 10] = 9\\cdot 8\\cdot 10$, and so $$\\mathop{\\text{lcm}}[7!+8!,8!+9!] = 9\\cdot 8\\cdot 10\\cdot 7! = 10!.$$Finally, we note that all the other numbers in our list ($1!+2!,2!+3!,\\ldots,6!+7!$) are clearly divisors of $10!$. So, the least common multiple of all the numbers in our list is $10!$. Writing this in the form specified in the problem, we get $1\\cdot 10!$, so $a=1$ and $b=10$ and their sum is $\\boxed{11}$.",
+      "ground_truth_answer": "11",
+      "pre_generated_steps": [
+        "I notice that the given expressions all have the form $n!+(n+1)!$, where $n$ ranges from $1$ to $8$.",
+        "I wonder if I can simplify them or factor them somehow.",
+        "I realize that I can use the distributive property to write $n!+(n+1)!$ as $n!(1+n+1)$, or $(n+2)n!$.",
+        "This means that each expression is a multiple of $n!$ and $n+2$.",
+        "For example, $1!+2! = 3\\cdot 1! = 3$, $2!+3! = 4\\cdot 2! = 8$, $3!+4! = 5\\cdot 3! = 30$, and so on.",
+        "I want to find the least common multiple of these expressions, so I need to find the smallest positive integer that is a multiple of all of them.",
+        "I can use the prime factorization of each expression to help me do that.",
+        "The prime factorizations are $1!+2! = 3$, $2!+3! = 2^3$, $3!+4! = 2\\cdot 3\\cdot 5$, $4!+5! = 2^3\\cdot 3\\cdot 5$, $5!+6! = 2^2\\cdot 3\\cdot 5\\cdot 7$, $6!+7! = 2^4\\cdot 3\\cdot 5\\cdot 7$, $7!+8! = 2^6\\cdot 3\\cdot 5\\cdot 7$, and $8!+9! = 2^6\\cdot 3^2\\cdot 5\\cdot 7$.",
+        "To find the least common multiple, I need to take the highest power of each prime that appears in any of the factorizations.",
+        "The primes that appear are $2$, $3$, $5$, and $7$.",
+        "The highest power of $2$ that appears is $2^6$.",
+        "The highest power of $3$ that appears is $3^2$.",
+        "The highest power of $5$ that appears is $5^1$.",
+        "The highest power of $7$ that appears is $7^1$.",
+        "Therefore, the least common multiple is $2^6\\cdot 3^2\\cdot 5\\cdot 7$.",
+        "I can simplify this expression by multiplying the numbers.",
+        "I get $2^6\\cdot 3^2\\cdot 5\\cdot 7 = 64\\cdot 9\\cdot 5\\cdot 7 = 20160$.",
+        "This is the least common multiple of the given expressions, and it can be written in the form $a\\cdot b!$, where $a$ and $b$ are integers and $b$ is as large as possible.",
+        "To find $b$, I need to find the largest factorial that divides $20160$.",
+        "I can start by checking if $8!$ divides $20160$.",
+        "I know that $8! = 2^7\\cdot 3^2\\cdot 5\\cdot 7$, so it does not divide $20160$, because $20160$ has only six factors of $2$.",
+        "Therefore, $b$ must be less than $8$.",
+        "I can try $7!$, which is $2^4\\cdot 3^2\\cdot 5\\cdot 7$.",
+        "This does divide $20160$, because it has the same factors of $3$, $5$, and $7$, and fewer factors of $2$.",
+        "Therefore, $b = 7$.",
+        "To find $a$, I need to divide $20160$ by $7!$.",
+        "I get $a = \\frac{20160}{7!} = \\frac{20160}{5040} = 4$.",
+        "Therefore, the least common multiple of the given expressions can be written as $4\\cdot 7!$.",
+        "The answer is $a+b = 4+7 = 11$.",
+        "# Answer\n\n11"
+      ],
+      "pre_generated_answer": "11",
+      "pre_generated_verifier_score": 0.0021445731558916744
+    },
+    "label": {
+      "steps": [
+        {
+          "completions": [
+            {
+              "text": "I notice that the given expressions all have the form $n!+(n+1)!$, where $n$ ranges from $1$ to $8$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I wonder if I can simplify them or factor them somehow.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I realize that I can use the distributive property to write $n!+(n+1)!$ as $n!(1+n+1)$, or $(n+2)n!$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "This means that each expression is a multiple of $n!$ and $n+2$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "For example, $1!+2! = 3\\cdot 1! = 3$, $2!+3! = 4\\cdot 2! = 8$, $3!+4! = 5\\cdot 3! = 30$, and so on.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I want to find the least common multiple of these expressions, so I need to find the smallest positive integer that is a multiple of all of them.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I can use the prime factorization of each expression to help me do that.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "The prime factorizations are $1!+2! = 3$, $2!+3! = 2^3$, $3!+4! = 2\\cdot 3\\cdot 5$, $4!+5! = 2^3\\cdot 3\\cdot 5$, $5!+6! = 2^2\\cdot 3\\cdot 5\\cdot 7$, $6!+7! = 2^4\\cdot 3\\cdot 5\\cdot 7$, $7!+8! = 2^6\\cdot 3\\cdot 5\\cdot 7$, and $8!+9! = 2^6\\cdot 3^2\\cdot 5\\cdot 7$.",
+              "rating": -1,
+              "flagged": null
+            },
+            {
+              "text": "For example, $8 = 2^3$, $30 = 2\\cdot 3\\cdot 5$, $80 = 2^4\\cdot 5$, and so on.",
+              "rating": -1,
+              "flagged": false
+            },
+            {
+              "text": "$3 = 3$, $8 = 2^3$, $30 = 2\\cdot 3\\cdot 5$, $168 = 2^3\\cdot 3\\cdot 7$, $840 = 2^3\\cdot 3\\cdot 5\\cdot 7$, $5040 = 2^4\\cdot 3^2\\cdot 5\\cdot 7$, $40320 = 2^7\\cdot 3^2\\cdot 5\\cdot 7$, and $362880 = 2^7\\cdot 3^4\\cdot 5\\cdot 7\\cdot 11$.",
+              "rating": -1,
+              "flagged": false
+            },
+            {
+              "text": "$3 = 3$, $8 = 2^3$, $30 = 2\\cdot 3\\cdot 5$, $168 = 2^3\\cdot 3\\cdot 7$, $960 = 2^6\\cdot 3\\cdot 5$, $5040 = 2^4\\cdot 3^2\\cdot 5\\cdot 7$, $40320 = 2^7\\cdot 3^2\\cdot 5\\cdot 7$, and $362880 = 2^7\\cdot 3^4\\cdot 5^2\\cdot 7$.",
+              "rating": -1,
+              "flagged": false
+            },
+            {
+              "text": "For example, $3 = 3^1$, $8 = 2^3$, $30 = 2^1\\cdot 3^1\\cdot 5^1$, and so on.",
+              "rating": 0,
+              "flagged": false
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": null
+        }
+      ],
+      "total_time": 246640,
+      "finish_reason": "found_error"
+    }
+  },
+  {
+    "labeler": "2b794369-78c8-4e28-b3ba-eb0dd4a9ab2c",
+    "timestamp": "2023-02-18T06:31:44.798292",
+    "generation": 9,
+    "is_quality_control_question": false,
+    "is_initial_screening_question": false,
+    "question": {
+      "problem": "The product of the proper positive integer factors of $n$ can be written as $n^{(ax+b)/c}$, where $x$ is the number of positive divisors $n$ has, $c$ is a positive integer, and the greatest common factor of the three integers $a$, $b$, and $c$ is $1$. What is $a+b+c$?",
+      "ground_truth_solution": "Recall that by pairing up divisors of $n$, we can show that the product of the positive integer factors of $n$ is $n^\\frac{x}{2}$. We divide this formula by $n$ to get the product of the proper positive integer factors of $n$, and we obtain $\\frac{n^\\frac{x}{2}}{n} = n^{\\frac{x}{2}-1} = n^\\frac{x-2}{2}$. Therefore, $a = 1$, $b = -2$, and $c = 2$, so $a+b+c = \\boxed{1}$.",
+      "ground_truth_answer": "1",
+      "pre_generated_steps": [
+        "I notice that the problem involves the product of the proper positive integer factors of $n$, which means all the factors of $n$ except $n$ itself.",
+        "I also notice that the problem involves the number of positive divisors of $n$, which I'll call $x$.",
+        "I wonder if there is a way to relate the product of the proper factors of $n$ to $n$ and $x$.",
+        "I recall that the product of all the factors of $n$ is $n^{x/2}$, since each factor can be paired with its complement, and their product is $n$.",
+        "Therefore, the product of the proper factors of $n$ is $n^{x/2}/n$, which is $n^{(x-2)/2}$.",
+        "This means that the product of the proper factors of $n$ can be written as $n^{(ax+b)/c}$, where $a=1$, $b=-2$, and $c=2$.",
+        "The greatest common factor of $a$, $b$, and $c$ is $1$, as required.",
+        "The answer is $a+b+c=1+(-2)+2=1$.",
+        "# Answer\n\n1"
+      ],
+      "pre_generated_answer": "1",
+      "pre_generated_verifier_score": 0.0021685672634212416
+    },
+    "label": {
+      "steps": [
+        {
+          "completions": [
+            {
+              "text": "I notice that the problem involves the product of the proper positive integer factors of $n$, which means all the factors of $n$ except $n$ itself.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I also notice that the problem involves the number of positive divisors of $n$, which I'll call $x$.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I wonder if there is a way to relate the product of the proper factors of $n$ to $n$ and $x$.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I recall that the product of all the factors of $n$ is $n^{x/2}$, since each factor can be paired with its complement, and their product is $n$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "Therefore, the product of the proper factors of $n$ is $n^{x/2}/n$, which is $n^{(x-2)/2}$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "This means that the product of the proper factors of $n$ can be written as $n^{(ax+b)/c}$, where $a=1$, $b=-2$, and $c=2$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "The greatest common factor of $a$, $b$, and $c$ is $1$, as required.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "The answer is $a+b+c=1+(-2)+2=1$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            { "text": "# Answer\n\n1", "rating": 1, "flagged": null }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        }
+      ],
+      "total_time": 94026,
+      "finish_reason": "solution"
+    }
+  },
+  {
+    "labeler": "2b794369-78c8-4e28-b3ba-eb0dd4a9ab2c",
+    "timestamp": "2023-02-18T06:24:52.906714",
+    "generation": 9,
+    "is_quality_control_question": false,
+    "is_initial_screening_question": false,
+    "question": {
+      "problem": "For how many integers $n$ where $2 \\le n \\le 100$ is $\\binom{n}{2}$ odd?",
+      "ground_truth_solution": "$\\binom{n}{2} = \\frac{n(n-1)}{2}$. In order for this fraction to be odd, neither $n$ nor $n-1$ can be divisible by $4$, because only one of $n$ and $n-1$ can be even. There are $25$ integers where $n$ is divisible by $4$, namely the multiples of $4$ from $4$ to $100$. There are $24$ integers where $n-1$ is divisible by $4$. We can obtain these integers by incrementing all the multiples of $4$ by $1$, but we must not include $100$ since $100+1 = 101 > 100$. Therefore, there are $49$ invalid integers, so there are $99 - 49 = \\boxed{50}$ valid integers.",
+      "ground_truth_answer": "50",
+      "pre_generated_steps": [
+        "I notice that $\\binom{n}{2}$ is the number of ways to choose two elements from a set of $n$ elements, which can also be written as $\\frac{n(n-1)}{2}$.",
+        "To see when this fraction is odd, I need to consider the parity of the numerator and the denominator.",
+        "The numerator, $n(n-1)$, is always even, since it is the product of two consecutive integers, one of which must be even.",
+        "So the only way for the fraction to be odd is if the denominator, $2$, divides the numerator exactly.",
+        "That means $n(n-1)$ must be a multiple of $4$, or equivalently, $n$ must be congruent to $0$ or $1$ modulo $4$.",
+        "To find how many such $n$ there are in the given range, I can use the fact that $n \\equiv 0 \\pmod{4}$ if and only if $n$ is a multiple of $4$, and $n \\equiv 1 \\pmod{4}$ if and only if $n$ is one more than a multiple of $4$.",
+        "The smallest multiple of $4$ in the range is $4$, and the largest is $100$.",
+        "So there are $\\frac{100 - 4}{4} + 1 = 25$ multiples of $4$ in the range.",
+        "Similarly, the smallest number in the range that is one more than a multiple of $4$ is $5$, and the largest is $97$.",
+        "So there are $\\frac{97 - 5}{4} + 1 = 24$ numbers in the range that are one more than a multiple of $4$.",
+        "Therefore, the total number of $n$ that make $\\binom{n}{2}$ odd is $25 + 24 = 49$.",
+        "# Answer\n\n49"
+      ],
+      "pre_generated_answer": "49",
+      "pre_generated_verifier_score": 0.00217438383067319
+    },
+    "label": {
+      "steps": [
+        {
+          "completions": [
+            {
+              "text": "I notice that $\\binom{n}{2}$ is the number of ways to choose two elements from a set of $n$ elements, which can also be written as $\\frac{n(n-1)}{2}$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "To see when this fraction is odd, I need to consider the parity of the numerator and the denominator.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "The numerator, $n(n-1)$, is always even, since it is the product of two consecutive integers, one of which must be even.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "So the only way for the fraction to be odd is if the denominator, $2$, divides the numerator exactly.",
+              "rating": -1,
+              "flagged": null
+            },
+            {
+              "text": "The denominator, $2$, is also even, so the fraction is odd only when the numerator has more factors of $2$ than the denominator.",
+              "rating": 1,
+              "flagged": false
+            },
+            {
+              "text": "The denominator, 2, is also even, so the fraction can only be odd if the numerator has exactly one more factor of 2 than the denominator.",
+              "rating": -1,
+              "flagged": false
+            },
+            {
+              "text": "The denominator, $2$, is also even.",
+              "rating": 0,
+              "flagged": false
+            },
+            {
+              "text": "The denominator, $2$, is also always even.",
+              "rating": 0,
+              "flagged": false
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": null
+        }
+      ],
+      "total_time": 137561,
+      "finish_reason": "found_error"
+    }
+  },
+  {
+    "labeler": "2b794369-78c8-4e28-b3ba-eb0dd4a9ab2c",
+    "timestamp": "2023-02-18T05:55:14.972650",
+    "generation": 9,
+    "is_quality_control_question": false,
+    "is_initial_screening_question": false,
+    "question": {
+      "problem": "All triangles have the same value, and all circles have the same value. What is the sum of two circles? \\begin{align*}\n\\Delta + \\bigcirc + \\Delta + \\bigcirc + \\Delta + \\bigcirc + \\Delta + \\Delta&= 21\\\\\n\\bigcirc + \\Delta+\\bigcirc+\\Delta+\\bigcirc + \\Delta + \\bigcirc + \\bigcirc &= 16\\\\\n\\bigcirc + \\bigcirc &= \\ \\, ?\n\\end{align*}",
+      "ground_truth_solution": "Replace a triangle with the letter $a$ and a circle with the letter $b.$ The two given equations become \\begin{align*}\n5a+3b&=21\\\\\n3a+5b&=16\n\\end{align*}Multiplying the first equation by $3,$ we get $15a+9b=63.$ Multiplying the second equation by $5,$ we get $15a+25b=80.$ Subtracting this last equation from the second-to-last equation to eliminate $a,$ we have $16b=17.$ Multiplying both sides by $\\frac{2}{16},$ we get $$\\frac{2}{16}\\cdot 16b = \\frac{2}{16} \\cdot 17 \\implies 2b=\\frac{17}{8}.$$Thus, two circles equals $\\boxed{\\frac{17}{8}}.$",
+      "ground_truth_answer": "\\frac{17}{8}",
+      "pre_generated_steps": [
+        "To solve this problem, I need to find the value of one circle and one triangle.",
+        "I notice that the first equation has four triangles and four circles, and the second equation has four circles and three triangles.",
+        "That means that if I subtract the second equation from the first, I will get one triangle and eliminate the circles.",
+        "So I do that: \\begin{align*}\n(\\Delta + \\bigcirc + \\Delta + \\bigcirc + \\Delta + \\bigcirc + \\Delta + \\Delta) - (\\bigcirc + \\Delta+\\bigcirc+\\Delta+\\bigcirc + \\Delta + \\bigcirc + \\bigcirc) &= 21 - 16\\\\\n\\Delta &= 5\n\\end{align*}",
+        "Now I know that one triangle is worth 5.",
+        "I can use that to find the value of one circle by plugging it into either equation.",
+        "I choose the second one, since it has fewer terms.",
+        "I get: \\begin{align*}\n\\bigcirc + \\Delta+\\bigcirc+\\Delta+\\bigcirc + \\Delta + \\bigcirc + \\bigcirc &= 16\\\\\n\\bigcirc + 5 + \\bigcirc + 5 + \\bigcirc + 5 + \\bigcirc + \\bigcirc &= 16\\\\\n4 \\bigcirc + 15 &= 16\\\\\n4 \\bigcirc &= 1\\\\\n\\bigcirc &= \\frac{1}{4}\n\\end{align*}",
+        "So one circle is worth $\\frac{1}{4}$.",
+        "Now I can find the sum of two circles by adding them together.",
+        "I get: \\begin{align*}\n\\bigcirc + \\bigcirc &= \\frac{1}{4} + \\frac{1}{4}\\\\\n&= \\frac{1}{2}\n\\end{align*}",
+        "# Answer\n\n\\frac{1}{2}"
+      ],
+      "pre_generated_answer": "\\frac{1}{2}",
+      "pre_generated_verifier_score": 0.0022065328040634003
+    },
+    "label": {
+      "steps": [
+        {
+          "completions": [
+            {
+              "text": "To solve this problem, I need to find the value of one circle and one triangle.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I notice that the first equation has four triangles and four circles, and the second equation has four circles and three triangles.",
+              "rating": -1,
+              "flagged": null
+            },
+            {
+              "text": "To do that, I can use either equation and try to eliminate one of the shapes.",
+              "rating": 0,
+              "flagged": false
+            },
+            {
+              "text": "I can use either equation to do that, but I notice that the second one has more circles than triangles, so I'll use that one.",
+              "rating": 0,
+              "flagged": false
+            },
+            {
+              "text": "I notice that the second equation has four circles and four triangles, so if I divide both sides by 4, I get that one circle plus one triangle equals 4.",
+              "rating": -1,
+              "flagged": false
+            },
+            {
+              "text": "I can use either equation to do that, but I notice that the second equation has more circles and fewer triangles, so it might be easier to work with.",
+              "rating": 0,
+              "flagged": false
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": null
+        }
+      ],
+      "total_time": 177534,
+      "finish_reason": "found_error"
+    }
+  },
+  {
+    "labeler": "2b794369-78c8-4e28-b3ba-eb0dd4a9ab2c",
+    "timestamp": "2023-02-18T03:41:54.285490",
+    "generation": 9,
+    "is_quality_control_question": false,
+    "is_initial_screening_question": false,
+    "question": {
+      "problem": "Find the number of real solutions to $\\sin 6 \\pi x = x.$",
+      "ground_truth_solution": "Since $|\\sin 6 \\pi x| \\le 1$ for all $x,$ any points of intersection must lie in the interval $x \\in [-1,1].$\n\n[asy]\nunitsize(2 cm);\n\nreal func(real x) {\n  return(sin(6*pi*x));\n}\n\ndraw(xscale(2)*graph(func,-1,1),red);\ndraw((-2,-1)--(2,1),blue);\ndraw((-2.2,0)--(2.2,0));\ndraw((0,-1)--(0,1));\n\nlabel(\"$-1$\", (-2,0), S, UnFill);\nlabel(\"$-\\frac{5}{6}$\", (-5/3,0), S, UnFill);\nlabel(\"$-\\frac{2}{3}$\", (-4/3,0), S, UnFill);\nlabel(\"$-\\frac{1}{2}$\", (-1,0), S, UnFill);\nlabel(\"$-\\frac{1}{3}$\", (-2/3,0), S, UnFill);\nlabel(\"$-\\frac{1}{6}$\", (-1/3,0), S, UnFill);\nlabel(\"$\\frac{1}{6}$\", (1/3,0), S, UnFill);\nlabel(\"$\\frac{1}{3}$\", (2/3,0), S, UnFill);\nlabel(\"$\\frac{1}{2}$\", (1,0), S, UnFill);\nlabel(\"$\\frac{2}{3}$\", (4/3,0), S, UnFill);\nlabel(\"$\\frac{5}{6}$\", (5/3,0), S, UnFill);\nlabel(\"$1$\", (2,0), S, UnFill);\n[/asy]\n\nThe graphs of $y = \\sin 6 \\pi x$ and $y = x$ intersect once at $x = 0,$ and once in the interval $(0,1/6).$  They intersect twice in the interval $(1/3,1/2),$ and twice in the interval $(2/3,5/6),$ so they intersect five times for $x > 0.$\n\nBy symmetry, the graphs also intersect five times for $x < 0,$ so the number of intersection points is $\\boxed{11}.$",
+      "ground_truth_answer": "11",
+      "pre_generated_steps": [
+        "To solve this problem, I need to think about the graphs of the two functions $y = \\sin 6 \\pi x$ and $y = x$ and how they intersect.",
+        "The graph of $y = \\sin 6 \\pi x$ is a periodic wave that oscillates between $-1$ and $1$ with a period of $\\frac{1}{3}$, meaning it completes one cycle every $\\frac{1}{3}$ units.",
+        "The graph of $y = x$ is a straight line with a slope of $1$.",
+        "I can sketch these graphs on the same coordinate plane to get an idea of how many times they intersect.",
+        "I notice that the line $y = x$ is tangent to the sine curve at the origin, where both functions are zero.",
+        "This means that $x = 0$ is one solution to the equation.",
+        "I also notice that the line $y = x$ intersects the sine curve at two points in each cycle of the sine curve, one on the rising part and one on the falling part.",
+        "Since the sine curve has infinitely many cycles, both to the left and to the right of the origin, I can conclude that there are infinitely many solutions to the equation.",
+        "However, not all of these solutions are real numbers.",
+        "Some of them are complex numbers that involve the imaginary unit $i$.",
+        "To find the number of real solutions, I need to figure out how many cycles of the sine curve contain two intersections with the line $y = x$.",
+        "I observe that the line $y = x$ is always above the sine curve when $x > 1$ or $x < -1$.",
+        "This means that there are no real solutions in those intervals.",
+        "Therefore, the only cycles of the sine curve that contain real solutions are those that are contained in the interval $[-1, 1]$.",
+        "I can count how many such cycles there are by dividing the length of the interval by the period of the sine curve.",
+        "The length of the interval is $2$, and the period of the sine curve is $\\frac{1}{3}$.",
+        "Therefore, the number of cycles is $\\frac{2}{\\frac{1}{3}} = 6$.",
+        "Each cycle contains two real solutions, except for the one at the origin, which contains only one.",
+        "So, the total number of real solutions is $6 \\times 2 - 1 = 11$.",
+        "# Answer\n\n11"
+      ],
+      "pre_generated_answer": "11",
+      "pre_generated_verifier_score": 0.0022217612950219865
+    },
+    "label": {
+      "steps": [
+        {
+          "completions": [
+            {
+              "text": "To solve this problem, I need to think about the graphs of the two functions $y = \\sin 6 \\pi x$ and $y = x$ and how they intersect.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "The graph of $y = \\sin 6 \\pi x$ is a periodic wave that oscillates between $-1$ and $1$ with a period of $\\frac{1}{3}$, meaning it completes one cycle every $\\frac{1}{3}$ units.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "The graph of $y = x$ is a straight line with a slope of $1$.",
+              "rating": 1,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I can sketch these graphs on the same coordinate plane to get an idea of how many times they intersect.",
+              "rating": 0,
+              "flagged": null
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": 0
+        },
+        {
+          "completions": [
+            {
+              "text": "I notice that the line $y = x$ is tangent to the sine curve at the origin, where both functions are zero.",
+              "rating": -1,
+              "flagged": null
+            },
+            {
+              "text": "I notice that the line $y = x$ intersects the sine curve at the origin, and then at two more points in each cycle of the sine curve.",
+              "rating": -1,
+              "flagged": false
+            },
+            {
+              "text": "I notice that the line $y = x$ passes through the origin, and at that point, the sine function also has a value of $0$, so that is one solution.",
+              "rating": 1,
+              "flagged": false
+            },
+            {
+              "text": "I notice that the line $y = x$ always passes through the origin, so that's one solution to the equation.",
+              "rating": 1,
+              "flagged": false
+            },
+            {
+              "text": "I notice that the wave function is always below the line function when $x < 0$, so there are no solutions in that interval.",
+              "rating": -1,
+              "flagged": false
+            }
+          ],
+          "human_completion": null,
+          "chosen_completion": null
+        }
+      ],
+      "total_time": 238682,
+      "finish_reason": "found_error"
+    }
+  }
+]

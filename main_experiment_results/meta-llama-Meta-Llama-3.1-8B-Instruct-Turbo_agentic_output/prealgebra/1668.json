@@ -1,0 +1,36 @@
+{
+    "problem": "The points on this graph show the end-of-year sales amounts for each year. During what year after 1994 did sales increase the most number of dollars?  Express your answer as a 4-digit year.\n\n[asy]unitsize(101/10);\nreal textsize = 10, largetext = 12;\ndraw((10,0)--(0,0)--(0,10),Arrows(4,20));\npath verticalmark = (0,-.3)--(0,.3), horizontalmark = (-.3,0)--(.3,0);\ndraw(verticalmark);\nfor(int i = 1; i<10;++i)\n\ndraw(shift(i*right)*verticalmark);\nfor(int i = 1; i<7; ++i)\n\ndraw(shift(9*i/6*up)*horizontalmark);\nfor(int i = 0; i<3; ++i)\nlabel(string(5(2i+1)),(-.25,9/6 + 9/3*i),left,fontsize(textsize*pt));\nfor(int i = 0; i<3; ++i)\nlabel(\"'\"+string(94+2i),(2i,-1),fontsize(textsize*pt));\nlabel(\"'00\",(6,-1),fontsize(textsize*pt));\nlabel(\"'02\",(8,-1),fontsize(textsize*pt));\nlabel(\"\\textbf{Year}\",(5,-2.5),fontsize(largetext*pt));\nlabel(rotate(90)*\"\\textbf{Millions of Dollars}\",(-2.5,5),fontsize(largetext*pt));\npair A = (0,9/6*2), B = (1,9/6*2.4), C = (2,9/6*3), D = (3,9/6*3.25), E = (4,9/6*4.2), F = (5,9/6*4.5),G = (6,9/6*4.8),H = (7,9/6*5.2), I = (8,9/6*4.75),J = (9,9/6*3.25);\ndraw(A--B--C--D--E--F--G--H--I--J);\ndot(A);dot(B);dot(C);dot(D);dot(E);dot(F);dot(G);dot(H);dot(I);dot(J);\n[/asy]",
+    "level": "Level 4",
+    "type": "Prealgebra",
+    "solution": "The chart shows the amounts of sales at the end of each year.  Therefore we're looking for a year on the chart that has the largest difference from the previous year.    Determining the sales that increased the most number of dollars is equivalent to finding the right endpoint of the segment with the steepest slope.  From observation, we can determine that that line corresponds to the year $\\boxed{1998}$.",
+    "is_solved": true,
+    "model_solution": "To find the year after 1994 when sales increased the most in dollars, we need to calculate the difference in sales amounts for each consecutive pair of years and identify the year with the greatest increase.\nThe next step is to calculate the differences in sales amounts for each consecutive pair of years and identify the year with the greatest increase. We can do this by finding the vertical distance between each pair of consecutive points on the graph, which can be calculated as follows:\n\n- 1996 - 1994 = 2 points\n- 1998 - 1996 = 2.4 points\n- 2000 - 1998 = 3 points\n- 2002 - 2000 = 3.25 points\n- 2002 - 2000 = 4.2 points\n- 2000 - 1998 = 4.5 points\n- 1998 - 1996 = 4.8 points\n- 1996 - 1994 = 5.2 points\n- 1998 - 2000 = 4.75 points\n- 2000 - 1998 = 3.25 points\n\nWe can see that the greatest increase in sales occurred between 1996 and 1994 with a difference of 5.2 points, but since we are looking for the year after 1994, we need to find the greatest increase between years 199\nSince we want the greatest increase after 1994, we need to ignore the first pair (1996 - 1994) and find the largest difference in the remaining pairs. The differences are 2.4, 3, 3.25, 4.2, 4.5, 4.8, 5.2, and 4.75. The greatest increase after 1994 is 5.2 points between 1994 and 1996.\nThe next step is to identify the year corresponding to the greatest increase. Since the greatest increase is 5.2 points and it occurs between 1994 and 1996, the year after 1994 when sales increased the most in dollars is $\\boxed{1996}$.",
+    "steps": [
+        "To find the year after 1994 when sales increased the most in dollars, we need to calculate the difference in sales amounts for each consecutive pair of years and identify the year with the greatest increase.",
+        "The next step is to calculate the differences in sales amounts for each consecutive pair of years and identify the year with the greatest increase. We can do this by finding the vertical distance between each pair of consecutive points on the graph, which can be calculated as follows:\n\n- 1996 - 1994 = 2 points\n- 1998 - 1996 = 2.4 points\n- 2000 - 1998 = 3 points\n- 2002 - 2000 = 3.25 points\n- 2002 - 2000 = 4.2 points\n- 2000 - 1998 = 4.5 points\n- 1998 - 1996 = 4.8 points\n- 1996 - 1994 = 5.2 points\n- 1998 - 2000 = 4.75 points\n- 2000 - 1998 = 3.25 points\n\nWe can see that the greatest increase in sales occurred between 1996 and 1994 with a difference of 5.2 points, but since we are looking for the year after 1994, we need to find the greatest increase between years 199",
+        "Since we want the greatest increase after 1994, we need to ignore the first pair (1996 - 1994) and find the largest difference in the remaining pairs. The differences are 2.4, 3, 3.25, 4.2, 4.5, 4.8, 5.2, and 4.75. The greatest increase after 1994 is 5.2 points between 1994 and 1996.",
+        "The next step is to identify the year corresponding to the greatest increase. Since the greatest increase is 5.2 points and it occurs between 1994 and 1996, the year after 1994 when sales increased the most in dollars is $\\boxed{1996}$."
+    ],
+    "full_steps": [
+        [
+            "To find the year after 1994 when sales increased the most in dollars, we need to calculate the difference in sales amounts for each consecutive pair of years and identify the year with the greatest increase.",
+            1
+        ],
+        [
+            "The next step is to calculate the differences in sales amounts for each consecutive pair of years and identify the year with the greatest increase. We can do this by finding the vertical distance between each pair of consecutive points on the graph, which can be calculated as follows:\n\n- 1996 - 1994 = 2 points\n- 1998 - 1996 = 2.4 points\n- 2000 - 1998 = 3 points\n- 2002 - 2000 = 3.25 points\n- 2002 - 2000 = 4.2 points\n- 2000 - 1998 = 4.5 points\n- 1998 - 1996 = 4.8 points\n- 1996 - 1994 = 5.2 points\n- 1998 - 2000 = 4.75 points\n- 2000 - 1998 = 3.25 points\n\nWe can see that the greatest increase in sales occurred between 1996 and 1994 with a difference of 5.2 points, but since we are looking for the year after 1994, we need to find the greatest increase between years 199",
+            1
+        ],
+        [
+            "Since we want the greatest increase after 1994, we need to ignore the first pair (1996 - 1994) and find the largest difference in the remaining pairs. The differences are 2.4, 3, 3.25, 4.2, 4.5, 4.8, 5.2, and 4.75. The greatest increase after 1994 is 5.2 points between 1994 and 1996.",
+            1
+        ],
+        [
+            "The next step is to identify the year corresponding to the greatest increase. Since the greatest increase is 5.2 points and it occurs between 1994 and 1996, the year after 1994 when sales increased the most in dollars is $\\boxed{1996}$.",
+            1
+        ]
+    ],
+    "time": 13.568315029144287,
+    "total_tokens": 7104,
+    "final_answer_tokens": 1033,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

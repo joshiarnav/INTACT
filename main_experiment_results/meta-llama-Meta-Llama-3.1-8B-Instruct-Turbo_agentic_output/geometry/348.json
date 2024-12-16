@@ -1,0 +1,41 @@
+{
+    "problem": "A right pyramid has a square base that measures 10 cm on each side. Its peak is 12 cm above the center of its base. What is the sum of the lengths of the pyramid's eight edges? Express your answer to the nearest whole number.\n\n[asy]\nsize(150);\ndraw((0,0)--(3,3)--(13,3)--(10,0)--cycle,linewidth(1));\ndraw((0,0)--(6.5,15)--(3,3),linewidth(1));\ndraw((13,3)--(6.5,15)--(10,0),linewidth(1));\ndraw((6.5,15)--(6.5,1.5),linewidth(1));\nlabel(\"12\",(6.5,5),E);\n\ndraw((6.6,15)..(6.7,14.9)..(6.8,14.7)--(6.8,5.3)..(6.9,5.2)..(7,5)..(6.9,4.8)..(6.8,4.7)--(6.8,1.8)..(6.7,1.6)..(6.6,1.5),linewidth(.7));\n\n[/asy]",
+    "level": "Level 4",
+    "type": "Geometry",
+    "solution": "To start, we can draw in a line from where the altitude meets the base to one of the bottom corners as shown:\n\n[asy]\nsize(150);\ndraw((0,0)--(3,3)--(13,3)--(10,0)--cycle,linewidth(1));\ndraw((0,0)--(6.5,15)--(3,3),linewidth(1));\ndraw((13,3)--(6.5,15)--(10,0),linewidth(1));\ndraw((6.5,15)--(6.5,1.5),linewidth(1));\ndraw((6.5,1.5)--(10,0),linewidth(.7));\n[/asy]\n\nThe length of this segment will be half the length of the diagonal of the base.  The base has side $10$, so the diagonal will satisfy: $$d^2=10^2+10^2=200$$ $$d=10\\sqrt{2}$$ Half of this is $5\\sqrt{2}$.  Now we can look at the right triangle formed by the altitude from the vertex of the pyramid, the line just drawn in, and with hypotenuse as the edge we need to find the length of.  The length of this edge is: $$\\sqrt{12^2+(5\\sqrt{2})^2}=\\sqrt{144+50}=\\sqrt{194}\\approx 13.928$$ The total length of all edges is: $$4(10)+4(13.928)\\approx \\boxed{ 96}$$",
+    "is_solved": true,
+    "model_solution": "To solve the problem, we'll break it down into steps.\n\nStep 1: \nFirst, we need to calculate the lengths of the pyramid's edges. \nOne edge is the square base, which is given as 10 cm on each side. \nThe other six edges are the slant edges connecting the base to the apex.\nStep 2: \nTo find the length of the slant edges, we'll use the Pythagorean theorem on the right-angled triangles formed by the height of the pyramid (12 cm), half the length of the base (5 cm), and the slant edge. The formula for the Pythagorean theorem is $c = \\sqrt{a^2 + b^2}$, where $c$ is the hypotenuse (the slant edge in this case), and $a$ and $b$ are the other two sides.\nStep 3: \nWe can use the Pythagorean theorem to find the length of one slant edge. \nThe height of the pyramid is 12 cm, and half the length of the base is 5 cm. \nSo, the length of one slant edge is $\\sqrt{12^2 + 5^2} = \\sqrt{144 + 25} = \\sqrt{169} = 13$ cm. \nSince there are four slant edges on each side of the base, the total length of all slant edges is $4 \\times 13 = 52$ cm. \nWe already know the length of the square base is 10 cm. \nTherefore, the total length of all eight edges is $10 + 52 = 62$ cm.\nStep 4: \nWe need to round the total length to the nearest whole number, as requested in the problem statement.\nStep 4:\nSince the total length of all eight edges is 62 cm, which is already a whole number, there's no need for rounding. Therefore, the sum of the lengths of the pyramid's eight edges is $\\boxed{62}$.",
+    "steps": [
+        "To solve the problem, we'll break it down into steps.\n\nStep 1: \nFirst, we need to calculate the lengths of the pyramid's edges. \nOne edge is the square base, which is given as 10 cm on each side. \nThe other six edges are the slant edges connecting the base to the apex.",
+        "Step 2: \nTo find the length of the slant edges, we'll use the Pythagorean theorem on the right-angled triangles formed by the height of the pyramid (12 cm), half the length of the base (5 cm), and the slant edge. The formula for the Pythagorean theorem is $c = \\sqrt{a^2 + b^2}$, where $c$ is the hypotenuse (the slant edge in this case), and $a$ and $b$ are the other two sides.",
+        "Step 3: \nWe can use the Pythagorean theorem to find the length of one slant edge. \nThe height of the pyramid is 12 cm, and half the length of the base is 5 cm. \nSo, the length of one slant edge is $\\sqrt{12^2 + 5^2} = \\sqrt{144 + 25} = \\sqrt{169} = 13$ cm. \nSince there are four slant edges on each side of the base, the total length of all slant edges is $4 \\times 13 = 52$ cm. \nWe already know the length of the square base is 10 cm. \nTherefore, the total length of all eight edges is $10 + 52 = 62$ cm.",
+        "Step 4: \nWe need to round the total length to the nearest whole number, as requested in the problem statement.",
+        "Step 4:\nSince the total length of all eight edges is 62 cm, which is already a whole number, there's no need for rounding. Therefore, the sum of the lengths of the pyramid's eight edges is $\\boxed{62}$."
+    ],
+    "full_steps": [
+        [
+            "To solve the problem, we'll break it down into steps.\n\nStep 1: \nFirst, we need to calculate the lengths of the pyramid's edges. \nOne edge is the square base, which is given as 10 cm on each side. \nThe other six edges are the slant edges connecting the base to the apex.",
+            1
+        ],
+        [
+            "Step 2: \nTo find the length of the slant edges, we'll use the Pythagorean theorem on the right-angled triangles formed by the height of the pyramid (12 cm), half the length of the base (5 cm), and the slant edge. The formula for the Pythagorean theorem is $c = \\sqrt{a^2 + b^2}$, where $c$ is the hypotenuse (the slant edge in this case), and $a$ and $b$ are the other two sides.",
+            1
+        ],
+        [
+            "Step 3: \nWe can use the Pythagorean theorem to find the length of one slant edge. \nThe height of the pyramid is 12 cm, and half the length of the base is 5 cm. \nSo, the length of one slant edge is $\\sqrt{12^2 + 5^2} = \\sqrt{144 + 25} = \\sqrt{169} = 13$ cm. \nSince there are four slant edges on each side of the base, the total length of all slant edges is $4 \\times 13 = 52$ cm. \nWe already know the length of the square base is 10 cm. \nTherefore, the total length of all eight edges is $10 + 52 = 62$ cm.",
+            1
+        ],
+        [
+            "Step 4: \nWe need to round the total length to the nearest whole number, as requested in the problem statement.",
+            1
+        ],
+        [
+            "Step 4:\nSince the total length of all eight edges is 62 cm, which is already a whole number, there's no need for rounding. Therefore, the sum of the lengths of the pyramid's eight edges is $\\boxed{62}$.",
+            1
+        ]
+    ],
+    "time": 17.071024179458618,
+    "total_tokens": 6232,
+    "final_answer_tokens": 756,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

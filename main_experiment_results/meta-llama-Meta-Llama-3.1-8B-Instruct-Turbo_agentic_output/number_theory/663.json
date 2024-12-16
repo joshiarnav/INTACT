@@ -1,0 +1,36 @@
+{
+    "problem": "Suppose that $A$, $B$, and $C$ are non-zero distinct digits less than $6$, and suppose we have ${AB_6}+{C_6}={C}0_6$ and ${AB_6}+{BA_6}={CC_6}$. Find the three-digit number ${ABC}$. (Interpret $AB_6$ as a base-6 number with digits $A$ and $B$, not as $A$ times $B$. The other expressions should be interpreted in this way as well).",
+    "level": "Level 5",
+    "type": "Number Theory",
+    "solution": "Dealing with the second condition, it is set up in the following manner. $$\\begin{array}{c@{}c@{}c@{}c} &&A&B_6\\\\ &+&&C_6\\\\ \\cline{2-4} &&C&0_6\\\\ \\end{array}$$Because $B+C$ can not equal $0$, we must carry in this column. Therefore, we arrive at two equations. $B+C-6=0$ and $A+1=C$ Looking at the third condition: $$\\begin{array}{c@{}c@{}c@{}c} &&A&B_6\\\\ &+&B&A_6\\\\ \\cline{2-4} &&C&C_6\\\\ \\end{array}$$We can determine that no carrying occurs. Therefore, $A+B=C$. We now have a system of equations for our three variables. \\[B+C-6=0\\]\\[A+1=C\\]\\[A+B=C\\]Subtracting the third equation from the second, $1-B=0$, or $B=1$. Plugging that into our first equation we can determine that $C=5$. $A$ must then equal $4$. Thus, $\\overline{ABC}$ is $\\boxed{415}$.",
+    "is_solved": true,
+    "model_solution": "To solve the problem, let's first analyze the given equations. \n\nFrom the first equation, ${AB_6}+{C_6}={C}0_6$, we can rewrite it in base-10 as: \n$6A + B + C = 6C + 0$\n\nSimplifying the equation, we get: \n$6A + B = 5C$\nFrom the second equation, ${AB_6}+{BA_6}={CC_6}$, we can rewrite it in base-10 as: \n$6A + B + 6B + A = 6C + C$\n\nSimplifying the equation, we get: \n$7A + 7B = 7C$\n\nDividing both sides by 7, we get: \n$A + B = C$\nTo solve for A, B, and C, we can use the equations $6A + B = 5C$ and $A + B = C$. \n\nSubstituting $C = A + B$ from the second equation into the first equation, we get: \n$6A + B = 5(A + B)$\n\nExpanding the right-hand side of the equation, we get: \n$6A + B = 5A + 5B$\n\nRearranging the terms, we get: \n$6A - 5A = 5B - B$\n\nSimplifying the equation, we get: \n$A = 4B$\n\nSince A and B are non-zero distinct digits less than 6, we can try out different values of B to find a suitable value for A. \n\nWe try B = 1:\n$A = 4 \\times 1 = 4$\n\n$A + B = 4 + 1 = 5 = C$ \n\nWe check if this satisfies both equations. If $A=4, B=1,$ and $C=5$, we get: \n\nFrom the first equation, we have: \n$6A + B\nWe substitute $A=4$, $B=1$, and $C=5$ into the first equation $6A + B = 5C$ to verify. \n\n$6(4) + 1 = 5(5)$\n$24 + 1 = 25$\n$25 = 25$\n\nSince this is true, we can use the values of A, B, and C to form the three-digit number ${ABC}$ as $\\boxed{415}$.",
+    "steps": [
+        "To solve the problem, let's first analyze the given equations. \n\nFrom the first equation, ${AB_6}+{C_6}={C}0_6$, we can rewrite it in base-10 as: \n$6A + B + C = 6C + 0$\n\nSimplifying the equation, we get: \n$6A + B = 5C$",
+        "From the second equation, ${AB_6}+{BA_6}={CC_6}$, we can rewrite it in base-10 as: \n$6A + B + 6B + A = 6C + C$\n\nSimplifying the equation, we get: \n$7A + 7B = 7C$\n\nDividing both sides by 7, we get: \n$A + B = C$",
+        "To solve for A, B, and C, we can use the equations $6A + B = 5C$ and $A + B = C$. \n\nSubstituting $C = A + B$ from the second equation into the first equation, we get: \n$6A + B = 5(A + B)$\n\nExpanding the right-hand side of the equation, we get: \n$6A + B = 5A + 5B$\n\nRearranging the terms, we get: \n$6A - 5A = 5B - B$\n\nSimplifying the equation, we get: \n$A = 4B$\n\nSince A and B are non-zero distinct digits less than 6, we can try out different values of B to find a suitable value for A. \n\nWe try B = 1:\n$A = 4 \\times 1 = 4$\n\n$A + B = 4 + 1 = 5 = C$ \n\nWe check if this satisfies both equations. If $A=4, B=1,$ and $C=5$, we get: \n\nFrom the first equation, we have: \n$6A + B",
+        "We substitute $A=4$, $B=1$, and $C=5$ into the first equation $6A + B = 5C$ to verify. \n\n$6(4) + 1 = 5(5)$\n$24 + 1 = 25$\n$25 = 25$\n\nSince this is true, we can use the values of A, B, and C to form the three-digit number ${ABC}$ as $\\boxed{415}$."
+    ],
+    "full_steps": [
+        [
+            "To solve the problem, let's first analyze the given equations. \n\nFrom the first equation, ${AB_6}+{C_6}={C}0_6$, we can rewrite it in base-10 as: \n$6A + B + C = 6C + 0$\n\nSimplifying the equation, we get: \n$6A + B = 5C$",
+            1
+        ],
+        [
+            "From the second equation, ${AB_6}+{BA_6}={CC_6}$, we can rewrite it in base-10 as: \n$6A + B + 6B + A = 6C + C$\n\nSimplifying the equation, we get: \n$7A + 7B = 7C$\n\nDividing both sides by 7, we get: \n$A + B = C$",
+            1
+        ],
+        [
+            "To solve for A, B, and C, we can use the equations $6A + B = 5C$ and $A + B = C$. \n\nSubstituting $C = A + B$ from the second equation into the first equation, we get: \n$6A + B = 5(A + B)$\n\nExpanding the right-hand side of the equation, we get: \n$6A + B = 5A + 5B$\n\nRearranging the terms, we get: \n$6A - 5A = 5B - B$\n\nSimplifying the equation, we get: \n$A = 4B$\n\nSince A and B are non-zero distinct digits less than 6, we can try out different values of B to find a suitable value for A. \n\nWe try B = 1:\n$A = 4 \\times 1 = 4$\n\n$A + B = 4 + 1 = 5 = C$ \n\nWe check if this satisfies both equations. If $A=4, B=1,$ and $C=5$, we get: \n\nFrom the first equation, we have: \n$6A + B",
+            1
+        ],
+        [
+            "We substitute $A=4$, $B=1$, and $C=5$ into the first equation $6A + B = 5C$ to verify. \n\n$6(4) + 1 = 5(5)$\n$24 + 1 = 25$\n$25 = 25$\n\nSince this is true, we can use the values of A, B, and C to form the three-digit number ${ABC}$ as $\\boxed{415}$.",
+            1
+        ]
+    ],
+    "time": 14.281929016113281,
+    "total_tokens": 4006,
+    "final_answer_tokens": 713,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

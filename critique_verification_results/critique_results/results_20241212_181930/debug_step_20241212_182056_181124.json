@@ -1,0 +1,26 @@
+{
+  "timestamp": "2024-12-12T18:20:56.181113",
+  "problem": "A cube is painted so that one side is blue, two sides are red, and three sides are green. How many different such cubes can be painted? Two cubes are considered the same if one cube can be rotated in any way to match the second cube.",
+  "step": {
+    "text": "For the first case, there are 3 ways to choose the bottom red, and then 2 ways to choose the side red. So there are $3*2=6$ ways in the first case.",
+    "previous_steps": [
+      "Let's first consider the number of ways to choose the side that is going to be painted blue.",
+      "Yes. Since the cube has six sides, we have six options for the side that we are going to paint blue.",
+      "Now, let's consider the number of ways to choose the two sides that are going to be painted red.",
+      "Yes. Since we have already chosen one side to paint blue, we only have five sides left. So we have 5 choose 2 ways to choose the sides that we paint red.",
+      "Now the remaining three sides must be painted green.",
+      "That's correct. So we don't need to consider how to paint those sides.",
+      "So the total number of ways to paint the cube is just the product of the number of ways to choose each color.",
+      "That's correct. So the total number of ways is $6 * \\binom{5}{2} = 60$.",
+      "But now we have to see which of these ways are considered the same.",
+      "That's right. In the beginning, we said that two cubes are considered the same if one can be rotated to match the other.",
+      "So let's just consider the number of ways to rotate the cube.",
+      "Ok, let's think about it from a different perspective. If we fix the blue side on the top, the $2$ reds can be in three ways: 1) $1$ on the bottom $1$ on the side; 2) $1$ on the side and the next adjacent to it; $1$ on the side and $1$ opposite to it."
+    ]
+  },
+  "evaluation": {
+    "model_judgment": false,
+    "ground_truth": false,
+    "rating": -1
+  }
+}

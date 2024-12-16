@@ -1,0 +1,20 @@
+{
+  "timestamp": "2024-12-12T00:51:00.542927",
+  "problem": "Compute the smallest positive integer $n$ such that\n\\[\\sum_{k = 0}^n \\log_2 \\left( 1 + \\frac{1}{2^{2^k}} \\right) \\ge 1 + \\log_2 \\frac{2014}{2015}.\\]",
+  "step": {
+    "text": "Right. For $n=1$, the inequality is: $(2^2+1)(2+1)\\ge2^4\\cdot\\frac{2014}{2015}$ which is also not true.",
+    "previous_steps": [
+      "Let $A = 1 + \\log_2 \\frac{2014}{2015}$. We see that\n\\[\\log_2 \\left( 1 + \\frac{1}{2^{2^k}} \\right) = \\log_2 \\frac{2^{2^k} + 1}{2^{2^k}} = \\log_2 \\left( \\frac{2^{2^k} + 1}{2^{2^k}} \\right) = \\log_2 (2^{2^k} + 1) - 2^k.\\]Therefore,\n\\begin{align*}\n\\sum_{k = 0}^n \\log_2 \\left( 1 + \\frac{1}{2^{2^k}} \\right) &= \\sum_{k = 0}^n \\log_2 (2^{2^k} + 1) - \\sum_{k = 0}^n 2^k \\\\\n&= \\sum_{k = 0}^n \\log_2 (2^{2^k} + 1) - (2^{n + 1} - 1).\n\\end{align*}We want to find the smallest $n$ such that this sum is at least $A$.",
+      "$\\sum_{k = 0}^n \\log_2 (2^{2^k} + 1)=\\log_2(\\prod_{k=0}^n(2^{2^k} + 1))$.",
+      "So, we have to find the smallest $n$ such that $\\log_2(\\prod_{k=0}^n(2^{2^k} + 1))\\ge2^{n+1}+\\log_2\\frac{2014}{2015}=\\log_2({2^{2^{n+1}}*\\frac{2014}{2015})}$.",
+      "So $\\prod_{k=0}^n(2^{2^k}+1)\\ge2^{2^{n+1}}\\cdot\\frac{2014}{2015}$.",
+      "Let's plug in some values of $n$.",
+      "For $n=0$, the inequality is not true."
+    ]
+  },
+  "evaluation": {
+    "model_judgment": true,
+    "ground_truth": true,
+    "rating": 1
+  }
+}

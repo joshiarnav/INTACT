@@ -1,0 +1,31 @@
+{
+    "problem": "A slant asymptote of the rational expression $y = \\frac{2x^2 + 3x - 7}{x-3}$ is the line approached by the equation as $x$ approaches $\\infty$ or $-\\infty$. If this line is of the form $y = mx + b$, find $m+b$.",
+    "level": "Level 3",
+    "type": "Intermediate Algebra",
+    "solution": "To approach this problem, we can either use long division or synthetic division to evaluate the quotient of the given rational expression. Alternatively, we can rewrite the numerator as $2x^2 + 3x - 7$ $ = 2x^2 + 3x - 7 - 9x + 9x$ $ = 2x(x-3) + 9x - 7 - 20 + 20$ $ = 2x(x-3) + 9(x-3) + 20$. Hence, $$y = \\frac{2x^2 + 3x - 7}{x-3} = \\frac{(2x+9)(x-3) + 20}{x-3} = 2x+9 +\\frac{20}{x-3}.$$As $x$ approaches infinity or negative infinity, then the fraction approaches $0$, and $y$ approaches $2x + 9$.Thus, $m+b = \\boxed{11}.$ [asy]\nimport graph; size(7cm); real lsf=0.5; pen dps=linewidth(0.7)+fontsize(10); defaultpen(dps); pen ds=black; real xmin=-27.84,xmax=46.9,ymin=-33.28,ymax=45.43;\n\nLabel laxis; laxis.p=fontsize(10);\n\nxaxis(xmin,xmax,Ticks(laxis,Step=20.0,Size=2,NoZero),Arrows(6),above=true); yaxis(ymin,ymax,Ticks(laxis,Step=20.0,Size=2,NoZero),Arrows(6),above=true); real f1(real x){return (2*x^2+3*x-7)/(x-3);} draw(graph(f1,-27.83,2.99),linewidth(1)); draw(graph(f1,3.01,46.89),linewidth(1)); draw((xmin,2*xmin+9)--(xmax,2*xmax+9), linetype(\"2 2\"));\n\nlabel(\"$y = \\frac{2x^2 + 3x - 7}{x - 3}$\",(5.67,-27.99),NE*lsf); label(\"$y = 2x + 9$\",(18.43,35.5),NE*lsf);\n\nclip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle);\n\n[/asy]",
+    "is_solved": true,
+    "model_solution": "To find the slant asymptote, we need to divide the numerator by the denominator using polynomial long division or synthetic division.\n\nFirst step:\nPerform polynomial long division by dividing $2x^2 + 3x - 7$ by $x-3$.\nTo perform polynomial long division, divide the leading term of the numerator ($2x^2$) by the leading term of the denominator ($x$), which gives $2x$. This will be the first term of the quotient.\n\nThe next step is to multiply the entire denominator by this quotient term ($2x$), which gives $2x^2 - 6x$. Subtract this from the original numerator ($2x^2 + 3x - 7$) to get a new polynomial: $9x - 7$.\n\nNow, divide the leading term of this new polynomial ($9x$) by the leading term of the denominator ($x$), which gives $9$. \n\nThe next step is to multiply the entire denominator by this new quotient term ($9$), which gives $9x - 27$. Subtract this from the new polynomial ($9x - 7$) to get the remainder: $20$.\nSince we have obtained a remainder, we need to write the result of the division as the quotient with the remainder over the divisor: $y = 2x + 9 + \\frac{20}{x-3}$. As $x$ approaches $\\infty$ or $-\\infty$, the fraction approaches 0, so the slant asymptote is the line $y = 2x + 9$. \n\nThe slope $m$ of this line is 2 and the y-intercept $b$ is 9. Since we are asked to find $m+b$, we have $m+b=2+9=\\boxed{11}$.",
+    "steps": [
+        "To find the slant asymptote, we need to divide the numerator by the denominator using polynomial long division or synthetic division.\n\nFirst step:\nPerform polynomial long division by dividing $2x^2 + 3x - 7$ by $x-3$.",
+        "To perform polynomial long division, divide the leading term of the numerator ($2x^2$) by the leading term of the denominator ($x$), which gives $2x$. This will be the first term of the quotient.\n\nThe next step is to multiply the entire denominator by this quotient term ($2x$), which gives $2x^2 - 6x$. Subtract this from the original numerator ($2x^2 + 3x - 7$) to get a new polynomial: $9x - 7$.\n\nNow, divide the leading term of this new polynomial ($9x$) by the leading term of the denominator ($x$), which gives $9$. \n\nThe next step is to multiply the entire denominator by this new quotient term ($9$), which gives $9x - 27$. Subtract this from the new polynomial ($9x - 7$) to get the remainder: $20$.",
+        "Since we have obtained a remainder, we need to write the result of the division as the quotient with the remainder over the divisor: $y = 2x + 9 + \\frac{20}{x-3}$. As $x$ approaches $\\infty$ or $-\\infty$, the fraction approaches 0, so the slant asymptote is the line $y = 2x + 9$. \n\nThe slope $m$ of this line is 2 and the y-intercept $b$ is 9. Since we are asked to find $m+b$, we have $m+b=2+9=\\boxed{11}$."
+    ],
+    "full_steps": [
+        [
+            "To find the slant asymptote, we need to divide the numerator by the denominator using polynomial long division or synthetic division.\n\nFirst step:\nPerform polynomial long division by dividing $2x^2 + 3x - 7$ by $x-3$.",
+            1
+        ],
+        [
+            "To perform polynomial long division, divide the leading term of the numerator ($2x^2$) by the leading term of the denominator ($x$), which gives $2x$. This will be the first term of the quotient.\n\nThe next step is to multiply the entire denominator by this quotient term ($2x$), which gives $2x^2 - 6x$. Subtract this from the original numerator ($2x^2 + 3x - 7$) to get a new polynomial: $9x - 7$.\n\nNow, divide the leading term of this new polynomial ($9x$) by the leading term of the denominator ($x$), which gives $9$. \n\nThe next step is to multiply the entire denominator by this new quotient term ($9$), which gives $9x - 27$. Subtract this from the new polynomial ($9x - 7$) to get the remainder: $20$.",
+            1
+        ],
+        [
+            "Since we have obtained a remainder, we need to write the result of the division as the quotient with the remainder over the divisor: $y = 2x + 9 + \\frac{20}{x-3}$. As $x$ approaches $\\infty$ or $-\\infty$, the fraction approaches 0, so the slant asymptote is the line $y = 2x + 9$. \n\nThe slope $m$ of this line is 2 and the y-intercept $b$ is 9. Since we are asked to find $m+b$, we have $m+b=2+9=\\boxed{11}$.",
+            1
+        ]
+    ],
+    "time": 6.164177894592285,
+    "total_tokens": 2264,
+    "final_answer_tokens": 514,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+}

@@ -1,0 +1,8 @@
+{
+    "problem": "Compute $\\cos 240^\\circ$.",
+    "solution": "Let $P$ be the point on the unit circle that is $240^\\circ$ counterclockwise from $(1,0)$, and let $D$ be the foot of the altitude from $P$ to the $x$-axis, as shown below.\n\n[asy]\n\npair A,C,P,O,D;\n\ndraw((0,-1.2)--(0,1.2),p=black+1.2bp,Arrows(0.15cm));\n\ndraw((-1.2,0)--(1.2,0),p=black+1.2bp,Arrows(0.15cm));\n\nA = (1,0);\n\nO= (0,0);\n\nlabel(\"$x$\",(1.2,0),SE);\n\nlabel(\"$y$\",(0,1.2),NE);\n\nP = rotate(240)*A;\n\nD = foot(P,A,-A);\n\ndraw(O--P--D);\n\ndraw(rightanglemark(O,D,P,2));\n\ndraw(Circle(O,1));\n\nlabel(\"$O$\",O,SE);\n\nlabel(\"$P$\",P,SW);\n\n//label(\"$A$\",A,SE);\n\nlabel(\"$D$\",D,N);\n\n[/asy]\n\nTriangle $POD$ is a 30-60-90 triangle, so $DO = \\frac{1}{2}$ and $DP = \\frac{\\sqrt{3}}{2}$.  Therefore, the coordinates of $P$ are $\\left(-\\frac12,-\\frac{\\sqrt{3}}{2}\\right)$, so $\\cos 240^\\circ = \\boxed{-\\frac{1}{2}}$.",
+    "total_tokens": 291,
+    "time_taken": 2.672330856323242,
+    "file_name": "./MATH_subsample_uniform/geometry/925.json",
+    "model_solution": "To compute $\\cos 240^\\circ$, we can use the fact that it is in the third quadrant of the unit circle. \n\nWe know that $240^\\circ = 180^\\circ + 60^\\circ$, and we can use the angle addition identity for cosine:\n\n$$\\cos (A + B) = \\cos A \\cos B - \\sin A \\sin B.$$\n\nIn this case, we have:\n\n$$\\cos (180^\\circ + 60^\\circ) = \\cos 180^\\circ \\cos 60^\\circ - \\sin 180^\\circ \\sin 60^\\circ.$$\n\nWe know that $\\cos 180^\\circ = -1$, $\\sin 180^\\circ = 0$, $\\cos 60^\\circ = 1/2$, and $\\sin 60^\\circ = \\sqrt{3}/2$. \n\nTherefore, we have:\n\n$$\\cos 240^\\circ = (-1) (1/2) - (0) (\\sqrt{3}/2) = -1/2.$$\n\nSo, the answer is $\\boxed{-\\frac{1}{2}}$."
+}
